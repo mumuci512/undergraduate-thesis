@@ -1,0 +1,60 @@
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Local Python environments
+.venv/
+venv/
+env/
+.conda/
+
+# Local credentials and machine-specific environment
+.env
+.env.*
+!.env.example
+
+# Temporary files, editor locks and operating-system files
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Dataset copies and download caches; keep provenance in tracked project files
+/data/
+/datasets/
+**/data_cache/
+**/dataset_cache/
+**/.cache/
+/02_baselines/**/data/
+/02_baselines/**/datasets/
+/03_experiments/**/data/
+/03_experiments/**/datasets/
+
+# Large model weights and deployment binaries
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.engine
+
+# Generated training telemetry and explicitly temporary outputs
+events.out.tfevents.*
+wandb/
+**/tmp_outputs/
+**/temp_outputs/
+
+# Deliberately keep PDF/DOC/DOCX, Markdown, source code, configs,
+# formal experiment logs, metric summaries and result analyses trackable.

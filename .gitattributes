@@ -1,0 +1,11 @@
+# Preserve reference documents byte-for-byte without line-ending conversion.
+*.pdf binary
+*.doc binary
+*.docx binary
+
+# Keep research notes and management files consistent across platforms.
+*.md text eol=lf
+*.json text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.gitkeep text eol=lf
