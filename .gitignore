@@ -57,5 +57,6 @@ wandb/
 **/tmp_outputs/
 **/temp_outputs/
 
-# Deliberately keep PDF/DOC/DOCX, Markdown, source code, configs,
-# formal experiment logs, metric summaries and result analyses trackable.
+# Keep documents, Markdown, source code, configs, formal experiment logs,
+# metric summaries and result analyses trackable; ignore large source PDFs.
+*.pdf
