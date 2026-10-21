@@ -1,0 +1,1110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="2170px" version="1.1" viewBox="0 0 2560 2170" width="2560px">
+  <title>持续学习与持续语义分割方法分类的整合树状图</title>
+  <desc>保留用户合并图的五类技术路线及 CSS 场景维度，依据 LIT-005 / LIT-006 正文补充各方法节点的代表性例子。CL 与 CSS 标签区分例子来源；[5] 指 LIT-005，[6] 指 LIT-006。节点悬浮提示含 PDF 页码、章节及综述参考文献编号。方法非互斥；CSS 例子不自动代表满足域增量或在线约束。</desc>
+  <metadata id="method-example-provenance">{
+  "updated": "2026-10-20",
+  "sources": {
+    "5": "LIT-005 arXiv:2302.00487v3",
+    "6": "LIT-006 arXiv:2310.14277v2"
+  },
+  "page_numbering": "PDF file page, 1-based",
+  "nodes": [
+    {
+      "category": "正则化方法",
+      "lines": [
+        "EWC · LwF [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            8
+          ],
+          "section": "4.1",
+          "review_reference_numbers": [
+            222,
+            255
+          ]
+        }
+      ],
+      "header": true,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "回放方法",
+      "lines": [
+        "iCaRL [5] · SSUL-M [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            9
+          ],
+          "section": "4.2",
+          "review_reference_numbers": [
+            365
+          ]
+        },
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            6
+          ],
+          "section": "4.1.1",
+          "review_reference_numbers": [
+            26
+          ]
+        }
+      ],
+      "header": true,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "优化方法",
+      "lines": [
+        "GEM · MER · MC-SGD [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            10,
+            11
+          ],
+          "section": "4.3",
+          "review_reference_numbers": [
+            281,
+            369,
+            312
+          ]
+        }
+      ],
+      "header": true,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "表征学习方法",
+      "lines": [
+        "CaSSLe · L2P [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            11,
+            12
+          ],
+          "section": "4.4",
+          "review_reference_numbers": [
+            118,
+            458
+          ]
+        }
+      ],
+      "header": true,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "架构方法",
+      "lines": [
+        "PackNet [5] · RCIL [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            13
+          ],
+          "section": "4.5",
+          "review_reference_numbers": [
+            291
+          ]
+        },
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            9
+          ],
+          "section": "4.2.3",
+          "review_reference_numbers": [
+            43
+          ]
+        }
+      ],
+      "header": true,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "权重正则化",
+      "lines": [
+        "CL：EWC · SI · MAS [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            8
+          ],
+          "section": "4.1",
+          "review_reference_numbers": [
+            222,
+            497,
+            12
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": "CSS 综述 §4.2.2（p.8）正文也讨论权重正则化；灰紫色只表示其未在 CSS 图 3 中作为独立细分节点绘出。"
+    },
+    {
+      "category": "函数正则化",
+      "lines": [
+        "CL：LwF · LwM [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            8
+          ],
+          "section": "4.1",
+          "review_reference_numbers": [
+            255,
+            93
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "知识蒸馏",
+      "lines": [
+        "CSS：MiB · PLOP · IDEC [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            8
+          ],
+          "section": "4.2.2",
+          "review_reference_numbers": [
+            39,
+            40,
+            44
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "新训练样本",
+      "lines": [
+        "LwF [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            8
+          ],
+          "section": "4.1",
+          "review_reference_numbers": [
+            255
+          ]
+        }
+      ],
+      "header": false,
+      "small": true,
+      "note": ""
+    },
+    {
+      "category": "旧训练样本",
+      "lines": [
+        "iCaRL [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            8,
+            9
+          ],
+          "section": "4.1 / 4.2",
+          "review_reference_numbers": [
+            365
+          ]
+        }
+      ],
+      "header": false,
+      "small": true,
+      "note": ""
+    },
+    {
+      "category": "生成数据",
+      "lines": [
+        "MeRGANs [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            8
+          ],
+          "section": "4.1",
+          "review_reference_numbers": [
+            464
+          ]
+        }
+      ],
+      "header": false,
+      "small": true,
+      "note": "此处指以生成样本进行输出一致性/功能约束的例子，不等同将所有生成回放都归为同一种蒸馏。"
+    },
+    {
+      "category": "无标签数据",
+      "lines": [
+        "GD [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            8
+          ],
+          "section": "4.1",
+          "review_reference_numbers": [
+            241
+          ]
+        }
+      ],
+      "header": false,
+      "small": true,
+      "note": ""
+    },
+    {
+      "category": "权重迁移",
+      "lines": [
+        "CSS：AWT · EWF [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            8,
+            9
+          ],
+          "section": "4.2.2 / 4.2.3",
+          "review_reference_numbers": [
+            46,
+            47
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": "AWT 在权重迁移小节说明；EWF 在参数分配小节中按权重迁移/参数融合机制说明，类别可以交叉。"
+    },
+    {
+      "category": "样本 / 经验回放",
+      "lines": [
+        "CL：iCaRL · DER++ [5]",
+        "CSS：SSUL-M · AMSS [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            9,
+            10
+          ],
+          "section": "4.2",
+          "review_reference_numbers": [
+            365,
+            46
+          ]
+        },
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            6
+          ],
+          "section": "4.1.1",
+          "review_reference_numbers": [
+            26,
+            34
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "样本回放",
+      "lines": [
+        "CSS：SSUL-M · AMSS [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            6
+          ],
+          "section": "4.1.1",
+          "review_reference_numbers": [
+            26,
+            34
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "特征回放",
+      "lines": [
+        "CSS：ALIFE · SDR · LAG [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            6
+          ],
+          "section": "4.1.1",
+          "review_reference_numbers": [
+            32,
+            27,
+            51
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": "这里保留/利用旧特征或原型；与下方通过生成模型合成特征的生成特征回放区分。"
+    },
+    {
+      "category": "辅助数据",
+      "lines": [
+        "CSS：RECALL-Web · FMWISS [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            6
+          ],
+          "section": "4.1.1",
+          "review_reference_numbers": [
+            28,
+            33
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "生成式回放",
+      "lines": [
+        "CL：DGR [5]；CSS：TIKP [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            10
+          ],
+          "section": "4.2",
+          "review_reference_numbers": [
+            392
+          ]
+        },
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            7
+          ],
+          "section": "4.1.2",
+          "review_reference_numbers": [
+            52
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "生成数据回放",
+      "lines": [
+        "CSS：RECALL-GAN · TIKP [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            7
+          ],
+          "section": "4.1.2",
+          "review_reference_numbers": [
+            28,
+            52
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "生成特征回放",
+      "lines": [
+        "CL：GFR [5]",
+        "CSS：Shan et al. (2022) [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            10
+          ],
+          "section": "4.2",
+          "review_reference_numbers": [
+            273
+          ]
+        },
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            7,
+            17
+          ],
+          "section": "4.1.2 / reference [54]",
+          "review_reference_numbers": [
+            54
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": "Shan 等：Class-incremental semantic segmentation of aerial images via pixel-level feature generation and task-wise distillation，IEEE TGRS 60，2022。综述该段未提供明确方法简称，故保留作者年份，避免编造缩写。"
+    },
+    {
+      "category": "梯度投影",
+      "lines": [
+        "CL：GEM · A-GEM · OGD · GPM [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            10
+          ],
+          "section": "4.3",
+          "review_reference_numbers": [
+            281,
+            66,
+            115,
+            380
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "损失景观优化",
+      "lines": [
+        "CL：Stable-SGD · MC-SGD [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            11
+          ],
+          "section": "4.3",
+          "review_reference_numbers": [
+            313,
+            312
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "元学习",
+      "lines": [
+        "CL：MER · OML · La-MAML [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            11
+          ],
+          "section": "4.3",
+          "review_reference_numbers": [
+            369,
+            186,
+            148
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "自监督学习",
+      "lines": [
+        "CL：LUMP · CaSSLe · DualNet [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            11,
+            12
+          ],
+          "section": "4.4",
+          "review_reference_numbers": [
+            286,
+            118,
+            343
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "对比学习",
+      "lines": [
+        "CSS：IDEC · UCD [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            7
+          ],
+          "section": "4.2.1",
+          "review_reference_numbers": [
+            44,
+            41
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "伪标签",
+      "lines": [
+        "CSS：PLOP · REMINDER · LAG [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            7
+          ],
+          "section": "4.2.1",
+          "review_reference_numbers": [
+            40,
+            42,
+            51
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "基础模型驱动",
+      "lines": [
+        "CSS：FMWISS · ECLIPSE [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            8,
+            11,
+            19
+          ],
+          "section": "4.2.1 / 5.2 / reference [156]",
+          "review_reference_numbers": [
+            33,
+            156
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": "FMWISS 为基础模型驱动的弱监督增量分割例子；ECLIPSE 在综述中以视觉提示的分割例子列入，原工作对象含全景分割，不等同已验证天气域增量语义分割。"
+    },
+    {
+      "category": "预训练",
+      "lines": [
+        "CL：L2P · DualPrompt [5]",
+        "CSS：SSUL · MicroSeg [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            12
+          ],
+          "section": "4.4",
+          "review_reference_numbers": [
+            458,
+            457
+          ]
+        },
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            8
+          ],
+          "section": "4.2.2",
+          "review_reference_numbers": [
+            26,
+            176
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "持续预训练",
+      "lines": [
+        "CL：IncCLIP · ECONET [5]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            12
+          ],
+          "section": "4.4",
+          "review_reference_numbers": [
+            478,
+            151
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": "IncCLIP 对视觉语言模型持续预训练；ECONET 是语言模型持续预训练例子，不宣称二者都是分割方法。"
+    },
+    {
+      "category": "参数分配",
+      "lines": [
+        "CL：PackNet · HAT [5]",
+        "CSS：ACD · FairCL [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            12,
+            13
+          ],
+          "section": "4.5",
+          "review_reference_numbers": [
+            291,
+            384
+          ]
+        },
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            9
+          ],
+          "section": "4.2.3",
+          "review_reference_numbers": [
+            56,
+            135
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": "按两篇综述的分类放置；CSS 综述也将冻结教师或原型作为这一分支的例子。"
+    },
+    {
+      "category": "模型 / 架构分解",
+      "lines": [
+        "CL：APD · DyTox [5]",
+        "CSS：RCIL [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            13
+          ],
+          "section": "4.5",
+          "review_reference_numbers": [
+            490,
+            103
+          ]
+        },
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            9
+          ],
+          "section": "4.2.3",
+          "review_reference_numbers": [
+            43
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": ""
+    },
+    {
+      "category": "模块化网络",
+      "lines": [
+        "CL：Progressive Networks · PathNet [5]",
+        "CSS：Liu et al. (2020) [6]"
+      ],
+      "sources": [
+        {
+          "literature": "LIT-005",
+          "pdf_pages": [
+            13
+          ],
+          "section": "4.5",
+          "review_reference_numbers": [
+            379,
+            117
+          ]
+        },
+        {
+          "literature": "LIT-006",
+          "pdf_pages": [
+            9,
+            17
+          ],
+          "section": "4.2.3 / reference [57]",
+          "review_reference_numbers": [
+            57
+          ]
+        }
+      ],
+      "header": false,
+      "small": false,
+      "note": "Liu 等：Dynamic extension nets for few-shot semantic segmentation，ACM MM 2020；按 CSS 综述的模块化网络分支转录，少样本扩展不自动等同在线 CL。"
+    }
+  ]
+}</metadata><defs>
+    <style type="text/css">
+text {font-family: "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;}
+.main-title {font-size: 42px; font-weight: 750; fill:#142239;}
+.caption {font-size: 24px; fill:#5F6F80;}
+.section {font-size: 24px; font-weight: 750; fill:#273B53;}
+.en {font-family: "DejaVu Sans", Arial, sans-serif;}
+</style>
+  </defs>
+  <rect fill="#F7F9FD" height="2170" width="2560" x="0" y="0"/>
+  <rect fill="#246C98" height="12" width="2560" x="0" y="0"/>
+  <circle cx="2500" cy="96" fill="#DCE9F9" opacity="0.32" r="280"/>
+  <circle cx="98" cy="2018.16" fill="#E4F3EC" opacity="0.43" r="270"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="42" font-weight="700" text-anchor="start" x="57" y="69">持续学习方法分类 · 与持续语义分割方法的整合</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="23" text-anchor="start" x="59" y="111">Unified Taxonomy of Continual Learning and Continual Semantic Segmentation (CSS)</text>
+  <rect fill="#FFFFFF" height="143" rx="18" ry="18" stroke="#DEE5EE" stroke-width="2" width="2446" x="57" y="145"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="23" font-weight="700" text-anchor="start" x="81" y="175">CSS 的增量学习设置</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="20" text-anchor="start" x="377" y="175">（学习场景维度，与下方方法分类相互独立）</text>
+  <rect fill="#F0F5FA" height="74" rx="14" ry="14" stroke="#C6D4E4" stroke-width="2.2" width="583" x="79" y="191"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="23" font-weight="700" text-anchor="middle" x="370.5" y="218">任务增量</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="18" text-anchor="middle" x="370.5" y="246">Task-incremental CSS</text>
+  <rect fill="#E1F5E9" height="74" rx="14" ry="14" stroke="#299268" stroke-width="2.2" width="583" x="686" y="191"/>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="23" font-weight="700" text-anchor="middle" x="977.5" y="218">域增量</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="18" text-anchor="middle" x="977.5" y="246">Domain-incremental CSS</text>
+  <rect fill="#F0F5FA" height="74" rx="14" ry="14" stroke="#C6D4E4" stroke-width="2.2" width="583" x="1293" y="191"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="23" font-weight="700" text-anchor="middle" x="1584.5" y="218">类增量</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="18" text-anchor="middle" x="1584.5" y="246">Class-incremental CSS</text>
+  <rect fill="#F0F5FA" height="74" rx="14" ry="14" stroke="#C6D4E4" stroke-width="2.2" width="583" x="1900" y="191"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="23" font-weight="700" text-anchor="middle" x="2191.5" y="218">模态增量</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="18" text-anchor="middle" x="2191.5" y="246">Modality-incremental CSS</text>
+  <rect fill="#ECE7F6" height="82" rx="21" ry="21" stroke="#71559B" stroke-width="2.7" width="620" x="970" y="313"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="29" font-weight="700" text-anchor="middle" x="1280.0" y="346">持续学习方法</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="21" text-anchor="middle" x="1280.0" y="375">Continual Learning Methods</text>
+  <path d="M1280 395 V431 M292.0 431 H2268.0" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M292.0 431 V457" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="292.0" cy="431" fill="#90A1B7" r="4.8"/>
+  <path d="M786.0 431 V457" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="786.0" cy="431" fill="#90A1B7" r="4.8"/>
+  <path d="M1280.0 431 V457" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="1280.0" cy="431" fill="#90A1B7" r="4.8"/>
+  <path d="M1774.0 431 V457" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="1774.0" cy="431" fill="#90A1B7" r="4.8"/>
+  <path d="M2268.0 431 V457" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="2268.0" cy="431" fill="#90A1B7" r="4.8"/>
+  <g id="method-1" data-category="正则化方法" data-node-box="60.0 457.0 464.0 96.0"><title>正则化方法｜EWC · LwF [5]
+LIT-005 §4.1 PDF p.8；综述参考文献 222,255</title><desc>{"category": "正则化方法", "lines": ["EWC · LwF [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [8], "section": "4.1", "review_reference_numbers": [222, 255]}], "header": true, "small": false, "note": ""}</desc><rect fill="#E5EEFA" height="96" rx="18" ry="18" stroke="#4779B4" stroke-width="2.6" width="464" x="60" y="457"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="292.0" y="489">正则化方法</text>
+  <text dominant-baseline="alphabetic" fill="#315E8B" font-size="17" text-anchor="middle" x="292.0" y="516">Regularization-based</text>
+  <text x="292" y="541" font-size="16.8" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">EWC · LwF [5]</text></g><g id="method-2" data-category="回放方法" data-node-box="554.0 457.0 464.0 96.0"><title>回放方法｜iCaRL [5] · SSUL-M [6]
+LIT-005 §4.2 PDF p.9；综述参考文献 365
+LIT-006 §4.1.1 PDF p.6；综述参考文献 26</title><desc>{"category": "回放方法", "lines": ["iCaRL [5] · SSUL-M [6]"], "sources": [{"literature": "LIT-005", "pdf_pages": [9], "section": "4.2", "review_reference_numbers": [365]}, {"literature": "LIT-006", "pdf_pages": [6], "section": "4.1.1", "review_reference_numbers": [26]}], "header": true, "small": false, "note": ""}</desc><rect fill="#E5EEFA" height="96" rx="18" ry="18" stroke="#4779B4" stroke-width="2.6" width="464" x="554" y="457"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="786.0" y="489">回放方法</text>
+  <text dominant-baseline="alphabetic" fill="#315E8B" font-size="17" text-anchor="middle" x="786.0" y="516">Replay-based</text>
+  <text x="786" y="541" font-size="16.8" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">iCaRL [5] · SSUL-M [6]</text></g><g id="method-3" data-category="优化方法" data-node-box="1048.0 457.0 464.0 96.0"><title>优化方法｜GEM · MER · MC-SGD [5]
+LIT-005 §4.3 PDF p.10,11；综述参考文献 281,369,312</title><desc>{"category": "优化方法", "lines": ["GEM · MER · MC-SGD [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [10, 11], "section": "4.3", "review_reference_numbers": [281, 369, 312]}], "header": true, "small": false, "note": ""}</desc><rect fill="#E5EEFA" height="96" rx="18" ry="18" stroke="#4779B4" stroke-width="2.6" width="464" x="1048" y="457"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1280.0" y="489">优化方法</text>
+  <text dominant-baseline="alphabetic" fill="#315E8B" font-size="17" text-anchor="middle" x="1280.0" y="516">Optimization-based</text>
+  <text x="1280" y="541" font-size="16.8" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">GEM · MER · MC-SGD [5]</text></g><g id="method-4" data-category="表征学习方法" data-node-box="1542.0 457.0 464.0 96.0"><title>表征学习方法｜CaSSLe · L2P [5]
+LIT-005 §4.4 PDF p.11,12；综述参考文献 118,458</title><desc>{"category": "表征学习方法", "lines": ["CaSSLe · L2P [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [11, 12], "section": "4.4", "review_reference_numbers": [118, 458]}], "header": true, "small": false, "note": ""}</desc><rect fill="#E5EEFA" height="96" rx="18" ry="18" stroke="#4779B4" stroke-width="2.6" width="464" x="1542" y="457"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1774.0" y="489">表征学习方法</text>
+  <text dominant-baseline="alphabetic" fill="#315E8B" font-size="17" text-anchor="middle" x="1774.0" y="516">Representation-based</text>
+  <text x="1774" y="541" font-size="16.8" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CaSSLe · L2P [5]</text></g><g id="method-5" data-category="架构方法" data-node-box="2036.0 457.0 464.0 96.0"><title>架构方法｜PackNet [5] · RCIL [6]
+LIT-005 §4.5 PDF p.13；综述参考文献 291
+LIT-006 §4.2.3 PDF p.9；综述参考文献 43</title><desc>{"category": "架构方法", "lines": ["PackNet [5] · RCIL [6]"], "sources": [{"literature": "LIT-005", "pdf_pages": [13], "section": "4.5", "review_reference_numbers": [291]}, {"literature": "LIT-006", "pdf_pages": [9], "section": "4.2.3", "review_reference_numbers": [43]}], "header": true, "small": false, "note": ""}</desc><rect fill="#E5EEFA" height="96" rx="18" ry="18" stroke="#4779B4" stroke-width="2.6" width="464" x="2036" y="457"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="2268.0" y="489">架构方法</text>
+  <text dominant-baseline="alphabetic" fill="#315E8B" font-size="17" text-anchor="middle" x="2268.0" y="516">Architecture-based</text>
+  <text x="2268" y="541" font-size="16.8" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">PackNet [5] · RCIL [6]</text></g><rect fill="#FFFFFF" height="1194.08" rx="19" ry="19" stroke="#E2E9F1" stroke-width="1.8" width="470" x="57" y="582"/>
+  <rect fill="#FFFFFF" height="1194.08" rx="19" ry="19" stroke="#E2E9F1" stroke-width="1.8" width="470" x="551" y="582"/>
+  <rect fill="#FFFFFF" height="1194.08" rx="19" ry="19" stroke="#E2E9F1" stroke-width="1.8" width="470" x="1045" y="582"/>
+  <rect fill="#FFFFFF" height="1194.08" rx="19" ry="19" stroke="#E2E9F1" stroke-width="1.8" width="470" x="1539" y="582"/>
+  <rect fill="#FFFFFF" height="1194.08" rx="19" ry="19" stroke="#E2E9F1" stroke-width="1.8" width="470" x="2033" y="582"/>
+  <path d="M292.0 553 V576 H74 V1535.36" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.0"/>
+  <path d="M74 669.04 H93" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="74" cy="669.04" fill="#90A1B7" r="4.5"/>
+  <path d="M74 856.72 H93" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="74" cy="856.72" fill="#90A1B7" r="4.5"/>
+  <path d="M74 1535.36 H93" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="74" cy="1535.36" fill="#90A1B7" r="4.5"/>
+  <g id="method-6" data-category="权重正则化" data-node-box="93.0 607.84 414.0 122.4"><title>权重正则化｜CL：EWC · SI · MAS [5]
+LIT-005 §4.1 PDF p.8；综述参考文献 222,497,12
+CSS 综述 §4.2.2（p.8）正文也讨论权重正则化；灰紫色只表示其未在 CSS 图 3 中作为独立细分节点绘出。</title><desc>{"category": "权重正则化", "lines": ["CL：EWC · SI · MAS [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [8], "section": "4.1", "review_reference_numbers": [222, 497, 12]}], "header": false, "small": false, "note": "CSS 综述 §4.2.2（p.8）正文也讨论权重正则化；灰紫色只表示其未在 CSS 图 3 中作为独立细分节点绘出。"}</desc><rect fill="#F1EDF7" height="122.4" rx="15" ry="15" stroke="#9782B7" stroke-width="2.0" width="414" x="93" y="607.84"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="300.0" y="636.84">权重正则化</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="17" text-anchor="middle" x="300.0" y="661.84">Weight Regularization</text>
+  <text x="300" y="688.84" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：EWC · SI · MAS [5]</text></g><g id="method-7" data-category="函数正则化" data-node-box="93.0 795.52 414.0 122.4"><title>函数正则化｜CL：LwF · LwM [5]
+LIT-005 §4.1 PDF p.8；综述参考文献 255,93</title><desc>{"category": "函数正则化", "lines": ["CL：LwF · LwM [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [8], "section": "4.1", "review_reference_numbers": [255, 93]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="122.4" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="414" x="93" y="795.52"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="300.0" y="824.52">函数正则化</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="300.0" y="849.52">Function Regularization</text>
+  <text x="300" y="876.52" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：LwF · LwM [5]</text></g><path d="M324 917.92 V950.56 H324 V970.96" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"/>
+  <g id="method-8" data-category="知识蒸馏" data-node-box="124.0 970.96 383.0 111.52"><title>知识蒸馏｜CSS：MiB · PLOP · IDEC [6]
+LIT-006 §4.2.2 PDF p.8；综述参考文献 39,40,44</title><desc>{"category": "知识蒸馏", "lines": ["CSS：MiB · PLOP · IDEC [6]"], "sources": [{"literature": "LIT-006", "pdf_pages": [8], "section": "4.2.2", "review_reference_numbers": [39, 40, 44]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="111.52" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="383" x="124" y="970.96"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="315.5" y="999.96">知识蒸馏</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="315.5" y="1024.96">Knowledge Distillation</text>
+  <text x="315.5" y="1051.96" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：MiB · PLOP · IDEC [6]</text></g><path d="M324 1082.48 V1120.56" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  <rect fill="#F1EDF7" height="258.4" rx="15" ry="15" stroke="#9782B7" stroke-width="2" width="383" x="124" y="1120.56"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="23" font-weight="700" text-anchor="middle" x="315.5" y="1166.8">蒸馏所用数据来源</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="17" text-anchor="middle" x="315.5" y="1199.44">Distillation data sources</text>
+  <g id="method-9" data-category="新训练样本" data-node-box="139.0 1217.12 171.0 70"><title>新训练样本｜LwF [5]
+LIT-005 §4.1 PDF p.8；综述参考文献 255</title><desc>{"category": "新训练样本", "lines": ["LwF [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [8], "section": "4.1", "review_reference_numbers": [255]}], "header": false, "small": true, "note": ""}</desc><rect fill="#FEFCFF" height="70" rx="9" ry="9" stroke="#D5CBE3" stroke-width="1.3" width="171" x="139" y="1217.12"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="17.5" font-weight="700" text-anchor="middle" x="224.5" y="1240.12">新训练样本</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="11.5" text-anchor="middle" x="224.5" y="1259.12">New samples</text>
+  <text x="224.5" y="1279.12" font-size="14" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">LwF [5]</text></g><g id="method-10" data-category="旧训练样本" data-node-box="317.0 1217.12 171.0 70"><title>旧训练样本｜iCaRL [5]
+LIT-005 §4.1 / 4.2 PDF p.8,9；综述参考文献 365</title><desc>{"category": "旧训练样本", "lines": ["iCaRL [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [8, 9], "section": "4.1 / 4.2", "review_reference_numbers": [365]}], "header": false, "small": true, "note": ""}</desc><rect fill="#FEFCFF" height="70" rx="9" ry="9" stroke="#D5CBE3" stroke-width="1.3" width="171" x="317" y="1217.12"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="17.5" font-weight="700" text-anchor="middle" x="402.5" y="1240.12">旧训练样本</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="11.5" text-anchor="middle" x="402.5" y="1259.12">Old samples</text>
+  <text x="402.5" y="1279.12" font-size="14" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">iCaRL [5]</text></g><g id="method-11" data-category="生成数据" data-node-box="139.0 1297.2 171.0 70"><title>生成数据｜MeRGANs [5]
+LIT-005 §4.1 PDF p.8；综述参考文献 464
+此处指以生成样本进行输出一致性/功能约束的例子，不等同将所有生成回放都归为同一种蒸馏。</title><desc>{"category": "生成数据", "lines": ["MeRGANs [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [8], "section": "4.1", "review_reference_numbers": [464]}], "header": false, "small": true, "note": "此处指以生成样本进行输出一致性/功能约束的例子，不等同将所有生成回放都归为同一种蒸馏。"}</desc><rect fill="#FEFCFF" height="70" rx="9" ry="9" stroke="#D5CBE3" stroke-width="1.3" width="171" x="139" y="1297.2"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="17.5" font-weight="700" text-anchor="middle" x="224.5" y="1320.2">生成数据</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="11.5" text-anchor="middle" x="224.5" y="1339.2">Generated data</text>
+  <text x="224.5" y="1359.2" font-size="14" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">MeRGANs [5]</text></g><g id="method-12" data-category="无标签数据" data-node-box="317.0 1297.2 171.0 70"><title>无标签数据｜GD [5]
+LIT-005 §4.1 PDF p.8；综述参考文献 241</title><desc>{"category": "无标签数据", "lines": ["GD [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [8], "section": "4.1", "review_reference_numbers": [241]}], "header": false, "small": true, "note": ""}</desc><rect fill="#FEFCFF" height="70" rx="9" ry="9" stroke="#D5CBE3" stroke-width="1.3" width="171" x="317" y="1297.2"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="17.5" font-weight="700" text-anchor="middle" x="402.5" y="1320.2">无标签数据</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="11.5" text-anchor="middle" x="402.5" y="1339.2">Unlabeled data</text>
+  <text x="402.5" y="1359.2" font-size="14" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">GD [5]</text></g><g id="method-13" data-category="权重迁移" data-node-box="93.0 1474.16 414.0 122.4"><title>权重迁移｜CSS：AWT · EWF [6]
+LIT-006 §4.2.2 / 4.2.3 PDF p.8,9；综述参考文献 46,47
+AWT 在权重迁移小节说明；EWF 在参数分配小节中按权重迁移/参数融合机制说明，类别可以交叉。</title><desc>{"category": "权重迁移", "lines": ["CSS：AWT · EWF [6]"], "sources": [{"literature": "LIT-006", "pdf_pages": [8, 9], "section": "4.2.2 / 4.2.3", "review_reference_numbers": [46, 47]}], "header": false, "small": false, "note": "AWT 在权重迁移小节说明；EWF 在参数分配小节中按权重迁移/参数融合机制说明，类别可以交叉。"}</desc><rect fill="#E1F5E9" height="122.4" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="414" x="93" y="1474.16"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="300.0" y="1503.16">权重迁移</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="300.0" y="1528.16">Weight Transfer</text>
+  <text x="300" y="1555.16" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：AWT · EWF [6]</text></g><path d="M786.0 553 V576 H568 V1268.8" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.0"/>
+  <path d="M568 666.32 H587" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="568" cy="666.32" fill="#90A1B7" r="4.5"/>
+  <path d="M568 1268.8 H587" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="568" cy="1268.8" fill="#90A1B7" r="4.5"/>
+  <g id="method-14" data-category="样本 / 经验回放" data-node-box="587.0 607.84 414.0 118"><title>样本 / 经验回放｜CL：iCaRL · DER++ [5]；CSS：SSUL-M · AMSS [6]
+LIT-005 §4.2 PDF p.9,10；综述参考文献 365,46
+LIT-006 §4.1.1 PDF p.6；综述参考文献 26,34</title><desc>{"category": "样本 / 经验回放", "lines": ["CL：iCaRL · DER++ [5]", "CSS：SSUL-M · AMSS [6]"], "sources": [{"literature": "LIT-005", "pdf_pages": [9, 10], "section": "4.2", "review_reference_numbers": [365, 46]}, {"literature": "LIT-006", "pdf_pages": [6], "section": "4.1.1", "review_reference_numbers": [26, 34]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="118" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="414" x="587" y="607.84"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="794.0" y="636.84">样本 / 经验回放</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="794.0" y="661.84">Exemplar / Experience Replay</text>
+  <text x="794" y="688.84" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：iCaRL · DER++ [5]</text><text x="794" y="715.84" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：SSUL-M · AMSS [6]</text></g><path d="M794.0 724.8 V752 H601 V1058" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <path d="M601 799.6 H618" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <circle cx="601" cy="799.6" fill="#A5B4C5" r="4"/>
+  <path d="M601 928.8 H618" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <circle cx="601" cy="928.8" fill="#A5B4C5" r="4"/>
+  <path d="M601 1058 H618" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <circle cx="601" cy="1058" fill="#A5B4C5" r="4"/>
+  <g id="method-15" data-category="样本回放" data-node-box="618.0 747.92 383.0 103.36"><title>样本回放｜CSS：SSUL-M · AMSS [6]
+LIT-006 §4.1.1 PDF p.6；综述参考文献 26,34</title><desc>{"category": "样本回放", "lines": ["CSS：SSUL-M · AMSS [6]"], "sources": [{"literature": "LIT-006", "pdf_pages": [6], "section": "4.1.1", "review_reference_numbers": [26, 34]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="103.36" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="383" x="618" y="747.92"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="809.5" y="776.92">样本回放</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="809.5" y="801.92">Sample Replay</text>
+  <text x="809.5" y="828.92" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：SSUL-M · AMSS [6]</text></g><g id="method-16" data-category="特征回放" data-node-box="618.0 877.12 383.0 103.36"><title>特征回放｜CSS：ALIFE · SDR · LAG [6]
+LIT-006 §4.1.1 PDF p.6；综述参考文献 32,27,51
+这里保留/利用旧特征或原型；与下方通过生成模型合成特征的生成特征回放区分。</title><desc>{"category": "特征回放", "lines": ["CSS：ALIFE · SDR · LAG [6]"], "sources": [{"literature": "LIT-006", "pdf_pages": [6], "section": "4.1.1", "review_reference_numbers": [32, 27, 51]}], "header": false, "small": false, "note": "这里保留/利用旧特征或原型；与下方通过生成模型合成特征的生成特征回放区分。"}</desc><rect fill="#E1F5E9" height="103.36" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="383" x="618" y="877.12"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="809.5" y="906.12">特征回放</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="809.5" y="931.12">Feature Replay</text>
+  <text x="809.5" y="958.12" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：ALIFE · SDR · LAG [6]</text></g><g id="method-17" data-category="辅助数据" data-node-box="618.0 1006.32 383.0 103.36"><title>辅助数据｜CSS：RECALL-Web · FMWISS [6]
+LIT-006 §4.1.1 PDF p.6；综述参考文献 28,33</title><desc>{"category": "辅助数据", "lines": ["CSS：RECALL-Web · FMWISS [6]"], "sources": [{"literature": "LIT-006", "pdf_pages": [6], "section": "4.1.1", "review_reference_numbers": [28, 33]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="103.36" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="383" x="618" y="1006.32"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="809.5" y="1035.32">辅助数据</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="809.5" y="1060.32">Auxiliary Data</text>
+  <text x="809.5" y="1087.32" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：RECALL-Web · FMWISS [6]</text></g><g id="method-18" data-category="生成式回放" data-node-box="587.0 1210.32 414.0 116.96"><title>生成式回放｜CL：DGR [5]；CSS：TIKP [6]
+LIT-005 §4.2 PDF p.10；综述参考文献 392
+LIT-006 §4.1.2 PDF p.7；综述参考文献 52</title><desc>{"category": "生成式回放", "lines": ["CL：DGR [5]；CSS：TIKP [6]"], "sources": [{"literature": "LIT-005", "pdf_pages": [10], "section": "4.2", "review_reference_numbers": [392]}, {"literature": "LIT-006", "pdf_pages": [7], "section": "4.1.2", "review_reference_numbers": [52]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="116.96" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="414" x="587" y="1210.32"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="794.0" y="1239.32">生成式回放</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="794.0" y="1264.32">Generative Replay</text>
+  <text x="794" y="1291.32" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：DGR [5]；CSS：TIKP [6]</text></g><path d="M794.0 1327.28 V1353.12 H601 V1531.28" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <path d="M601 1400.72 H618" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <circle cx="601" cy="1400.72" fill="#A5B4C5" r="4"/>
+  <path d="M601 1531.28 H618" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <circle cx="601" cy="1531.28" fill="#A5B4C5" r="4"/>
+  <g id="method-19" data-category="生成数据回放" data-node-box="618.0 1349.04 383.0 103.36"><title>生成数据回放｜CSS：RECALL-GAN · TIKP [6]
+LIT-006 §4.1.2 PDF p.7；综述参考文献 28,52</title><desc>{"category": "生成数据回放", "lines": ["CSS：RECALL-GAN · TIKP [6]"], "sources": [{"literature": "LIT-006", "pdf_pages": [7], "section": "4.1.2", "review_reference_numbers": [28, 52]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="103.36" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="383" x="618" y="1349.04"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="809.5" y="1378.04">生成数据回放</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="809.5" y="1403.04">Generative-data Replay</text>
+  <text x="809.5" y="1430.04" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：RECALL-GAN · TIKP [6]</text></g><g id="method-20" data-category="生成特征回放" data-node-box="618.0 1479.6 383.0 118"><title>生成特征回放｜CL：GFR [5]；CSS：Shan et al. (2022) [6]
+LIT-005 §4.2 PDF p.10；综述参考文献 273
+LIT-006 §4.1.2 / reference [54] PDF p.7,17；综述参考文献 54
+Shan 等：Class-incremental semantic segmentation of aerial images via pixel-level feature generation and task-wise distillation，IEEE TGRS 60，2022。综述该段未提供明确方法简称，故保留作者年份，避免编造缩写。</title><desc>{"category": "生成特征回放", "lines": ["CL：GFR [5]", "CSS：Shan et al. (2022) [6]"], "sources": [{"literature": "LIT-005", "pdf_pages": [10], "section": "4.2", "review_reference_numbers": [273]}, {"literature": "LIT-006", "pdf_pages": [7, 17], "section": "4.1.2 / reference [54]", "review_reference_numbers": [54]}], "header": false, "small": false, "note": "Shan 等：Class-incremental semantic segmentation of aerial images via pixel-level feature generation and task-wise distillation，IEEE TGRS 60，2022。综述该段未提供明确方法简称，故保留作者年份，避免编造缩写。"}</desc><rect fill="#E1F5E9" height="118" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="383" x="618" y="1479.6"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="809.5" y="1508.6">生成特征回放</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="809.5" y="1533.6">Generative-feature Replay</text>
+  <text x="809.5" y="1560.6" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：GFR [5]</text><text x="809.5" y="1587.6" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：Shan et al. (2022) [6]</text></g><path d="M1280.0 553 V576 H1062 V1059.36" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.0"/>
+  <path d="M1062 670.4 H1081" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="1062" cy="670.4" fill="#90A1B7" r="4.5"/>
+  <path d="M1062 864.88 H1081" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="1062" cy="864.88" fill="#90A1B7" r="4.5"/>
+  <path d="M1062 1059.36 H1081" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="1062" cy="1059.36" fill="#90A1B7" r="4.5"/>
+  <g id="method-21" data-category="梯度投影" data-node-box="1081.0 609.2 414.0 122.4"><title>梯度投影｜CL：GEM · A-GEM · OGD · GPM [5]
+LIT-005 §4.3 PDF p.10；综述参考文献 281,66,115,380</title><desc>{"category": "梯度投影", "lines": ["CL：GEM · A-GEM · OGD · GPM [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [10], "section": "4.3", "review_reference_numbers": [281, 66, 115, 380]}], "header": false, "small": false, "note": ""}</desc><rect fill="#F1EDF7" height="122.4" rx="15" ry="15" stroke="#9782B7" stroke-width="2.0" width="414" x="1081" y="609.2"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1288.0" y="638.2">梯度投影</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="17" text-anchor="middle" x="1288.0" y="663.2">Gradient Projection</text>
+  <text x="1288" y="690.2" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：GEM · A-GEM · OGD · GPM [5]</text></g><g id="method-22" data-category="损失景观优化" data-node-box="1081.0 803.68 414.0 122.4"><title>损失景观优化｜CL：Stable-SGD · MC-SGD [5]
+LIT-005 §4.3 PDF p.11；综述参考文献 313,312</title><desc>{"category": "损失景观优化", "lines": ["CL：Stable-SGD · MC-SGD [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [11], "section": "4.3", "review_reference_numbers": [313, 312]}], "header": false, "small": false, "note": ""}</desc><rect fill="#F1EDF7" height="122.4" rx="15" ry="15" stroke="#9782B7" stroke-width="2.0" width="414" x="1081" y="803.68"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1288.0" y="832.68">损失景观优化</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="17" text-anchor="middle" x="1288.0" y="857.68">Loss Landscape</text>
+  <text x="1288" y="884.68" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：Stable-SGD · MC-SGD [5]</text></g><g id="method-23" data-category="元学习" data-node-box="1081.0 998.16 414.0 122.4"><title>元学习｜CL：MER · OML · La-MAML [5]
+LIT-005 §4.3 PDF p.11；综述参考文献 369,186,148</title><desc>{"category": "元学习", "lines": ["CL：MER · OML · La-MAML [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [11], "section": "4.3", "review_reference_numbers": [369, 186, 148]}], "header": false, "small": false, "note": ""}</desc><rect fill="#F1EDF7" height="122.4" rx="15" ry="15" stroke="#9782B7" stroke-width="2.0" width="414" x="1081" y="998.16"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1288.0" y="1027.16">元学习</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="17" text-anchor="middle" x="1288.0" y="1052.16">Meta-learning</text>
+  <text x="1288" y="1079.16" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：MER · OML · La-MAML [5]</text></g><rect fill="#F7F5FA" height="329.12" rx="14" ry="14" stroke="#D8CDE4" stroke-width="1.5" width="396" x="1082" y="1225.28"/>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="24" font-weight="700" text-anchor="start" x="1105" y="1289.2">分类对应说明</text>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="20" text-anchor="start" x="1105" y="1349.04">优化类在第一张通用 CL 综述中</text>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="20" text-anchor="start" x="1105" y="1388.48">被单独列出；第二张 CSS 综述</text>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="20" text-anchor="start" x="1105" y="1427.92">没有单独列出该方法类别。</text>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="20" text-anchor="start" x="1105" y="1467.36">并不意味着这些方法无法应用于</text>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="20" text-anchor="start" x="1105" y="1506.8">语义分割任务。</text>
+  <path d="M1774.0 553 V576 H1556 V1547.6" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.0"/>
+  <path d="M1556 666.32 H1575" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="1556" cy="666.32" fill="#90A1B7" r="4.5"/>
+  <path d="M1556 1272.88 H1575" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="1556" cy="1272.88" fill="#90A1B7" r="4.5"/>
+  <path d="M1556 1547.6 H1575" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="1556" cy="1547.6" fill="#90A1B7" r="4.5"/>
+  <g id="method-24" data-category="自监督学习" data-node-box="1575.0 607.84 414.0 116.96"><title>自监督学习｜CL：LUMP · CaSSLe · DualNet [5]
+LIT-005 §4.4 PDF p.11,12；综述参考文献 286,118,343</title><desc>{"category": "自监督学习", "lines": ["CL：LUMP · CaSSLe · DualNet [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [11, 12], "section": "4.4", "review_reference_numbers": [286, 118, 343]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="116.96" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="414" x="1575" y="607.84"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1782.0" y="636.84">自监督学习</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="1782.0" y="661.84">Self-supervised Learning</text>
+  <text x="1782" y="688.84" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：LUMP · CaSSLe · DualNet [5]</text></g><path d="M1782.0 724.8 V752 H1589 V1058" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <path d="M1589 799.6 H1606" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <circle cx="1589" cy="799.6" fill="#A5B4C5" r="4"/>
+  <path d="M1589 928.8 H1606" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <circle cx="1589" cy="928.8" fill="#A5B4C5" r="4"/>
+  <path d="M1589 1058 H1606" fill="none" stroke="#A5B4C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7"/>
+  <circle cx="1589" cy="1058" fill="#A5B4C5" r="4"/>
+  <g id="method-25" data-category="对比学习" data-node-box="1606.0 747.92 383.0 103.36"><title>对比学习｜CSS：IDEC · UCD [6]
+LIT-006 §4.2.1 PDF p.7；综述参考文献 44,41</title><desc>{"category": "对比学习", "lines": ["CSS：IDEC · UCD [6]"], "sources": [{"literature": "LIT-006", "pdf_pages": [7], "section": "4.2.1", "review_reference_numbers": [44, 41]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="103.36" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="383" x="1606" y="747.92"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1797.5" y="776.92">对比学习</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="1797.5" y="801.92">Contrastive Learning</text>
+  <text x="1797.5" y="828.92" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：IDEC · UCD [6]</text></g><g id="method-26" data-category="伪标签" data-node-box="1606.0 877.12 383.0 103.36"><title>伪标签｜CSS：PLOP · REMINDER · LAG [6]
+LIT-006 §4.2.1 PDF p.7；综述参考文献 40,42,51</title><desc>{"category": "伪标签", "lines": ["CSS：PLOP · REMINDER · LAG [6]"], "sources": [{"literature": "LIT-006", "pdf_pages": [7], "section": "4.2.1", "review_reference_numbers": [40, 42, 51]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="103.36" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="383" x="1606" y="877.12"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1797.5" y="906.12">伪标签</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="1797.5" y="931.12">Pseudo-labeling</text>
+  <text x="1797.5" y="958.12" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：PLOP · REMINDER · LAG [6]</text></g><g id="method-27" data-category="基础模型驱动" data-node-box="1606.0 1006.32 383.0 103.36"><title>基础模型驱动｜CSS：FMWISS · ECLIPSE [6]
+LIT-006 §4.2.1 / 5.2 / reference [156] PDF p.8,11,19；综述参考文献 33,156
+FMWISS 为基础模型驱动的弱监督增量分割例子；ECLIPSE 在综述中以视觉提示的分割例子列入，原工作对象含全景分割，不等同已验证天气域增量语义分割。</title><desc>{"category": "基础模型驱动", "lines": ["CSS：FMWISS · ECLIPSE [6]"], "sources": [{"literature": "LIT-006", "pdf_pages": [8, 11, 19], "section": "4.2.1 / 5.2 / reference [156]", "review_reference_numbers": [33, 156]}], "header": false, "small": false, "note": "FMWISS 为基础模型驱动的弱监督增量分割例子；ECLIPSE 在综述中以视觉提示的分割例子列入，原工作对象含全景分割，不等同已验证天气域增量语义分割。"}</desc><rect fill="#E1F5E9" height="103.36" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="383" x="1606" y="1006.32"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1797.5" y="1035.32">基础模型驱动</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="1797.5" y="1060.32">Foundation-model Driven</text>
+  <text x="1797.5" y="1087.32" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：FMWISS · ECLIPSE [6]</text></g><g id="method-28" data-category="预训练" data-node-box="1575.0 1211.68 414.0 122.4"><title>预训练｜CL：L2P · DualPrompt [5]；CSS：SSUL · MicroSeg [6]
+LIT-005 §4.4 PDF p.12；综述参考文献 458,457
+LIT-006 §4.2.2 PDF p.8；综述参考文献 26,176</title><desc>{"category": "预训练", "lines": ["CL：L2P · DualPrompt [5]", "CSS：SSUL · MicroSeg [6]"], "sources": [{"literature": "LIT-005", "pdf_pages": [12], "section": "4.4", "review_reference_numbers": [458, 457]}, {"literature": "LIT-006", "pdf_pages": [8], "section": "4.2.2", "review_reference_numbers": [26, 176]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="122.4" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="414" x="1575" y="1211.68"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1782.0" y="1240.68">预训练</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="1782.0" y="1265.68">Pre-training for Downstream Tasks</text>
+  <text x="1782" y="1292.68" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：L2P · DualPrompt [5]</text><text x="1782" y="1319.68" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：SSUL · MicroSeg [6]</text></g><g id="method-29" data-category="持续预训练" data-node-box="1575.0 1486.4 414.0 122.4"><title>持续预训练｜CL：IncCLIP · ECONET [5]
+LIT-005 §4.4 PDF p.12；综述参考文献 478,151
+IncCLIP 对视觉语言模型持续预训练；ECONET 是语言模型持续预训练例子，不宣称二者都是分割方法。</title><desc>{"category": "持续预训练", "lines": ["CL：IncCLIP · ECONET [5]"], "sources": [{"literature": "LIT-005", "pdf_pages": [12], "section": "4.4", "review_reference_numbers": [478, 151]}], "header": false, "small": false, "note": "IncCLIP 对视觉语言模型持续预训练；ECONET 是语言模型持续预训练例子，不宣称二者都是分割方法。"}</desc><rect fill="#F1EDF7" height="122.4" rx="15" ry="15" stroke="#9782B7" stroke-width="2.0" width="414" x="1575" y="1486.4"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="1782.0" y="1515.4">持续预训练</text>
+  <text dominant-baseline="alphabetic" fill="#65547C" font-size="17" text-anchor="middle" x="1782.0" y="1540.4">Continual Pre-training</text>
+  <text x="1782" y="1567.4" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：IncCLIP · ECONET [5]</text></g><rect fill="#F5F9FD" height="95.2" rx="11" ry="11" stroke="#C6D7E7" stroke-width="1.3" width="398" x="1575" y="1355.84"/>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="19" text-anchor="middle" x="1774.0" y="1393.92">CSS 综述将「预训练」</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="19" text-anchor="middle" x="1774.0" y="1429.28">放在无数据正则化方法下</text>
+  <path d="M2268.0 553 V576 H2050 V1059.36" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.0"/>
+  <path d="M2050 670.4 H2069" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="2050" cy="670.4" fill="#90A1B7" r="4.5"/>
+  <path d="M2050 864.88 H2069" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="2050" cy="864.88" fill="#90A1B7" r="4.5"/>
+  <path d="M2050 1059.36 H2069" fill="none" stroke="#90A1B7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle cx="2050" cy="1059.36" fill="#90A1B7" r="4.5"/>
+  <g id="method-30" data-category="参数分配" data-node-box="2069.0 609.2 414.0 122.4"><title>参数分配｜CL：PackNet · HAT [5]；CSS：ACD · FairCL [6]
+LIT-005 §4.5 PDF p.12,13；综述参考文献 291,384
+LIT-006 §4.2.3 PDF p.9；综述参考文献 56,135
+按两篇综述的分类放置；CSS 综述也将冻结教师或原型作为这一分支的例子。</title><desc>{"category": "参数分配", "lines": ["CL：PackNet · HAT [5]", "CSS：ACD · FairCL [6]"], "sources": [{"literature": "LIT-005", "pdf_pages": [12, 13], "section": "4.5", "review_reference_numbers": [291, 384]}, {"literature": "LIT-006", "pdf_pages": [9], "section": "4.2.3", "review_reference_numbers": [56, 135]}], "header": false, "small": false, "note": "按两篇综述的分类放置；CSS 综述也将冻结教师或原型作为这一分支的例子。"}</desc><rect fill="#E1F5E9" height="122.4" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="414" x="2069" y="609.2"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="2276.0" y="638.2">参数分配</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="2276.0" y="663.2">Parameter Allocation</text>
+  <text x="2276" y="690.2" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：PackNet · HAT [5]</text><text x="2276" y="717.2" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：ACD · FairCL [6]</text></g><g id="method-31" data-category="模型 / 架构分解" data-node-box="2069.0 803.68 414.0 122.4"><title>模型 / 架构分解｜CL：APD · DyTox [5]；CSS：RCIL [6]
+LIT-005 §4.5 PDF p.13；综述参考文献 490,103
+LIT-006 §4.2.3 PDF p.9；综述参考文献 43</title><desc>{"category": "模型 / 架构分解", "lines": ["CL：APD · DyTox [5]", "CSS：RCIL [6]"], "sources": [{"literature": "LIT-005", "pdf_pages": [13], "section": "4.5", "review_reference_numbers": [490, 103]}, {"literature": "LIT-006", "pdf_pages": [9], "section": "4.2.3", "review_reference_numbers": [43]}], "header": false, "small": false, "note": ""}</desc><rect fill="#E1F5E9" height="122.4" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="414" x="2069" y="803.68"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="2276.0" y="832.68">模型 / 架构分解</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="2276.0" y="857.68">Model / Architecture Decomposition</text>
+  <text x="2276" y="884.68" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：APD · DyTox [5]</text><text x="2276" y="911.68" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：RCIL [6]</text></g><g id="method-32" data-category="模块化网络" data-node-box="2069.0 998.16 414.0 122.4"><title>模块化网络｜CL：Progressive Networks · PathNet [5]；CSS：Liu et al. (2020) [6]
+LIT-005 §4.5 PDF p.13；综述参考文献 379,117
+LIT-006 §4.2.3 / reference [57] PDF p.9,17；综述参考文献 57
+Liu 等：Dynamic extension nets for few-shot semantic segmentation，ACM MM 2020；按 CSS 综述的模块化网络分支转录，少样本扩展不自动等同在线 CL。</title><desc>{"category": "模块化网络", "lines": ["CL：Progressive Networks · PathNet [5]", "CSS：Liu et al. (2020) [6]"], "sources": [{"literature": "LIT-005", "pdf_pages": [13], "section": "4.5", "review_reference_numbers": [379, 117]}, {"literature": "LIT-006", "pdf_pages": [9, 17], "section": "4.2.3 / reference [57]", "review_reference_numbers": [57]}], "header": false, "small": false, "note": "Liu 等：Dynamic extension nets for few-shot semantic segmentation，ACM MM 2020；按 CSS 综述的模块化网络分支转录，少样本扩展不自动等同在线 CL。"}</desc><rect fill="#E1F5E9" height="122.4" rx="15" ry="15" stroke="#299268" stroke-width="2.0" width="414" x="2069" y="998.16"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="middle" x="2276.0" y="1027.16">模块化网络</text>
+  <text dominant-baseline="alphabetic" fill="#176A4C" font-size="17" text-anchor="middle" x="2276.0" y="1052.16">Modular Network</text>
+  <text x="2276" y="1079.16" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CL：Progressive Networks · PathNet [5]</text><text x="2276" y="1106.16" font-size="17.5" font-weight="600" fill="#273B53" text-anchor="middle" class="method-example" dominant-baseline="alphabetic">CSS：Liu et al. (2020) [6]</text></g><rect fill="#F5F9FD" height="259.76" rx="14" ry="14" stroke="#C6D7E7" stroke-width="1.5" width="400" x="2068" y="1267.44"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="22" font-weight="700" text-anchor="start" x="2092" y="1332.72">原 CSS 综述中的对应项</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="18.5" text-anchor="start" x="2093" y="1381.68">Dynamic-architecture Manner</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="18.5" text-anchor="start" x="2093" y="1419.76">• Parameter Allocation</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="18.5" text-anchor="start" x="2093" y="1457.84">• Architecture Decomposition</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="18.5" text-anchor="start" x="2093" y="1495.92">• Modular Network</text>
+  <rect fill="#FFFFFF" height="204" rx="17" ry="17" stroke="#DEE5EE" stroke-width="1.6" width="2446" x="57" y="1818.24"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="24" font-weight="700" text-anchor="start" x="82" y="1865.84">颜色图例</text>
+  <rect fill="#E1F5E9" height="38.08" rx="8" ry="8" stroke="#299268" stroke-width="2" width="42" x="216" y="1837.28"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="21" text-anchor="start" x="270" y="1867.2">绿色：CSS 分类图中的节点 / 对应项</text>
+  <rect fill="#F1EDF7" height="38.08" rx="8" ry="8" stroke="#9782B7" stroke-width="2" width="42" x="886" y="1837.28"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="21" text-anchor="start" x="940" y="1867.2">灰紫色：仅通用 CL 分类图单列的细分</text>
+  <rect fill="#E5EEFA" height="38.08" rx="8" ry="8" stroke="#4779B4" stroke-width="2" width="42" x="1572" y="1837.28"/>
+  <text dominant-baseline="alphabetic" fill="#142239" font-size="21" text-anchor="start" x="1626" y="1867.2">蓝色：主分类</text>
+  <path d="M85 1899.84 H2473" fill="none" stroke="#DEE5EE" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="21" text-anchor="start" x="84" y="1948.8">方法对应：CSS 的数据回放方法 → 回放类；无数据方法 → 正则化、表征学习、架构类。方法边界并非完全互斥。</text>
+  <text dominant-baseline="alphabetic" fill="#63748A" font-size="21" text-anchor="start" x="84" y="1995.04">使用提醒：灰紫色不等于“不适用语义分割”；绿色也不意味着满足在线、单遍（one-pass / one-epoch）训练约束。</text>
+  <text dominant-baseline="alphabetic" fill="#8190A1" font-size="19" text-anchor="start" x="60" y="2055">例子标签：CL = 通用持续学习例子；CSS = 持续分割综述例子；[5] = LIT-005，[6] = LIT-006。悬浮节点可查出处。</text>
+  <text dominant-baseline="alphabetic" fill="#8190A1" font-size="18" text-anchor="end" x="2493" y="2055">SVG · 矢量可编辑</text>
+<text x="60" y="2085" fill="#63748A" font-size="18" text-anchor="start">[5] Wang et al.，arXiv:2302.00487v3（2024-02-06），图 3、§4.1–4.5，PDF p.7–13。</text><text x="60" y="2115" fill="#63748A" font-size="18" text-anchor="start">[6] Yuan &amp; Zhao，arXiv:2310.14277v2（2024-07-22），图 3、§4.1–4.2，PDF p.2、5–9；个别例子另据表格/参考文献。</text><text x="60" y="2145" fill="#63748A" font-size="18" text-anchor="start">例子可跨分支；CSS 综述中的例子也不保证适用于域增量、无边界或在线训练；不将基础模型本身等同于持续学习算法。</text></svg>
