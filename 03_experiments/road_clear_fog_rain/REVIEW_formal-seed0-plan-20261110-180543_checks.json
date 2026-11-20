@@ -1,0 +1,3729 @@
+{
+  "status": "PASS",
+  "verification_status": "ANALYZED",
+  "model_rerun": "CANNOT_VERIFY",
+  "archive_sha256": "d5bff048c7415019cd29ef2ea3623a42d450492030b23463b4753d48be77f988",
+  "payload_files": 671,
+  "sha_manifest_files": 672,
+  "training_source_files": 89,
+  "unchanged_model_source_files": 15,
+  "checked": 900,
+  "passed": 900,
+  "real_domain_stages": {
+    "ft": [
+      {
+        "stage": "source",
+        "CS": 71.50872218134401,
+        "Fog": 49.60968798189637,
+        "Rain": 38.59910080251736,
+        "seen_domain_equal_mean": 71.50872218134401
+      },
+      {
+        "stage": "ft_fog",
+        "CS": 54.2915416984173,
+        "Fog": 62.306646392978735,
+        "Rain": 46.95818788314523,
+        "seen_domain_equal_mean": 58.29909404569801
+      },
+      {
+        "stage": "ft_rain",
+        "CS": 57.705620759360514,
+        "Fog": 63.11179610965187,
+        "Rain": 54.64429100936181,
+        "seen_domain_equal_mean": 58.48723595945807
+      }
+    ],
+    "gsmf": [
+      {
+        "stage": "source",
+        "CS": 71.50872218134401,
+        "Fog": 49.60968798189637,
+        "Rain": 38.59910080251736,
+        "seen_domain_equal_mean": 71.50872218134401
+      },
+      {
+        "stage": "gsmf_fog",
+        "CS": 55.20780120809538,
+        "Fog": 63.03037335204614,
+        "Rain": 46.97632106570381,
+        "seen_domain_equal_mean": 59.11908728007076
+      },
+      {
+        "stage": "gsmf_rain",
+        "CS": 55.80556592155607,
+        "Fog": 62.35713360742022,
+        "Rain": 53.25374449379536,
+        "seen_domain_equal_mean": 57.13881467425721
+      }
+    ],
+    "lwf": [
+      {
+        "stage": "source",
+        "CS": 71.50872218134401,
+        "Fog": 49.60968798189637,
+        "Rain": 38.59910080251736,
+        "seen_domain_equal_mean": 71.50872218134401
+      },
+      {
+        "stage": "lwf_fog",
+        "CS": 52.0610492279663,
+        "Fog": 59.787712521752994,
+        "Rain": 46.17275843122428,
+        "seen_domain_equal_mean": 55.92438087485965
+      },
+      {
+        "stage": "lwf_rain",
+        "CS": 49.24201134715698,
+        "Fog": 55.83769340752357,
+        "Rain": 50.004377590079116,
+        "seen_domain_equal_mean": 51.69469411491989
+      }
+    ]
+  },
+  "stage_deltas": {
+    "ft": {
+      "CS_after_minus_Fog_stage": 3.414079060943216,
+      "Fog_after_minus_Fog_stage": 0.8051497166731352,
+      "CS_cumulative_after_minus_Source": -13.803101421983499,
+      "Rain_adaptation_after_minus_own_Fog": 7.6861031262165795,
+      "old_domain_forgetting_CS": 13.803101421983499,
+      "old_domain_forgetting_Fog": -0.8051497166731352,
+      "synthetic_after_minus_own_Fog": {
+        "clear": 3.414079060943216,
+        "fog005": 1.5669080948895697,
+        "fog010": 0.9749990524329988,
+        "fog020": 0.059269605309864914
+      }
+    },
+    "gsmf": {
+      "CS_after_minus_Fog_stage": 0.597764713460684,
+      "Fog_after_minus_Fog_stage": -0.6732397446259242,
+      "CS_cumulative_after_minus_Source": -15.703156259787946,
+      "Rain_adaptation_after_minus_own_Fog": 6.277423428091552,
+      "old_domain_forgetting_CS": 15.703156259787946,
+      "old_domain_forgetting_Fog": 0.6732397446259242,
+      "synthetic_after_minus_own_Fog": {
+        "clear": 0.597764713460684,
+        "fog005": -0.29346235085108674,
+        "fog010": -0.6938449123212678,
+        "fog020": -0.8534447510826908
+      }
+    },
+    "lwf": {
+      "CS_after_minus_Fog_stage": -2.8190378808093186,
+      "Fog_after_minus_Fog_stage": -3.950019114229427,
+      "CS_cumulative_after_minus_Source": -22.26671083418703,
+      "Rain_adaptation_after_minus_own_Fog": 3.831619158854835,
+      "old_domain_forgetting_CS": 22.26671083418703,
+      "old_domain_forgetting_Fog": 3.950019114229427,
+      "synthetic_after_minus_own_Fog": {
+        "clear": -2.8190378808093186,
+        "fog005": -3.4117102356082825,
+        "fog010": -3.4654718328582987,
+        "fog020": -3.46398007105428
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "external_archive_sha",
+      "passed": true
+    },
+    {
+      "name": "remote_complete",
+      "passed": true
+    },
+    {
+      "name": "safe_archive_members",
+      "passed": true
+    },
+    {
+      "name": "extracted_files_match_archive",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:PREPARED_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:RESULTS.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:RESULTS_READY.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:STATUS.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:SUMMARY.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:authorization.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/Cityscapes-sample_ids.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/Cityscapes-scene_ids.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/Rain-archive-provenance.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/A_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/A_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/A_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/A_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/B_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/B_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/B_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/B_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/C_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/C_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/C_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/C_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/clear/audit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/A_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/A_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/A_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/A_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/B_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/B_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/B_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/B_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/C_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/C_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/C_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/C_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog005/audit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/A_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/A_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/A_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/A_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/B_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/B_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/B_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/B_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/C_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/C_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/C_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/C_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog010/audit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/A_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/A_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/A_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/A_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/B_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/B_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/B_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/B_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/C_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/C_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/C_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/C_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/evaluation-manifests/fog020/audit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/A_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/A_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/A_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/A_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/B_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/B_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/B_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/B_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/C_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/C_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/C_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/C_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/audit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:data-index/three-domain-manifests/class_mapping.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:environment/conda-linux-64.explicit.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:environment/pip-linux-64.lock.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-clear/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-clear/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-clear/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-clear/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-clear/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-clear/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog005/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog005/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog005/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog005/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog005/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog005/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog010/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog010/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog010/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog010/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog010/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog010/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog020/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog020/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog020/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog020/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog020/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-fog020/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-rain/20261110_193802/20261110_193802.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-rain/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-rain/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-rain/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_fog-rain/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-clear/20261110_194116/20261110_194116.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-clear/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-clear/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-clear/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-clear/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog/20261110_195913/20261110_195913.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog005/20261110_194549/20261110_194549.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog005/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog005/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog005/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog005/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog010/20261110_195015/20261110_195015.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog010/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog010/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog010/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog010/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog020/20261110_195446/20261110_195446.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog020/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog020/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog020/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-fog020/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-rain/20261110_200018/20261110_200018.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-rain/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-rain/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-rain/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/ft_rain-rain/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-clear/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-clear/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-clear/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-clear/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-clear/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-clear/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog005/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog005/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog005/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog005/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog005/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog005/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog010/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog010/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog010/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog010/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog010/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog010/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog020/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog020/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog020/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog020/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog020/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-fog020/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-rain/20261110_193907/20261110_193907.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-rain/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-rain/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-rain/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_fog-rain/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-clear/20261110_200123/20261110_200123.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-clear/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-clear/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-clear/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-clear/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog/20261110_201926/20261110_201926.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog005/20261110_200555/20261110_200555.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog005/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog005/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog005/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog005/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog010/20261110_201027/20261110_201027.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog010/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog010/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog010/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog010/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog020/20261110_201457/20261110_201457.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog020/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog020/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog020/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-fog020/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-rain/20261110_202031/20261110_202031.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-rain/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-rain/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-rain/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/gsmf_rain-rain/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-clear/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-clear/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-clear/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-clear/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog005/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog005/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog005/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog005/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog010/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog010/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog010/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog010/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog020/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog020/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog020/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-fog020/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-rain/20261110_194012/20261110_194012.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-rain/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-rain/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-rain/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_fog-rain/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-clear/20261110_202137/20261110_202137.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-clear/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-clear/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-clear/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-clear/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog/20261110_203946/20261110_203946.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog005/20261110_202608/20261110_202608.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog005/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog005/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog005/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog005/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog010/20261110_203038/20261110_203038.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog010/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog010/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog010/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog010/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog020/20261110_203510/20261110_203510.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog020/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog020/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog020/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-fog020/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-rain/20261110_204053/20261110_204053.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-rain/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-rain/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-rain/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/lwf_rain-rain/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-clear/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-clear/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-clear/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-clear/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-clear/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-clear/source_cityscapes.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog/source_cityscapes.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog005/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog005/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog005/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog005/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog005/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog005/source_cityscapes.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog010/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog010/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog010/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog010/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog010/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog010/source_cityscapes.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog020/cell-proof.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog020/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog020/exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog020/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog020/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-fog020/source_cityscapes.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-rain/20261110_193655/20261110_193655.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-rain/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-rain/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-rain/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:evaluation/source-rain/source_cityscapes.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:events.jsonl",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution-summary.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_fog-rain-1794310680680776763-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_fog-rain-1794310680680776763-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_fog-rain-1794310680680776763.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-clear-1794310874567892979-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-clear-1794310874567892979-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-clear-1794310874567892979.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog-1794311951665401860-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog-1794311951665401860-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog-1794311951665401860.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog005-1794311147148444194-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog005-1794311147148444194-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog005-1794311147148444194.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog010-1794311417249966024-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog010-1794311417249966024-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog010-1794311417249966024.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog020-1794311684633189216-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog020-1794311684633189216-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-fog020-1794311684633189216.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-rain-1794312016537441884-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-rain-1794312016537441884-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-ft_rain-rain-1794312016537441884.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_fog-rain-1794310745752142923-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_fog-rain-1794310745752142923-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_fog-rain-1794310745752142923.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-clear-1794312082320270950-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-clear-1794312082320270950-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-clear-1794312082320270950.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog-1794313165013942953-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog-1794313165013942953-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog-1794313165013942953.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog005-1794312353991284363-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog005-1794312353991284363-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog005-1794312353991284363.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog010-1794312625893080584-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog010-1794312625893080584-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog010-1794312625893080584.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog020-1794312895446009627-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog020-1794312895446009627-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-fog020-1794312895446009627.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-rain-1794313230049436257-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-rain-1794313230049436257-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-gsmf_rain-rain-1794313230049436257.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_fog-rain-1794310810592763498-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_fog-rain-1794310810592763498-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_fog-rain-1794310810592763498.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-clear-1794313296365740622-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-clear-1794313296365740622-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-clear-1794313296365740622.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog-1794314384873280440-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog-1794314384873280440-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog-1794314384873280440.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog005-1794313566928991139-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog005-1794313566928991139-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog005-1794313566928991139.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog010-1794313836927434981-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog010-1794313836927434981-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog010-1794313836927434981.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog020-1794314108983854580-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog020-1794314108983854580-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-fog020-1794314108983854580.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-rain-1794314451982439784-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-rain-1794314451982439784-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-lwf_rain-rain-1794314451982439784.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-source-rain-1794310616288408676-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-source-rain-1794310616288408676-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/eval-source-rain-1794310616288408676.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/train-ft-1794308083448512243-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/train-ft-1794308083448512243-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/train-ft-1794308083448512243.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/train-gsmf-1794308865033255221-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/train-gsmf-1794308865033255221-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/train-gsmf-1794308865033255221.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/train-lwf-1794309724279096944-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/train-lwf-1794309724279096944-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:execution/train-lwf-1794309724279096944.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:figures-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:figures.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:independent-finalize-exit.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:independent-finalize.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:postprocess-command.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:postprocessing-provenance.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/COMMANDS.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/PREPARED_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/READY.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/STATUS.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/ancestor-provenance.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/authorization.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/compatibility.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/contract-checks.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/conversion/ft/conversion.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/conversion/gsmf/conversion.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/conversion/lwf/conversion.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/debug-budget.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/environment.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/evaluation-plan.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/fixed-checkpoints.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/formal-launch.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/formal-preflight-check.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/ft-formal-resolved.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/git-diff-final.patch",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/git-status-final.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/gsmf-formal-resolved.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/initial-chain-verification.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/lwf-formal-resolved.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/nonoptimization-times.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/preparation-integrity.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/rain-fixed-samples.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/resource-estimate.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/short-runs-completion.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/small-evaluations.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/source-snapshot-verification.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/source-snapshot.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/tmux-probe.exit",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/tmux-probe.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/tmux-probe.sh",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/trained-chain-verification.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/validated-source.tar.gz",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:preparation/validation-reentry.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:provenance.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:remote-index.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/42-cells.csv",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/42-cells.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/RESULTS.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/class-iou-long.csv",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/class-iou-long.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/class-iou-wide.csv",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/evaluation-resource-costs.csv",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/CS-frankfurt_000000_011074.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/CS-frankfurt_000001_008688.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/CS-frankfurt_000001_015328.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/CS-frankfurt_000001_041074.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/CS-frankfurt_000001_073911.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/CS-lindau_000049_000019.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/Rain-GOPR0400_frame_000094_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/Rain-GOPR0402_frame_000408_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/Rain-GP010400_frame_000360_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/Rain-GP020402_frame_000898_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/Rain-GP020402_frame_000981_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/Rain-GP030400_frame_000154_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/final-class-iou.pdf",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/final-class-iou.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/final-class-iou.svg",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/real-domain-stage-matrices.pdf",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/real-domain-stage-matrices.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/real-domain-stage-matrices.svg",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/synthetic-change-from-clear.pdf",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/synthetic-change-from-clear.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/synthetic-change-from-clear.svg",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/synthetic-miou.pdf",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/synthetic-miou.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/figures/synthetic-miou.svg",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-sample-selection-and-index.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/clear/frankfurt_000000_011074_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/clear/frankfurt_000001_008688_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/clear/frankfurt_000001_015328_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/clear/frankfurt_000001_041074_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/clear/frankfurt_000001_073911_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/clear/lindau_000049_000019_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog005/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog005/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog005/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog005/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog005/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog005/lindau_000049_000019_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog010/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog010/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog010/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog010/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog010/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog010/lindau_000049_000019_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog020/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog020/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog020/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog020/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog020/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/ft/fog020/lindau_000049_000019_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/clear/frankfurt_000000_011074_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/clear/frankfurt_000001_008688_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/clear/frankfurt_000001_015328_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/clear/frankfurt_000001_041074_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/clear/frankfurt_000001_073911_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/clear/lindau_000049_000019_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog005/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog005/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog005/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog005/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog005/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog005/lindau_000049_000019_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog010/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog010/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog010/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog010/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog010/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog010/lindau_000049_000019_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog020/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog020/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog020/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog020/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog020/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/gsmf/fog020/lindau_000049_000019_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/clear/frankfurt_000000_011074_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/clear/frankfurt_000001_008688_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/clear/frankfurt_000001_015328_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/clear/frankfurt_000001_041074_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/clear/frankfurt_000001_073911_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/clear/lindau_000049_000019_leftImg8bit.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog005/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog005/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog005/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog005/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog005/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog005/lindau_000049_000019_leftImg8bit_foggy_beta_0.005.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog010/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog010/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog010/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog010/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog010/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog010/lindau_000049_000019_leftImg8bit_foggy_beta_0.01.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog020/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog020/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog020/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog020/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog020/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/fixed-samples/lwf/fog020/lindau_000049_000019_leftImg8bit_foggy_beta_0.02.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/independent-final-check.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_fog-clear.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_fog-fog.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_fog-fog005.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_fog-fog010.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_fog-fog020.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_fog-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_rain-clear.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_rain-fog.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_rain-fog005.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_rain-fog010.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_rain-fog020.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/ft_rain-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_fog-clear.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_fog-fog.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_fog-fog005.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_fog-fog010.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_fog-fog020.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_fog-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_rain-clear.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_rain-fog.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_rain-fog005.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_rain-fog010.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_rain-fog020.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/gsmf_rain-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_fog-clear.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_fog-fog.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_fog-fog005.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_fog-fog010.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_fog-fog020.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_fog-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_rain-clear.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_rain-fog.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_rain-fog005.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_rain-fog010.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_rain-fog020.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/lwf_rain-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/source-clear.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/source-fog.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/source-fog005.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/source-fog010.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/source-fog020.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrices/source-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/matrix-score-recheck.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/old-domain-forgetting.csv",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/protocol-independent-check.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_fog/GOPR0400_frame_000094_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_fog/GOPR0402_frame_000408_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_fog/GP010400_frame_000360_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_fog/GP020402_frame_000898_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_fog/GP020402_frame_000981_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_fog/GP030400_frame_000154_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_rain/GOPR0400_frame_000094_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_rain/GOPR0402_frame_000408_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_rain/GP010400_frame_000360_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_rain/GP020402_frame_000898_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_rain/GP020402_frame_000981_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/ft_rain/GP030400_frame_000154_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_fog/GOPR0400_frame_000094_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_fog/GOPR0402_frame_000408_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_fog/GP010400_frame_000360_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_fog/GP020402_frame_000898_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_fog/GP020402_frame_000981_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_fog/GP030400_frame_000154_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_rain/GOPR0400_frame_000094_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_rain/GOPR0402_frame_000408_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_rain/GP010400_frame_000360_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_rain/GP020402_frame_000898_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_rain/GP020402_frame_000981_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/gsmf_rain/GP030400_frame_000154_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_fog/GOPR0400_frame_000094_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_fog/GOPR0402_frame_000408_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_fog/GP010400_frame_000360_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_fog/GP020402_frame_000898_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_fog/GP020402_frame_000981_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_fog/GP030400_frame_000154_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_rain/GOPR0400_frame_000094_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_rain/GOPR0402_frame_000408_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_rain/GP010400_frame_000360_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_rain/GP020402_frame_000898_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_rain/GP020402_frame_000981_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/lwf_rain/GP030400_frame_000154_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/source/GOPR0400_frame_000094_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/source/GOPR0402_frame_000408_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/source/GP010400_frame_000360_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/source/GP020402_frame_000898_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/source/GP020402_frame_000981_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/rain-fixed-samples/source/GP030400_frame_000154_rgb_anon.png",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/real-domain-stages.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/resource-costs.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/stage-deltas.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/synthetic-change-from-clear.csv",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/synthetic-conditions.csv",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/timing-observations.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/training-independent-check.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/ft_fog-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/ft_rain-clear.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/ft_rain-fog.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/ft_rain-fog005.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/ft_rain-fog010.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/ft_rain-fog020.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/ft_rain-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/gsmf_fog-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/gsmf_rain-clear.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/gsmf_rain-fog.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/gsmf_rain-fog005.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/gsmf_rain-fog010.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/gsmf_rain-fog020.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/gsmf_rain-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/lwf_fog-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/lwf_rain-clear.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/lwf_rain-fog.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/lwf_rain-fog005.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/lwf_rain-fog010.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/lwf_rain-fog020.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/lwf_rain-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:results/verification/source-rain.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:reused-source/LwF-Fog-independent-final-check.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:reused-source/severity-independent-final-check.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:reused-source/two-domain-independent-final-check.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:scripts/figures.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:scripts/package_handoff.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:scripts/verify_and_report.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:source/AGENTS.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:source/REPRO.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:source/STEP3_RAIN_CHAIN_REMOTE_TASK_20261110.md",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:source/code-fingerprint.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:source/git-diff.patch",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:source/git-status.txt",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:source/validated-training-source.tar.gz",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:status.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/ft/20261110_185447.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/ft/20261110_185447/20261110_185447.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/ft/audit-end-4000.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/ft/completion-1794308863098436989.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/ft/fresh-optimizer.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/ft/invocation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/ft/resolved.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/gsmf/20261110_190746.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/gsmf/20261110_190746/20261110_190746.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/gsmf/audit-end-4000.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/gsmf/completion-1794309721961407038.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/gsmf/fresh-optimizer.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/gsmf/invocation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/gsmf/resolved.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/lwf/20261110_192206.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/lwf/20261110_192206/20261110_192206.log",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/lwf/audit-end-4000.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/lwf/completion-1794310614054436464.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/lwf/fresh-optimizer.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/lwf/invocation.json",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest:training/lwf/resolved.py",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest_exact_coverage",
+      "passed": true
+    },
+    {
+      "name": "json_manifest_exact_coverage",
+      "passed": true
+    },
+    {
+      "name": "json_manifest_hashes_and_sizes",
+      "passed": true
+    },
+    {
+      "name": "authorization_and_ready_binding",
+      "passed": true
+    },
+    {
+      "name": "training_code_fingerprint",
+      "passed": true
+    },
+    {
+      "name": "training_source_coverage",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/ISPRS_DIL_my_dataset_IRRG_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/ISPRS_IRRG_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/ISPRS_my_dataset_IRRG_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/LoveDA_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/LoveDA_DIL_my_dataset_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/LoveDA_Rural_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/LoveDA_Rural_my_dataset_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/LoveDA_Urban_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/LoveDA_Urban_my_dataset_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/LoveDA_my_dataset_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/Potsdam_IRRG_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/Vaihingen_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/datasets/Vaihingen_my_dataset_512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/default_runtime_iter.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/models/gs_aufpn_r50-d8.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/models/gsmf_rs_dil_r50-d8.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/schedules/schedule_30k_iter.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/_base_/schedules/schedule_80k_iter.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/gsmf_rs_dil_r101-d8_4xb4-80k_LoveDA-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/road/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/road/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/road/gsmf_teacher_bn_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/road/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:configs/road/source_cityscapes.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/datasets/ISPRS_my_dataset.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/datasets/LoveDA_my_dataset.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/datasets/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/datasets/isprs_tif_loader.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/decode_head/DIL_decode_head.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/decode_head/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/decode_head/gs_aufpn_head.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/decode_head/gsmf_rs_dil_head.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/evaluation/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/evaluation/dg_metrics.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/losses/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/losses/dil_hin_loss.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/losses/dil_kldivergence_loss.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/segmentors/DIL_encoder_decoder.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:mmseg/segmentors/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:road_dil/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:road_dil/budget.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:road_dil/checkpoints.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:road_dil/config.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:road_dil/data.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:road_dil/hooks.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:road_dil/metrics.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:road_dil/models.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:road_dil/protocol.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/audit_data.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/check_rain_contracts.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/extract_data.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/finalize_rain_preparation.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/lwf_bn_formal.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/lwf_bn_start.sh",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/lwf_bn_status.sh",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/pipeline.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/preflight.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/prepare_rain_data.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/prepare_rain_protocol.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/profile.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/profile_debug.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/rain_common.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/rain_eval_smoke.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/rain_formal.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/rain_results.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/rain_resume.sh",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/rain_smoke.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/rain_start.sh",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/rain_status.sh",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/resume.sh",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/resume_session.sh",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/run.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/session.sh",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/start.sh",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/status.sh",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/verify.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/verify_lwf_bn.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/verify_lwf_bn_saved.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/verify_rain_chain.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/verify_rain_validation.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/verify_storage.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:tools/road/write_configs.py",
+      "passed": true
+    },
+    {
+      "name": "training_source:gsmf_rs_dil/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "original_model_and_loss_source_unchanged",
+      "passed": true
+    },
+    {
+      "name": "manifest:A_train",
+      "passed": true
+    },
+    {
+      "name": "old_manifest_unchanged:A_train",
+      "passed": true
+    },
+    {
+      "name": "manifest:A_val",
+      "passed": true
+    },
+    {
+      "name": "old_manifest_unchanged:A_val",
+      "passed": true
+    },
+    {
+      "name": "manifest:B_train",
+      "passed": true
+    },
+    {
+      "name": "old_manifest_unchanged:B_train",
+      "passed": true
+    },
+    {
+      "name": "manifest:B_val",
+      "passed": true
+    },
+    {
+      "name": "old_manifest_unchanged:B_val",
+      "passed": true
+    },
+    {
+      "name": "manifest:C_train",
+      "passed": true
+    },
+    {
+      "name": "manifest:C_val",
+      "passed": true
+    },
+    {
+      "name": "C_recorded_data_audit",
+      "passed": true
+    },
+    {
+      "name": "C_archive_provenance_binding",
+      "passed": true
+    },
+    {
+      "name": "parent_and_conversion:ft",
+      "passed": true
+    },
+    {
+      "name": "C_fresh_training:ft",
+      "passed": true
+    },
+    {
+      "name": "training_config:ft",
+      "passed": true
+    },
+    {
+      "name": "completed_training_record:ft",
+      "passed": true
+    },
+    {
+      "name": "parent_and_conversion:gsmf",
+      "passed": true
+    },
+    {
+      "name": "student_promoted_with_all_buffers:gsmf",
+      "passed": true
+    },
+    {
+      "name": "C_fresh_training:gsmf",
+      "passed": true
+    },
+    {
+      "name": "training_config:gsmf",
+      "passed": true
+    },
+    {
+      "name": "completed_training_record:gsmf",
+      "passed": true
+    },
+    {
+      "name": "parent_and_conversion:lwf",
+      "passed": true
+    },
+    {
+      "name": "student_promoted_with_all_buffers:lwf",
+      "passed": true
+    },
+    {
+      "name": "C_fresh_training:lwf",
+      "passed": true
+    },
+    {
+      "name": "training_config:lwf",
+      "passed": true
+    },
+    {
+      "name": "completed_training_record:lwf",
+      "passed": true
+    },
+    {
+      "name": "method_teacher_buffer_policies",
+      "passed": true
+    },
+    {
+      "name": "seven_by_six_unique_cells",
+      "passed": true
+    },
+    {
+      "name": "new_reused_image_counts",
+      "passed": true
+    },
+    {
+      "name": "recorded_student_and_frozen_evaluation",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-clear",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:source-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-fog005",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:source-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-fog010",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:source-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-fog020",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:source-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-fog",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:source-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:ft_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:ft_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:ft_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:ft_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:ft_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:gsmf_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:gsmf_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:gsmf_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:gsmf_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:gsmf_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:lwf_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:lwf_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:lwf_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:lwf_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "prior_matrix_identity:lwf_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-rain",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:source-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:ft_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:gsmf_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:lwf_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:ft_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:ft_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:ft_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:ft_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:ft_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:ft_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:gsmf_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:gsmf_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:gsmf_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:gsmf_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:gsmf_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:gsmf_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:lwf_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:lwf_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:lwf_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:lwf_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:lwf_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "prediction_recheck_record:lwf_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "seen_mean:ft:0",
+      "passed": true
+    },
+    {
+      "name": "seen_mean:ft:1",
+      "passed": true
+    },
+    {
+      "name": "seen_mean:ft:2",
+      "passed": true
+    },
+    {
+      "name": "stage_differences:ft",
+      "passed": true
+    },
+    {
+      "name": "seen_mean:gsmf:0",
+      "passed": true
+    },
+    {
+      "name": "seen_mean:gsmf:1",
+      "passed": true
+    },
+    {
+      "name": "seen_mean:gsmf:2",
+      "passed": true
+    },
+    {
+      "name": "stage_differences:gsmf",
+      "passed": true
+    },
+    {
+      "name": "seen_mean:lwf:0",
+      "passed": true
+    },
+    {
+      "name": "seen_mean:lwf:1",
+      "passed": true
+    },
+    {
+      "name": "seen_mean:lwf:2",
+      "passed": true
+    },
+    {
+      "name": "stage_differences:lwf",
+      "passed": true
+    },
+    {
+      "name": "fixed_sample_predictions",
+      "passed": true
+    },
+    {
+      "name": "summary_csv",
+      "passed": true
+    }
+  ]
+}

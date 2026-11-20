@@ -1,0 +1,340 @@
+{
+  "er_C": {
+    "status": "complete",
+    "training_seconds": 2720.4517740879965,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "C": 3000,
+      "B": 500,
+      "A": 500
+    },
+    "unique_images_seen": 600,
+    "eligible_images": 600,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15445.2880859375
+  },
+  "er_D": {
+    "status": "complete",
+    "training_seconds": 2724.6969778460043,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "D": 3000,
+      "C": 330,
+      "A": 335,
+      "B": 335
+    },
+    "unique_images_seen": 600,
+    "eligible_images": 600,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15432.2724609375
+  },
+  "er_E": {
+    "status": "complete",
+    "training_seconds": 2711.72446240898,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "E": 3000,
+      "D": 250,
+      "B": 250,
+      "A": 250,
+      "C": 250
+    },
+    "unique_images_seen": 600,
+    "eligible_images": 600,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15432.2724609375
+  },
+  "er_search_lr0": {
+    "status": "complete",
+    "training_seconds": 2784.491718162986,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "B": 3000,
+      "A": 1000
+    },
+    "unique_images_seen": 600,
+    "eligible_images": 600,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15432.2724609375
+  },
+  "er_search_lr1": {
+    "status": "complete",
+    "training_seconds": 2771.1543084349832,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "B": 3000,
+      "A": 1000
+    },
+    "unique_images_seen": 600,
+    "eligible_images": 600,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15442.0380859375
+  },
+  "er_search_lr2": {
+    "status": "complete",
+    "training_seconds": 2739.284846653987,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "B": 3000,
+      "A": 1000
+    },
+    "unique_images_seen": 600,
+    "eligible_images": 600,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15442.0380859375
+  },
+  "ft_C": {
+    "status": "complete",
+    "training_seconds": 2735.5547562620195,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "C": 4000
+    },
+    "unique_images_seen": 400,
+    "eligible_images": 400,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15445.2880859375
+  },
+  "ft_D": {
+    "status": "complete",
+    "training_seconds": 2772.8855292250228,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "D": 4000
+    },
+    "unique_images_seen": 400,
+    "eligible_images": 400,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15432.2724609375
+  },
+  "ft_E": {
+    "status": "complete",
+    "training_seconds": 2789.249226743006,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "E": 4000
+    },
+    "unique_images_seen": 400,
+    "eligible_images": 400,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15432.2724609375
+  },
+  "ft_search_lr0": {
+    "status": "complete",
+    "training_seconds": 2685.916375860019,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "B": 4000
+    },
+    "unique_images_seen": 400,
+    "eligible_images": 400,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15447.5849609375
+  },
+  "ft_search_lr1": {
+    "status": "complete",
+    "training_seconds": 2703.580498394993,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "B": 4000
+    },
+    "unique_images_seen": 400,
+    "eligible_images": 400,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15442.4912109375
+  },
+  "ft_search_lr2": {
+    "status": "complete",
+    "training_seconds": 2724.0284688009997,
+    "attempted_steps": 4000,
+    "applied_steps": 4000,
+    "skipped_amp_steps": 0,
+    "image_counts_by_domain": {
+      "B": 4000
+    },
+    "unique_images_seen": 400,
+    "eligible_images": 400,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15443.3818359375
+  },
+  "joint_search_lr0": {
+    "status": "complete",
+    "training_seconds": 10916.856165327015,
+    "attempted_steps": 16000,
+    "applied_steps": 15997,
+    "skipped_amp_steps": 3,
+    "image_counts_by_domain": {
+      "B": 1411,
+      "C": 1387,
+      "A": 10429,
+      "E": 1390,
+      "D": 1383
+    },
+    "unique_images_seen": 4575,
+    "eligible_images": 4575,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15435.1943359375
+  },
+  "joint_search_lr1": {
+    "status": "complete",
+    "training_seconds": 11088.120412392018,
+    "attempted_steps": 16000,
+    "applied_steps": 15998,
+    "skipped_amp_steps": 2,
+    "image_counts_by_domain": {
+      "B": 1411,
+      "C": 1387,
+      "A": 10429,
+      "E": 1390,
+      "D": 1383
+    },
+    "unique_images_seen": 4575,
+    "eligible_images": 4575,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15430.806640625
+  },
+  "joint_search_lr2": {
+    "status": "complete",
+    "training_seconds": 11112.554696353007,
+    "attempted_steps": 16000,
+    "applied_steps": 15999,
+    "skipped_amp_steps": 1,
+    "image_counts_by_domain": {
+      "B": 1411,
+      "C": 1387,
+      "A": 10429,
+      "E": 1390,
+      "D": 1383
+    },
+    "unique_images_seen": 4575,
+    "eligible_images": 4575,
+    "full_pool_seen": true,
+    "peak_allocated_MiB": 15430.806640625
+  },
+  "jobs/er_search_lr0/val_2000": {
+    "evaluation_seconds": 314.85834201201214,
+    "peak_allocated_MiB": 1615.986328125
+  },
+  "jobs/er_search_lr0/val_4000": {
+    "evaluation_seconds": 311.4542326260125,
+    "peak_allocated_MiB": 1609.423828125
+  },
+  "jobs/er_search_lr1/val_2000": {
+    "evaluation_seconds": 312.3524806489877,
+    "peak_allocated_MiB": 1614.736328125
+  },
+  "jobs/er_search_lr1/val_4000": {
+    "evaluation_seconds": 312.40746409399435,
+    "peak_allocated_MiB": 1609.423828125
+  },
+  "jobs/er_search_lr2/val_2000": {
+    "evaluation_seconds": 307.43061869600206,
+    "peak_allocated_MiB": 1614.736328125
+  },
+  "jobs/er_search_lr2/val_4000": {
+    "evaluation_seconds": 307.64185213300516,
+    "peak_allocated_MiB": 1609.423828125
+  },
+  "jobs/ft_search_lr0/val_2000": {
+    "evaluation_seconds": 305.65960049198475,
+    "peak_allocated_MiB": 1614.736328125
+  },
+  "jobs/ft_search_lr0/val_4000": {
+    "evaluation_seconds": 303.6194488769979,
+    "peak_allocated_MiB": 1609.423828125
+  },
+  "jobs/ft_search_lr1/val_2000": {
+    "evaluation_seconds": 305.26493474500603,
+    "peak_allocated_MiB": 1614.736328125
+  },
+  "jobs/ft_search_lr1/val_4000": {
+    "evaluation_seconds": 306.1467132070102,
+    "peak_allocated_MiB": 1609.423828125
+  },
+  "jobs/ft_search_lr2/val_2000": {
+    "evaluation_seconds": 308.5855241319805,
+    "peak_allocated_MiB": 1614.736328125
+  },
+  "jobs/ft_search_lr2/val_4000": {
+    "evaluation_seconds": 308.57064049498877,
+    "peak_allocated_MiB": 1609.423828125
+  },
+  "jobs/joint_search_lr0/val_16000": {
+    "evaluation_seconds": 462.8034615109791,
+    "peak_allocated_MiB": 1609.423828125
+  },
+  "jobs/joint_search_lr0/val_5000": {
+    "evaluation_seconds": 463.08600912601105,
+    "peak_allocated_MiB": 1615.330078125
+  },
+  "jobs/joint_search_lr1/val_16000": {
+    "evaluation_seconds": 464.82906510299654,
+    "peak_allocated_MiB": 1609.423828125
+  },
+  "jobs/joint_search_lr1/val_5000": {
+    "evaluation_seconds": 466.60429534499417,
+    "peak_allocated_MiB": 1615.330078125
+  },
+  "jobs/joint_search_lr2/val_16000": {
+    "evaluation_seconds": 466.4164350669889,
+    "peak_allocated_MiB": 1609.423828125
+  },
+  "jobs/joint_search_lr2/val_5000": {
+    "evaluation_seconds": 471.3004176559916,
+    "peak_allocated_MiB": 1615.330078125
+  },
+  "matrices/er/B": {
+    "evaluation_seconds": 461.78679261301295,
+    "peak_allocated_MiB": 1605.970703125
+  },
+  "matrices/er/C": {
+    "evaluation_seconds": 456.8891704129928,
+    "peak_allocated_MiB": 1615.330078125
+  },
+  "matrices/er/D": {
+    "evaluation_seconds": 462.1120663569891,
+    "peak_allocated_MiB": 1615.986328125
+  },
+  "matrices/er/E": {
+    "evaluation_seconds": 460.86168251701747,
+    "peak_allocated_MiB": 1615.986328125
+  },
+  "matrices/ft/B": {
+    "evaluation_seconds": 464.181875300972,
+    "peak_allocated_MiB": 1605.970703125
+  },
+  "matrices/ft/C": {
+    "evaluation_seconds": 462.48102998599643,
+    "peak_allocated_MiB": 1615.330078125
+  },
+  "matrices/ft/D": {
+    "evaluation_seconds": 465.7748376750096,
+    "peak_allocated_MiB": 1615.986328125
+  },
+  "matrices/ft/E": {
+    "evaluation_seconds": 466.9436025719915,
+    "peak_allocated_MiB": 1615.986328125
+  }
+}

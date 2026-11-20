@@ -1,0 +1,1454 @@
+{
+ "scope": "Cityscapes val500 clear; seed0 stage A; descriptive only, no significance test",
+ "method_note": "same formulas as road_clear_fog_rain/analyze_cs_confusion_shift.py",
+ "clear": {
+  "source": {
+   "mIoU": 71.50872218134401,
+   "road_gt_predicted_as_percent": {
+    "road": 97.40506408708025,
+    "sidewalk": 1.5467576009463495,
+    "building": 0.28356062220852735,
+    "car": 0.21675675481230122,
+    "vegetation": 0.14340486298904767
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 60.41185518733115,
+     "pred_over_gt_area": 0.8841253787200201,
+     "recall_percent": 70.95704329401632,
+     "false_positive_sources_percent": {
+      "terrain": 80.25676561478572,
+      "vegetation": 8.581054691411188,
+      "sidewalk": 4.133247318578015
+     }
+    },
+    "truck": {
+     "IoU": 60.63190990957339,
+     "pred_over_gt_area": 1.3680664268057767,
+     "recall_percent": 89.38472457359238,
+     "false_positive_sources_percent": {
+      "truck": 65.33653835968467,
+      "building": 11.238954364125172,
+      "car": 8.576932284505496
+     }
+    },
+    "train": {
+     "IoU": 63.66978057727076,
+     "pred_over_gt_area": 1.2481844582648345,
+     "recall_percent": 87.45744672601508,
+     "false_positive_sources_percent": {
+      "train": 70.06772608560931,
+      "bus": 12.379017571816753,
+      "building": 6.793265754799108
+     }
+    },
+    "sky": {
+     "IoU": 93.55690334249752,
+     "pred_over_gt_area": 1.023584684417829,
+     "recall_percent": 97.81119322333663,
+     "false_positive_sources_percent": {
+      "sky": 95.55749974802275,
+      "building": 2.3676239812227884,
+      "vegetation": 1.6277444641375878
+     }
+    },
+    "building": {
+     "IoU": 90.41300926456718,
+     "pred_over_gt_area": 1.006296038930849,
+     "recall_percent": 95.26411197214037,
+     "false_positive_sources_percent": {
+      "building": 94.66807806712112,
+      "vegetation": 1.2111214221422169,
+      "pole": 1.0903863483798264
+     }
+    },
+    "fence": {
+     "IoU": 53.614515575424235,
+     "pred_over_gt_area": 0.9516127981540444,
+     "recall_percent": 68.11516110432412,
+     "false_positive_sources_percent": {
+      "fence": 71.57865177565407,
+      "road": 4.793284514692743,
+      "building": 4.526330422050956
+     }
+    },
+    "bicycle": {
+     "IoU": 73.82581761676342,
+     "pred_over_gt_area": 1.0568848369776191,
+     "recall_percent": 87.35825719985087,
+     "false_positive_sources_percent": {
+      "bicycle": 82.6563634403819,
+      "building": 3.1253268428554826,
+      "rider": 2.784253822215815
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 0.0,
+   "per_class_drop_contribution_pp": {
+    "road": 0.0,
+    "sidewalk": 0.0,
+    "building": 0.0,
+    "wall": 0.0,
+    "fence": 0.0,
+    "pole": 0.0,
+    "traffic light": 0.0,
+    "traffic sign": 0.0,
+    "vegetation": 0.0,
+    "terrain": 0.0,
+    "sky": 0.0,
+    "person": 0.0,
+    "rider": 0.0,
+    "car": 0.0,
+    "truck": 0.0,
+    "bus": 0.0,
+    "train": 0.0,
+    "motorcycle": 0.0,
+    "bicycle": 0.0
+   }
+  },
+  "ft_fog": {
+   "mIoU": 54.2915416984173,
+   "road_gt_predicted_as_percent": {
+    "road": 87.26923144897731,
+    "terrain": 7.302260509062211,
+    "car": 1.2383146017683455,
+    "sky": 1.1636697879244686,
+    "fence": 0.7053657150133057
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 11.850085261516105,
+     "pred_over_gt_area": 5.120327196261363,
+     "recall_percent": 64.8425067665343,
+     "false_positive_sources_percent": {
+      "road": 64.5758502731937,
+      "sidewalk": 19.59613732969,
+      "terrain": 12.663742819771251
+     }
+    },
+    "truck": {
+     "IoU": 28.032370709515288,
+     "pred_over_gt_area": 3.257410031334561,
+     "recall_percent": 93.2149390028516,
+     "false_positive_sources_percent": {
+      "truck": 28.616274311853036,
+      "road": 26.721208514293906,
+      "car": 12.456219395562675
+     }
+    },
+    "train": {
+     "IoU": 47.77861741830127,
+     "pred_over_gt_area": 0.7306726712987376,
+     "recall_percent": 55.95474425385403,
+     "false_positive_sources_percent": {
+      "train": 76.57976882370187,
+      "bus": 8.406772645685775,
+      "building": 6.746246005224219
+     }
+    },
+    "sky": {
+     "IoU": 79.35798281742622,
+     "pred_over_gt_area": 1.1340168534422836,
+     "recall_percent": 94.42081703157777,
+     "false_positive_sources_percent": {
+      "sky": 83.26226964349377,
+      "road": 11.515963662672963,
+      "building": 3.9277815431147904
+     }
+    },
+    "building": {
+     "IoU": 86.6667743967493,
+     "pred_over_gt_area": 1.0246204943281432,
+     "recall_percent": 94.00029983269904,
+     "false_positive_sources_percent": {
+      "building": 91.7415768599634,
+      "vegetation": 1.8743742452238707,
+      "pole": 1.538533690397045
+     }
+    },
+    "fence": {
+     "IoU": 27.82392060167187,
+     "pred_over_gt_area": 1.7313797430674627,
+     "recall_percent": 59.4549852221713,
+     "false_positive_sources_percent": {
+      "fence": 34.33965625405533,
+      "vegetation": 20.24030579767012,
+      "road": 18.70059794256158
+     }
+    },
+    "bicycle": {
+     "IoU": 37.90208421157078,
+     "pred_over_gt_area": 0.42730827622521417,
+     "recall_percent": 39.229253706102334,
+     "false_positive_sources_percent": {
+      "bicycle": 91.80550878314006,
+      "rider": 2.283357367159144,
+      "sidewalk": 1.548418804525843
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 17.21718048292671,
+   "per_class_drop_contribution_pp": {
+    "terrain": 2.555882627674476,
+    "bicycle": 1.8907228107996124,
+    "truck": 1.7157652210556893,
+    "fence": 1.3573997354606508,
+    "bus": 0.9574806527805491,
+    "traffic light": 0.8999965976054386,
+    "train": 0.8363770083668148,
+    "sidewalk": 0.8357670744786803,
+    "motorcycle": 0.8348268919838099,
+    "traffic sign": 0.8312965557912456,
+    "sky": 0.7473116065827005,
+    "person": 0.6911489391686834,
+    "rider": 0.6001399646078001,
+    "road": 0.5724181209425337,
+    "pole": 0.5037443691438546,
+    "wall": 0.48733933608276764,
+    "car": 0.44772462167371513,
+    "vegetation": 0.2546680925267479,
+    "building": 0.19717025620094097
+   }
+  },
+  "ft_rain": {
+   "mIoU": 57.705620759360514,
+   "road_gt_predicted_as_percent": {
+    "road": 86.11588621106833,
+    "building": 5.473807812505639,
+    "terrain": 3.553342165481379,
+    "sidewalk": 1.7287708416842995,
+    "car": 1.0075291796193713
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 15.18061885663553,
+     "pred_over_gt_area": 2.358433794192964,
+     "recall_percent": 44.26361300276222,
+     "false_positive_sources_percent": {
+      "road": 68.22190855768679,
+      "terrain": 18.768223688004287,
+      "sidewalk": 10.838030933343655
+     }
+    },
+    "truck": {
+     "IoU": 53.76615426824083,
+     "pred_over_gt_area": 1.371624850419044,
+     "recall_percent": 82.92666756273343,
+     "false_positive_sources_percent": {
+      "truck": 60.458708908196414,
+      "building": 11.252375214409819,
+      "road": 10.174713297027397
+     }
+    },
+    "train": {
+     "IoU": 45.772292159523644,
+     "pred_over_gt_area": 0.7398899624678185,
+     "recall_percent": 54.63229706256398,
+     "false_positive_sources_percent": {
+      "train": 73.83840818754209,
+      "building": 11.68482888906939,
+      "bus": 8.405410150057776
+     }
+    },
+    "sky": {
+     "IoU": 84.29808751911929,
+     "pred_over_gt_area": 1.0848268995633301,
+     "recall_percent": 95.36014334569346,
+     "false_positive_sources_percent": {
+      "sky": 87.9035571334729,
+      "road": 7.007762319402659,
+      "building": 3.4674917294570355
+     }
+    },
+    "building": {
+     "IoU": 80.96256140730178,
+     "pred_over_gt_area": 1.1100421825424536,
+     "recall_percent": 94.40318397769835,
+     "false_positive_sources_percent": {
+      "building": 85.04468160072638,
+      "road": 8.47020908111464,
+      "pole": 1.3208854012735418
+     }
+    },
+    "fence": {
+     "IoU": 39.76725258129688,
+     "pred_over_gt_area": 1.4332766842144657,
+     "recall_percent": 69.23276140457375,
+     "false_positive_sources_percent": {
+      "fence": 48.303835656489504,
+      "road": 15.274652862290663,
+      "wall": 9.964894790114515
+     }
+    },
+    "bicycle": {
+     "IoU": 52.45260664335787,
+     "pred_over_gt_area": 0.6755776599956184,
+     "recall_percent": 57.64966426959901,
+     "false_positive_sources_percent": {
+      "bicycle": 85.33388192554044,
+      "rider": 4.473567671412687,
+      "person": 2.144493361594328
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 13.803101421983513,
+   "per_class_drop_contribution_pp": {
+    "terrain": 2.380591385826085,
+    "bicycle": 1.1249058407055554,
+    "wall": 0.9886934287940309,
+    "train": 0.9419730746182693,
+    "bus": 0.884187163361009,
+    "motorcycle": 0.764918119593604,
+    "person": 0.739333456727328,
+    "fence": 0.7288033154803871,
+    "sidewalk": 0.6473981517523902,
+    "road": 0.6455371698956913,
+    "rider": 0.6327995624167342,
+    "traffic light": 0.49871625242473266,
+    "building": 0.49739199248765303,
+    "sky": 0.48730609596727525,
+    "traffic sign": 0.48122758083080125,
+    "pole": 0.4694061748831758,
+    "car": 0.3713709953126337,
+    "truck": 0.3613555600701343,
+    "vegetation": 0.15718610083602205
+   }
+  },
+  "ft-seed0-D": {
+   "mIoU": 54.13016655937883,
+   "road_gt_predicted_as_percent": {
+    "road": 71.74596276554885,
+    "building": 20.71903019772885,
+    "sidewalk": 3.4673130342220415,
+    "terrain": 2.2488797152184006,
+    "wall": 0.5895263897462109
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 14.201215553231206,
+     "pred_over_gt_area": 2.274919193718159,
+     "recall_percent": 40.72446441494101,
+     "false_positive_sources_percent": {
+      "road": 44.76213338185084,
+      "sidewalk": 32.3257477465823,
+      "terrain": 17.901499326831203
+     }
+    },
+    "truck": {
+     "IoU": 42.88332885005712,
+     "pred_over_gt_area": 1.9635567715656521,
+     "recall_percent": 88.9447219795878,
+     "false_positive_sources_percent": {
+      "truck": 45.29775928437621,
+      "bus": 11.729756887253496,
+      "building": 11.630104333511506
+     }
+    },
+    "train": {
+     "IoU": 36.401388908927395,
+     "pred_over_gt_area": 0.649536469803654,
+     "recall_percent": 44.021119606687556,
+     "false_positive_sources_percent": {
+      "train": 67.77312999837336,
+      "bus": 12.769421557903156,
+      "building": 10.295287370559011
+     }
+    },
+    "sky": {
+     "IoU": 89.92558317869063,
+     "pred_over_gt_area": 1.0225878485947193,
+     "recall_percent": 95.76508270815214,
+     "false_positive_sources_percent": {
+      "sky": 93.649736636081,
+      "building": 4.544341164268457,
+      "vegetation": 1.0646952489600376
+     }
+    },
+    "building": {
+     "IoU": 64.17374250700202,
+     "pred_over_gt_area": 1.3919542909060147,
+     "recall_percent": 93.49890939263591,
+     "false_positive_sources_percent": {
+      "building": 67.17096243999364,
+      "road": 25.567514890291005,
+      "vegetation": 2.7411333187852986
+     }
+    },
+    "fence": {
+     "IoU": 34.27825414730731,
+     "pred_over_gt_area": 2.0551612984281165,
+     "recall_percent": 77.99147830269614,
+     "false_positive_sources_percent": {
+      "fence": 37.94907891772177,
+      "building": 19.505400012200493,
+      "vegetation": 9.977868977437561
+     }
+    },
+    "bicycle": {
+     "IoU": 48.62492091080595,
+     "pred_over_gt_area": 0.5760028288216958,
+     "recall_percent": 51.5613481487745,
+     "false_positive_sources_percent": {
+      "bicycle": 89.51578979959409,
+      "rider": 3.6867332373172874,
+      "building": 1.4957310582726293
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 17.378555621965184,
+   "per_class_drop_contribution_pp": {
+    "terrain": 2.4321389281105232,
+    "train": 1.435178508860177,
+    "sidewalk": 1.4133748764931848,
+    "road": 1.3954030992954245,
+    "building": 1.3810140398718505,
+    "bicycle": 1.3263629845240772,
+    "bus": 1.060856044828632,
+    "fence": 1.017697969900891,
+    "truck": 0.9341358452376983,
+    "traffic light": 0.7880857237223724,
+    "wall": 0.7336516020114718,
+    "rider": 0.733510527883816,
+    "motorcycle": 0.5976947254261544,
+    "person": 0.49850865736606953,
+    "pole": 0.46540926233516716,
+    "traffic sign": 0.448423139029572,
+    "vegetation": 0.2701994188551112,
+    "car": 0.25578815432841656,
+    "sky": 0.19112211388457354
+   }
+  },
+  "ft-seed0-E": {
+   "mIoU": 53.278608333804776,
+   "road_gt_predicted_as_percent": {
+    "road": 92.48158111804632,
+    "sidewalk": 2.5256901491176436,
+    "sky": 1.897516281158197,
+    "vegetation": 1.1224416790652307,
+    "building": 1.0864733067415033
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 14.19880237578645,
+     "pred_over_gt_area": 0.21895715503134022,
+     "recall_percent": 15.155790944188256,
+     "false_positive_sources_percent": {
+      "terrain": 69.2180666213851,
+      "road": 20.705589636513704,
+      "sidewalk": 9.044331599936271
+     }
+    },
+    "truck": {
+     "IoU": 52.110830078221134,
+     "pred_over_gt_area": 0.6234269771405158,
+     "recall_percent": 55.61611050749381,
+     "false_positive_sources_percent": {
+      "truck": 89.21030456941288,
+      "building": 3.095380610068631,
+      "bus": 2.557778694669309
+     }
+    },
+    "train": {
+     "IoU": 26.1044471023005,
+     "pred_over_gt_area": 2.4359956109060454,
+     "recall_percent": 71.12736127051087,
+     "false_positive_sources_percent": {
+      "building": 55.632150062273936,
+      "train": 29.19847677560294,
+      "road": 5.3551205885981
+     }
+    },
+    "sky": {
+     "IoU": 57.18755507692501,
+     "pred_over_gt_area": 0.9709777367373753,
+     "recall_percent": 71.70758386050383,
+     "false_positive_sources_percent": {
+      "sky": 73.85090424570559,
+      "road": 21.931395890403024,
+      "building": 2.565770681075654
+     }
+    },
+    "building": {
+     "IoU": 78.44640292696276,
+     "pred_over_gt_area": 1.050036827861186,
+     "recall_percent": 90.12118618010653,
+     "false_positive_sources_percent": {
+      "building": 85.82669082538169,
+      "sky": 3.2220136705846385,
+      "vegetation": 2.4858466260957353
+     }
+    },
+    "fence": {
+     "IoU": 25.62616648021292,
+     "pred_over_gt_area": 1.5542534633936478,
+     "recall_percent": 52.10357548870667,
+     "false_positive_sources_percent": {
+      "building": 37.40297836945837,
+      "fence": 33.523216589745076,
+      "wall": 7.486973397297611
+     }
+    },
+    "bicycle": {
+     "IoU": 63.457427156211736,
+     "pred_over_gt_area": 0.9269381464299579,
+     "recall_percent": 74.80757478505183,
+     "false_positive_sources_percent": {
+      "bicycle": 80.70395535362132,
+      "building": 3.9318680976029174,
+      "rider": 3.771864674289289
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 18.23011384753923,
+   "per_class_drop_contribution_pp": {
+    "terrain": 2.432265937449721,
+    "train": 1.977122814472119,
+    "sky": 1.9141762245038165,
+    "fence": 1.4730710050111218,
+    "bus": 1.310893799987597,
+    "traffic light": 1.2833835512620186,
+    "wall": 0.8959832768355738,
+    "motorcycle": 0.8428634536822489,
+    "pole": 0.7900126787793662,
+    "person": 0.7062053561471785,
+    "rider": 0.6669233253322687,
+    "building": 0.6298213861897061,
+    "traffic sign": 0.597324153449381,
+    "car": 0.5673036083918392,
+    "bicycle": 0.5457047610816674,
+    "sidewalk": 0.495764199095091,
+    "truck": 0.4484778858606447,
+    "vegetation": 0.36993885478059607,
+    "road": 0.2828775752272752
+   }
+  },
+  "gsmf_fog": {
+   "mIoU": 55.20780120809538,
+   "road_gt_predicted_as_percent": {
+    "road": 88.19586987761689,
+    "terrain": 7.268109584247312,
+    "car": 1.2666042221631384,
+    "truck": 0.6154462323693327,
+    "sidewalk": 0.5741923461669418
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 11.323470446463208,
+     "pred_over_gt_area": 4.91907253824446,
+     "recall_percent": 60.20692913047116,
+     "false_positive_sources_percent": {
+      "road": 66.90348867987187,
+      "sidewalk": 18.131363566269602,
+      "terrain": 12.23948796493212
+     }
+    },
+    "truck": {
+     "IoU": 32.57974820490325,
+     "pred_over_gt_area": 2.78532981717702,
+     "recall_percent": 93.01955538906265,
+     "false_positive_sources_percent": {
+      "truck": 33.396244428726064,
+      "road": 27.639046744721515,
+      "car": 11.943851392112848
+     }
+    },
+    "train": {
+     "IoU": 16.609756539507448,
+     "pred_over_gt_area": 3.054741539749992,
+     "recall_percent": 57.755261484537364,
+     "false_positive_sources_percent": {
+      "building": 74.75796609653179,
+      "train": 18.906758798737584,
+      "bus": 2.1989149011651263
+     }
+    },
+    "sky": {
+     "IoU": 83.62648539514873,
+     "pred_over_gt_area": 0.9611827553903423,
+     "recall_percent": 89.31544961933957,
+     "false_positive_sources_percent": {
+      "sky": 92.9224428116878,
+      "building": 3.386824598228792,
+      "road": 2.580422974157794
+     }
+    },
+    "building": {
+     "IoU": 85.81075276524169,
+     "pred_over_gt_area": 1.0062943772841797,
+     "recall_percent": 92.65428842050972,
+     "false_positive_sources_percent": {
+      "building": 92.07473529820187,
+      "vegetation": 1.7429000765667257,
+      "pole": 1.505445931468687
+     }
+    },
+    "fence": {
+     "IoU": 36.3398793882494,
+     "pred_over_gt_area": 1.3794584259149578,
+     "recall_percent": 63.42181949631076,
+     "false_positive_sources_percent": {
+      "fence": 45.97588321970977,
+      "road": 17.089149318581498,
+      "vegetation": 9.640197036814728
+     }
+    },
+    "bicycle": {
+     "IoU": 53.950673192088644,
+     "pred_over_gt_area": 0.6745642038750245,
+     "recall_percent": 58.68364472151865,
+     "false_positive_sources_percent": {
+      "bicycle": 86.9948989057102,
+      "rider": 2.9263260862331535,
+      "sidewalk": 2.1928643025047827
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 16.300920973248633,
+   "per_class_drop_contribution_pp": {
+    "terrain": 2.583599196887786,
+    "train": 2.4768433704085955,
+    "truck": 1.4764295634036915,
+    "bicycle": 1.0460602328776196,
+    "fence": 0.9091913782723595,
+    "motorcycle": 0.8513152472892545,
+    "traffic light": 0.758813460838789,
+    "sidewalk": 0.7570250594760736,
+    "bus": 0.7089154134930137,
+    "traffic sign": 0.616681460984901,
+    "rider": 0.5814001200322987,
+    "person": 0.5566271525070684,
+    "road": 0.5235246295018103,
+    "sky": 0.5226535761762517,
+    "car": 0.5060755132679725,
+    "wall": 0.47924029275177643,
+    "pole": 0.4683299736589739,
+    "building": 0.24222402628028886,
+    "vegetation": 0.23597130514010753
+   }
+  },
+  "gsmf_rain": {
+   "mIoU": 55.80556592155607,
+   "road_gt_predicted_as_percent": {
+    "road": 80.52638997212462,
+    "building": 7.558063277190879,
+    "terrain": 4.977040468013211,
+    "sky": 1.7883593700622087,
+    "car": 1.5468911217912211
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 13.697563293132136,
+     "pred_over_gt_area": 3.2169847027406857,
+     "recall_percent": 50.80356447309163,
+     "false_positive_sources_percent": {
+      "road": 70.05396176177737,
+      "terrain": 15.792292835526982,
+      "sidewalk": 11.952465414019116
+     }
+    },
+    "truck": {
+     "IoU": 47.56030331679361,
+     "pred_over_gt_area": 1.7046019307944211,
+     "recall_percent": 87.17228501734107,
+     "false_positive_sources_percent": {
+      "truck": 51.13937948944764,
+      "road": 16.9782708449476,
+      "car": 10.363011234073268
+     }
+    },
+    "train": {
+     "IoU": 46.08787373534053,
+     "pred_over_gt_area": 0.7130300257452155,
+     "recall_percent": 54.04275489314185,
+     "false_positive_sources_percent": {
+      "train": 75.79309838552683,
+      "building": 10.585837878400644,
+      "road": 5.456663712146341
+     }
+    },
+    "sky": {
+     "IoU": 69.35161525783417,
+     "pred_over_gt_area": 1.1293660364045301,
+     "recall_percent": 87.20021587924882,
+     "false_positive_sources_percent": {
+      "sky": 77.21165066806948,
+      "road": 17.770928001909205,
+      "building": 3.3111463759540922
+     }
+    },
+    "building": {
+     "IoU": 78.43077978937893,
+     "pred_over_gt_area": 1.1303776085091592,
+     "recall_percent": 93.64257516468659,
+     "false_positive_sources_percent": {
+      "building": 82.84185254535483,
+      "road": 11.485001223636766,
+      "pole": 1.1886601869482838
+     }
+    },
+    "fence": {
+     "IoU": 33.58506731255537,
+     "pred_over_gt_area": 1.8643579990324048,
+     "recall_percent": 72.01377978848248,
+     "false_positive_sources_percent": {
+      "fence": 38.626583427569905,
+      "road": 29.974097243585604,
+      "wall": 8.12078939370407
+     }
+    },
+    "bicycle": {
+     "IoU": 57.882028921909516,
+     "pred_over_gt_area": 0.750113421913375,
+     "recall_percent": 64.16190391999355,
+     "false_positive_sources_percent": {
+      "bicycle": 85.53626964350349,
+      "rider": 3.578102819908778,
+      "building": 2.5713790306151103
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 15.703156259787939,
+   "per_class_drop_contribution_pp": {
+    "terrain": 2.4586469417999477,
+    "sky": 1.2739625307717553,
+    "fence": 1.0541814875194142,
+    "wall": 1.0286607382037567,
+    "bus": 1.0145910547171426,
+    "road": 0.9415907926507774,
+    "train": 0.9253635179963278,
+    "bicycle": 0.8391467734133634,
+    "motorcycle": 0.7186772592892943,
+    "truck": 0.6879792943568304,
+    "building": 0.6306436565888554,
+    "sidewalk": 0.624966955456437,
+    "car": 0.6145721988214646,
+    "traffic sign": 0.5962013305939029,
+    "rider": 0.5754206864673213,
+    "traffic light": 0.5679436631047116,
+    "person": 0.5405065112258661,
+    "pole": 0.38430758276130983,
+    "vegetation": 0.22579328404946075
+   }
+  },
+  "gsmf-seed0-D": {
+   "mIoU": 54.797742515775994,
+   "road_gt_predicted_as_percent": {
+    "road": 73.56632253488762,
+    "building": 18.677445504220213,
+    "terrain": 2.6155163699133546,
+    "sidewalk": 2.136909018855756,
+    "car": 0.8317931563888065
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 14.80668278441332,
+     "pred_over_gt_area": 2.46754161887448,
+     "recall_percent": 44.72108029533276,
+     "false_positive_sources_percent": {
+      "road": 47.995827174484454,
+      "sidewalk": 30.48898199629244,
+      "terrain": 18.12373900940783
+     }
+    },
+    "truck": {
+     "IoU": 42.09353121537516,
+     "pred_over_gt_area": 2.0306907696549286,
+     "recall_percent": 89.78063633541059,
+     "false_positive_sources_percent": {
+      "truck": 44.211870008483295,
+      "road": 12.529457363649582,
+      "building": 11.248845924317612
+     }
+    },
+    "train": {
+     "IoU": 34.36459943918866,
+     "pred_over_gt_area": 0.59037772573591,
+     "recall_percent": 40.674920127795524,
+     "false_positive_sources_percent": {
+      "train": 68.89643418896598,
+      "building": 18.336064308723905,
+      "bus": 7.667035539895775
+     }
+    },
+    "sky": {
+     "IoU": 85.03231112967762,
+     "pred_over_gt_area": 0.9734006575644994,
+     "recall_percent": 90.68838716494892,
+     "false_positive_sources_percent": {
+      "sky": 93.16655629949555,
+      "building": 4.924281419890714,
+      "vegetation": 0.878468363902385
+     }
+    },
+    "building": {
+     "IoU": 66.31880337386627,
+     "pred_over_gt_area": 1.3249355783566203,
+     "recall_percent": 92.70566066504433,
+     "false_positive_sources_percent": {
+      "building": 69.96993829694837,
+      "road": 24.21401370534836,
+      "vegetation": 1.7620882168097782
+     }
+    },
+    "fence": {
+     "IoU": 32.92419243581163,
+     "pred_over_gt_area": 2.172161471659287,
+     "recall_percent": 78.57174289835292,
+     "false_positive_sources_percent": {
+      "fence": 36.172146464937036,
+      "building": 20.939690922680725,
+      "road": 13.869822056407358
+     }
+    },
+    "bicycle": {
+     "IoU": 56.017743693953385,
+     "pred_over_gt_area": 0.6808484927684402,
+     "recall_percent": 60.350404913540295,
+     "false_positive_sources_percent": {
+      "bicycle": 88.63999194320866,
+      "rider": 2.8680641707172665,
+      "building": 2.2238821540716827
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 16.71097966556802,
+   "per_class_drop_contribution_pp": {
+    "terrain": 2.400272231732517,
+    "train": 1.5423779546359,
+    "road": 1.3003137570071244,
+    "building": 1.2681160995105742,
+    "sidewalk": 1.244034814082591,
+    "fence": 1.0889643757690846,
+    "truck": 0.9757041417999068,
+    "bus": 0.9426926588186786,
+    "bicycle": 0.937267048568949,
+    "wall": 0.6854291972263024,
+    "motorcycle": 0.6640313388352126,
+    "traffic light": 0.6609179285578306,
+    "rider": 0.6258088492402986,
+    "person": 0.45328950366044696,
+    "car": 0.449424675443124,
+    "sky": 0.4486627480431525,
+    "traffic sign": 0.4015731960232576,
+    "pole": 0.3613710398202618,
+    "vegetation": 0.26072810679280556
+   }
+  },
+  "gsmf-seed0-E": {
+   "mIoU": 52.90357978777648,
+   "road_gt_predicted_as_percent": {
+    "road": 93.09537412485703,
+    "sidewalk": 2.496072850733931,
+    "sky": 1.642493494884712,
+    "building": 1.0543454689145197,
+    "vegetation": 0.5666042493886468
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 21.39188290057541,
+     "pred_over_gt_area": 0.46339238712104064,
+     "recall_percent": 25.788148132216204,
+     "false_positive_sources_percent": {
+      "terrain": 55.65078073990931,
+      "road": 33.82447792891733,
+      "sidewalk": 9.388888087012461
+     }
+    },
+    "truck": {
+     "IoU": 56.746644853041424,
+     "pred_over_gt_area": 0.8535662672165281,
+     "recall_percent": 67.10425398638003,
+     "false_positive_sources_percent": {
+      "truck": 78.61633778617612,
+      "bus": 5.544428046755061,
+      "building": 5.194007019456092
+     }
+    },
+    "train": {
+     "IoU": 38.4624369785941,
+     "pred_over_gt_area": 1.4014692996060671,
+     "recall_percent": 66.70860603616738,
+     "false_positive_sources_percent": {
+      "train": 47.5990491228871,
+      "building": 39.10817575872012,
+      "road": 6.403757583051314
+     }
+    },
+    "sky": {
+     "IoU": 48.61871100738451,
+     "pred_over_gt_area": 0.8088424941217143,
+     "recall_percent": 59.173969336344555,
+     "false_positive_sources_percent": {
+      "sky": 73.15882853138041,
+      "road": 22.789234345161933,
+      "building": 2.7519618780018904
+     }
+    },
+    "building": {
+     "IoU": 65.72608338103281,
+     "pred_over_gt_area": 0.8477381665533927,
+     "recall_percent": 73.28031310676845,
+     "false_positive_sources_percent": {
+      "building": 86.44215395503613,
+      "sky": 3.412854414008622,
+      "road": 2.1363148924912094
+     }
+    },
+    "fence": {
+     "IoU": 28.38015082071005,
+     "pred_over_gt_area": 1.7777437431041563,
+     "recall_percent": 61.40574369683827,
+     "false_positive_sources_percent": {
+      "building": 43.10102628471055,
+      "fence": 34.541392107287855,
+      "wall": 6.111588569555109
+     }
+    },
+    "bicycle": {
+     "IoU": 60.558420303883295,
+     "pred_over_gt_area": 0.9587854515545067,
+     "recall_percent": 73.88024398587126,
+     "false_positive_sources_percent": {
+      "bicycle": 77.05607533581896,
+      "building": 7.322979490077282,
+      "rider": 3.157673117614725
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 18.60514239356753,
+   "per_class_drop_contribution_pp": {
+    "sky": 2.3651680176375267,
+    "terrain": 2.0536827519345127,
+    "car": 1.7998632157039913,
+    "bus": 1.4004811150123313,
+    "fence": 1.3281244607744307,
+    "train": 1.3267022946671925,
+    "building": 1.2993118886070725,
+    "traffic light": 1.2562795412885555,
+    "bicycle": 0.6982840690989538,
+    "traffic sign": 0.6857114871274694,
+    "motorcycle": 0.6752625010091983,
+    "rider": 0.6234212262897246,
+    "pole": 0.5923996362663376,
+    "vegetation": 0.5467340231282598,
+    "wall": 0.5294293337699597,
+    "person": 0.5194604303994401,
+    "sidewalk": 0.4475015369731843,
+    "road": 0.2528372293250742,
+    "truck": 0.20448763455431382
+   }
+  },
+  "lwf_fog": {
+   "mIoU": 52.0610492279663,
+   "road_gt_predicted_as_percent": {
+    "road": 81.40300905935746,
+    "terrain": 5.15544661850814,
+    "fence": 5.150162263161754,
+    "truck": 3.1660572796546482,
+    "car": 2.052142687777851
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 14.600769056079388,
+     "pred_over_gt_area": 3.8907969625283902,
+     "recall_percent": 62.311446544575716,
+     "false_positive_sources_percent": {
+      "road": 59.99820409103209,
+      "sidewalk": 20.955979062290133,
+      "terrain": 16.015085635330436
+     }
+    },
+    "truck": {
+     "IoU": 14.042827973765078,
+     "pred_over_gt_area": 6.570547324099498,
+     "recall_percent": 93.22102549406549,
+     "false_positive_sources_percent": {
+      "road": 60.27355279363581,
+      "truck": 14.187710839879164,
+      "car": 8.894036021090976
+     }
+    },
+    "train": {
+     "IoU": 37.20303859385702,
+     "pred_over_gt_area": 1.405680038152548,
+     "recall_percent": 65.23077638884581,
+     "false_positive_sources_percent": {
+      "train": 46.40513816684561,
+      "building": 23.512188596209953,
+      "road": 22.551540615667022
+     }
+    },
+    "sky": {
+     "IoU": 85.25942211707732,
+     "pred_over_gt_area": 1.0754285332780418,
+     "recall_percent": 95.51462234441887,
+     "false_positive_sources_percent": {
+      "sky": 88.81540649965672,
+      "road": 5.756195714843396,
+      "building": 3.8186018154181056
+     }
+    },
+    "building": {
+     "IoU": 85.95380476955505,
+     "pred_over_gt_area": 1.0310770861371963,
+     "recall_percent": 93.88288857552642,
+     "false_positive_sources_percent": {
+      "building": 91.05321982010787,
+      "pole": 1.6267425740954284,
+      "vegetation": 1.4983236043683632
+     }
+    },
+    "fence": {
+     "IoU": 16.406819907214675,
+     "pred_over_gt_area": 3.6490860294179233,
+     "recall_percent": 65.52598660336749,
+     "false_positive_sources_percent": {
+      "road": 64.78437729073853,
+      "fence": 17.956821536986272,
+      "sidewalk": 3.73578558031557
+     }
+    },
+    "bicycle": {
+     "IoU": 32.70699246975773,
+     "pred_over_gt_area": 0.37247202887243014,
+     "recall_percent": 33.82597365659796,
+     "false_positive_sources_percent": {
+      "bicycle": 90.81480227924226,
+      "rider": 3.5845439142126563,
+      "sidewalk": 1.5709931131551738
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 19.447672953377715,
+   "per_class_drop_contribution_pp": {
+    "truck": 2.452056943989911,
+    "terrain": 2.411109796381672,
+    "bicycle": 2.1641486919476676,
+    "fence": 1.9582997720110296,
+    "train": 1.3929864201796702,
+    "bus": 1.0386131916432035,
+    "traffic sign": 0.9405647912017329,
+    "road": 0.8742791874749373,
+    "traffic light": 0.8055761991352004,
+    "sidewalk": 0.7935526172382851,
+    "wall": 0.6734774044393681,
+    "car": 0.6449835827663094,
+    "motorcycle": 0.641942677118891,
+    "rider": 0.6309728796158192,
+    "person": 0.5946054285505651,
+    "pole": 0.5459969939653829,
+    "sky": 0.43670953818001085,
+    "building": 0.23469497342169093,
+    "vegetation": 0.21310186411636978
+   }
+  },
+  "lwf_rain": {
+   "mIoU": 49.24201134715698,
+   "road_gt_predicted_as_percent": {
+    "road": 62.47465558587698,
+    "building": 14.99763969322969,
+    "truck": 7.804056752534048,
+    "fence": 6.473832020037557,
+    "car": 3.0331797098294877
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 22.797195528939817,
+     "pred_over_gt_area": 1.4264548081540969,
+     "recall_percent": 45.04692836457213,
+     "false_positive_sources_percent": {
+      "road": 51.86809852754797,
+      "terrain": 31.57963933176761,
+      "sidewalk": 13.942862554134942
+     }
+    },
+    "truck": {
+     "IoU": 7.288940181673686,
+     "pred_over_gt_area": 12.342050299777807,
+     "recall_percent": 90.64252696623555,
+     "false_positive_sources_percent": {
+      "road": 79.09384315100073,
+      "truck": 7.344203334503295,
+      "car": 6.526066260144118
+     }
+    },
+    "train": {
+     "IoU": 27.69404121196928,
+     "pred_over_gt_area": 1.8439962080089334,
+     "recall_percent": 61.68004978442259,
+     "false_positive_sources_percent": {
+      "road": 55.48186326947389,
+      "train": 33.44911964380991,
+      "building": 5.9531475460679
+     }
+    },
+    "sky": {
+     "IoU": 83.57507224812052,
+     "pred_over_gt_area": 1.0263976544779423,
+     "recall_percent": 92.25453559811953,
+     "false_positive_sources_percent": {
+      "sky": 89.88186517733524,
+      "road": 5.022449543155439,
+      "building": 3.6762084878210675
+     }
+    },
+    "building": {
+     "IoU": 70.2372963522566,
+     "pred_over_gt_area": 1.2790306339389004,
+     "recall_percent": 94.02930700955996,
+     "false_positive_sources_percent": {
+      "building": 73.51607108892105,
+      "road": 20.141232266569062,
+      "pole": 1.1335708098381865
+     }
+    },
+    "fence": {
+     "IoU": 14.718666510835597,
+     "pred_over_gt_area": 4.457382938338345,
+     "recall_percent": 70.01946756741557,
+     "false_positive_sources_percent": {
+      "road": 66.6676211133143,
+      "fence": 15.708649792049936,
+      "sidewalk": 4.201802233882379
+     }
+    },
+    "bicycle": {
+     "IoU": 46.01750000285892,
+     "pred_over_gt_area": 0.5704391207591697,
+     "recall_percent": 49.49248017710884,
+     "false_positive_sources_percent": {
+      "bicycle": 86.76207219315832,
+      "rider": 4.363375769827946,
+      "sidewalk": 1.858340607917137
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 22.266710834187034,
+   "per_class_drop_contribution_pp": {
+    "truck": 2.8075247225210367,
+    "fence": 2.0471499507678232,
+    "terrain": 1.9797189293890174,
+    "train": 1.8934599665948146,
+    "road": 1.8585302475788705,
+    "bus": 1.7580065217889247,
+    "bicycle": 1.4635956638897105,
+    "wall": 1.1402165830539577,
+    "building": 1.0618796269637147,
+    "car": 0.922126432350038,
+    "motorcycle": 0.8668667617058271,
+    "sidewalk": 0.7462147927138826,
+    "person": 0.729011782637443,
+    "rider": 0.6853998908981265,
+    "traffic sign": 0.6106057327539955,
+    "traffic light": 0.5397491365468089,
+    "sky": 0.525359531283,
+    "pole": 0.4016573668494362,
+    "vegetation": 0.22963719390060713
+   }
+  },
+  "lwf-seed0-D": {
+   "mIoU": 48.60774629345119,
+   "road_gt_predicted_as_percent": {
+    "road": 54.4882551212731,
+    "building": 31.929629173918812,
+    "car": 3.7226309565929756,
+    "truck": 3.6085514418539515,
+    "fence": 1.906011508709026
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 19.064411928363597,
+     "pred_over_gt_area": 1.3768876329077435,
+     "recall_percent": 38.05836203050324,
+     "false_positive_sources_percent": {
+      "sidewalk": 36.85023551254029,
+      "road": 30.54085017683919,
+      "terrain": 27.640862711600292
+     }
+    },
+    "truck": {
+     "IoU": 12.993043333619505,
+     "pred_over_gt_area": 6.934400304904226,
+     "recall_percent": 91.23748148239392,
+     "false_positive_sources_percent": {
+      "road": 65.09289143679696,
+      "truck": 13.157227369447924,
+      "building": 6.936189656981188
+     }
+    },
+    "train": {
+     "IoU": 29.842792475910443,
+     "pred_over_gt_area": 1.3294117761096809,
+     "recall_percent": 53.5387070008375,
+     "false_positive_sources_percent": {
+      "train": 40.27247837198365,
+      "building": 23.801426920454837,
+      "road": 10.519546331166582
+     }
+    },
+    "sky": {
+     "IoU": 88.32130980884061,
+     "pred_over_gt_area": 0.9927827890255878,
+     "recall_percent": 93.4600477608785,
+     "false_positive_sources_percent": {
+      "sky": 94.13947219271311,
+      "building": 4.216452396592157,
+      "vegetation": 0.9307112684294467
+     }
+    },
+    "building": {
+     "IoU": 56.24217245482364,
+     "pred_over_gt_area": 1.5780077988739687,
+     "recall_percent": 92.80001483343027,
+     "false_positive_sources_percent": {
+      "building": 58.80833725894783,
+      "road": 34.75592070779016,
+      "vegetation": 1.8515598122960042
+     }
+    },
+    "fence": {
+     "IoU": 25.611804407462042,
+     "pred_over_gt_area": 2.7505699810722013,
+     "recall_percent": 76.47280064548886,
+     "false_positive_sources_percent": {
+      "road": 31.80799528253438,
+      "fence": 27.80252862924031,
+      "building": 12.600495672232809
+     }
+    },
+    "bicycle": {
+     "IoU": 47.786433704218,
+     "pred_over_gt_area": 0.5915788745440639,
+     "recall_percent": 51.46336944949439,
+     "false_positive_sources_percent": {
+      "bicycle": 86.99325088164744,
+      "rider": 4.550418279013802,
+      "sidewalk": 1.8917022487532194
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 22.900975887892812,
+   "per_class_drop_contribution_pp": {
+    "truck": 2.5073087671554672,
+    "road": 2.278775707424668,
+    "terrain": 2.176181224156187,
+    "building": 1.7984650952496601,
+    "train": 1.7803677948084375,
+    "bus": 1.7681304257267139,
+    "fence": 1.4738269035769573,
+    "bicycle": 1.3704938901339696,
+    "sidewalk": 1.3100639522381725,
+    "car": 1.0043000790486565,
+    "traffic light": 0.9842400951469665,
+    "wall": 0.8033898706080735,
+    "motorcycle": 0.7908280930518199,
+    "rider": 0.7621209867983435,
+    "traffic sign": 0.5590696507502803,
+    "person": 0.5391637964286385,
+    "pole": 0.4701017044476923,
+    "sky": 0.27555755440299523,
+    "vegetation": 0.24859029673911165
+   }
+  },
+  "lwf-seed0-E": {
+   "mIoU": 42.093734160426145,
+   "road_gt_predicted_as_percent": {
+    "road": 81.99782733490986,
+    "building": 12.946785582976425,
+    "sidewalk": 1.8130421898470506,
+    "car": 1.1719286748908826,
+    "vegetation": 0.6791252485826501
+   },
+   "tracked": {
+    "terrain": {
+     "IoU": 13.445840407639901,
+     "pred_over_gt_area": 0.19141560959923284,
+     "recall_percent": 14.120909227063619,
+     "false_positive_sources_percent": {
+      "terrain": 73.77093883110467,
+      "road": 17.403252648592133,
+      "sidewalk": 8.300166695328489
+     }
+    },
+    "truck": {
+     "IoU": 10.088971553345914,
+     "pred_over_gt_area": 7.048258267212181,
+     "recall_percent": 73.75729609076987,
+     "false_positive_sources_percent": {
+      "vegetation": 45.75873774330906,
+      "building": 22.388278810034397,
+      "truck": 10.464613141927803
+     }
+    },
+    "train": {
+     "IoU": 35.20388771600184,
+     "pred_over_gt_area": 1.9964445237135147,
+     "recall_percent": 78.02031313005986,
+     "false_positive_sources_percent": {
+      "train": 39.07962991375142,
+      "building": 37.227208020089066,
+      "road": 11.436142837444432
+     }
+    },
+    "sky": {
+     "IoU": 45.71414861509678,
+     "pred_over_gt_area": 0.5318939194802516,
+     "recall_percent": 48.05931816728737,
+     "false_positive_sources_percent": {
+      "sky": 90.35508097977372,
+      "road": 5.7922618818092335,
+      "building": 2.7901109888161755
+     }
+    },
+    "building": {
+     "IoU": 54.68540446934095,
+     "pred_over_gt_area": 1.1434874733830571,
+     "recall_percent": 75.77798297068873,
+     "false_positive_sources_percent": {
+      "building": 66.26918504537377,
+      "road": 19.447985069767373,
+      "sky": 4.19977770535188
+     }
+    },
+    "fence": {
+     "IoU": 29.199360857043594,
+     "pred_over_gt_area": 1.3860453317922008,
+     "recall_percent": 53.92518833073353,
+     "false_positive_sources_percent": {
+      "fence": 38.9057897991017,
+      "vegetation": 18.80841101325465,
+      "building": 14.956921862737367
+     }
+    },
+    "bicycle": {
+     "IoU": 49.80980129206367,
+     "pred_over_gt_area": 0.6099365436872307,
+     "recall_percent": 53.52828629520445,
+     "false_positive_sources_percent": {
+      "bicycle": 87.76041843896013,
+      "rider": 4.207679900547397,
+      "person": 1.5836395226295252
+     }
+    }
+   },
+   "miou_drop_vs_source_pp": 29.414988020917868,
+   "per_class_drop_contribution_pp": {
+    "car": 2.661321819296815,
+    "truck": 2.6601546503277618,
+    "sky": 2.5180397224947755,
+    "terrain": 2.471895514720592,
+    "traffic light": 2.0400393857910433,
+    "building": 1.8804002523803278,
+    "vegetation": 1.70552185134124,
+    "traffic sign": 1.5644823092982927,
+    "train": 1.4982048874352063,
+    "pole": 1.4457494478028843,
+    "fence": 1.2850081430726652,
+    "bicycle": 1.2640008591947234,
+    "wall": 1.2400737807852789,
+    "bus": 1.1874686793286835,
+    "motorcycle": 0.9454509416809828,
+    "person": 0.928058178068628,
+    "road": 0.8577220990817527,
+    "rider": 0.7665136274205612,
+    "sidewalk": 0.4948818713956547
+   }
+  }
+ },
+ "gsmf_minus_ft_fog_contribution_pp": {
+  "total": 0.9162595096780788,
+  "per_class": {
+   "train": -1.6404663620417805,
+   "car": -0.05835089159425733,
+   "building": -0.045053770079347855,
+   "terrain": -0.027716569213310303,
+   "motorcycle": -0.0164883553054447,
+   "wall": 0.008099043330991203,
+   "vegetation": 0.018696787386640303,
+   "rider": 0.018739844575501447,
+   "pole": 0.03541439548488066,
+   "road": 0.0488934914407235,
+   "sidewalk": 0.07874201500260665,
+   "person": 0.134521786661615,
+   "traffic light": 0.14118313676664965,
+   "traffic sign": 0.21461509480634466,
+   "sky": 0.22465803040644872,
+   "truck": 0.23933565765199813,
+   "bus": 0.24856523928753543,
+   "fence": 0.4482083571882912,
+   "bicycle": 0.844662577921993
+  }
+ },
+ "gsmf_minus_ft_rain_contribution_pp": {
+  "total": -1.900054837804427,
+  "per_class": {
+   "sky": -0.7866564348044802,
+   "truck": -0.3266237342866961,
+   "fence": -0.32537817203902697,
+   "road": -0.29605362275508607,
+   "car": -0.24320120350883104,
+   "building": -0.1332516641012023,
+   "bus": -0.13040389135613362,
+   "traffic sign": -0.11497374976310168,
+   "terrain": -0.0780555559738628,
+   "traffic light": -0.06922741067997897,
+   "vegetation": -0.0686071832134387,
+   "wall": -0.03996730940972575,
+   "train": 0.016609556621941572,
+   "sidewalk": 0.02243119629595332,
+   "motorcycle": 0.04624086030430976,
+   "rider": 0.057378875949412815,
+   "pole": 0.08509859212186593,
+   "person": 0.19882694550146188,
+   "bicycle": 0.2857590672921919
+  }
+ },
+ "gsmf_minus_ft_D_contribution_pp": {
+  "total": 0.6675759563971654,
+  "per_class": {
+   "sky": -0.2575406341585789,
+   "car": -0.19363652111470742,
+   "train": -0.107199445775723,
+   "fence": -0.07126640586819359,
+   "motorcycle": -0.06633661340905816,
+   "truck": -0.041568296562208416,
+   "vegetation": 0.009471312062305592,
+   "terrain": 0.031866696378006036,
+   "person": 0.04521915370562252,
+   "traffic sign": 0.0468499430063144,
+   "wall": 0.048222404785169405,
+   "road": 0.09508934228830031,
+   "pole": 0.10403822251490528,
+   "rider": 0.10770167864351753,
+   "building": 0.11289794036127641,
+   "bus": 0.11816338600995328,
+   "traffic light": 0.1271677951645417,
+   "sidewalk": 0.16934006241059404,
+   "bicycle": 0.3890959359551284
+  }
+ },
+ "gsmf_minus_ft_E_contribution_pp": {
+  "total": -0.37502854602829816,
+  "per_class": {
+   "car": -1.232559607312152,
+   "building": -0.6694905024173663,
+   "sky": -0.45099179313371035,
+   "vegetation": -0.1767951683476638,
+   "bicycle": -0.15257930801728636,
+   "bus": -0.08958731502473449,
+   "traffic sign": -0.08838733367808844,
+   "traffic light": 0.027104009973463107,
+   "road": 0.030040345902200977,
+   "rider": 0.04350209904254415,
+   "sidewalk": 0.04826266212190676,
+   "fence": 0.1449465442366911,
+   "motorcycle": 0.1676009526730508,
+   "person": 0.1867449257477384,
+   "pole": 0.19761304251302853,
+   "truck": 0.24399025130633092,
+   "wall": 0.3665539430656142,
+   "terrain": 0.3785831855152084,
+   "train": 0.6504205198049263
+  }
+ }
+}

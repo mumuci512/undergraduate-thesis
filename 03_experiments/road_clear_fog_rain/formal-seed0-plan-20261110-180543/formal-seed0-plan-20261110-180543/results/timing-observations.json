@@ -1,0 +1,199 @@
+{
+  "observations": [
+    {
+      "stage": "train-ft",
+      "monotonic_stage_seconds": 852.8003063020005,
+      "UTC_timestamp_delta_seconds": 782.0,
+      "difference_seconds": 70.80030630200054
+    },
+    {
+      "stage": "train-gsmf",
+      "monotonic_stage_seconds": 941.2687825660105,
+      "UTC_timestamp_delta_seconds": 859.0,
+      "difference_seconds": 82.26878256601049
+    },
+    {
+      "stage": "train-lwf",
+      "monotonic_stage_seconds": 977.3656705780013,
+      "UTC_timestamp_delta_seconds": 892.0,
+      "difference_seconds": 85.3656705780013
+    },
+    {
+      "stage": "eval-source-rain",
+      "monotonic_stage_seconds": 72.91899634798756,
+      "UTC_timestamp_delta_seconds": 64.0,
+      "difference_seconds": 8.918996347987559
+    },
+    {
+      "stage": "eval-ft_fog-rain",
+      "monotonic_stage_seconds": 70.7765209460049,
+      "UTC_timestamp_delta_seconds": 65.0,
+      "difference_seconds": 5.776520946004894
+    },
+    {
+      "stage": "eval-gsmf_fog-rain",
+      "monotonic_stage_seconds": 70.57230234702001,
+      "UTC_timestamp_delta_seconds": 65.0,
+      "difference_seconds": 5.572302347020013
+    },
+    {
+      "stage": "eval-lwf_fog-rain",
+      "monotonic_stage_seconds": 69.66478782900958,
+      "UTC_timestamp_delta_seconds": 64.0,
+      "difference_seconds": 5.664787829009583
+    },
+    {
+      "stage": "eval-ft_rain-clear",
+      "monotonic_stage_seconds": 298.3552672099904,
+      "UTC_timestamp_delta_seconds": 273.0,
+      "difference_seconds": 25.355267209990416
+    },
+    {
+      "stage": "eval-ft_rain-fog005",
+      "monotonic_stage_seconds": 295.7385422179941,
+      "UTC_timestamp_delta_seconds": 270.0,
+      "difference_seconds": 25.73854221799411
+    },
+    {
+      "stage": "eval-ft_rain-fog010",
+      "monotonic_stage_seconds": 295.98022076298366,
+      "UTC_timestamp_delta_seconds": 267.0,
+      "difference_seconds": 28.980220762983663
+    },
+    {
+      "stage": "eval-ft_rain-fog020",
+      "monotonic_stage_seconds": 292.8720755589893,
+      "UTC_timestamp_delta_seconds": 267.0,
+      "difference_seconds": 25.87207555898931
+    },
+    {
+      "stage": "eval-ft_rain-fog",
+      "monotonic_stage_seconds": 70.59229328497895,
+      "UTC_timestamp_delta_seconds": 65.0,
+      "difference_seconds": 5.59229328497895
+    },
+    {
+      "stage": "eval-ft_rain-rain",
+      "monotonic_stage_seconds": 71.53739111998584,
+      "UTC_timestamp_delta_seconds": 66.0,
+      "difference_seconds": 5.537391119985841
+    },
+    {
+      "stage": "eval-gsmf_rain-clear",
+      "monotonic_stage_seconds": 297.79368377799983,
+      "UTC_timestamp_delta_seconds": 271.0,
+      "difference_seconds": 26.79368377799983
+    },
+    {
+      "stage": "eval-gsmf_rain-fog005",
+      "monotonic_stage_seconds": 297.9543749030272,
+      "UTC_timestamp_delta_seconds": 271.0,
+      "difference_seconds": 26.9543749030272
+    },
+    {
+      "stage": "eval-gsmf_rain-fog010",
+      "monotonic_stage_seconds": 295.8338984370057,
+      "UTC_timestamp_delta_seconds": 270.0,
+      "difference_seconds": 25.8338984370057
+    },
+    {
+      "stage": "eval-gsmf_rain-fog020",
+      "monotonic_stage_seconds": 281.6186032439873,
+      "UTC_timestamp_delta_seconds": 270.0,
+      "difference_seconds": 11.618603243987309
+    },
+    {
+      "stage": "eval-gsmf_rain-fog",
+      "monotonic_stage_seconds": 66.30343954599812,
+      "UTC_timestamp_delta_seconds": 65.0,
+      "difference_seconds": 1.303439545998117
+    },
+    {
+      "stage": "eval-gsmf_rain-rain",
+      "monotonic_stage_seconds": 67.30963662397698,
+      "UTC_timestamp_delta_seconds": 66.0,
+      "difference_seconds": 1.309636623976985
+    },
+    {
+      "stage": "eval-lwf_rain-clear",
+      "monotonic_stage_seconds": 275.29691207499127,
+      "UTC_timestamp_delta_seconds": 270.0,
+      "difference_seconds": 5.296912074991269
+    },
+    {
+      "stage": "eval-lwf_rain-fog005",
+      "monotonic_stage_seconds": 270.7607322119875,
+      "UTC_timestamp_delta_seconds": 270.0,
+      "difference_seconds": 0.760732211987488
+    },
+    {
+      "stage": "eval-lwf_rain-fog010",
+      "monotonic_stage_seconds": 272.0549082880025,
+      "UTC_timestamp_delta_seconds": 272.0,
+      "difference_seconds": 0.05490828800247982
+    },
+    {
+      "stage": "eval-lwf_rain-fog020",
+      "monotonic_stage_seconds": 275.8866069470241,
+      "UTC_timestamp_delta_seconds": 276.0,
+      "difference_seconds": -0.11339305297587998
+    },
+    {
+      "stage": "eval-lwf_rain-fog",
+      "monotonic_stage_seconds": 67.1070286629838,
+      "UTC_timestamp_delta_seconds": 67.0,
+      "difference_seconds": 0.10702866298379377
+    },
+    {
+      "stage": "eval-lwf_rain-rain",
+      "monotonic_stage_seconds": 65.58844875500654,
+      "UTC_timestamp_delta_seconds": 66.0,
+      "difference_seconds": -0.4115512449934613
+    }
+  ],
+  "negative_logger_entries": {
+    "eval-gsmf_rain-clear-1794312082320270950.log": [
+      "11/10 20:04:09 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(test) [320/500]    eta: 0:01:25  time: 0.2436  data_time: -0.2268  memory: 741  ",
+      "11/10 20:04:38 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(test) [380/500]    eta: 0:00:57  time: 0.2357  data_time: -0.2398  memory: 741  ",
+      "11/10 20:05:35 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(test) [500/500]    eta: 0:00:00  time: 0.2327  data_time: -0.2384  memory: 741  "
+    ],
+    "train-lwf-1794309724279096944.log": [
+      "11/10 19:22:35 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 100/4000]  lr: 9.7769e-06  eta: 0:10:21  time: -0.0983  data_time: 0.0083  memory: 2618  loss: 1.2167  decode.acc_seg: 90.7001  decode.loss_ce: 0.3233  decode.loss_dilhin: 0.8935",
+      "11/10 19:23:06 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 280/4000]  lr: 9.3698e-06  eta: 0:10:18  time: -0.1040  data_time: 0.0083  memory: 2618  loss: 0.8687  decode.acc_seg: 88.9733  decode.loss_ce: 0.1997  decode.loss_dilhin: 0.6690",
+      "11/10 19:24:34 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 800/4000]  lr: 8.1824e-06  eta: 0:09:00  time: -0.0902  data_time: 0.0078  memory: 2618  loss: 1.0453  decode.acc_seg: 87.8712  decode.loss_ce: 0.2679  decode.loss_dilhin: 0.7773",
+      "11/10 19:26:04 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1040/4000]  lr: 7.6279e-06  eta: 0:08:15  time: -0.0945  data_time: 0.0082  memory: 2618  loss: 0.9852  decode.acc_seg: 84.6670  decode.loss_ce: 0.2604  decode.loss_dilhin: 0.7248",
+      "11/10 19:27:32 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1560/4000]  lr: 6.4105e-06  eta: 0:06:50  time: -0.0917  data_time: 0.0083  memory: 2618  loss: 0.9878  decode.acc_seg: 94.2412  decode.loss_ce: 0.2708  decode.loss_dilhin: 0.7169",
+      "11/10 19:30:30 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2320/4000]  lr: 4.5817e-06  eta: 0:04:45  time: -0.1060  data_time: 0.0083  memory: 2618  loss: 1.0252  decode.acc_seg: 94.8153  decode.loss_ce: 0.3064  decode.loss_dilhin: 0.7188",
+      "11/10 19:31:01 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2500/4000]  lr: 4.1374e-06  eta: 0:04:14  time: -0.0927  data_time: 0.0086  memory: 2618  loss: 1.1150  decode.acc_seg: 96.1321  decode.loss_ce: 0.2937  decode.loss_dilhin: 0.8213",
+      "11/10 19:31:58 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2840/4000]  lr: 3.2829e-06  eta: 0:03:16  time: -0.1074  data_time: 0.0083  memory: 2618  loss: 0.9229  decode.acc_seg: 96.6413  decode.loss_ce: 0.2033  decode.loss_dilhin: 0.7196",
+      "11/10 19:33:56 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3260/4000]  lr: 2.1905e-06  eta: 0:02:05  time: -0.1028  data_time: 0.0085  memory: 2618  loss: 0.9944  decode.acc_seg: 97.0771  decode.loss_ce: 0.2465  decode.loss_dilhin: 0.7480",
+      "11/10 19:34:27 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3440/4000]  lr: 1.7046e-06  eta: 0:01:35  time: -0.1062  data_time: 0.0082  memory: 2618  loss: 0.9326  decode.acc_seg: 97.5537  decode.loss_ce: 0.1717  decode.loss_dilhin: 0.7609",
+      "11/10 19:35:56 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3960/4000]  lr: 1.5852e-07  eta: 0:00:06  time: -0.0910  data_time: 0.0080  memory: 2618  loss: 0.9860  decode.acc_seg: 90.2153  decode.loss_ce: 0.2498  decode.loss_dilhin: 0.7362"
+    ],
+    "train-gsmf-1794308865033255221.log": [
+      "11/10 19:08:46 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 300/4000]  lr: 9.3245e-06  eta: 0:09:43  time: -0.1061  data_time: 0.0073  memory: 2279  loss: 0.9396  decode.acc_seg: 94.4226  decode.loss_ce: 0.2482  decode.loss_dilhin: 0.6914  decode.loss_kld: 0.0000",
+      "11/10 19:09:15 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 480/4000]  lr: 8.9152e-06  eta: 0:09:19  time: -0.1080  data_time: 0.0073  memory: 2279  loss: 0.9060  decode.acc_seg: 89.2236  decode.loss_ce: 0.2534  decode.loss_dilhin: 0.6525  decode.loss_kld: 0.0001",
+      "11/10 19:13:14 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1660/4000]  lr: 6.1736e-06  eta: 0:06:19  time: -0.1095  data_time: 0.0079  memory: 2279  loss: 0.9372  decode.acc_seg: 90.3399  decode.loss_ce: 0.2821  decode.loss_dilhin: 0.6550  decode.loss_kld: 0.0001",
+      "11/10 19:15:11 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2080/4000]  lr: 5.1667e-06  eta: 0:05:12  time: -0.0916  data_time: 0.0076  memory: 2279  loss: 1.1258  decode.acc_seg: 92.3636  decode.loss_ce: 0.3856  decode.loss_dilhin: 0.7401  decode.loss_kld: 0.0001",
+      "11/10 19:17:40 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3000/4000]  lr: 2.8724e-06  eta: 0:02:42  time: -0.0965  data_time: 0.0077  memory: 2279  loss: 0.8908  decode.acc_seg: 94.3956  decode.loss_ce: 0.2202  decode.loss_dilhin: 0.6705  decode.loss_kld: 0.0001",
+      "11/10 19:20:38 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3800/4000]  lr: 6.7479e-07  eta: 0:00:32  time: -0.1074  data_time: 0.0079  memory: 2279  loss: 0.9014  decode.acc_seg: 97.3507  decode.loss_ce: 0.2239  decode.loss_dilhin: 0.6774  decode.loss_kld: 0.0001",
+      "11/10 19:21:07 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3980/4000]  lr: 8.4951e-08  eta: 0:00:03  time: -0.1050  data_time: 0.0076  memory: 2279  loss: 0.8844  decode.acc_seg: 75.2829  decode.loss_ce: 0.2223  decode.loss_dilhin: 0.6619  decode.loss_kld: 0.0001"
+    ],
+    "eval-ft_rain-clear-1794310874567892979.log": [
+      "11/10 19:43:51 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(test) [300/500]    eta: 0:01:36  time: 0.2870  data_time: -0.2169  memory: 555  "
+    ],
+    "train-ft-1794308083448512243.log": [
+      "11/10 18:55:54 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 400/4000]  lr: 9.0974e-06  eta: 0:08:30  time: -0.1161  data_time: 0.0065  memory: 2435  loss: 0.3159  decode.loss_ce: 0.3159  decode.acc_seg: 89.0415",
+      "11/10 18:56:53 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 820/4000]  lr: 8.1363e-06  eta: 0:07:30  time: -0.1162  data_time: 0.0066  memory: 2435  loss: 0.3137  decode.loss_ce: 0.3137  decode.acc_seg: 79.7338",
+      "11/10 18:58:21 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1100/4000]  lr: 7.4886e-06  eta: 0:06:55  time: -0.1025  data_time: 0.0063  memory: 2435  loss: 0.2926  decode.loss_ce: 0.2926  decode.acc_seg: 92.9634",
+      "11/10 18:59:51 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1740/4000]  lr: 5.9833e-06  eta: 0:05:21  time: -0.1108  data_time: 0.0066  memory: 2435  loss: 0.2318  decode.loss_ce: 0.2318  decode.acc_seg: 94.7110",
+      "11/10 19:01:20 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2020/4000]  lr: 5.3118e-06  eta: 0:04:39  time: -0.1191  data_time: 0.0066  memory: 2435  loss: 0.2054  decode.loss_ce: 0.2054  decode.acc_seg: 93.1696",
+      "11/10 19:02:20 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2440/4000]  lr: 4.2860e-06  eta: 0:03:40  time: -0.1174  data_time: 0.0069  memory: 2435  loss: 0.1587  decode.loss_ce: 0.1587  decode.acc_seg: 96.8912",
+      "11/10 19:03:19 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2860/4000]  lr: 3.2319e-06  eta: 0:02:40  time: -0.1254  data_time: 0.0068  memory: 2435  loss: 0.3562  decode.loss_ce: 0.3562  decode.acc_seg: 93.3515",
+      "11/10 19:04:48 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3140/4000]  lr: 2.5078e-06  eta: 0:02:01  time: -0.1177  data_time: 0.0065  memory: 2435  loss: 0.2155  decode.loss_ce: 0.2155  decode.acc_seg: 95.9783",
+      "11/10 19:05:47 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3560/4000]  lr: 1.3720e-06  eta: 0:01:02  time: -0.1217  data_time: 0.0067  memory: 2435  loss: 0.4041  decode.loss_ce: 0.4041  decode.acc_seg: 95.3267",
+      "11/10 19:06:47 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3980/4000]  lr: 8.4951e-08  eta: 0:00:02  time: -0.1104  data_time: 0.0069  memory: 2435  loss: 0.2010  decode.loss_ce: 0.2010  decode.acc_seg: 76.8823"
+    ]
+  },
+  "interpretation": "Recorded UTC timestamp deltas and monotonic stage durations differ. Some MMEngine time/data_time entries may be negative. Cause was not independently established. Resource totals use perf_counter/monotonic durations, not UTC event subtraction or raw wall-clock logger values. No change to training or budget."
+}

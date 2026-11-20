@@ -1,0 +1,44 @@
+{
+  "time": "2026-11-12T00:31:53.390032+08:00",
+  "driver_pid": 2307,
+  "driver_state": {
+    "time_utc": "2026-11-11T16:21:55Z",
+    "phase": "B",
+    "state": "running",
+    "driver_pid": 2307,
+    "task": "train-gsmf-seed2-D",
+    "child_pid": 10092,
+    "command": [
+      "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+      "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+      "train",
+      "--stage",
+      "gsmf",
+      "--train-domain",
+      "D",
+      "--seed",
+      "2",
+      "--order",
+      "ABCDE",
+      "--manifests",
+      "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data",
+      "--work-dir",
+      "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/gsmf-seed2-D",
+      "--load",
+      "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/initialization/gsmf-seed2-D/gsmf_init.pth"
+    ]
+  },
+  "child_pid": 10092,
+  "training_complete": 14,
+  "training_total": 16,
+  "evaluation_complete": 0,
+  "evaluation_total": 104,
+  "log": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/train-gsmf-seed2-D-1794414115259540771.log",
+  "last_log_lines": [
+    "11/12 00:31:51 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Exp name: 20261112_002200",
+    "11/12 00:31:51 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3000/4000]  lr: 2.8724e-06  eta: 0:02:41  time: 0.1526  data_time: 0.0068  memory: 2279  loss: 1.0653  decode.acc_seg: 92.8765  decode.loss_ce: 0.3015  decode.loss_dilhin: 0.7636  decode.loss_kld: 0.0002",
+    "11/12 00:31:51 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Saving checkpoint at 3000 iterations"
+  ],
+  "WSL_free_GiB": 751.4076843261719,
+  "host_free_GiB": 206.52686309814453
+}

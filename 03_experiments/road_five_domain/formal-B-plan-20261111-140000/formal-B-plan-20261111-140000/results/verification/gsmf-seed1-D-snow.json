@@ -1,0 +1,1152 @@
+{
+  "status": "PASS",
+  "metrics": {
+    "confusion_matrix": [
+      [
+        27518506,
+        299304,
+        1909,
+        1243,
+        8299,
+        4279,
+        253,
+        39,
+        4943,
+        11682,
+        395,
+        622,
+        0,
+        221819,
+        78185,
+        42135,
+        418715,
+        0,
+        2
+      ],
+      [
+        3370814,
+        6436164,
+        84371,
+        206438,
+        53831,
+        17817,
+        0,
+        57,
+        154874,
+        78756,
+        4471,
+        5781,
+        20,
+        13104,
+        8854,
+        4442,
+        54805,
+        15853,
+        3091
+      ],
+      [
+        25151,
+        12448,
+        28981641,
+        388935,
+        145519,
+        36670,
+        9207,
+        17156,
+        1091268,
+        307,
+        281679,
+        5630,
+        118,
+        16504,
+        53972,
+        1361,
+        157405,
+        1249,
+        3492
+      ],
+      [
+        36443,
+        61651,
+        257918,
+        2170442,
+        195358,
+        6788,
+        394,
+        354,
+        319702,
+        20022,
+        1,
+        1935,
+        0,
+        7282,
+        2798,
+        0,
+        787,
+        1735,
+        275
+      ],
+      [
+        7734,
+        21944,
+        368718,
+        174926,
+        1607046,
+        16943,
+        174,
+        1420,
+        461596,
+        2220,
+        7125,
+        849,
+        0,
+        14774,
+        2045,
+        0,
+        85,
+        23901,
+        1181
+      ],
+      [
+        5193,
+        25378,
+        173213,
+        14649,
+        101456,
+        1019955,
+        9052,
+        13182,
+        298399,
+        7208,
+        86044,
+        4885,
+        5,
+        13781,
+        14098,
+        569,
+        28411,
+        64,
+        1283
+      ],
+      [
+        0,
+        0,
+        12038,
+        0,
+        64,
+        4640,
+        287499,
+        1064,
+        26134,
+        0,
+        10307,
+        0,
+        0,
+        177,
+        1076,
+        8,
+        380,
+        0,
+        0
+      ],
+      [
+        1,
+        420,
+        46386,
+        28,
+        4217,
+        10812,
+        23670,
+        395630,
+        41378,
+        208,
+        7907,
+        400,
+        0,
+        14635,
+        7667,
+        162,
+        29236,
+        0,
+        0
+      ],
+      [
+        63013,
+        29986,
+        1313758,
+        318334,
+        561206,
+        85904,
+        4801,
+        12663,
+        43715672,
+        18070,
+        461248,
+        9112,
+        67,
+        596483,
+        28643,
+        2278,
+        80415,
+        1395,
+        259
+      ],
+      [
+        251309,
+        774751,
+        37970,
+        79370,
+        47972,
+        8980,
+        0,
+        11,
+        376578,
+        563291,
+        2036,
+        193,
+        0,
+        3632,
+        1017,
+        0,
+        701,
+        0,
+        20
+      ],
+      [
+        15488,
+        1182,
+        285757,
+        8617,
+        895,
+        40727,
+        4408,
+        2695,
+        775749,
+        0,
+        57075080,
+        1604,
+        0,
+        223672,
+        976,
+        1790,
+        66283,
+        0,
+        0
+      ],
+      [
+        872,
+        2266,
+        7682,
+        1095,
+        9909,
+        4032,
+        0,
+        280,
+        51377,
+        126,
+        0,
+        189743,
+        4945,
+        3732,
+        3849,
+        13551,
+        130778,
+        0,
+        1208
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1031,
+        0,
+        0,
+        529,
+        292,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10
+      ],
+      [
+        151426,
+        2080,
+        19902,
+        13568,
+        10551,
+        4980,
+        24,
+        384,
+        37824,
+        315,
+        42,
+        1270,
+        2,
+        3825375,
+        77459,
+        21310,
+        25955,
+        0,
+        165
+      ],
+      [
+        21329,
+        198,
+        342902,
+        8041,
+        1239,
+        1817,
+        133,
+        719,
+        17299,
+        2,
+        1122,
+        296,
+        0,
+        37233,
+        631536,
+        36,
+        3958,
+        0,
+        0
+      ],
+      [
+        505,
+        608,
+        239912,
+        249,
+        17072,
+        8730,
+        1889,
+        348,
+        169094,
+        0,
+        35119,
+        251,
+        0,
+        32902,
+        145846,
+        423375,
+        26049,
+        0,
+        0
+      ],
+      [
+        112,
+        0,
+        3905,
+        0,
+        4415,
+        2617,
+        0,
+        3,
+        4782,
+        0,
+        2157,
+        0,
+        0,
+        2928,
+        1889,
+        2112,
+        1806818,
+        0,
+        0
+      ],
+      [
+        1,
+        44,
+        1592,
+        697,
+        0,
+        0,
+        0,
+        0,
+        10839,
+        0,
+        0,
+        73,
+        95,
+        12121,
+        732,
+        0,
+        0,
+        67181,
+        259
+      ],
+      [
+        17,
+        738,
+        5185,
+        707,
+        9565,
+        1011,
+        0,
+        0,
+        911,
+        0,
+        0,
+        624,
+        87,
+        598,
+        0,
+        0,
+        0,
+        457,
+        57159
+      ]
+    ],
+    "IoU": {
+      "road": 84.51177458503295,
+      "sidewalk": 54.79199366009109,
+      "building": 84.1686291832533,
+      "wall": 50.4662175390429,
+      "fence": 41.37340319840463,
+      "pole": 49.18828514838879,
+      "traffic light": 72.34644884647903,
+      "traffic sign": 62.48775926663003,
+      "vegetation": 85.47050530836704,
+      "terrain": 24.632851819637242,
+      "sky": 96.0785916559694,
+      "person": 41.293452216435725,
+      "rider": 4.05217873993894,
+      "car": 70.73536674957457,
+      "truck": 42.18773171868967,
+      "bus": 35.52688883052237,
+      "train": 63.270559487845546,
+      "motorcycle": 48.58049866944348,
+      "bicycle": 64.72979706468564
+    },
+    "mIoU": 56.625943878338546,
+    "valid_pixels": 195643365,
+    "gt_histogram": [
+      28612330,
+      10513543,
+      31229712,
+      3083885,
+      2712681,
+      1816825,
+      343387,
+      582757,
+      47303307,
+      2147831,
+      58504923,
+      425445,
+      1867,
+      4192632,
+      1067860,
+      1101949,
+      1831738,
+      93634,
+      77059
+    ]
+  },
+  "predictions": [
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000001_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000001_rgb_anon.png",
+      "sha256": "2f0539beda0870c627c9e2ed4e9ea77ad155b575c1fd7aff7383f299e171253c",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000001_gt_labelTrainIds.png",
+      "label_sha256": "91bb2a6185e1784fc1ff8c683d95e98496d7b65b9d994526b202ad2e6ca474c7"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000018_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000018_rgb_anon.png",
+      "sha256": "7c9861d5abbbce5994efcb59c82c5873e4927328f339739b86ba42f53423dc56",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000018_gt_labelTrainIds.png",
+      "label_sha256": "cbc363eb638f73ce5ce19123b22b10e60236834eb4c47d284a614ccebf0c296c"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000028_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000028_rgb_anon.png",
+      "sha256": "9f07e91ca16765a909104f7b109a4ba39de0101ad4939c5ae707b06c71833c4d",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000028_gt_labelTrainIds.png",
+      "label_sha256": "fe6983a0ce928109a38a037d37c1697e387515ef4c78d3f9c26f925c48ba0b01"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000040_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000040_rgb_anon.png",
+      "sha256": "1951756d1adf564c0c60ac1b01ba02639b6573621f8031c65eb0e80ffba10f1f",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000040_gt_labelTrainIds.png",
+      "label_sha256": "25b8512355d73dc56cc59cf6f2624840f8a1b9fa49f00693358e22d0d1145c51"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000049_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000049_rgb_anon.png",
+      "sha256": "6aa6694de2331cbd35f6e788da68ab586e072f45f231d7b9e30d2f61718ec9b3",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000049_gt_labelTrainIds.png",
+      "label_sha256": "31234df414dbdb2d8eb555c1fab8ccfd85ad705c8a7a4a299ec982ed3ffd8cc2"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000057_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000057_rgb_anon.png",
+      "sha256": "303832a4970329bdc01a2810317e62bdb3c3c54214bcd42c82a2e45cf90816f8",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000057_gt_labelTrainIds.png",
+      "label_sha256": "04dfdc70c7eafc26134c6554508c36f01e14a88cc2f08b9ecc0ec6461f41fb86"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000064_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000064_rgb_anon.png",
+      "sha256": "3df097f2fd2d1e7b100af0665f30c97ff25cc0bcbfd92bbc79b33ed2fd9de487",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000064_gt_labelTrainIds.png",
+      "label_sha256": "b972c2e2a1368a6446f7b158164f2e4582a7728b3fb07320d05af821a0638f70"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000070_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000070_rgb_anon.png",
+      "sha256": "1ff911fb3d60eb3eff778ea40edb40eb27fe7b23c10986be45cf97b0b76bbd85",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000070_gt_labelTrainIds.png",
+      "label_sha256": "b1504f1febededd4c1f0b698ff80c8f7d943d42d5bf1eeee36ef9d38d0333013"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000077_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000077_rgb_anon.png",
+      "sha256": "acd9af8b8dc319eafc52c60504de4ba1be460189f2ea9c438ec806d2cb0c630a",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000077_gt_labelTrainIds.png",
+      "label_sha256": "ebc9ed5f5ccacfc3d524e99171477ba5cc1588f973368b5c039c09e919de3184"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000085_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000085_rgb_anon.png",
+      "sha256": "cf71dd83036efed7b74fae33203775dc297e423d5ecb14aa026fa7fdf9760cb3",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000085_gt_labelTrainIds.png",
+      "label_sha256": "a26d8a0dd53d1a43a199a930a186cdf6d0ef4968575eb7b75325166721a122eb"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000092_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000092_rgb_anon.png",
+      "sha256": "e087830eb44b72772cd9188d25a1cae83b91ce9b193ca5da0fd38c2da5d4a869",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000092_gt_labelTrainIds.png",
+      "label_sha256": "b448b83961c4abb6bccb6bd699fa6b28c17afd6f8eb2e22b632493c8af1c46ad"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000099_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000099_rgb_anon.png",
+      "sha256": "f9631840cd6f24335e5ea5579fc11652075d76b2a51413ea52b5bf37837af76b",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000099_gt_labelTrainIds.png",
+      "label_sha256": "bda83cd73b3ffa962cdf3a4f1376e2a94dc1599cd2f297fbb8b4282bfbcf5304"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000106_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000106_rgb_anon.png",
+      "sha256": "3603c9c48626288730d52373a553917929e7003d406a188cbbd7b17f4dc94f3f",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000106_gt_labelTrainIds.png",
+      "label_sha256": "84000fcb2ffa0817d154e9d25c433f2e6efb4aab8b070bac30810b8c673d2cd7"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000113_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000113_rgb_anon.png",
+      "sha256": "bf48b6cb7c18eb043dec623a52a2f88a7ecd1bd3e8d56cd407bede9c80c44ca9",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000113_gt_labelTrainIds.png",
+      "label_sha256": "41f21002bc9b2997c6a944d3ba12f900e8b2efa218c65247c1cfb9b1f24a6b85"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000121_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000121_rgb_anon.png",
+      "sha256": "d705e30cd8327b68b411da38066af544a6f8b0e42e35dfdf04d08ebdcf44980c",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000121_gt_labelTrainIds.png",
+      "label_sha256": "bc9d90381a738d45dd1c9e65f09bf2815aaed29ee6d88d40e2ed2ff3135d4362"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000306_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000306_rgb_anon.png",
+      "sha256": "d8471ea06606772c66e94e2220daef0e642e720e019dad9e954babd4076de154",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000306_gt_labelTrainIds.png",
+      "label_sha256": "0c753183dfb26b6a9bfc4b5672f50c9383eec52c8250b93f3cb675e0ea528056"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000312_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000312_rgb_anon.png",
+      "sha256": "757e72680af57f536f4c70b927872bf3ea0ddda21c0ade39ea5324851e630234",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000312_gt_labelTrainIds.png",
+      "label_sha256": "6542f07220bd306686ddc0e16f35289b36954ad4f190f53d53575e81a44b2165"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000317_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000317_rgb_anon.png",
+      "sha256": "a3e30cb2588f142ae062e3f43025227c0db827de130c56414bf820a116bb33f1",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000317_gt_labelTrainIds.png",
+      "label_sha256": "b6595cf9786480f4caeccee88df83a159ee32ac26ca3d4ae40d7b34aa9171e0f"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000322_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000322_rgb_anon.png",
+      "sha256": "fa6c1494e63ae293a1b52ba30afb42977c556f1a2f3ab5698860263c0886387b",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000322_gt_labelTrainIds.png",
+      "label_sha256": "aa593615933a96eaf9c315069c8c8a68a4741b83050cdd66391310f842ea7658"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000327_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000327_rgb_anon.png",
+      "sha256": "f47e7aad0d535521be39883d6a13fc84c32fe43838684ef50a76da0c582bc6dc",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000327_gt_labelTrainIds.png",
+      "label_sha256": "bb99dcce9f4e70d623dc7d3f7ae2c533f2c2cd534f757035b61af01c3e498958"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000332_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000332_rgb_anon.png",
+      "sha256": "2419e6f6515742bb2ac400e6b89af9256775d42805c16c35478e865e8afb277c",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000332_gt_labelTrainIds.png",
+      "label_sha256": "c2e7eb899bb66e4e0f1b5702201e06771bd77b397ab080404a3cea82a3ac9828"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000337_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000337_rgb_anon.png",
+      "sha256": "d7880626d5fddc41ab70a6601c5d96fdc18d93a73fd252ed9a9fff893532dac6",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000337_gt_labelTrainIds.png",
+      "label_sha256": "757c8a4664a993a43f8e5c79e8ec5c14c488ef732eaa47dda39275a4ae33e19c"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000344_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000344_rgb_anon.png",
+      "sha256": "4dc7f24f28d96d88575d648922ca9846cd9a834ded17f1dd70b51d8243c1d0ae",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000344_gt_labelTrainIds.png",
+      "label_sha256": "8cb78aa20730814781c0a9321f27aa8d7fab660e37f81c0d1c63d80a80ca5162"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000352_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000352_rgb_anon.png",
+      "sha256": "7db0d1d5658aa119d56595d180b59ca49881ecce0bc66b890943dbde7e659f9a",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000352_gt_labelTrainIds.png",
+      "label_sha256": "20b9a532566406a3a0b19bbff08ccd90a4f5b0c0c727be2193236f86725132d5"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000358_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000358_rgb_anon.png",
+      "sha256": "2690bb57739fc1928d3835b60e8ace1943278b21d13787fac376366d1803cc97",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000358_gt_labelTrainIds.png",
+      "label_sha256": "d20169bcab15a30e60d38b5941dc45d7e3f565c9c7355b4301149673f41dfad2"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000364_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000364_rgb_anon.png",
+      "sha256": "408afdb3cad047745aec1838c0da55c3519345da4d232ef1e518a46bb2e463ce",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000364_gt_labelTrainIds.png",
+      "label_sha256": "75143b6a3f9ecd204744836e851b18ace21909a2d81288803e6b50fc78cca5bd"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000370_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000370_rgb_anon.png",
+      "sha256": "8ae096093e369535c3220da481a5749763dfd8c674c3987a4b08ea1e5875358e",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000370_gt_labelTrainIds.png",
+      "label_sha256": "946dd328342466c2a080f8ebaa7ac4848c06bd26e46c2f1751b425831ea8e2f8"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000376_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000376_rgb_anon.png",
+      "sha256": "508dd9f0e06bff339308659d10f3c2a6370f016f349d41b48e1ce076a8735a01",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000376_gt_labelTrainIds.png",
+      "label_sha256": "de5e3f45fd941c9159364f3f393a0f7e9b2930a443c510e302d1969d339786ff"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000406_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000406_rgb_anon.png",
+      "sha256": "064399c1736e1e53e2268a897e24f96726c6f28b0d23d1a95a80dc12c924e3be",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000406_gt_labelTrainIds.png",
+      "label_sha256": "c3ee0126de26602f4fcaca2cf56eceb8ddd3fb361a5b4cb370a83940009d16b1"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000413_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000413_rgb_anon.png",
+      "sha256": "5a26a0f1592d30d95fbc95d6bf972f7f4e3ace9d880d30588fca193338a12e05",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000413_gt_labelTrainIds.png",
+      "label_sha256": "fad7dd115a0a12f872a48166ed16dbb0df9b28676cc1007d85542ba00903b1ac"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000419_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000419_rgb_anon.png",
+      "sha256": "ffb2208337ef70797d44df3e9a7ccdb7b25347715ff06474508f25744f369b2f",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000419_gt_labelTrainIds.png",
+      "label_sha256": "39276d3f3b5f8d8959d0df75bf89014ca7ec5bb1e478c04a29ac90e2819d6d13"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000425_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000425_rgb_anon.png",
+      "sha256": "17b9e9bfc46c4ea325ddc2d9589cd34f2f73068c371227135def300e551273a8",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000425_gt_labelTrainIds.png",
+      "label_sha256": "27880fd8695dde623e908135318a6bc1d67530f014e5d45c122309d81ac8a836"
+    },
+    {
+      "id": "D/val/GOPR0122/GOPR0122_frame_000431_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0122_frame_000431_rgb_anon.png",
+      "sha256": "b573bc7571f3d69bec1dcf05f5bd120e664461de06206e64a27263b088fcc8fc",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0122/GOPR0122_frame_000431_gt_labelTrainIds.png",
+      "label_sha256": "8901c1a13582d95674a648c10aa8d3f2da99cb4ede6fa38b92f9ddaaa12cd7b5"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000278_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000278_rgb_anon.png",
+      "sha256": "ea6d46ed8da496bed31689fbfcc6642c53bbcc64a5a7095e442914c11ff986e6",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000278_gt_labelTrainIds.png",
+      "label_sha256": "931804ec411ac4b8805e3ca414d6b00c6110843c8ff187bc01e76052e4e40eac"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000284_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000284_rgb_anon.png",
+      "sha256": "37660c2e86acd0642d8af5391fb235f1ba02c8f568285b981c09df7e8e1fb5fe",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000284_gt_labelTrainIds.png",
+      "label_sha256": "35b278c4f7b93a58e43dde9b5f0ea900f2e5808d0618d29ee1b96f62d721ee90"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000290_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000290_rgb_anon.png",
+      "sha256": "213d628e1a0e982e109805077e844ae256a659a66c8497974ce2e2b549a998dd",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000290_gt_labelTrainIds.png",
+      "label_sha256": "4e2502f78d46f73bab5a567615581f6ac1ae1752ab37d31dd3a162db841c0f58"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000300_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000300_rgb_anon.png",
+      "sha256": "491eeb08d987107880db413f6b8fefcdb042e2c9f85efd9c18abd58ad47a48cf",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000300_gt_labelTrainIds.png",
+      "label_sha256": "9a96e89805d2d7ceb3952c1ceb9c5f9ceb2abc53e8d855e4fa6155e0bc6bbbc7"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000305_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000305_rgb_anon.png",
+      "sha256": "6b41b0eb09f082296ffd79ee770eb1d63694d4d57610d987233fbd9f1cda94c4",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000305_gt_labelTrainIds.png",
+      "label_sha256": "9ef8f54fb045fe4d1c93b4fba02672daf8d1a55b4f4c524dea759c18525651dc"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000310_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000310_rgb_anon.png",
+      "sha256": "f1cd1c74eac02e19a223114ed1c9c614abc9c2ef6acf778e5af9f5cbec9d975c",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000310_gt_labelTrainIds.png",
+      "label_sha256": "ec94b3b2e67e131a03bef293880cc03fcbc63da275fd0f820ffea57da973e106"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000316_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000316_rgb_anon.png",
+      "sha256": "2bfd0b662a12af22072bf2e7551b87cd305e9c136bbf138936c9ef40beaa85aa",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000316_gt_labelTrainIds.png",
+      "label_sha256": "5d538b05116892bb26dfeb89dbe136f0ecaaa9c6120e52cd53b168911e7ad43b"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000322_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000322_rgb_anon.png",
+      "sha256": "e8ac7cbb70db079cd98af55d18467fd9bb7c21b23ef902cec84e7c3dd2d46f4d",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000322_gt_labelTrainIds.png",
+      "label_sha256": "41d502f71801bebda44f6ed5daf95fb047aebd84ed6fe9f9e9381b672bcfe38f"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000327_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000327_rgb_anon.png",
+      "sha256": "22c5d7b3ad981a2b7f956dcabd7ed271c5393e8128f956eaa52f7b9ceeef21d4",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000327_gt_labelTrainIds.png",
+      "label_sha256": "9e4b670d56dacbfd460f97d4b872b33a0341bde4108cb4b8683b3283f45aefdf"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000332_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000332_rgb_anon.png",
+      "sha256": "ffeb47e58a2f33a92494ba551afaa8b4b688896c97d6ae80559321a4074e43fd",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000332_gt_labelTrainIds.png",
+      "label_sha256": "5f9724ca06af67c244179aaf49c2a9e7fbd49aaf96e6e594f654b2449a229635"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000337_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000337_rgb_anon.png",
+      "sha256": "ed9e96169e18638ee6a719a1721c6d2f981504dc11352e5eea1f9dcf67aba66e",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000337_gt_labelTrainIds.png",
+      "label_sha256": "540a518c6309bb01025a0b988992b363b1ebe229aa5adc7bd88d1104a5561b25"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000373_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000373_rgb_anon.png",
+      "sha256": "30c57fccf2e3bd398c459af562d9e7f214da3d3705339a5589e45c4968d8b98e",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000373_gt_labelTrainIds.png",
+      "label_sha256": "3339b22220aa72c2952bfaa2e9d954516000c57ea4b917249b40b47f86e3e5af"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000393_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000393_rgb_anon.png",
+      "sha256": "732b8a6114a59cf64e3198fbeefac114d772bf78919241355568a819489d6855",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000393_gt_labelTrainIds.png",
+      "label_sha256": "6f2a3fe7dc76f427f7e998e2c030072ea8c80f3ffbe203954f4d44aab58615c0"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000413_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000413_rgb_anon.png",
+      "sha256": "35050d4ef09febd92287bd2df27b68be4019259a29a273d12defb2612a7baaba",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000413_gt_labelTrainIds.png",
+      "label_sha256": "725211c18fb6617b7043579751e51c226bad9c0350981fb3769f4e7e96a528df"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000433_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000433_rgb_anon.png",
+      "sha256": "c1092bd8278360d2987ba233a05a526b42d662e177bb7f70948a589b753f175b",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000433_gt_labelTrainIds.png",
+      "label_sha256": "17147bec1fa7b16793f665a0a04ff4f0ac71ff5fcf9f6a709d3264770e04bbc1"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000439_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000439_rgb_anon.png",
+      "sha256": "ce4166e3058e146a2a342c493aa535fa81677d0dc9a9276b149bb98ac07a3cc2",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000439_gt_labelTrainIds.png",
+      "label_sha256": "31de8fc027ca0a02945733cc1360f1cf29fc918c12cb096014572929bb39be66"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000445_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000445_rgb_anon.png",
+      "sha256": "4fe4e07f45c75cc2cd19a309c06960ba1939dcb39ea630f95057f135c42367c2",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000445_gt_labelTrainIds.png",
+      "label_sha256": "e7ce982ffb6812b9c37336de178a9a14a90e8f4d29fcea89866eb2679b1b05a2"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000455_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000455_rgb_anon.png",
+      "sha256": "b43d1924ee28c19c7b41aaad0284acbd16944a3d768c3de53c0764aa1b4d08de",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000455_gt_labelTrainIds.png",
+      "label_sha256": "5e9993f1242d8331a0640fbc5b07c94dbdf60fe5b06261455b08c74a039698ec"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000460_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000460_rgb_anon.png",
+      "sha256": "9c48eb84b6056f22cb001626c729c431047422ddbfc73e50d3fbfd00481f6d7b",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000460_gt_labelTrainIds.png",
+      "label_sha256": "62b7a9b6fc8700944e3a2cec868d6cdeeb6dfd0207115bd41d05b56ba8f6fde3"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000465_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000465_rgb_anon.png",
+      "sha256": "f6fd32af2e4b1444326029ad3bd709046f0668a6c5c063281fc8b04f20a0535f",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000465_gt_labelTrainIds.png",
+      "label_sha256": "f8f5fcd5271a9654f003cc8d46b07f5226f56d727d168819f0720af645adf05a"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000470_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000470_rgb_anon.png",
+      "sha256": "563c0a6dda94bb0dd6d863fa1cb7cade2aa3853aeb2adb57e59c0d0e2f616dfe",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000470_gt_labelTrainIds.png",
+      "label_sha256": "63d072f51cbfad3f18d969cd2181b6f83bd9374bbbdd52ef0c904a8393300c14"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000478_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000478_rgb_anon.png",
+      "sha256": "13b9679a3cc5b3d9a843204a982e3a2b1930ca9e2d9d2d1d35920d2753858011",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000478_gt_labelTrainIds.png",
+      "label_sha256": "e0f21f65ed5e1f18d9d15cb697c03d85747a8a3a196d3738b204737f13374f42"
+    },
+    {
+      "id": "D/val/GOPR0604/GOPR0604_frame_000488_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0604_frame_000488_rgb_anon.png",
+      "sha256": "6bba959dedecbef04e651f1330479c04f2ab1c1c9a5ad5306d9db4e124c19fe5",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0604/GOPR0604_frame_000488_gt_labelTrainIds.png",
+      "label_sha256": "7ca99a3682195b8e93cd3071cf0461cae15f5886eec0a6f244a795e6bb68e122"
+    },
+    {
+      "id": "D/val/GOPR0605/GOPR0605_frame_000161_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0605_frame_000161_rgb_anon.png",
+      "sha256": "3ca53bcceb102059eb674ed662cfd0a9c63bc957679bf5e6f79d07dfbd01e870",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0605/GOPR0605_frame_000161_gt_labelTrainIds.png",
+      "label_sha256": "f1afb546e34878566e56ad795c340121de0dadfb7747c78abd5eaf99efa06d0d"
+    },
+    {
+      "id": "D/val/GOPR0605/GOPR0605_frame_000181_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0605_frame_000181_rgb_anon.png",
+      "sha256": "a3a13d7580c204538d995a0f8f59d828fe9c2b1dd7a3aee3551ce58f7cb02f82",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0605/GOPR0605_frame_000181_gt_labelTrainIds.png",
+      "label_sha256": "5c436cff453ea05d604f1eb170607a20ea579e18f25b40ead4937c86dedc4370"
+    },
+    {
+      "id": "D/val/GOPR0605/GOPR0605_frame_000299_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0605_frame_000299_rgb_anon.png",
+      "sha256": "10b0a0fe7143148af5234db4782ef8d965f9927c36eaac225efc71e8ad3c7584",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0605/GOPR0605_frame_000299_gt_labelTrainIds.png",
+      "label_sha256": "a3295dca6e333886db6d507477411a49f2ca1a15397b97cae177b487578bd843"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000110_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000110_rgb_anon.png",
+      "sha256": "be203b2bb1a4464fa3b5695d5237a076b6165690645f136521f82c3e9df04cf2",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000110_gt_labelTrainIds.png",
+      "label_sha256": "aadac32352944f534834b81e241d9f180ba18704092d0363c9a413f22fbc143b"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000162_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000162_rgb_anon.png",
+      "sha256": "92f6d1b61a934539599f803875b462c6918b861947b1ebfd9290d86179bda0f7",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000162_gt_labelTrainIds.png",
+      "label_sha256": "82792d73b05cb1393fb37417e4fd0fb9f06d60ca4cac61469d619bf5a23a998d"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000182_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000182_rgb_anon.png",
+      "sha256": "e65b52e8ef10fc4e548938b0c8e037410004043360167b6cb152e9f486eb3316",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000182_gt_labelTrainIds.png",
+      "label_sha256": "4c897e050d22c87452227c4abf562929d4a1f19e7c18878c30a0265829776b66"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000196_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000196_rgb_anon.png",
+      "sha256": "c033b50fc04cd4f2bd820266be61213ce7df9693cf636ed0fdd917ee25c4439b",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000196_gt_labelTrainIds.png",
+      "label_sha256": "7a62bc4f870d5507b71dfbd8e309eb0c67040dfa55cfa7f918aba2ed1bbc73b7"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000202_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000202_rgb_anon.png",
+      "sha256": "bcad638caf618759d0c154df54ab4db22197f40b7cb530530104dfb5c77807a4",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000202_gt_labelTrainIds.png",
+      "label_sha256": "b8f17e63110c95412b21e10956d70a44bd93216cecff9f721512c3911b1c55b3"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000213_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000213_rgb_anon.png",
+      "sha256": "e357d7f94e65044071b1f3175fc5171b91e48e78f575b1e14939308cfcc40cd5",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000213_gt_labelTrainIds.png",
+      "label_sha256": "d7f6b4d6622c9bc7d6ad39cd4d6a94f97d127d3fae82b739e9cc887ba1de227d"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000220_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000220_rgb_anon.png",
+      "sha256": "8c22b5601a5c60774279dc0fe7f22bcad51d6fa0f19581b0d2ee1118404b8f41",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000220_gt_labelTrainIds.png",
+      "label_sha256": "dafb43a5f025dfec006681b2a21cc8da26fab6c960d909d9193be89d69674d4b"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000229_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000229_rgb_anon.png",
+      "sha256": "be4f46dcfe3f8e51c50223146c595ed55545355be38bf4280a88bf7900b6b2e6",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000229_gt_labelTrainIds.png",
+      "label_sha256": "d63b33adfa5e50b95205d2de4d5617134a88b148279ed0142b3952bee1b71f78"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000238_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000238_rgb_anon.png",
+      "sha256": "02e5c740a3e960eb4337392006298f3fbc8d3bdbfff71a5fbe1bf53b8e6bcc20",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000238_gt_labelTrainIds.png",
+      "label_sha256": "67c5f190eece2de81658b609bd129e6268daab64356619c7d6d350f9e08fd59c"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000258_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000258_rgb_anon.png",
+      "sha256": "c683960c6dc33212074f7bfadf4dfee53c440da52d694804b06a5d86c0271cc1",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000258_gt_labelTrainIds.png",
+      "label_sha256": "71e03fee4d6bc3e4976ec7b864a27f0dee156acb6e3f9fffe93c5e569c145638"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000352_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000352_rgb_anon.png",
+      "sha256": "e3d4bf9cd4857fafe3821e909fe8bb837cf078860068d54ea9d385f7320c8e1f",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000352_gt_labelTrainIds.png",
+      "label_sha256": "e785b6c52dfa50779e128a85e555d5cb05fcd5d6d0dbd0e411d434fb0da8319f"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000357_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000357_rgb_anon.png",
+      "sha256": "ec4613453f8c563aa3e24e7b72b087bc01f25c64d87c08375b820e1fbaa11c08",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000357_gt_labelTrainIds.png",
+      "label_sha256": "99b1e1f7bc701f2c1dcd8295e57993978ea2ebe2a19bcf62102b77f128822cf8"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000377_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000377_rgb_anon.png",
+      "sha256": "98fbb5d998bf5ef2e84d078aeba9a5e4659363823e54b8ca3e2470136b95230c",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000377_gt_labelTrainIds.png",
+      "label_sha256": "8ab228bc6a2ec9f20bb56745ce6b28781136e5b2c5a9fb33e2afb645fd81b309"
+    },
+    {
+      "id": "D/val/GOPR0606/GOPR0606_frame_000397_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0606_frame_000397_rgb_anon.png",
+      "sha256": "30fcebb36fff189d8991cc51cf59628bfef640d75b6cc00954c50aa38e2a9453",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0606/GOPR0606_frame_000397_gt_labelTrainIds.png",
+      "label_sha256": "3568cbd1e37845bd506ad0976d593903ec412139a782334f0809d066af542f44"
+    },
+    {
+      "id": "D/val/GOPR0607/GOPR0607_frame_000360_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0607_frame_000360_rgb_anon.png",
+      "sha256": "d48fd387a08259c42550320182795c6a5267b301adb5f38709e2c5b0aeaaa0c8",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0607/GOPR0607_frame_000360_gt_labelTrainIds.png",
+      "label_sha256": "9d1874fa866273a29119e5750a9926756c387cf0b85dd9b7aca8e17a59ed69a1"
+    },
+    {
+      "id": "D/val/GOPR0607/GOPR0607_frame_000410_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0607_frame_000410_rgb_anon.png",
+      "sha256": "9f2b49c18a41a95945ed973bf568c4003883069d151a0b6e75e1e29d817171a1",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0607/GOPR0607_frame_000410_gt_labelTrainIds.png",
+      "label_sha256": "8a3f65d584a2a8853c5ea0bd59bcb39f6bf8335c615ae42f696afe937ee12d47"
+    },
+    {
+      "id": "D/val/GOPR0607/GOPR0607_frame_000474_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GOPR0607_frame_000474_rgb_anon.png",
+      "sha256": "13b8af59fdf1ce1e5aba95fc7706101c5f8bbf9a200402e851df58838e948d21",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GOPR0607/GOPR0607_frame_000474_gt_labelTrainIds.png",
+      "label_sha256": "1969ebb15deea64b89e3237151cc311f2886d6f1939ec5b12267c2f26362b5e2"
+    },
+    {
+      "id": "D/val/GP010607/GP010607_frame_000921_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP010607_frame_000921_rgb_anon.png",
+      "sha256": "fbb85f1ed3a4280ecc9596210e66b6efd95a4a554d0f908db2cad15a3040a62c",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP010607/GP010607_frame_000921_gt_labelTrainIds.png",
+      "label_sha256": "a68bd8a4c6208340961b961195d8ac52c58c43164abb41b5256317c255b14ff0"
+    },
+    {
+      "id": "D/val/GP010607/GP010607_frame_000926_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP010607_frame_000926_rgb_anon.png",
+      "sha256": "15f445fb77b5dcb82abecfcd56a764e15117c6b64bb41c6644b47d726c89c036",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP010607/GP010607_frame_000926_gt_labelTrainIds.png",
+      "label_sha256": "ccdfcfcdeaf4b84a6d2f52b388e8a1ee99e6c728f1a40eaf74f1ee44bdd3dba4"
+    },
+    {
+      "id": "D/val/GP010607/GP010607_frame_000931_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP010607_frame_000931_rgb_anon.png",
+      "sha256": "922433ec6ece8f81220a49219336b650c4e69ba53cbf617c8fa690ae152fd9e1",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP010607/GP010607_frame_000931_gt_labelTrainIds.png",
+      "label_sha256": "c22a0eac3e4fe7caf6455704259a8417adacf6c46fdc2d7a651e079aa0a3bb65"
+    },
+    {
+      "id": "D/val/GP010607/GP010607_frame_000936_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP010607_frame_000936_rgb_anon.png",
+      "sha256": "4da2f479ad09980a8f982c67d5da37b0139fd55f54fa15e2ce5b21daa5c9e68a",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP010607/GP010607_frame_000936_gt_labelTrainIds.png",
+      "label_sha256": "bb910af4056d9ec4a93890e091ea1a41d35c6adde6dbcea3a4e4359c227e9bbb"
+    },
+    {
+      "id": "D/val/GP010607/GP010607_frame_000950_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP010607_frame_000950_rgb_anon.png",
+      "sha256": "b719ca6ee8444a11ffba438b77e13848908457bde0e4abf9a2cf0a584de8bc91",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP010607/GP010607_frame_000950_gt_labelTrainIds.png",
+      "label_sha256": "759b11b7481539a59d61508e9bfeab5600886f478ec4d3b99d95d594cb22cbf0"
+    },
+    {
+      "id": "D/val/GP010607/GP010607_frame_000954_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP010607_frame_000954_rgb_anon.png",
+      "sha256": "7cb0bdf264edfc461ca168093ffa3396dcd365f7240690f2f32ad6ac6fcff62b",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP010607/GP010607_frame_000954_gt_labelTrainIds.png",
+      "label_sha256": "c60983ff28ddfc677654c48d4da82fd2d24fe0577f22082231575421bae357dd"
+    },
+    {
+      "id": "D/val/GP010607/GP010607_frame_000958_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP010607_frame_000958_rgb_anon.png",
+      "sha256": "5d9972a2a12b1bfa5819c107bf2a90f749a9eb6dd28736515ba310b8b98a88e5",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP010607/GP010607_frame_000958_gt_labelTrainIds.png",
+      "label_sha256": "ed4445937b7c1b66b3b7a3190aa64807d6d2d9e9ed910eac0fca85e58fe263ae"
+    },
+    {
+      "id": "D/val/GP010607/GP010607_frame_000968_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP010607_frame_000968_rgb_anon.png",
+      "sha256": "5cb76700f2abe12c4db6faf79daf5c1dfea22942560ac17c122c4d874fdc9c19",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP010607/GP010607_frame_000968_gt_labelTrainIds.png",
+      "label_sha256": "6f6a1618a0d5f584291108ba410f6d7f5235c4d7b80dea48da41258d788b841b"
+    },
+    {
+      "id": "D/val/GP010607/GP010607_frame_000995_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP010607_frame_000995_rgb_anon.png",
+      "sha256": "eaf3564b6f164104c06414fc3c28ef3a04b86c0d4acd109dee9907c60ecceae6",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP010607/GP010607_frame_000995_gt_labelTrainIds.png",
+      "label_sha256": "01d25fbf5886e98c9766e9a01a7f6eed769679bfe4d8c807160a30d05c377e1f"
+    },
+    {
+      "id": "D/val/GP020607/GP020607_frame_000001_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP020607_frame_000001_rgb_anon.png",
+      "sha256": "129352e45d9f0defc364a4d812070f00a1e3637d35b95b41f8746518aa6ff812",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP020607/GP020607_frame_000001_gt_labelTrainIds.png",
+      "label_sha256": "11b70bb772bd52f963122b334e8bf378d5630fcbc6353bfbcf2de3cedf2a2a26"
+    },
+    {
+      "id": "D/val/GP020607/GP020607_frame_000149_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP020607_frame_000149_rgb_anon.png",
+      "sha256": "74c5de43de0a2b89541546c2866c35281aa90638861c39a078856b6b7ed616f1",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP020607/GP020607_frame_000149_gt_labelTrainIds.png",
+      "label_sha256": "d1509d893c873e80bba17af71a4c3f07b7442d5d0020c1b47f84ebf9692663e9"
+    },
+    {
+      "id": "D/val/GP020607/GP020607_frame_000162_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP020607_frame_000162_rgb_anon.png",
+      "sha256": "b926102fde48b92fad82ecf54ec0ad071fe9262902bc1c5a78f281e03bd40a1d",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP020607/GP020607_frame_000162_gt_labelTrainIds.png",
+      "label_sha256": "61c16b5a6a90c265f425f15f7a612c85b51338ab70e2f36d6ce74624499854e6"
+    },
+    {
+      "id": "D/val/GP020607/GP020607_frame_000201_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP020607_frame_000201_rgb_anon.png",
+      "sha256": "95f18873594570e65495b079890eda3713dd43c869c8dce0786dfdd44f855117",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP020607/GP020607_frame_000201_gt_labelTrainIds.png",
+      "label_sha256": "f27d59e1d2cf024cec2271bb734ce1500d52639ddd356c578653d45af5583963"
+    },
+    {
+      "id": "D/val/GP020607/GP020607_frame_000226_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP020607_frame_000226_rgb_anon.png",
+      "sha256": "b56b969223da47d6144d8d0135429b27b4d839b63e5863e89419a966c33bfac6",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP020607/GP020607_frame_000226_gt_labelTrainIds.png",
+      "label_sha256": "cea7d6416410933d87e39e252319f8f6053ac7671eaf8f0ef10e9e7b62084b9d"
+    },
+    {
+      "id": "D/val/GP030176/GP030176_frame_000529_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP030176_frame_000529_rgb_anon.png",
+      "sha256": "ac6b8002cb02a9bfe08f7d778629d26d6b75b6936b3a74da833c05c9ec125eb0",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP030176/GP030176_frame_000529_gt_labelTrainIds.png",
+      "label_sha256": "e347ca0a3c943bc35fd73fbbd24ea77aad2aea252643831d25a96fd95b5bc4bb"
+    },
+    {
+      "id": "D/val/GP030176/GP030176_frame_000549_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP030176_frame_000549_rgb_anon.png",
+      "sha256": "42d4f9cbdd740e4e82f28307b1ee717a65a905927bc1549f8d61758c32a0c582",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP030176/GP030176_frame_000549_gt_labelTrainIds.png",
+      "label_sha256": "0237987bd9a960d447354494d7647e69be43314f990b3c8c55d5355595cdced5"
+    },
+    {
+      "id": "D/val/GP030176/GP030176_frame_000569_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP030176_frame_000569_rgb_anon.png",
+      "sha256": "6d02565f3ddc9e827e3170ace8082ebe7c4c4d1d1e8849f026d8975f5e545c97",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP030176/GP030176_frame_000569_gt_labelTrainIds.png",
+      "label_sha256": "2084c278e13233732605aba2ba9c3b201081064645ff6f00ee6d18229a79d8c8"
+    },
+    {
+      "id": "D/val/GP030176/GP030176_frame_000589_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP030176_frame_000589_rgb_anon.png",
+      "sha256": "171ec1ccc480067efb2f8796dcd5ca5c1071b2291d474b7564c69d96da3518a1",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP030176/GP030176_frame_000589_gt_labelTrainIds.png",
+      "label_sha256": "5c057e941ebda1a52cef9dc711ada84cfe41c9e38944c7a8d140f6c48ba25ced"
+    },
+    {
+      "id": "D/val/GP030176/GP030176_frame_000609_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP030176_frame_000609_rgb_anon.png",
+      "sha256": "e9d0a0a8e62103f4941410b6b38ffecd55afba9ee53207452573c60ea0a1e3d3",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP030176/GP030176_frame_000609_gt_labelTrainIds.png",
+      "label_sha256": "69f5eec09db641c4f563469e604126c96a4f1d61cf50598fb3bc68e0ec40bad6"
+    },
+    {
+      "id": "D/val/GP030176/GP030176_frame_000629_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP030176_frame_000629_rgb_anon.png",
+      "sha256": "8ba35a79a738a11c9b943fc225fd29480cb2dbe43772cf98127db945972dc281",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP030176/GP030176_frame_000629_gt_labelTrainIds.png",
+      "label_sha256": "99c6d73ae060615a1e7e1e048c229a9ee9f4c383db4fb1aacf018785790a5e80"
+    },
+    {
+      "id": "D/val/GP030176/GP030176_frame_000649_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP030176_frame_000649_rgb_anon.png",
+      "sha256": "e8a9697deca9ab593830acfb72a8e221e27c37251af96ab928340621d7cb97a6",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP030176/GP030176_frame_000649_gt_labelTrainIds.png",
+      "label_sha256": "37d060b7da44e11e8b2ec27cd1bf70bba6a53f45cf5adc07efda7b0fcea8647a"
+    },
+    {
+      "id": "D/val/GP030176/GP030176_frame_000706_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP030176_frame_000706_rgb_anon.png",
+      "sha256": "adc1d8efac79154aa16a09c1fef1119da469783f2c17edb20012f87fd49a6546",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP030176/GP030176_frame_000706_gt_labelTrainIds.png",
+      "label_sha256": "dc82dc4c91d78c903ea038f15cb4265066388c5da59384d1c2ee5a0d5653d7d8"
+    },
+    {
+      "id": "D/val/GP030176/GP030176_frame_000721_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP030176_frame_000721_rgb_anon.png",
+      "sha256": "de6ec389a729356a7b11f6da212f7005051c1409c7d57a3e485978988b5a0cfb",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP030176/GP030176_frame_000721_gt_labelTrainIds.png",
+      "label_sha256": "477d288dba3d8ac5fccd356ae093e068efc8e2faa6eb76b542084802d100771c"
+    },
+    {
+      "id": "D/val/GP030176/GP030176_frame_000736_rgb_anon.png",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/eval-gsmf-seed1-D-snow/predictions/GP030176_frame_000736_rgb_anon.png",
+      "sha256": "4b8c6f2c9e65da8585cff5377da7e73711d1c6dac8524856de42940da9f8baa0",
+      "label": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000/gt/snow/val/GP030176/GP030176_frame_000736_gt_labelTrainIds.png",
+      "label_sha256": "27a7b0dafa3b7c3cfe253cb1bdfbb5f6de05c3726ee73ecbddb0782a77a7d04f"
+    }
+  ]
+}

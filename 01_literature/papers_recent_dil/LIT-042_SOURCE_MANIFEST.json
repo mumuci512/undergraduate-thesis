@@ -1,0 +1,98 @@
+{
+  "id": "LIT-042",
+  "checked_date": "2026-11-03",
+  "doi": "10.1016/j.media.2024.103112",
+  "publication": "Medical Image Analysis 94 (2024) 103112",
+  "metadata_url": "https://pubmed.ncbi.nlm.nih.gov/38401270/",
+  "paper_url": "https://www.researchgate.net/profile/Shuo-Li-42/publication/378384967_Boosting_knowledge_diversity_accuracy_and_stability_via_tri-enhanced_distillation_for_domain_continual_medical_image_segmentation/links/65d8af0ee7670d36abd7247b/Boosting-knowledge-diversity-accuracy-and-stability-via-tri-enhanced-distillation-for-domain-continual-medical-image-segmentation.pdf",
+  "version": "Author-public Journal Pre-proof uploaded by Shuo Li on 2024-02-23",
+  "online_pages": 16,
+  "paper_access": "Online PDF text read successfully; original page image visual validation was not completed",
+  "local_pdf_archived": false,
+  "local_pdf_sha256": null,
+  "local_download_status": "Direct requests returned HTTP 403; no error HTML archived as PDF",
+  "supplement_status": "No separate supplement retrieved; its absence is not certified",
+  "code_repository": "https://github.com/PerceptionComputingLab/TED_DCMIS",
+  "code_commit": "446f79be52d3e83dea92d7ff352c883154404fbb",
+  "code_scope": "Local static review only; no imports or execution of author training code, no dataset/weights downloaded, no training or reproduction",
+  "code_files": [
+    {
+      "path": "README.md",
+      "sha256": "f66c5adafa1c769af723a44f02bc4750d0e10cdb23c68c53a599e413dca71778",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/README.md"
+    },
+    {
+      "path": "args.py",
+      "sha256": "c9771dbd49a4326d74cb7ddfeaf25b85e36eec487ea6237dfd11adf4719ba0a9",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/args.py"
+    },
+    {
+      "path": "main.py",
+      "sha256": "6d3bf458de0f95bcd729b2379a171e5ff7a72f09c087853eb83aa338cb7d5505",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/main.py"
+    },
+    {
+      "path": "get.py",
+      "sha256": "6eee0879c17a6a32683cd2b8f13737ae518f2d235b2d6cbe911c34deb2250c0d",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/get.py"
+    },
+    {
+      "path": "conmand",
+      "sha256": "32e5b3d4d7093753ce4071cd72469b1b79bf6c13ff3874f0a6f39ce4cbdb90e2",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/conmand"
+    },
+    {
+      "path": "mp/agents/ted_agent.py",
+      "sha256": "c41140d3f77e40f0280b54c3667bcc0248d9a0c806d9ab6c46afc833b0fb3f1a",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/mp/agents/ted_agent.py"
+    },
+    {
+      "path": "mp/agents/ska_agent.py",
+      "sha256": "991a9e8e4a9a6fc43b0d0439bea79674af24dbc1dba61a46413d7a6752704447",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/mp/agents/ska_agent.py"
+    },
+    {
+      "path": "mp/agents/agent.py",
+      "sha256": "93b1fc0f6f9336398d40c049f8a1cfa4dfb6f766265c95d61c22dc6c7e945c1d",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/mp/agents/agent.py"
+    },
+    {
+      "path": "mp/eval/losses/losses_segmentation.py",
+      "sha256": "01bef79b45fbd6226ef5b7f97fcaf4d53af37f30403ab14959644a483e429c45",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/mp/eval/losses/losses_segmentation.py"
+    },
+    {
+      "path": "mp/experiments/data_splitting.py",
+      "sha256": "c8ba0ca360396bb8a6d02619781422c7eb518934bbc12e2ad55461ad9275312d",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/mp/experiments/data_splitting.py"
+    },
+    {
+      "path": "mp/data/datasets/ds_mr_cardiac_mm.py",
+      "sha256": "2953e99f72dafc7bce6be9995f768d8e38fa20a054ff430635def9a9a05db225",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/mp/data/datasets/ds_mr_cardiac_mm.py"
+    },
+    {
+      "path": "mp/eval/metrics/scores.py",
+      "sha256": "2b633462809c84c4a02cf8f8dc00ea74aa3bf8bebe7b4dfdd9a2f25d1b7f26bc",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/mp/eval/metrics/scores.py"
+    },
+    {
+      "path": "mp/models/model.py",
+      "sha256": "411a418dede8654feea7ade10f336e8321f088ea0be9175498f1b921e4ba3952",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/mp/models/model.py"
+    },
+    {
+      "path": "analysis/table_figure.py",
+      "sha256": "e942fd93c718f0c39411484ed8c643e330f8db7d8411f217b0b986bd5d0feaab",
+      "url": "https://github.com/PerceptionComputingLab/TED_DCMIS/blob/446f79be52d3e83dea92d7ff352c883154404fbb/analysis/table_figure.py"
+    }
+  ],
+  "numeric_evidence_file": "LIT-042_READING_EVIDENCE.json",
+  "numeric_evidence_sha256": "ec09ae1b461d82628f61f1bfeec9be6e0692b122bb6e0adf5fe32ab017492ac2",
+  "report_path": "../paper_reports/LIT-042_ted_tri_enhanced_distillation.docx",
+  "report_sha256": "56b3b65c69238b657e6003de157e063a5dea3d1a197e54dbd943ccda81b320e4",
+  "report_pages": 13,
+  "renderer": "Microsoft Word 16.0 native Page.EnhMetaFileBits rendered with GDI+",
+  "canonical_renderer_failure": "Packaged render_docx.py failed because LibreOffice soffice.exe is absent; native Microsoft Word page metafiles used.",
+  "human_read_attested": false
+}

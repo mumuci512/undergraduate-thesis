@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "seconds": 295.83341338299215,
+  "command": [
+    "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+    "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+    "eval",
+    "--stage",
+    "gsmf",
+    "--domain",
+    "A",
+    "--manifests",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog010",
+    "--checkpoint",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_4000.pth",
+    "--work-dir",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010"
+  ]
+}

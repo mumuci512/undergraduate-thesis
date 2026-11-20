@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "methods": {
+    "ft": {
+      "rejected": [
+        "wrong-method",
+        "wrong-domain",
+        "trained-as-init",
+        "optimizer-in-init",
+        "different-C-run-resume"
+      ],
+      "train_count": 400,
+      "val_count": 100,
+      "actual_checkpoint_seed": 0
+    },
+    "gsmf": {
+      "rejected": [
+        "wrong-method",
+        "wrong-domain",
+        "trained-as-init",
+        "optimizer-in-init",
+        "different-C-run-resume"
+      ],
+      "train_count": 400,
+      "val_count": 100,
+      "actual_checkpoint_seed": 0
+    },
+    "lwf": {
+      "rejected": [
+        "wrong-method",
+        "wrong-domain",
+        "trained-as-init",
+        "optimizer-in-init",
+        "different-C-run-resume"
+      ],
+      "train_count": 400,
+      "val_count": 100,
+      "actual_checkpoint_seed": 0
+    }
+  },
+  "mismatched_filename_record_domain_rejected": true,
+  "fixture_used_only_for_rejection": true
+}

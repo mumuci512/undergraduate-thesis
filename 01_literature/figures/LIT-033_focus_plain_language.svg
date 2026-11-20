@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1490" viewBox="0 0 1480 1490" role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">FOCUS 方法示意：用少量旧特征复习，学习新域时保留 U-Net 跳跃连接</title>
+  <desc id="diagram-desc">基于 FOCUS 原文第三至四页重绘的无公式教学图。新图像经过外观增强和完整编码器；旧域缓存中的稀疏首层特征从第一层编码器之后接入，重新计算后续特征并保留跳跃连接。首域后冻结编码器，后续主要更新解码器。各旧域均衡抽样，新图像批与旧特征批交替训练。图中层级已简化，纹理示意不是真实 MRI。</desc>
+  <metadata>Source: Joham et al., FOCUS, MICCAI 2025, DOI 10.1007/978-3-032-05185-1_22, pp.3-4 of the public PDF. https://papers.miccai.org/miccai-2025/paper/0460_paper.pdf | Created 2026-10-30, Asia/Shanghai. Teaching schematic, not experimental data.</metadata>
+  <style>
+ text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", Arial, sans-serif; fill: #17283B; }
+ .title { font-size: 38px; font-weight: 700; }
+ .section { font-size: 27px; font-weight: 700; }
+ .node-title { font-size: 23px; font-weight: 700; }
+ .body { font-size: 20px; }
+ .small { font-size: 18px; }
+ .muted { fill: #52647A; }
+ .blue { fill: #226AC5; }
+ .orange { fill: #BA6517; }
+ .green { fill: #20815B; }
+ .bold { font-weight: 700; }
+</style>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#397AC6" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#D0822D" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#248963" />
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#74869B" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1480" height="1490" rx="0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.7" />
+  <text x="60" y="66" class="title" text-anchor="start">FOCUS：学习新条件，也复习旧知识</text>
+  <text x="60" y="108" class="body muted" text-anchor="start">不再保留旧图像，而是留下少量“浅层特征笔记”，供后续训练复习。</text>
+  <g data-card="① 先学习第一个域" data-box="60,150,400,140">
+    <rect x="60" y="150" width="400" height="140" rx="16" fill="#EDF5FF" stroke="#BED6F2" stroke-width="1.7" />
+    <text x="82" y="187" class="node-title" text-anchor="start">① 先学习第一个域</text>
+    <text x="82" y="223" class="small muted" text-anchor="start">当前图像和标注一起训练</text>
+    <text x="82" y="252" class="small muted" text-anchor="start">用外观增强，让模型见过更多变化</text>
+  </g>
+  <g data-card="② 固定编码器" data-box="540,150,400,140">
+    <rect x="540" y="150" width="400" height="140" rx="16" fill="#FFFFFF" stroke="#DCE4EC" stroke-width="1.7" />
+    <text x="562" y="187" class="node-title" text-anchor="start">② 固定编码器</text>
+    <text x="562" y="223" class="small muted" text-anchor="start">首域训练后，固定特征提取方式</text>
+    <text x="562" y="252" class="small muted" text-anchor="start">避免旧笔记与网络的理解方式失配</text>
+  </g>
+  <g data-card="③ 依次学习后续域" data-box="1020,150,400,140">
+    <rect x="1020" y="150" width="400" height="140" rx="16" fill="#ECF8F2" stroke="#B9DDCE" stroke-width="1.7" />
+    <text x="1042" y="187" class="node-title" text-anchor="start">③ 依次学习后续域</text>
+    <text x="1042" y="223" class="small muted" text-anchor="start">新图像与旧特征交替训练</text>
+    <text x="1042" y="252" class="small muted" text-anchor="start">每学完一个域，再补充它的特征笔记</text>
+  </g>
+  <path d="M 470 220 H 525" fill="none" stroke="#74869B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-slate)" />
+  <path d="M 950 220 H 1005" fill="none" stroke="#74869B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-slate)" />
+  <text x="60" y="337" class="section" text-anchor="start">学新域时：两条路线进入同一个分割网络</text>
+  <rect x="460" y="359" width="490" height="300" rx="20" fill="#FAFBFD" stroke="#CCD6E1" stroke-width="1.7" />
+  <text x="483" y="390" class="body bold muted" text-anchor="start">编码器：首域后固定</text>
+  <g data-card="当前域图像" data-box="60,455,170,106">
+    <rect x="60" y="455" width="170" height="106" rx="14" fill="#EEF5FF" stroke="#AFCBEB" stroke-width="1.7" />
+    <text x="145.0" y="496" class="node-title" text-anchor="middle">当前域图像</text>
+    <text x="145.0" y="532" class="small muted" text-anchor="middle">例如新的扫描外观</text>
+  </g>
+  <g data-card="GIN 增强" data-box="270,455,170,106">
+    <rect x="270" y="455" width="170" height="106" rx="14" fill="#EEF5FF" stroke="#AFCBEB" stroke-width="1.7" />
+    <text x="355.0" y="496" class="node-title" text-anchor="middle">GIN 增强</text>
+    <text x="355.0" y="532" class="small muted" text-anchor="middle">随机改变灰度外观</text>
+  </g>
+  <g data-card="首层编码器" data-box="480,455,190,106">
+    <rect x="480" y="455" width="190" height="106" rx="14" fill="#F1F4F8" stroke="#BECAD7" stroke-width="1.7" />
+    <text x="575.0" y="496" class="node-title" text-anchor="middle">首层编码器</text>
+    <text x="575.0" y="532" class="small muted" text-anchor="middle">提取浅层特征</text>
+  </g>
+  <g data-card="后续编码器" data-box="720,455,210,106">
+    <rect x="720" y="455" width="210" height="106" rx="14" fill="#F1F4F8" stroke="#BECAD7" stroke-width="1.7" />
+    <text x="825.0" y="496" class="node-title" text-anchor="middle">后续编码器</text>
+    <text x="825.0" y="532" class="small muted" text-anchor="middle">计算更深的多尺度特征</text>
+  </g>
+  <g data-card="解码器" data-box="1050,455,190,106">
+    <rect x="1050" y="455" width="190" height="106" rx="14" fill="#ECF8F2" stroke="#B0D9C7" stroke-width="1.7" />
+    <text x="1145.0" y="496" class="node-title" text-anchor="middle">解码器</text>
+    <text x="1145.0" y="532" class="small muted" text-anchor="middle">融合特征并做分割</text>
+  </g>
+  <g data-card="分割结果" data-box="1280,455,140,106">
+    <rect x="1280" y="455" width="140" height="106" rx="14" fill="#ECF8F2" stroke="#B0D9C7" stroke-width="1.7" />
+    <text x="1350.0" y="496" class="node-title" text-anchor="middle">分割结果</text>
+    <text x="1350.0" y="532" class="small muted" text-anchor="middle">器官所在区域</text>
+  </g>
+  <path d="M 230 508 H 258" fill="none" stroke="#397AC6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)" />
+  <path d="M 440 508 H 468" fill="none" stroke="#397AC6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)" />
+  <path d="M 670 508 H 708" fill="none" stroke="#397AC6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)" />
+  <path d="M 930 508 H 1038" fill="none" stroke="#397AC6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)" />
+  <path d="M 1240 508 H 1268" fill="none" stroke="#397AC6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)" />
+  <path d="M 695 508 V 423 H 1145 V 443" fill="none" stroke="#397AC6" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)" />
+  <text x="990" y="406" class="small blue" text-anchor="middle">跳跃连接：把浅层细节送过去</text>
+  <text x="575" y="604" class="small muted" text-anchor="middle">固定特征提取方式</text>
+  <text x="825" y="604" class="small muted" text-anchor="middle">新样本偶尔用 CCD</text>
+  <rect x="1050" y="610" width="370" height="95" rx="14" fill="#F3FAF6" stroke="#C5E2D3" stroke-width="1.7" />
+  <text x="1235" y="648" class="body bold green" text-anchor="middle">对照训练目标，纠正预测</text>
+  <text x="1235" y="680" class="small green" text-anchor="middle">后续主要更新解码器</text>
+  <path d="M 1350 561 V 584 H 1235 V 598" fill="none" stroke="#248963" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)" />
+  <path d="M 1050 656 H 1010 V 582 H 1145 V 563" fill="none" stroke="#248963" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#arrow-green)" />
+  <g data-card="旧特征记忆库" data-box="60,740,260,158">
+    <rect x="60" y="740" width="260" height="158" rx="16" fill="#FFF5E9" stroke="#E6C49F" stroke-width="1.7" />
+    <text x="82" y="777" class="node-title" text-anchor="start">旧特征记忆库</text>
+    <text x="82" y="812" class="small muted" text-anchor="start">每个旧域都存一点</text>
+    <rect x="83" y="829" width="49" height="27" rx="5" fill="#FFE8CD" stroke="#DBA065" stroke-width="1.7" />
+    <text x="107.5" y="848" class="small orange" text-anchor="middle">旧域 A</text>
+    <rect x="153" y="829" width="49" height="27" rx="5" fill="#FFE8CD" stroke="#C77D37" stroke-width="1.7" />
+    <text x="177.5" y="848" class="small orange" text-anchor="middle">旧域 B</text>
+    <rect x="223" y="829" width="49" height="27" rx="5" fill="#FFE8CD" stroke="#E6BD8D" stroke-width="1.7" />
+    <text x="247.5" y="848" class="small orange" text-anchor="middle">…</text>
+    <text x="82" y="882" class="small orange" text-anchor="start">浅层特征及配套目标</text>
+  </g>
+  <g data-card="均衡抽取" data-box="370,763,190,109">
+    <rect x="370" y="763" width="190" height="109" rx="16" fill="#FFF5E9" stroke="#E9CCAB" stroke-width="1.7" />
+    <text x="392" y="800" class="node-title" text-anchor="start">均衡抽取</text>
+    <text x="392" y="836" class="small muted" text-anchor="start">各旧域均衡复习</text>
+  </g>
+  <path d="M 320 817 H 358" fill="none" stroke="#D0822D" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-orange)" />
+  <path d="M 560 817 H 695 V 508" fill="none" stroke="#D0822D" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-orange)" />
+  <circle cx="695" cy="508" r="6" fill="#D0822D" stroke="white" stroke-width="2" />
+  <text x="744" y="776" class="body bold orange" text-anchor="start">旧特征从首层之后接入</text>
+  <text x="744" y="813" class="body muted" text-anchor="start">继续经过后续编码器，重新算出多尺度特征</text>
+  <text x="744" y="844" class="body muted" text-anchor="start">这样，跳跃连接仍然有输入可用。</text>
+  <rect x="60" y="928" width="1360" height="64" rx="14" fill="#F2F6FB" stroke="#DFE7F0" stroke-width="1.7" />
+  <text x="740" y="969" class="node-title" text-anchor="middle">训练节奏：学一批新图像 → 复习一批旧特征 → 再学新图像</text>
+  <text x="60" y="1042" class="section" text-anchor="start">让这套办法更实用的三个设计</text>
+  <rect x="60" y="1070" width="420" height="270" rx="16" fill="#FFFFFF" stroke="#DCE4EC" stroke-width="1.7" />
+  <rect x="520" y="1070" width="440" height="270" rx="16" fill="#FFFFFF" stroke="#DCE4EC" stroke-width="1.7" />
+  <rect x="1000" y="1070" width="420" height="270" rx="16" fill="#FFFFFF" stroke="#DCE4EC" stroke-width="1.7" />
+  <text x="82" y="1110" class="node-title blue" text-anchor="start">GIN  让图像外观更多样</text>
+  <rect x="86" y="1132" width="90" height="58" rx="7" fill="#C1C9D2" stroke="#C1C9D2" stroke-width="1.7" />
+  <path d="M 106 1170 Q 101 1146 128 1144 Q 157 1140 158 1163 Q 154 1180 130 1178 Z" fill="#66788B" />
+  <rect x="199" y="1132" width="90" height="58" rx="7" fill="#70849C" stroke="#70849C" stroke-width="1.7" />
+  <path d="M 219 1170 Q 214 1146 241 1144 Q 270 1140 271 1163 Q 267 1180 243 1178 Z" fill="#DCE5EB" />
+  <rect x="312" y="1132" width="90" height="58" rx="7" fill="#E7EDF1" stroke="#E7EDF1" stroke-width="1.7" />
+  <path d="M 332 1170 Q 327 1146 354 1144 Q 383 1140 384 1163 Q 380 1180 356 1178 Z" fill="#889CB0" />
+  <text x="82" y="1223" class="small muted" text-anchor="start">类似给同一图像换几种灰度外观</text>
+  <text x="82" y="1254" class="small muted" text-anchor="start">减少对某一种扫描外观的依赖</text>
+  <text x="82" y="1285" class="small muted" text-anchor="start">域末提取缓存时，不使用 GIN</text>
+  <text x="542" y="1110" class="node-title orange" text-anchor="start">CCD 与 DFP  缩小记忆</text>
+  <rect x="552" y="1136" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="571" y="1136" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="590" y="1136" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="609" y="1136" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="628" y="1136" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="647" y="1136" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="552" y="1151" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="571" y="1151" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="590" y="1151" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="609" y="1151" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="628" y="1151" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="647" y="1151" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="552" y="1166" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="571" y="1166" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="590" y="1166" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="609" y="1166" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="628" y="1166" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="647" y="1166" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="552" y="1181" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="571" y="1181" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="590" y="1181" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="609" y="1181" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="628" y="1181" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="647" y="1181" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="762" y="1136" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="781" y="1136" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="800" y="1136" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="819" y="1136" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="838" y="1136" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="857" y="1136" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="762" y="1151" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="781" y="1151" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="800" y="1151" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="819" y="1151" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="838" y="1151" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="857" y="1151" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="762" y="1166" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="781" y="1166" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="800" y="1166" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="819" y="1166" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="838" y="1166" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="857" y="1166" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="762" y="1181" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="781" y="1181" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="800" y="1181" width="13" height="10" rx="2" fill="#D68D48" stroke="#D68D48" stroke-width="1.7" />
+  <rect x="819" y="1181" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="838" y="1181" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <rect x="857" y="1181" width="13" height="10" rx="2" fill="#EEF1F5" stroke="#EEF1F5" stroke-width="1.7" />
+  <path d="M 682 1164 H 739" fill="none" stroke="#D0822D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-orange)" />
+  <text x="542" y="1223" class="small muted" text-anchor="start">CCD：随机擦掉大多数空间位置</text>
+  <text x="542" y="1254" class="small muted" text-anchor="start">同一位置的所有通道一起擦掉</text>
+  <text x="542" y="1285" class="small muted" text-anchor="start">DFP：再只挑少量特征样本保存</text>
+  <text x="1022" y="1110" class="node-title orange" text-anchor="start">DBS  每个旧域都要复习</text>
+  <text x="1026" y="1148" class="small muted" text-anchor="start">旧域 A</text>
+  <rect x="1105" y="1134" width="26" height="12" rx="3" fill="#C57A31" stroke="#C57A31" stroke-width="1.7" />
+  <rect x="1141" y="1134" width="26" height="12" rx="3" fill="#C57A31" stroke="#C57A31" stroke-width="1.7" />
+  <rect x="1177" y="1134" width="26" height="12" rx="3" fill="#C57A31" stroke="#C57A31" stroke-width="1.7" />
+  <rect x="1213" y="1134" width="26" height="12" rx="3" fill="#C57A31" stroke="#C57A31" stroke-width="1.7" />
+  <rect x="1249" y="1134" width="26" height="12" rx="3" fill="#C57A31" stroke="#C57A31" stroke-width="1.7" />
+  <rect x="1285" y="1134" width="26" height="12" rx="3" fill="#C57A31" stroke="#C57A31" stroke-width="1.7" />
+  <text x="1026" y="1168" class="small muted" text-anchor="start">旧域 B</text>
+  <rect x="1105" y="1154" width="26" height="12" rx="3" fill="#DBA065" stroke="#DBA065" stroke-width="1.7" />
+  <rect x="1141" y="1154" width="26" height="12" rx="3" fill="#DBA065" stroke="#DBA065" stroke-width="1.7" />
+  <rect x="1177" y="1154" width="26" height="12" rx="3" fill="#DBA065" stroke="#DBA065" stroke-width="1.7" />
+  <rect x="1213" y="1154" width="26" height="12" rx="3" fill="#DBA065" stroke="#DBA065" stroke-width="1.7" />
+  <rect x="1249" y="1154" width="26" height="12" rx="3" fill="#DBA065" stroke="#DBA065" stroke-width="1.7" />
+  <rect x="1285" y="1154" width="26" height="12" rx="3" fill="#DBA065" stroke="#DBA065" stroke-width="1.7" />
+  <text x="1026" y="1188" class="small muted" text-anchor="start">旧域 C</text>
+  <rect x="1105" y="1174" width="26" height="12" rx="3" fill="#E8BE8D" stroke="#E8BE8D" stroke-width="1.7" />
+  <rect x="1141" y="1174" width="26" height="12" rx="3" fill="#E8BE8D" stroke="#E8BE8D" stroke-width="1.7" />
+  <rect x="1177" y="1174" width="26" height="12" rx="3" fill="#E8BE8D" stroke="#E8BE8D" stroke-width="1.7" />
+  <rect x="1213" y="1174" width="26" height="12" rx="3" fill="#E8BE8D" stroke="#E8BE8D" stroke-width="1.7" />
+  <rect x="1249" y="1174" width="26" height="12" rx="3" fill="#E8BE8D" stroke="#E8BE8D" stroke-width="1.7" />
+  <rect x="1285" y="1174" width="26" height="12" rx="3" fill="#E8BE8D" stroke="#E8BE8D" stroke-width="1.7" />
+  <text x="1022" y="1223" class="small muted" text-anchor="start">避免大数据域挤占全部复习机会</text>
+  <text x="1022" y="1254" class="small muted" text-anchor="start">各旧域分到近似相同的抽样份额</text>
+  <text x="1022" y="1285" class="small muted" text-anchor="start">域内也兼顾包含器官的图像片段</text>
+  <text x="60" y="1385" class="body bold" text-anchor="start">预测时：原图 → 完整 U-Net → 分割结果；不读取旧特征记忆库。</text>
+  <text x="60" y="1421" class="body muted" text-anchor="start">固定编码器有助于保持旧特征可用，也会限制它进一步学习新外观的能力。</text>
+  <text x="60" y="1460" class="small muted" text-anchor="start">依据 FOCUS 原文 p.3–4 重绘  ·  训练流程教学示意，网络层级已简化，图中纹理不是真实 MRI</text>
+</svg>

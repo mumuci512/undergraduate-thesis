@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "tools/road/check_five_contracts.py", line 39, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--prepare',required=True);main(p.parse_args().prepare)
+  File "tools/road/check_five_contracts.py", line 22, in main
+    ds=RoadManifestDataset(**{k:v for k,v in r.items() if k!='type'});rs=ds.load_data_list();assert len(rs)==(400 if split=='train' else 500 if domain=='A' else 106 if domain=='E' else 100);assert all(x['domain']==domain for x in rs)
+  File "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/datasets/basesegdataset.py", line 139, in __init__
+    self.pipeline = Compose(pipeline)
+  File "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmengine/dataset/base_dataset.py", line 36, in __init__
+    transform = TRANSFORMS.build(transform)
+  File "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmengine/registry/registry.py", line 570, in build
+    return self.build_func(cfg, *args, **kwargs, registry=self)
+  File "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmengine/registry/build_functions.py", line 100, in build_from_cfg
+    raise KeyError(
+KeyError: 'LoadRoadAnnotations is not in the transform registry. Please check whether the value of `LoadRoadAnnotations` is correct or it was registered as expected. More details can be found at https://mmengine.readthedocs.io/en/latest/advanced_tutorials/config.html#import-the-custom-module'

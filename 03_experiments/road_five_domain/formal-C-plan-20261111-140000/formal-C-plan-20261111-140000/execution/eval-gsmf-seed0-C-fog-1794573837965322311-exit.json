@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "seconds": 77.07354406101513,
+  "command": [
+    "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+    "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+    "eval",
+    "--stage",
+    "gsmf",
+    "--domain",
+    "B",
+    "--manifests",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data",
+    "--checkpoint",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-C/iter_4000.pth",
+    "--work-dir",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-fog"
+  ]
+}

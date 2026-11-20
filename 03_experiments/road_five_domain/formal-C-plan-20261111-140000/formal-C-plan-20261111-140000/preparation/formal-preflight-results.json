@@ -1,0 +1,42 @@
+{
+  "rows": [
+    {
+      "phase": "A",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/preflight-A.log"
+    },
+    {
+      "phase": "B",
+      "exit_code": 1,
+      "seconds": 39.42643400095403,
+      "result": "EXPECTED_DISK_GATE_BLOCK",
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "tools/road/five_formal.py",
+        "--prepare",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000",
+        "--phase",
+        "B",
+        "--check-only"
+      ]
+    },
+    {
+      "phase": "C",
+      "exit_code": 0,
+      "seconds": 39.665732610970736,
+      "result": "PASS",
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "tools/road/five_formal.py",
+        "--prepare",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000",
+        "--phase",
+        "C",
+        "--check-only"
+      ]
+    }
+  ],
+  "formal_started": false,
+  "authorization_files_present": false
+}

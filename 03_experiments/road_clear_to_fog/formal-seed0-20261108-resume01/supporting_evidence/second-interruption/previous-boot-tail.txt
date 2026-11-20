@@ -1,0 +1,80 @@
+2026-11-08T10:26:25+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:26:24+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:26:47+0800 UM890Pro-Win sshd[541]: Accepted publickey for ysheng4 from 127.0.0.1 port 58774 ssh2: ED25519 SHA256:yDcRKSMgnXbcrWWjy2bOATk9xvq3Ko65MNWni33r+Bo
+2026-11-08T10:26:47+0800 UM890Pro-Win sshd[541]: pam_unix(sshd:session): session opened for user ysheng4(uid=1000) by (uid=0)
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[1]: Created slice User Slice of UID 1000.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[1]: Starting User Runtime Directory /run/user/1000...
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd-logind[226]: New session 3 of user ysheng4.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[1]: Finished User Runtime Directory /run/user/1000.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[1]: Starting User Manager for UID 1000...
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: pam_unix(systemd-user:session): session opened for user ysheng4(uid=1000) by (uid=0)
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Queued start job for default target Main User Target.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Created slice User Application Slice.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Reached target Paths.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Reached target Timers.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Listening on GnuPG network certificate management daemon.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Listening on GnuPG cryptographic agent and passphrase cache.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Listening on debconf communication socket.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Listening on REST API socket for snapd user session agent.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Reached target Sockets.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Reached target Basic System.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Reached target Main User Target.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[1]: Started User Manager for UID 1000.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[1]: Started Session 3 of User ysheng4.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Starting WSLg user service...
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Finished WSLg user service.
+2026-11-08T10:26:47+0800 UM890Pro-Win systemd[544]: Startup finished in 205ms.
+2026-11-08T10:26:48+0800 UM890Pro-Win kernel: TCP: eth2: Driver has suspect GRO implementation, TCP performance may be compromised.
+2026-11-08T10:26:54+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:27:25+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:27:55+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:28:26+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:28:57+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:29:27+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:58+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:30:28+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:30:59+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:31:29+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:31:29+0800 UM890Pro-Win systemd[1]: Starting Daily apt upgrade and clean activities...
+2026-11-08T10:31:33+0800 UM890Pro-Win systemd[1]: apt-daily-upgrade.service: Deactivated successfully.
+2026-11-08T10:31:33+0800 UM890Pro-Win systemd[1]: Finished Daily apt upgrade and clean activities.
+2026-11-08T10:31:33+0800 UM890Pro-Win systemd[1]: apt-daily-upgrade.service: Consumed 2.647s CPU time.
+2026-11-08T10:32:00+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:32:30+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:33:15+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:33:46+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:34:17+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:34:47+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:35:02+0800 UM890Pro-Win kernel: mini_init (246): drop_caches: 1
+2026-11-08T10:35:18+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:35:49+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:36:19+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:50+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:36:52+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:52+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:52+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:37:20+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:37:51+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:38:21+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:38:52+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:39:22+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.
+2026-11-08T10:39:45+0800 UM890Pro-Win kernel: mini_init (246): drop_caches: 1
+2026-11-08T10:39:47+0800 UM890Pro-Win systemd[1]: Starting Cleanup of Temporary Directories...
+2026-11-08T10:39:47+0800 UM890Pro-Win systemd[1]: systemd-tmpfiles-clean.service: Deactivated successfully.
+2026-11-08T10:39:47+0800 UM890Pro-Win systemd[1]: Finished Cleanup of Temporary Directories.
+2026-11-08T10:39:53+0800 UM890Pro-Win systemd-resolved[119]: Clock change detected. Flushing caches.

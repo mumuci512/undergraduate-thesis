@@ -1,0 +1,152 @@
+{
+  "lwf": {
+    "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/lwf/iter_4000.pth",
+    "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843",
+    "iterations": 4000,
+    "optimizer_saved": true,
+    "scheduler_saved": true,
+    "optimizer_active_parameter_steps_all_4000": true,
+    "teacher_state_tensors_exact_source": 698,
+    "audit": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/lwf/audit-end-4000.json",
+    "initialization_sha256": "c3c80442ec46445891585242ec8ff0132c52b003cc2dcfdf7744567f2c696af5",
+    "teacher_policy": "fixed_eval",
+    "groups": {
+      "backbone": {
+        "parameters": 318,
+        "elements": 42519392,
+        "trainable_elements": 0,
+        "gradient_tensors_first_step": 0,
+        "changed_parameters": 0,
+        "bn_buffers": 318,
+        "changed_bn_buffers": 0
+      },
+      "backbone_1.stem": {
+        "parameters": 9,
+        "elements": 28768,
+        "trainable_elements": 28768,
+        "gradient_tensors_first_step": 9,
+        "changed_parameters": 9,
+        "bn_buffers": 9,
+        "changed_bn_buffers": 9
+      },
+      "backbone_1.layer1": {
+        "parameters": 30,
+        "elements": 215808,
+        "trainable_elements": 215808,
+        "gradient_tensors_first_step": 30,
+        "changed_parameters": 30,
+        "bn_buffers": 30,
+        "changed_bn_buffers": 30
+      },
+      "backbone_1": {
+        "parameters": 279,
+        "elements": 42274816,
+        "trainable_elements": 42274816,
+        "gradient_tensors_first_step": 279,
+        "changed_parameters": 279,
+        "bn_buffers": 279,
+        "changed_bn_buffers": 279
+      },
+      "decode_head": {
+        "parameters": 38,
+        "elements": 5312905,
+        "trainable_elements": 0,
+        "gradient_tensors_first_step": 0,
+        "changed_parameters": 0,
+        "bn_buffers": 24,
+        "changed_bn_buffers": 0
+      },
+      "decode_head_1": {
+        "parameters": 38,
+        "elements": 5312905,
+        "trainable_elements": 5312905,
+        "gradient_tensors_first_step": 38,
+        "changed_parameters": 38,
+        "bn_buffers": 24,
+        "changed_bn_buffers": 24
+      }
+    },
+    "trainable_parameters": 47832297,
+    "total_parameters": 95664594,
+    "peak_allocated_MiB": 2618.95703125,
+    "seconds_per_step": 0.16989767546324944,
+    "training_wall_seconds": 938.5150962889893,
+    "evaluation_seconds": 1098.4964545290277,
+    "evaluation_stage_wall_seconds": 1241.1723159459652
+  },
+  "gsmf_teacher_bn": {
+    "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/gsmf_teacher_bn/iter_4000.pth",
+    "checkpoint_sha256": "b95423aea7da0e983cdffa17e38c84073a7e06221d066d560234cad892581ea8",
+    "iterations": 4000,
+    "optimizer_saved": true,
+    "scheduler_saved": true,
+    "optimizer_active_parameter_steps_all_4000": true,
+    "teacher_state_tensors_exact_source": 698,
+    "audit": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/gsmf_teacher_bn/audit-end-4000.json",
+    "initialization_sha256": "88e2aa92b237abedc6a077a61fd5d1099416fef117329241b7cc8ee77d7abff7",
+    "teacher_policy": "teacher_bn_source_stats",
+    "groups": {
+      "backbone": {
+        "parameters": 318,
+        "elements": 42519392,
+        "trainable_elements": 0,
+        "gradient_tensors_first_step": 0,
+        "changed_parameters": 0,
+        "bn_buffers": 318,
+        "changed_bn_buffers": 0
+      },
+      "backbone_1.stem": {
+        "parameters": 9,
+        "elements": 28768,
+        "trainable_elements": 0,
+        "gradient_tensors_first_step": 0,
+        "changed_parameters": 0,
+        "bn_buffers": 9,
+        "changed_bn_buffers": 9
+      },
+      "backbone_1.layer1": {
+        "parameters": 30,
+        "elements": 215808,
+        "trainable_elements": 0,
+        "gradient_tensors_first_step": 0,
+        "changed_parameters": 0,
+        "bn_buffers": 30,
+        "changed_bn_buffers": 30
+      },
+      "backbone_1": {
+        "parameters": 279,
+        "elements": 42274816,
+        "trainable_elements": 42274816,
+        "gradient_tensors_first_step": 279,
+        "changed_parameters": 279,
+        "bn_buffers": 279,
+        "changed_bn_buffers": 279
+      },
+      "decode_head": {
+        "parameters": 38,
+        "elements": 5312905,
+        "trainable_elements": 0,
+        "gradient_tensors_first_step": 0,
+        "changed_parameters": 0,
+        "bn_buffers": 24,
+        "changed_bn_buffers": 0
+      },
+      "decode_head_1": {
+        "parameters": 38,
+        "elements": 5312905,
+        "trainable_elements": 5312905,
+        "gradient_tensors_first_step": 38,
+        "changed_parameters": 38,
+        "bn_buffers": 24,
+        "changed_bn_buffers": 24
+      }
+    },
+    "trainable_parameters": 47587721,
+    "total_parameters": 95664594,
+    "peak_allocated_MiB": 2279.3740234375,
+    "seconds_per_step": 0.16101084847329114,
+    "training_wall_seconds": 904.1532926129876,
+    "evaluation_seconds": 1120.3628579450306,
+    "evaluation_stage_wall_seconds": 1261.6616187679756
+  }
+}

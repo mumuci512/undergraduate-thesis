@@ -1,0 +1,78 @@
+{
+  "time_utc": "2026-11-11T05:59:06.478625Z",
+  "python": "3.8.20 (default, Oct  3 2024, 15:24:27) \n[GCC 11.2.0]",
+  "python_executable": "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.17",
+  "versions": {
+    "torch": "1.9.1+cu111",
+    "torchvision": "0.10.1+cu111",
+    "mmcv": "2.0.0",
+    "mmengine": "0.8.2",
+    "mmseg": "1.2.1",
+    "numpy": "1.24.4",
+    "cv2": "4.8.0",
+    "PIL": "9.5.0"
+  },
+  "cuda_available": true,
+  "torch_cuda": "11.1",
+  "cudnn": 8005,
+  "disk": {
+    "total": 1081101176832,
+    "free": 715956912128
+  },
+  "gpu": {
+    "command": [
+      "/usr/lib/wsl/lib/nvidia-smi"
+    ],
+    "exit_code": 0,
+    "stdout": "Wed Nov 11 13:59:06 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 615.71.08              KMD Version: 616.92        CUDA UMD Version: 13.4     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3080        On  |   00000000:01:00.0 Off |                  N/A |\n|  0%   28C    P8             14W /  320W |    1498MiB /  20480MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "stderr": ""
+  },
+  "process_names": {
+    "command": [
+      "ps",
+      "-eo",
+      "pid,comm,etime"
+    ],
+    "exit_code": 0,
+    "stdout": "    PID COMMAND             ELAPSED\n      1 systemd          3-07:35:59\n      2 init-systemd(Ub  3-07:35:59\n      6 init             3-07:35:58\n     60 systemd-journal  3-07:35:58\n     82 systemd-udevd    3-07:35:58\n     92 snapfuse         3-07:35:58\n     93 snapfuse         3-07:35:58\n     99 snapfuse         3-07:35:58\n    125 systemd-resolve  3-07:35:58\n    127 systemd-timesyn  3-07:35:58\n    214 cron             3-07:35:58\n    216 dbus-daemon      3-07:35:58\n    221 networkd-dispat  3-07:35:58\n    222 rsyslogd         3-07:35:58\n    224 snapd            3-07:35:58\n    226 systemd-logind   3-07:35:58\n    239 agetty           3-07:35:58\n    250 agetty           3-07:35:58\n    251 sshd             3-07:35:58\n    267 unattended-upgr  3-07:35:57\n    371 login            3-07:35:56\n    414 systemd          3-07:35:56\n    415 (sd-pam)         3-07:35:56\n    425 bash             3-07:35:56\n    459 systemd          3-07:34:58\n    460 (sd-pam)         3-07:34:58\n    633 code-c4453f8ea4  3-07:34:50\n   2512 packagekitd      3-07:20:22\n   2516 polkitd          3-07:20:22\n  25909 snapfuse         1-02:19:13\n  45972 sshd               01:26:00\n  46001 sshd               01:26:00\n  46002 sh                 01:25:59\n  46020 code-c4453f8ea4    01:25:59\n  46057 sh                 01:25:59\n  46061 MainThread         01:25:59\n  46094 sh                 01:25:58\n  46098 MainThread         01:25:58\n  46099 MainThread         01:25:58\n  46124 MainThread         01:25:58\n  46170 MainThread         01:25:57\n  46228 MainThread         01:25:56\n  46257 copilot-runtime    01:25:55\n  46353 codex              01:25:49\n  46445 MainThread         01:25:41\n  46556 codex-code-mode    01:24:14\n  48381 sleep                 01:58\n  48461 codex-linux-san       00:09\n  48464 3                     00:09\n  48465 codex                 00:09\n  48466 bash                  00:09\n  48468 python                00:09\n  48483 bash                  00:02\n  48484 python                00:02\n  48494 ps                    00:00\n",
+    "stderr": ""
+  },
+  "tmux": {
+    "command": [
+      "tmux",
+      "list-sessions"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "no server running on /tmp/tmux-1000/default\n"
+  },
+  "git_head": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "89b6e014891630da865578197396236ef2a49140\n",
+    "stderr": ""
+  },
+  "git_status": {
+    "command": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "exit_code": 0,
+    "stdout": " M road_dil/checkpoints.py\n M road_dil/config.py\n M road_dil/data.py\n M road_dil/hooks.py\n M tools/road/extract_data.py\n M tools/road/run.py\n?? STEP5_FIVE_DOMAIN_SEEDS_REMOTE_TASK_20261111.md\n?? tools/road/prepare_five_data.py\n",
+    "stderr": ""
+  },
+  "pretrained": {
+    "path": "checkpoints/pretrained/resnet101_v1c-e67eebb6.pth",
+    "sha256": "e67eebb62faab570c7c2268f93f5b68db2cd1730d5397923f34b39820c691d64"
+  },
+  "cuda_kernel_checks": {
+    "matmul_finite": true,
+    "mmcv_roi_align_finite": true
+  }
+}

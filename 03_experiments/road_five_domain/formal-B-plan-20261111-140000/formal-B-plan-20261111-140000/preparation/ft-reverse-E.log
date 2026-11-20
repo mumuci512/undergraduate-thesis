@@ -1,0 +1,456 @@
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/models/builder.py:36: UserWarning: ``build_loss`` would be deprecated soon, please use ``mmseg.registry.MODELS.build()`` 
+  warnings.warn('``build_loss`` would be deprecated soon, please use '
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/models/losses/cross_entropy_loss.py:249: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+11/11 14:08:59 - mmengine - [4m[37mINFO[0m - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.20 (default, Oct  3 2024, 15:24:27) [GCC 11.2.0]
+    CUDA available: True
+    numpy_random_seed: 0
+    GPU 0: NVIDIA GeForce RTX 3080
+    CUDA_HOME: None
+    GCC: gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+    PyTorch: 1.9.1+cu111
+    PyTorch compiling details: PyTorch built with:
+  - GCC 7.3
+  - C++ Version: 201402
+  - Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191122 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v2.1.2 (Git Hash 98be7e8afa711dc9b66c8ff3504129cb82013cdb)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.1
+  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86
+  - CuDNN 8.0.5
+  - Magma 2.5.2
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.1, CUDNN_VERSION=8.0.5, CXX_COMPILER=/opt/rh/devtoolset-7/root/usr/bin/c++, CXX_FLAGS= -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function -Wno-unused-result -Wno-unused-local-typedefs -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.9.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, 
+
+    TorchVision: 0.10.1+cu111
+    OpenCV: 4.8.0
+    MMEngine: 0.8.2
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 0
+    deterministic: True
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+11/11 14:09:00 - mmengine - [4m[37mINFO[0m - Config:
+default_scope = 'mmseg'
+custom_imports = dict(imports=[
+    'road_dil',
+])
+model = dict(
+    type='EncoderDecoder',
+    data_preprocessor=dict(
+        type='SegDataPreProcessor',
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        bgr_to_rgb=True,
+        size=(
+            512,
+            512,
+        ),
+        pad_val=0,
+        seg_pad_val=255,
+        test_cfg=dict(size_divisor=32)),
+    pretrained=None,
+    backbone=dict(
+        type='ResNetV1c',
+        depth=101,
+        in_channels=3,
+        num_stages=4,
+        base_channels=64,
+        out_indices=(
+            0,
+            1,
+            2,
+            3,
+        ),
+        dilations=(
+            1,
+            1,
+            1,
+            1,
+        ),
+        strides=(
+            1,
+            2,
+            2,
+            2,
+        ),
+        norm_cfg=dict(type='BN', requires_grad=True),
+        norm_eval=False,
+        style='pytorch',
+        contract_dilation=True),
+    decode_head=dict(
+        type='GS_AUFPN_Head',
+        in_channels=[
+            256,
+            512,
+            1024,
+            2048,
+        ],
+        in_index=[
+            0,
+            1,
+            2,
+            3,
+        ],
+        channels=256,
+        dropout_ratio=0.1,
+        num_classes=19,
+        mid_channels=128,
+        N=64,
+        reduction=16,
+        kernel_size=3,
+        norm_cfg=dict(type='BN', requires_grad=True),
+        align_corners=False,
+        loss_decode=dict(
+            type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0)),
+    auxiliary_head=None,
+    train_cfg=dict(),
+    test_cfg=dict(mode='slide', crop_size=(
+        512,
+        512,
+    ), stride=(
+        341,
+        341,
+    )))
+train_dataloader = dict(
+    batch_size=2,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(type='InfiniteSampler', shuffle=True),
+    dataset=dict(
+        type='RoadManifestDataset',
+        ann_file=
+        '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/E_train_debug.jsonl',
+        data_prefix=dict(img_path='', seg_map_path=''),
+        reduce_zero_label=False,
+        ignore_index=255,
+        test_mode=False,
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadRoadAnnotations'),
+            dict(
+                type='RandomResize',
+                scale=(
+                    2048,
+                    1024,
+                ),
+                ratio_range=(
+                    0.5,
+                    2.0,
+                ),
+                keep_ratio=True),
+            dict(
+                type='RoadTraceCrop',
+                crop_size=(
+                    512,
+                    512,
+                ),
+                cat_max_ratio=0.75),
+            dict(type='RandomFlip', prob=0.5),
+            dict(type='PhotoMetricDistortion'),
+            dict(
+                type='PackSegInputs',
+                meta_keys=(
+                    'img_path',
+                    'seg_map_path',
+                    'ori_shape',
+                    'img_shape',
+                    'pad_shape',
+                    'scale_factor',
+                    'flip',
+                    'flip_direction',
+                    'reduce_zero_label',
+                    'sample_id',
+                    'crop_bbox',
+                    'scale',
+                )),
+        ]))
+val_dataloader = dict(
+    batch_size=1,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(type='DefaultSampler', shuffle=False),
+    dataset=dict(
+        type='RoadManifestDataset',
+        ann_file=
+        '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/E_val_debug.jsonl',
+        data_prefix=dict(img_path='', seg_map_path=''),
+        reduce_zero_label=False,
+        ignore_index=255,
+        test_mode=True,
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadRoadAnnotations'),
+            dict(type='PackSegInputs'),
+        ]))
+test_dataloader = dict(
+    batch_size=1,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(type='DefaultSampler', shuffle=False),
+    dataset=dict(
+        type='RoadManifestDataset',
+        ann_file=
+        '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/A_val_debug.jsonl',
+        data_prefix=dict(img_path='', seg_map_path=''),
+        reduce_zero_label=False,
+        ignore_index=255,
+        test_mode=True,
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadRoadAnnotations'),
+            dict(type='PackSegInputs'),
+        ]))
+val_evaluator = [
+    dict(type='IoUMetric', iou_metrics=[
+        'mIoU',
+    ]),
+    dict(type='RoadConfusionMetric'),
+]
+test_evaluator = [
+    dict(type='IoUMetric', iou_metrics=[
+        'mIoU',
+    ]),
+    dict(type='RoadConfusionMetric'),
+]
+train_cfg = dict(type='IterBasedTrainLoop', max_iters=4, val_interval=2)
+val_cfg = dict(type='ValLoop')
+test_cfg = dict(type='TestLoop')
+optim_wrapper = dict(
+    type='OptimWrapper',
+    optimizer=dict(
+        type='AdamW', lr=1e-05, betas=(
+            0.9,
+            0.999,
+        ), weight_decay=0.001),
+    clip_grad=None)
+param_scheduler = [
+    dict(
+        type='PolyLR', eta_min=0.0, power=0.9, begin=0, end=4, by_epoch=False),
+]
+default_hooks = dict(
+    timer=dict(type='IterTimerHook'),
+    logger=dict(type='LoggerHook', interval=1, log_metric_by_epoch=False),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    checkpoint=dict(
+        type='CheckpointHook',
+        by_epoch=False,
+        interval=2,
+        save_last=True,
+        max_keep_ckpts=-1),
+    sampler_seed=dict(type='DistSamplerSeedHook'))
+custom_hooks = [
+    dict(type='RoadAuditHook', check_all_gradients=True),
+    dict(type='RoadRNGTraceHook'),
+]
+env_cfg = dict(
+    cudnn_benchmark=False,
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0),
+    dist_cfg=dict(backend='nccl'))
+visualizer = dict(
+    type='SegLocalVisualizer',
+    vis_backends=[
+        dict(type='LocalVisBackend'),
+    ],
+    name='visualizer')
+log_processor = dict(by_epoch=False)
+log_level = 'INFO'
+randomness = dict(seed=0, deterministic=True)
+load_from = '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/conversion/source-seed0-E/ft_init.pth'
+resume = False
+work_dir = '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-reverse-E'
+road_checkpoint_meta = dict(
+    road_domain='E',
+    road_stage='ft',
+    road_run=
+    '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-reverse-E',
+    road_seed=0,
+    road_order='AEDCB',
+    parent_sha256=
+    'a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93',
+    parent_domain='A',
+    parent_checkpoint=
+    '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source/iter_60000.pth',
+    parent_run=
+    '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source',
+    initialization_only=False)
+
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/models/builder.py:36: UserWarning: ``build_loss`` would be deprecated soon, please use ``mmseg.registry.MODELS.build()`` 
+  warnings.warn('``build_loss`` would be deprecated soon, please use '
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/models/losses/cross_entropy_loss.py:249: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+11/11 14:09:09 - mmengine - [4m[37mINFO[0m - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+11/11 14:09:09 - mmengine - [4m[37mINFO[0m - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) RoadAuditHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) RoadAuditHook                      
+(NORMAL      ) RoadRNGTraceHook                   
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) RoadAuditHook                      
+(NORMAL      ) RoadRNGTraceHook                   
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+before_save_checkpoint:
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+after_train:
+(NORMAL      ) RoadAuditHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+11/11 14:09:07 - mmengine - [5m[4m[33mWARNING[0m - The prefix is not set in metric class IoUMetric.
+11/11 14:09:07 - mmengine - [5m[4m[33mWARNING[0m - The prefix is not set in metric class RoadConfusionMetric.
+Loads checkpoint by local backend from path: /home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/conversion/source-seed0-E/ft_init.pth
+11/11 14:09:09 - mmengine - [4m[37mINFO[0m - Load checkpoint from /home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/conversion/source-seed0-E/ft_init.pth
+11/11 14:09:09 - mmengine - [5m[4m[33mWARNING[0m - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+11/11 14:09:09 - mmengine - [5m[4m[33mWARNING[0m - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+11/11 14:09:09 - mmengine - [4m[37mINFO[0m - Checkpoints will be saved to /home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-reverse-E.
+11/11 14:09:09 - mmengine - [4m[37mINFO[0m - Iter(train) [1/4]  lr: 1.0000e-05  eta: 0:00:01  time: 0.3683  data_time: 0.0050  memory: 1874  loss: 1.7687  decode.loss_ce: 1.7687  decode.acc_seg: 56.8538
+11/11 14:09:09 - mmengine - [4m[37mINFO[0m - Exp name: 20261111_140859
+11/11 14:09:09 - mmengine - [4m[37mINFO[0m - Iter(train) [2/4]  lr: 6.9425e-06  eta: 0:00:00  time: 0.2814  data_time: 0.0069  memory: 2435  loss: 2.3005  decode.loss_ce: 2.3005  decode.acc_seg: 26.8740
+11/11 14:09:09 - mmengine - [4m[37mINFO[0m - Saving checkpoint at 2 iterations
+11/11 14:09:14 - mmengine - [4m[37mINFO[0m - Iter(val) [1/2]    eta: 0:00:00  time: 0.8637  data_time: 0.2476  memory: 1111  
+11/11 14:09:14 - mmengine - [4m[37mINFO[0m - Iter(val) [2/2]    eta: 0:00:00  time: 0.6799  data_time: 0.1295  memory: 1111  
+11/11 14:09:14 - mmengine - [4m[37mINFO[0m - per class results:
+11/11 14:09:14 - mmengine - [4m[37mINFO[0m - 
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 49.59 | 53.78 |
+|    sidewalk   |  0.0  |  0.0  |
+|    building   | 11.25 | 65.39 |
+|      wall     |  0.0  |  0.0  |
+|     fence     |  1.98 |  7.07 |
+|      pole     |  2.57 |  2.57 |
+| traffic light |  0.0  |  nan  |
+|  traffic sign |  5.24 |  5.95 |
+|   vegetation  | 46.43 | 56.67 |
+|    terrain    |  7.17 | 17.35 |
+|      sky      |  0.0  |  0.0  |
+|     person    |  0.0  |  nan  |
+|     rider     |  nan  |  nan  |
+|      car      |  0.0  |  0.0  |
+|     truck     |  0.0  |  nan  |
+|      bus      |  nan  |  nan  |
+|     train     |  nan  |  nan  |
+|   motorcycle  |  nan  |  nan  |
+|    bicycle    |  0.0  |  nan  |
++---------------+-------+-------+
+11/11 14:09:14 - mmengine - [4m[37mINFO[0m - Iter(val) [2/2]    aAcc: 40.9000  mIoU: 8.2800  mAcc: 18.9800  matrix_mIoU: 8.2800  data_time: 0.1295  time: 0.6799
+11/11 14:09:14 - mmengine - [4m[37mINFO[0m - Iter(train) [3/4]  lr: 3.7204e-06  eta: 0:00:00  time: 0.2585  data_time: 0.0105  memory: 2435  loss: 2.1761  decode.loss_ce: 2.1761  decode.acc_seg: 44.3199
+11/11 14:09:14 - mmengine - [4m[37mINFO[0m - Iter(train) [4/4]  lr: 0.0000e+00  eta: 0:00:00  time: 0.2432  data_time: 0.0101  memory: 2435  loss: 1.9325  decode.loss_ce: 1.9325  decode.acc_seg: 61.9590
+11/11 14:09:14 - mmengine - [4m[37mINFO[0m - Saving checkpoint at 4 iterations
+11/11 14:09:18 - mmengine - [4m[37mINFO[0m - Iter(val) [1/2]    eta: 0:00:00  time: 0.6595  data_time: 0.1043  memory: 1111  
+11/11 14:09:19 - mmengine - [4m[37mINFO[0m - Iter(val) [2/2]    eta: 0:00:00  time: 0.6327  data_time: 0.0812  memory: 1111  
+11/11 14:09:19 - mmengine - [4m[37mINFO[0m - per class results:
+11/11 14:09:19 - mmengine - [4m[37mINFO[0m - 
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 62.25 | 71.11 |
+|    sidewalk   |  0.29 |  0.32 |
+|    building   | 14.39 | 53.56 |
+|      wall     |  0.0  |  0.0  |
+|     fence     |  1.42 |  4.77 |
+|      pole     |  19.7 | 20.53 |
+| traffic light |  0.0  |  nan  |
+|  traffic sign |  4.53 |  4.69 |
+|   vegetation  | 45.14 | 59.13 |
+|    terrain    |  21.3 | 96.26 |
+|      sky      |  0.0  |  0.0  |
+|     person    |  0.0  |  nan  |
+|     rider     |  nan  |  nan  |
+|      car      |  5.19 |  5.2  |
+|     truck     |  0.0  |  nan  |
+|      bus      |  0.0  |  nan  |
+|     train     |  nan  |  nan  |
+|   motorcycle  |  nan  |  nan  |
+|    bicycle    |  0.0  |  nan  |
++---------------+-------+-------+
+11/11 14:09:19 - mmengine - [4m[37mINFO[0m - Iter(val) [2/2]    aAcc: 48.0400  mIoU: 10.8900  mAcc: 28.6900  matrix_mIoU: 10.8900  data_time: 0.0257  time: 0.5556

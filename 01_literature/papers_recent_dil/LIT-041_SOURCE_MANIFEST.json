@@ -1,0 +1,117 @@
+{
+  "checked_date": "2026-11-03",
+  "sources": [
+    {
+      "id": "LIT-041",
+      "file": "LIT-041_Zhang_2022_RCIL_CVPR.pdf",
+      "role": "paper",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Zhang_Representation_Compensation_Networks_for_Continual_Semantic_Segmentation_CVPR_2022_paper.pdf",
+      "version": "CVPR 2022 CVF accepted open-access version",
+      "downloaded_date": "2026-11-03",
+      "pages": 12,
+      "bytes": 2634373,
+      "sha256": "6c106c32b87c5ac53e4c75498c78b420b67502b8b9c84bea01f886b3ca0b4ff4"
+    },
+    {
+      "id": "LIT-041",
+      "file": "LIT-041_Zhang_2022_RCIL_CVPR_supplement.pdf",
+      "role": "supplement",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2022/supplemental/Zhang_Representation_Compensation_Networks_CVPR_2022_supplemental.pdf",
+      "version": "CVPR 2022 CVF accepted open-access version",
+      "downloaded_date": "2026-11-03",
+      "pages": 5,
+      "bytes": 504009,
+      "sha256": "7b54d0fa0c5f05a77371b7bef97a1a3880b22b61ae43424939c805e62eea4202"
+    }
+  ],
+  "official_page": "https://openaccess.thecvf.com/content/CVPR2022/html/Zhang_Representation_Compensation_Networks_for_Continual_Semantic_Segmentation_CVPR_2022_paper.html",
+  "arxiv_record": "https://arxiv.org/abs/2203.05402",
+  "code_repository": "https://github.com/zhangchbin/RCIL",
+  "code_commit": "b9aad58973c8f0fa63fea2b55d4477dfa05e1202",
+  "code_scope": "Static source review only; no author-code execution, environment installation, model loading, dataset acquisition, training or reproduction",
+  "code_files": [
+    {
+      "path": "README.md",
+      "sha256": "df2d49fc1f94cc13ad8e28549c43a6adf079839602ce3e4dc9bff2e1aa74e5a2",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/README.md"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "7936a93b32106299ce919d428b8676de6a444d4dd53105b70f138d9cf51c20ff",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/LICENSE"
+    },
+    {
+      "path": "environment.yaml",
+      "sha256": "bad73c705f7e21c7a60f8386c3d8283d630d78c7b4baf8fb67d4472b338d2a22",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/environment.yaml"
+    },
+    {
+      "path": "argparser.py",
+      "sha256": "b0fcd394d6bf035c1e585da071f55157d0079b2b1b55d0ee7586fbf910f27ac0",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/argparser.py"
+    },
+    {
+      "path": "run.py",
+      "sha256": "e2dfded99cb4b7b36b664b88289931e568844cf1037e0ffc0c695de2d3ec7bd4",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/run.py"
+    },
+    {
+      "path": "train.py",
+      "sha256": "299e0a72ea2645b1166c5b7daa6461818dc58be1254a24a5b83cd44313960d97",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/train.py"
+    },
+    {
+      "path": "tasks.py",
+      "sha256": "5a1effec64ed4b77eb5a26f3c42659a5b3967c9d96eab2b30514555831571448",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/tasks.py"
+    },
+    {
+      "path": "segmentation_module.py",
+      "sha256": "8c6b2ac97c32989fc54f7d58b144817fdd9dfb1cd8000f0a426e6cbc007a675f",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/segmentation_module.py"
+    },
+    {
+      "path": "dataset/cityscapes_domain.py",
+      "sha256": "43b4708cbb8af4fdf2f3187004490ae14645b57b9fb31d1bda874fbb001ae722",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/dataset/cityscapes_domain.py"
+    },
+    {
+      "path": "modules/residual.py",
+      "sha256": "ab7e3988253926dde9a6de0146b1874c981f3c0a2f31c0cfd5917bae77d82d36",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/modules/residual.py"
+    },
+    {
+      "path": "modules/deeplab.py",
+      "sha256": "30733f5afb1e3d8f8ce339fd1d6be8d626cc4c3dc13c079f10d8c280c3757b38",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/modules/deeplab.py"
+    },
+    {
+      "path": "models/resnet.py",
+      "sha256": "34ad94b3bbf791d64ef2e93fa94f29fde558902f689fd4d7f32fdfbc70ded15b",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/models/resnet.py"
+    },
+    {
+      "path": "metrics/stream_metrics.py",
+      "sha256": "adcffc3f08e0358c56b0e608a27701040aa892fa97da702758fee9189c31ca0d",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/metrics/stream_metrics.py"
+    },
+    {
+      "path": "scripts/cityscapesDomain/RCIL_cityscapes_11-5.sh",
+      "sha256": "07e09aea8ba78bd32f808e7aaf510bf11a170083af8a82659743f1f2d325b3a4",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/scripts/cityscapesDomain/RCIL_cityscapes_11-5.sh"
+    },
+    {
+      "path": "scripts/cityscapesDomain/RCIL_cityscapes_11-1.sh",
+      "sha256": "4df1fc260eab9884a7d81e5d33331a4f752da2611723cb5e96dc74e5560bdf5d",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/scripts/cityscapesDomain/RCIL_cityscapes_11-1.sh"
+    },
+    {
+      "path": "scripts/cityscapesDomain/RCIL_cityscapes_1-1.sh",
+      "sha256": "73c4a5eec644da04abd5bdd69978cbdc8192e53e1e9a67e0ca962cf1f7f56939",
+      "url": "https://github.com/zhangchbin/RCIL/blob/b9aad58973c8f0fa63fea2b55d4477dfa05e1202/scripts/cityscapesDomain/RCIL_cityscapes_1-1.sh"
+    }
+  ],
+  "report": "01_literature/paper_reports/LIT-041_rcil_representation_compensation.docx",
+  "configuration_records": 224,
+  "configuration_record_note": "Includes repeated baselines from different tables; not a count of independent training runs"
+}

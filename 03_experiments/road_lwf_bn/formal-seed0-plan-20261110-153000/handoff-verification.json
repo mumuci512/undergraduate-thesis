@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "archive": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/handoff-reviewed/formal-seed0-plan-20261110-153000-light.tar.gz",
+  "archive_sha256": "c95400c1b1c634ec05dd21d7cc022eef99be475eb99c080d70e8edf65a1ce666",
+  "sha256_file": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/handoff-reviewed/formal-seed0-plan-20261110-153000-light.tar.gz.sha256",
+  "bytes": 14584099,
+  "manifest_files": 332,
+  "unpacked_file_set_exact": true,
+  "unpacked_all_hashes_match": true,
+  "manifest_excludes_only_itself": true,
+  "no_checkpoints_or_raw_data": true,
+  "new_predictions_retained_in_package": 48,
+  "all_full_predictions_remote": true,
+  "numerical_results_identical_to_initial_archive": true,
+  "wording_review": {
+    "scope": "Wording only: replace 最大增加 with 最高三项差值 where third-ranked delta can be negative. All numerical results/configurations/weights/predictions unchanged.",
+    "previous_archive": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/handoff/formal-seed0-plan-20261110-153000-light.tar.gz",
+    "previous_archive_sha256": "95f559583af749124380a1bcb6cbe7fbfae4f3927b6e5a39fe370bd7b6c44587",
+    "reviewed_at": "2026-11-10T17:23:06.490980+08:00"
+  }
+}

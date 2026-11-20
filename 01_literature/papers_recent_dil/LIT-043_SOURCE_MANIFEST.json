@@ -1,0 +1,117 @@
+{
+  "checked_date": "2026-11-03",
+  "sources": [
+    {
+      "id": "LIT-043",
+      "file": "LIT-043_Lemke_2024_ccVAE_arXiv_v1.pdf",
+      "role": "paper",
+      "source_url": "https://arxiv.org/pdf/2407.21216v1",
+      "version": "arXiv:2407.21216v1, 2024-07-30; publisher full-text not accessed",
+      "downloaded_date": "2026-11-03",
+      "pages": 13,
+      "bytes": 6524512,
+      "sha256": "f9cce7f3f7feee4397c7c1f24a22ce48df385b3d7b8ae17803f3539d32c808d8"
+    }
+  ],
+  "official_page": "https://link.springer.com/chapter/10.1007/978-3-031-73483-0_7",
+  "publication": {
+    "conference": "PILM 2024 Workshop",
+    "first_online": "2024-10-03",
+    "publisher_citation_year": 2025,
+    "arxiv_first_posted": "2024-07-30",
+    "publisher_full_text_accessed": false
+  },
+  "publisher_bibtex_url": "https://citation-needed.springer.com/v2/references/10.1007/978-3-031-73483-0_7?flavour=citation&format=bibtex",
+  "publisher_bibtex_sha256": "03428f2fdbb60870e8467db14acebd2e114ae2430efcca86b3da0ccbb1f374c8",
+  "code_repository": "https://github.com/MECLabTUDA/Lifelong-nnUNet/tree/cl_vae",
+  "code_commit": "cdbcd51fdf333fd4ad28cda4e854d6d0e0034452",
+  "code_scope": "Bounded static review of training, model and table scripts only; no author-code execution, dataset/model download, installation, training or reproduction",
+  "code_files": [
+    {
+      "path": "README.md",
+      "sha256": "265c8691cb33e63fc12b830e721fd3151ccd34fce855bafccf9822eb4004c45b",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/README.md"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/LICENSE"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "042da04a50c75b252bf04a68c32aeb906d429937ec86722dc18169e403d54619",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/requirements.txt"
+    },
+    {
+      "path": "setup.py",
+      "sha256": "39f60025397f3aba0f1468c9f55118919dae5e41d0e322d215df9bf8eb7ee433",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/setup.py"
+    },
+    {
+      "path": "table_1.py",
+      "sha256": "d56eb5dda5a7d81acce7903b15e767e665b269e3e9046969c3afca86250db74a",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/table_1.py"
+    },
+    {
+      "path": "table_2_and_3.py",
+      "sha256": "a3f9d1f4d7aec1e1dd831476c90e1a133aa34333e9e592b77ff8d25db0945539",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/table_2_and_3.py"
+    },
+    {
+      "path": "table_utils.py",
+      "sha256": "83dc4c60a6db9ced7a6723b7d8c1f70f967912e6a4e9f8e6db404d6aa4d7d946",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/table_utils.py"
+    },
+    {
+      "path": "eval_helper.py",
+      "sha256": "f07027d1feeb251802bcc997c8c6025681c8190981784eb18560b049dd358252",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/eval_helper.py"
+    },
+    {
+      "path": "ood_eval_helper.py",
+      "sha256": "34b1c63a56b79777c919fb6e0a07a19bace290d3c5215ba3e2b3666473a35ed6",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/ood_eval_helper.py"
+    },
+    {
+      "path": "distribution_aware__training.ipynb",
+      "sha256": "f791fa7678b236e1c16582d8cea841d2b4fc11793e49e23d9351c2e62a9110ea",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/distribution_aware__training.ipynb"
+    },
+    {
+      "path": "distribution_aware__evaluation.ipynb",
+      "sha256": "c227bb1ae61044b652428640a8566e455200e3ec21d37e1d44a2104af864fcf3",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/distribution_aware__evaluation.ipynb"
+    },
+    {
+      "path": "nnunet_ext/network_architecture/VAE.py",
+      "sha256": "69f7218cd9a09f7354ea0db49e17c248f28edc38486278e192479edfe6c198f4",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/nnunet_ext/network_architecture/VAE.py"
+    },
+    {
+      "path": "nnunet_ext/network_architecture/generic_UNet_no_skips.py",
+      "sha256": "d540dbc45e5b93b0dccf5b82784f93337e3eadb28b799c5e8965a4a9cd69ecb6",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/nnunet_ext/network_architecture/generic_UNet_no_skips.py"
+    },
+    {
+      "path": "nnunet_ext/training/network_training/vae_rehearsal_base2/nnUNetTrainerVAERehearsalBase2.py",
+      "sha256": "0265bee412123433faabf20a35bb8a6e75a58941ca92a2511a7d3a6a71de71f4",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/nnunet_ext/training/network_training/vae_rehearsal_base2/nnUNetTrainerVAERehearsalBase2.py"
+    },
+    {
+      "path": "nnunet_ext/training/network_training/vae_rehearsal_no_skips_condition_on_both/nnUNetTrainerVAERehearsalNoSkipsConditionOnBoth.py",
+      "sha256": "0472cdbaeff7ed0c236336b5bee372c3a00fba2131ab19f8c3d70f513e9bca40",
+      "url": "https://github.com/MECLabTUDA/Lifelong-nnUNet/blob/cdbcd51fdf333fd4ad28cda4e854d6d0e0034452/nnunet_ext/training/network_training/vae_rehearsal_no_skips_condition_on_both/nnUNetTrainerVAERehearsalNoSkipsConditionOnBoth.py"
+    }
+  ],
+  "report": "01_literature/paper_reports/LIT-043_ccvae_distribution_aware_replay.docx",
+  "unique_experiment_configurations": 28,
+  "key_findings": [
+    "Table 1 uses all cases from trained domains, tables 2 and 3 use accepted-ID Dice with ECE before filtering",
+    "FWT is post-training per-case difference against Sequential at the same stage, not zero-shot forward transfer",
+    "ECE implementation normalizes both case Dice and OoD scores and has a maximum-edge bin omission risk",
+    "Double conditioning and reconstruction detection are not uniformly best, notably at HK",
+    "Training known boundaries and task condition; test reconstruction minimizes over previous identities",
+    "Paper VAE lr decay 0.99 versus code 0.999 with early stopping",
+    "Removing skips and freezing require matched controls; resources not fully reported"
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "reference_sha256": "dd6da7cb80ba9246c4bafe3a232fa02427a5e83d10371ba04edd1c289a5cb327",
+  "candidate_sha256": "03c865815068349e75c033a6b101b4334fe932f25b4c4ab5acaaac2d0aa1a6a4",
+  "checks": [
+    {
+      "check": "page_count",
+      "pass": true,
+      "reference": 3,
+      "candidate": 3
+    },
+    {
+      "check": "page_size",
+      "page": 1,
+      "pass": true
+    },
+    {
+      "check": "visible_text",
+      "page": 1,
+      "pass": true,
+      "reference_characters": 57,
+      "candidate_characters": 57
+    },
+    {
+      "check": "rule_geometry",
+      "page": 1,
+      "pass": true,
+      "reference_rules": 9,
+      "candidate_rules": 9,
+      "maximum_error_bp": 5.684341886080802e-14
+    },
+    {
+      "check": "glyph_origins",
+      "page": 1,
+      "pass": true,
+      "maximum_x_error_bp": 0.00044000000002597517,
+      "maximum_baseline_error_bp": 1.1368683772161603e-13
+    },
+    {
+      "check": "font_sizes",
+      "page": 1,
+      "pass": true,
+      "maximum_error_bp": 0.0
+    },
+    {
+      "check": "font_faces",
+      "page": 1,
+      "pass": true,
+      "differences": []
+    },
+    {
+      "check": "text_colors",
+      "page": 1,
+      "pass": true,
+      "differences": []
+    },
+    {
+      "check": "page_size",
+      "page": 2,
+      "pass": true
+    },
+    {
+      "check": "visible_text",
+      "page": 2,
+      "pass": true,
+      "reference_characters": 259,
+      "candidate_characters": 259
+    },
+    {
+      "check": "rule_geometry",
+      "page": 2,
+      "pass": true,
+      "reference_rules": 0,
+      "candidate_rules": 0,
+      "maximum_error_bp": 0
+    },
+    {
+      "check": "glyph_origins",
+      "page": 2,
+      "pass": true,
+      "maximum_x_error_bp": 0.0003600000000005821,
+      "maximum_baseline_error_bp": 1.1368683772161603e-13
+    },
+    {
+      "check": "font_sizes",
+      "page": 2,
+      "pass": true,
+      "maximum_error_bp": 0.0
+    },
+    {
+      "check": "font_faces",
+      "page": 2,
+      "pass": true,
+      "differences": []
+    },
+    {
+      "check": "text_colors",
+      "page": 2,
+      "pass": true,
+      "differences": []
+    },
+    {
+      "check": "page_size",
+      "page": 3,
+      "pass": true
+    },
+    {
+      "check": "visible_text",
+      "page": 3,
+      "pass": true,
+      "reference_characters": 97,
+      "candidate_characters": 97
+    },
+    {
+      "check": "rule_geometry",
+      "page": 3,
+      "pass": true,
+      "reference_rules": 15,
+      "candidate_rules": 15,
+      "maximum_error_bp": 2.0000000063191692e-05
+    },
+    {
+      "check": "glyph_origins",
+      "page": 3,
+      "pass": true,
+      "maximum_x_error_bp": 5.684341886080802e-14,
+      "maximum_baseline_error_bp": 1.1368683772161603e-13
+    },
+    {
+      "check": "font_sizes",
+      "page": 3,
+      "pass": true,
+      "maximum_error_bp": 0.0
+    },
+    {
+      "check": "font_faces",
+      "page": 3,
+      "pass": true,
+      "differences": []
+    },
+    {
+      "check": "text_colors",
+      "page": 3,
+      "pass": true,
+      "differences": []
+    }
+  ],
+  "all_pass": true
+}

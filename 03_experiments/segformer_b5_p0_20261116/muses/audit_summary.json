@@ -1,0 +1,294 @@
+{
+  "audit_date": "2026-11-16 Asia/Shanghai",
+  "inventory_basis": "Official HTTP ZIP central-directory entries cross-checked against meta.json; four train/val RGB-label pairs separately decoded",
+  "rgb_total": 2500,
+  "labelTrainIds_total": 1750,
+  "label_without_rgb_count": 0,
+  "rgb_trainval_without_label_count": 0,
+  "metadata_total": 2500,
+  "metadata_without_rgb_count": 0,
+  "rgb_without_metadata_count": 0,
+  "duplicate_scene_ids_across_splits": {
+    "train:val": [],
+    "train:test": [],
+    "val:test": []
+  },
+  "shared_recording_sequence_ids_across_splits": {
+    "train:val": [
+      "REC0008",
+      "REC0009",
+      "REC0011",
+      "REC0012",
+      "REC0021",
+      "REC0023",
+      "REC0032",
+      "REC0049",
+      "REC0067",
+      "REC0068",
+      "REC0069",
+      "REC0070",
+      "REC0076",
+      "REC0077",
+      "REC0080",
+      "REC0088",
+      "REC0089",
+      "REC0092",
+      "REC0122",
+      "REC0127",
+      "REC0136",
+      "REC0153",
+      "REC0154",
+      "REC0156",
+      "REC0160",
+      "REC0167",
+      "REC0172",
+      "REC0180",
+      "REC0189",
+      "REC0191",
+      "REC0193",
+      "REC0195",
+      "REC0198",
+      "REC0215",
+      "REC0237",
+      "REC0244"
+    ],
+    "train:test": [
+      "REC0006",
+      "REC0008",
+      "REC0009",
+      "REC0011",
+      "REC0013",
+      "REC0017",
+      "REC0019",
+      "REC0021",
+      "REC0023",
+      "REC0032",
+      "REC0049",
+      "REC0066",
+      "REC0067",
+      "REC0076",
+      "REC0077",
+      "REC0088",
+      "REC0089",
+      "REC0092",
+      "REC0126",
+      "REC0135",
+      "REC0136",
+      "REC0154",
+      "REC0167",
+      "REC0180",
+      "REC0181",
+      "REC0183",
+      "REC0189",
+      "REC0191",
+      "REC0193",
+      "REC0198",
+      "REC0215",
+      "REC0216",
+      "REC0244",
+      "REC0245"
+    ],
+    "val:test": [
+      "REC0008",
+      "REC0009",
+      "REC0011",
+      "REC0021",
+      "REC0023",
+      "REC0032",
+      "REC0049",
+      "REC0067",
+      "REC0076",
+      "REC0077",
+      "REC0088",
+      "REC0089",
+      "REC0092",
+      "REC0136",
+      "REC0154",
+      "REC0167",
+      "REC0180",
+      "REC0189",
+      "REC0191",
+      "REC0193",
+      "REC0198",
+      "REC0211",
+      "REC0215",
+      "REC0233",
+      "REC0244"
+    ]
+  },
+  "counts": [
+    {
+      "split": "train",
+      "time_of_day": "day",
+      "weather": "clear",
+      "rgb_entries": 300,
+      "labelTrainIds_entries": 300
+    },
+    {
+      "split": "train",
+      "time_of_day": "day",
+      "weather": "fog",
+      "rgb_entries": 200,
+      "labelTrainIds_entries": 200
+    },
+    {
+      "split": "train",
+      "time_of_day": "day",
+      "weather": "rain",
+      "rgb_entries": 200,
+      "labelTrainIds_entries": 200
+    },
+    {
+      "split": "train",
+      "time_of_day": "day",
+      "weather": "snow",
+      "rgb_entries": 200,
+      "labelTrainIds_entries": 200
+    },
+    {
+      "split": "train",
+      "time_of_day": "night",
+      "weather": "clear",
+      "rgb_entries": 150,
+      "labelTrainIds_entries": 150
+    },
+    {
+      "split": "train",
+      "time_of_day": "night",
+      "weather": "fog",
+      "rgb_entries": 150,
+      "labelTrainIds_entries": 150
+    },
+    {
+      "split": "train",
+      "time_of_day": "night",
+      "weather": "rain",
+      "rgb_entries": 150,
+      "labelTrainIds_entries": 150
+    },
+    {
+      "split": "train",
+      "time_of_day": "night",
+      "weather": "snow",
+      "rgb_entries": 150,
+      "labelTrainIds_entries": 150
+    },
+    {
+      "split": "val",
+      "time_of_day": "day",
+      "weather": "clear",
+      "rgb_entries": 50,
+      "labelTrainIds_entries": 50
+    },
+    {
+      "split": "val",
+      "time_of_day": "day",
+      "weather": "fog",
+      "rgb_entries": 33,
+      "labelTrainIds_entries": 33
+    },
+    {
+      "split": "val",
+      "time_of_day": "day",
+      "weather": "rain",
+      "rgb_entries": 34,
+      "labelTrainIds_entries": 34
+    },
+    {
+      "split": "val",
+      "time_of_day": "day",
+      "weather": "snow",
+      "rgb_entries": 33,
+      "labelTrainIds_entries": 33
+    },
+    {
+      "split": "val",
+      "time_of_day": "night",
+      "weather": "clear",
+      "rgb_entries": 25,
+      "labelTrainIds_entries": 25
+    },
+    {
+      "split": "val",
+      "time_of_day": "night",
+      "weather": "fog",
+      "rgb_entries": 25,
+      "labelTrainIds_entries": 25
+    },
+    {
+      "split": "val",
+      "time_of_day": "night",
+      "weather": "rain",
+      "rgb_entries": 25,
+      "labelTrainIds_entries": 25
+    },
+    {
+      "split": "val",
+      "time_of_day": "night",
+      "weather": "snow",
+      "rgb_entries": 25,
+      "labelTrainIds_entries": 25
+    },
+    {
+      "split": "test",
+      "time_of_day": "day",
+      "weather": "clear",
+      "rgb_entries": 150,
+      "labelTrainIds_entries": 0
+    },
+    {
+      "split": "test",
+      "time_of_day": "day",
+      "weather": "fog",
+      "rgb_entries": 100,
+      "labelTrainIds_entries": 0
+    },
+    {
+      "split": "test",
+      "time_of_day": "day",
+      "weather": "rain",
+      "rgb_entries": 100,
+      "labelTrainIds_entries": 0
+    },
+    {
+      "split": "test",
+      "time_of_day": "day",
+      "weather": "snow",
+      "rgb_entries": 100,
+      "labelTrainIds_entries": 0
+    },
+    {
+      "split": "test",
+      "time_of_day": "night",
+      "weather": "clear",
+      "rgb_entries": 75,
+      "labelTrainIds_entries": 0
+    },
+    {
+      "split": "test",
+      "time_of_day": "night",
+      "weather": "fog",
+      "rgb_entries": 75,
+      "labelTrainIds_entries": 0
+    },
+    {
+      "split": "test",
+      "time_of_day": "night",
+      "weather": "rain",
+      "rgb_entries": 75,
+      "labelTrainIds_entries": 0
+    },
+    {
+      "split": "test",
+      "time_of_day": "night",
+      "weather": "snow",
+      "rgb_entries": 75,
+      "labelTrainIds_entries": 0
+    }
+  ],
+  "decoded_samples": 8,
+  "limitations": [
+    "Full ZIP-directory presence does not verify all decoded pixels, CRC payload, or label value range; sample verification is separate",
+    "Recording ID overlap alone does not establish geographical leakage; no GPS-distance validation performed"
+  ]
+}

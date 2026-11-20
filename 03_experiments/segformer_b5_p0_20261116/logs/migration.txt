@@ -1,0 +1,22 @@
+VERIFIED_MOVE_SCOPE /home/ysheng4/research/GSMF-RS-DIL/experiments/segformer_b5_p0_20261116 -> /home/ysheng4/research/segformer_b5_p0_20261116
+{
+  "migrated_at": "2026-11-16T13:41:02.716116+00:00",
+  "source": "/home/ysheng4/research/GSMF-RS-DIL/experiments/segformer_b5_p0_20261116",
+  "destination": "/home/ysheng4/research/segformer_b5_p0_20261116",
+  "original_file_count": 48,
+  "all_original_files_byte_identical_after_move": true,
+  "source_removed": true,
+  "original_archive_moved": true,
+  "source_weight_sha256": "87a052ecf2a4913dae3a0561a95a4c6c8f603d84f2706228125f51990b4687e1",
+  "smoke_weight_sha256": "b990a3c81a944e19f1bdbfd7281995756bb63e62e0f183e982d024f9a49531a4",
+  "manifest_pairs_checked": 5497,
+  "dataset_symlinks": {
+    "acdc": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc",
+    "acdc_night_step5_20261111-140000": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_night_step5_20261111-140000",
+    "acdc_rain_step3_20261110-180543": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_rain_step3_20261110-180543",
+    "acdc_snow_step5_20261111-140000": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000",
+    "cityscapes": "/home/ysheng4/research/GSMF-RS-DIL/data/cityscapes"
+  },
+  "preserved_original_evidence": "/home/ysheng4/research/segformer_b5_p0_20261116/provenance",
+  "training_or_evaluation_rerun": false
+}

@@ -1,0 +1,1 @@
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python /home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py eval --stage ft --domain A --checkpoint /home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/ft/iter_4000.pth --work-dir /home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_ft_A

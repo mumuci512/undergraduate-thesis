@@ -1,0 +1,23 @@
+{
+  "train_dataloader": {
+    "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/A_train.jsonl",
+    "sha256": "01ad6b2cf1e87c935c234b214f1d99047bac0936b72bf75659227b60291e14ca",
+    "domain": "A",
+    "split": "train",
+    "records": 2975
+  },
+  "val_dataloader": {
+    "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/A_val.jsonl",
+    "sha256": "249f53ddbebef79fdb9a4a9b852d2216c43274404b3081b47f632cdc742ff9a0",
+    "domain": "A",
+    "split": "val",
+    "records": 500
+  },
+  "test_dataloader": {
+    "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/D_val.jsonl",
+    "sha256": "01c01fbb72e56251d1caf339818296b02df914543bc024ff735ecd38f01534eb",
+    "domain": "D",
+    "split": "val",
+    "records": 100
+  }
+}

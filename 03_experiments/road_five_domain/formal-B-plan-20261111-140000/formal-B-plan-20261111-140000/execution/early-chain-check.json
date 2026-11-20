@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-11-11T21:22:22.933411+08:00",
+  "completed_training": "ft-seed1-B",
+  "steps": 4000,
+  "periodic_checkpoints": [
+    1000,
+    2000,
+    3000,
+    4000
+  ],
+  "parent_checkpoint_sha256": "70414218b7f27c2de7369d0e2d6027710409410b39458c9cca075955655b8cdd",
+  "next_stage": "ft-seed1-C",
+  "next_initialization_sha256": "4c6db6f232d58e09d1da57ac2de65c25cc8166eab2daa9c654d0c9d50e6c4722",
+  "all_698_state_tensors_exactly_inherited": true,
+  "new_optimizer_iter0": true,
+  "seed": 1,
+  "finite_checked_gradients": true,
+  "training_wall_seconds": 850.5726658419999,
+  "next_phase": "Continue authorized B only; C not authorized",
+  "scope": "First formal stage and first same-seed domain transition verified. Overall B not yet complete."
+}

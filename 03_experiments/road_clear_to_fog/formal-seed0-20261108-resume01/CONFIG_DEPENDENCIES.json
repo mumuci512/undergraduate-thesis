@@ -1,0 +1,302 @@
+{
+  "configs": [
+    {
+      "repository_path": "configs/_base_/datasets/ISPRS_DIL_my_dataset_IRRG_512.py",
+      "base_dependencies": [
+        "configs/_base_/datasets/Potsdam_IRRG_512.py",
+        "configs/_base_/datasets/Vaihingen_512.py"
+      ],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/ISPRS_IRRG_512.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/ISPRS_my_dataset_IRRG_512.py",
+      "base_dependencies": [
+        "configs/_base_/datasets/Potsdam_IRRG_512.py",
+        "configs/_base_/datasets/Vaihingen_512.py",
+        "configs/_base_/datasets/ISPRS_IRRG_512.py"
+      ],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/LoveDA_512.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/LoveDA_DIL_my_dataset_512.py",
+      "base_dependencies": [
+        "configs/_base_/datasets/LoveDA_Urban_512.py",
+        "configs/_base_/datasets/LoveDA_Rural_512.py"
+      ],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/LoveDA_Rural_512.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/LoveDA_Rural_my_dataset_512.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/LoveDA_Urban_512.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/LoveDA_Urban_my_dataset_512.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/LoveDA_my_dataset_512.py",
+      "base_dependencies": [
+        "configs/_base_/datasets/LoveDA_Urban_512.py",
+        "configs/_base_/datasets/LoveDA_Rural_512.py",
+        "configs/_base_/datasets/LoveDA_all_512.py"
+      ],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/Potsdam_IRRG_512.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/Vaihingen_512.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/datasets/Vaihingen_my_dataset_512.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/default_runtime_iter.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/models/gs_aufpn_r50-d8.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/models/gsmf_rs_dil_r50-d8.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/schedules/schedule_30k_iter.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/_base_/schedules/schedule_80k_iter.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py",
+      "base_dependencies": [
+        "configs/_base_/models/gs_aufpn_r50-d8.py",
+        "configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py",
+        "configs/_base_/default_runtime_iter.py",
+        "configs/_base_/schedules/schedule_80k_iter.py"
+      ],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py",
+      "base_dependencies": [
+        "_base_/models/gs_aufpn_r50-d8.py",
+        "_base_/datasets/LoveDA_Rural_my_dataset_512.py",
+        "_base_/default_runtime_iter.py",
+        "_base_/schedules/schedule_30k_iter.py"
+      ],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py",
+      "base_dependencies": [
+        "_base_/models/gs_aufpn_r50-d8.py",
+        "_base_/datasets/LoveDA_Urban_my_dataset_512.py",
+        "_base_/default_runtime_iter.py",
+        "_base_/schedules/schedule_30k_iter.py"
+      ],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py",
+      "base_dependencies": [
+        "_base_/models/gs_aufpn_r50-d8.py",
+        "_base_/datasets/Vaihingen_my_dataset_512.py",
+        "_base_/default_runtime_iter.py",
+        "_base_/schedules/schedule_80k_iter.py"
+      ],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py",
+      "base_dependencies": [
+        "configs/_base_/models/gsmf_rs_dil_r50-d8.py",
+        "configs/_base_/datasets/ISPRS_DIL_my_dataset_IRRG_512.py",
+        "configs/_base_/default_runtime_iter.py"
+      ],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/gsmf_rs_dil_r101-d8_4xb4-80k_LoveDA-512x512.py",
+      "base_dependencies": [
+        "_base_/models/gsmf_rs_dil_r50-d8.py",
+        "_base_/datasets/LoveDA_DIL_my_dataset_512.py",
+        "_base_/default_runtime_iter.py"
+      ],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/road/ft_acdc_fog.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/road/gsmf_acdc_fog.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    },
+    {
+      "repository_path": "configs/road/source_cityscapes.py",
+      "base_dependencies": [],
+      "disposition": "Git可恢复",
+      "commit": "315f273929c09ffa991a1f1d6f95e304641386ce"
+    }
+  ],
+  "required_road_closure": [
+    "configs/_base_/datasets/ISPRS_DIL_my_dataset_IRRG_512.py",
+    "configs/_base_/datasets/Potsdam_IRRG_512.py",
+    "configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py",
+    "configs/_base_/datasets/Vaihingen_512.py",
+    "configs/_base_/default_runtime_iter.py",
+    "configs/_base_/models/gs_aufpn_r50-d8.py",
+    "configs/_base_/models/gsmf_rs_dil_r50-d8.py",
+    "configs/_base_/schedules/schedule_80k_iter.py",
+    "configs/gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py",
+    "configs/gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py",
+    "configs/road/ft_acdc_fog.py",
+    "configs/road/gsmf_acdc_fog.py",
+    "configs/road/source_cityscapes.py"
+  ],
+  "required_road_dependencies_status": "PASS",
+  "unused_baseline_missing_dependencies": [
+    {
+      "config": "configs/_base_/datasets/LoveDA_my_dataset_512.py",
+      "missing_base": "configs/_base_/datasets/LoveDA_all_512.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py",
+      "missing_base": "_base_/models/gs_aufpn_r50-d8.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py",
+      "missing_base": "_base_/datasets/LoveDA_Rural_my_dataset_512.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py",
+      "missing_base": "_base_/default_runtime_iter.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py",
+      "missing_base": "_base_/schedules/schedule_30k_iter.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py",
+      "missing_base": "_base_/models/gs_aufpn_r50-d8.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py",
+      "missing_base": "_base_/datasets/LoveDA_Urban_my_dataset_512.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py",
+      "missing_base": "_base_/default_runtime_iter.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py",
+      "missing_base": "_base_/schedules/schedule_30k_iter.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py",
+      "missing_base": "_base_/models/gs_aufpn_r50-d8.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py",
+      "missing_base": "_base_/datasets/Vaihingen_my_dataset_512.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py",
+      "missing_base": "_base_/default_runtime_iter.py"
+    },
+    {
+      "config": "configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py",
+      "missing_base": "_base_/schedules/schedule_80k_iter.py"
+    },
+    {
+      "config": "configs/gsmf_rs_dil_r101-d8_4xb4-80k_LoveDA-512x512.py",
+      "missing_base": "_base_/models/gsmf_rs_dil_r50-d8.py"
+    },
+    {
+      "config": "configs/gsmf_rs_dil_r101-d8_4xb4-80k_LoveDA-512x512.py",
+      "missing_base": "_base_/datasets/LoveDA_DIL_my_dataset_512.py"
+    },
+    {
+      "config": "configs/gsmf_rs_dil_r101-d8_4xb4-80k_LoveDA-512x512.py",
+      "missing_base": "_base_/default_runtime_iter.py"
+    }
+  ],
+  "runtime_bridge": {
+    "path": "gsmf_rs_dil/__init__.py",
+    "Git_commit": "315f273929c09ffa991a1f1d6f95e304641386ce",
+    "training_time_hash": "未核实：当时66文件快照未包含该文件"
+  },
+  "resolved_configs": "runs/<run>/source|ft|gsmf and eval_*/ saved full .py files; original absolute paths retained"
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+    "train",
+    "--stage",
+    "gsmf",
+    "--work-dir",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/gsmf",
+    "--load",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/conversion/gsmf_init.pth"
+  ],
+  "cwd": "/home/ysheng4/research/GSMF-RS-DIL",
+  "stage": "gsmf",
+  "manifests": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data",
+  "audit_sha256": "6d05a2501335f32f00ed40574272614ae71d536addf81c3e186a6c99724b6790",
+  "initialization_sha256": "90ad8f6a2034ab25d1b6e98c200fba769bfa11449a0770523b5bf912031c1f2f",
+  "seed": 0,
+  "debug": false,
+  "synthetic_fixture": false,
+  "optimizer": "fresh"
+}

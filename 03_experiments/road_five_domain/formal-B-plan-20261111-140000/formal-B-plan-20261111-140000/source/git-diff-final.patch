@@ -1,0 +1,23 @@
+diff --git a/REPRO.md b/REPRO.md
+index 5d5f717..f6db4e0 100644
+--- a/REPRO.md
++++ b/REPRO.md
+@@ -1,12 +1,10 @@
+ <!-- ROAD_FIVE_DOMAIN_CURRENT_BEGIN -->
+-## 当前道路工作：第5项阶段A正式实验及轻量交接完成（2026-11-11）
+-
+-- 最新用户范围“暂时先完成阶段A”。阶段A全部完成；B暂缓，C未授权，不自动启动。
+-- 正式目录：`experiments/road_five_domain/formal-A-plan-20261111-140000`；六次各4000步、24份完整周期checkpoint、62新增评价格15878逐图与42旧格指纹复用共104格、独立预测重读/GT直方图/训练与协议复核、图表/预固定样例及轻量包安全解包/全SHA全部通过。实际exit-code.txt=0，completion.json与handoff/handoff-verification.json complete/PASS。
+-- 三方法seed0分别自己的Rain学生→Snow→Night，batch2/crop512/FP32、AdamW1e-5/PolyLR4000，每1000验证/保存，固定iter4000，无val择优。教师/学生完整参数与BN缓冲逐阶段严格继承；GSMF教师参数冻结/训练态BN更新、LwF教师全部状态固定。所有条件仅当前学生推理，参数/缓冲不变，无oracle/TTA/测试更新。
+-- 最终Night后CS/Fog/Rain/Snow/Night（%）：ft 53.2786/57.0810/43.2148/43.7064/38.7919; gsmf 52.9036/59.3877/45.7989/46.3704/38.6739; lwf 42.0937/52.1572/42.9603/42.7344/33.6891。阶段已见域均值只含已学域，未来域提前分数不计入；最终五真实域均值与合成条件单列。具体变化/负遗忘/混淆去向见RESULTS.md与results-index.json所指目录。
+-- 包：`experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/formal-A-plan-20261111-140000-light.tar.gz`，外置同名.sha256，SHA `c09bbf786f0b55cdf8500c8ac691d8e69d69baaeed751b3616d685ac959ba31e`。权重/原图/全量预测留远程。包内预完成STATUS与包外最终完成证据分开，避免自引用。
+-- Snow400/100、Night400/106，A/B/C原清单保持。官方共享视频目录已披露，未独立证明地理/邻帧隔离；仅seed0、不主张稳定显著/纯天气因果/严格未见强度泛化。LwF未搜索超参；CUDA反向非逐位确定，resume不保证RNG/采样游标精确恢复。未重训Source/Fog/Rain seed0、未删除/覆盖旧数据checkpoint，未升级环境。
++## 当前道路工作：第5项阶段B训练/完整评价完成，最终验收修复进行中（2026-11-13）
++
++- 用户原授权阶段B持续有效，唯一目录`experiments/road_five_domain/formal-B-plan-20261111-140000`。16次4000步训练exit0、64周期checkpoint、104新增格26496逐图及逐预测独立矩阵重读PASS，Source8格复用A，正式driver exit-code=0；尚未完成图表/交接，不能标complete。阶段C未授权。
++- 11月12日17:10后处理verify_report_B失败：续训审计错误地期望iter4000 checkpoint中已有第三次验证记录。11月13日实证：iter3000/4000均包含相同两次前缀验证，最后checkpoint在最终验证前保存；实际最终验证由resume hook的44.9844秒记录及11月12日12:37:05的100/100日志证实。已将错误次数假设替换为前缀历史逐值一致+最后验证独立证据，不更改训练源码/模型/损失或训练预算。错误脚本及失败日志保留pre-recovery-20261113-161608，修复依据finalization-repair-*.json。
++- 11月13日16:16起tmux会话road-five-B-finish-20261113执行scripts/finish_B_20261113.py，重新独立验收训练/协议、补做中断时漏掉的iter3000 Snow100张验证、三种子报告/图表/轻量包及实际安全解包全SHA。不重训、不重跑104最终格、不自动重试；全部通过才标complete。实时状态见completion-status.json、STATUS.md与finalization-*.log。
++- Snow seed2-GSMF曾于11月12日00:31后中断，原因未确定；12:33从完整iter3000恢复模型/优化器/PolyLR/iter，3000+1000步loss由MessageHub/原audit核对，原始资料保留。RNG与采样游标未保存，不保证不停机等价；n3只覆盖固定Source下增量随机性，不证明显著或稳定排序。阶段A既有结果保留，未启动C，无删除覆盖旧checkpoint、升级环境或Git提交/推送。
+ <!-- ROAD_FIVE_DOMAIN_CURRENT_END -->
+ 
+ <!-- ROAD_RAIN_CHAIN_CURRENT_BEGIN -->

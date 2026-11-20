@@ -1,0 +1,1771 @@
+2026/11/11 23:39:32 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.20 (default, Oct  3 2024, 15:24:27) [GCC 11.2.0]
+    CUDA available: True
+    numpy_random_seed: 2
+    GPU 0: NVIDIA GeForce RTX 3080
+    CUDA_HOME: None
+    GCC: gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+    PyTorch: 1.9.1+cu111
+    PyTorch compiling details: PyTorch built with:
+  - GCC 7.3
+  - C++ Version: 201402
+  - Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191122 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v2.1.2 (Git Hash 98be7e8afa711dc9b66c8ff3504129cb82013cdb)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.1
+  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86
+  - CuDNN 8.0.5
+  - Magma 2.5.2
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.1, CUDNN_VERSION=8.0.5, CXX_COMPILER=/opt/rh/devtoolset-7/root/usr/bin/c++, CXX_FLAGS= -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function -Wno-unused-result -Wno-unused-local-typedefs -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.9.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, 
+
+    TorchVision: 0.10.1+cu111
+    OpenCV: 4.8.0
+    MMEngine: 0.8.2
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 2
+    deterministic: True
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+2026/11/11 23:39:33 - mmengine - INFO - Config:
+default_scope = 'mmseg'
+custom_imports = dict(imports=[
+    'road_dil',
+])
+model = dict(
+    type='EncoderDecoder',
+    data_preprocessor=dict(
+        type='SegDataPreProcessor',
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        bgr_to_rgb=True,
+        size=(
+            512,
+            512,
+        ),
+        pad_val=0,
+        seg_pad_val=255,
+        test_cfg=dict(size_divisor=32)),
+    pretrained=None,
+    backbone=dict(
+        type='ResNetV1c',
+        depth=101,
+        in_channels=3,
+        num_stages=4,
+        base_channels=64,
+        out_indices=(
+            0,
+            1,
+            2,
+            3,
+        ),
+        dilations=(
+            1,
+            1,
+            1,
+            1,
+        ),
+        strides=(
+            1,
+            2,
+            2,
+            2,
+        ),
+        norm_cfg=dict(type='BN', requires_grad=True),
+        norm_eval=False,
+        style='pytorch',
+        contract_dilation=True),
+    decode_head=dict(
+        type='GS_AUFPN_Head',
+        in_channels=[
+            256,
+            512,
+            1024,
+            2048,
+        ],
+        in_index=[
+            0,
+            1,
+            2,
+            3,
+        ],
+        channels=256,
+        dropout_ratio=0.1,
+        num_classes=19,
+        mid_channels=128,
+        N=64,
+        reduction=16,
+        kernel_size=3,
+        norm_cfg=dict(type='BN', requires_grad=True),
+        align_corners=False,
+        loss_decode=dict(
+            type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0)),
+    auxiliary_head=None,
+    train_cfg=dict(),
+    test_cfg=dict(mode='slide', crop_size=(
+        512,
+        512,
+    ), stride=(
+        341,
+        341,
+    )))
+train_dataloader = dict(
+    batch_size=2,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(type='InfiniteSampler', shuffle=True),
+    dataset=dict(
+        type='RoadManifestDataset',
+        ann_file=
+        '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/E_train.jsonl',
+        data_prefix=dict(img_path='', seg_map_path=''),
+        reduce_zero_label=False,
+        ignore_index=255,
+        test_mode=False,
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadRoadAnnotations'),
+            dict(
+                type='RandomResize',
+                scale=(
+                    2048,
+                    1024,
+                ),
+                ratio_range=(
+                    0.5,
+                    2.0,
+                ),
+                keep_ratio=True),
+            dict(
+                type='RandomCrop', crop_size=(
+                    512,
+                    512,
+                ), cat_max_ratio=0.75),
+            dict(type='RandomFlip', prob=0.5),
+            dict(type='PhotoMetricDistortion'),
+            dict(type='PackSegInputs'),
+        ]))
+val_dataloader = dict(
+    batch_size=1,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(type='DefaultSampler', shuffle=False),
+    dataset=dict(
+        type='RoadManifestDataset',
+        ann_file=
+        '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/E_val.jsonl',
+        data_prefix=dict(img_path='', seg_map_path=''),
+        reduce_zero_label=False,
+        ignore_index=255,
+        test_mode=True,
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadRoadAnnotations'),
+            dict(type='PackSegInputs'),
+        ]))
+test_dataloader = dict(
+    batch_size=1,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(type='DefaultSampler', shuffle=False),
+    dataset=dict(
+        type='RoadManifestDataset',
+        ann_file=
+        '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/A_val.jsonl',
+        data_prefix=dict(img_path='', seg_map_path=''),
+        reduce_zero_label=False,
+        ignore_index=255,
+        test_mode=True,
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadRoadAnnotations'),
+            dict(type='PackSegInputs'),
+        ]))
+val_evaluator = [
+    dict(type='IoUMetric', iou_metrics=[
+        'mIoU',
+    ]),
+    dict(type='RoadConfusionMetric'),
+]
+test_evaluator = [
+    dict(type='IoUMetric', iou_metrics=[
+        'mIoU',
+    ]),
+    dict(type='RoadConfusionMetric'),
+]
+train_cfg = dict(type='IterBasedTrainLoop', max_iters=4000, val_interval=1000)
+val_cfg = dict(type='ValLoop')
+test_cfg = dict(type='TestLoop')
+optim_wrapper = dict(
+    type='OptimWrapper',
+    optimizer=dict(
+        type='AdamW', lr=1e-05, betas=(
+            0.9,
+            0.999,
+        ), weight_decay=0.001),
+    clip_grad=None)
+param_scheduler = [
+    dict(
+        type='PolyLR',
+        eta_min=0.0,
+        power=0.9,
+        begin=0,
+        end=4000,
+        by_epoch=False),
+]
+default_hooks = dict(
+    timer=dict(type='IterTimerHook'),
+    logger=dict(type='LoggerHook', interval=20, log_metric_by_epoch=False),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    checkpoint=dict(
+        type='CheckpointHook',
+        by_epoch=False,
+        interval=1000,
+        save_last=True,
+        max_keep_ckpts=-1),
+    sampler_seed=dict(type='DistSamplerSeedHook'))
+custom_hooks = [
+    dict(type='RoadAuditHook'),
+]
+env_cfg = dict(
+    cudnn_benchmark=False,
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0),
+    dist_cfg=dict(backend='nccl'))
+visualizer = dict(
+    type='SegLocalVisualizer',
+    vis_backends=[
+        dict(type='LocalVisBackend'),
+    ],
+    name='visualizer')
+log_processor = dict(by_epoch=False)
+log_level = 'INFO'
+randomness = dict(seed=2, deterministic=True)
+load_from = '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/initialization/ft-seed2-E/ft_init.pth'
+resume = False
+work_dir = '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/ft-seed2-E'
+road_checkpoint_meta = dict(
+    road_domain='E',
+    road_stage='ft',
+    road_run=
+    '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/ft-seed2-E',
+    road_seed=2,
+    road_order='ABCDE',
+    parent_sha256=
+    'f6bda8271e72ea99db71f9a79499de75d2cc141926e757cc8fdfdf5cf0d9dec0',
+    parent_domain='D',
+    parent_checkpoint=
+    '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/ft-seed2-D/iter_4000.pth',
+    parent_run=
+    '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/ft-seed2-D',
+    initialization_only=False)
+
+2026/11/11 23:39:42 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+2026/11/11 23:39:42 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) RoadAuditHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) RoadAuditHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+before_save_checkpoint:
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+after_train:
+(NORMAL      ) RoadAuditHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+2026/11/11 23:39:43 - mmengine - WARNING - The prefix is not set in metric class IoUMetric.
+2026/11/11 23:39:43 - mmengine - WARNING - The prefix is not set in metric class RoadConfusionMetric.
+Name of parameter - Initialization information
+
+backbone.stem.0.weight - torch.Size([32, 3, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.stem.1.weight - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.stem.1.bias - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.stem.3.weight - torch.Size([32, 32, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.stem.4.weight - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.stem.4.bias - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.stem.6.weight - torch.Size([64, 32, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.stem.7.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.stem.7.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.0.conv1.weight - torch.Size([64, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.0.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.0.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.0.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.0.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.0.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.0.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.0.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer1.0.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.0.downsample.0.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.0.downsample.1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.0.downsample.1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.1.conv1.weight - torch.Size([64, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.1.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.1.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.1.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.1.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.1.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.1.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.1.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer1.1.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.2.conv1.weight - torch.Size([64, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.2.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.2.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.2.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.2.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.2.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer1.2.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.2.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer1.2.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.0.conv1.weight - torch.Size([128, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.0.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.0.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.0.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.0.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.0.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.0.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.0.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer2.0.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.0.downsample.0.weight - torch.Size([512, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.0.downsample.1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.0.downsample.1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.1.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.1.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.1.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.1.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.1.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.1.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.1.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.1.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer2.1.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.2.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.2.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.2.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.2.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.2.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.2.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.2.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.2.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer2.2.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.3.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.3.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.3.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.3.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.3.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.3.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer2.3.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.3.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer2.3.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.0.conv1.weight - torch.Size([256, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.0.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.0.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.0.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.0.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.0.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.0.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.0.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.0.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.0.downsample.0.weight - torch.Size([1024, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.0.downsample.1.weight - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.0.downsample.1.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.1.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.1.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.1.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.1.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.1.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.1.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.1.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.1.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.1.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.2.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.2.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.2.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.2.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.2.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.2.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.2.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.2.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.2.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.3.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.3.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.3.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.3.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.3.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.3.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.3.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.3.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.3.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.4.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.4.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.4.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.4.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.4.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.4.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.4.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.4.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.4.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.5.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.5.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.5.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.5.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.5.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.5.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.5.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.5.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.5.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.6.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.6.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.6.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.6.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.6.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.6.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.6.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.6.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.6.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.7.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.7.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.7.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.7.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.7.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.7.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.7.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.7.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.7.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.8.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.8.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.8.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.8.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.8.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.8.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.8.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.8.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.8.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.9.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.9.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.9.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.9.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.9.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.9.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.9.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.9.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.9.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.10.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.10.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.10.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.10.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.10.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.10.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.10.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.10.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.10.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.11.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.11.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.11.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.11.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.11.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.11.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.11.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.11.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.11.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.12.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.12.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.12.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.12.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.12.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.12.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.12.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.12.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.12.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.13.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.13.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.13.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.13.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.13.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.13.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.13.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.13.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.13.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.14.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.14.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.14.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.14.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.14.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.14.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.14.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.14.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.14.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.15.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.15.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.15.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.15.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.15.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.15.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.15.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.15.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.15.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.16.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.16.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.16.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.16.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.16.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.16.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.16.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.16.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.16.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.17.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.17.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.17.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.17.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.17.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.17.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.17.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.17.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.17.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.18.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.18.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.18.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.18.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.18.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.18.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.18.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.18.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.18.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.19.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.19.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.19.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.19.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.19.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.19.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.19.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.19.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.19.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.20.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.20.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.20.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.20.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.20.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.20.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.20.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.20.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.20.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.21.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.21.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.21.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.21.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.21.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.21.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.21.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.21.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.21.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.22.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.22.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.22.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.22.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.22.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.22.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer3.22.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.22.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.22.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.0.conv1.weight - torch.Size([512, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.0.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.0.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.0.conv2.weight - torch.Size([512, 512, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.0.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.0.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.0.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.0.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer4.0.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.0.downsample.0.weight - torch.Size([2048, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.0.downsample.1.weight - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.0.downsample.1.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.1.conv1.weight - torch.Size([512, 2048, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.1.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.1.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.1.conv2.weight - torch.Size([512, 512, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.1.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.1.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.1.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.1.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer4.1.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.2.conv1.weight - torch.Size([512, 2048, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.2.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.2.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.2.conv2.weight - torch.Size([512, 512, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.2.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.2.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+backbone.layer4.2.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.2.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer4.2.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.conv_seg.weight - torch.Size([19, 256, 1, 1]): 
+NormalInit: mean=0, std=0.01, bias=0 
+
+decode_head.conv_seg.bias - torch.Size([19]): 
+NormalInit: mean=0, std=0.01, bias=0 
+
+decode_head.lateral_convs.0.conv.weight - torch.Size([256, 1024, 1, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.lateral_convs.0.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.lateral_convs.0.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.lateral_convs.1.conv.weight - torch.Size([256, 512, 1, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.lateral_convs.1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.lateral_convs.1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.lateral_convs.2.conv.weight - torch.Size([256, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.lateral_convs.2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.lateral_convs.2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.cam.0.fc.0.weight - torch.Size([16, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.cam.0.fc.2.weight - torch.Size([256, 16, 1, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.cam.1.fc.0.weight - torch.Size([16, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.cam.1.fc.2.weight - torch.Size([256, 16, 1, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.cam.2.fc.0.weight - torch.Size([16, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.cam.2.fc.2.weight - torch.Size([256, 16, 1, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.sam.0.conv.weight - torch.Size([1, 2, 3, 3]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.sam.1.conv.weight - torch.Size([1, 2, 3, 3]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.sam.2.conv.weight - torch.Size([1, 2, 3, 3]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.bottleneck.conv.weight - torch.Size([256, 2048, 3, 3]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head.bottleneck.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.bottleneck.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.phi.conv.weight - torch.Size([128, 256, 1, 1]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head.phi.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.phi.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.theta.conv.weight - torch.Size([64, 256, 1, 1]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head.theta.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.theta.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.gcn.conv1d_1.weight - torch.Size([64, 64, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.gcn.conv1d_1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.gcn.conv1d_2.weight - torch.Size([128, 128, 1]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.gcn.conv1d_2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.blocker.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.blocker.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.phi_inv.conv.weight - torch.Size([256, 128, 1, 1]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head.phi_inv.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+
+decode_head.phi_inv.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of EncoderDecoder  
+2026/11/11 23:39:44 - mmengine - INFO - Load checkpoint from /home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/initialization/ft-seed2-E/ft_init.pth
+2026/11/11 23:39:44 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+2026/11/11 23:39:44 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+2026/11/11 23:39:44 - mmengine - INFO - Checkpoints will be saved to /home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/ft-seed2-E.
+2026/11/11 23:39:47 - mmengine - INFO - Iter(train) [  20/4000]  lr: 9.9572e-06  eta: 0:10:34  time: 0.1417  data_time: 0.0061  memory: 2435  loss: 0.9727  decode.loss_ce: 0.9727  decode.acc_seg: 73.1556
+2026/11/11 23:39:50 - mmengine - INFO - Iter(train) [  40/4000]  lr: 9.9122e-06  eta: 0:09:56  time: 0.1415  data_time: 0.0062  memory: 2435  loss: 1.2114  decode.loss_ce: 1.2114  decode.acc_seg: 72.7306
+2026/11/11 23:39:53 - mmengine - INFO - Iter(train) [  60/4000]  lr: 9.8671e-06  eta: 0:09:41  time: 0.1413  data_time: 0.0061  memory: 2435  loss: 0.7263  decode.loss_ce: 0.7263  decode.acc_seg: 64.9250
+2026/11/11 23:39:56 - mmengine - INFO - Iter(train) [  80/4000]  lr: 9.8220e-06  eta: 0:09:34  time: 0.1430  data_time: 0.0063  memory: 2435  loss: 0.8137  decode.loss_ce: 0.8137  decode.acc_seg: 87.9039
+2026/11/11 23:39:59 - mmengine - INFO - Iter(train) [ 100/4000]  lr: 9.7769e-06  eta: 0:09:28  time: 0.1428  data_time: 0.0063  memory: 2435  loss: 0.9682  decode.loss_ce: 0.9682  decode.acc_seg: 73.0425
+2026/11/11 23:40:02 - mmengine - INFO - Iter(train) [ 120/4000]  lr: 9.7318e-06  eta: 0:09:23  time: 0.1417  data_time: 0.0061  memory: 2435  loss: 0.7300  decode.loss_ce: 0.7300  decode.acc_seg: 78.4648
+2026/11/11 23:40:05 - mmengine - INFO - Iter(train) [ 140/4000]  lr: 9.6866e-06  eta: 0:09:19  time: 0.1413  data_time: 0.0062  memory: 2435  loss: 1.0278  decode.loss_ce: 1.0278  decode.acc_seg: 76.6218
+2026/11/11 23:40:07 - mmengine - INFO - Iter(train) [ 160/4000]  lr: 9.6414e-06  eta: 0:09:15  time: 0.1415  data_time: 0.0062  memory: 2435  loss: 0.9793  decode.loss_ce: 0.9793  decode.acc_seg: 71.0681
+2026/11/11 23:40:10 - mmengine - INFO - Iter(train) [ 180/4000]  lr: 9.5962e-06  eta: 0:09:11  time: 0.1426  data_time: 0.0061  memory: 2435  loss: 0.5471  decode.loss_ce: 0.5471  decode.acc_seg: 73.2759
+2026/11/11 23:40:13 - mmengine - INFO - Exp name: 20261111_233932
+2026/11/11 23:40:13 - mmengine - INFO - Iter(train) [ 200/4000]  lr: 9.5510e-06  eta: 0:09:07  time: 0.1419  data_time: 0.0061  memory: 2435  loss: 0.7934  decode.loss_ce: 0.7934  decode.acc_seg: 78.8745
+2026/11/11 23:40:16 - mmengine - INFO - Iter(train) [ 220/4000]  lr: 9.5057e-06  eta: 0:09:03  time: 0.1403  data_time: 0.0059  memory: 2435  loss: 0.8130  decode.loss_ce: 0.8130  decode.acc_seg: 74.4981
+2026/11/11 23:40:19 - mmengine - INFO - Iter(train) [ 240/4000]  lr: 9.4605e-06  eta: 0:09:00  time: 0.1422  data_time: 0.0063  memory: 2435  loss: 0.9282  decode.loss_ce: 0.9282  decode.acc_seg: 82.7236
+2026/11/11 23:40:22 - mmengine - INFO - Iter(train) [ 260/4000]  lr: 9.4152e-06  eta: 0:08:57  time: 0.1440  data_time: 0.0064  memory: 2435  loss: 0.5975  decode.loss_ce: 0.5975  decode.acc_seg: 75.8590
+2026/11/11 23:40:24 - mmengine - INFO - Iter(train) [ 280/4000]  lr: 9.3698e-06  eta: 0:08:54  time: 0.1422  data_time: 0.0062  memory: 2435  loss: 0.8363  decode.loss_ce: 0.8363  decode.acc_seg: 70.5133
+2026/11/11 23:40:27 - mmengine - INFO - Iter(train) [ 300/4000]  lr: 9.3245e-06  eta: 0:08:51  time: 0.1445  data_time: 0.0060  memory: 2435  loss: 1.0715  decode.loss_ce: 1.0715  decode.acc_seg: 82.7446
+2026/11/11 23:40:30 - mmengine - INFO - Iter(train) [ 320/4000]  lr: 9.2791e-06  eta: 0:08:48  time: 0.1460  data_time: 0.0061  memory: 2435  loss: 0.7798  decode.loss_ce: 0.7798  decode.acc_seg: 45.3706
+2026/11/11 23:40:33 - mmengine - INFO - Iter(train) [ 340/4000]  lr: 9.2337e-06  eta: 0:08:45  time: 0.1438  data_time: 0.0062  memory: 2435  loss: 0.8479  decode.loss_ce: 0.8479  decode.acc_seg: 56.5518
+2026/11/11 23:40:36 - mmengine - INFO - Iter(train) [ 360/4000]  lr: 9.1883e-06  eta: 0:08:42  time: 0.1436  data_time: 0.0062  memory: 2435  loss: 0.6571  decode.loss_ce: 0.6571  decode.acc_seg: 83.7570
+2026/11/11 23:40:39 - mmengine - INFO - Iter(train) [ 380/4000]  lr: 9.1428e-06  eta: 0:08:39  time: 0.1426  data_time: 0.0061  memory: 2435  loss: 0.7533  decode.loss_ce: 0.7533  decode.acc_seg: 90.7905
+2026/11/11 23:40:42 - mmengine - INFO - Iter(train) [ 400/4000]  lr: 9.0974e-06  eta: 0:08:36  time: 0.1440  data_time: 0.0060  memory: 2435  loss: 0.5915  decode.loss_ce: 0.5915  decode.acc_seg: 85.2303
+2026/11/11 23:40:44 - mmengine - INFO - Iter(train) [ 420/4000]  lr: 9.0519e-06  eta: 0:08:33  time: 0.1423  data_time: 0.0063  memory: 2435  loss: 0.7273  decode.loss_ce: 0.7273  decode.acc_seg: 74.3727
+2026/11/11 23:40:47 - mmengine - INFO - Iter(train) [ 440/4000]  lr: 9.0063e-06  eta: 0:08:30  time: 0.1438  data_time: 0.0063  memory: 2435  loss: 0.6920  decode.loss_ce: 0.6920  decode.acc_seg: 64.4515
+2026/11/11 23:40:50 - mmengine - INFO - Iter(train) [ 460/4000]  lr: 8.9608e-06  eta: 0:08:27  time: 0.1429  data_time: 0.0060  memory: 2435  loss: 0.5033  decode.loss_ce: 0.5033  decode.acc_seg: 65.9748
+2026/11/11 23:40:53 - mmengine - INFO - Iter(train) [ 480/4000]  lr: 8.9152e-06  eta: 0:08:24  time: 0.1419  data_time: 0.0060  memory: 2435  loss: 0.6276  decode.loss_ce: 0.6276  decode.acc_seg: 75.0407
+2026/11/11 23:40:56 - mmengine - INFO - Iter(train) [ 500/4000]  lr: 8.8696e-06  eta: 0:08:21  time: 0.1418  data_time: 0.0061  memory: 2435  loss: 0.5807  decode.loss_ce: 0.5807  decode.acc_seg: 87.1949
+2026/11/11 23:40:59 - mmengine - INFO - Iter(train) [ 520/4000]  lr: 8.8240e-06  eta: 0:08:18  time: 0.1418  data_time: 0.0060  memory: 2435  loss: 0.6026  decode.loss_ce: 0.6026  decode.acc_seg: 91.0446
+2026/11/11 23:41:02 - mmengine - INFO - Iter(train) [ 540/4000]  lr: 8.7783e-06  eta: 0:08:15  time: 0.1430  data_time: 0.0064  memory: 2435  loss: 0.6496  decode.loss_ce: 0.6496  decode.acc_seg: 66.4464
+2026/11/11 23:41:04 - mmengine - INFO - Iter(train) [ 560/4000]  lr: 8.7327e-06  eta: 0:08:12  time: 0.1423  data_time: 0.0063  memory: 2435  loss: 0.9807  decode.loss_ce: 0.9807  decode.acc_seg: 77.4909
+2026/11/11 23:41:07 - mmengine - INFO - Iter(train) [ 580/4000]  lr: 8.6869e-06  eta: 0:08:09  time: 0.1439  data_time: 0.0061  memory: 2435  loss: 0.7300  decode.loss_ce: 0.7300  decode.acc_seg: 66.2468
+2026/11/11 23:41:10 - mmengine - INFO - Iter(train) [ 600/4000]  lr: 8.6412e-06  eta: 0:08:06  time: 0.1435  data_time: 0.0060  memory: 2435  loss: 0.9107  decode.loss_ce: 0.9107  decode.acc_seg: 37.1995
+2026/11/11 23:41:13 - mmengine - INFO - Iter(train) [ 620/4000]  lr: 8.5955e-06  eta: 0:08:04  time: 0.1419  data_time: 0.0063  memory: 2435  loss: 0.7904  decode.loss_ce: 0.7904  decode.acc_seg: 55.8764
+2026/11/11 23:41:16 - mmengine - INFO - Iter(train) [ 640/4000]  lr: 8.5497e-06  eta: 0:08:01  time: 0.1485  data_time: 0.0071  memory: 2435  loss: 0.5887  decode.loss_ce: 0.5887  decode.acc_seg: 89.0161
+2026/11/11 23:41:19 - mmengine - INFO - Iter(train) [ 660/4000]  lr: 8.5038e-06  eta: 0:07:58  time: 0.1425  data_time: 0.0063  memory: 2435  loss: 0.6866  decode.loss_ce: 0.6866  decode.acc_seg: 42.2302
+2026/11/11 23:41:22 - mmengine - INFO - Iter(train) [ 680/4000]  lr: 8.4580e-06  eta: 0:07:55  time: 0.1434  data_time: 0.0061  memory: 2435  loss: 0.8204  decode.loss_ce: 0.8204  decode.acc_seg: 73.2575
+2026/11/11 23:41:24 - mmengine - INFO - Iter(train) [ 700/4000]  lr: 8.4121e-06  eta: 0:07:52  time: 0.1413  data_time: 0.0062  memory: 2435  loss: 0.6485  decode.loss_ce: 0.6485  decode.acc_seg: 81.0437
+2026/11/11 23:41:27 - mmengine - INFO - Iter(train) [ 720/4000]  lr: 8.3662e-06  eta: 0:07:49  time: 0.1422  data_time: 0.0061  memory: 2435  loss: 0.7237  decode.loss_ce: 0.7237  decode.acc_seg: 74.9704
+2026/11/11 23:41:30 - mmengine - INFO - Iter(train) [ 740/4000]  lr: 8.3203e-06  eta: 0:07:46  time: 0.1415  data_time: 0.0065  memory: 2435  loss: 0.5660  decode.loss_ce: 0.5660  decode.acc_seg: 85.7622
+2026/11/11 23:41:33 - mmengine - INFO - Iter(train) [ 760/4000]  lr: 8.2744e-06  eta: 0:07:43  time: 0.1454  data_time: 0.0060  memory: 2435  loss: 0.5874  decode.loss_ce: 0.5874  decode.acc_seg: 78.2900
+2026/11/11 23:41:36 - mmengine - INFO - Iter(train) [ 780/4000]  lr: 8.2284e-06  eta: 0:07:40  time: 0.1445  data_time: 0.0065  memory: 2435  loss: 0.5141  decode.loss_ce: 0.5141  decode.acc_seg: 86.5981
+2026/11/11 23:41:39 - mmengine - INFO - Iter(train) [ 800/4000]  lr: 8.1824e-06  eta: 0:07:38  time: 0.1444  data_time: 0.0062  memory: 2435  loss: 0.7488  decode.loss_ce: 0.7488  decode.acc_seg: 73.5970
+2026/11/11 23:41:42 - mmengine - INFO - Iter(train) [ 820/4000]  lr: 8.1363e-06  eta: 0:07:35  time: 0.1494  data_time: 0.0064  memory: 2435  loss: 0.5886  decode.loss_ce: 0.5886  decode.acc_seg: 96.5142
+2026/11/11 23:41:45 - mmengine - INFO - Iter(train) [ 840/4000]  lr: 8.0903e-06  eta: 0:07:32  time: 0.1428  data_time: 0.0062  memory: 2435  loss: 0.5933  decode.loss_ce: 0.5933  decode.acc_seg: 72.9710
+2026/11/11 23:41:47 - mmengine - INFO - Iter(train) [ 860/4000]  lr: 8.0442e-06  eta: 0:07:29  time: 0.1422  data_time: 0.0064  memory: 2435  loss: 0.9289  decode.loss_ce: 0.9289  decode.acc_seg: 83.2441
+2026/11/11 23:41:50 - mmengine - INFO - Iter(train) [ 880/4000]  lr: 7.9980e-06  eta: 0:07:26  time: 0.1424  data_time: 0.0060  memory: 2435  loss: 0.6807  decode.loss_ce: 0.6807  decode.acc_seg: 55.7415
+2026/11/11 23:41:53 - mmengine - INFO - Iter(train) [ 900/4000]  lr: 7.9519e-06  eta: 0:07:24  time: 0.1434  data_time: 0.0063  memory: 2435  loss: 0.6055  decode.loss_ce: 0.6055  decode.acc_seg: 78.5457
+2026/11/11 23:41:56 - mmengine - INFO - Iter(train) [ 920/4000]  lr: 7.9057e-06  eta: 0:07:21  time: 0.1438  data_time: 0.0063  memory: 2435  loss: 0.4848  decode.loss_ce: 0.4848  decode.acc_seg: 80.7787
+2026/11/11 23:41:59 - mmengine - INFO - Iter(train) [ 940/4000]  lr: 7.8595e-06  eta: 0:07:18  time: 0.1443  data_time: 0.0062  memory: 2435  loss: 0.8790  decode.loss_ce: 0.8790  decode.acc_seg: 61.5435
+2026/11/11 23:42:02 - mmengine - INFO - Iter(train) [ 960/4000]  lr: 7.8132e-06  eta: 0:07:15  time: 0.1422  data_time: 0.0062  memory: 2435  loss: 0.7035  decode.loss_ce: 0.7035  decode.acc_seg: 50.2047
+2026/11/11 23:42:05 - mmengine - INFO - Iter(train) [ 980/4000]  lr: 7.7669e-06  eta: 0:07:13  time: 0.1428  data_time: 0.0064  memory: 2435  loss: 0.6218  decode.loss_ce: 0.6218  decode.acc_seg: 90.0770
+2026/11/11 23:42:08 - mmengine - INFO - Exp name: 20261111_233932
+2026/11/11 23:42:08 - mmengine - INFO - Iter(train) [1000/4000]  lr: 7.7206e-06  eta: 0:07:10  time: 0.1440  data_time: 0.0062  memory: 2435  loss: 0.5904  decode.loss_ce: 0.5904  decode.acc_seg: 52.2050
+2026/11/11 23:42:08 - mmengine - INFO - Saving checkpoint at 1000 iterations
+2026/11/11 23:42:20 - mmengine - INFO - Iter(val) [ 20/106]    eta: 0:00:40  time: 0.4526  data_time: 0.0102  memory: 1111  
+2026/11/11 23:42:29 - mmengine - INFO - Iter(val) [ 40/106]    eta: 0:00:31  time: 0.4671  data_time: 0.0103  memory: 1111  
+2026/11/11 23:42:38 - mmengine - INFO - Iter(val) [ 60/106]    eta: 0:00:21  time: 0.4564  data_time: 0.0100  memory: 1111  
+2026/11/11 23:42:48 - mmengine - INFO - Iter(val) [ 80/106]    eta: 0:00:12  time: 0.4558  data_time: 0.0099  memory: 1111  
+2026/11/11 23:42:57 - mmengine - INFO - Iter(val) [100/106]    eta: 0:00:02  time: 0.4574  data_time: 0.0097  memory: 1111  
+2026/11/11 23:43:00 - mmengine - INFO - per class results:
+2026/11/11 23:43:00 - mmengine - INFO - 
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 87.66 |  95.0 |
+|    sidewalk   | 58.46 | 70.06 |
+|    building   | 63.14 | 78.91 |
+|      wall     | 19.87 | 24.62 |
+|     fence     | 29.76 | 57.71 |
+|      pole     | 36.46 | 49.04 |
+| traffic light | 44.83 | 58.16 |
+|  traffic sign | 20.12 | 21.32 |
+|   vegetation  |  57.6 | 78.16 |
+|    terrain    |  0.91 |  0.93 |
+|      sky      | 59.88 | 69.28 |
+|     person    | 24.24 | 25.89 |
+|     rider     |  5.06 |  5.09 |
+|      car      |  50.9 | 76.58 |
+|     truck     |  27.4 | 60.32 |
+|      bus      |  0.0  |  nan  |
+|     train     | 49.15 | 84.69 |
+|   motorcycle  |  5.21 |  5.65 |
+|    bicycle    | 28.65 | 29.72 |
++---------------+-------+-------+
+2026/11/11 23:43:00 - mmengine - INFO - Iter(val) [106/106]    aAcc: 77.3900  mIoU: 35.2300  mAcc: 49.5100  matrix_mIoU: 35.2300  data_time: 0.0118  time: 0.4620
+2026/11/11 23:43:02 - mmengine - INFO - Iter(train) [1020/4000]  lr: 7.6743e-06  eta: 0:07:07  time: 0.1434  data_time: 0.0065  memory: 2435  loss: 0.6873  decode.loss_ce: 0.6873  decode.acc_seg: 86.1427
+2026/11/11 23:43:05 - mmengine - INFO - Iter(train) [1040/4000]  lr: 7.6279e-06  eta: 0:07:04  time: 0.1446  data_time: 0.0064  memory: 2435  loss: 0.6662  decode.loss_ce: 0.6662  decode.acc_seg: 88.6044
+2026/11/11 23:43:08 - mmengine - INFO - Iter(train) [1060/4000]  lr: 7.5815e-06  eta: 0:07:01  time: 0.1449  data_time: 0.0063  memory: 2435  loss: 0.6889  decode.loss_ce: 0.6889  decode.acc_seg: 73.4023
+2026/11/11 23:43:11 - mmengine - INFO - Iter(train) [1080/4000]  lr: 7.5351e-06  eta: 0:06:59  time: 0.1445  data_time: 0.0065  memory: 2435  loss: 0.6112  decode.loss_ce: 0.6112  decode.acc_seg: 39.9548
+2026/11/11 23:43:14 - mmengine - INFO - Iter(train) [1100/4000]  lr: 7.4886e-06  eta: 0:06:56  time: 0.1441  data_time: 0.0063  memory: 2435  loss: 0.4815  decode.loss_ce: 0.4815  decode.acc_seg: 78.9882
+2026/11/11 23:43:17 - mmengine - INFO - Iter(train) [1120/4000]  lr: 7.4421e-06  eta: 0:06:53  time: 0.1448  data_time: 0.0063  memory: 2435  loss: 0.5364  decode.loss_ce: 0.5364  decode.acc_seg: 83.2508
+2026/11/11 23:43:20 - mmengine - INFO - Iter(train) [1140/4000]  lr: 7.3956e-06  eta: 0:06:50  time: 0.1441  data_time: 0.0066  memory: 2435  loss: 0.8034  decode.loss_ce: 0.8034  decode.acc_seg: 41.9616
+2026/11/11 23:43:23 - mmengine - INFO - Iter(train) [1160/4000]  lr: 7.3490e-06  eta: 0:06:47  time: 0.1446  data_time: 0.0064  memory: 2435  loss: 0.5177  decode.loss_ce: 0.5177  decode.acc_seg: 56.1402
+2026/11/11 23:43:25 - mmengine - INFO - Iter(train) [1180/4000]  lr: 7.3024e-06  eta: 0:06:44  time: 0.1440  data_time: 0.0063  memory: 2435  loss: 0.7991  decode.loss_ce: 0.7991  decode.acc_seg: 87.8826
+2026/11/11 23:43:28 - mmengine - INFO - Iter(train) [1200/4000]  lr: 7.2558e-06  eta: 0:06:41  time: 0.1437  data_time: 0.0064  memory: 2435  loss: 0.4859  decode.loss_ce: 0.4859  decode.acc_seg: 89.9727
+2026/11/11 23:43:31 - mmengine - INFO - Iter(train) [1220/4000]  lr: 7.2091e-06  eta: 0:06:39  time: 0.1464  data_time: 0.0068  memory: 2435  loss: 0.5366  decode.loss_ce: 0.5366  decode.acc_seg: 95.1888
+2026/11/11 23:43:34 - mmengine - INFO - Iter(train) [1240/4000]  lr: 7.1625e-06  eta: 0:06:36  time: 0.1440  data_time: 0.0063  memory: 2435  loss: 0.5695  decode.loss_ce: 0.5695  decode.acc_seg: 89.3667
+2026/11/11 23:43:37 - mmengine - INFO - Iter(train) [1260/4000]  lr: 7.1157e-06  eta: 0:06:33  time: 0.1451  data_time: 0.0065  memory: 2435  loss: 0.7900  decode.loss_ce: 0.7900  decode.acc_seg: 34.5693
+2026/11/11 23:43:40 - mmengine - INFO - Iter(train) [1280/4000]  lr: 7.0690e-06  eta: 0:06:30  time: 0.1442  data_time: 0.0064  memory: 2435  loss: 0.5871  decode.loss_ce: 0.5871  decode.acc_seg: 82.1762
+2026/11/11 23:43:43 - mmengine - INFO - Iter(train) [1300/4000]  lr: 7.0222e-06  eta: 0:06:27  time: 0.1453  data_time: 0.0066  memory: 2435  loss: 0.6049  decode.loss_ce: 0.6049  decode.acc_seg: 90.7350
+2026/11/11 23:43:46 - mmengine - INFO - Iter(train) [1320/4000]  lr: 6.9753e-06  eta: 0:06:24  time: 0.1428  data_time: 0.0064  memory: 2435  loss: 0.7358  decode.loss_ce: 0.7358  decode.acc_seg: 80.2412
+2026/11/11 23:43:49 - mmengine - INFO - Iter(train) [1340/4000]  lr: 6.9285e-06  eta: 0:06:21  time: 0.1435  data_time: 0.0064  memory: 2435  loss: 0.7127  decode.loss_ce: 0.7127  decode.acc_seg: 78.2905
+2026/11/11 23:43:51 - mmengine - INFO - Iter(train) [1360/4000]  lr: 6.8816e-06  eta: 0:06:19  time: 0.1445  data_time: 0.0064  memory: 2435  loss: 0.5624  decode.loss_ce: 0.5624  decode.acc_seg: 65.5417
+2026/11/11 23:43:54 - mmengine - INFO - Iter(train) [1380/4000]  lr: 6.8346e-06  eta: 0:06:16  time: 0.1437  data_time: 0.0065  memory: 2435  loss: 0.6624  decode.loss_ce: 0.6624  decode.acc_seg: 81.4554
+2026/11/11 23:43:57 - mmengine - INFO - Iter(train) [1400/4000]  lr: 6.7877e-06  eta: 0:06:13  time: 0.1437  data_time: 0.0065  memory: 2435  loss: 0.9213  decode.loss_ce: 0.9213  decode.acc_seg: 84.3609
+2026/11/11 23:44:00 - mmengine - INFO - Iter(train) [1420/4000]  lr: 6.7406e-06  eta: 0:06:10  time: 0.1447  data_time: 0.0063  memory: 2435  loss: 0.5513  decode.loss_ce: 0.5513  decode.acc_seg: 90.7705
+2026/11/11 23:44:03 - mmengine - INFO - Iter(train) [1440/4000]  lr: 6.6936e-06  eta: 0:06:07  time: 0.1437  data_time: 0.0066  memory: 2435  loss: 0.4180  decode.loss_ce: 0.4180  decode.acc_seg: 68.4164
+2026/11/11 23:44:06 - mmengine - INFO - Iter(train) [1460/4000]  lr: 6.6465e-06  eta: 0:06:04  time: 0.1445  data_time: 0.0066  memory: 2435  loss: 0.6134  decode.loss_ce: 0.6134  decode.acc_seg: 51.8693
+2026/11/11 23:44:09 - mmengine - INFO - Iter(train) [1480/4000]  lr: 6.5994e-06  eta: 0:06:02  time: 0.1434  data_time: 0.0067  memory: 2435  loss: 0.6145  decode.loss_ce: 0.6145  decode.acc_seg: 88.9793
+2026/11/11 23:44:12 - mmengine - INFO - Iter(train) [1500/4000]  lr: 6.5522e-06  eta: 0:05:59  time: 0.1445  data_time: 0.0065  memory: 2435  loss: 0.6755  decode.loss_ce: 0.6755  decode.acc_seg: 85.9654
+2026/11/11 23:44:15 - mmengine - INFO - Iter(train) [1520/4000]  lr: 6.5050e-06  eta: 0:05:56  time: 0.1458  data_time: 0.0068  memory: 2435  loss: 0.7617  decode.loss_ce: 0.7617  decode.acc_seg: 89.7433
+2026/11/11 23:44:18 - mmengine - INFO - Iter(train) [1540/4000]  lr: 6.4578e-06  eta: 0:05:53  time: 0.1440  data_time: 0.0063  memory: 2435  loss: 0.3710  decode.loss_ce: 0.3710  decode.acc_seg: 86.1094
+2026/11/11 23:44:20 - mmengine - INFO - Iter(train) [1560/4000]  lr: 6.4105e-06  eta: 0:05:50  time: 0.1437  data_time: 0.0069  memory: 2435  loss: 0.5250  decode.loss_ce: 0.5250  decode.acc_seg: 76.5291
+2026/11/11 23:44:23 - mmengine - INFO - Iter(train) [1580/4000]  lr: 6.3632e-06  eta: 0:05:48  time: 0.1434  data_time: 0.0064  memory: 2435  loss: 0.6358  decode.loss_ce: 0.6358  decode.acc_seg: 84.3922
+2026/11/11 23:44:26 - mmengine - INFO - Iter(train) [1600/4000]  lr: 6.3159e-06  eta: 0:05:45  time: 0.1448  data_time: 0.0064  memory: 2435  loss: 0.4807  decode.loss_ce: 0.4807  decode.acc_seg: 90.7612
+2026/11/11 23:44:29 - mmengine - INFO - Iter(train) [1620/4000]  lr: 6.2685e-06  eta: 0:05:42  time: 0.1440  data_time: 0.0066  memory: 2435  loss: 0.5180  decode.loss_ce: 0.5180  decode.acc_seg: 82.7841
+2026/11/11 23:44:32 - mmengine - INFO - Iter(train) [1640/4000]  lr: 6.2211e-06  eta: 0:05:39  time: 0.1483  data_time: 0.0067  memory: 2435  loss: 0.5334  decode.loss_ce: 0.5334  decode.acc_seg: 83.7373
+2026/11/11 23:44:35 - mmengine - INFO - Iter(train) [1660/4000]  lr: 6.1736e-06  eta: 0:05:36  time: 0.1442  data_time: 0.0065  memory: 2435  loss: 0.6877  decode.loss_ce: 0.6877  decode.acc_seg: 81.3237
+2026/11/11 23:44:38 - mmengine - INFO - Iter(train) [1680/4000]  lr: 6.1261e-06  eta: 0:05:33  time: 0.1438  data_time: 0.0064  memory: 2435  loss: 0.4872  decode.loss_ce: 0.4872  decode.acc_seg: 73.1610
+2026/11/11 23:44:41 - mmengine - INFO - Iter(train) [1700/4000]  lr: 6.0785e-06  eta: 0:05:30  time: 0.1441  data_time: 0.0065  memory: 2435  loss: 1.0045  decode.loss_ce: 1.0045  decode.acc_seg: 61.8470
+2026/11/11 23:44:44 - mmengine - INFO - Iter(train) [1720/4000]  lr: 6.0309e-06  eta: 0:05:28  time: 0.1462  data_time: 0.0065  memory: 2435  loss: 0.6258  decode.loss_ce: 0.6258  decode.acc_seg: 85.7454
+2026/11/11 23:44:46 - mmengine - INFO - Iter(train) [1740/4000]  lr: 5.9833e-06  eta: 0:05:25  time: 0.1433  data_time: 0.0065  memory: 2435  loss: 0.6394  decode.loss_ce: 0.6394  decode.acc_seg: 60.2870
+2026/11/11 23:44:49 - mmengine - INFO - Iter(train) [1760/4000]  lr: 5.9356e-06  eta: 0:05:22  time: 0.1440  data_time: 0.0068  memory: 2435  loss: 0.5804  decode.loss_ce: 0.5804  decode.acc_seg: 84.8231
+2026/11/11 23:44:52 - mmengine - INFO - Iter(train) [1780/4000]  lr: 5.8879e-06  eta: 0:05:19  time: 0.1436  data_time: 0.0065  memory: 2435  loss: 0.6272  decode.loss_ce: 0.6272  decode.acc_seg: 68.6940
+2026/11/11 23:44:55 - mmengine - INFO - Iter(train) [1800/4000]  lr: 5.8402e-06  eta: 0:05:16  time: 0.1442  data_time: 0.0067  memory: 2435  loss: 0.4920  decode.loss_ce: 0.4920  decode.acc_seg: 89.2739
+2026/11/11 23:44:58 - mmengine - INFO - Iter(train) [1820/4000]  lr: 5.7923e-06  eta: 0:05:13  time: 0.1433  data_time: 0.0067  memory: 2435  loss: 0.5329  decode.loss_ce: 0.5329  decode.acc_seg: 81.9174
+2026/11/11 23:45:01 - mmengine - INFO - Iter(train) [1840/4000]  lr: 5.7445e-06  eta: 0:05:10  time: 0.1453  data_time: 0.0070  memory: 2435  loss: 0.6269  decode.loss_ce: 0.6269  decode.acc_seg: 51.8670
+2026/11/11 23:45:04 - mmengine - INFO - Iter(train) [1860/4000]  lr: 5.6966e-06  eta: 0:05:07  time: 0.1437  data_time: 0.0064  memory: 2435  loss: 0.6444  decode.loss_ce: 0.6444  decode.acc_seg: 86.2743
+2026/11/11 23:45:07 - mmengine - INFO - Iter(train) [1880/4000]  lr: 5.6487e-06  eta: 0:05:05  time: 0.1433  data_time: 0.0065  memory: 2435  loss: 0.4973  decode.loss_ce: 0.4973  decode.acc_seg: 69.3606
+2026/11/11 23:45:10 - mmengine - INFO - Iter(train) [1900/4000]  lr: 5.6007e-06  eta: 0:05:02  time: 0.1493  data_time: 0.0068  memory: 2435  loss: 0.6198  decode.loss_ce: 0.6198  decode.acc_seg: 92.7640
+2026/11/11 23:45:12 - mmengine - INFO - Iter(train) [1920/4000]  lr: 5.5527e-06  eta: 0:04:59  time: 0.1481  data_time: 0.0068  memory: 2435  loss: 0.6657  decode.loss_ce: 0.6657  decode.acc_seg: 72.1828
+2026/11/11 23:45:15 - mmengine - INFO - Iter(train) [1940/4000]  lr: 5.5046e-06  eta: 0:04:56  time: 0.1448  data_time: 0.0066  memory: 2435  loss: 0.6222  decode.loss_ce: 0.6222  decode.acc_seg: 93.8176
+2026/11/11 23:45:18 - mmengine - INFO - Iter(train) [1960/4000]  lr: 5.4565e-06  eta: 0:04:53  time: 0.1433  data_time: 0.0063  memory: 2435  loss: 0.6222  decode.loss_ce: 0.6222  decode.acc_seg: 79.6105
+2026/11/11 23:45:21 - mmengine - INFO - Iter(train) [1980/4000]  lr: 5.4083e-06  eta: 0:04:50  time: 0.1436  data_time: 0.0063  memory: 2435  loss: 0.5010  decode.loss_ce: 0.5010  decode.acc_seg: 83.6351
+2026/11/11 23:45:24 - mmengine - INFO - Exp name: 20261111_233932
+2026/11/11 23:45:24 - mmengine - INFO - Iter(train) [2000/4000]  lr: 5.3601e-06  eta: 0:04:47  time: 0.1442  data_time: 0.0065  memory: 2435  loss: 0.4167  decode.loss_ce: 0.4167  decode.acc_seg: 83.1392
+2026/11/11 23:45:24 - mmengine - INFO - Saving checkpoint at 2000 iterations
+2026/11/11 23:45:36 - mmengine - INFO - Iter(val) [ 20/106]    eta: 0:00:39  time: 0.4557  data_time: 0.0097  memory: 1111  
+2026/11/11 23:45:45 - mmengine - INFO - Iter(val) [ 40/106]    eta: 0:00:30  time: 0.4609  data_time: 0.0100  memory: 1111  
+2026/11/11 23:45:54 - mmengine - INFO - Iter(val) [ 60/106]    eta: 0:00:21  time: 0.4591  data_time: 0.0099  memory: 1111  
+2026/11/11 23:46:03 - mmengine - INFO - Iter(val) [ 80/106]    eta: 0:00:11  time: 0.4514  data_time: 0.0099  memory: 1111  
+2026/11/11 23:46:12 - mmengine - INFO - Iter(val) [100/106]    eta: 0:00:02  time: 0.4638  data_time: 0.0101  memory: 1111  
+2026/11/11 23:46:15 - mmengine - INFO - per class results:
+2026/11/11 23:46:15 - mmengine - INFO - 
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 88.76 | 95.54 |
+|    sidewalk   | 61.36 | 73.99 |
+|    building   | 66.24 | 77.88 |
+|      wall     | 23.48 | 29.65 |
+|     fence     | 36.01 | 57.41 |
+|      pole     | 39.51 | 52.87 |
+| traffic light | 46.59 | 60.37 |
+|  traffic sign |  25.9 | 28.93 |
+|   vegetation  |  60.8 | 79.17 |
+|    terrain    |  1.76 |  1.81 |
+|      sky      |  65.3 | 78.02 |
+|     person    | 32.72 | 37.03 |
+|     rider     |  5.92 |  6.23 |
+|      car      | 40.97 | 79.88 |
+|     truck     | 27.43 |  51.9 |
+|      bus      |  0.0  |  nan  |
+|     train     | 50.99 | 91.52 |
+|   motorcycle  |  5.25 |  5.6  |
+|    bicycle    | 19.54 | 20.22 |
++---------------+-------+-------+
+2026/11/11 23:46:15 - mmengine - INFO - Iter(val) [106/106]    aAcc: 79.7200  mIoU: 36.7600  mAcc: 51.5600  matrix_mIoU: 36.7600  data_time: 0.0104  time: 0.4580
+2026/11/11 23:46:18 - mmengine - INFO - Iter(train) [2020/4000]  lr: 5.3118e-06  eta: 0:04:45  time: 0.1454  data_time: 0.0063  memory: 2435  loss: 0.6522  decode.loss_ce: 0.6522  decode.acc_seg: 82.0959
+2026/11/11 23:46:21 - mmengine - INFO - Iter(train) [2040/4000]  lr: 5.2635e-06  eta: 0:04:42  time: 0.1459  data_time: 0.0066  memory: 2435  loss: 0.4261  decode.loss_ce: 0.4261  decode.acc_seg: 79.7392
+2026/11/11 23:46:24 - mmengine - INFO - Iter(train) [2060/4000]  lr: 5.2151e-06  eta: 0:04:39  time: 0.1446  data_time: 0.0070  memory: 2435  loss: 0.4874  decode.loss_ce: 0.4874  decode.acc_seg: 77.2342
+2026/11/11 23:46:26 - mmengine - INFO - Iter(train) [2080/4000]  lr: 5.1667e-06  eta: 0:04:36  time: 0.1442  data_time: 0.0066  memory: 2435  loss: 0.4810  decode.loss_ce: 0.4810  decode.acc_seg: 74.0561
+2026/11/11 23:46:29 - mmengine - INFO - Iter(train) [2100/4000]  lr: 5.1183e-06  eta: 0:04:33  time: 0.1444  data_time: 0.0064  memory: 2435  loss: 0.7218  decode.loss_ce: 0.7218  decode.acc_seg: 79.9017
+2026/11/11 23:46:32 - mmengine - INFO - Iter(train) [2120/4000]  lr: 5.0697e-06  eta: 0:04:30  time: 0.1457  data_time: 0.0063  memory: 2435  loss: 0.5222  decode.loss_ce: 0.5222  decode.acc_seg: 90.1711
+2026/11/11 23:46:35 - mmengine - INFO - Iter(train) [2140/4000]  lr: 5.0212e-06  eta: 0:04:27  time: 0.1469  data_time: 0.0071  memory: 2435  loss: 0.5841  decode.loss_ce: 0.5841  decode.acc_seg: 88.3036
+2026/11/11 23:46:38 - mmengine - INFO - Iter(train) [2160/4000]  lr: 4.9726e-06  eta: 0:04:25  time: 0.1457  data_time: 0.0065  memory: 2435  loss: 0.5932  decode.loss_ce: 0.5932  decode.acc_seg: 86.6601
+2026/11/11 23:46:41 - mmengine - INFO - Iter(train) [2180/4000]  lr: 4.9239e-06  eta: 0:04:22  time: 0.1463  data_time: 0.0066  memory: 2435  loss: 0.6086  decode.loss_ce: 0.6086  decode.acc_seg: 25.5855
+2026/11/11 23:46:44 - mmengine - INFO - Iter(train) [2200/4000]  lr: 4.8752e-06  eta: 0:04:19  time: 0.1438  data_time: 0.0064  memory: 2435  loss: 0.5478  decode.loss_ce: 0.5478  decode.acc_seg: 62.8366
+2026/11/11 23:46:47 - mmengine - INFO - Iter(train) [2220/4000]  lr: 4.8264e-06  eta: 0:04:16  time: 0.1447  data_time: 0.0066  memory: 2435  loss: 0.7630  decode.loss_ce: 0.7630  decode.acc_seg: 79.2323
+2026/11/11 23:46:50 - mmengine - INFO - Iter(train) [2240/4000]  lr: 4.7775e-06  eta: 0:04:13  time: 0.1452  data_time: 0.0064  memory: 2435  loss: 0.6803  decode.loss_ce: 0.6803  decode.acc_seg: 62.7643
+2026/11/11 23:46:53 - mmengine - INFO - Iter(train) [2260/4000]  lr: 4.7287e-06  eta: 0:04:10  time: 0.1448  data_time: 0.0063  memory: 2435  loss: 0.4385  decode.loss_ce: 0.4385  decode.acc_seg: 87.4236
+2026/11/11 23:46:56 - mmengine - INFO - Iter(train) [2280/4000]  lr: 4.6797e-06  eta: 0:04:07  time: 0.1472  data_time: 0.0066  memory: 2435  loss: 0.5335  decode.loss_ce: 0.5335  decode.acc_seg: 69.0319
+2026/11/11 23:46:58 - mmengine - INFO - Iter(train) [2300/4000]  lr: 4.6307e-06  eta: 0:04:05  time: 0.1449  data_time: 0.0065  memory: 2435  loss: 0.5292  decode.loss_ce: 0.5292  decode.acc_seg: 85.0214
+2026/11/11 23:47:01 - mmengine - INFO - Iter(train) [2320/4000]  lr: 4.5817e-06  eta: 0:04:02  time: 0.1430  data_time: 0.0062  memory: 2435  loss: 0.6785  decode.loss_ce: 0.6785  decode.acc_seg: 63.1282
+2026/11/11 23:47:04 - mmengine - INFO - Iter(train) [2340/4000]  lr: 4.5325e-06  eta: 0:03:59  time: 0.1458  data_time: 0.0063  memory: 2435  loss: 0.5564  decode.loss_ce: 0.5564  decode.acc_seg: 88.5026
+2026/11/11 23:47:07 - mmengine - INFO - Iter(train) [2360/4000]  lr: 4.4834e-06  eta: 0:03:56  time: 0.1457  data_time: 0.0066  memory: 2435  loss: 0.7512  decode.loss_ce: 0.7512  decode.acc_seg: 60.3097
+2026/11/11 23:47:10 - mmengine - INFO - Iter(train) [2380/4000]  lr: 4.4341e-06  eta: 0:03:53  time: 0.1446  data_time: 0.0067  memory: 2435  loss: 0.5817  decode.loss_ce: 0.5817  decode.acc_seg: 83.8354
+2026/11/11 23:47:13 - mmengine - INFO - Iter(train) [2400/4000]  lr: 4.3848e-06  eta: 0:03:50  time: 0.1457  data_time: 0.0067  memory: 2435  loss: 0.6184  decode.loss_ce: 0.6184  decode.acc_seg: 65.8443
+2026/11/11 23:47:16 - mmengine - INFO - Iter(train) [2420/4000]  lr: 4.3355e-06  eta: 0:03:47  time: 0.1469  data_time: 0.0064  memory: 2435  loss: 0.5460  decode.loss_ce: 0.5460  decode.acc_seg: 88.6719
+2026/11/11 23:47:19 - mmengine - INFO - Iter(train) [2440/4000]  lr: 4.2860e-06  eta: 0:03:44  time: 0.1448  data_time: 0.0065  memory: 2435  loss: 0.5264  decode.loss_ce: 0.5264  decode.acc_seg: 80.4101
+2026/11/11 23:47:22 - mmengine - INFO - Iter(train) [2460/4000]  lr: 4.2366e-06  eta: 0:03:42  time: 0.1450  data_time: 0.0063  memory: 2435  loss: 0.4334  decode.loss_ce: 0.4334  decode.acc_seg: 89.3707
+2026/11/11 23:47:25 - mmengine - INFO - Iter(train) [2480/4000]  lr: 4.1870e-06  eta: 0:03:39  time: 0.1445  data_time: 0.0065  memory: 2435  loss: 0.5112  decode.loss_ce: 0.5112  decode.acc_seg: 81.7141
+2026/11/11 23:47:27 - mmengine - INFO - Iter(train) [2500/4000]  lr: 4.1374e-06  eta: 0:03:36  time: 0.1445  data_time: 0.0065  memory: 2435  loss: 0.6109  decode.loss_ce: 0.6109  decode.acc_seg: 79.8177
+2026/11/11 23:47:30 - mmengine - INFO - Iter(train) [2520/4000]  lr: 4.0877e-06  eta: 0:03:33  time: 0.1441  data_time: 0.0067  memory: 2435  loss: 0.5665  decode.loss_ce: 0.5665  decode.acc_seg: 83.0933
+2026/11/11 23:47:33 - mmengine - INFO - Iter(train) [2540/4000]  lr: 4.0380e-06  eta: 0:03:30  time: 0.1460  data_time: 0.0066  memory: 2435  loss: 0.5940  decode.loss_ce: 0.5940  decode.acc_seg: 80.3055
+2026/11/11 23:47:36 - mmengine - INFO - Iter(train) [2560/4000]  lr: 3.9881e-06  eta: 0:03:27  time: 0.1498  data_time: 0.0068  memory: 2435  loss: 0.5778  decode.loss_ce: 0.5778  decode.acc_seg: 86.8024
+2026/11/11 23:47:39 - mmengine - INFO - Iter(train) [2580/4000]  lr: 3.9382e-06  eta: 0:03:24  time: 0.1449  data_time: 0.0063  memory: 2435  loss: 0.5386  decode.loss_ce: 0.5386  decode.acc_seg: 77.5475
+2026/11/11 23:47:42 - mmengine - INFO - Iter(train) [2600/4000]  lr: 3.8883e-06  eta: 0:03:21  time: 0.1460  data_time: 0.0063  memory: 2435  loss: 0.4607  decode.loss_ce: 0.4607  decode.acc_seg: 87.7624
+2026/11/11 23:47:45 - mmengine - INFO - Iter(train) [2620/4000]  lr: 3.8383e-06  eta: 0:03:19  time: 0.1454  data_time: 0.0065  memory: 2435  loss: 0.5359  decode.loss_ce: 0.5359  decode.acc_seg: 66.1098
+2026/11/11 23:47:48 - mmengine - INFO - Iter(train) [2640/4000]  lr: 3.7882e-06  eta: 0:03:16  time: 0.1452  data_time: 0.0064  memory: 2435  loss: 0.5926  decode.loss_ce: 0.5926  decode.acc_seg: 50.5405
+2026/11/11 23:47:51 - mmengine - INFO - Iter(train) [2660/4000]  lr: 3.7380e-06  eta: 0:03:13  time: 0.1448  data_time: 0.0067  memory: 2435  loss: 0.5963  decode.loss_ce: 0.5963  decode.acc_seg: 81.2453
+2026/11/11 23:47:54 - mmengine - INFO - Iter(train) [2680/4000]  lr: 3.6877e-06  eta: 0:03:10  time: 0.1455  data_time: 0.0066  memory: 2435  loss: 0.5965  decode.loss_ce: 0.5965  decode.acc_seg: 91.1047
+2026/11/11 23:47:57 - mmengine - INFO - Iter(train) [2700/4000]  lr: 3.6374e-06  eta: 0:03:07  time: 0.1444  data_time: 0.0063  memory: 2435  loss: 0.7828  decode.loss_ce: 0.7828  decode.acc_seg: 83.1870
+2026/11/11 23:47:59 - mmengine - INFO - Iter(train) [2720/4000]  lr: 3.5870e-06  eta: 0:03:04  time: 0.1434  data_time: 0.0064  memory: 2435  loss: 0.6748  decode.loss_ce: 0.6748  decode.acc_seg: 74.9860
+2026/11/11 23:48:02 - mmengine - INFO - Iter(train) [2740/4000]  lr: 3.5365e-06  eta: 0:03:01  time: 0.1450  data_time: 0.0066  memory: 2435  loss: 0.6215  decode.loss_ce: 0.6215  decode.acc_seg: 71.0353
+2026/11/11 23:48:05 - mmengine - INFO - Iter(train) [2760/4000]  lr: 3.4860e-06  eta: 0:02:58  time: 0.1448  data_time: 0.0063  memory: 2435  loss: 0.7507  decode.loss_ce: 0.7507  decode.acc_seg: 80.1463
+2026/11/11 23:48:08 - mmengine - INFO - Iter(train) [2780/4000]  lr: 3.4353e-06  eta: 0:02:56  time: 0.1445  data_time: 0.0064  memory: 2435  loss: 0.6307  decode.loss_ce: 0.6307  decode.acc_seg: 79.4979
+2026/11/11 23:48:11 - mmengine - INFO - Iter(train) [2800/4000]  lr: 3.3846e-06  eta: 0:02:53  time: 0.1452  data_time: 0.0064  memory: 2435  loss: 0.5158  decode.loss_ce: 0.5158  decode.acc_seg: 84.5077
+2026/11/11 23:48:14 - mmengine - INFO - Iter(train) [2820/4000]  lr: 3.3338e-06  eta: 0:02:50  time: 0.1450  data_time: 0.0065  memory: 2435  loss: 0.4862  decode.loss_ce: 0.4862  decode.acc_seg: 87.5179
+2026/11/11 23:48:17 - mmengine - INFO - Iter(train) [2840/4000]  lr: 3.2829e-06  eta: 0:02:47  time: 0.1447  data_time: 0.0064  memory: 2435  loss: 0.5188  decode.loss_ce: 0.5188  decode.acc_seg: 81.5926
+2026/11/11 23:48:20 - mmengine - INFO - Iter(train) [2860/4000]  lr: 3.2319e-06  eta: 0:02:44  time: 0.1450  data_time: 0.0065  memory: 2435  loss: 0.4765  decode.loss_ce: 0.4765  decode.acc_seg: 83.7405
+2026/11/11 23:48:23 - mmengine - INFO - Iter(train) [2880/4000]  lr: 3.1808e-06  eta: 0:02:41  time: 0.1461  data_time: 0.0068  memory: 2435  loss: 0.4497  decode.loss_ce: 0.4497  decode.acc_seg: 73.8950
+2026/11/11 23:48:26 - mmengine - INFO - Iter(train) [2900/4000]  lr: 3.1297e-06  eta: 0:02:38  time: 0.1462  data_time: 0.0066  memory: 2435  loss: 0.5919  decode.loss_ce: 0.5919  decode.acc_seg: 26.7636
+2026/11/11 23:48:28 - mmengine - INFO - Iter(train) [2920/4000]  lr: 3.0784e-06  eta: 0:02:35  time: 0.1441  data_time: 0.0065  memory: 2435  loss: 0.5254  decode.loss_ce: 0.5254  decode.acc_seg: 78.0094
+2026/11/11 23:48:31 - mmengine - INFO - Iter(train) [2940/4000]  lr: 3.0270e-06  eta: 0:02:33  time: 0.1451  data_time: 0.0063  memory: 2435  loss: 0.5269  decode.loss_ce: 0.5269  decode.acc_seg: 76.2817
+2026/11/11 23:48:34 - mmengine - INFO - Iter(train) [2960/4000]  lr: 2.9756e-06  eta: 0:02:30  time: 0.1451  data_time: 0.0064  memory: 2435  loss: 0.6377  decode.loss_ce: 0.6377  decode.acc_seg: 87.4867
+2026/11/11 23:48:37 - mmengine - INFO - Iter(train) [2980/4000]  lr: 2.9240e-06  eta: 0:02:27  time: 0.1442  data_time: 0.0064  memory: 2435  loss: 0.5823  decode.loss_ce: 0.5823  decode.acc_seg: 37.3215
+2026/11/11 23:48:40 - mmengine - INFO - Exp name: 20261111_233932
+2026/11/11 23:48:40 - mmengine - INFO - Iter(train) [3000/4000]  lr: 2.8724e-06  eta: 0:02:24  time: 0.1451  data_time: 0.0065  memory: 2435  loss: 0.5216  decode.loss_ce: 0.5216  decode.acc_seg: 82.7513
+2026/11/11 23:48:40 - mmengine - INFO - Saving checkpoint at 3000 iterations
+2026/11/11 23:48:52 - mmengine - INFO - Iter(val) [ 20/106]    eta: 0:00:40  time: 0.4665  data_time: 0.0101  memory: 1111  
+2026/11/11 23:49:01 - mmengine - INFO - Iter(val) [ 40/106]    eta: 0:00:30  time: 0.4603  data_time: 0.0100  memory: 1111  
+2026/11/11 23:49:10 - mmengine - INFO - Iter(val) [ 60/106]    eta: 0:00:21  time: 0.4508  data_time: 0.0099  memory: 1111  
+2026/11/11 23:49:19 - mmengine - INFO - Iter(val) [ 80/106]    eta: 0:00:11  time: 0.4581  data_time: 0.0098  memory: 1111  
+2026/11/11 23:49:29 - mmengine - INFO - Iter(val) [100/106]    eta: 0:00:02  time: 0.4738  data_time: 0.0100  memory: 1111  
+2026/11/11 23:49:31 - mmengine - INFO - per class results:
+2026/11/11 23:49:31 - mmengine - INFO - 
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 89.08 |  96.1 |
+|    sidewalk   | 60.94 | 71.08 |
+|    building   | 68.57 | 81.42 |
+|      wall     | 28.28 | 38.89 |
+|     fence     | 34.91 | 53.45 |
+|      pole     | 42.26 | 54.54 |
+| traffic light | 48.99 | 62.24 |
+|  traffic sign | 25.19 | 27.37 |
+|   vegetation  | 61.19 | 82.97 |
+|    terrain    |  1.9  |  1.99 |
+|      sky      | 64.96 | 74.58 |
+|     person    | 29.38 | 31.93 |
+|     rider     |  6.75 |  6.99 |
+|      car      | 53.21 | 79.48 |
+|     truck     | 29.23 | 44.69 |
+|      bus      |  0.0  |  nan  |
+|     train     | 59.17 | 81.97 |
+|   motorcycle  |  3.47 |  3.64 |
+|    bicycle    | 21.24 | 22.06 |
++---------------+-------+-------+
+2026/11/11 23:49:31 - mmengine - INFO - Iter(val) [106/106]    aAcc: 80.3400  mIoU: 38.3500  mAcc: 50.8500  matrix_mIoU: 38.3500  data_time: 0.0104  time: 0.4611
+2026/11/11 23:49:34 - mmengine - INFO - Iter(train) [3020/4000]  lr: 2.8206e-06  eta: 0:02:21  time: 0.1492  data_time: 0.0066  memory: 2435  loss: 0.4072  decode.loss_ce: 0.4072  decode.acc_seg: 91.7474
+2026/11/11 23:49:37 - mmengine - INFO - Iter(train) [3040/4000]  lr: 2.7688e-06  eta: 0:02:18  time: 0.1477  data_time: 0.0065  memory: 2435  loss: 0.6307  decode.loss_ce: 0.6307  decode.acc_seg: 68.3847
+2026/11/11 23:49:40 - mmengine - INFO - Iter(train) [3060/4000]  lr: 2.7168e-06  eta: 0:02:15  time: 0.1479  data_time: 0.0066  memory: 2435  loss: 0.5686  decode.loss_ce: 0.5686  decode.acc_seg: 32.7312
+2026/11/11 23:49:43 - mmengine - INFO - Iter(train) [3080/4000]  lr: 2.6647e-06  eta: 0:02:12  time: 0.1501  data_time: 0.0065  memory: 2435  loss: 0.5793  decode.loss_ce: 0.5793  decode.acc_seg: 86.2779
+2026/11/11 23:49:46 - mmengine - INFO - Iter(train) [3100/4000]  lr: 2.6125e-06  eta: 0:02:10  time: 0.1500  data_time: 0.0069  memory: 2435  loss: 0.5307  decode.loss_ce: 0.5307  decode.acc_seg: 81.3278
+2026/11/11 23:49:49 - mmengine - INFO - Iter(train) [3120/4000]  lr: 2.5602e-06  eta: 0:02:07  time: 0.1466  data_time: 0.0067  memory: 2435  loss: 0.5444  decode.loss_ce: 0.5444  decode.acc_seg: 69.4019
+2026/11/11 23:49:52 - mmengine - INFO - Iter(train) [3140/4000]  lr: 2.5078e-06  eta: 0:02:04  time: 0.1465  data_time: 0.0063  memory: 2435  loss: 0.5957  decode.loss_ce: 0.5957  decode.acc_seg: 79.6523
+2026/11/11 23:49:55 - mmengine - INFO - Iter(train) [3160/4000]  lr: 2.4552e-06  eta: 0:02:01  time: 0.1471  data_time: 0.0066  memory: 2435  loss: 0.7303  decode.loss_ce: 0.7303  decode.acc_seg: 46.1689
+2026/11/11 23:49:58 - mmengine - INFO - Iter(train) [3180/4000]  lr: 2.4026e-06  eta: 0:01:58  time: 0.1446  data_time: 0.0065  memory: 2435  loss: 0.3830  decode.loss_ce: 0.3830  decode.acc_seg: 84.2281
+2026/11/11 23:50:01 - mmengine - INFO - Iter(train) [3200/4000]  lr: 2.3498e-06  eta: 0:01:55  time: 0.1465  data_time: 0.0066  memory: 2435  loss: 0.8523  decode.loss_ce: 0.8523  decode.acc_seg: 81.0020
+2026/11/11 23:50:04 - mmengine - INFO - Iter(train) [3220/4000]  lr: 2.2968e-06  eta: 0:01:52  time: 0.1441  data_time: 0.0064  memory: 2435  loss: 0.6340  decode.loss_ce: 0.6340  decode.acc_seg: 72.6166
+2026/11/11 23:50:07 - mmengine - INFO - Iter(train) [3240/4000]  lr: 2.2438e-06  eta: 0:01:49  time: 0.1458  data_time: 0.0070  memory: 2435  loss: 0.3594  decode.loss_ce: 0.3594  decode.acc_seg: 76.9064
+2026/11/11 23:50:10 - mmengine - INFO - Iter(train) [3260/4000]  lr: 2.1905e-06  eta: 0:01:46  time: 0.1462  data_time: 0.0069  memory: 2435  loss: 0.6061  decode.loss_ce: 0.6061  decode.acc_seg: 82.4418
+2026/11/11 23:50:12 - mmengine - INFO - Iter(train) [3280/4000]  lr: 2.1372e-06  eta: 0:01:44  time: 0.1462  data_time: 0.0066  memory: 2435  loss: 0.5365  decode.loss_ce: 0.5365  decode.acc_seg: 46.2500
+2026/11/11 23:50:15 - mmengine - INFO - Iter(train) [3300/4000]  lr: 2.0837e-06  eta: 0:01:41  time: 0.1436  data_time: 0.0062  memory: 2435  loss: 0.5577  decode.loss_ce: 0.5577  decode.acc_seg: 84.3806
+2026/11/11 23:50:18 - mmengine - INFO - Iter(train) [3320/4000]  lr: 2.0300e-06  eta: 0:01:38  time: 0.1454  data_time: 0.0065  memory: 2435  loss: 0.6472  decode.loss_ce: 0.6472  decode.acc_seg: 75.2363
+2026/11/11 23:50:21 - mmengine - INFO - Iter(train) [3340/4000]  lr: 1.9762e-06  eta: 0:01:35  time: 0.1447  data_time: 0.0064  memory: 2435  loss: 0.4661  decode.loss_ce: 0.4661  decode.acc_seg: 80.7784
+2026/11/11 23:50:24 - mmengine - INFO - Iter(train) [3360/4000]  lr: 1.9222e-06  eta: 0:01:32  time: 0.1453  data_time: 0.0064  memory: 2435  loss: 0.5934  decode.loss_ce: 0.5934  decode.acc_seg: 81.4369
+2026/11/11 23:50:27 - mmengine - INFO - Iter(train) [3380/4000]  lr: 1.8681e-06  eta: 0:01:29  time: 0.1440  data_time: 0.0062  memory: 2435  loss: 0.8540  decode.loss_ce: 0.8540  decode.acc_seg: 84.9046
+2026/11/11 23:50:30 - mmengine - INFO - Iter(train) [3400/4000]  lr: 1.8138e-06  eta: 0:01:26  time: 0.1458  data_time: 0.0069  memory: 2435  loss: 0.5223  decode.loss_ce: 0.5223  decode.acc_seg: 49.5753
+2026/11/11 23:50:33 - mmengine - INFO - Iter(train) [3420/4000]  lr: 1.7593e-06  eta: 0:01:23  time: 0.1450  data_time: 0.0067  memory: 2435  loss: 0.4450  decode.loss_ce: 0.4450  decode.acc_seg: 79.9311
+2026/11/11 23:50:36 - mmengine - INFO - Iter(train) [3440/4000]  lr: 1.7046e-06  eta: 0:01:20  time: 0.1434  data_time: 0.0063  memory: 2435  loss: 0.4959  decode.loss_ce: 0.4959  decode.acc_seg: 57.6855
+2026/11/11 23:50:38 - mmengine - INFO - Iter(train) [3460/4000]  lr: 1.6497e-06  eta: 0:01:18  time: 0.1449  data_time: 0.0064  memory: 2435  loss: 0.5570  decode.loss_ce: 0.5570  decode.acc_seg: 72.5863
+2026/11/11 23:50:41 - mmengine - INFO - Iter(train) [3480/4000]  lr: 1.5946e-06  eta: 0:01:15  time: 0.1448  data_time: 0.0063  memory: 2435  loss: 0.5930  decode.loss_ce: 0.5930  decode.acc_seg: 73.1035
+2026/11/11 23:50:44 - mmengine - INFO - Iter(train) [3500/4000]  lr: 1.5393e-06  eta: 0:01:12  time: 0.1449  data_time: 0.0067  memory: 2435  loss: 0.5688  decode.loss_ce: 0.5688  decode.acc_seg: 84.8825
+2026/11/11 23:50:47 - mmengine - INFO - Iter(train) [3520/4000]  lr: 1.4838e-06  eta: 0:01:09  time: 0.1451  data_time: 0.0063  memory: 2435  loss: 0.4546  decode.loss_ce: 0.4546  decode.acc_seg: 51.7415
+2026/11/11 23:50:50 - mmengine - INFO - Iter(train) [3540/4000]  lr: 1.4280e-06  eta: 0:01:06  time: 0.1451  data_time: 0.0066  memory: 2435  loss: 0.6910  decode.loss_ce: 0.6910  decode.acc_seg: 88.4218
+2026/11/11 23:50:53 - mmengine - INFO - Iter(train) [3560/4000]  lr: 1.3720e-06  eta: 0:01:03  time: 0.1445  data_time: 0.0064  memory: 2435  loss: 0.5558  decode.loss_ce: 0.5558  decode.acc_seg: 88.0310
+2026/11/11 23:50:56 - mmengine - INFO - Iter(train) [3580/4000]  lr: 1.3157e-06  eta: 0:01:00  time: 0.1448  data_time: 0.0062  memory: 2435  loss: 0.5527  decode.loss_ce: 0.5527  decode.acc_seg: 80.1594
+2026/11/11 23:50:59 - mmengine - INFO - Iter(train) [3600/4000]  lr: 1.2592e-06  eta: 0:00:57  time: 0.1435  data_time: 0.0062  memory: 2435  loss: 0.3614  decode.loss_ce: 0.3614  decode.acc_seg: 86.3200
+2026/11/11 23:51:02 - mmengine - INFO - Iter(train) [3620/4000]  lr: 1.2024e-06  eta: 0:00:54  time: 0.1446  data_time: 0.0062  memory: 2435  loss: 0.5297  decode.loss_ce: 0.5297  decode.acc_seg: 80.9172
+2026/11/11 23:51:05 - mmengine - INFO - Iter(train) [3640/4000]  lr: 1.1453e-06  eta: 0:00:52  time: 0.1439  data_time: 0.0064  memory: 2435  loss: 0.7725  decode.loss_ce: 0.7725  decode.acc_seg: 70.9571
+2026/11/11 23:51:07 - mmengine - INFO - Iter(train) [3660/4000]  lr: 1.0879e-06  eta: 0:00:49  time: 0.1454  data_time: 0.0063  memory: 2435  loss: 0.7207  decode.loss_ce: 0.7207  decode.acc_seg: 59.0967
+2026/11/11 23:51:10 - mmengine - INFO - Iter(train) [3680/4000]  lr: 1.0301e-06  eta: 0:00:46  time: 0.1450  data_time: 0.0066  memory: 2435  loss: 0.6775  decode.loss_ce: 0.6775  decode.acc_seg: 91.9497
+2026/11/11 23:51:13 - mmengine - INFO - Iter(train) [3700/4000]  lr: 9.7197e-07  eta: 0:00:43  time: 0.1449  data_time: 0.0064  memory: 2435  loss: 0.6176  decode.loss_ce: 0.6176  decode.acc_seg: 61.1944
+2026/11/11 23:51:16 - mmengine - INFO - Iter(train) [3720/4000]  lr: 9.1345e-07  eta: 0:00:40  time: 0.1447  data_time: 0.0066  memory: 2435  loss: 0.4398  decode.loss_ce: 0.4398  decode.acc_seg: 82.3412
+2026/11/11 23:51:19 - mmengine - INFO - Iter(train) [3740/4000]  lr: 8.5452e-07  eta: 0:00:37  time: 0.1445  data_time: 0.0065  memory: 2435  loss: 0.5497  decode.loss_ce: 0.5497  decode.acc_seg: 92.5082
+2026/11/11 23:51:22 - mmengine - INFO - Iter(train) [3760/4000]  lr: 7.9512e-07  eta: 0:00:34  time: 0.1458  data_time: 0.0063  memory: 2435  loss: 0.4131  decode.loss_ce: 0.4131  decode.acc_seg: 88.5110
+2026/11/11 23:51:25 - mmengine - INFO - Iter(train) [3780/4000]  lr: 7.3523e-07  eta: 0:00:31  time: 0.1459  data_time: 0.0063  memory: 2435  loss: 0.6715  decode.loss_ce: 0.6715  decode.acc_seg: 65.5989
+2026/11/11 23:51:28 - mmengine - INFO - Iter(train) [3800/4000]  lr: 6.7479e-07  eta: 0:00:28  time: 0.1451  data_time: 0.0064  memory: 2435  loss: 0.5549  decode.loss_ce: 0.5549  decode.acc_seg: 83.2900
+2026/11/11 23:51:31 - mmengine - INFO - Iter(train) [3820/4000]  lr: 6.1375e-07  eta: 0:00:26  time: 0.1433  data_time: 0.0064  memory: 2435  loss: 0.6599  decode.loss_ce: 0.6599  decode.acc_seg: 83.1237
+2026/11/11 23:51:34 - mmengine - INFO - Iter(train) [3840/4000]  lr: 5.5202e-07  eta: 0:00:23  time: 0.1428  data_time: 0.0062  memory: 2435  loss: 0.4613  decode.loss_ce: 0.4613  decode.acc_seg: 87.6318
+2026/11/11 23:51:36 - mmengine - INFO - Iter(train) [3860/4000]  lr: 4.8951e-07  eta: 0:00:20  time: 0.1451  data_time: 0.0062  memory: 2435  loss: 0.4225  decode.loss_ce: 0.4225  decode.acc_seg: 84.1509
+2026/11/11 23:51:39 - mmengine - INFO - Iter(train) [3880/4000]  lr: 4.2610e-07  eta: 0:00:17  time: 0.1441  data_time: 0.0067  memory: 2435  loss: 0.4834  decode.loss_ce: 0.4834  decode.acc_seg: 65.2804
+2026/11/11 23:51:42 - mmengine - INFO - Iter(train) [3900/4000]  lr: 3.6161e-07  eta: 0:00:14  time: 0.1455  data_time: 0.0065  memory: 2435  loss: 0.6457  decode.loss_ce: 0.6457  decode.acc_seg: 63.1855
+2026/11/11 23:51:45 - mmengine - INFO - Iter(train) [3920/4000]  lr: 2.9582e-07  eta: 0:00:11  time: 0.1436  data_time: 0.0063  memory: 2435  loss: 0.3229  decode.loss_ce: 0.3229  decode.acc_seg: 85.7724
+2026/11/11 23:51:48 - mmengine - INFO - Iter(train) [3940/4000]  lr: 2.2834e-07  eta: 0:00:08  time: 0.1441  data_time: 0.0064  memory: 2435  loss: 0.6341  decode.loss_ce: 0.6341  decode.acc_seg: 84.2511
+2026/11/11 23:51:51 - mmengine - INFO - Iter(train) [3960/4000]  lr: 1.5852e-07  eta: 0:00:05  time: 0.1439  data_time: 0.0066  memory: 2435  loss: 0.4411  decode.loss_ce: 0.4411  decode.acc_seg: 57.5822
+2026/11/11 23:51:54 - mmengine - INFO - Iter(train) [3980/4000]  lr: 8.4951e-08  eta: 0:00:02  time: 0.1444  data_time: 0.0064  memory: 2435  loss: 0.5814  decode.loss_ce: 0.5814  decode.acc_seg: 77.8928
+2026/11/11 23:51:57 - mmengine - INFO - Exp name: 20261111_233932
+2026/11/11 23:51:57 - mmengine - INFO - Iter(train) [4000/4000]  lr: 0.0000e+00  eta: 0:00:00  time: 0.1504  data_time: 0.0068  memory: 2435  loss: 0.3966  decode.loss_ce: 0.3966  decode.acc_seg: 91.1266
+2026/11/11 23:51:57 - mmengine - INFO - Saving checkpoint at 4000 iterations
+2026/11/11 23:52:08 - mmengine - INFO - Iter(val) [ 20/106]    eta: 0:00:39  time: 0.4570  data_time: 0.0100  memory: 1111  
+2026/11/11 23:52:18 - mmengine - INFO - Iter(val) [ 40/106]    eta: 0:00:30  time: 0.4665  data_time: 0.0100  memory: 1111  
+2026/11/11 23:52:27 - mmengine - INFO - Iter(val) [ 60/106]    eta: 0:00:21  time: 0.4487  data_time: 0.0098  memory: 1111  
+2026/11/11 23:52:36 - mmengine - INFO - Iter(val) [ 80/106]    eta: 0:00:11  time: 0.4551  data_time: 0.0103  memory: 1111  
+2026/11/11 23:52:45 - mmengine - INFO - Iter(val) [100/106]    eta: 0:00:02  time: 0.4593  data_time: 0.0100  memory: 1111  
+2026/11/11 23:52:48 - mmengine - INFO - per class results:
+2026/11/11 23:52:48 - mmengine - INFO - 
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 89.98 | 95.71 |
+|    sidewalk   | 64.21 | 75.14 |
+|    building   | 69.38 | 80.91 |
+|      wall     | 29.11 | 39.12 |
+|     fence     | 34.37 | 51.52 |
+|      pole     | 41.79 | 53.39 |
+| traffic light | 49.67 | 62.29 |
+|  traffic sign | 26.62 | 28.81 |
+|   vegetation  | 62.58 | 80.72 |
+|    terrain    |  3.07 |  3.24 |
+|      sky      | 69.26 | 83.27 |
+|     person    | 31.54 | 34.82 |
+|     rider     |  6.89 |  7.49 |
+|      car      | 59.75 | 77.86 |
+|     truck     | 29.14 | 43.16 |
+|      bus      |  0.0  |  nan  |
+|     train     | 61.02 | 82.52 |
+|   motorcycle  |  7.31 |  7.98 |
+|    bicycle    | 31.49 | 32.77 |
++---------------+-------+-------+
+2026/11/11 23:52:48 - mmengine - INFO - Iter(val) [106/106]    aAcc: 81.6400  mIoU: 40.3800  mAcc: 52.2600  matrix_mIoU: 40.3800  data_time: 0.0104  time: 0.4569

@@ -1,0 +1,306 @@
+{
+  "status": "PASS",
+  "old_cells": 15,
+  "checks": [
+    {
+      "model": "source",
+      "condition": "clear",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0/source_cityscapes.py",
+        "config_sha256": "776d6bfc6b8e2e5335b332c4b3bcc601528333ce96d94f08438f9367bb2d5774",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0/A_val_debug.jsonl",
+        "manifest_sha256": "9457c4218b4dd23881661c062c35eb69fbc1570a231f648c9a7b9ce43b271647",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "source",
+      "condition": "fog005",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.005/source_cityscapes.py",
+        "config_sha256": "2a58de23c4a6abc91dae7f17cf574f96e3de01209a71a87f9e1d59808bc45a61",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.005/A_val_debug.jsonl",
+        "manifest_sha256": "445a346e35ad8d751aba1e0d37dc3ca496efc5dc5bbf5c514775642ada499d6e",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "source",
+      "condition": "fog010",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.01/source_cityscapes.py",
+        "config_sha256": "848c3f1b690592d49b9855e3ca6096a3b8e52b4d84aa088a02e029731193c9fc",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.01/A_val_debug.jsonl",
+        "manifest_sha256": "6d1d1b5a98770f65db6f2e084f575d7ff4f9d07889b7cfcd8c914c4eb03d8b64",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "source",
+      "condition": "fog020",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.02/source_cityscapes.py",
+        "config_sha256": "15fe198e44704e42dc0f6dc4d8f3675b7780b2c74dd63270d720f0233fccb690",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.02/A_val_debug.jsonl",
+        "manifest_sha256": "d54b8d142747bd3b35d130b60c0c8e4fc8c1e785d1b14062383ff91da4e1c1c8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "source",
+      "condition": "acdc",
+      "images": 100,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_source_B/source_cityscapes.py",
+        "config_sha256": "30b62be4d323c6338ea0abaaa181f2287834e9240d3789487aee0fee5a192e0f",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_val.jsonl",
+        "manifest_sha256": "fea0e683557ff85bceb302d8934797a750498caee2e9a207d61900f6294fe5a8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "ft",
+      "condition": "clear",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0/ft_acdc_fog.py",
+        "config_sha256": "a7a25e56625173a213647d25d342d99412e2641de4e7d5328c78950702c6eb3d",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0/A_val_debug.jsonl",
+        "manifest_sha256": "9457c4218b4dd23881661c062c35eb69fbc1570a231f648c9a7b9ce43b271647",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "ft",
+      "condition": "fog005",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.005/ft_acdc_fog.py",
+        "config_sha256": "c074218b975e4d25cb43099e969dc1af26d2ecb468829cbeecdf0cf49d46a747",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.005/A_val_debug.jsonl",
+        "manifest_sha256": "445a346e35ad8d751aba1e0d37dc3ca496efc5dc5bbf5c514775642ada499d6e",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "ft",
+      "condition": "fog010",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.01/ft_acdc_fog.py",
+        "config_sha256": "4ff3a02eb1d1660f65d3bc8ae16043870a6968c7d4dddb0860c5430e5ca1b58b",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.01/A_val_debug.jsonl",
+        "manifest_sha256": "6d1d1b5a98770f65db6f2e084f575d7ff4f9d07889b7cfcd8c914c4eb03d8b64",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "ft",
+      "condition": "fog020",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.02/ft_acdc_fog.py",
+        "config_sha256": "184987738e71d50f2d8fc3a59abe34fedef0cf3c6bcca1140696e41deb9686d0",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.02/A_val_debug.jsonl",
+        "manifest_sha256": "d54b8d142747bd3b35d130b60c0c8e4fc8c1e785d1b14062383ff91da4e1c1c8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "ft",
+      "condition": "acdc",
+      "images": 100,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_ft_B/ft_acdc_fog.py",
+        "config_sha256": "20d04b403d1fd7debfdb32f2a199dcbd0dcd9fdf3da196287b0ba4254beb0351",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_val.jsonl",
+        "manifest_sha256": "fea0e683557ff85bceb302d8934797a750498caee2e9a207d61900f6294fe5a8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "gsmf",
+      "condition": "clear",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0/gsmf_acdc_fog.py",
+        "config_sha256": "015c62b1912b5aff58208292ec39c42df9b45aaa17899c066dbd6d82a18c314d",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0/A_val_debug.jsonl",
+        "manifest_sha256": "9457c4218b4dd23881661c062c35eb69fbc1570a231f648c9a7b9ce43b271647",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "gsmf",
+      "condition": "fog005",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.005/gsmf_acdc_fog.py",
+        "config_sha256": "527dc19a3d26b60b684a3dbfe6766b157adfcc392ed622b20fc2d918caed83a3",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.005/A_val_debug.jsonl",
+        "manifest_sha256": "445a346e35ad8d751aba1e0d37dc3ca496efc5dc5bbf5c514775642ada499d6e",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "gsmf",
+      "condition": "fog010",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.01/gsmf_acdc_fog.py",
+        "config_sha256": "e06379c46d8b09b571c196f41f66b8956b9f70b1e7b3d4e4ffdb27abde195ee8",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.01/A_val_debug.jsonl",
+        "manifest_sha256": "6d1d1b5a98770f65db6f2e084f575d7ff4f9d07889b7cfcd8c914c4eb03d8b64",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "gsmf",
+      "condition": "fog020",
+      "images": 500,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.02/gsmf_acdc_fog.py",
+        "config_sha256": "00693364ab9e6f403bd7350c4d5302970f675994052ba123cb36d5ff3261ef3c",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.02/A_val_debug.jsonl",
+        "manifest_sha256": "d54b8d142747bd3b35d130b60c0c8e4fc8c1e785d1b14062383ff91da4e1c1c8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    },
+    {
+      "model": "gsmf",
+      "condition": "acdc",
+      "images": 100,
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_gsmf_B/gsmf_acdc_fog.py",
+        "config_sha256": "bd5e5d09391fbd4fda6a18d520e84d60da1377e028bb7c314a8021a872d1a04d",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_val.jsonl",
+        "manifest_sha256": "fea0e683557ff85bceb302d8934797a750498caee2e9a207d61900f6294fe5a8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      }
+    }
+  ]
+}

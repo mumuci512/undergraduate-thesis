@@ -1,0 +1,17 @@
+{
+  "authorized_date_local": "2026-11-08",
+  "seed": 0,
+  "source_steps": 60000,
+  "ft_steps": 4000,
+  "gsmf_steps": 4000,
+  "batch_size": 2,
+  "crop": [
+    512,
+    512
+  ],
+  "serial_single_gpu": true,
+  "extra_runs_authorized": false,
+  "monitor_session": "road-monitor-formal-seed0-20261108-001",
+  "training_session_records": "experiments/road_clear_to_fog/session-formal-t2rn7qx2",
+  "control_script_sha256": "6c04a905c91a71f64908c8f52c5dcd1c160ecc6de567359e0225c815e61d2060"
+}

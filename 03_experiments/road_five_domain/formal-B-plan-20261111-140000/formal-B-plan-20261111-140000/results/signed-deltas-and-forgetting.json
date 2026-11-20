@@ -1,0 +1,402 @@
+{
+  "ft-seed1-ABCDE": {
+    "stage_changes": [
+      {
+        "stage": "ft-seed1-B",
+        "after_minus_before": {
+          "clear": -18.68300584316794,
+          "fog": 11.389828105629796,
+          "rain": 8.925714215200166,
+          "snow": 12.339607673033534,
+          "night": 7.523066690111183
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -18.68300584316794,
+          "fog": 11.389828105629796,
+          "rain": 8.925714215200166,
+          "snow": 12.339607673033534,
+          "night": 7.523066690111183
+        },
+        "new_domain": "fog",
+        "new_domain_adaptation_gain": 11.389828105629796
+      },
+      {
+        "stage": "ft-seed1-C",
+        "after_minus_before": {
+          "clear": 5.40419153206814,
+          "fog": 2.498451385605186,
+          "rain": 8.245486252090949,
+          "snow": 3.4290688701954295,
+          "night": -1.5221602953859197
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -13.2788143110998,
+          "fog": 13.888279491234982,
+          "rain": 17.171200467291115,
+          "snow": 15.768676543228963,
+          "night": 6.000906394725264
+        },
+        "new_domain": "rain",
+        "new_domain_adaptation_gain": 8.245486252090949
+      },
+      {
+        "stage": "ft-seed1-D",
+        "after_minus_before": {
+          "clear": -7.521317077559296,
+          "fog": -4.594582765440208,
+          "rain": -4.551104312493884,
+          "snow": 7.265246719428347,
+          "night": -3.999597270469634
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -20.800131388659096,
+          "fog": 9.293696725794774,
+          "rain": 12.620096154797231,
+          "snow": 23.03392326265731,
+          "night": 2.00130912425563
+        },
+        "new_domain": "snow",
+        "new_domain_adaptation_gain": 7.265246719428347
+      },
+      {
+        "stage": "ft-seed1-E",
+        "after_minus_before": {
+          "clear": 5.324817701013778,
+          "fog": -1.5130331252305993,
+          "rain": -6.502474972942025,
+          "snow": -12.539221221914794,
+          "night": 29.918787024932648
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -15.475313687645318,
+          "fog": 7.780663600564175,
+          "rain": 6.117621181855206,
+          "snow": 10.494702040742517,
+          "night": 31.92009614918828
+        },
+        "new_domain": "night",
+        "new_domain_adaptation_gain": 29.918787024932648
+      }
+    ],
+    "old_domain_forgetting": {
+      "clear": {
+        "reference_stage": "source",
+        "signed_forgetting": 15.475313687645318
+      },
+      "fog": {
+        "reference_stage": "ft-seed1-C",
+        "signed_forgetting": 6.107615890670807
+      },
+      "rain": {
+        "reference_stage": "ft-seed1-C",
+        "signed_forgetting": 11.053579285435909
+      },
+      "snow": {
+        "reference_stage": "ft-seed1-D",
+        "signed_forgetting": 12.539221221914794
+      }
+    },
+    "old_domain_mean_forgetting": 11.293932521416707,
+    "final_five_real_domain_mean": 48.47998026738843
+  },
+  "gsmf-seed1-ABCDE": {
+    "stage_changes": [
+      {
+        "stage": "gsmf-seed1-B",
+        "after_minus_before": {
+          "clear": -18.574957256282524,
+          "fog": 11.05253703042279,
+          "rain": 8.270860218594734,
+          "snow": 11.428192935710399,
+          "night": 6.874091772847705
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -18.574957256282524,
+          "fog": 11.05253703042279,
+          "rain": 8.270860218594734,
+          "snow": 11.428192935710399,
+          "night": 6.874091772847705
+        },
+        "new_domain": "fog",
+        "new_domain_adaptation_gain": 11.05253703042279
+      },
+      {
+        "stage": "gsmf-seed1-C",
+        "after_minus_before": {
+          "clear": 3.0402412758470163,
+          "fog": 3.5362692049361684,
+          "rain": 7.551412841383282,
+          "snow": 3.4474316237450964,
+          "night": -0.6441137580850125
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -15.534715980435507,
+          "fog": 14.588806235358959,
+          "rain": 15.822273059978016,
+          "snow": 14.875624559455495,
+          "night": 6.229978014762692
+        },
+        "new_domain": "rain",
+        "new_domain_adaptation_gain": 7.551412841383282
+      },
+      {
+        "stage": "gsmf-seed1-D",
+        "after_minus_before": {
+          "clear": -4.406061769911787,
+          "fog": -5.259802565891292,
+          "rain": -3.951572683151973,
+          "snow": 6.268144592749692,
+          "night": -3.075573411697775
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -19.940777750347294,
+          "fog": 9.329003669467667,
+          "rain": 11.870700376826044,
+          "snow": 21.143769152205188,
+          "night": 3.1544046030649175
+        },
+        "new_domain": "snow",
+        "new_domain_adaptation_gain": 6.268144592749692
+      },
+      {
+        "stage": "gsmf-seed1-E",
+        "after_minus_before": {
+          "clear": 5.4074419903202156,
+          "fog": -0.04887764397057026,
+          "rain": -4.293284348147353,
+          "snow": -8.990937582040338,
+          "night": 29.033049538209102
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -14.533335760027079,
+          "fog": 9.280126025497097,
+          "rain": 7.577416028678691,
+          "snow": 12.15283157016485,
+          "night": 32.18745414127402
+        },
+        "new_domain": "night",
+        "new_domain_adaptation_gain": 29.033049538209102
+      }
+    ],
+    "old_domain_forgetting": {
+      "clear": {
+        "reference_stage": "source",
+        "signed_forgetting": 14.533335760027079
+      },
+      "fog": {
+        "reference_stage": "gsmf-seed1-C",
+        "signed_forgetting": 5.308680209861862
+      },
+      "rain": {
+        "reference_stage": "gsmf-seed1-C",
+        "signed_forgetting": 8.244857031299325
+      },
+      "snow": {
+        "reference_stage": "gsmf-seed1-D",
+        "signed_forgetting": 8.990937582040338
+      }
+    },
+    "old_domain_mean_forgetting": 9.269452645807151,
+    "final_five_real_domain_mean": 49.64532481156497
+  },
+  "ft-seed2-ABCDE": {
+    "stage_changes": [
+      {
+        "stage": "ft-seed2-B",
+        "after_minus_before": {
+          "clear": -16.01029960218211,
+          "fog": 10.467088882192286,
+          "rain": 8.05345311283213,
+          "snow": 11.043775776548713,
+          "night": 7.952528158979033
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -16.01029960218211,
+          "fog": 10.467088882192286,
+          "rain": 8.05345311283213,
+          "snow": 11.043775776548713,
+          "night": 7.952528158979033
+        },
+        "new_domain": "fog",
+        "new_domain_adaptation_gain": 10.467088882192286
+      },
+      {
+        "stage": "ft-seed2-C",
+        "after_minus_before": {
+          "clear": 1.3827532325793612,
+          "fog": 3.402673661572372,
+          "rain": 8.877414835553886,
+          "snow": 5.131013552463706,
+          "night": -0.9418245206797771
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -14.627546369602747,
+          "fog": 13.869762543764658,
+          "rain": 16.930867948386016,
+          "snow": 16.17478932901242,
+          "night": 7.010703638299256
+        },
+        "new_domain": "rain",
+        "new_domain_adaptation_gain": 8.877414835553886
+      },
+      {
+        "stage": "ft-seed2-D",
+        "after_minus_before": {
+          "clear": -5.87645717662933,
+          "fog": -5.807756371654534,
+          "rain": -6.0924376715742525,
+          "snow": 7.799071350640006,
+          "night": -8.93124485462114
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -20.504003546232077,
+          "fog": 8.062006172110124,
+          "rain": 10.838430276811764,
+          "snow": 23.973860679652425,
+          "night": -1.920541216321884
+        },
+        "new_domain": "snow",
+        "new_domain_adaptation_gain": 7.799071350640006
+      },
+      {
+        "stage": "ft-seed2-E",
+        "after_minus_before": {
+          "clear": 6.190802024308319,
+          "fog": -1.593446133215238,
+          "rain": -6.100110517198473,
+          "snow": -14.32836106384623,
+          "night": 35.93591627321785
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -14.313201521923759,
+          "fog": 6.468560038894886,
+          "rain": 4.73831975961329,
+          "snow": 9.645499615806195,
+          "night": 34.01537505689596
+        },
+        "new_domain": "night",
+        "new_domain_adaptation_gain": 35.93591627321785
+      }
+    ],
+    "old_domain_forgetting": {
+      "clear": {
+        "reference_stage": "source",
+        "signed_forgetting": 14.313201521923759
+      },
+      "fog": {
+        "reference_stage": "ft-seed2-C",
+        "signed_forgetting": 7.401202504869772
+      },
+      "rain": {
+        "reference_stage": "ft-seed2-C",
+        "signed_forgetting": 12.192548188772726
+      },
+      "snow": {
+        "reference_stage": "ft-seed2-D",
+        "signed_forgetting": 14.32836106384623
+      }
+    },
+    "old_domain_mean_forgetting": 12.058828319853122,
+    "final_five_real_domain_mean": 48.42333700030476
+  },
+  "gsmf-seed2-ABCDE": {
+    "stage_changes": [
+      {
+        "stage": "gsmf-seed2-B",
+        "after_minus_before": {
+          "clear": -14.074377637217601,
+          "fog": 11.685374482414637,
+          "rain": 8.334379470088784,
+          "snow": 10.253660876001568,
+          "night": 8.098973010331928
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -14.074377637217601,
+          "fog": 11.685374482414637,
+          "rain": 8.334379470088784,
+          "snow": 10.253660876001568,
+          "night": 8.098973010331928
+        },
+        "new_domain": "fog",
+        "new_domain_adaptation_gain": 11.685374482414637
+      },
+      {
+        "stage": "gsmf-seed2-C",
+        "after_minus_before": {
+          "clear": -2.980384941330456,
+          "fog": 0.138403688908177,
+          "rain": 5.602178236428678,
+          "snow": 4.677266418940093,
+          "night": -1.7977824563224054
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -17.054762578548058,
+          "fog": 11.823778171322815,
+          "rain": 13.936557706517462,
+          "snow": 14.930927294941661,
+          "night": 6.301190554009524
+        },
+        "new_domain": "rain",
+        "new_domain_adaptation_gain": 5.602178236428678
+      },
+      {
+        "stage": "gsmf-seed2-D",
+        "after_minus_before": {
+          "clear": -2.8384242898939007,
+          "fog": -2.528402111437572,
+          "rain": -2.9539156097678614,
+          "snow": 7.473677711144006,
+          "night": -5.463738457700622
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -19.89318686844196,
+          "fog": 9.295376059885243,
+          "rain": 10.9826420967496,
+          "snow": 22.404605006085667,
+          "night": 0.837452096308902
+        },
+        "new_domain": "snow",
+        "new_domain_adaptation_gain": 7.473677711144006
+      },
+      {
+        "stage": "gsmf-seed2-E",
+        "after_minus_before": {
+          "clear": 6.878003064495502,
+          "fog": 0.3705341334971166,
+          "rain": -4.102339175971522,
+          "snow": -10.777184779839153,
+          "night": 32.733651269517736
+        },
+        "cumulative_after_minus_Source": {
+          "clear": -13.015183803946456,
+          "fog": 9.66591019338236,
+          "rain": 6.880302920778078,
+          "snow": 11.627420226246514,
+          "night": 33.57110336582664
+        },
+        "new_domain": "night",
+        "new_domain_adaptation_gain": 32.733651269517736
+      }
+    ],
+    "old_domain_forgetting": {
+      "clear": {
+        "reference_stage": "source",
+        "signed_forgetting": 13.015183803946456
+      },
+      "fog": {
+        "reference_stage": "gsmf-seed2-C",
+        "signed_forgetting": 2.1578679779404553
+      },
+      "rain": {
+        "reference_stage": "gsmf-seed2-C",
+        "signed_forgetting": 7.056254785739384
+      },
+      "snow": {
+        "reference_stage": "gsmf-seed2-D",
+        "signed_forgetting": 10.777184779839153
+      }
+    },
+    "old_domain_mean_forgetting": 8.251622836866362,
+    "final_five_real_domain_mean": 50.05833699090488
+  }
+}

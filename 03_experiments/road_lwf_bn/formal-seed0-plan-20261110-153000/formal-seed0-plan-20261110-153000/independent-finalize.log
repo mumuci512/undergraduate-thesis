@@ -1,0 +1,30 @@
+PASS independent fixture: GT rows/pred cols, ignore255, absent and prediction-only classes
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/models/builder.py:36: UserWarning: ``build_loss`` would be deprecated soon, please use ``mmseg.registry.MODELS.build()`` 
+  warnings.warn('``build_loss`` would be deprecated soon, please use '
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/models/losses/cross_entropy_loss.py:249: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+Verified source clear 500 71.50872218134401
+Verified source fog005 500 69.01182332276636
+Verified source fog010 500 65.26889548563445
+Verified source fog020 500 57.14930243918679
+Verified source acdc 100 49.60968798189637
+Verified ft clear 500 54.2915416984173
+Verified ft fog005 500 53.97915906545119
+Verified ft fog010 500 51.06254254998668
+Verified ft fog020 500 44.82802149763599
+Verified ft acdc 100 62.306646392978735
+Verified gsmf clear 500 55.20780120809538
+Verified gsmf fog005 500 54.67557715207517
+Verified gsmf fog010 500 51.78728210123482
+Verified gsmf fog020 500 45.66214587782727
+Verified gsmf acdc 100 63.03037335204614
+Verified lwf clear 500 52.0610492279663
+Verified lwf fog005 500 51.107821065537784
+Verified lwf fog010 500 47.891917518499355
+Verified lwf fog020 500 41.5537968345017
+Verified lwf acdc 100 59.787712521752994
+Verified gsmf_teacher_bn clear 500 52.28698683151945
+Verified gsmf_teacher_bn fog005 500 51.267006284782845
+Verified gsmf_teacher_bn fog010 500 48.076234767993526
+Verified gsmf_teacher_bn fog020 500 42.07345599192609
+Verified gsmf_teacher_bn acdc 100 58.7810773642044

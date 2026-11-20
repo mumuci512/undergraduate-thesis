@@ -1,0 +1,19 @@
+ROOT /home/ysheng4/research/segformer_b5_p0_20261116
+GPU NVIDIA GeForce RTX 3080, 20480 MiB, 823 MiB, 1 %
+
+PROCESSES 227 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+267 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+3095 /home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python -
+
+DISK Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  233G  724G  25% /
+
+DATA_LINK /home/ysheng4/research/segformer_b5_p0_20261116/data/acdc /home/ysheng4/research/GSMF-RS-DIL/data/acdc
+DATA_LINK /home/ysheng4/research/segformer_b5_p0_20261116/data/acdc_night_step5_20261111-140000 /home/ysheng4/research/GSMF-RS-DIL/data/acdc_night_step5_20261111-140000
+DATA_LINK /home/ysheng4/research/segformer_b5_p0_20261116/data/acdc_rain_step3_20261110-180543 /home/ysheng4/research/GSMF-RS-DIL/data/acdc_rain_step3_20261110-180543
+DATA_LINK /home/ysheng4/research/segformer_b5_p0_20261116/data/acdc_snow_step5_20261111-140000 /home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000
+DATA_LINK /home/ysheng4/research/segformer_b5_p0_20261116/data/cityscapes /home/ysheng4/research/GSMF-RS-DIL/data/cityscapes
+RAW [('cityscapes.cookies', 211), ('gt_trainval.zip', 133426176), ('leftImg8bit_trainvaltest_foggy.zip', 31226361906), ('gtFine_trainvaltest.zip', 252567705), ('rgb_anon_trainvaltest.zip', 16742344108), ('leftImg8bit_trainvaltest.zip', 11592327197)]
+ARCHIVE /home/ysheng4/research/GSMF-RS-DIL/data/road_raw/rgb_anon_trainvaltest.zip 16742344108
+TEST_IMAGES 2000 EXTRACTED_BYTES 3725828062
+EXAMPLES ['rgb_anon/fog/test/GP020478/GP020478_frame_000001_rgb_anon.png', 'rgb_anon/fog/test/GP020478/GP020478_frame_000011_rgb_anon.png']

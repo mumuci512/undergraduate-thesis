@@ -1,0 +1,215 @@
+{
+  "migrated_at": "2026-11-16T13:41:02.716116+00:00",
+  "source": "/home/ysheng4/research/GSMF-RS-DIL/experiments/segformer_b5_p0_20261116",
+  "destination": "/home/ysheng4/research/segformer_b5_p0_20261116",
+  "original_file_count": 48,
+  "all_original_files_byte_identical_after_move": true,
+  "original_files": {
+    "EVIDENCE_MANIFEST.json": {
+      "bytes": 6136,
+      "sha256": "738da53cc0fdc64a1d6cd2729d1421f88510c9e2f2cd3d0f21da18a1933ff595"
+    },
+    "source_C_confusion.csv": {
+      "bytes": 1662,
+      "sha256": "45090d686ab8b2bed7844543387d5310bcf3385584d352878ab4481fbf3249db"
+    },
+    "effective_probe_config.json": {
+      "bytes": 590,
+      "sha256": "ff45f031b4886fecf8d0e96397f47cd66948dbace39facb908d7e102d398c9f7"
+    },
+    "source_state_check.json": {
+      "bytes": 280,
+      "sha256": "23fa90e390c048b9e5eeb6f0e4f4057cdef942e0c3d2fcbc74bc706625e47f62"
+    },
+    "source_B_confusion.csv": {
+      "bytes": 1511,
+      "sha256": "1154827d34d55905e39deb11c69c58b78ba3551ac709a4e63d1bb92647bf4f0a"
+    },
+    "source_D_confusion.csv": {
+      "bytes": 1605,
+      "sha256": "9b5f1a0a1109c233e8b3f02a25f57d3b939e5903592a8ad7ff6fac6c295529e6"
+    },
+    "source_cityscapes_official.pth": {
+      "bytes": 328290585,
+      "sha256": "87a052ecf2a4913dae3a0561a95a4c6c8f603d84f2706228125f51990b4687e1"
+    },
+    "source_A_confusion.csv": {
+      "bytes": 1947,
+      "sha256": "6381cdfd9d2da0d901176fab8a998c4191d813a1e2ff754ce16764cff5008447"
+    },
+    "source_A_confusion.npy": {
+      "bytes": 3016,
+      "sha256": "e4a745c76b714640378b169b33af4bd4391443588b672b529d4a65f73f274c7f"
+    },
+    "source_D_confusion.npy": {
+      "bytes": 3016,
+      "sha256": "61af152b8a2edef0f3bc62f8d16276a6e8b2087ba23842082501dacad79678d5"
+    },
+    "source_B_confusion.npy": {
+      "bytes": 3016,
+      "sha256": "9f755a715928c373c7dbf292d9eebec015ff8a03ad8e27802104fc3f8ea019fe"
+    },
+    "source_eval_resolved.py": {
+      "bytes": 8202,
+      "sha256": "ebf6e7cef7a6cee375ffb1ec4e762140b344e5eb0eece6d3a561986071aee863"
+    },
+    "environment.json": {
+      "bytes": 655,
+      "sha256": "f0bb72bbace7c9db3e3fa05e38808da2ce1f963bd8196ff1d858eeb32faec58e"
+    },
+    "official_resolved.py": {
+      "bytes": 8183,
+      "sha256": "54c5bcdd1911551cd87d21649f7b2ca62a3ba4f97740499e460fff6633e2e789"
+    },
+    "run_b5_p0.py": {
+      "bytes": 12503,
+      "sha256": "ffbf657c378ef2970cfd8dc7d617a9ae516dfe2af7bf7b77e410e6fe776fc5e7"
+    },
+    "checkpoint_meta_config.py": {
+      "bytes": 6066,
+      "sha256": "d05f9a2edb2fd42fbe7f2b3c660c65e42ac8079c938199f14dc1e0f03069a553"
+    },
+    "source_E_confusion.csv": {
+      "bytes": 1684,
+      "sha256": "43729658b6a1f66620bbe06c0dc699b88d7a84e7407f9133af344cf75cafd361"
+    },
+    "source_C_confusion.npy": {
+      "bytes": 3016,
+      "sha256": "9a8aca52b40b13aada1b3628c6954578b4b8a6c86e4e2667dfedeacb812590f1"
+    },
+    "data_audit.json": {
+      "bytes": 57831,
+      "sha256": "67482ce253a6f433cb8e050bfc348b7e302b8edf17dd9e13daf1fad9667c95ec"
+    },
+    "source_E_confusion.npy": {
+      "bytes": 3016,
+      "sha256": "3edc2347ad2cae57aa83d596f48c6c898c77af899e6828f727380c080491d7ad"
+    },
+    "prepare.json": {
+      "bytes": 3243,
+      "sha256": "530ca3b2fa3c1955b52432345c4d2356dd6db84af27167b11d1630f44b410a16"
+    },
+    "source_results.json": {
+      "bytes": 4741,
+      "sha256": "c83755b1bddea6f8f2c9337aa43d6c17340e3919f0aa0cdf6c1fc3620587882a"
+    },
+    "checkpoint_meta.json": {
+      "bytes": 4931,
+      "sha256": "c28ea9360feac9ce5d91ca854b1bcd0c4bf866422806eb22194809b92d6e700d"
+    },
+    "pip_freeze.txt": {
+      "bytes": 1570,
+      "sha256": "bd7b71f2122b56e5cd22dad0688683409b5c5af3f45b2cfd7ca40f9c4b9f4093"
+    },
+    "runtime_source/data_preprocessor.py": {
+      "bytes": 6247,
+      "sha256": "976dbac7c4aba08883b5d3fa024dcdf4b44bad4ad2765ce271965e187c5b4fa9"
+    },
+    "runtime_source/mit.py": {
+      "bytes": 17436,
+      "sha256": "b4f9b2a53a3f41983ab07810bfa6eda885a0ebfc6e36a489acb78870d1dfbd57"
+    },
+    "runtime_source/segformer_head.py": {
+      "bytes": 2038,
+      "sha256": "47a503a6178ea9ee3cf4793b65aa5e4dd0308f05734db1e7bb16a95fdfc77b1b"
+    },
+    "runtime_source/encoder_decoder.py": {
+      "bytes": 14867,
+      "sha256": "27f954c16ec1a84ac7df7d551ae19ffa1886f338c6700f4bf9363eb5be7afd19"
+    },
+    "train_amp/steps.jsonl": {
+      "bytes": 488,
+      "sha256": "f16ce1847e1fcf1ba2db5cf3ee9d9ee836ffb21180c1243b311af61a0ffb6ffa"
+    },
+    "train_amp/resolved.py": {
+      "bytes": 8202,
+      "sha256": "ebf6e7cef7a6cee375ffb1ec4e762140b344e5eb0eece6d3a561986071aee863"
+    },
+    "manifests/B_train_debug.jsonl": {
+      "bytes": 3461,
+      "sha256": "c932f3aed401663ba1a95e1b63589653e6e52a21d0299ee8db1a91ee4a9e7b34"
+    },
+    "manifests/B_train.jsonl": {
+      "bytes": 339208,
+      "sha256": "3b81ee477c5c6150faae84e65789648b9892410da16b56c5931fa102e82d9bd5"
+    },
+    "manifests/B_val.jsonl": {
+      "bytes": 85245,
+      "sha256": "fea0e683557ff85bceb302d8934797a750498caee2e9a207d61900f6294fe5a8"
+    },
+    "manifests/D_train.jsonl": {
+      "bytes": 374667,
+      "sha256": "a493e4ea9c1db455451e64da184b9de1f87d132fea15f5c7431932186910cd63"
+    },
+    "manifests/E_val.jsonl": {
+      "bytes": 98480,
+      "sha256": "b571d58802b78744c6254bdbfd09f97b06386b4c5c21708e359186ba31bb2733"
+    },
+    "manifests/D_val.jsonl": {
+      "bytes": 92896,
+      "sha256": "01c01fbb72e56251d1caf339818296b02df914543bc024ff735ecd38f01534eb"
+    },
+    "manifests/A_val_debug.jsonl": {
+      "bytes": 3538,
+      "sha256": "a806309c49850f1cbc8e90e20bdaf1b3fadd5fceff746a0e678c1db793e1e519"
+    },
+    "manifests/B_val_debug.jsonl": {
+      "bytes": 3375,
+      "sha256": "42427cd8e34425e418d8a9e2e12df2db27d23275d250784c8307a40904878b8a"
+    },
+    "manifests/A_val.jsonl": {
+      "bytes": 449272,
+      "sha256": "249f53ddbebef79fdb9a4a9b852d2216c43274404b3081b47f632cdc742ff9a0"
+    },
+    "manifests/C_train.jsonl": {
+      "bytes": 372731,
+      "sha256": "ebcca0abe003242d6ba18bed1c6da67c6c6e4dc3251d216c7ddc2c81238f28f7"
+    },
+    "manifests/E_train.jsonl": {
+      "bytes": 376222,
+      "sha256": "f77325ec2095c500703cd1df9807b44fd9c8579946d1234574cff455368197d6"
+    },
+    "manifests/A_train_debug.jsonl": {
+      "bytes": 3558,
+      "sha256": "7231d1c578d9ac2523ab0a499440b713980263306f53c74b365e8d892090ee7a"
+    },
+    "manifests/A_train.jsonl": {
+      "bytes": 2674190,
+      "sha256": "01ad6b2cf1e87c935c234b214f1d99047bac0936b72bf75659227b60291e14ca"
+    },
+    "manifests/C_val.jsonl": {
+      "bytes": 92614,
+      "sha256": "1bbc241f254cbe93169822f330b66c040acea83f3f727016dc97e9f6f36ef5e5"
+    },
+    "train_amp_scale256/steps.jsonl": {
+      "bytes": 24357,
+      "sha256": "9af9e45f171ff9812709eb7fedea35ec6417ba556a6cae0ee383f353b8b55255"
+    },
+    "train_amp_scale256/smoke_200.pth": {
+      "bytes": 328280089,
+      "sha256": "b990a3c81a944e19f1bdbfd7281995756bb63e62e0f183e982d024f9a49531a4"
+    },
+    "train_amp_scale256/result.json": {
+      "bytes": 1023,
+      "sha256": "b25b2b4deb7569a6430e0247c8ac6864da31f4810034ff972cd5d3b894d2434b"
+    },
+    "train_amp_scale256/resolved.py": {
+      "bytes": 8202,
+      "sha256": "ebf6e7cef7a6cee375ffb1ec4e762140b344e5eb0eece6d3a561986071aee863"
+    }
+  },
+  "source_removed": true,
+  "original_archive_moved": true,
+  "source_weight_sha256": "87a052ecf2a4913dae3a0561a95a4c6c8f603d84f2706228125f51990b4687e1",
+  "smoke_weight_sha256": "b990a3c81a944e19f1bdbfd7281995756bb63e62e0f183e982d024f9a49531a4",
+  "manifest_pairs_checked": 5497,
+  "dataset_symlinks": {
+    "acdc": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc",
+    "acdc_night_step5_20261111-140000": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_night_step5_20261111-140000",
+    "acdc_rain_step3_20261110-180543": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_rain_step3_20261110-180543",
+    "acdc_snow_step5_20261111-140000": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_snow_step5_20261111-140000",
+    "cityscapes": "/home/ysheng4/research/GSMF-RS-DIL/data/cityscapes"
+  },
+  "preserved_original_evidence": "/home/ysheng4/research/segformer_b5_p0_20261116/provenance",
+  "training_or_evaluation_rerun": false
+}

@@ -1,0 +1,1 @@
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python /home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py eval --stage lwf --checkpoint /home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/lwf/iter_4000.pth --domain B --work-dir /home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-acdc

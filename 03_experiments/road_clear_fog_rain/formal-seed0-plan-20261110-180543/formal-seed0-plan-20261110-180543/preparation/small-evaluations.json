@@ -1,0 +1,169 @@
+{
+  "status": "PASS",
+  "cells": 18,
+  "note": "Small actual validation samples only; no formal effectiveness claim or complete formal cell.",
+  "rows": [
+    {
+      "method": "ft",
+      "condition": "clear",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-ft-clear",
+      "images": 2,
+      "seconds": 3.161890454997774,
+      "state_unchanged": true,
+      "evaluation_sha256": "66527f957ece936be638ad90aa45bf631f030037d5649ade1b9f4c90a03cf50e"
+    },
+    {
+      "method": "ft",
+      "condition": "fog005",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-ft-fog005",
+      "images": 2,
+      "seconds": 2.0394953939830884,
+      "state_unchanged": true,
+      "evaluation_sha256": "82d0798171a8043a32f0e6b48ee2973499f9ee34d45a975748c6a3cde6d482c5"
+    },
+    {
+      "method": "ft",
+      "condition": "fog010",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-ft-fog010",
+      "images": 2,
+      "seconds": 1.9320019879960455,
+      "state_unchanged": true,
+      "evaluation_sha256": "1e0569d2dc02dd58120ed064359c344c34600bbc7ab188de8e5510c299f43018"
+    },
+    {
+      "method": "ft",
+      "condition": "fog020",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-ft-fog020",
+      "images": 2,
+      "seconds": 2.0072169869963545,
+      "state_unchanged": true,
+      "evaluation_sha256": "fa0011da00a07d15b1c56ab0757f912092704fc991246e270c4ee52fdca8bfaa"
+    },
+    {
+      "method": "ft",
+      "condition": "fog",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-ft-fog",
+      "images": 4,
+      "seconds": 3.0251816360105295,
+      "state_unchanged": true,
+      "evaluation_sha256": "74f9af43a8b0adafc32454059f53c41ff758df6a28aeb0b107719fe46f2647e1"
+    },
+    {
+      "method": "ft",
+      "condition": "rain",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-ft-rain",
+      "images": 4,
+      "seconds": 2.9301019520207774,
+      "state_unchanged": true,
+      "evaluation_sha256": "5018ece055b2f62a1beb76dc752ce46e2770b5ea27723d92ff636cbf32452e39"
+    },
+    {
+      "method": "gsmf",
+      "condition": "clear",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-gsmf-clear",
+      "images": 2,
+      "seconds": 1.9795867869979702,
+      "state_unchanged": true,
+      "evaluation_sha256": "754cad13044b21cee174353cdca5960773973c9e49d9ab45bb89b7c64f9616fb"
+    },
+    {
+      "method": "gsmf",
+      "condition": "fog005",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-gsmf-fog005",
+      "images": 2,
+      "seconds": 1.9208680060110055,
+      "state_unchanged": true,
+      "evaluation_sha256": "fb65963f84e13e95f3fcc96dd37b22d7c2510bd2fb4690fe8675115520e09f41"
+    },
+    {
+      "method": "gsmf",
+      "condition": "fog010",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-gsmf-fog010",
+      "images": 2,
+      "seconds": 1.8014899230038282,
+      "state_unchanged": true,
+      "evaluation_sha256": "a97e02bc3ca9fe8a86a6e5cf5ac00209cc883bf07b980082c97825724a2a648c"
+    },
+    {
+      "method": "gsmf",
+      "condition": "fog020",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-gsmf-fog020",
+      "images": 2,
+      "seconds": 2.170766947994707,
+      "state_unchanged": true,
+      "evaluation_sha256": "b982ba4ab53adf96b2c06a097c702658be93b25a210f9482b94a67c8c3a267ac"
+    },
+    {
+      "method": "gsmf",
+      "condition": "fog",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-gsmf-fog",
+      "images": 4,
+      "seconds": 2.727927889995044,
+      "state_unchanged": true,
+      "evaluation_sha256": "93b4de89cf089de25c6b0092071eb9aafa7d91038ac7d19fe963d79718aa0a61"
+    },
+    {
+      "method": "gsmf",
+      "condition": "rain",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-gsmf-rain",
+      "images": 4,
+      "seconds": 2.9050364949798677,
+      "state_unchanged": true,
+      "evaluation_sha256": "394940f8b25a4283abc9d3aaab78740567b25a4226c18140651ebdb84077ffbd"
+    },
+    {
+      "method": "lwf",
+      "condition": "clear",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-lwf-clear",
+      "images": 2,
+      "seconds": 1.814451079000719,
+      "state_unchanged": true,
+      "evaluation_sha256": "063c4f6f36d57a5f124b7b84d0b8311e0a1c3773dcdaaaf8bfa41767df27ba93"
+    },
+    {
+      "method": "lwf",
+      "condition": "fog005",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-lwf-fog005",
+      "images": 2,
+      "seconds": 1.8063035889936145,
+      "state_unchanged": true,
+      "evaluation_sha256": "303abc33bad0e102b1cce1d4552a215b0f9ad1e03cbeaf37ad49e4802f33359b"
+    },
+    {
+      "method": "lwf",
+      "condition": "fog010",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-lwf-fog010",
+      "images": 2,
+      "seconds": 1.8492936130205635,
+      "state_unchanged": true,
+      "evaluation_sha256": "57f019492d12384d26999a38c03194a7795a9d11e2cabad8f6337e429df5c0b6"
+    },
+    {
+      "method": "lwf",
+      "condition": "fog020",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-lwf-fog020",
+      "images": 2,
+      "seconds": 1.8095691879861988,
+      "state_unchanged": true,
+      "evaluation_sha256": "208022e5825cd1be48b6d9ee309969010db1ba75b2250f1ae1c35e11e74023fe"
+    },
+    {
+      "method": "lwf",
+      "condition": "fog",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-lwf-fog",
+      "images": 4,
+      "seconds": 2.813600163004594,
+      "state_unchanged": true,
+      "evaluation_sha256": "1837f15517e61591358e1ee7cb9db82821db657e1c5ace030d47dd3083d4d531"
+    },
+    {
+      "method": "lwf",
+      "condition": "rain",
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-small-lwf-rain",
+      "images": 4,
+      "seconds": 2.794668279995676,
+      "state_unchanged": true,
+      "evaluation_sha256": "7db38e429079c5dcb3faab49c095f41f1d2c118719be282e169c139e9c9684d6"
+    }
+  ]
+}

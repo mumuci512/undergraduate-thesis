@@ -1,0 +1,76 @@
+{
+  "repository": "https://github.com/mumuci512/GSMF-RS-DIL",
+  "current_branch": "repro/isprs",
+  "current_head": "315f273929c09ffa991a1f1d6f95e304641386ce",
+  "tracked_worktree_clean_at_start": true,
+  "remote_recovery_commit_verified": true,
+  "training_base_commit": "e141e523e86f98f772ee787bb2aa95272f38e4fe",
+  "phases": [
+    {
+      "phase": "source_initial_0_to_40000",
+      "run_id": "formal-seed0-20261108-001",
+      "training_base_commit": "e141e523e86f98f772ee787bb2aa95272f38e4fe",
+      "training_branch": "未核实：provenance未单独记录分支；当前分支仅作为当前状态记录",
+      "dirty_at_training": true,
+      "fingerprint": "1e2dc28ddf4a319e188680cfd9bfb76f972504b145d35cfb978ff1cb3feb256c",
+      "snapshot_scope": 66,
+      "recovery_commit": "315f273929c09ffa991a1f1d6f95e304641386ce",
+      "evidence": [
+        "runs/formal-seed0-20261108-001/provenance.json",
+        "runs/formal-seed0-20261108-001/git-status.txt",
+        "version/training-snapshots.json"
+      ],
+      "limitation": "FT/GSMF share recovery-pipeline startup snapshot; no independent whole-source hash at each subprocess start"
+    },
+    {
+      "phase": "source_resume_40000_to_60000",
+      "run_id": "formal-seed0-20261108-resume01",
+      "training_base_commit": "e141e523e86f98f772ee787bb2aa95272f38e4fe",
+      "training_branch": "未核实：provenance未单独记录分支；当前分支仅作为当前状态记录",
+      "dirty_at_training": true,
+      "fingerprint": "1e2dc28ddf4a319e188680cfd9bfb76f972504b145d35cfb978ff1cb3feb256c",
+      "snapshot_scope": 66,
+      "recovery_commit": "315f273929c09ffa991a1f1d6f95e304641386ce",
+      "evidence": [
+        "runs/formal-seed0-20261108-resume01/provenance.json",
+        "runs/formal-seed0-20261108-resume01/git-status.txt",
+        "version/training-snapshots.json"
+      ],
+      "limitation": "FT/GSMF share recovery-pipeline startup snapshot; no independent whole-source hash at each subprocess start"
+    },
+    {
+      "phase": "FT",
+      "run_id": "formal-seed0-20261108-resume01",
+      "training_base_commit": "e141e523e86f98f772ee787bb2aa95272f38e4fe",
+      "training_branch": "未核实：provenance未单独记录分支；当前分支仅作为当前状态记录",
+      "dirty_at_training": true,
+      "fingerprint": "1e2dc28ddf4a319e188680cfd9bfb76f972504b145d35cfb978ff1cb3feb256c",
+      "snapshot_scope": 66,
+      "recovery_commit": "315f273929c09ffa991a1f1d6f95e304641386ce",
+      "evidence": [
+        "runs/formal-seed0-20261108-resume01/provenance.json",
+        "runs/formal-seed0-20261108-resume01/git-status.txt",
+        "version/training-snapshots.json"
+      ],
+      "limitation": "FT/GSMF share recovery-pipeline startup snapshot; no independent whole-source hash at each subprocess start"
+    },
+    {
+      "phase": "GSMF",
+      "run_id": "formal-seed0-20261108-resume01",
+      "training_base_commit": "e141e523e86f98f772ee787bb2aa95272f38e4fe",
+      "training_branch": "未核实：provenance未单独记录分支；当前分支仅作为当前状态记录",
+      "dirty_at_training": true,
+      "fingerprint": "1e2dc28ddf4a319e188680cfd9bfb76f972504b145d35cfb978ff1cb3feb256c",
+      "snapshot_scope": 66,
+      "recovery_commit": "315f273929c09ffa991a1f1d6f95e304641386ce",
+      "evidence": [
+        "runs/formal-seed0-20261108-resume01/provenance.json",
+        "runs/formal-seed0-20261108-resume01/git-status.txt",
+        "version/training-snapshots.json"
+      ],
+      "limitation": "FT/GSMF share recovery-pipeline startup snapshot; no independent whole-source hash at each subprocess start"
+    }
+  ],
+  "code_and_document_upload_commit": "315f273929c09ffa991a1f1d6f95e304641386ce",
+  "upload_commit_is_training_time_head": false
+}

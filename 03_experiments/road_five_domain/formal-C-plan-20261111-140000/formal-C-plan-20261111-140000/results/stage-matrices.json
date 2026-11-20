@@ -1,0 +1,166 @@
+{
+  "ft-seed0-AEDCB": [
+    {
+      "stage": "source",
+      "values": {
+        "clear": 71.50872218134401,
+        "fog": 49.60968798189637,
+        "rain": 38.59910080251736,
+        "snow": 35.48217472613336,
+        "night": 6.362446360346152
+      },
+      "seen_domains": [
+        "clear"
+      ],
+      "seen_domain_equal_mean": 71.50872218134401
+    },
+    {
+      "stage": "ft-seed0-E",
+      "values": {
+        "clear": 55.15889040969711,
+        "fog": 50.96356213065858,
+        "rain": 37.69895468044394,
+        "snow": 35.37616816091641,
+        "night": 38.37509862721212
+      },
+      "seen_domains": [
+        "clear",
+        "night"
+      ],
+      "seen_domain_equal_mean": 46.76699451845461
+    },
+    {
+      "stage": "ft-seed0-D",
+      "values": {
+        "clear": 56.5168382931609,
+        "fog": 57.668126222794186,
+        "rain": 50.06475107872963,
+        "snow": 58.35398063679302,
+        "night": 10.907363795490793
+      },
+      "seen_domains": [
+        "clear",
+        "night",
+        "snow"
+      ],
+      "seen_domain_equal_mean": 41.92606090848157
+    },
+    {
+      "stage": "ft-seed0-C",
+      "values": {
+        "clear": 57.90484303728968,
+        "fog": 62.485269381422675,
+        "rain": 55.19640432077663,
+        "snow": 55.15304371979636,
+        "night": 16.817852060256083
+      },
+      "seen_domains": [
+        "clear",
+        "night",
+        "snow",
+        "rain"
+      ],
+      "seen_domain_equal_mean": 46.26803578452969
+    },
+    {
+      "stage": "ft-seed0-B",
+      "values": {
+        "clear": 51.52662070360457,
+        "fog": 64.94460253063126,
+        "rain": 51.26633883932991,
+        "snow": 52.41095549855695,
+        "night": 18.59163629646495
+      },
+      "seen_domains": [
+        "clear",
+        "night",
+        "snow",
+        "rain",
+        "fog"
+      ],
+      "seen_domain_equal_mean": 47.74803077371753
+    }
+  ],
+  "gsmf-seed0-AEDCB": [
+    {
+      "stage": "source",
+      "values": {
+        "clear": 71.50872218134401,
+        "fog": 49.60968798189637,
+        "rain": 38.59910080251736,
+        "snow": 35.48217472613336,
+        "night": 6.362446360346152
+      },
+      "seen_domains": [
+        "clear"
+      ],
+      "seen_domain_equal_mean": 71.50872218134401
+    },
+    {
+      "stage": "gsmf-seed0-E",
+      "values": {
+        "clear": 53.04012489902885,
+        "fog": 51.94252548560565,
+        "rain": 38.84393741776492,
+        "snow": 37.41842505744355,
+        "night": 36.33562228655385
+      },
+      "seen_domains": [
+        "clear",
+        "night"
+      ],
+      "seen_domain_equal_mean": 44.68787359279135
+    },
+    {
+      "stage": "gsmf-seed0-D",
+      "values": {
+        "clear": 56.83744536196431,
+        "fog": 54.93037603090705,
+        "rain": 49.71469573238779,
+        "snow": 56.88263086607391,
+        "night": 10.208578702552089
+      },
+      "seen_domains": [
+        "clear",
+        "night",
+        "snow"
+      ],
+      "seen_domain_equal_mean": 41.309551643530106
+    },
+    {
+      "stage": "gsmf-seed0-C",
+      "values": {
+        "clear": 58.05823704874884,
+        "fog": 61.86527199370405,
+        "rain": 54.29030674728946,
+        "snow": 53.8198324622705,
+        "night": 13.761719593458448
+      },
+      "seen_domains": [
+        "clear",
+        "night",
+        "snow",
+        "rain"
+      ],
+      "seen_domain_equal_mean": 44.98252396294181
+    },
+    {
+      "stage": "gsmf-seed0-B",
+      "values": {
+        "clear": 55.109251463037765,
+        "fog": 65.76077117567065,
+        "rain": 52.34355360828475,
+        "snow": 53.26299978913011,
+        "night": 17.41467734358867
+      },
+      "seen_domains": [
+        "clear",
+        "night",
+        "snow",
+        "rain",
+        "fog"
+      ],
+      "seen_domain_equal_mean": 48.77825067594239
+    }
+  ]
+}

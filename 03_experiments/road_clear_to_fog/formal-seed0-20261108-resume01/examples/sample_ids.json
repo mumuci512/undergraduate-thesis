@@ -1,0 +1,38 @@
+[
+  {
+    "split": "A_train",
+    "id": "A/train/aachen/aachen_000000_000019_leftImg8bit.png",
+    "image_home": "/home/ysheng4/research/GSMF-RS-DIL/data/cityscapes/leftImg8bit/train/aachen/aachen_000000_000019_leftImg8bit.png",
+    "label_home": "/home/ysheng4/research/GSMF-RS-DIL/data/cityscapes/gtFine/train/aachen/aachen_000000_000019_gtFine_labelIds.png",
+    "bundle_preview": "examples/A_train-image-label-overlay.png",
+    "selection_evidence": "tools/road/audit_data.py: first successfully audited record",
+    "kind": "RGB, ground truth, ground-truth overlay; no source/FT/GSMF comparison"
+  },
+  {
+    "split": "A_val",
+    "id": "A/val/frankfurt/frankfurt_000000_000294_leftImg8bit.png",
+    "image_home": "/home/ysheng4/research/GSMF-RS-DIL/data/cityscapes/leftImg8bit/val/frankfurt/frankfurt_000000_000294_leftImg8bit.png",
+    "label_home": "/home/ysheng4/research/GSMF-RS-DIL/data/cityscapes/gtFine/val/frankfurt/frankfurt_000000_000294_gtFine_labelIds.png",
+    "bundle_preview": "examples/A_val-image-label-overlay.png",
+    "selection_evidence": "tools/road/audit_data.py: first successfully audited record",
+    "kind": "RGB, ground truth, ground-truth overlay; no source/FT/GSMF comparison"
+  },
+  {
+    "split": "B_train",
+    "id": "B/train/GOPR0475/GOPR0475_frame_000041_rgb_anon.png",
+    "image_home": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc/rgb_anon/fog/train/GOPR0475/GOPR0475_frame_000041_rgb_anon.png",
+    "label_home": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc/gt/fog/train/GOPR0475/GOPR0475_frame_000041_gt_labelTrainIds.png",
+    "bundle_preview": "examples/B_train-image-label-overlay.png",
+    "selection_evidence": "tools/road/audit_data.py: first successfully audited record",
+    "kind": "RGB, ground truth, ground-truth overlay; no source/FT/GSMF comparison"
+  },
+  {
+    "split": "B_val",
+    "id": "B/val/GOPR0476/GOPR0476_frame_000761_rgb_anon.png",
+    "image_home": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc/rgb_anon/fog/val/GOPR0476/GOPR0476_frame_000761_rgb_anon.png",
+    "label_home": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc/gt/fog/val/GOPR0476/GOPR0476_frame_000761_gt_labelTrainIds.png",
+    "bundle_preview": "examples/B_val-image-label-overlay.png",
+    "selection_evidence": "tools/road/audit_data.py: first successfully audited record",
+    "kind": "RGB, ground truth, ground-truth overlay; no source/FT/GSMF comparison"
+  }
+]

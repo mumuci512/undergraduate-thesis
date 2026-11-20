@@ -1,0 +1,260 @@
+{
+  "retrieved_at_utc": "2026-11-16T12:47:55.251987+00:00",
+  "sources": [
+    {
+      "file": "mmseg_v1.2.1_segformer_README.md",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/segformer/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/segformer/README.md",
+      "status": 200,
+      "bytes": 14481,
+      "sha256": "ff274543b1b98d074ea89032083b9d40bd9be462ffe9b40cd251e7018a73dde0"
+    },
+    {
+      "file": "segformer_mit-b5_8xb1-160k_cityscapes-1024x1024.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/segformer/segformer_mit-b5_8xb1-160k_cityscapes-1024x1024.py",
+      "resolved_url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/segformer/segformer_mit-b5_8xb1-160k_cityscapes-1024x1024.py",
+      "status": 200,
+      "bytes": 401,
+      "sha256": "f4f279fc5a38692c7e54a9d56c10de7178ab8ed82aa817d94744389be135d0d4"
+    },
+    {
+      "file": "segformer_mit-b0_8xb1-160k_cityscapes-1024x1024.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/segformer/segformer_mit-b0_8xb1-160k_cityscapes-1024x1024.py",
+      "resolved_url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/segformer/segformer_mit-b0_8xb1-160k_cityscapes-1024x1024.py",
+      "status": 200,
+      "bytes": 1315,
+      "sha256": "18ac51d0ed0203a7047976bb9146f37cd607b21b799277944821838cfe2913fb"
+    },
+    {
+      "file": "base_segformer_mit-b0.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/_base_/models/segformer_mit-b0.py",
+      "resolved_url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/_base_/models/segformer_mit-b0.py",
+      "status": 200,
+      "bytes": 1218,
+      "sha256": "dbc31b520e8ed97cbd11a8cac0c1e8729b68da9796a3b240f38b0a94346c205b"
+    },
+    {
+      "file": "base_cityscapes_1024x1024.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/_base_/datasets/cityscapes_1024x1024.py",
+      "resolved_url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/_base_/datasets/cityscapes_1024x1024.py",
+      "status": 200,
+      "bytes": 995,
+      "sha256": "ed67f207a4abc5e6fd8d9548a645d04a136cbe4f076fcee17fe87708e706d53e"
+    },
+    {
+      "file": "base_cityscapes.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/_base_/datasets/cityscapes.py",
+      "resolved_url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/_base_/datasets/cityscapes.py",
+      "status": 200,
+      "bytes": 2190,
+      "sha256": "b56998aad232593078de8475c915d1cc29820fb1af98dfed636e214eee4c9358"
+    },
+    {
+      "file": "base_schedule_160k.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/_base_/schedules/schedule_160k.py",
+      "resolved_url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/_base_/schedules/schedule_160k.py",
+      "status": 200,
+      "bytes": 888,
+      "sha256": "f5e9b11cca9cd00b5dafa765c2845158509e8acf4dfcd57f19d8361272a53e72"
+    },
+    {
+      "file": "base_default_runtime.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/_base_/default_runtime.py",
+      "resolved_url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/configs/_base_/default_runtime.py",
+      "status": 200,
+      "bytes": 434,
+      "sha256": "2e8983e3e997b87d20d54a558540910c21006e5dc7b34fd793ac9edffb0a0f01"
+    },
+    {
+      "file": "mmseg_cityscapes_dataset.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/mmseg/datasets/cityscapes.py",
+      "resolved_url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/mmseg/datasets/cityscapes.py",
+      "status": 200,
+      "bytes": 1362,
+      "sha256": "83082071684f4f2e0ad1cd79644d288f8f9a5c2b0a89895fa604b59b14747d9f"
+    },
+    {
+      "file": "mmseg_mit2mmseg_converter.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/tools/model_converters/mit2mmseg.py",
+      "resolved_url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/tools/model_converters/mit2mmseg.py",
+      "status": 200,
+      "bytes": 3081,
+      "sha256": "a8d0e78c9c9bf88eebef32d822521dbf48f96f02b00776052f9f3dcc110c5e4a"
+    },
+    {
+      "file": "NVlabs_README.md",
+      "url": "https://raw.githubusercontent.com/NVlabs/SegFormer/master/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/NVlabs/SegFormer/master/README.md",
+      "status": 200,
+      "bytes": 4756,
+      "sha256": "cb3845da24a1c919edef5806ccfae251fa0a16ebd773bb036d2a3d287f9ae3a7"
+    },
+    {
+      "file": "NVlabs_b5_cityscapes.py",
+      "url": "https://raw.githubusercontent.com/NVlabs/SegFormer/master/local_configs/segformer/B5/segformer.b5.1024x1024.city.160k.py",
+      "resolved_url": "https://raw.githubusercontent.com/NVlabs/SegFormer/master/local_configs/segformer/B5/segformer.b5.1024x1024.city.160k.py",
+      "status": 200,
+      "bytes": 1748,
+      "sha256": "403c2c6e0f3dc9e18ac447e9a16e83d19ac35e77109d4a79ee18de9c10ce249a"
+    },
+    {
+      "file": "SATS_README.md",
+      "url": "https://raw.githubusercontent.com/QIU023/SATS_Continual_Semantic_Seg/master/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/QIU023/SATS_Continual_Semantic_Seg/master/README.md",
+      "status": 200,
+      "bytes": 7020,
+      "sha256": "74124ce268b9a0218cd1169613a44778d63e32d1f0da7c6eb8cdf37350f25d08"
+    },
+    {
+      "file": "SATS_argparser.py",
+      "url": "https://raw.githubusercontent.com/QIU023/SATS_Continual_Semantic_Seg/master/argparser.py",
+      "resolved_url": "https://raw.githubusercontent.com/QIU023/SATS_Continual_Semantic_Seg/master/argparser.py",
+      "status": 200,
+      "bytes": 19573,
+      "sha256": "bc1b2f1dda2d9e05ad47995cec711db8770cf75637075a7adf8f16660309aeaf"
+    },
+    {
+      "file": "SATS_run.py",
+      "url": "https://raw.githubusercontent.com/QIU023/SATS_Continual_Semantic_Seg/master/run.py",
+      "resolved_url": "https://raw.githubusercontent.com/QIU023/SATS_Continual_Semantic_Seg/master/run.py",
+      "status": 200,
+      "bytes": 21818,
+      "sha256": "e352c1979561ab5e5f1bd3d77cf15f588c44aa207461512601bce9e702faa5f2"
+    },
+    {
+      "file": "MILE_arxiv_v2.html",
+      "url": "https://arxiv.org/html/2605.03555v2",
+      "resolved_url": "https://arxiv.org/html/2605.03555v2",
+      "status": 200,
+      "bytes": 276303,
+      "sha256": "1da3357e4e7d3a4adf272acbd3a5b578c878506274cbb19e0530e64e0487a443"
+    },
+    {
+      "file": "MILE_arxiv_abstract.html",
+      "url": "https://arxiv.org/abs/2605.03555v2",
+      "resolved_url": "https://arxiv.org/abs/2605.03555v2",
+      "status": 200,
+      "bytes": 42323,
+      "sha256": "d0dcab757169a8c2b00d35b650047a62350ab989d9e4db6361aecdeb0795c09f"
+    },
+    {
+      "file": "SegFormer_arxiv.html",
+      "url": "https://arxiv.org/html/2105.15203",
+      "resolved_url": "https://arxiv.org/html/2105.15203",
+      "status": 200,
+      "bytes": 336745,
+      "sha256": "442fc0d5c1643a516399e295ff7eda5a1c086aa1fce79c9a88a461a33d2f6551"
+    },
+    {
+      "file": "official_cityscapes_training_log_first_line.json",
+      "url": "https://download.openmmlab.com/mmsegmentation/v0.5/segformer/segformer_mit-b5_8x1_1024x1024_160k_cityscapes/segformer_mit-b5_8x1_1024x1024_160k_cityscapes_20211206_072934.log.json",
+      "read_scope": "first JSONL line only; complete training metadata/config; training iterations not downloaded",
+      "bytes": 10286,
+      "sha256": "079c53f8ec10e448004b66bcd07209c152352373c5db91be30076758a52d8845",
+      "retrieved_at_utc": "2026-11-16T12:48:26.816697+00:00",
+      "derived_config_file": "official_cityscapes_training_config_20211206.py"
+    },
+    {
+      "file": "official_cityscapes_training_log_20211206.jsonl",
+      "url": "https://download.openmmlab.com/mmsegmentation/v0.5/segformer/segformer_mit-b5_8x1_1024x1024_160k_cityscapes/segformer_mit-b5_8x1_1024x1024_160k_cityscapes_20211206_072934.log.json",
+      "bytes": 619241,
+      "sha256": "33774bae61da161e989184f0339be3cb995e5d85df32dd385f69ef48781dcbda",
+      "retrieved_at_utc": "2026-11-16T13:00:52.227025+00:00"
+    },
+    {
+      "file": "version_v0.19.0_encoder_decoder.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v0.19.0/mmseg/models/segmentors/encoder_decoder.py",
+      "bytes": 10888,
+      "sha256": "911988eaaf0e5d3a1eddf5fe223697864e6ec7a5b0b37a378b0cd46adac8aea5",
+      "retrieved_at_utc": "2026-11-16T13:00:50.384530+00:00"
+    },
+    {
+      "file": "version_v0.19.0_mit.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v0.19.0/mmseg/models/backbones/mit.py",
+      "bytes": 15548,
+      "sha256": "5b44acc791b67782c86a895353dbf6611f25f28997af2d4fc21e940a1d4002b1",
+      "retrieved_at_utc": "2026-11-16T13:00:50.480403+00:00"
+    },
+    {
+      "file": "version_v0.19.0_embed.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v0.19.0/mmseg/models/utils/embed.py",
+      "bytes": 12216,
+      "sha256": "3f4e534cd7d5066adbd92c127040caa90cd362b53a7c1c1fb91f1297bc560f05",
+      "retrieved_at_utc": "2026-11-16T13:00:50.533922+00:00"
+    },
+    {
+      "file": "version_v0.19.0_segformer_head.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v0.19.0/mmseg/models/decode_heads/segformer_head.py",
+      "bytes": 2044,
+      "sha256": "6eecde578266baf50b90b754f478e00cc8a7283adef16b0badfe4e81f58fae97",
+      "retrieved_at_utc": "2026-11-16T13:00:50.532027+00:00"
+    },
+    {
+      "file": "version_v1.2.1_encoder_decoder.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/mmseg/models/segmentors/encoder_decoder.py",
+      "bytes": 14867,
+      "sha256": "27f954c16ec1a84ac7df7d551ae19ffa1886f338c6700f4bf9363eb5be7afd19",
+      "retrieved_at_utc": "2026-11-16T13:00:50.571859+00:00"
+    },
+    {
+      "file": "version_v1.2.1_mit.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/mmseg/models/backbones/mit.py",
+      "bytes": 17436,
+      "sha256": "b4f9b2a53a3f41983ab07810bfa6eda885a0ebfc6e36a489acb78870d1dfbd57",
+      "retrieved_at_utc": "2026-11-16T13:00:50.869562+00:00"
+    },
+    {
+      "file": "version_v1.2.1_embed.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/mmseg/models/utils/embed.py",
+      "bytes": 12178,
+      "sha256": "cb6993a86ef4e681d251bdc13368ea6dabd6449b171e6c1537640af89fd573e6",
+      "retrieved_at_utc": "2026-11-16T13:00:50.953424+00:00"
+    },
+    {
+      "file": "version_v1.2.1_segformer_head.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/mmseg/models/decode_heads/segformer_head.py",
+      "bytes": 2038,
+      "sha256": "47a503a6178ea9ee3cf4793b65aa5e4dd0308f05734db1e7bb16a95fdfc77b1b",
+      "retrieved_at_utc": "2026-11-16T13:00:51.019827+00:00"
+    },
+    {
+      "file": "version_v1.2.1_segmentor_base.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/mmseg/models/segmentors/base.py",
+      "bytes": 7977,
+      "sha256": "c4a4cee6bc707c75542de68f29a9ce0b495e5ad0009807bd2c0e726295de1700",
+      "retrieved_at_utc": "2026-11-16T13:00:51.010868+00:00"
+    },
+    {
+      "file": "version_v1.2.1_decode_head.py",
+      "url": "https://raw.githubusercontent.com/open-mmlab/mmsegmentation/v1.2.1/mmseg/models/decode_heads/decode_head.py",
+      "bytes": 14280,
+      "sha256": "e3aa740c43e58d307ba509ce31a90f7b649246705c7386aee0f766409407e1d3",
+      "retrieved_at_utc": "2026-11-16T13:00:51.038144+00:00"
+    },
+    {
+      "file": "source_deviation_summary.json",
+      "source_files": [
+        "official_cityscapes_training_log_20211206.jsonl"
+      ],
+      "provenance": "deterministically derived from captured official source files",
+      "bytes": 1762,
+      "sha256": "83e0d3f28a9eb0a24d81d693f037d8663e705047a77e840c4b1a93a54d58b6a8"
+    },
+    {
+      "file": "mmseg_v0.19.0_vs_v1.2.1.diff",
+      "source_files": [
+        "version_v0.19.0_encoder_decoder.py",
+        "version_v1.2.1_encoder_decoder.py",
+        "version_v0.19.0_mit.py",
+        "version_v1.2.1_mit.py",
+        "version_v0.19.0_embed.py",
+        "version_v1.2.1_embed.py",
+        "version_v0.19.0_segformer_head.py",
+        "version_v1.2.1_segformer_head.py"
+      ],
+      "provenance": "deterministically derived from captured official source files",
+      "bytes": 34219,
+      "sha256": "6606f56333e25d7d7fdf9283324e557a95560b52b1f1db84800c3753a9cec248"
+    }
+  ]
+}

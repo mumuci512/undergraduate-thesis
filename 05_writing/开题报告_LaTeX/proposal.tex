@@ -1,0 +1,61 @@
+% 本地适配：以学校提供的开题报告 Word 文件的实际版式为准。
+\documentclass{tongji-proposal-word}
+
+% 仅补充正文所需的公式、表格和外部链接支持，沿用学校版式。
+\usepackage{amsmath}
+\usepackage{fix-cm}
+\usepackage{array,booktabs,longtable}
+\usepackage[hidelinks,unicode]{hyperref}
+\urlstyle{same}
+\setCJKfamilyfont{tjwordsong}{SimSun}[BoldFont=SimHei,ItalicFont=KaiTi]
+\xeCJKDeclareCharClass{CJK}{"2460 -> "2464}
+\setlength{\emergencystretch}{3em}
+\AtBeginEnvironment{TJProposalReferences}{\sloppy}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{\dimexpr#1\linewidth-2\tabcolsep\relax}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{\dimexpr#1\linewidth-2\tabcolsep\relax}}
+\NewDocumentEnvironment{ProposalTable}{m}{%
+  \par\begingroup
+  \TJWordSong\fontsize{10.5bp}{15.6bp}\selectfont
+  \setlength{\tabcolsep}{3bp}
+  \setlength{\LTleft}{0bp}\setlength{\LTright}{0bp}
+  \setlength{\LTpre}{6bp}\setlength{\LTpost}{6bp}
+  \renewcommand{\arraystretch}{1.18}
+  \ifcase#1\relax
+  \or\def\ProposalTableColumns{L{.26}R{.15}R{.15}L{.44}}%
+  \or\def\ProposalTableColumns{L{.24}L{.49}L{.27}}%
+  \or\def\ProposalTableColumns{L{.25}R{.21}R{.21}R{.33}}%
+  \or\def\ProposalTableColumns{L{.18}R{.16}R{.22}R{.22}R{.22}}%
+  \or\def\ProposalTableColumns{L{.42}R{.20}R{.38}}%
+  \or
+    \fontsize{9bp}{13bp}\selectfont
+    \def\ProposalTableColumns{L{.115}R{.15}R{.105}R{.105}R{.105}R{.105}R{.145}R{.17}}%
+  \or\def\ProposalTableColumns{L{.22}L{.50}L{.28}}%
+  \fi
+  \expandafter\longtable\expandafter{\ProposalTableColumns}%
+}{%
+  \endlongtable\endgroup
+}
+
+% 使用学校审核栏边框；栏内只排原文，不加入空白模板的填写提示。
+\makeatletter
+\NewDocumentCommand{\ProposalReview}{m m m m}{%
+  \par\tjword@jointfalse\tjword@lastrowtrue
+  \tjword@reviewframebegin
+  \vspace{6bp}
+  \TJProposalSubsection{#1}
+  \TJProposalBody{#2}
+  \vspace{72bp}
+  {\TJWordSong\fontsize{12bp}{23.4bp}\selectfont
+    \raggedleft #3\par #4\par}%
+  \vspace{12bp}
+  \tjword@reviewframeend
+}
+\makeatother
+
+\begin{document}
+\input{chapters/proposal_metadata}
+\MakeProposal
+\input{chapters/proposal_body}
+
+\end{document}

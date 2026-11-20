@@ -1,0 +1,35 @@
+{
+  "checked_unix": 1794887949.9772103,
+  "progress": {
+    "job": "jobs/ft_search_lr0",
+    "step": 1000,
+    "total": 4000,
+    "loss": 0.03652346134185791,
+    "pid": 9762,
+    "updated_unix": 1794887940.8834083,
+    "phase": "training"
+  },
+  "running": true,
+  "failure": null,
+  "completed": null,
+  "completed_jobs": 0,
+  "selections": {
+    "ft": null,
+    "er": null,
+    "joint": null
+  },
+  "current_applied": 1009,
+  "current_skipped": 0,
+  "current_unique_images": 400,
+  "log_age_seconds": 9.097237825393677,
+  "tail": [
+    "TRAIN ft_search_lr0 650 / 4000 0.17467352747917175",
+    "TRAIN ft_search_lr0 700 / 4000 0.1217082217335701",
+    "TRAIN ft_search_lr0 750 / 4000 0.143809974193573",
+    "TRAIN ft_search_lr0 800 / 4000 0.23266378045082092",
+    "TRAIN ft_search_lr0 850 / 4000 0.07333877682685852",
+    "TRAIN ft_search_lr0 900 / 4000 0.0658697634935379",
+    "TRAIN ft_search_lr0 950 / 4000 0.06911005079746246",
+    "TRAIN ft_search_lr0 1000 / 4000 0.03652346134185791"
+  ]
+}

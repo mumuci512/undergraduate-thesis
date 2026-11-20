@@ -1,0 +1,8 @@
+# cwd /home/ysheng4/research/GSMF-RS-DIL
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python experiments/road_fog_severity/eval-final-seed0-20261109-182100/scripts/audit.py --fog-root /home/ysheng4/research/GSMF-RS-DIL/data/cityscapes/leftImg8bit_foggy --out experiments/road_fog_severity/eval-final-seed0-20261109-182100/data-audit
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python experiments/road_fog_severity/eval-final-seed0-20261109-182100/scripts/clear_precheck_prepare.py
+# tmux session road-severity-precheck-20261109 (finished):
+bash experiments/road_fog_severity/eval-final-seed0-20261109-182100/scripts/clear_precheck.sh
+# clear_precheck.sh invokes existing tools/road/run.py eval for each stage; see script for exact commands.
+# sha256sum three fixed checkpoints; git diff, git status, git rev-parse HEAD, pip freeze, /usr/lib/wsl/lib/nvidia-smi.
+# Synthetic preparation and aggregate checks only; see logs/synthetic-*.log.

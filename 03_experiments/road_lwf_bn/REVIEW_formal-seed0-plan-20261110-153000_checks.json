@@ -1,0 +1,2875 @@
+{
+  "verification_status": "ANALYZED",
+  "date": "2026-11-10",
+  "scope": "offline artifact/source/config/matrix consistency; no model rerun or remote data access",
+  "status": "PASS",
+  "checks_passed": 667,
+  "checks_total": 667,
+  "archive_sha256": "c95400c1b1c634ec05dd21d7cc022eef99be475eb99c080d70e8edf65a1ce666",
+  "archive_files": 333,
+  "manifest_files": 332,
+  "training_source_files": 74,
+  "unchanged_upstream_model_files": 15,
+  "new_cells": 10,
+  "reused_cells": 15,
+  "contrasts": {
+    "lwf": {
+      "clear": {
+        "vs_gsmf_pp": -3.146751980129082,
+        "vs_ft_pp": -2.2304924704510043,
+        "classes_better_than_gsmf": 6
+      },
+      "fog005": {
+        "vs_gsmf_pp": -3.5677560865373863,
+        "vs_ft_pp": -2.8713379999134077,
+        "classes_better_than_gsmf": 4
+      },
+      "fog010": {
+        "vs_gsmf_pp": -3.8953645827354606,
+        "vs_ft_pp": -3.170625031487319,
+        "classes_better_than_gsmf": 4
+      },
+      "fog020": {
+        "vs_gsmf_pp": -4.108349043325568,
+        "vs_ft_pp": -3.2742246631342837,
+        "classes_better_than_gsmf": 4
+      },
+      "acdc": {
+        "vs_gsmf_pp": -3.242660830293154,
+        "vs_ft_pp": -2.518933871225741,
+        "classes_better_than_gsmf": 2
+      }
+    },
+    "gsmf_teacher_bn": {
+      "clear": {
+        "vs_gsmf_pp": -2.920814376575933,
+        "vs_ft_pp": -2.0045548668978554,
+        "classes_better_than_gsmf": 7
+      },
+      "fog005": {
+        "vs_gsmf_pp": -3.408570867292326,
+        "vs_ft_pp": -2.7121527806683474,
+        "classes_better_than_gsmf": 5
+      },
+      "fog010": {
+        "vs_gsmf_pp": -3.7110473332412965,
+        "vs_ft_pp": -2.9863077819931547,
+        "classes_better_than_gsmf": 5
+      },
+      "fog020": {
+        "vs_gsmf_pp": -3.5886898859011893,
+        "vs_ft_pp": -2.7545655057099054,
+        "classes_better_than_gsmf": 4
+      },
+      "acdc": {
+        "vs_gsmf_pp": -4.249295987841748,
+        "vs_ft_pp": -3.525569028774335,
+        "classes_better_than_gsmf": 2
+      }
+    }
+  },
+  "results": [
+    {
+      "model": "source",
+      "condition": "clear",
+      "mIoU_percent": 71.50872218134401
+    },
+    {
+      "model": "source",
+      "condition": "fog005",
+      "mIoU_percent": 69.01182332276638
+    },
+    {
+      "model": "source",
+      "condition": "fog010",
+      "mIoU_percent": 65.26889548563446
+    },
+    {
+      "model": "source",
+      "condition": "fog020",
+      "mIoU_percent": 57.14930243918679
+    },
+    {
+      "model": "source",
+      "condition": "acdc",
+      "mIoU_percent": 49.609687981896364
+    },
+    {
+      "model": "ft",
+      "condition": "clear",
+      "mIoU_percent": 54.291541698417305
+    },
+    {
+      "model": "ft",
+      "condition": "fog005",
+      "mIoU_percent": 53.97915906545119
+    },
+    {
+      "model": "ft",
+      "condition": "fog010",
+      "mIoU_percent": 51.06254254998668
+    },
+    {
+      "model": "ft",
+      "condition": "fog020",
+      "mIoU_percent": 44.82802149763599
+    },
+    {
+      "model": "ft",
+      "condition": "acdc",
+      "mIoU_percent": 62.306646392978735
+    },
+    {
+      "model": "gsmf",
+      "condition": "clear",
+      "mIoU_percent": 55.20780120809538
+    },
+    {
+      "model": "gsmf",
+      "condition": "fog005",
+      "mIoU_percent": 54.67557715207517
+    },
+    {
+      "model": "gsmf",
+      "condition": "fog010",
+      "mIoU_percent": 51.78728210123482
+    },
+    {
+      "model": "gsmf",
+      "condition": "fog020",
+      "mIoU_percent": 45.66214587782727
+    },
+    {
+      "model": "gsmf",
+      "condition": "acdc",
+      "mIoU_percent": 63.03037335204615
+    },
+    {
+      "model": "lwf",
+      "condition": "clear",
+      "mIoU_percent": 52.0610492279663
+    },
+    {
+      "model": "lwf",
+      "condition": "fog005",
+      "mIoU_percent": 51.107821065537784
+    },
+    {
+      "model": "lwf",
+      "condition": "fog010",
+      "mIoU_percent": 47.89191751849936
+    },
+    {
+      "model": "lwf",
+      "condition": "fog020",
+      "mIoU_percent": 41.5537968345017
+    },
+    {
+      "model": "lwf",
+      "condition": "acdc",
+      "mIoU_percent": 59.787712521752994
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "condition": "clear",
+      "mIoU_percent": 52.28698683151945
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "condition": "fog005",
+      "mIoU_percent": 51.267006284782845
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "condition": "fog010",
+      "mIoU_percent": 48.076234767993526
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "condition": "fog020",
+      "mIoU_percent": 42.07345599192608
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "condition": "acdc",
+      "mIoU_percent": 58.7810773642044
+    }
+  ],
+  "limits": [
+    "single seed; no seed 1/2 repeats",
+    "weights/raw data/full predictions remain remote",
+    "training state claims are archived evidence, not local tensor recomputation",
+    "cross-method RNG consumption not fully isolated",
+    "LwF T2/0.5 all-logit-pixel KD without T-squared; no parameter search"
+  ],
+  "checks": [
+    {
+      "name": "archive_sha256",
+      "passed": true
+    },
+    {
+      "name": "archive_paths_types",
+      "passed": true
+    },
+    {
+      "name": "extracted_bytes_equal_archive",
+      "passed": true
+    },
+    {
+      "name": "manifest:PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:PREPARED_PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:REPORT_REVIEW.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:RESULTS.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:RESULTS_READY.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:STATUS.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:SUMMARY.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:authorization.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/full/0/A_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/full/0/audit.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/full/0.005/A_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/full/0.005/audit.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/full/0.01/A_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/full/0.01/audit.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/full/0.02/A_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/full/0.02/audit.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/precheck/0/A_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/precheck/0/audit.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/precheck/0.005/A_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/precheck/0.005/audit.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/precheck/0.01/A_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/precheck/0.01/audit.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/precheck/0.02/A_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/evaluation-manifests/precheck/0.02/audit.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/fixed-sample-ids.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/original-road-manifests/A_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/original-road-manifests/A_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/original-road-manifests/A_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/original-road-manifests/A_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/original-road-manifests/B_train.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/original-road-manifests/B_train_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/original-road-manifests/B_val.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/original-road-manifests/B_val_debug.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:data-index/paired-scene-ids.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:early-checkpoint-lwf-1000.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:environment/conda-linux-64.explicit.txt",
+      "passed": true
+    },
+    {
+      "name": "manifest:environment/pip-linux-64.lock.txt",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-acdc/20261110_171605/20261110_171605.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-acdc/20261110_171605/20261110_171605.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-acdc/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-acdc/gsmf_teacher_bn_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-acdc/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-acdc/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0/20261110_165736/20261110_165736.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0/20261110_165736/20261110_165736.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0/gsmf_teacher_bn_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.005/20261110_170215/20261110_170215.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.005/20261110_170215/20261110_170215.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.005/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.005/gsmf_teacher_bn_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.005/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.005/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.01/20261110_170647/20261110_170647.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.01/20261110_170647/20261110_170647.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.01/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.01/gsmf_teacher_bn_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.01/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.01/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.02/20261110_171127/20261110_171127.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.02/20261110_171127/20261110_171127.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.02/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.02/gsmf_teacher_bn_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.02/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-gsmf_teacher_bn-beta0.02/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-acdc/20261110_164221/20261110_164221.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-acdc/20261110_164221/20261110_164221.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-acdc/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-acdc/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-acdc/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-acdc/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0/20261110_162404/20261110_162404.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0/20261110_162404/20261110_162404.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.005/20261110_162841/20261110_162841.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.005/20261110_162841/20261110_162841.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.005/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.005/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.005/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.005/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.01/20261110_163317/20261110_163317.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.01/20261110_163317/20261110_163317.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.01/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.01/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.01/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.01/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.02/20261110_163748/20261110_163748.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.02/20261110_163748/20261110_163748.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.02/evaluation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.02/independent-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.02/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:evaluation/eval-lwf-beta0.02/reloaded-prediction-metrics.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:events.jsonl",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-acdc-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-acdc.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-acdc.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.005-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.005.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.005.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.01-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.01.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.01.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.02-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.02.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.02.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-gsmf_teacher_bn-beta0.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-acdc-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-acdc.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-acdc.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.005-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.005.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.005.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.01-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.01.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.01.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.02-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.02.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.02.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/eval-lwf-beta0.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/train-gsmf_teacher_bn-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/train-gsmf_teacher_bn.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/train-gsmf_teacher_bn.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/train-lwf-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/train-lwf.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:execution/train-lwf.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:exit-code.txt",
+      "passed": true
+    },
+    {
+      "name": "manifest:independent-finalize.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:monitor-last-check.txt",
+      "passed": true
+    },
+    {
+      "name": "manifest:old-protocol-precheck.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:postprocess-command.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/COMMANDS.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/IMPLEMENTATION.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/PLAN.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/READY.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/STATUS.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/VALIDATION.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/authorization.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/code-fingerprint.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/config-diff.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/controlled-input.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/controlled-real-check.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/conversion/conversion.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/data-provenance.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/debug-budget.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/environment.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/fixed-checkpoints.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/ft-formal-resolved.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/git-diff.patch",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/gsmf-formal-resolved.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/gsmf_teacher_bn-formal-resolved.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/lwf-formal-resolved.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/preflight-check.exit",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/preflight-check.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/preparation-integrity.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/strict-reload-evidence.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/synthetic-loss-check-1794295903580591146.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/synthetic-loss-check.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/validated-source.tar.gz",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/validated-source.tar.gz.sha256",
+      "passed": true
+    },
+    {
+      "name": "manifest:preparation/validation-summary.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:provenance.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:remote-index.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/class-iou-heatmap.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/class-iou-long.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/class-iou-long.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/class-iou-wide.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/class-iou-wide.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/five-model-resource-costs.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/five-model-resource-costs.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/five-model-summary.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/five-model-summary.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/frankfurt_000000_011074.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/frankfurt_000001_008688.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/frankfurt_000001_015328.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/frankfurt_000001_041074.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/frankfurt_000001_073911.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/lindau_000049_000019.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/prediction-index.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000000_011074/gsmf_teacher_bn/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000000_011074/gsmf_teacher_bn/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000000_011074/gsmf_teacher_bn/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000000_011074/gsmf_teacher_bn/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000000_011074/lwf/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000000_011074/lwf/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000000_011074/lwf/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000000_011074/lwf/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_008688/gsmf_teacher_bn/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_008688/gsmf_teacher_bn/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_008688/gsmf_teacher_bn/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_008688/gsmf_teacher_bn/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_008688/lwf/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_008688/lwf/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_008688/lwf/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_008688/lwf/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_015328/gsmf_teacher_bn/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_015328/gsmf_teacher_bn/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_015328/gsmf_teacher_bn/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_015328/gsmf_teacher_bn/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_015328/lwf/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_015328/lwf/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_015328/lwf/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_015328/lwf/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_041074/gsmf_teacher_bn/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_041074/gsmf_teacher_bn/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_041074/gsmf_teacher_bn/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_041074/gsmf_teacher_bn/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_041074/lwf/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_041074/lwf/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_041074/lwf/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_041074/lwf/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_073911/gsmf_teacher_bn/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_073911/gsmf_teacher_bn/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_073911/gsmf_teacher_bn/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_073911/gsmf_teacher_bn/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_073911/lwf/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_073911/lwf/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_073911/lwf/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/frankfurt_000001_073911/lwf/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/lindau_000049_000019/gsmf_teacher_bn/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/lindau_000049_000019/gsmf_teacher_bn/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/lindau_000049_000019/gsmf_teacher_bn/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/lindau_000049_000019/gsmf_teacher_bn/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/lindau_000049_000019/lwf/clear.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/lindau_000049_000019/lwf/fog005.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/lindau_000049_000019/lwf/fog010.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/raw-predictions/lindau_000049_000019/lwf/fog020.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fixed-samples/selection.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fog-drop.pdf",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fog-drop.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fog-drop.svg",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fog-miou.pdf",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fog-miou.png",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/fog-miou.svg",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/gt-histograms.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/independent-final-check.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/ft_acdc.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/ft_acdc.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/ft_clear.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/ft_clear.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/ft_fog005.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/ft_fog005.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/ft_fog010.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/ft_fog010.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/ft_fog020.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/ft_fog020.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_acdc.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_acdc.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_clear.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_clear.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_fog005.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_fog005.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_fog010.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_fog010.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_fog020.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_fog020.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_teacher_bn_acdc.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_teacher_bn_acdc.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_teacher_bn_clear.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_teacher_bn_clear.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_teacher_bn_fog005.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_teacher_bn_fog005.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_teacher_bn_fog010.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_teacher_bn_fog010.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_teacher_bn_fog020.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/gsmf_teacher_bn_fog020.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/lwf_acdc.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/lwf_acdc.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/lwf_clear.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/lwf_clear.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/lwf_fog005.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/lwf_fog005.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/lwf_fog010.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/lwf_fog010.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/lwf_fog020.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/lwf_fog020.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/source_acdc.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/source_acdc.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/source_clear.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/source_clear.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/source_fog005.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/source_fog005.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/source_fog010.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/source_fog010.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/source_fog020.csv",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/matrices/source_fog020.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/resource-costs.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/training-check.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/verification/gsmf_teacher_bn_acdc_predictions.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/verification/gsmf_teacher_bn_clear_predictions.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/verification/gsmf_teacher_bn_fog005_predictions.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/verification/gsmf_teacher_bn_fog010_predictions.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/verification/gsmf_teacher_bn_fog020_predictions.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/verification/lwf_acdc_predictions.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/verification/lwf_clear_predictions.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/verification/lwf_fog005_predictions.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/verification/lwf_fog010_predictions.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:results/verification/lwf_fog020_predictions.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:reused-source/old-severity-independent-check.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:reused-source/old-two-domain-independent-check.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:scripts/finalize_results.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:scripts/package_handoff.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:scripts/postprocess.sh",
+      "passed": true
+    },
+    {
+      "name": "manifest:scripts/review_handoff.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:source/AGENTS.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:source/STEP2_LWF_BN_REMOTE_TASK_20261110.md",
+      "passed": true
+    },
+    {
+      "name": "manifest:source/git-diff.patch",
+      "passed": true
+    },
+    {
+      "name": "manifest:source/git-status.txt",
+      "passed": true
+    },
+    {
+      "name": "manifest:source/gsmf_rs_dil/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:source/validated-training-source.tar.gz",
+      "passed": true
+    },
+    {
+      "name": "manifest:status.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:timing-observations.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/gsmf_teacher_bn/20261110_164331/20261110_164331.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/gsmf_teacher_bn/audit-end-4000.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/gsmf_teacher_bn/completion-1794301052118322023.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/gsmf_teacher_bn/gsmf_teacher_bn_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/gsmf_teacher_bn/invocation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/gsmf_teacher_bn/resolved.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/lwf/20261110_160923/20261110_160923.log",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/lwf/audit-end-4000.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/lwf/completion-1794299040553867205.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/lwf/invocation.json",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/lwf/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "manifest:training/lwf/resolved.py",
+      "passed": true
+    },
+    {
+      "name": "manifest_exact_coverage",
+      "passed": true
+    },
+    {
+      "name": "manifest_external_count",
+      "passed": true
+    },
+    {
+      "name": "ready_binding",
+      "passed": true
+    },
+    {
+      "name": "authorization_binding",
+      "passed": true
+    },
+    {
+      "name": "code_fingerprint",
+      "passed": true
+    },
+    {
+      "name": "training_source_exact_fingerprint",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/ISPRS_DIL_my_dataset_IRRG_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/ISPRS_IRRG_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/ISPRS_my_dataset_IRRG_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/LoveDA_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/LoveDA_DIL_my_dataset_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/LoveDA_Rural_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/LoveDA_Rural_my_dataset_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/LoveDA_Urban_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/LoveDA_Urban_my_dataset_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/LoveDA_my_dataset_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/Potsdam_IRRG_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/Vaihingen_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/datasets/Vaihingen_my_dataset_512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/default_runtime_iter.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/models/gs_aufpn_r50-d8.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/models/gsmf_rs_dil_r50-d8.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/schedules/schedule_30k_iter.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/_base_/schedules/schedule_80k_iter.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/gsmf_rs_dil_r101-d8_4xb4-80k_LoveDA-512x512.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/road/ft_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/road/gsmf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/road/gsmf_teacher_bn_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/road/lwf_acdc_fog.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:configs/road/source_cityscapes.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/datasets/ISPRS_my_dataset.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/datasets/LoveDA_my_dataset.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/datasets/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/datasets/isprs_tif_loader.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/decode_head/DIL_decode_head.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/decode_head/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/decode_head/gs_aufpn_head.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/decode_head/gsmf_rs_dil_head.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/evaluation/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/evaluation/dg_metrics.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/losses/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/losses/dil_hin_loss.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/losses/dil_kldivergence_loss.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/segmentors/DIL_encoder_decoder.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:mmseg/segmentors/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:road_dil/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:road_dil/budget.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:road_dil/checkpoints.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:road_dil/config.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:road_dil/data.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:road_dil/hooks.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:road_dil/metrics.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:road_dil/models.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:road_dil/protocol.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/audit_data.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/extract_data.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/lwf_bn_formal.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/lwf_bn_start.sh",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/lwf_bn_status.sh",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/pipeline.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/preflight.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/profile.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/profile_debug.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/resume.sh",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/resume_session.sh",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/run.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/session.sh",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/start.sh",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/status.sh",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/verify.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/verify_lwf_bn.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/verify_lwf_bn_saved.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/verify_storage.py",
+      "passed": true
+    },
+    {
+      "name": "source_sha:tools/road/write_configs.py",
+      "passed": true
+    },
+    {
+      "name": "prepared_and_training_code_equal",
+      "passed": true
+    },
+    {
+      "name": "upstream_model_loss_files_unchanged",
+      "passed": true
+    },
+    {
+      "name": "bridge_snapshot_hash",
+      "passed": true
+    },
+    {
+      "name": "historical_data_manifest:A_train",
+      "passed": true
+    },
+    {
+      "name": "historical_data_manifest:A_val",
+      "passed": true
+    },
+    {
+      "name": "historical_data_manifest:B_train",
+      "passed": true
+    },
+    {
+      "name": "historical_data_manifest:B_val",
+      "passed": true
+    },
+    {
+      "name": "scene_and_sample_identity",
+      "passed": true
+    },
+    {
+      "name": "paired_eval_manifest:clear",
+      "passed": true
+    },
+    {
+      "name": "paired_eval_manifest:fog005",
+      "passed": true
+    },
+    {
+      "name": "paired_eval_manifest:fog010",
+      "passed": true
+    },
+    {
+      "name": "paired_eval_manifest:fog020",
+      "passed": true
+    },
+    {
+      "name": "shared_source_initialization",
+      "passed": true
+    },
+    {
+      "name": "actual_config_matches_prepared:lwf",
+      "passed": true
+    },
+    {
+      "name": "converted_tensor_provenance:lwf",
+      "passed": true
+    },
+    {
+      "name": "invocation_initialization_seed:lwf",
+      "passed": true
+    },
+    {
+      "name": "formal_budget:lwf",
+      "passed": true
+    },
+    {
+      "name": "finite_training_and_completed_steps:lwf",
+      "passed": true
+    },
+    {
+      "name": "teacher_frozen_and_student_update:lwf",
+      "passed": true
+    },
+    {
+      "name": "student_shallow_policy:lwf",
+      "passed": true
+    },
+    {
+      "name": "actual_config_matches_prepared:gsmf_teacher_bn",
+      "passed": true
+    },
+    {
+      "name": "converted_tensor_provenance:gsmf_teacher_bn",
+      "passed": true
+    },
+    {
+      "name": "invocation_initialization_seed:gsmf_teacher_bn",
+      "passed": true
+    },
+    {
+      "name": "formal_budget:gsmf_teacher_bn",
+      "passed": true
+    },
+    {
+      "name": "finite_training_and_completed_steps:gsmf_teacher_bn",
+      "passed": true
+    },
+    {
+      "name": "teacher_frozen_and_student_update:gsmf_teacher_bn",
+      "passed": true
+    },
+    {
+      "name": "student_shallow_policy:gsmf_teacher_bn",
+      "passed": true
+    },
+    {
+      "name": "common_training_recipe_matches_old_gsmf",
+      "passed": true
+    },
+    {
+      "name": "BN_model_config_only_policy_and_class_differ",
+      "passed": true
+    },
+    {
+      "name": "lwf_only_ce_output_kd",
+      "passed": true
+    },
+    {
+      "name": "controlled_real_evidence",
+      "passed": true
+    },
+    {
+      "name": "table_coverage",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:source/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:source/clear",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:source/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:source/clear",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:source/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:source/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:source/fog005",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:source/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:source/fog005",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:source/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:source/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:source/fog010",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:source/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:source/fog010",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:source/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:source/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:source/fog020",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:source/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:source/fog020",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:source/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:source/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:source/acdc",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:source/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:source/acdc",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:source/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:ft/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:ft/clear",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:ft/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:ft/clear",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:ft/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:ft/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:ft/fog005",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:ft/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:ft/fog005",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:ft/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:ft/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:ft/fog010",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:ft/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:ft/fog010",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:ft/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:ft/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:ft/fog020",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:ft/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:ft/fog020",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:ft/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:ft/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:ft/acdc",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:ft/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:ft/acdc",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:ft/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:gsmf/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:gsmf/clear",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:gsmf/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:gsmf/clear",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:gsmf/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:gsmf/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:gsmf/fog005",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:gsmf/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:gsmf/fog005",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:gsmf/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:gsmf/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:gsmf/fog010",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:gsmf/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:gsmf/fog010",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:gsmf/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:gsmf/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:gsmf/fog020",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:gsmf/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:gsmf/fog020",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:gsmf/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:gsmf/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:gsmf/acdc",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:gsmf/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:gsmf/acdc",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_exact:gsmf/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "new_matrix_original_and_reread:lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "new_eval_checkpoint_state_count_branch:lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "full_prediction_index_count:lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "new_matrix_original_and_reread:lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "new_eval_checkpoint_state_count_branch:lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "full_prediction_index_count:lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "new_matrix_original_and_reread:lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "new_eval_checkpoint_state_count_branch:lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "full_prediction_index_count:lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "new_matrix_original_and_reread:lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "new_eval_checkpoint_state_count_branch:lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "full_prediction_index_count:lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:lwf/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:lwf/acdc",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:lwf/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:lwf/acdc",
+      "passed": true
+    },
+    {
+      "name": "new_matrix_original_and_reread:lwf/acdc",
+      "passed": true
+    },
+    {
+      "name": "new_eval_checkpoint_state_count_branch:lwf/acdc",
+      "passed": true
+    },
+    {
+      "name": "full_prediction_index_count:lwf/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "new_matrix_original_and_reread:gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "new_eval_checkpoint_state_count_branch:gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "full_prediction_index_count:gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "new_matrix_original_and_reread:gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "new_eval_checkpoint_state_count_branch:gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "full_prediction_index_count:gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "new_matrix_original_and_reread:gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "new_eval_checkpoint_state_count_branch:gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "full_prediction_index_count:gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "new_matrix_original_and_reread:gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "new_eval_checkpoint_state_count_branch:gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "full_prediction_index_count:gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_counts:gsmf_teacher_bn/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_gt_and_arithmetic:gsmf_teacher_bn/acdc",
+      "passed": true
+    },
+    {
+      "name": "per_class_tables:gsmf_teacher_bn/acdc",
+      "passed": true
+    },
+    {
+      "name": "matrix_csv:gsmf_teacher_bn/acdc",
+      "passed": true
+    },
+    {
+      "name": "new_matrix_original_and_reread:gsmf_teacher_bn/acdc",
+      "passed": true
+    },
+    {
+      "name": "new_eval_checkpoint_state_count_branch:gsmf_teacher_bn/acdc",
+      "passed": true
+    },
+    {
+      "name": "full_prediction_index_count:gsmf_teacher_bn/acdc",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:source/clear",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:source/fog005",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:source/fog010",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:source/fog020",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:source/acdc",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:ft/clear",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:ft/fog005",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:ft/fog010",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:ft/fog020",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:ft/acdc",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:gsmf/clear",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:gsmf/fog005",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:gsmf/fog010",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:gsmf/fog020",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:gsmf/acdc",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:lwf/acdc",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "summary_derived_values:gsmf_teacher_bn/acdc",
+      "passed": true
+    },
+    {
+      "name": "fixed_sample_coverage",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000000_011074/lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000000_011074/gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000000_011074/lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000000_011074/gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000000_011074/lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000000_011074/gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000000_011074/lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000000_011074/gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_008688/lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_008688/gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_008688/lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_008688/gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_008688/lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_008688/gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_008688/lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_008688/gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_015328/lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_015328/gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_015328/lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_015328/gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_015328/lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_015328/gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_015328/lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_015328/gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_041074/lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_041074/gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_041074/lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_041074/gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_041074/lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_041074/gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_041074/lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_041074/gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_073911/lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_073911/gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_073911/lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_073911/gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_073911/lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_073911/gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_073911/lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:frankfurt_000001_073911/gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:lindau_000049_000019/lwf/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:lindau_000049_000019/gsmf_teacher_bn/clear",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:lindau_000049_000019/lwf/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:lindau_000049_000019/gsmf_teacher_bn/fog005",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:lindau_000049_000019/lwf/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:lindau_000049_000019/gsmf_teacher_bn/fog010",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:lindau_000049_000019/lwf/fog020",
+      "passed": true
+    },
+    {
+      "name": "sample_png_and_index:lindau_000049_000019/gsmf_teacher_bn/fog020",
+      "passed": true
+    },
+    {
+      "name": "formal_pipeline_exit",
+      "passed": true
+    }
+  ]
+}

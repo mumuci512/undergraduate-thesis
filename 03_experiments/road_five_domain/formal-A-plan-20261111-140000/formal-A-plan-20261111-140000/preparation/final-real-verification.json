@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "optimization_steps": 0,
+  "methods": {
+    "ft": {
+      "status": "PASS",
+      "teacher_changed_BN_buffers": null,
+      "resume_exact_optimizer_scheduler_iter": true,
+      "real_periodic_validation_reentry": true,
+      "conversion_seconds": 1.906107807008084,
+      "parent_forward_seconds": 0.1533927990240045,
+      "new_student_and_teacher_forward_seconds": 0.09661198401590809,
+      "real_input_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "eval_logits_exact_after_reload": true,
+      "conversion_sha256": "bac8bf0bf7d07b19f8d85c0feb2a38487b0936188685281a56d5042cafccdcbf",
+      "actual_validation_reentry": {
+        "D": {
+          "actual_val_loop_images": 4,
+          "state_unchanged": true,
+          "val_then_train_policy": true,
+          "seconds": 3.265272349002771
+        },
+        "E": {
+          "actual_val_loop_images": 2,
+          "state_unchanged": true,
+          "val_then_train_policy": true,
+          "seconds": 2.0608119479729794
+        }
+      }
+    },
+    "gsmf": {
+      "status": "PASS",
+      "teacher_changed_BN_buffers": 342,
+      "resume_exact_optimizer_scheduler_iter": true,
+      "real_periodic_validation_reentry": true,
+      "conversion_seconds": 3.286151540989522,
+      "parent_forward_seconds": 0.0937717059860006,
+      "new_student_and_teacher_forward_seconds": 0.0604818889987655,
+      "real_input_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "eval_logits_exact_after_reload": true,
+      "conversion_sha256": "3da0ebdf3c5477c2f1ef0d66f34a5bc7543cc6d309bbefcda969783b8c4b905f",
+      "actual_validation_reentry": {
+        "D": {
+          "actual_val_loop_images": 4,
+          "state_unchanged": true,
+          "val_then_train_policy": true,
+          "seconds": 3.4973547770059668
+        },
+        "E": {
+          "actual_val_loop_images": 2,
+          "state_unchanged": true,
+          "val_then_train_policy": true,
+          "seconds": 2.5102229110198095
+        }
+      }
+    },
+    "lwf": {
+      "status": "PASS",
+      "teacher_changed_BN_buffers": 0,
+      "resume_exact_optimizer_scheduler_iter": true,
+      "real_periodic_validation_reentry": true,
+      "conversion_seconds": 3.33577761601191,
+      "parent_forward_seconds": 0.07700426201336086,
+      "new_student_and_teacher_forward_seconds": 0.05749381601344794,
+      "real_input_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "eval_logits_exact_after_reload": true,
+      "conversion_sha256": "00a8452cdf9b6e9a859e9f9a338f7af71c73a90300a1d441a1bc83fe1796d35c",
+      "actual_validation_reentry": {
+        "D": {
+          "actual_val_loop_images": 4,
+          "state_unchanged": true,
+          "val_then_train_policy": true,
+          "seconds": 3.586923504015431
+        },
+        "E": {
+          "actual_val_loop_images": 2,
+          "state_unchanged": true,
+          "val_then_train_policy": true,
+          "seconds": 2.548649984993972
+        }
+      }
+    }
+  },
+  "count_label_correction": {
+    "original_file": "experiments/road_five_domain/prepare-20261111-140000/final-real-verification-original-count-label.json",
+    "original_sha256": "84f8a4b6722ef7c7cc7b2219a95352224c608f5cc379d69638401bbf7b754c1b",
+    "changes": [
+      {
+        "method": "ft",
+        "domain": "E",
+        "old": 4,
+        "actual": 2
+      },
+      {
+        "method": "gsmf",
+        "domain": "E",
+        "old": 4,
+        "actual": 2
+      },
+      {
+        "method": "lwf",
+        "domain": "E",
+        "old": 4,
+        "actual": 2
+      }
+    ],
+    "evidence": "Exact per-domain manifest counts and actual Runner Iter(val) [n/n] in each final-validation directory; execution/state/logit checks unchanged."
+  }
+}

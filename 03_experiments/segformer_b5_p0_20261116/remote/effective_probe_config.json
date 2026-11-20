@@ -1,0 +1,19 @@
+{
+  "model_config": "train_amp_scale256/resolved.py",
+  "executed_loop": "run_b5_p0.py:train; manual loop overrides inherited train_cfg and scheduler",
+  "optimizer_steps": 200,
+  "scheduler": null,
+  "amp_initial_scale": 256,
+  "amp_dtype": "float16",
+  "gradient_checkpointing": false,
+  "microbatch": 1,
+  "accumulation": 1,
+  "effective_batch": 1,
+  "train_domain": "Fog",
+  "subset": "B_train.jsonl first 32 entries",
+  "num_workers": 2,
+  "learning_rate": 6e-05,
+  "parameter_groups": "official paramwise_cfg; head lr x10",
+  "seed": 0,
+  "deterministic_algorithms_requested": false
+}

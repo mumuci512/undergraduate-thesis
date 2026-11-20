@@ -1,0 +1,42 @@
+[
+  {
+    "status": "缺失",
+    "item": "道路Source/FT/GSMF同一固定样例预测对比图",
+    "detail": "Only four existing RGB/GT/GT-overlay data-audit previews found. No new predictions or figures generated."
+  },
+  {
+    "status": "未核实",
+    "item": "训练时分支名称及桥接模块的逐文件历史哈希",
+    "detail": "Training base and 66 files are recorded; branch was not captured and gsmf_rs_dil/__init__.py was outside that fingerprint. Current committed bridge is available but not asserted identical historically."
+  },
+  {
+    "status": "证据粒度限制",
+    "item": "每个FT/GSMF子进程开始瞬间的独立完整源码快照",
+    "detail": "Shared controller-start snapshot and actual per-stage resolved config/logs retained; no separate full snapshot for each subprocess."
+  },
+  {
+    "status": "缺失",
+    "item": "原检查点的RNG及数据迭代器精确游标状态",
+    "detail": "Model/AdamW/PolyLR/iteration restoration verified, not bitwise equivalent to uninterrupted training."
+  },
+  {
+    "status": "缺失",
+    "item": "原运行崩溃时的真实退出码与可用iter50000",
+    "detail": "Exit-code files were not written; damaged file preserved at home. Recovery chain and monitor both exit0."
+  },
+  {
+    "status": "未测",
+    "item": "正式模型完整GFLOPs、独立纯GPU推理延迟、多种子统计",
+    "detail": "Only existing measured wall time, allocation peaks, parameter counts, weight sizes and full-validation times reported."
+  },
+  {
+    "status": "未完全定位",
+    "item": "WSL机器检查崩溃触发根因",
+    "detail": "Hyper-V captured fatal machine check; disk shortage subsequently corrected. Does not prove hardware/virtualization issue resolved."
+  },
+  {
+    "status": "不影响本道路运行的上游缺项",
+    "item": "未使用的其他基线配置继承",
+    "detail": "[{'config': 'configs/_base_/datasets/LoveDA_my_dataset_512.py', 'missing_base': 'configs/_base_/datasets/LoveDA_all_512.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py', 'missing_base': '_base_/models/gs_aufpn_r50-d8.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py', 'missing_base': '_base_/datasets/LoveDA_Rural_my_dataset_512.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py', 'missing_base': '_base_/default_runtime_iter.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Rural-512x512.py', 'missing_base': '_base_/schedules/schedule_30k_iter.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py', 'missing_base': '_base_/models/gs_aufpn_r50-d8.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py', 'missing_base': '_base_/datasets/LoveDA_Urban_my_dataset_512.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py', 'missing_base': '_base_/default_runtime_iter.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Urban-512x512.py', 'missing_base': '_base_/schedules/schedule_30k_iter.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py', 'missing_base': '_base_/models/gs_aufpn_r50-d8.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py', 'missing_base': '_base_/datasets/Vaihingen_my_dataset_512.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py', 'missing_base': '_base_/default_runtime_iter.py'}, {'config': 'configs/gs_aufpn_r101-d8_4xb4-80k_Vaihingen-512x512.py', 'missing_base': '_base_/schedules/schedule_80k_iter.py'}, {'config': 'configs/gsmf_rs_dil_r101-d8_4xb4-80k_LoveDA-512x512.py', 'missing_base': '_base_/models/gsmf_rs_dil_r50-d8.py'}, {'config': 'configs/gsmf_rs_dil_r101-d8_4xb4-80k_LoveDA-512x512.py', 'missing_base': '_base_/datasets/LoveDA_DIL_my_dataset_512.py'}, {'config': 'configs/gsmf_rs_dil_r101-d8_4xb4-80k_LoveDA-512x512.py', 'missing_base': '_base_/default_runtime_iter.py'}]; all actually required ROAD dependencies passed; no unrelated config repaired."
+  }
+]

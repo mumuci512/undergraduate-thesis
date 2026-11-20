@@ -1,0 +1,4 @@
+  File "tools/road/prepare_five_data.py", line 61
+    seqs={k:set(v['sequences']) for k,v in groups.items()};shared={a+' vs '+b:sorted(seqs[a]&seqs[b]) for a in seqs for b in seqs if a<b and (a.startswith(('D','E')) or b.startswith(('D','E'))}
+                                                                                                                                                                                                ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('

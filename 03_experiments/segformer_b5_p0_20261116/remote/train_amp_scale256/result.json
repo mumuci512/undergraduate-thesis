@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "optimizer_steps": 200,
+  "seed": 0,
+  "training_subset": 32,
+  "microbatch": 1,
+  "accumulation": 1,
+  "effective_batch": 1,
+  "crop": [
+    1024,
+    1024
+  ],
+  "amp": "float16",
+  "gradient_checkpointing": false,
+  "optimizer": "AdamW",
+  "lr": 6e-05,
+  "lr_schedule": "constant; resource probe only",
+  "elapsed_seconds": 139.78400647600938,
+  "amp_initial_scale": 256,
+  "warmup_excluded_steps": 20,
+  "mean_step_seconds": 0.6956537712160045,
+  "median_step_seconds": 0.6896553729966399,
+  "images_per_second": 1.437496699330757,
+  "peak_allocated_MiB": 15447.5849609375,
+  "peak_reserved_MiB": 15964.0,
+  "fingerprint_before": "ad3d72d0533a7b9042020b4a2924ae47308c8208eeef9aeaf39e859317e6469a",
+  "fingerprint_after": "87923799acd573c4ba32f0de47f5714cc63da67507bac0e49a85b78c481468f9",
+  "checkpoint_sha256": "b990a3c81a944e19f1bdbfd7281995756bb63e62e0f183e982d024f9a49531a4",
+  "reload_strict_equal": true,
+  "all_losses_and_gradients_finite": true,
+  "all_optimizer_steps_applied": true
+}

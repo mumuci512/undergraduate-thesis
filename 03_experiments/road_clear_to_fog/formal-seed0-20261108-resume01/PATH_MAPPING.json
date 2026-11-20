@@ -1,0 +1,10 @@
+{
+  "original_repository_root": "/home/ysheng4/research/GSMF-RS-DIL",
+  "target_handoff_directory": "03_experiments/road_clear_to_fog/formal-seed0-20261108-resume01/",
+  "original_data_roots": [
+    "/home/ysheng4/research/GSMF-RS-DIL/data/cityscapes",
+    "/home/ysheng4/research/GSMF-RS-DIL/data/acdc"
+  ],
+  "portable_manifests_in_bundle": "data/{A_train,A_val,B_train,B_val}.jsonl",
+  "rule": "Do not change evidence files. If running later, rebind absolute paths in separate copies to your licensed datasets/checkpoints and restored code. This handoff itself does not run a model."
+}

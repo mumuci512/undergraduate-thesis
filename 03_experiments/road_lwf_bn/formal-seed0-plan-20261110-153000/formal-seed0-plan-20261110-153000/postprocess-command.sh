@@ -1,0 +1,1 @@
+tmux new-session -d -s road-lwf-bn-postprocess-20261110-161500 'bash /home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/scripts/postprocess.sh > /home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/postprocess-console.log 2>&1'

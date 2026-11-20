@@ -1,0 +1,27 @@
+{
+  "time_utc": "2026-11-11T16:21:55Z",
+  "phase": "B",
+  "state": "running",
+  "driver_pid": 2307,
+  "task": "train-gsmf-seed2-D",
+  "child_pid": 10092,
+  "command": [
+    "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+    "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+    "train",
+    "--stage",
+    "gsmf",
+    "--train-domain",
+    "D",
+    "--seed",
+    "2",
+    "--order",
+    "ABCDE",
+    "--manifests",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data",
+    "--work-dir",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/gsmf-seed2-D",
+    "--load",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/initialization/gsmf-seed2-D/gsmf_init.pth"
+  ]
+}

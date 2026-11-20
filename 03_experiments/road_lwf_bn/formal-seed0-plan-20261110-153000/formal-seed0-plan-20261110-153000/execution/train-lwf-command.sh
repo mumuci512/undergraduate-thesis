@@ -1,0 +1,1 @@
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python /home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py train --stage lwf --load /home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/conversion/lwf_init.pth --work-dir /home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/lwf

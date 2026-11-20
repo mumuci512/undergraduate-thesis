@@ -1,0 +1,30 @@
+{
+  "name": "ft-reverse-E",
+  "command": [
+    "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+    "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+    "train",
+    "--stage",
+    "ft",
+    "--train-domain",
+    "E",
+    "--seed",
+    "0",
+    "--order",
+    "AEDCB",
+    "--manifests",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data",
+    "--work-dir",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-reverse-E",
+    "--debug",
+    "--steps",
+    "4",
+    "--trace-rng",
+    "--budget-ledger",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/debug-budget.json",
+    "--load",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/conversion/source-seed0-E/ft_init.pth"
+  ],
+  "exit_code": 0,
+  "seconds": 29.196819923003204
+}

@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "methods": {
+    "ft": {
+      "synchronized_step_seconds_mean": 0.17174600475118496,
+      "samples": 4,
+      "peak_allocated_MiB": 2435.38134765625,
+      "per_image_small_eval_seconds": {
+        "clear": 1.580945227498887,
+        "fog005": 1.0197476969915442,
+        "fog010": 0.9660009939980228,
+        "fog020": 1.0036084934981773,
+        "fog": 0.7562954090026324,
+        "rain": 0.7325254880051943
+      },
+      "checkpoint_bytes": 574875543,
+      "total_parameters": 47832297,
+      "trainable_parameters": 47832297
+    },
+    "gsmf": {
+      "synchronized_step_seconds_mean": 0.18520761524996487,
+      "samples": 4,
+      "peak_allocated_MiB": 2279.3740234375,
+      "per_image_small_eval_seconds": {
+        "clear": 0.9897933934989851,
+        "fog005": 0.9604340030055027,
+        "fog010": 0.9007449615019141,
+        "fog020": 1.0853834739973536,
+        "fog": 0.681981972498761,
+        "rain": 0.7262591237449669
+      },
+      "checkpoint_bytes": 764902123,
+      "total_parameters": 95664594,
+      "trainable_parameters": 47587721
+    },
+    "lwf": {
+      "synchronized_step_seconds_mean": 0.24059368325106334,
+      "samples": 4,
+      "peak_allocated_MiB": 2622.70703125,
+      "per_image_small_eval_seconds": {
+        "clear": 0.9072255395003594,
+        "fog005": 0.9031517944968073,
+        "fog010": 0.9246468065102817,
+        "fog020": 0.9047845939930994,
+        "fog": 0.7034000407511485,
+        "rain": 0.698667069998919
+      },
+      "checkpoint_bytes": 766879901,
+      "total_parameters": 95664594,
+      "trainable_parameters": 47832297
+    }
+  },
+  "pure_compute_12000_steps_seconds": 2390.1892130088527,
+  "small_eval_conservative_seconds_per_image": 1.0853834739973536,
+  "new7000_eval_seconds": 7597.684317981475,
+  "periodic12_C100_validation_seconds": 879.0305856062332,
+  "model_IO_standalone_rechecks_reporting_margin_seconds": 1800,
+  "safety_factor": 1.3,
+  "recommended_wall_hours": [
+    3,
+    5
+  ],
+  "formal_checkpoint_estimated_bytes": 8426630268,
+  "new_prediction_uncompressed_uint8_bytes": 14656512000,
+  "formal_extra_disk_reservation_GiB": 30,
+  "WSL_free_bytes": 725388697600,
+  "host_C_free_bytes": 105318834176,
+  "note": "Short runs include all-step gradient diagnostics, warmup and small-list bias. First FT-clear overlapped no-update chain verification and is excluded from the rate bound. Times are observations, not throughput guarantees. Full prediction PNG size depends on compression. Host VHD capacity constrains WSL."
+}

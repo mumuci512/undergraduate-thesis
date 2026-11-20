@@ -1,0 +1,16 @@
+{
+  "time": "2026-11-13T21:27:07.348579+08:00",
+  "supervisor_pid": 12907,
+  "state": "running",
+  "task": "package_C",
+  "child_pid": 24926,
+  "command": [
+    "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/scripts/package_C.py",
+    "--prepare",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000",
+    "--run",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000"
+  ],
+  "log": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/package_C.log"
+}

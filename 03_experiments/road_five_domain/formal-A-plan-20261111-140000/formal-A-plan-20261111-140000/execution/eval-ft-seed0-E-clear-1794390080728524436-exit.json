@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "seconds": 287.1004629409872,
+  "command": [
+    "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+    "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+    "eval",
+    "--stage",
+    "ft",
+    "--domain",
+    "A",
+    "--manifests",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/clear",
+    "--checkpoint",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/ft-seed0-E/iter_4000.pth",
+    "--work-dir",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/eval-ft-seed0-E-clear"
+  ]
+}

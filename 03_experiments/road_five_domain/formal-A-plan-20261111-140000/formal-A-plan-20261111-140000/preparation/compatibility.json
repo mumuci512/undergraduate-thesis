@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "legacy_seed0_resolved_configs_exact": {
+    "ft": true,
+    "gsmf": true,
+    "lwf": true
+  },
+  "new_changes": [
+    "explicit current-domain train/val paths",
+    "strict parent method/seed/order metadata",
+    "seed1/2 only incremental randomness"
+  ],
+  "source_randomness_not_repeated": true
+}

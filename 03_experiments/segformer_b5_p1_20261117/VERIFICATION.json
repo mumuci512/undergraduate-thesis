@@ -1,0 +1,3709 @@
+{
+  "status": "verified",
+  "archive_sha256": "e6da84dfeaed537575719fa7682cadeaabade8a34c8acc952de52262ee683ae0",
+  "checks": [
+    {
+      "name": "A_train.jsonl_split",
+      "passed": true
+    },
+    {
+      "name": "A_val.jsonl_split",
+      "passed": true
+    },
+    {
+      "name": "B_train.jsonl_split",
+      "passed": true
+    },
+    {
+      "name": "B_val.jsonl_split",
+      "passed": true
+    },
+    {
+      "name": "C_train.jsonl_split",
+      "passed": true
+    },
+    {
+      "name": "C_val.jsonl_split",
+      "passed": true
+    },
+    {
+      "name": "D_train.jsonl_split",
+      "passed": true
+    },
+    {
+      "name": "D_val.jsonl_split",
+      "passed": true
+    },
+    {
+      "name": "E_train.jsonl_split",
+      "passed": true
+    },
+    {
+      "name": "E_val.jsonl_split",
+      "passed": true
+    },
+    {
+      "name": "full_train_counts",
+      "passed": true
+    },
+    {
+      "name": "official_val_counts",
+      "passed": true
+    },
+    {
+      "name": "completed.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "costs.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "data_audit.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "er_matrix.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "er_selection.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "execution.log_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "exit_code.txt_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "final_models.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "finalizer_launcher.log_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "ft_matrix.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "ft_selection.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_C/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_C/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_C/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_C/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_D/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_D/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_D/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_D/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_E/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_E/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_E/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_E/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/val_2000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/val_2000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/val_2000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/val_2000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/val_2000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/val_4000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/val_4000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/val_4000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/val_4000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr0/val_4000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/val_2000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/val_2000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/val_2000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/val_2000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/val_2000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/val_4000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/val_4000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/val_4000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/val_4000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr1/val_4000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/val_2000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/val_2000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/val_2000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/val_2000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/val_2000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/val_4000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/val_4000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/val_4000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/val_4000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/er_search_lr2/val_4000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_C/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_C/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_C/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_C/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_D/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_D/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_D/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_D/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_E/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_E/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_E/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_E/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/val_2000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/val_2000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/val_2000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/val_2000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/val_2000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/val_4000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/val_4000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/val_4000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/val_4000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr0/val_4000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/val_2000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/val_2000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/val_2000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/val_2000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/val_2000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/val_4000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/val_4000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/val_4000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/val_4000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr1/val_4000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/val_2000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/val_2000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/val_2000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/val_2000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/val_2000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/val_4000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/val_4000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/val_4000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/val_4000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/ft_search_lr2/val_4000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_16000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr0/val_5000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_16000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr1/val_5000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/complete.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/config.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/steps.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/training_pool.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_16000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "jobs/joint_search_lr2/val_5000/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "joint_selection.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "launcher.log_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "manifests/A_train.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "manifests/A_val.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "manifests/B_train.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "manifests/B_val.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "manifests/C_train.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "manifests/C_val.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "manifests/D_train.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "manifests/D_val.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "manifests/E_train.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "manifests/E_val.jsonl_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/B/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/C/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/D/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/er/E/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/B/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/C/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/D/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/A_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/A_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/B_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/B_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/C_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/C_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/D_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/D_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/E_confusion.csv_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/E_confusion.npy_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "matrices/ft/E/metrics.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "plan.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "preflight.log_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "progress.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "replay_cost.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "runtime_provenance.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/auto_finish.py_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/finalize_after_training.sh_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/finalize_evidence.py_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/launch.sh_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/launch_finalizer.sh_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/preflight.sh_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/remote.py_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/run_p1.py_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/status.sh_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/verify_results.py_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "scripts/watch.py_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "smoke.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "started.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "summary.json_payload_sha",
+      "passed": true
+    },
+    {
+      "name": "er_C_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "er_C_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "er_C_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "er_C_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "er_C_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "er_C_complete_current",
+      "passed": true
+    },
+    {
+      "name": "er_C_capacity",
+      "passed": true
+    },
+    {
+      "name": "er_C_past_only",
+      "passed": true
+    },
+    {
+      "name": "er_C_replay_schedule",
+      "passed": true
+    },
+    {
+      "name": "er_D_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "er_D_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "er_D_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "er_D_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "er_D_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "er_D_complete_current",
+      "passed": true
+    },
+    {
+      "name": "er_D_capacity",
+      "passed": true
+    },
+    {
+      "name": "er_D_past_only",
+      "passed": true
+    },
+    {
+      "name": "er_D_replay_schedule",
+      "passed": true
+    },
+    {
+      "name": "er_E_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "er_E_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "er_E_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "er_E_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "er_E_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "er_E_complete_current",
+      "passed": true
+    },
+    {
+      "name": "er_E_capacity",
+      "passed": true
+    },
+    {
+      "name": "er_E_past_only",
+      "passed": true
+    },
+    {
+      "name": "er_E_replay_schedule",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr0_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr0_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr0_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr0_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr0_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr0_complete_current",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr0_capacity",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr0_past_only",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr0_replay_schedule",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr1_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr1_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr1_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr1_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr1_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr1_complete_current",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr1_capacity",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr1_past_only",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr1_replay_schedule",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr2_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr2_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr2_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr2_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr2_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr2_complete_current",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr2_capacity",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr2_past_only",
+      "passed": true
+    },
+    {
+      "name": "er_search_lr2_replay_schedule",
+      "passed": true
+    },
+    {
+      "name": "ft_C_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "ft_C_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "ft_C_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "ft_C_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "ft_C_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "ft_C_current_only",
+      "passed": true
+    },
+    {
+      "name": "ft_D_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "ft_D_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "ft_D_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "ft_D_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "ft_D_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "ft_D_current_only",
+      "passed": true
+    },
+    {
+      "name": "ft_E_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "ft_E_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "ft_E_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "ft_E_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "ft_E_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "ft_E_current_only",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr0_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr0_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr0_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr0_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr0_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr0_current_only",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr1_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr1_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr1_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr1_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr1_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr1_current_only",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr2_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr2_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr2_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr2_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr2_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "ft_search_lr2_current_only",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr0_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr0_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr0_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr0_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr0_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr1_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr1_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr1_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr1_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr1_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr2_no_val_or_test",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr2_step_sequence",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr2_full_pool_exposure",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr2_finite_losses",
+      "passed": true
+    },
+    {
+      "name": "joint_search_lr2_actual_steps",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_2000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_2000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_2000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_2000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_2000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_2000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_2000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_2000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_4000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_4000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_4000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_4000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_4000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_4000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_4000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr0\\val_4000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_2000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_2000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_2000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_2000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_2000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_2000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_2000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_2000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_4000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_4000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_4000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_4000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_4000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_4000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_4000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr1\\val_4000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_2000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_2000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_2000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_2000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_2000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_2000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_2000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_2000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_4000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_4000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_4000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_4000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_4000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_4000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_4000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\er_search_lr2\\val_4000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_2000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_2000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_2000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_2000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_2000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_2000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_2000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_2000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_4000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_4000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_4000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_4000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_4000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_4000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_4000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr0\\val_4000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_2000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_2000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_2000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_2000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_2000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_2000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_2000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_2000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_4000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_4000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_4000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_4000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_4000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_4000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_4000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr1\\val_4000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_2000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_2000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_2000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_2000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_2000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_2000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_2000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_2000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_4000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_4000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_4000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_4000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_4000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_4000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_4000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\ft_search_lr2\\val_4000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_16000\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr0\\val_5000\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_16000\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr1\\val_5000\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_16000\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "jobs\\joint_search_lr2\\val_5000\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\B\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\C\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\D\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\er\\E\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\B\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\C\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\D\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\A_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\A_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\A_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\A_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\B_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\B_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\B_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\B_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\C_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\C_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\C_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\C_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\D_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\D_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\D_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\D_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\E_confusion.npy_shape",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\E_confusion.npy_nonnegative",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\E_confusion.npy_mIoU",
+      "passed": true
+    },
+    {
+      "name": "matrices\\ft\\E\\E_confusion.npy_GT_marginal",
+      "passed": true
+    },
+    {
+      "name": "ft_six_candidates",
+      "passed": true
+    },
+    {
+      "name": "ft_selection_rule",
+      "passed": true
+    },
+    {
+      "name": "ft_selection_domains",
+      "passed": true
+    },
+    {
+      "name": "ft_ft_search_lr0_2000",
+      "passed": true
+    },
+    {
+      "name": "ft_ft_search_lr0_4000",
+      "passed": true
+    },
+    {
+      "name": "ft_ft_search_lr1_2000",
+      "passed": true
+    },
+    {
+      "name": "ft_ft_search_lr1_4000",
+      "passed": true
+    },
+    {
+      "name": "ft_ft_search_lr2_2000",
+      "passed": true
+    },
+    {
+      "name": "ft_ft_search_lr2_4000",
+      "passed": true
+    },
+    {
+      "name": "ft_C_parent_sha",
+      "passed": true
+    },
+    {
+      "name": "ft_C_locked_hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "ft_D_parent_sha",
+      "passed": true
+    },
+    {
+      "name": "ft_D_locked_hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "ft_E_parent_sha",
+      "passed": true
+    },
+    {
+      "name": "ft_E_locked_hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "ft_B_matrix_values",
+      "passed": true
+    },
+    {
+      "name": "ft_C_matrix_values",
+      "passed": true
+    },
+    {
+      "name": "ft_D_matrix_values",
+      "passed": true
+    },
+    {
+      "name": "ft_E_matrix_values",
+      "passed": true
+    },
+    {
+      "name": "ft_final_mean",
+      "passed": true
+    },
+    {
+      "name": "ft_forgetting",
+      "passed": true
+    },
+    {
+      "name": "er_six_candidates",
+      "passed": true
+    },
+    {
+      "name": "er_selection_rule",
+      "passed": true
+    },
+    {
+      "name": "er_selection_domains",
+      "passed": true
+    },
+    {
+      "name": "er_er_search_lr0_2000",
+      "passed": true
+    },
+    {
+      "name": "er_er_search_lr0_4000",
+      "passed": true
+    },
+    {
+      "name": "er_er_search_lr1_2000",
+      "passed": true
+    },
+    {
+      "name": "er_er_search_lr1_4000",
+      "passed": true
+    },
+    {
+      "name": "er_er_search_lr2_2000",
+      "passed": true
+    },
+    {
+      "name": "er_er_search_lr2_4000",
+      "passed": true
+    },
+    {
+      "name": "er_C_parent_sha",
+      "passed": true
+    },
+    {
+      "name": "er_C_locked_hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "er_D_parent_sha",
+      "passed": true
+    },
+    {
+      "name": "er_D_locked_hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "er_E_parent_sha",
+      "passed": true
+    },
+    {
+      "name": "er_E_locked_hyperparameters",
+      "passed": true
+    },
+    {
+      "name": "er_B_matrix_values",
+      "passed": true
+    },
+    {
+      "name": "er_C_matrix_values",
+      "passed": true
+    },
+    {
+      "name": "er_D_matrix_values",
+      "passed": true
+    },
+    {
+      "name": "er_E_matrix_values",
+      "passed": true
+    },
+    {
+      "name": "er_final_mean",
+      "passed": true
+    },
+    {
+      "name": "er_forgetting",
+      "passed": true
+    },
+    {
+      "name": "joint_six_candidates",
+      "passed": true
+    },
+    {
+      "name": "joint_selection_rule",
+      "passed": true
+    },
+    {
+      "name": "joint_selection_domains",
+      "passed": true
+    },
+    {
+      "name": "joint_joint_search_lr0_5000",
+      "passed": true
+    },
+    {
+      "name": "joint_joint_search_lr0_16000",
+      "passed": true
+    },
+    {
+      "name": "joint_joint_search_lr1_5000",
+      "passed": true
+    },
+    {
+      "name": "joint_joint_search_lr1_16000",
+      "passed": true
+    },
+    {
+      "name": "joint_joint_search_lr2_5000",
+      "passed": true
+    },
+    {
+      "name": "joint_joint_search_lr2_16000",
+      "passed": true
+    },
+    {
+      "name": "completed_receipt",
+      "passed": true
+    }
+  ],
+  "passed": 861,
+  "failed": 0,
+  "jobs": {
+    "er_C": {
+      "training_seconds": 2720.4517740879965,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "C": 3000,
+        "B": 500,
+        "A": 500
+      },
+      "peak_allocated_MiB": 15445.2880859375
+    },
+    "er_D": {
+      "training_seconds": 2724.6969778460043,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "D": 3000,
+        "C": 330,
+        "A": 335,
+        "B": 335
+      },
+      "peak_allocated_MiB": 15432.2724609375
+    },
+    "er_E": {
+      "training_seconds": 2711.72446240898,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "E": 3000,
+        "D": 250,
+        "B": 250,
+        "A": 250,
+        "C": 250
+      },
+      "peak_allocated_MiB": 15432.2724609375
+    },
+    "er_search_lr0": {
+      "training_seconds": 2784.491718162986,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "B": 3000,
+        "A": 1000
+      },
+      "peak_allocated_MiB": 15432.2724609375
+    },
+    "er_search_lr1": {
+      "training_seconds": 2771.1543084349832,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "B": 3000,
+        "A": 1000
+      },
+      "peak_allocated_MiB": 15442.0380859375
+    },
+    "er_search_lr2": {
+      "training_seconds": 2739.284846653987,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "B": 3000,
+        "A": 1000
+      },
+      "peak_allocated_MiB": 15442.0380859375
+    },
+    "ft_C": {
+      "training_seconds": 2735.5547562620195,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "C": 4000
+      },
+      "peak_allocated_MiB": 15445.2880859375
+    },
+    "ft_D": {
+      "training_seconds": 2772.8855292250228,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "D": 4000
+      },
+      "peak_allocated_MiB": 15432.2724609375
+    },
+    "ft_E": {
+      "training_seconds": 2789.249226743006,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "E": 4000
+      },
+      "peak_allocated_MiB": 15432.2724609375
+    },
+    "ft_search_lr0": {
+      "training_seconds": 2685.916375860019,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "B": 4000
+      },
+      "peak_allocated_MiB": 15447.5849609375
+    },
+    "ft_search_lr1": {
+      "training_seconds": 2703.580498394993,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "B": 4000
+      },
+      "peak_allocated_MiB": 15442.4912109375
+    },
+    "ft_search_lr2": {
+      "training_seconds": 2724.0284688009997,
+      "steps": 4000,
+      "applied": 4000,
+      "images_by_domain": {
+        "B": 4000
+      },
+      "peak_allocated_MiB": 15443.3818359375
+    },
+    "joint_search_lr0": {
+      "training_seconds": 10916.856165327015,
+      "steps": 16000,
+      "applied": 15997,
+      "images_by_domain": {
+        "B": 1411,
+        "C": 1387,
+        "A": 10429,
+        "E": 1390,
+        "D": 1383
+      },
+      "peak_allocated_MiB": 15435.1943359375
+    },
+    "joint_search_lr1": {
+      "training_seconds": 11088.120412392018,
+      "steps": 16000,
+      "applied": 15998,
+      "images_by_domain": {
+        "B": 1411,
+        "C": 1387,
+        "A": 10429,
+        "E": 1390,
+        "D": 1383
+      },
+      "peak_allocated_MiB": 15430.806640625
+    },
+    "joint_search_lr2": {
+      "training_seconds": 11112.554696353007,
+      "steps": 16000,
+      "applied": 15999,
+      "images_by_domain": {
+        "B": 1411,
+        "C": 1387,
+        "A": 10429,
+        "E": 1390,
+        "D": 1383
+      },
+      "peak_allocated_MiB": 15430.806640625
+    }
+  },
+  "matrices": {
+    "jobs\\er_search_lr0\\val_2000\\A_confusion.npy": 81.14016097164813,
+    "jobs\\er_search_lr0\\val_2000\\B_confusion.npy": 80.11954192667646,
+    "jobs\\er_search_lr0\\val_4000\\A_confusion.npy": 81.03539342637124,
+    "jobs\\er_search_lr0\\val_4000\\B_confusion.npy": 81.03534356124676,
+    "jobs\\er_search_lr1\\val_2000\\A_confusion.npy": 81.3410083003809,
+    "jobs\\er_search_lr1\\val_2000\\B_confusion.npy": 81.6973484809525,
+    "jobs\\er_search_lr1\\val_4000\\A_confusion.npy": 81.13934870146217,
+    "jobs\\er_search_lr1\\val_4000\\B_confusion.npy": 81.92869382650404,
+    "jobs\\er_search_lr2\\val_2000\\A_confusion.npy": 79.7869280265191,
+    "jobs\\er_search_lr2\\val_2000\\B_confusion.npy": 80.65033109784288,
+    "jobs\\er_search_lr2\\val_4000\\A_confusion.npy": 79.95188083055959,
+    "jobs\\er_search_lr2\\val_4000\\B_confusion.npy": 81.05220248366835,
+    "jobs\\ft_search_lr0\\val_2000\\A_confusion.npy": 80.66486368746406,
+    "jobs\\ft_search_lr0\\val_2000\\B_confusion.npy": 80.87922860080272,
+    "jobs\\ft_search_lr0\\val_4000\\A_confusion.npy": 80.49747854090408,
+    "jobs\\ft_search_lr0\\val_4000\\B_confusion.npy": 81.39639765166305,
+    "jobs\\ft_search_lr1\\val_2000\\A_confusion.npy": 79.49756950189948,
+    "jobs\\ft_search_lr1\\val_2000\\B_confusion.npy": 81.44071757374985,
+    "jobs\\ft_search_lr1\\val_4000\\A_confusion.npy": 79.35676971514141,
+    "jobs\\ft_search_lr1\\val_4000\\B_confusion.npy": 81.94376507075006,
+    "jobs\\ft_search_lr2\\val_2000\\A_confusion.npy": 78.42987838240937,
+    "jobs\\ft_search_lr2\\val_2000\\B_confusion.npy": 81.97654694867101,
+    "jobs\\ft_search_lr2\\val_4000\\A_confusion.npy": 78.59838830872695,
+    "jobs\\ft_search_lr2\\val_4000\\B_confusion.npy": 82.03446431235368,
+    "jobs\\joint_search_lr0\\val_16000\\A_confusion.npy": 81.77453980249851,
+    "jobs\\joint_search_lr0\\val_16000\\B_confusion.npy": 82.05628924269433,
+    "jobs\\joint_search_lr0\\val_16000\\C_confusion.npy": 73.88535395198834,
+    "jobs\\joint_search_lr0\\val_16000\\D_confusion.npy": 75.201348980531,
+    "jobs\\joint_search_lr0\\val_16000\\E_confusion.npy": 49.91451619942091,
+    "jobs\\joint_search_lr0\\val_5000\\A_confusion.npy": 81.68236204904431,
+    "jobs\\joint_search_lr0\\val_5000\\B_confusion.npy": 81.47522855827039,
+    "jobs\\joint_search_lr0\\val_5000\\C_confusion.npy": 72.31695363839235,
+    "jobs\\joint_search_lr0\\val_5000\\D_confusion.npy": 72.58378228713156,
+    "jobs\\joint_search_lr0\\val_5000\\E_confusion.npy": 48.34941813205269,
+    "jobs\\joint_search_lr1\\val_16000\\A_confusion.npy": 81.8734323991072,
+    "jobs\\joint_search_lr1\\val_16000\\B_confusion.npy": 83.21184379255743,
+    "jobs\\joint_search_lr1\\val_16000\\C_confusion.npy": 75.08508428088886,
+    "jobs\\joint_search_lr1\\val_16000\\D_confusion.npy": 77.08373162973973,
+    "jobs\\joint_search_lr1\\val_16000\\E_confusion.npy": 52.56572729490724,
+    "jobs\\joint_search_lr1\\val_5000\\A_confusion.npy": 81.97048146324974,
+    "jobs\\joint_search_lr1\\val_5000\\B_confusion.npy": 81.507588025196,
+    "jobs\\joint_search_lr1\\val_5000\\C_confusion.npy": 73.68539095877215,
+    "jobs\\joint_search_lr1\\val_5000\\D_confusion.npy": 73.79561519052454,
+    "jobs\\joint_search_lr1\\val_5000\\E_confusion.npy": 48.92744959253834,
+    "jobs\\joint_search_lr2\\val_16000\\A_confusion.npy": 81.82136633937974,
+    "jobs\\joint_search_lr2\\val_16000\\B_confusion.npy": 82.73607657673791,
+    "jobs\\joint_search_lr2\\val_16000\\C_confusion.npy": 75.62834019350437,
+    "jobs\\joint_search_lr2\\val_16000\\D_confusion.npy": 78.03203901431851,
+    "jobs\\joint_search_lr2\\val_16000\\E_confusion.npy": 53.00860961730493,
+    "jobs\\joint_search_lr2\\val_5000\\A_confusion.npy": 80.56467347097033,
+    "jobs\\joint_search_lr2\\val_5000\\B_confusion.npy": 79.21898654032023,
+    "jobs\\joint_search_lr2\\val_5000\\C_confusion.npy": 73.00945640229172,
+    "jobs\\joint_search_lr2\\val_5000\\D_confusion.npy": 71.72446929814494,
+    "jobs\\joint_search_lr2\\val_5000\\E_confusion.npy": 47.598028420575304,
+    "matrices\\er\\B\\A_confusion.npy": 81.13934870146217,
+    "matrices\\er\\B\\B_confusion.npy": 81.92869382650404,
+    "matrices\\er\\B\\C_confusion.npy": 65.24670573559575,
+    "matrices\\er\\B\\D_confusion.npy": 67.40787991219776,
+    "matrices\\er\\B\\E_confusion.npy": 38.87927678297784,
+    "matrices\\er\\C\\A_confusion.npy": 80.08294276429237,
+    "matrices\\er\\C\\B_confusion.npy": 82.62889378866264,
+    "matrices\\er\\C\\C_confusion.npy": 74.79183875362594,
+    "matrices\\er\\C\\D_confusion.npy": 69.8576326378895,
+    "matrices\\er\\C\\E_confusion.npy": 40.50555071656539,
+    "matrices\\er\\D\\A_confusion.npy": 81.14806116019714,
+    "matrices\\er\\D\\B_confusion.npy": 82.90045710152886,
+    "matrices\\er\\D\\C_confusion.npy": 77.08511234098663,
+    "matrices\\er\\D\\D_confusion.npy": 75.43026546590677,
+    "matrices\\er\\D\\E_confusion.npy": 39.648469224234255,
+    "matrices\\er\\E\\A_confusion.npy": 81.34432324617741,
+    "matrices\\er\\E\\B_confusion.npy": 82.85688731213769,
+    "matrices\\er\\E\\C_confusion.npy": 74.71840968134035,
+    "matrices\\er\\E\\D_confusion.npy": 74.4541715588545,
+    "matrices\\er\\E\\E_confusion.npy": 54.00115180503116,
+    "matrices\\ft\\B\\A_confusion.npy": 80.49747854090408,
+    "matrices\\ft\\B\\B_confusion.npy": 81.39639765166305,
+    "matrices\\ft\\B\\C_confusion.npy": 65.67020502752207,
+    "matrices\\ft\\B\\D_confusion.npy": 66.34522270874481,
+    "matrices\\ft\\B\\E_confusion.npy": 34.712704527707906,
+    "matrices\\ft\\C\\A_confusion.npy": 79.96895742417584,
+    "matrices\\ft\\C\\B_confusion.npy": 82.29440003586052,
+    "matrices\\ft\\C\\C_confusion.npy": 74.48498788351623,
+    "matrices\\ft\\C\\D_confusion.npy": 67.15159848613713,
+    "matrices\\ft\\C\\E_confusion.npy": 38.83393442176891,
+    "matrices\\ft\\D\\A_confusion.npy": 80.31643495645659,
+    "matrices\\ft\\D\\B_confusion.npy": 82.62904646271564,
+    "matrices\\ft\\D\\C_confusion.npy": 71.2876281830604,
+    "matrices\\ft\\D\\D_confusion.npy": 77.03185110463198,
+    "matrices\\ft\\D\\E_confusion.npy": 39.97309121370926,
+    "matrices\\ft\\E\\A_confusion.npy": 79.28406639785389,
+    "matrices\\ft\\E\\B_confusion.npy": 81.16108132124099,
+    "matrices\\ft\\E\\C_confusion.npy": 68.18574045695176,
+    "matrices\\ft\\E\\D_confusion.npy": 74.74672215878816,
+    "matrices\\ft\\E\\E_confusion.npy": 51.672502357593316
+  }
+}

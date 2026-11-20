@@ -1,0 +1,59 @@
+{
+  "stage": "ft",
+  "domain": "A",
+  "split": "official validation",
+  "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/ft-seed1-B/iter_4000.pth",
+  "checkpoint_sha256": "70414218b7f27c2de7369d0e2d6027710409410b39458c9cca075955655b8cdd",
+  "metrics": {
+    "aAcc": 79.88,
+    "mIoU": 42.78,
+    "mAcc": 62.61,
+    "matrix_mIoU": 42.78
+  },
+  "state_unchanged": true,
+  "forward_calls": {
+    "backbone": 9000,
+    "decode_head.conv_seg": 9000
+  },
+  "output_shapes": {
+    "decode_head.conv_seg": [
+      1,
+      19,
+      128,
+      128
+    ]
+  },
+  "seconds": 251.84280817400577,
+  "peak_allocated_MiB": 555.20068359375,
+  "peak_reserved_MiB": 704.0,
+  "checkpoint_bytes": 575326743,
+  "parameters": 47832297,
+  "evaluated_images": 500,
+  "full_official_split": true,
+  "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/fog020/A_val.jsonl",
+  "manifest_sha256": "c021bbcfdfd483d191a500b86f157f7ceeaecf135cf90a9101e91799c695656f",
+  "gt_histogram": [
+    345264442,
+    49568652,
+    201005428,
+    6718315,
+    7521741,
+    13565658,
+    1808393,
+    6098373,
+    158868008,
+    7625026,
+    30765347,
+    11913424,
+    1975596,
+    59731217,
+    2760211,
+    3563120,
+    1031648,
+    729415,
+    6504475
+  ],
+  "checkpoint_training_iterations": 4000,
+  "debug": false,
+  "synthetic_fixture": false
+}

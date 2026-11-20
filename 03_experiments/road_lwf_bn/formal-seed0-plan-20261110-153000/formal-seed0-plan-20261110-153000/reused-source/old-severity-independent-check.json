@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-11-10T13:10:53+08:00",
+  "matrix_direction": "GT rows, prediction columns",
+  "checks": [
+    {
+      "model": "source",
+      "beta": "0",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 71.50872218134401,
+      "seconds": 252.1158738739905,
+      "peak_allocated_MiB": 564.22412109375
+    },
+    {
+      "model": "source",
+      "beta": "0.005",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 69.01182332276638,
+      "seconds": 255.82993386001908,
+      "peak_allocated_MiB": 564.22412109375
+    },
+    {
+      "model": "source",
+      "beta": "0.01",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 65.26889548563446,
+      "seconds": 257.5119618739991,
+      "peak_allocated_MiB": 564.22412109375
+    },
+    {
+      "model": "source",
+      "beta": "0.02",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 57.14930243918679,
+      "seconds": 248.98953069298295,
+      "peak_allocated_MiB": 564.22412109375
+    },
+    {
+      "model": "ft",
+      "beta": "0",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 54.291541698417305,
+      "seconds": 254.58055862601032,
+      "peak_allocated_MiB": 555.20068359375
+    },
+    {
+      "model": "ft",
+      "beta": "0.005",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 53.97915906545119,
+      "seconds": 267.06897017898154,
+      "peak_allocated_MiB": 555.20068359375
+    },
+    {
+      "model": "ft",
+      "beta": "0.01",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 51.06254254998668,
+      "seconds": 251.55999928101664,
+      "peak_allocated_MiB": 555.20068359375
+    },
+    {
+      "model": "ft",
+      "beta": "0.02",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 44.82802149763599,
+      "seconds": 252.10098915401613,
+      "peak_allocated_MiB": 555.20068359375
+    },
+    {
+      "model": "gsmf",
+      "beta": "0",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 55.20780120809538,
+      "seconds": 255.9434960159997,
+      "peak_allocated_MiB": 741.400390625
+    },
+    {
+      "model": "gsmf",
+      "beta": "0.005",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 54.67557715207517,
+      "seconds": 250.2560852940078,
+      "peak_allocated_MiB": 741.400390625
+    },
+    {
+      "model": "gsmf",
+      "beta": "0.01",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 51.78728210123482,
+      "seconds": 256.8810649829975,
+      "peak_allocated_MiB": 741.400390625
+    },
+    {
+      "model": "gsmf",
+      "beta": "0.02",
+      "images": 500,
+      "valid_pixels": 917018489,
+      "classes_in_mean": 19,
+      "mIoU_percent": 45.66214587782727,
+      "seconds": 265.66142660402693,
+      "peak_allocated_MiB": 741.400390625
+    }
+  ],
+  "notes": "Fraction arithmetic independently recomputes IoU; prior evaluator independently reread each saved prediction/GT; aggregate independently checked each GT histogram."
+}

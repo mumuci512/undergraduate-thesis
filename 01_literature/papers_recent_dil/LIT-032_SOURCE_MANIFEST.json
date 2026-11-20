@@ -1,0 +1,950 @@
+{
+  "literature_id": "LIT-032",
+  "checked_date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "title": "Domain-Incremental Semantic Segmentation for Traffic Scenes",
+  "doi": "10.1109/tits.2024.3525005",
+  "bibliographic_status": "publisher-deposited metadata verified; full text not obtained",
+  "reading_scope": "metadata and indexed abstract only; no full-text reading",
+  "literature_index_reading_status": "未读",
+  "report": "01_literature/paper_reports/LIT-032_traffic_scenes_preliminary_review.docx",
+  "crossref_publisher_deposit": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          8
+        ]
+      ],
+      "date-time": "2026-10-08T04:34:02Z",
+      "timestamp": 1791434042189,
+      "version": "4.3.3"
+    },
+    "reference-count": 65,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "4",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2025-04-01T00:00:00Z",
+          "timestamp": 1743465600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2025-04-01T00:00:00Z",
+          "timestamp": 1743465600000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2025-04-01T00:00:00Z",
+          "timestamp": 1743465600000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100012226",
+        "name": "Fundamental Research Funds for the Central Universities",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "30922010919"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "30922010919"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100012226",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100004608",
+        "name": "Natural Science Foundation of Jiangsu Province",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "BK20231457"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "BK20231457"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100004608",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61672286"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "61672286"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Intell. Transport. Syst."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          4
+        ]
+      ]
+    },
+    "DOI": "10.1109/tits.2024.3525005",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          15
+        ]
+      ],
+      "date-time": "2025-01-15T15:17:38Z",
+      "timestamp": 1736954258000
+    },
+    "page": "5067-5081",
+    "source": "Crossref",
+    "is-referenced-by-count": 5,
+    "title": [
+      "Domain-Incremental Semantic Segmentation for Traffic Scenes"
+    ],
+    "prefix": "10.1109",
+    "volume": "26",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-0631-2385",
+        "authenticated-orcid": false,
+        "given": "Yazhou",
+        "family": "Liu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Engineering, Nanjing University of Science and Technology, Nanjing, Jiangsu, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Haoqi",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Engineering, Nanjing University of Science and Technology, Nanjing, Jiangsu, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6910-6933",
+        "authenticated-orcid": false,
+        "given": "Pongsak",
+        "family": "Lasang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Panasonic Research and Development Center Singapore, Bedok, Singapore"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0009-9202-1995",
+        "authenticated-orcid": false,
+        "given": "Zheng",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Panasonic Research and Development Center Singapore, Bedok, Singapore"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIV.2020.2980671"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TITS.2020.3037727"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TITS.2021.3066401"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/tiv.2022.3176860"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TITS.2022.3228042"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIV.2021.3094836"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7298965"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.75"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.660"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2017.2699184"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TMM.2021.3074008"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2020.3026069"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.01087"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.01479"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.01091"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.00298"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.01075"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.00287"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/cvpr52729.2023.00682"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.02263"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52729.2023.00777"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.00424"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV51070.2023.00116"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV51070.2023.01835"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1073/pnas.1611835114"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2019.00536"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ITSC48978.2021.9564940"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v36i3.20149"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IV48863.2021.9575493"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-01219-9_9"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2017.2773081"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00528"
+      },
+      {
+        "key": "ref33",
+        "first-page": "506",
+        "article-title": "Learning multiple visual domains with residual adapters",
+        "volume-title": "Proc. Int. Conf. Neural Inf. Process. Syst.",
+        "author": "Rebuffi"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00847"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-58565-5_41"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WACV51458.2022.00214"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2016.2644615"
+      },
+      {
+        "key": "ref38",
+        "article-title": "ENet: A deep neural network architecture for real-time semantic segmentation",
+        "author": "Paszke",
+        "year": "2016",
+        "journal-title": "arXiv:1606.02147"
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TITS.2017.2750080"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-01249-6_34"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.587"
+      },
+      {
+        "key": "ref42",
+        "first-page": "2994",
+        "article-title": "Continual learning with deep generative replay",
+        "volume-title": "Proc. 31st Int. Conf. Neural Inf. Process. Syst.",
+        "author": "Shin"
+      },
+      {
+        "key": "ref43",
+        "article-title": "PathNet: Evolution channels gradient descent in super neural networks",
+        "author": "Fernando",
+        "year": "2017",
+        "journal-title": "arXiv:1701.08734"
+      },
+      {
+        "key": "ref44",
+        "first-page": "1",
+        "article-title": "Scalable and order-robust continual learning with additive parameter decomposition",
+        "volume-title": "Proc. Int. Conf. Learn. Represent.",
+        "author": "Yoon"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11263-023-01931-6"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNNLS.2021.3082316"
+      },
+      {
+        "key": "ref47",
+        "first-page": "2485",
+        "article-title": "Multi-domain learning and identity mining for vehicle reidentification",
+        "volume-title": "Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. Workshops (CVPRW)",
+        "author": "He"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICME52920.2022.9859706"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ITSC45102.2020.9294483"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.00925"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.00403"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR52688.2022.00692"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ITSC55140.2022.9922284"
+      },
+      {
+        "key": "ref54",
+        "first-page": "9120",
+        "article-title": "Which tasks should be learned together in multi-task learning",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "volume": "119",
+        "author": "Standley"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00753"
+      },
+      {
+        "key": "ref56",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2018.00745"
+      },
+      {
+        "key": "ref57",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00326"
+      },
+      {
+        "key": "ref58",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1214/aoms/1177729694"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.350"
+      },
+      {
+        "key": "ref60",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR42600.2020.00271"
+      },
+      {
+        "key": "ref61",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WACV.2019.00190"
+      },
+      {
+        "key": "ref62",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV48922.2021.01059"
+      },
+      {
+        "key": "ref63",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2009.5206848"
+      },
+      {
+        "key": "ref64",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCVW.2019.00400"
+      },
+      {
+        "key": "ref65",
+        "first-page": "2579",
+        "article-title": "Visualizing data using t-SNE",
+        "volume": "9",
+        "author": "van der Maaten",
+        "year": "2008",
+        "journal-title": "J. Mach. Learn. Res."
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Intelligent Transportation Systems"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx8/6979/10945245/10843143.pdf?arnumber=10843143",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          6
+        ]
+      ],
+      "date-time": "2026-02-06T20:51:48Z",
+      "timestamp": 1770411108000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10843143/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          4
+        ]
+      ]
+    },
+    "references-count": 65,
+    "journal-issue": {
+      "issue": "4"
+    },
+    "URL": "https://doi.org/10.1109/tits.2024.3525005",
+    "relation": {},
+    "ISSN": [
+      "1524-9050",
+      "1558-0016"
+    ],
+    "issn-type": [
+      {
+        "value": "1524-9050",
+        "type": "print"
+      },
+      {
+        "value": "1558-0016",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          4
+        ]
+      ]
+    }
+  },
+  "abstract_provenance": {
+    "source": "OpenAlex inverted abstract index, text compared with TRID transcription",
+    "url": "https://api.openalex.org/works/https://doi.org/10.1109/TITS.2024.3525005",
+    "original_publisher_abstract_read_directly": false,
+    "use": "unverified method leads only; not primary full-text evidence",
+    "text": "Traffic scene segmentation is an important visual perception process to provide strong support for the decision-making of autonomous driving systems. The traffic scene is an open environment that is constantly changing, and the segmentation model needs to have the ability of domain incremental learning to maintain stable performance in the changing environment. The main challenges include the diversity of the traffic scene and the accumulation of forgetting about the previous traffic scenes. In this work, an adapter-based network model is proposed to solve the domain-incremental traffic scene segmentation task. Specifically, the domain-aware adapter (DAA) module is proposed, which divides the model parameters into domain-shared and domain-specific, so that the model can handle the information of all learned domains by dynamically expanding parameters. To further alleviate catastrophic forgetting, the inter-class correlation enhancement (ICE) module is proposed, which utilizes inter-class correlation to improve segmentation accuracy for single domain and knowledge transfer between domains. Extensive experimental results show that the proposed method can achieve promising results for retaining the competitive performance for both new and old domains."
+  },
+  "openalex_open_access_observation": {
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_url": null,
+    "any_repository_has_fulltext": false
+  },
+  "openalex_locations": [
+    {
+      "id": "doi:10.1109/tits.2024.3525005",
+      "doi": "https://doi.org/10.1109/tits.2024.3525005",
+      "is_oa": false,
+      "landing_page_url": "https://doi.org/10.1109/tits.2024.3525005",
+      "pdf_url": null,
+      "source": {
+        "id": "https://openalex.org/S144771191",
+        "display_name": "IEEE Transactions on Intelligent Transportation Systems",
+        "issn_l": "1524-9050",
+        "issn": [
+          "1524-9050",
+          "1558-0016"
+        ],
+        "is_oa": false,
+        "is_in_doaj": false,
+        "is_core": true,
+        "listed_in": [
+          "abdc-a",
+          "anvur-scientific",
+          "ccf-b",
+          "cwts-core",
+          "dongbi-a",
+          "jufo-2",
+          "ki-jl-1",
+          "norway-1",
+          "poland-140",
+          "russia-white-list-1",
+          "vabb-shw"
+        ],
+        "host_organization": "https://openalex.org/P4310319808",
+        "host_organization_name": "Institute of Electrical and Electronics Engineers",
+        "host_organization_lineage": [
+          "https://openalex.org/P4310319808"
+        ],
+        "host_organization_lineage_names": [
+          "Institute of Electrical and Electronics Engineers"
+        ],
+        "type": "journal"
+      },
+      "license": null,
+      "license_id": null,
+      "version": "publishedVersion",
+      "is_accepted": true,
+      "is_published": true,
+      "raw_source_name": "IEEE Transactions on Intelligent Transportation Systems",
+      "raw_type": "journal-article"
+    }
+  ],
+  "semantic_scholar": {
+    "paperId": "7f1a358dc5f682e31e44525cb2e86f2518e44736",
+    "externalIds": {
+      "DBLP": "journals/tits/LiuCLW25",
+      "DOI": "10.1109/TITS.2024.3525005",
+      "CorpusId": 275708869
+    },
+    "url": "https://www.semanticscholar.org/paper/7f1a358dc5f682e31e44525cb2e86f2518e44736",
+    "title": "Domain-Incremental Semantic Segmentation for Traffic Scenes",
+    "year": 2025,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null
+    },
+    "authors": [
+      {
+        "authorId": "11323114",
+        "name": "Ya-Zhou Liu"
+      },
+      {
+        "authorId": "2479428218",
+        "name": "Hao-Qi Chen"
+      },
+      {
+        "authorId": "1981852",
+        "name": "Pongsak Lasang"
+      },
+      {
+        "authorId": "2274927396",
+        "name": "Zheng Wu"
+      }
+    ]
+  },
+  "retrieval_attempts": [
+    {
+      "key": "crossref_pdf",
+      "requested_url": "https://xplorestaging.ieee.org/ielx8/6979/10945245/10843143.pdf?arnumber=10843143",
+      "status": 418,
+      "final_url": "https://xplorestaging.ieee.org/ielx8/6979/10945245/10843143.pdf?arnumber=10843143",
+      "content_type": "text/html",
+      "bytes": 15410,
+      "saved": "crossref_pdf.html",
+      "is_pdf": false
+    },
+    {
+      "key": "ieee_pdf_record",
+      "requested_url": "https://ieeexplore.ieee.org/iel8/6979/10945245/10843143.pdf",
+      "status": 418,
+      "final_url": "https://ieeexplore.ieee.org/iel8/6979/10945245/10843143.pdf",
+      "content_type": "text/html",
+      "bytes": 15410,
+      "saved": "ieee_pdf_record.html",
+      "is_pdf": false
+    },
+    {
+      "key": "author",
+      "requested_url": "https://teacher.njust.edu.cn/jsj/lyz/list.htm",
+      "status": 200,
+      "final_url": "https://teacher.njust.edu.cn/jsj/lyz/list.htm",
+      "content_type": "text/html",
+      "bytes": 32146,
+      "saved": "author.html",
+      "is_pdf": false
+    },
+    {
+      "key": "orcid",
+      "requested_url": "https://pub.orcid.org/v3.0/0000-0002-0631-2385/person",
+      "status": 200,
+      "final_url": "https://pub.orcid.org/v3.0/0000-0002-0631-2385/person",
+      "content_type": "application/json;charset=UTF-8",
+      "bytes": 926,
+      "saved": "orcid.json",
+      "is_pdf": false
+    },
+    {
+      "key": "publisher_abstract",
+      "requested_url": "https://ieeexplore.ieee.org/abstract/document/10843143",
+      "status": 418,
+      "final_url": "https://ieeexplore.ieee.org/abstract/document/10843143",
+      "content_type": "text/html",
+      "bytes": 15410,
+      "saved": "publisher_abstract.html",
+      "is_pdf": false
+    },
+    {
+      "key": "publisher_html",
+      "requested_url": "https://ieeexplore.ieee.org/document/10843143/keywords#keywords",
+      "status": 202,
+      "final_url": "https://ieeexplore.ieee.org/document/10843143/keywords#keywords",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 0,
+      "saved": "publisher_html.html",
+      "is_pdf": false
+    },
+    {
+      "key": "api_abstract",
+      "requested_url": "https://api.crossref.org/works/10.1109/TITS.2024.3525005",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1109/TITS.2024.3525005",
+      "content_type": "application/json",
+      "bytes": 10487,
+      "saved": "api_abstract.json",
+      "is_pdf": false
+    },
+    {
+      "key": "openalex",
+      "requested_url": "https://api.openalex.org/works/https://doi.org/10.1109/TITS.2024.3525005",
+      "status": 200,
+      "final_url": "https://api.openalex.org/works/https://doi.org/10.1109/TITS.2024.3525005",
+      "content_type": "application/json",
+      "bytes": 17311,
+      "saved": "openalex.json",
+      "sha256": "7875a9b5efbe343fd7be75a117da6f330503cdf13bdf51f64ab862f4c4ea1e5b"
+    },
+    {
+      "key": "semantic_scholar",
+      "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109/TITS.2024.3525005?fields=title,authors,year,openAccessPdf,url,externalIds",
+      "status": 200,
+      "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109/TITS.2024.3525005?fields=title,authors,year,openAccessPdf,url,externalIds",
+      "content_type": "application/json",
+      "bytes": 616,
+      "saved": "semantic_scholar.json",
+      "sha256": "108ce3554acb0eacd995e54da4effa6fbce498489a2898cbe39cdd316f38c078"
+    },
+    {
+      "key": "survey_repository",
+      "requested_url": "https://raw.githubusercontent.com/YBIO/SurveyCSS/main/README.md",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/YBIO/SurveyCSS/main/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 47756,
+      "saved": "survey_repository.md",
+      "sha256": "5e8c271b6f070227058a18485842c9cc6980f866282fbbbaa58289b43fcbb63d",
+      "matching_lines": [
+        "- Domain-Incremental Semantic Segmentation for Traffic Scenes. [TITS 2025] [[paper]](https://ieeexplore.ieee.org/abstract/document/10843143) ![](https://img.shields.io/badge/domain%20incre.-blue)"
+      ]
+    },
+    {
+      "key": "abstract_transcription",
+      "requested_url": "https://trid.trb.org/View/2553348",
+      "status": 200,
+      "final_url": "https://trid.trb.org/View/2553348",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 51354,
+      "saved": "abstract_transcription.html",
+      "sha256": "47d1ee0dfb1784b509ccadce91bb0aa911b662632737420d19dbdd7a7fe1241b"
+    },
+    {
+      "key": "github_repository_search",
+      "requested_url": "https://api.github.com/search/repositories?q=%22Domain-Incremental+Semantic+Segmentation+for+Traffic+Scenes%22",
+      "status": 200,
+      "final_url": "https://api.github.com/search/repositories?q=%22Domain-Incremental+Semantic+Segmentation+for+Traffic+Scenes%22",
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 55,
+      "saved": "github_repository_search.json",
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f",
+      "total_count": 0
+    },
+    {
+      "key": "arxiv_search",
+      "requested_url": "https://export.arxiv.org/api/query?search_query=ti:%22Domain-Incremental%20Semantic%20Segmentation%20for%20Traffic%20Scenes%22&start=0&max_results=5",
+      "status": 200,
+      "final_url": "https://export.arxiv.org/api/query?search_query=ti:%22Domain-Incremental%20Semantic%20Segmentation%20for%20Traffic%20Scenes%22&start=0&max_results=5",
+      "content_type": "application/atom+xml; charset=utf-8",
+      "bytes": 803,
+      "saved": "arxiv_search.xml",
+      "sha256": "b89771b46c88d19ff30a75b654d0c095aea2d1447207de0ad59aca666ce59d58"
+    }
+  ],
+  "snapshots": {
+    "api_abstract.json": {
+      "path": "tmp/lit032/api_abstract.json",
+      "bytes": 10487,
+      "sha256": "a20724a78ac0d1c81ae206ecc6700be6f48e5be893f7956c02c5210db12f3449"
+    },
+    "openalex.json": {
+      "path": "tmp/lit032/openalex.json",
+      "bytes": 17311,
+      "sha256": "7875a9b5efbe343fd7be75a117da6f330503cdf13bdf51f64ab862f4c4ea1e5b"
+    },
+    "semantic_scholar.json": {
+      "path": "tmp/lit032/semantic_scholar.json",
+      "bytes": 616,
+      "sha256": "108ce3554acb0eacd995e54da4effa6fbce498489a2898cbe39cdd316f38c078"
+    },
+    "author.html": {
+      "path": "tmp/lit032/author.html",
+      "bytes": 32146,
+      "sha256": "4cd8336051be357d07a57e23186ee8dce736f482a5bb7b989a1b21b771060a3d"
+    },
+    "abstract_transcription.html": {
+      "path": "tmp/lit032/abstract_transcription.html",
+      "bytes": 51354,
+      "sha256": "47d1ee0dfb1784b509ccadce91bb0aa911b662632737420d19dbdd7a7fe1241b"
+    },
+    "survey_repository.md": {
+      "path": "tmp/lit032/survey_repository.md",
+      "bytes": 47756,
+      "sha256": "5e8c271b6f070227058a18485842c9cc6980f866282fbbbaa58289b43fcbb63d"
+    },
+    "arxiv_search.xml": {
+      "path": "tmp/lit032/arxiv_search.xml",
+      "bytes": 803,
+      "sha256": "b89771b46c88d19ff30a75b654d0c095aea2d1447207de0ad59aca666ce59d58"
+    },
+    "github_repository_search.json": {
+      "path": "tmp/lit032/github_repository_search.json",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    }
+  },
+  "limitations": [
+    "No paper PDF or supplemental material was obtained.",
+    "No verified experiment groups, numerical results, metrics or source page locators.",
+    "Limited searches do not establish that public full text or author code does not exist.",
+    "No code execution, reproduction, baseline selection or user-attested read declaration."
+  ]
+}

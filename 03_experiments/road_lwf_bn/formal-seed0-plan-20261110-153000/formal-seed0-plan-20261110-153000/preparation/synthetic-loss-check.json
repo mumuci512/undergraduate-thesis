@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "synthetic": true,
+  "loss": 0.6227601279726076,
+  "manual": 0.6227601279726076,
+  "analytic_gradient_matches": true,
+  "identical_logits_soft_CE": 0.5100956683634157,
+  "identical_logits_gradient_zero": true,
+  "CE_ignore255_gradient_zero": true,
+  "distillation_support": "all native stride-4 logit pixels including ignored GT/padding; no mask",
+  "reduction": "sum classes then mean N,H,W",
+  "temperature": 2,
+  "weight": 0.5,
+  "T_squared_scaling": false
+}

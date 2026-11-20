@@ -1,0 +1,30 @@
+{
+  "literature_id": "LIT-034",
+  "retrieved_date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "title": "Multi-Domain Incremental Learning for Semantic Segmentation",
+  "files": [
+    {
+      "path": "01_literature/papers_recent_dil/LIT-034_Garg_2022_MDIL_SS_WACV.pdf",
+      "source_url": "https://openaccess.thecvf.com/content/WACV2022/papers/Garg_Multi-Domain_Incremental_Learning_for_Semantic_Segmentation_WACV_2022_paper.pdf",
+      "pages": 11,
+      "sha256": "c2ccc23692724292afae1b9d17d7374c53166a3b8ddbd59d8eb3527657c7e675",
+      "all_pages_parseable": true,
+      "needs_repair": false
+    },
+    {
+      "path": "01_literature/papers_recent_dil/LIT-034_Garg_2022_MDIL_SS_WACV_supplement.pdf",
+      "source_url": "https://openaccess.thecvf.com/content/WACV2022/supplemental/Garg_Multi-Domain_Incremental_Learning_WACV_2022_supplemental.pdf",
+      "pages": 10,
+      "sha256": "a057a60188e5b3a22da4e4bc1a304fe99bb2a0d7a785af3802dfa684d40605fb",
+      "all_pages_parseable": true,
+      "needs_repair": false
+    }
+  ],
+  "code": {
+    "repository": "https://github.com/prachigarg23/MDIL-SS",
+    "commit": "9db199dd2b1914e9a51debe8f2e9d1945e352130",
+    "inspection": "Core training, model, dataset, metric and evaluation sources inspected statically; no training or reproduction; checkpoints not downloaded"
+  },
+  "read_scope": "AI-assisted full text and supplement reading, focused method and experiment verification; no user-attested read"
+}

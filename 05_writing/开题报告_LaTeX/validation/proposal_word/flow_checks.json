@@ -1,0 +1,92 @@
+{
+  "proposal": {
+    "pages": 3,
+    "compiled": true,
+    "no_overfull": true,
+    "all_text_within_page": true,
+    "text_bounds": [
+      {
+        "page": 1,
+        "min_text_top_bp": 196.01600000000008,
+        "max_text_bottom_bp": 704.9196400000001
+      },
+      {
+        "page": 2,
+        "min_text_top_bp": 73.5196400000001,
+        "max_text_bottom_bp": 672.03964
+      },
+      {
+        "page": 3,
+        "min_text_top_bp": 75.03200000000004,
+        "max_text_bottom_bp": 500.482
+      }
+    ]
+  },
+  "flow_test": {
+    "pages": 8,
+    "compiled": true,
+    "no_overfull": true,
+    "all_text_within_page": true,
+    "text_bounds": [
+      {
+        "page": 1,
+        "min_text_top_bp": 196.01600000000008,
+        "max_text_bottom_bp": 704.9196400000001
+      },
+      {
+        "page": 2,
+        "min_text_top_bp": 73.5196400000001,
+        "max_text_bottom_bp": 810.991
+      },
+      {
+        "page": 3,
+        "min_text_top_bp": 66.952,
+        "max_text_bottom_bp": 804.351
+      },
+      {
+        "page": 4,
+        "min_text_top_bp": 66.952,
+        "max_text_bottom_bp": 804.351
+      },
+      {
+        "page": 5,
+        "min_text_top_bp": 66.952,
+        "max_text_bottom_bp": 782.01864
+      },
+      {
+        "page": 6,
+        "min_text_top_bp": 75.03200000000004,
+        "max_text_bottom_bp": 793.8919999999996
+      },
+      {
+        "page": 7,
+        "min_text_top_bp": 66.22299999999996,
+        "max_text_bottom_bp": 780.2219999999996
+      },
+      {
+        "page": 8,
+        "min_text_top_bp": 68.52200000000005,
+        "max_text_bottom_bp": 297.38200000000006
+      }
+    ],
+    "reference_hanging_indent_bp": 21.0
+  },
+  "long_cover_test": {
+    "pages": 2,
+    "compiled": true,
+    "no_overfull": true,
+    "all_text_within_page": true,
+    "text_bounds": [
+      {
+        "page": 1,
+        "min_text_top_bp": 196.01600000000008,
+        "max_text_bottom_bp": 717.11964
+      },
+      {
+        "page": 2,
+        "min_text_top_bp": 73.5196400000001,
+        "max_text_bottom_bp": 87.55964000000006
+      }
+    ]
+  }
+}

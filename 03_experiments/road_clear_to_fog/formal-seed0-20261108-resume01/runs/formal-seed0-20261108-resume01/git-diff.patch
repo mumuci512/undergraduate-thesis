@@ -1,0 +1,273 @@
+diff --git a/configs/_base_/datasets/Potsdam_IRRG_512.py b/configs/_base_/datasets/Potsdam_IRRG_512.py
+index 528f98d..e9ea6fd 100644
+--- a/configs/_base_/datasets/Potsdam_IRRG_512.py
++++ b/configs/_base_/datasets/Potsdam_IRRG_512.py
+@@ -6,7 +6,7 @@ Potsdam_root = 'data/Potsdam_IRRG_tif_512'
+ Potsdam_crop_size = (512, 512)
+ 
+ Potsdam_test_pipeline = [
+-    dict(type='LoadSingleRSImageFromFile'),
++    dict(type='LoadISPRSTiff'),
+     dict(type='Resize', scale=(512, 512), keep_ratio=True),
+     # add loading annotation after ``Resize`` because ground truth
+     # does not need to do resize data transform
+diff --git a/configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py b/configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py
+index 8675108..8621ed6 100644
+--- a/configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py
++++ b/configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py
+@@ -8,7 +8,7 @@ dataset_type = 'ISPRS_my_dataset'
+ data_root = os.path.join(current_directory, 'data/Potsdam_IRRG_tif_512')
+ crop_size = (512, 512)
+ train_pipeline = [
+-    dict(type='LoadSingleRSImageFromFile'),
++    dict(type='LoadISPRSTiff'),
+     dict(type='LoadAnnotations', reduce_zero_label=False),
+     dict(
+         type='RandomResize',
+@@ -20,7 +20,7 @@ train_pipeline = [
+     dict(type='PackSegInputs')
+ ]
+ test_pipeline = [
+-    dict(type='LoadSingleRSImageFromFile'),
++    dict(type='LoadISPRSTiff'),
+     dict(type='Resize', scale=(512, 512), keep_ratio=True),
+     # add loading annotation after ``Resize`` because ground truth
+     # does not need to do resize data transform
+@@ -29,7 +29,7 @@ test_pipeline = [
+ ]
+ img_ratios = [0.5, 0.75, 1.0, 1.25, 1.5, 1.75]
+ tta_pipeline = [
+-    dict(type='LoadSingleRSImageFromFile', backend_args=None),
++    dict(type='LoadISPRSTiff'),
+     dict(
+         type='TestTimeAug',
+         transforms=[
+diff --git a/configs/_base_/datasets/Vaihingen_512.py b/configs/_base_/datasets/Vaihingen_512.py
+index 92d860c..b9741f0 100644
+--- a/configs/_base_/datasets/Vaihingen_512.py
++++ b/configs/_base_/datasets/Vaihingen_512.py
+@@ -6,7 +6,7 @@ Vaihingen_root = 'data/Vaihingen_IRRG_tif_512'
+ Vaihingen_crop_size = (512, 512)
+ 
+ Vaihingen_train_pipeline = [
+-    dict(type='LoadSingleRSImageFromFile'),
++    dict(type='LoadISPRSTiff'),
+     dict(type='LoadAnnotations', reduce_zero_label=False),
+     dict(
+         type='RandomResize',
+@@ -26,7 +26,7 @@ train_Vaihingen = dict(
+         pipeline=Vaihingen_train_pipeline)
+ 
+ Vaihingen_test_pipeline = [
+-    dict(type='LoadSingleRSImageFromFile'),
++    dict(type='LoadISPRSTiff'),
+     dict(type='Resize', scale=(512, 512), keep_ratio=True),
+     # add loading annotation after ``Resize`` because ground truth
+     # does not need to do resize data transform
+diff --git a/configs/gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py b/configs/gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py
+index c2af439..c23c77d 100644
+--- a/configs/gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py
++++ b/configs/gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py
+@@ -1,11 +1,13 @@
+ # Copyright (c) Wubiao Huang (https://github.com/HuangWBill).
+ # gs_aufpn-ResNet101
+ _base_ = [
+-    '../_base_/models/gs_aufpn_r50-d8.py', '../_base_/datasets/Potsdam_my_dataset_IRRG_512.py', '../_base_/default_runtime_iter.py',
+-    '../_base_/schedules/schedule_80k_iter.py'
++    './_base_/models/gs_aufpn_r50-d8.py', './_base_/datasets/Potsdam_my_dataset_IRRG_512.py', './_base_/default_runtime_iter.py',
++    './_base_/schedules/schedule_80k_iter.py'
+ ]
+ 
+-custom_imports = dict(imports=['GSMF-RS-DIL.mmseg.datasets.ISPRS_my_dataset','GSMF-RS-DIL.mmseg.decode_head.gs_aufpn_head'])
++custom_imports = dict(imports=['gsmf_rs_dil.datasets.ISPRS_my_dataset',
++                               'gsmf_rs_dil.datasets.isprs_tif_loader',
++                               'gsmf_rs_dil.decode_head.gs_aufpn_head'])
+ 
+ crop_size = (512,512)
+ data_preprocessor = dict(size=crop_size)
+diff --git a/configs/gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py b/configs/gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py
+index 4436293..eb51844 100644
+--- a/configs/gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py
++++ b/configs/gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py
+@@ -1,15 +1,16 @@
+ # Copyright (c) Wubiao Huang (https://github.com/HuangWBill).
+ # GSMF-RS-DIL
+ _base_ = [
+-    '../_base_/models/gsmf_rs_dil_r50-d8.py', '../_base_/datasets/ISPRS_DIL_my_dataset_IRRG_512.py', '../_base_/default_runtime_iter.py'
++    './_base_/models/gsmf_rs_dil_r50-d8.py', './_base_/datasets/ISPRS_DIL_my_dataset_IRRG_512.py', './_base_/default_runtime_iter.py'
+ ]
+ 
+-custom_imports = dict(imports=['projects.DIL.mmseg.datasets.ISPRS_my_dataset',
+-                               'projects.DIL.mmseg.decode_head.gsmf_rs_dil_head',
+-                               'projects.DIL.mmseg.evaluation.dg_metrics',
+-                               'projects.DIL.mmseg.segmentors.DIL_encoder_decoder',
+-                               'projects.DIL.mmseg.losses.dil_hin_loss',
+-                               'projects.DIL.mmseg.losses.dil_kldivergence_loss'
++custom_imports = dict(imports=['gsmf_rs_dil.datasets.ISPRS_my_dataset',
++                               'gsmf_rs_dil.datasets.isprs_tif_loader',
++                               'gsmf_rs_dil.decode_head.gsmf_rs_dil_head',
++                               'gsmf_rs_dil.evaluation.dg_metrics',
++                               'gsmf_rs_dil.segmentors.DIL_encoder_decoder',
++                               'gsmf_rs_dil.losses.dil_hin_loss',
++                               'gsmf_rs_dil.losses.dil_kldivergence_loss'
+                                ])
+ 
+ crop_size = (512,512)
+diff --git a/tools/checkpoint_process.py b/tools/checkpoint_process.py
+index b574662..684f455 100644
+--- a/tools/checkpoint_process.py
++++ b/tools/checkpoint_process.py
+@@ -1,58 +1,48 @@
+ # Copyright (c) Wubiao Huang (https://github.com/HuangWBill).
+-import torch
+-from collections import OrderedDict
++"""Convert a single-domain checkpoint into the two-branch DIL format."""
+ import argparse
+-import warnings
++from collections import OrderedDict
++from pathlib import Path
++
++import torch
++
+ 
+ def parse_args():
+-    parser = argparse.ArgumentParser()
+-    parser.add_argument('--dataset_name', default='ISPRS')
+-    return args
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--dataset_name', choices=['ISPRS', 'LoveDA'],
++                        default='ISPRS')
++    parser.add_argument('--input', help='single-domain checkpoint path')
++    parser.add_argument('--output', help='converted checkpoint path')
++    return parser.parse_args()
++
+ 
+ def main():
+     args = parse_args()
+-    assert args.dataset_name in ['ISPRS', 'LoveDA'], \
+-        'AssertionError: Only ["ISPRS", "LoveDA"] supported now.'
+     if args.dataset_name == 'ISPRS':
+-        # ISPRS
+-        GS_AUFPN_path = r'/result/GS-AUFPN-Potsdam/iter_80000_potsdam.pth'
+-        GS_AUFPN_unaux_path = r'/result/GS-AUFPN-Potsdam/iter_80000_unaux.pth'
+-        GSMF_RS_DIL_path = '/result/GSFM-RS-DIL-ISPRS/iter_80000_DIL.pth'
+-
++        default_input = 'result/GS-AUFPN-Potsdam/iter_80000_potsdam.pth'
++        default_output = 'result/GS-AUFPN-Potsdam/iter_80000_DIL.pth'
+     else:
+-        # LoveDA
+-        GS_AUFPN_path = r'/result/GS-AUFPN-LoveDA_Urban/iter_30000_urban.pth'
+-        GS_AUFPN_unaux_path = r'/result/GS-AUFPN-LoveDA_Urban/iter_30000_unaux.pth'
+-        GSMF_RS_DIL_path = '/result/GSFM-RS-DIL-LoveDA/iter_30000_DIL.pth'
+-
+-    checkpoint = torch.load(GS_AUFPN_path)
++        default_input = 'result/GS-AUFPN-LoveDA_Urban/iter_30000_urban.pth'
++        default_output = 'result/GS-AUFPN-LoveDA_Urban/iter_30000_DIL.pth'
++
++    input_path = Path(args.input or default_input)
++    output_path = Path(args.output or default_output)
++    if output_path.exists():
++        raise FileExistsError(f'Refusing to overwrite checkpoint: {output_path}')
++    checkpoint = torch.load(str(input_path), map_location='cpu')
+     state_dict = checkpoint['state_dict']
+-
+-    keys_to_remove = ['auxiliary_head.conv_seg.weight', 'auxiliary_head.conv_seg.bias',
+-                      'auxiliary_head.convs.0.conv.weight', 'auxiliary_head.convs.0.bn.weight',
+-                      'auxiliary_head.convs.0.bn.bias', 'auxiliary_head.convs.0.bn.running_mean',
+-                      'auxiliary_head.convs.0.bn.running_var', 'auxiliary_head.convs.0.bn.num_batches_tracked']
+-    for key in keys_to_remove:
+-        if key in state_dict:
+-            del state_dict[key]
+-
+-    torch.save({'state_dict': state_dict}, GS_AUFPN_unaux_path)
+-
+-    unaux_checkpoint = torch.load(GS_AUFPN_unaux_path)
+-
+-    state_dict = unaux_checkpoint['state_dict']
+-
+-    modified_weights = OrderedDict()
+-
+-    for layer_name, weight in state_dict.items():
+-        modified_weights[layer_name] = weight
+-
+-    for layer_name, weight in state_dict.items():
+-        modified_weights[layer_name.replace('backbone', 'backbone_1').replace('decode_head', 'decode_head_1')] = weight
+-
+-    torch.save({'state_dict': modified_weights}, GSMF_RS_DIL_path)
+-
+-
++    modified_weights = OrderedDict(
++        (name, weight) for name, weight in state_dict.items()
++        if not name.startswith('auxiliary_head.'))
++    for name, weight in list(modified_weights.items()):
++        new_name = name.replace('backbone', 'backbone_1').replace(
++            'decode_head', 'decode_head_1')
++        modified_weights[new_name] = weight
++    output_path.parent.mkdir(parents=True, exist_ok=True)
++    # Exclusive creation prevents accidental checkpoint overwrites.
++    with output_path.open('xb') as output:
++        torch.save({'state_dict': modified_weights}, output)
++    print(f'Converted {input_path} to {output_path}')
+ 
+ 
+ if __name__ == '__main__':
+diff --git a/tools/test/test_GS-AUFPN.py b/tools/test/test_GS-AUFPN.py
+index 51988e5..79fab8e 100644
+--- a/tools/test/test_GS-AUFPN.py
++++ b/tools/test/test_GS-AUFPN.py
+@@ -2,6 +2,10 @@
+ import argparse
+ import os
+ import os.path as osp
++import sys
++
++sys.path.insert(0, osp.abspath(osp.join(osp.dirname(__file__), '../..')))
++
+ from mmengine.config import Config, DictAction
+ from mmengine.runner import Runner
+ 
+diff --git a/tools/test/test_GSMF-RS-DIL.py b/tools/test/test_GSMF-RS-DIL.py
+index bceb41c..cdd9286 100644
+--- a/tools/test/test_GSMF-RS-DIL.py
++++ b/tools/test/test_GSMF-RS-DIL.py
+@@ -2,6 +2,10 @@
+ import argparse
+ import os
+ import os.path as osp
++import sys
++
++sys.path.insert(0, osp.abspath(osp.join(osp.dirname(__file__), '../..')))
++
+ from mmengine.config import Config, DictAction
+ from mmengine.runner import Runner
+ 
+diff --git a/tools/train/train_GS-AUFPN.py b/tools/train/train_GS-AUFPN.py
+index 1a93c16..e45b896 100644
+--- a/tools/train/train_GS-AUFPN.py
++++ b/tools/train/train_GS-AUFPN.py
+@@ -3,6 +3,10 @@ import argparse
+ import logging
+ import os
+ import os.path as osp
++import sys
++
++sys.path.insert(0, osp.abspath(osp.join(osp.dirname(__file__), '../..')))
++
+ from mmengine.config import Config, DictAction
+ from mmengine.logging import print_log
+ from mmengine.runner import Runner
+diff --git a/tools/train/train_GSMF-RS-DIL.py b/tools/train/train_GSMF-RS-DIL.py
+index d8606ff..4a8c669 100644
+--- a/tools/train/train_GSMF-RS-DIL.py
++++ b/tools/train/train_GSMF-RS-DIL.py
+@@ -3,6 +3,10 @@ import argparse
+ import logging
+ import os
+ import os.path as osp
++import sys
++
++sys.path.insert(0, osp.abspath(osp.join(osp.dirname(__file__), '../..')))
++
+ from mmengine.config import Config, DictAction
+ from mmengine.logging import print_log
+ from mmengine.runner import Runner

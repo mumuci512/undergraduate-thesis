@@ -1,0 +1,46 @@
+{
+  "limit": 64,
+  "reserved_steps": 34,
+  "runs": [
+    {
+      "directory": "experiments/road_lwf_bn/prepare-seed0-20261110-153000/controlled-two-updates",
+      "reserved": 2,
+      "time_ns": 1794295915605244989
+    },
+    {
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/short-gsmf",
+      "reserved": 4,
+      "time_ns": 1794295946481119466
+    },
+    {
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/short-lwf",
+      "reserved": 8,
+      "time_ns": 1794295976127752796
+    },
+    {
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/short-gsmf_teacher_bn",
+      "reserved": 8,
+      "time_ns": 1794296007981658889
+    },
+    {
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/resume-lwf",
+      "reserved": 4,
+      "time_ns": 1794296039207598719
+    },
+    {
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/resume-gsmf_teacher_bn",
+      "reserved": 4,
+      "time_ns": 1794296066969790326
+    },
+    {
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/final-save-lwf",
+      "reserved": 2,
+      "time_ns": 1794296371460338195
+    },
+    {
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/final-save-gsmf_teacher_bn",
+      "reserved": 2,
+      "time_ns": 1794296403758830167
+    }
+  ]
+}

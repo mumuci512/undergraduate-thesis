@@ -1,0 +1,29 @@
+Wed Nov 11 14:29:34 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 615.71.08              KMD Version: 616.92        CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3080        On  |   00000000:01:00.0 Off |                  N/A |
+|  0%   25C    P8             12W /  320W |    1469MiB /  20480MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+Traceback (most recent call last):
+  File "tools/road/five_formal.py", line 92, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--prepare',required=True);p.add_argument('--phase',choices=['A','B','C'],required=True);p.add_argument('--check-only',action='store_true');p.add_argument('--execute',action='store_true');p.add_argument('--continue-run',action='store_true');main(p.parse_args())
+  File "tools/road/five_formal.py", line 36, in main
+    prep=Path(a.prepare).resolve();os.chdir(str(ROOT));ready,plan=preflight(prep,a.phase)
+  File "tools/road/five_formal.py", line 32, in preflight
+    assert os.statvfs(str(disk)).f_bavail*os.statvfs(str(disk)).f_frsize>dict(A=40,B=70,C=35)[phase]*2**30,'Insufficient disk: '+str(disk)
+AssertionError: Insufficient disk: /mnt/c

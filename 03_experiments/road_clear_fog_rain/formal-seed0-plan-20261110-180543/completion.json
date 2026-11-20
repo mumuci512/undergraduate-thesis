@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "completed_at": "2026-11-11T12:48:21.087553+08:00",
+  "run": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543",
+  "training_methods": 3,
+  "steps_per_method": 4000,
+  "new_evaluation_cells": 22,
+  "new_images": 7000,
+  "reused_cells": 20,
+  "total_summary_cells": 42,
+  "training_check_sha256": "a89c23b0ff11ee2b9b350707d6693504640ccdbcee6123953c60a3279bc60f29",
+  "protocol_check_sha256": "b6f3a93baef94c12cc12c5e6c6ec2e533831aefc9ab06530874c68b40af974f1",
+  "independent_prediction_check_sha256": "b727cbc6cb20b0c0c7f70482efaecef7c57a97ba60dd2e45d87ab7f64c56b371",
+  "handoff": {
+    "status": "PASS",
+    "archive": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/handoff/formal-seed0-plan-20261110-180543-light.tar.gz",
+    "archive_sha256": "d5bff048c7415019cd29ef2ea3623a42d450492030b23463b4753d48be77f988",
+    "sha256_file": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/handoff/formal-seed0-plan-20261110-180543-light.tar.gz.sha256",
+    "bytes": 13730584,
+    "payload_files": 671,
+    "safe_members": true,
+    "actual_unpack_verified": true,
+    "unpacked_file_set_exact": true,
+    "unpacked_all_SHA_match": true,
+    "raw_CS_sample_masks": 72,
+    "raw_Rain_sample_masks": 42,
+    "all_full_predictions_and_weights_remote": true
+  }
+}

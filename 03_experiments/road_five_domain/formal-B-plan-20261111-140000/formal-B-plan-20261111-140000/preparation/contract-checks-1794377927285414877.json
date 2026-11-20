@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "loaders": [
+    {
+      "method": "ft",
+      "domain": "B",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "ft",
+      "domain": "C",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "ft",
+      "domain": "D",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "ft",
+      "domain": "E",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "gsmf",
+      "domain": "B",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "gsmf",
+      "domain": "C",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "gsmf",
+      "domain": "D",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "gsmf",
+      "domain": "E",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "lwf",
+      "domain": "B",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "lwf",
+      "domain": "C",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "lwf",
+      "domain": "D",
+      "train_only_current": true,
+      "val_not_training": true
+    },
+    {
+      "method": "lwf",
+      "domain": "E",
+      "train_only_current": true,
+      "val_not_training": true
+    }
+  ],
+  "rejected": [
+    "parent optimizer",
+    "parent scheduler",
+    "previous domain resume"
+  ],
+  "seed_runtime": "Installed MMEngine Runner passes configured seed to sampler and worker; global Python/NumPy/Torch/CUDA seeded; deterministic flag preserved. Legacy seed0 config comparison in compatibility.json."
+}

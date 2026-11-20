@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "time_local": "2026-11-08 10:53:20 +08:00",
+  "verified_data_files": 7950,
+  "counts": {
+    "A_train": 2975,
+    "A_val": 500,
+    "B_train": 400,
+    "B_val": 100
+  },
+  "configs": {
+    "source": {
+      "steps": 60000,
+      "batch_size": 2,
+      "crop": [
+        512,
+        512
+      ],
+      "seed": 0,
+      "lr": 0.0001
+    },
+    "ft": {
+      "steps": 4000,
+      "batch_size": 2,
+      "crop": [
+        512,
+        512
+      ],
+      "seed": 0,
+      "lr": 1e-05
+    },
+    "gsmf": {
+      "steps": 4000,
+      "batch_size": 2,
+      "crop": [
+        512,
+        512
+      ],
+      "seed": 0,
+      "lr": 1e-05
+    }
+  },
+  "code_sha256": "1e2dc28ddf4a319e188680cfd9bfb76f972504b145d35cfb978ff1cb3feb256c",
+  "data_audit_sha256": "6d05a2501335f32f00ed40574272614ae71d536addf81c3e186a6c99724b6790",
+  "free_bytes": 793433985024,
+  "gpu_compute_processes": "",
+  "tmux_before_launch": "road-recovery-20261108-105307-1597: 1 windows (created Sun Nov  8 10:53:07 2026)\n",
+  "windows_vhd_storage": {
+    "vhd_base_path": "C:\\Users\\samsh\\AppData\\Local\\Packages\\CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc\\LocalState",
+    "drive": "C:",
+    "free_bytes": 201624739840
+  },
+  "scope": "seed0 source60000 ft4000 gsmf4000 only; no additional experiments"
+}

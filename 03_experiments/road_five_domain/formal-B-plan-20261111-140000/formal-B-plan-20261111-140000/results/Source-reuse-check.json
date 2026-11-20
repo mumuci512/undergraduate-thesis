@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "Source_cells": 8,
+  "origin": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000",
+  "origin_completion_sha256": "fc9c8ae2a480784eadd264d2d6a22a09a9d65589d15052a64751b8609084a93d",
+  "rows": [
+    {
+      "condition": "clear",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0",
+      "original_provenance": "reused"
+    },
+    {
+      "condition": "fog005",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.005",
+      "original_provenance": "reused"
+    },
+    {
+      "condition": "fog010",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.01",
+      "original_provenance": "reused"
+    },
+    {
+      "condition": "fog020",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.02",
+      "original_provenance": "reused"
+    },
+    {
+      "condition": "fog",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_source_B",
+      "original_provenance": "reused"
+    },
+    {
+      "condition": "rain",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain",
+      "original_provenance": "reused"
+    },
+    {
+      "condition": "snow",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/eval-source-snow",
+      "original_provenance": "new"
+    },
+    {
+      "condition": "night",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/eval-source-night",
+      "original_provenance": "new"
+    }
+  ],
+  "note": "Inherited A cells carry their original new/reused flags; explicitly marked reused in phase B. Original driver output preserved."
+}

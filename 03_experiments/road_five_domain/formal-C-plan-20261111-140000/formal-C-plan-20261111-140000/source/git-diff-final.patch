@@ -1,0 +1,25 @@
+diff --git a/REPRO.md b/REPRO.md
+index 5d5f717..758700f 100644
+--- a/REPRO.md
++++ b/REPRO.md
+@@ -1,12 +1,12 @@
+ <!-- ROAD_FIVE_DOMAIN_CURRENT_BEGIN -->
+-## 当前道路工作：第5项阶段A正式实验及轻量交接完成（2026-11-11）
+-
+-- 最新用户范围“暂时先完成阶段A”。阶段A全部完成；B暂缓，C未授权，不自动启动。
+-- 正式目录：`experiments/road_five_domain/formal-A-plan-20261111-140000`；六次各4000步、24份完整周期checkpoint、62新增评价格15878逐图与42旧格指纹复用共104格、独立预测重读/GT直方图/训练与协议复核、图表/预固定样例及轻量包安全解包/全SHA全部通过。实际exit-code.txt=0，completion.json与handoff/handoff-verification.json complete/PASS。
+-- 三方法seed0分别自己的Rain学生→Snow→Night，batch2/crop512/FP32、AdamW1e-5/PolyLR4000，每1000验证/保存，固定iter4000，无val择优。教师/学生完整参数与BN缓冲逐阶段严格继承；GSMF教师参数冻结/训练态BN更新、LwF教师全部状态固定。所有条件仅当前学生推理，参数/缓冲不变，无oracle/TTA/测试更新。
+-- 最终Night后CS/Fog/Rain/Snow/Night（%）：ft 53.2786/57.0810/43.2148/43.7064/38.7919; gsmf 52.9036/59.3877/45.7989/46.3704/38.6739; lwf 42.0937/52.1572/42.9603/42.7344/33.6891。阶段已见域均值只含已学域，未来域提前分数不计入；最终五真实域均值与合成条件单列。具体变化/负遗忘/混淆去向见RESULTS.md与results-index.json所指目录。
+-- 包：`experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/formal-A-plan-20261111-140000-light.tar.gz`，外置同名.sha256，SHA `c09bbf786f0b55cdf8500c8ac691d8e69d69baaeed751b3616d685ac959ba31e`。权重/原图/全量预测留远程。包内预完成STATUS与包外最终完成证据分开，避免自引用。
+-- Snow400/100、Night400/106，A/B/C原清单保持。官方共享视频目录已披露，未独立证明地理/邻帧隔离；仅seed0、不主张稳定显著/纯天气因果/严格未见强度泛化。LwF未搜索超参；CUDA反向非逐位确定，resume不保证RNG/采样游标精确恢复。未重训Source/Fog/Rain seed0、未删除/覆盖旧数据checkpoint，未升级环境。
++## 当前道路工作：第5项阶段C已授权并运行中（2026-11-13）
++
++- 用户“完成STEP5_FIVE_DOMAIN_SEEDS_REMOTE_TASK_20261111.md的阶段c”授权既定C：FT/GSMF seed0，共同Source→Night→Snow→Rain→Fog，各4000步，共8次；46新增评价格10248逐图、Source八格复用A，独立重读/训练协议/主序对照/图表/轻量打包全通过才complete。
++- 唯一目录：`experiments/road_five_domain/formal-C-plan-20261111-140000`；授权记录在该目录authorization-C.json及准备目录，实际会话road-five-C-20261113-170054。阶段性进度读status.json、completion-status.json、events.jsonl及训练日志；后处理scripts/complete_C.py监督完成，失败停止并保留证据。
++- 环境/核心源码/数据/共同Source SHA与准备指纹预检通过；GPU无其他计算进程；WSL/宿主空闲约745/193GiB，超过C门槛。首域E严格Source转换，每域新AdamW/iter0，seed0真实接通；原GSMF训练态BN/浅层冻结参数语义保留。batch2/crop512/FP32、AdamW1e-5/PolyLR4000，每1000验证保存、固定iter4000；评价仅学生，无oracle/TTA/测试更新。
++- A/B正式训练和交接已完成且保留，详见各自completion.json、RESULTS.md与handoff/handoff-verification.json。C启动前REPRO快照在本运行REPRO-before-C.md。当前未宣称C结果或完成。
++- 仅单seed顺序敏感性，不主张显著或稳定排名；固定Source不覆盖Source随机性。官方视频目录交叉/未独立证明地理隔离、CUDA非逐位确定及resume RNG/采样游标限制继承准备说明。无额外方法/seed/搜索/模块、环境升级、删除旧数据checkpoint、Git提交或推送。
++- 2026-11-13约20:02资源变化：8/8训练完成、28/46评价完成；宿主Dungeons游戏进程的GPU 3D引擎采样约64%，与评价从约0.5秒/张减至约4秒/张同时出现。保留宿主进程、继续已授权评价，不修改实验预算/配置；21–22点结束估计现取决于GPU空闲，实际资源证据在本运行resource-contention-observation.json。尚未完成评价/独立验收/交接，不标complete。
+ <!-- ROAD_FIVE_DOMAIN_CURRENT_END -->
+ 
+ <!-- ROAD_RAIN_CHAIN_CURRENT_BEGIN -->

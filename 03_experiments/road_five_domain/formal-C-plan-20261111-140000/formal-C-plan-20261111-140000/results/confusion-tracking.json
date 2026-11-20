@@ -1,0 +1,5773 @@
+{
+  "source-clear": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 336305051,
+        "fraction": 0.9740506408708024
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 5340404,
+        "fraction": 0.015467576009463494
+      },
+      {
+        "class_name": "building",
+        "pixels": 979034,
+        "fraction": 0.0028356062220852734
+      },
+      {
+        "class_name": "car",
+        "pixels": 748384,
+        "fraction": 0.0021675675481230123
+      },
+      {
+        "class_name": "vegetation",
+        "pixels": 495126,
+        "fraction": 0.0014340486298904769
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.8841253787200201,
+        "recall": 0.7095704329401631,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 578490,
+            "fraction": 0.43463267081697327
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 278642,
+            "fraction": 0.2093500607820067
+          },
+          {
+            "class_name": "road",
+            "pixels": 272439,
+            "fraction": 0.2046896060514536
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.3680664268057767,
+        "recall": 0.8938472457359238,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 424400,
+            "fraction": 0.32423058264480176
+          },
+          {
+            "class_name": "car",
+            "pixels": 323878,
+            "fraction": 0.24743438417962557
+          },
+          {
+            "class_name": "fence",
+            "pixels": 170948,
+            "fraction": 0.1305998342176333
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.2481844582648345,
+        "recall": 0.8745744672601508,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "bus",
+            "pixels": 159403,
+            "fraction": 0.4135675627993379
+          },
+          {
+            "class_name": "building",
+            "pixels": 87476,
+            "fraction": 0.2269545499359164
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 35976,
+            "fraction": 0.09333893740562586
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.023584684417829,
+        "recall": 0.9781119322333663,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 745587,
+            "fraction": 0.5329485305417857
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 512592,
+            "fraction": 0.3664027848761781
+          },
+          {
+            "class_name": "pole",
+            "pixels": 103926,
+            "fraction": 0.07428671501124029
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.006296038930849,
+        "recall": 0.9526411197214038,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 2449747,
+            "fraction": 0.2271453778559527
+          },
+          {
+            "class_name": "pole",
+            "pixels": 2205535,
+            "fraction": 0.2045015591199943
+          },
+          {
+            "class_name": "wall",
+            "pixels": 1534992,
+            "fraction": 0.14232748844916007
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.9516127981540444,
+        "recall": 0.6811516110432412,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 343093,
+            "fraction": 0.16865084924390675
+          },
+          {
+            "class_name": "building",
+            "pixels": 323985,
+            "fraction": 0.15925811774733709
+          },
+          {
+            "class_name": "wall",
+            "pixels": 296665,
+            "fraction": 0.14582869423434344
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 1.0568848369776191,
+        "recall": 0.8735825719985088,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 214850,
+            "fraction": 0.18020020381033058
+          },
+          {
+            "class_name": "rider",
+            "pixels": 191403,
+            "fraction": 0.16053460372310313
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 126035,
+            "fraction": 0.10570878607044457
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.0,
+      "sidewalk": 0.0,
+      "building": 0.0,
+      "wall": 0.0,
+      "fence": 0.0,
+      "pole": 0.0,
+      "traffic light": 0.0,
+      "traffic sign": 0.0,
+      "vegetation": 0.0,
+      "terrain": 0.0,
+      "sky": 0.0,
+      "person": 0.0,
+      "rider": 0.0,
+      "car": 0.0,
+      "truck": 0.0,
+      "bus": 0.0,
+      "train": 0.0,
+      "motorcycle": 0.0,
+      "bicycle": 0.0
+    }
+  },
+  "ft-seed0-E-clear": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 325767808,
+        "fraction": 0.9435313005675806
+      },
+      {
+        "class_name": "sky",
+        "pixels": 7235237,
+        "fraction": 0.02095563898236587
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 4820798,
+        "fraction": 0.013962625204248517
+      },
+      {
+        "class_name": "building",
+        "pixels": 2446260,
+        "fraction": 0.007085177917047131
+      },
+      {
+        "class_name": "car",
+        "pixels": 2117517,
+        "fraction": 0.006133029476577261
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.15577179671256203,
+        "recall": 0.1348964580579791,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 115150,
+            "fraction": 0.7234176221140255
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 35677,
+            "fraction": 0.2241369561803047
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 3137,
+            "fraction": 0.01970786869797393
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 0.9040225547974412,
+        "recall": 0.7009330083823302,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 126799,
+            "fraction": 0.2261965499402394
+          },
+          {
+            "class_name": "car",
+            "pixels": 112653,
+            "fraction": 0.20096152130866796
+          },
+          {
+            "class_name": "bus",
+            "pixels": 106640,
+            "fraction": 0.19023493943664485
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.792985591984863,
+        "recall": 0.7085061959117839,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 786593,
+            "fraction": 0.7030678378013606
+          },
+          {
+            "class_name": "road",
+            "pixels": 129526,
+            "fraction": 0.11577215250969565
+          },
+          {
+            "class_name": "bus",
+            "pixels": 64153,
+            "fraction": 0.057340849713219774
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.0558433811911825,
+        "recall": 0.7706291107329295,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 7235237,
+            "fraction": 0.8245551195047224
+          },
+          {
+            "class_name": "building",
+            "pixels": 1038148,
+            "fraction": 0.11831129349371536
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 275561,
+            "fraction": 0.031403979342465325
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 0.9268575523244079,
+        "recall": 0.8035796923852225,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sky",
+            "pixels": 5696152,
+            "fraction": 0.22987338858353143
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 4212260,
+            "fraction": 0.16998957889376304
+          },
+          {
+            "class_name": "pole",
+            "pixels": 3507654,
+            "fraction": 0.1415545636701019
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.1736584655068554,
+        "recall": 0.5604713057788084,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 1958665,
+            "fraction": 0.4246672166530977
+          },
+          {
+            "class_name": "wall",
+            "pixels": 705889,
+            "fraction": 0.153047058530192
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 371402,
+            "fraction": 0.0805253851982824
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.8605893634766834,
+        "recall": 0.702956810503538,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 285054,
+            "fraction": 0.27801548204116383
+          },
+          {
+            "class_name": "rider",
+            "pixels": 154411,
+            "fraction": 0.15059830276880223
+          },
+          {
+            "class_name": "person",
+            "pixels": 143046,
+            "fraction": 0.13951392593705167
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": -0.17479636405615986,
+      "sidewalk": -0.19000421002236953,
+      "building": -0.9933785413564141,
+      "wall": -0.5118208644317379,
+      "fence": -0.993232145245123,
+      "pole": -0.6326303530531021,
+      "traffic light": -1.0701974469821358,
+      "traffic sign": -0.47852141670257486,
+      "vegetation": -0.4740273954407196,
+      "terrain": -2.484107999896053,
+      "sky": -1.7681981414078844,
+      "person": -0.45496902105773307,
+      "rider": -0.36991329102583737,
+      "car": -1.2653419707592481,
+      "truck": -0.12478032349718853,
+      "bus": -1.219283800800482,
+      "train": -1.5621147997859086,
+      "motorcycle": -0.892926238486917,
+      "bicycle": -0.6895874476393186
+    }
+  },
+  "ft-seed0-E-night": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 51417189,
+        "fraction": 0.959386870134477
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 1222646,
+        "fraction": 0.022813198115953746
+      },
+      {
+        "class_name": "fence",
+        "pixels": 302515,
+        "fraction": 0.005644589380775587
+      },
+      {
+        "class_name": "vegetation",
+        "pixels": 169938,
+        "fraction": 0.003170851793101967
+      },
+      {
+        "class_name": "wall",
+        "pixels": 142237,
+        "fraction": 0.0026539823141112904
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.044394644753184324,
+        "recall": 0.015270472550423325,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 49986,
+            "fraction": 0.7811166846373823
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 12139,
+            "fraction": 0.18969262263060022
+          },
+          {
+            "class_name": "road",
+            "pixels": 1394,
+            "fraction": 0.021783632584813965
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.0407359156048426,
+        "recall": 0.3937911092752057,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "car",
+            "pixels": 13309,
+            "fraction": 0.6536836935166994
+          },
+          {
+            "class_name": "train",
+            "pixels": 4229,
+            "fraction": 0.20771119842829078
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 1841,
+            "fraction": 0.09042239685658153
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.150643502450343,
+        "recall": 0.8363887847820328,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 543929,
+            "fraction": 0.7043404169359005
+          },
+          {
+            "class_name": "road",
+            "pixels": 133834,
+            "fraction": 0.17330330863072077
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 49626,
+            "fraction": 0.06426132368537255
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.9551597185980364,
+        "recall": 0.7889653228029498,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 3469489,
+            "fraction": 0.5673525393828454
+          },
+          {
+            "class_name": "building",
+            "pixels": 2085467,
+            "fraction": 0.3410286063017131
+          },
+          {
+            "class_name": "wall",
+            "pixels": 128309,
+            "fraction": 0.020981890121477113
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.0333245191496105,
+        "recall": 0.8276250204711867,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 2286919,
+            "fraction": 0.2918805700334609
+          },
+          {
+            "class_name": "sky",
+            "pixels": 2158836,
+            "fraction": 0.2755332752444475
+          },
+          {
+            "class_name": "fence",
+            "pixels": 1080115,
+            "fraction": 0.13785559606688808
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.966236203491257,
+        "recall": 0.4811368819021584,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "wall",
+            "pixels": 588982,
+            "fraction": 0.23700601949303307
+          },
+          {
+            "class_name": "building",
+            "pixels": 479817,
+            "fraction": 0.193078086011268
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 383372,
+            "fraction": 0.15426867324482424
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.2709402490674119,
+        "recall": 0.23420911738204991,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 5905,
+            "fraction": 0.3498844581382947
+          },
+          {
+            "class_name": "building",
+            "pixels": 5101,
+            "fraction": 0.30224565977365647
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 2635,
+            "fraction": 0.156129643894057
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 4.486276871679448,
+      "sidewalk": 3.10745819517247,
+      "building": 2.559956263749358,
+      "wall": 1.203297348134465,
+      "fence": 1.5127349453325276,
+      "pole": 2.129455192542596,
+      "traffic light": 2.2928918206039475,
+      "traffic sign": 0.9412327959512207,
+      "vegetation": 1.3016150353992126,
+      "terrain": -0.023989066993598204,
+      "sky": 3.558130626736883,
+      "person": 0.8415528636044646,
+      "rider": 0.32103692617536467,
+      "car": 2.392579818762169,
+      "truck": 1.2571029793653512,
+      "bus": 0.0,
+      "train": 3.3494620004140567,
+      "motorcycle": 0.20126727860633842,
+      "bicycle": 0.5805903716296923
+    }
+  },
+  "ft-seed0-D-clear": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 274809818,
+        "fraction": 0.7959401101605476
+      },
+      {
+        "class_name": "building",
+        "pixels": 37713789,
+        "fraction": 0.10923160456818777
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 20746979,
+        "fraction": 0.06009011203070833
+      },
+      {
+        "class_name": "terrain",
+        "pixels": 6889280,
+        "fraction": 0.019953633105374922
+      },
+      {
+        "class_name": "vegetation",
+        "pixels": 1663988,
+        "fraction": 0.0048194595144552994
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 1.6225469919709126,
+        "recall": 0.4192760785340273,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 6889280,
+            "fraction": 0.7508774958659274
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 1525534,
+            "fraction": 0.16627124311660024
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 543333,
+            "fraction": 0.059219036308775654
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.945798708866822,
+        "recall": 0.8982777041320392,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "bus",
+            "pixels": 790575,
+            "fraction": 0.2734248951797741
+          },
+          {
+            "class_name": "building",
+            "pixels": 702568,
+            "fraction": 0.24298716978991686
+          },
+          {
+            "class_name": "car",
+            "pixels": 578473,
+            "fraction": 0.20006820275031395
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.5419028583392785,
+        "recall": 0.42638089736033996,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 59795,
+            "fraction": 0.5017285069392002
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 22051,
+            "fraction": 0.1850257597878803
+          },
+          {
+            "class_name": "bus",
+            "pixels": 17187,
+            "fraction": 0.14421285807783316
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.0465900157082577,
+        "recall": 0.9659754528365957,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 1578007,
+            "fraction": 0.6362585101214249
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 445483,
+            "fraction": 0.17962046420860156
+          },
+          {
+            "class_name": "road",
+            "pixels": 192598,
+            "fraction": 0.0776562566150633
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.2064213808196265,
+        "recall": 0.9364795213390954,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 37713789,
+            "fraction": 0.6950597605640819
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 6935890,
+            "fraction": 0.1278274649810129
+          },
+          {
+            "class_name": "pole",
+            "pixels": 2739683,
+            "fraction": 0.050491967540081575
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.4654502195701766,
+        "recall": 0.7418341046308294,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 1697540,
+            "fraction": 0.31188422689350603
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 1044938,
+            "fraction": 0.19198350570923006
+          },
+          {
+            "class_name": "wall",
+            "pixels": 670827,
+            "fraction": 0.1232491489297984
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.6295854776903593,
+        "recall": 0.5706008555648227,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "rider",
+            "pixels": 114079,
+            "fraction": 0.29734090245631595
+          },
+          {
+            "class_name": "building",
+            "pixels": 65544,
+            "fraction": 0.17083698235956463
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 49114,
+            "fraction": 0.12801305308811878
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": -0.97565066025553,
+      "sidewalk": -1.2651012211401864,
+      "building": -0.8774257040407679,
+      "wall": -0.5800117740788799,
+      "fence": -0.5565848151392032,
+      "pole": -0.36674226121627757,
+      "traffic light": -1.1182715508951993,
+      "traffic sign": -0.30645918097149366,
+      "vegetation": -0.2873257753466275,
+      "terrain": -2.1780076099240038,
+      "sky": -0.21924205180047732,
+      "person": -0.41662679747495035,
+      "rider": -0.5883955707239488,
+      "car": -0.21196298641008582,
+      "truck": -0.8821280543765548,
+      "bus": -1.1642418433496,
+      "train": -1.3393281229774006,
+      "motorcycle": -0.6086971411598362,
+      "bicycle": -1.0496807669020858
+    }
+  },
+  "ft-seed0-D-night": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 29378699,
+        "fraction": 0.5481734538664276
+      },
+      {
+        "class_name": "building",
+        "pixels": 24018899,
+        "fraction": 0.44816561900507856
+      },
+      {
+        "class_name": "car",
+        "pixels": 73420,
+        "fraction": 0.0013699345564237924
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 55137,
+        "fraction": 0.0010287943562726591
+      },
+      {
+        "class_name": "truck",
+        "pixels": 41166,
+        "fraction": 0.0007681112224154432
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.030394853195840066,
+        "recall": 0.00220594225410252,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 29121,
+            "fraction": 0.470163712099196
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 24526,
+            "fraction": 0.3959766217830734
+          },
+          {
+            "class_name": "wall",
+            "pixels": 5833,
+            "fraction": 0.0941748199812716
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 15.876425915922596,
+        "recall": 0.7422388865940072,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "car",
+            "pixels": 135620,
+            "fraction": 0.28474368449341575
+          },
+          {
+            "class_name": "train",
+            "pixels": 104568,
+            "fraction": 0.2195478366030637
+          },
+          {
+            "class_name": "building",
+            "pixels": 76129,
+            "fraction": 0.15983816514377855
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.05795204790733011,
+        "recall": 0.0503757816661519,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 10908,
+            "fraction": 0.5858846277795682
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 3667,
+            "fraction": 0.19695993124932862
+          },
+          {
+            "class_name": "car",
+            "pixels": 3126,
+            "fraction": 0.1679020302932646
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.004379787475254189,
+        "recall": 0.003157006101351028,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 40536,
+            "fraction": 0.9009401462449714
+          },
+          {
+            "class_name": "traffic sign",
+            "pixels": 2072,
+            "fraction": 0.046051608027915455
+          },
+          {
+            "class_name": "pole",
+            "pixels": 1125,
+            "fraction": 0.025003889493921277
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 4.2452219239413305,
+        "recall": 0.980199695868656,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sky",
+            "pixels": 36198431,
+            "fraction": 0.29106584126357965
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 34392454,
+            "fraction": 0.2765442667011994
+          },
+          {
+            "class_name": "road",
+            "pixels": 24018899,
+            "fraction": 0.1931321565749618
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.09971824299501801,
+        "recall": 0.047677329863392556,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 179434,
+            "fraction": 0.6730508105837253
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 35739,
+            "fraction": 0.13405576936061037
+          },
+          {
+            "class_name": "train",
+            "pixels": 17302,
+            "fraction": 0.06489921154697334
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.07643305170695186,
+        "recall": 0.07213901113011835,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 1001,
+            "fraction": 0.5073492143943233
+          },
+          {
+            "class_name": "building",
+            "pixels": 972,
+            "fraction": 0.49265078560567666
+          },
+          {
+            "class_name": "road",
+            "pixels": 0,
+            "fraction": 0.0
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 2.52713337852509,
+      "sidewalk": 0.11297808031318562,
+      "building": 0.15677524637532683,
+      "wall": -0.09548081147347214,
+      "fence": 0.04611737469891847,
+      "pole": 0.11299682608037423,
+      "traffic light": 1.12668051748853,
+      "traffic sign": 0.12706386768861525,
+      "vegetation": -1.5060544450268865,
+      "terrain": -0.0907935661355664,
+      "sky": 0.014042720373621254,
+      "person": 0.13622217475258291,
+      "rider": 0.0,
+      "car": 1.091375728778313,
+      "truck": 0.24078770112937173,
+      "bus": 0.0,
+      "train": 0.2631420586839058,
+      "motorcycle": 0.512290619659835,
+      "bicycle": -0.2303600367671023
+    }
+  },
+  "ft-seed0-D-snow": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 27570402,
+        "fraction": 0.9635846503937289
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 597596,
+        "fraction": 0.020885960702955685
+      },
+      {
+        "class_name": "train",
+        "pixels": 244190,
+        "fraction": 0.00853443253310723
+      },
+      {
+        "class_name": "car",
+        "pixels": 107546,
+        "fraction": 0.0037587291912263
+      },
+      {
+        "class_name": "truck",
+        "pixels": 53322,
+        "fraction": 0.0018636021603273833
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.519985510964317,
+        "recall": 0.3963431014823792,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 166154,
+            "fraction": 0.6256669792102062
+          },
+          {
+            "class_name": "wall",
+            "pixels": 39378,
+            "fraction": 0.14828119881158144
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 36450,
+            "fraction": 0.13725556647575152
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.058880377577585,
+        "recall": 0.5289513606652557,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "bus",
+            "pixels": 218602,
+            "fraction": 0.38629769036385164
+          },
+          {
+            "class_name": "fence",
+            "pixels": 103082,
+            "fraction": 0.1821590768523918
+          },
+          {
+            "class_name": "building",
+            "pixels": 76813,
+            "fraction": 0.13573839438760182
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.3244699842444716,
+        "recall": 0.9175040316901216,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 244190,
+            "fraction": 0.32757175148063933
+          },
+          {
+            "class_name": "building",
+            "pixels": 123879,
+            "fraction": 0.16617904501277744
+          },
+          {
+            "class_name": "person",
+            "pixels": 117756,
+            "fraction": 0.15796526953337223
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.0079425452794801,
+        "recall": 0.9840270706791632,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 602492,
+            "fraction": 0.43060579356519885
+          },
+          {
+            "class_name": "building",
+            "pixels": 471152,
+            "fraction": 0.3367360576569159
+          },
+          {
+            "class_name": "bus",
+            "pixels": 138234,
+            "fraction": 0.0987969321877995
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.0353778798856679,
+        "recall": 0.9221919177480727,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1352945,
+            "fraction": 0.3827538747271742
+          },
+          {
+            "class_name": "fence",
+            "pixels": 413944,
+            "fraction": 0.11710651203120999
+          },
+          {
+            "class_name": "truck",
+            "pixels": 394421,
+            "fraction": 0.1115833725862964
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.8259109714706595,
+        "recall": 0.4939316491692167,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 552409,
+            "fraction": 0.6134101897276565
+          },
+          {
+            "class_name": "wall",
+            "pixels": 106794,
+            "fraction": 0.11858700311141808
+          },
+          {
+            "class_name": "building",
+            "pixels": 98049,
+            "fraction": 0.10887631391343551
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.773199756031093,
+        "recall": 0.7033441908148302,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 1655,
+            "fraction": 0.307449377670444
+          },
+          {
+            "class_name": "pole",
+            "pixels": 951,
+            "fraction": 0.17666728590005573
+          },
+          {
+            "class_name": "building",
+            "pixels": 920,
+            "fraction": 0.17090841538175738
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.6406989526692982,
+      "sidewalk": 1.6735342716816182,
+      "building": 1.3627642497412156,
+      "wall": 1.5385204344946317,
+      "fence": 1.0504896480937926,
+      "pole": 1.808952648982777,
+      "traffic light": 1.6099021656668875,
+      "traffic sign": 1.534447197125828,
+      "vegetation": 1.1593883574943975,
+      "terrain": 1.3257910865053553,
+      "sky": 1.6281771329097963,
+      "person": 0.6153873641696279,
+      "rider": -0.5343371546347312,
+      "car": 1.2421860175730395,
+      "truck": 0.7998145377086211,
+      "bus": 0.36021033918455775,
+      "train": 0.9715402209001323,
+      "motorcycle": 2.330603234927427,
+      "bicycle": 1.7537352054654003
+    }
+  },
+  "ft-seed0-C-clear": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 289094374,
+        "fraction": 0.8373129081158031
+      },
+      {
+        "class_name": "building",
+        "pixels": 20221444,
+        "fraction": 0.05856798888082428
+      },
+      {
+        "class_name": "terrain",
+        "pixels": 19943174,
+        "fraction": 0.05776202693933944
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 9258119,
+        "fraction": 0.026814574203966244
+      },
+      {
+        "class_name": "car",
+        "pixels": 3472519,
+        "fraction": 0.010057563356031897
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 3.4594869578149634,
+        "recall": 0.5303546505939783,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 19943174,
+            "fraction": 0.8929228989317524
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 1762714,
+            "fraction": 0.07892262760519389
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 346459,
+            "fraction": 0.015512133356555782
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.2260182283166032,
+        "recall": 0.8072636475979553,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 337657,
+            "fraction": 0.2921284836886415
+          },
+          {
+            "class_name": "road",
+            "pixels": 262744,
+            "fraction": 0.22731649667647474
+          },
+          {
+            "class_name": "car",
+            "pixels": 234039,
+            "fraction": 0.2024819808089451
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.6214154440274202,
+        "recall": 0.4846410791277645,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 95431,
+            "fraction": 0.6763215523411976
+          },
+          {
+            "class_name": "bus",
+            "pixels": 13108,
+            "fraction": 0.0928966783130054
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 7481,
+            "fraction": 0.05301800812172668
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.9912605893897443,
+        "recall": 0.9444418098063383,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 898572,
+            "fraction": 0.623836778219323
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 329038,
+            "fraction": 0.22843579126851227
+          },
+          {
+            "class_name": "pole",
+            "pixels": 119094,
+            "fraction": 0.08268142927361642
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.1251558390751517,
+        "recall": 0.9470927272670467,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 20221444,
+            "fraction": 0.5649765481626833
+          },
+          {
+            "class_name": "pole",
+            "pixels": 3236359,
+            "fraction": 0.09042217442212502
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 3120273,
+            "fraction": 0.08717879241785208
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.5155602938202737,
+        "recall": 0.7436206591000674,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 1184772,
+            "fraction": 0.20404834034579503
+          },
+          {
+            "class_name": "wall",
+            "pixels": 962371,
+            "fraction": 0.1657451436621756
+          },
+          {
+            "class_name": "road",
+            "pixels": 880615,
+            "fraction": 0.15166464875403224
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.6368969055919194,
+        "recall": 0.5426568631595939,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "rider",
+            "pixels": 191499,
+            "fraction": 0.312405584503297
+          },
+          {
+            "class_name": "person",
+            "pixels": 85494,
+            "fraction": 0.13947228466741274
+          },
+          {
+            "class_name": "building",
+            "pixels": 82745,
+            "fraction": 0.1349876505345997
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": -0.7512141604751651,
+      "sidewalk": -0.7171104267166614,
+      "building": -0.5273132875185913,
+      "wall": -0.9898683310678787,
+      "fence": -0.6130546029301223,
+      "pole": -0.5152080061146866,
+      "traffic light": -0.5490707680310362,
+      "traffic sign": -0.42382543579367915,
+      "vegetation": -0.13379200584770282,
+      "terrain": -2.469149775029764,
+      "sky": -0.17561690443699637,
+      "person": -0.7338897672135949,
+      "rider": -0.6463054108115265,
+      "car": -0.35094971091238625,
+      "truck": -0.19644490850225194,
+      "bus": -0.6974880697313338,
+      "train": -1.1071986807885168,
+      "motorcycle": -0.7309212586046812,
+      "bicycle": -1.2754576335277592
+    }
+  },
+  "ft-seed0-C-night": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 39987026,
+        "fraction": 0.7461128946610822
+      },
+      {
+        "class_name": "building",
+        "pixels": 11211879,
+        "fraction": 0.20920104173988333
+      },
+      {
+        "class_name": "fence",
+        "pixels": 1606451,
+        "fraction": 0.029974567394464146
+      },
+      {
+        "class_name": "terrain",
+        "pixels": 304240,
+        "fraction": 0.0056767759390680276
+      },
+      {
+        "class_name": "car",
+        "pixels": 216635,
+        "fraction": 0.0040421652496713196
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 1.397109655855714,
+        "recall": 0.16290885822121956,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 1624944,
+            "fraction": 0.5992026089996327
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 579283,
+            "fraction": 0.21361221368190797
+          },
+          {
+            "class_name": "road",
+            "pixels": 304240,
+            "fraction": 0.11218934422481529
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.7793206444027836,
+        "recall": 0.47634330018111914,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "car",
+            "pixels": 23514,
+            "fraction": 0.57342827878847
+          },
+          {
+            "class_name": "train",
+            "pixels": 6633,
+            "fraction": 0.16175681607569625
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 3800,
+            "fraction": 0.09266936545871336
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.11850480037730766,
+        "recall": 0.0975188928510534,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 41542,
+            "fraction": 0.8055302398634892
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 8139,
+            "fraction": 0.15782125613232242
+          },
+          {
+            "class_name": "wall",
+            "pixels": 705,
+            "fraction": 0.013670473715848053
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.003696499645976895,
+        "recall": 0.0023808811380028076,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 40859,
+            "fraction": 0.8440372657976822
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 4043,
+            "fraction": 0.08351752773244644
+          },
+          {
+            "class_name": "train",
+            "pixels": 1499,
+            "fraction": 0.0309653163667913
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 3.3511651656038275,
+        "recall": 0.955128025055945,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sky",
+            "pixels": 34748306,
+            "fraction": 0.38073931828692875
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 22776995,
+            "fraction": 0.24956893003430974
+          },
+          {
+            "class_name": "road",
+            "pixels": 11211879,
+            "fraction": 0.12284924528912382
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.853826207032252,
+        "recall": 0.1980540534631672,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 1606451,
+            "fraction": 0.47819225016185807
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 489250,
+            "fraction": 0.14563504171100708
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 451826,
+            "fraction": 0.13449504007382215
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.08234851155886949,
+        "recall": 0.07517726791940349,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 1471,
+            "fraction": 0.4464339908952959
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 1256,
+            "fraction": 0.3811836115326252
+          },
+          {
+            "class_name": "motorcycle",
+            "pixels": 335,
+            "fraction": 0.10166919575113809
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 3.4451535118351337,
+      "sidewalk": 0.32452445420418724,
+      "building": 0.42743279329493744,
+      "wall": 0.41272483694365275,
+      "fence": 0.43714591491741145,
+      "pole": 0.4064308529503423,
+      "traffic light": 1.3298315652777128,
+      "traffic sign": 0.23287593349554125,
+      "vegetation": -0.24356150646859925,
+      "terrain": 0.28168263982542224,
+      "sky": 0.009961680555649194,
+      "person": -0.04814029519186859,
+      "rider": 0.02584401430685622,
+      "car": 1.4613844956191075,
+      "truck": 1.0872820333781428,
+      "bus": 0.0,
+      "train": 0.5027075565015277,
+      "motorcycle": 0.5776882854873424,
+      "bicycle": -0.2155630670225682
+    }
+  },
+  "ft-seed0-C-snow": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 27168835,
+        "fraction": 0.9495498968451713
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 878209,
+        "fraction": 0.0306933758977336
+      },
+      {
+        "class_name": "train",
+        "pixels": 323202,
+        "fraction": 0.011295899355277951
+      },
+      {
+        "class_name": "car",
+        "pixels": 170878,
+        "fraction": 0.00597218052496948
+      },
+      {
+        "class_name": "truck",
+        "pixels": 24104,
+        "fraction": 0.0008424340135878483
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.07955886659611487,
+        "recall": 0.06850306192619438,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 15541,
+            "fraction": 0.6544681209466857
+          },
+          {
+            "class_name": "wall",
+            "pixels": 3320,
+            "fraction": 0.1398130211404026
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 3009,
+            "fraction": 0.12671607849743113
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 0.5147154121326766,
+        "recall": 0.44244095667971456,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 24122,
+            "fraction": 0.3125461589292424
+          },
+          {
+            "class_name": "road",
+            "pixels": 24104,
+            "fraction": 0.31231293486570183
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 11867,
+            "fraction": 0.1537594423353503
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.526674666355123,
+        "recall": 0.9735851961361286,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 323202,
+            "fraction": 0.3190180779082335
+          },
+          {
+            "class_name": "building",
+            "pixels": 174389,
+            "fraction": 0.1721314954373393
+          },
+          {
+            "class_name": "person",
+            "pixels": 118272,
+            "fraction": 0.11674094253860617
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.0054955033442228,
+        "recall": 0.9786945450727284,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 536372,
+            "fraction": 0.34207659752498104
+          },
+          {
+            "class_name": "building",
+            "pixels": 482427,
+            "fraction": 0.3076726352497596
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 179546,
+            "fraction": 0.11450725388204501
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.0114746175052782,
+        "recall": 0.9045579735093299,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1360416,
+            "fraction": 0.4074350938730916
+          },
+          {
+            "class_name": "truck",
+            "pixels": 448968,
+            "fraction": 0.13446278140363993
+          },
+          {
+            "class_name": "wall",
+            "pixels": 336070,
+            "fraction": 0.10065061863277844
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.1207712959983132,
+        "recall": 0.6318929501847066,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 364293,
+            "fraction": 0.27469534471798884
+          },
+          {
+            "class_name": "wall",
+            "pixels": 359217,
+            "fraction": 0.270867784018803
+          },
+          {
+            "class_name": "building",
+            "pixels": 236846,
+            "fraction": 0.17859386157592044
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.8955994757263914,
+        "recall": 0.7414708210591884,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "person",
+            "pixels": 2281,
+            "fraction": 0.1920518649490612
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 2272,
+            "fraction": 0.19129409783615392
+          },
+          {
+            "class_name": "building",
+            "pixels": 1853,
+            "fraction": 0.15601582891302518
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.5068750866702861,
+      "sidewalk": 1.1613822244026748,
+      "building": 1.3036133133351173,
+      "wall": 1.0916693540197513,
+      "fence": 1.332507569516941,
+      "pole": 1.6059923163992729,
+      "traffic light": 1.5796801232252264,
+      "traffic sign": 1.2209840652290636,
+      "vegetation": 1.1035505590810901,
+      "terrain": -0.17408601190201117,
+      "sky": 1.5866295928264624,
+      "person": -0.05686841599844465,
+      "rider": -0.6625215927845285,
+      "car": 1.1187528881708322,
+      "truck": 1.1518316418856003,
+      "bus": 1.584679608600094,
+      "train": 0.8386701928264415,
+      "motorcycle": 1.7025755393779134,
+      "bicycle": 1.6749509387812078
+    }
+  },
+  "ft-seed0-C-rain": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 27233979,
+        "fraction": 0.9670944733139566
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 367096,
+        "fraction": 0.013035792998726342
+      },
+      {
+        "class_name": "bus",
+        "pixels": 248916,
+        "fraction": 0.008839152292781632
+      },
+      {
+        "class_name": "car",
+        "pixels": 203961,
+        "fraction": 0.007242774031352081
+      },
+      {
+        "class_name": "train",
+        "pixels": 25077,
+        "fraction": 0.0008904988913773522
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.6523751744872759,
+        "recall": 0.5387057518164573,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 170033,
+            "fraction": 0.5354004175312755
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 56813,
+            "fraction": 0.1788929438473964
+          },
+          {
+            "class_name": "fence",
+            "pixels": 32328,
+            "fraction": 0.10179450281975307
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 0.9180818959958437,
+        "recall": 0.7653624080208407,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 14324,
+            "fraction": 0.34559799261707724
+          },
+          {
+            "class_name": "building",
+            "pixels": 8993,
+            "fraction": 0.2169758969286076
+          },
+          {
+            "class_name": "fence",
+            "pixels": 5488,
+            "fraction": 0.13241006586725215
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 2.119009135803697,
+        "recall": 0.9242205722186029,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "bus",
+            "pixels": 366275,
+            "fraction": 0.7622963272832468
+          },
+          {
+            "class_name": "building",
+            "pixels": 47098,
+            "fraction": 0.0980209744655965
+          },
+          {
+            "class_name": "road",
+            "pixels": 25077,
+            "fraction": 0.052190580845763376
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.9995416947216084,
+        "recall": 0.9890832062527035,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 274057,
+            "fraction": 0.39186715892484864
+          },
+          {
+            "class_name": "building",
+            "pixels": 176213,
+            "fraction": 0.2519625029669899
+          },
+          {
+            "class_name": "pole",
+            "pixels": 164308,
+            "fraction": 0.23493984517317212
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.0608268637174951,
+        "recall": 0.9406502170116923,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 985383,
+            "fraction": 0.30670727531919395
+          },
+          {
+            "class_name": "fence",
+            "pixels": 705068,
+            "fraction": 0.21945729243832443
+          },
+          {
+            "class_name": "pole",
+            "pixels": 366648,
+            "fraction": 0.11412172635536824
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.8420598240715912,
+        "recall": 0.5209867974825307,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 306420,
+            "fraction": 0.33452768516274406
+          },
+          {
+            "class_name": "wall",
+            "pixels": 210203,
+            "fraction": 0.22948476928485181
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 139624,
+            "fraction": 0.15243160861942098
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.22724251264817755,
+        "recall": 0.169411721260017,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "motorcycle",
+            "pixels": 929,
+            "fraction": 0.29661558109833974
+          },
+          {
+            "class_name": "person",
+            "pixels": 630,
+            "fraction": 0.20114942528735633
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 470,
+            "fraction": 0.1500638569604087
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.5393114615554522,
+      "sidewalk": 1.0514754795500363,
+      "building": 0.7171618017678119,
+      "wall": 0.7774801564265347,
+      "fence": 1.3662134187853847,
+      "pole": 1.193972066012336,
+      "traffic light": 1.29592439120444,
+      "traffic sign": 0.5261982941434983,
+      "vegetation": 0.5519668919614806,
+      "terrain": 0.9252873868080641,
+      "sky": 0.699328094354617,
+      "person": 0.21713938767217206,
+      "rider": 0.0823440609346051,
+      "car": 0.5083024410797918,
+      "truck": 3.148467936215901,
+      "bus": 0.9024231600763715,
+      "train": 1.3331063003519241,
+      "motorcycle": 0.40108291183184647,
+      "bicycle": 0.3601178775269964
+    }
+  },
+  "ft-seed0-B-clear": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 281892770,
+        "fraction": 0.8164546814235797
+      },
+      {
+        "class_name": "terrain",
+        "pixels": 37533509,
+        "fraction": 0.10870945407114932
+      },
+      {
+        "class_name": "building",
+        "pixels": 5801284,
+        "fraction": 0.016802436898497645
+      },
+      {
+        "class_name": "car",
+        "pixels": 4783073,
+        "fraction": 0.013853361128916948
+      },
+      {
+        "class_name": "sky",
+        "pixels": 4761115,
+        "fraction": 0.013789763499596057
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 7.367459730629116,
+        "recall": 0.7008403643476101,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 37533509,
+            "fraction": 0.7383668325387533
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 11119829,
+            "fraction": 0.2187515405794479
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 1388911,
+            "fraction": 0.027322940036015084
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 3.2506442442262564,
+        "recall": 0.9249318258640372,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 1922746,
+            "fraction": 0.2995184795224892
+          },
+          {
+            "class_name": "car",
+            "pixels": 1364674,
+            "fraction": 0.2125840238512385
+          },
+          {
+            "class_name": "building",
+            "pixels": 870856,
+            "fraction": 0.1356588259723525
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.7696888861317038,
+        "recall": 0.5074560315146251,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 174802,
+            "fraction": 0.6461416764005737
+          },
+          {
+            "class_name": "bus",
+            "pixels": 38136,
+            "fraction": 0.14096668785947689
+          },
+          {
+            "class_name": "road",
+            "pixels": 13181,
+            "fraction": 0.04872251711442639
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.1767853292862258,
+        "recall": 0.9558224062936784,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 4761115,
+            "fraction": 0.7003698587275877
+          },
+          {
+            "class_name": "building",
+            "pixels": 1301693,
+            "fraction": 0.19148173117362002
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 430810,
+            "fraction": 0.06337304157501596
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.069835134004441,
+        "recall": 0.9468626041282825,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 5801284,
+            "fraction": 0.2346973757659656
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 4842839,
+            "fraction": 0.19592242071877072
+          },
+          {
+            "class_name": "pole",
+            "pixels": 3535364,
+            "fraction": 0.14302707007232662
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.3754601494521015,
+        "recall": 0.6159208353491565,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "wall",
+            "pixels": 1252524,
+            "fraction": 0.21923880345692273
+          },
+          {
+            "class_name": "road",
+            "pixels": 1183354,
+            "fraction": 0.20713145219250356
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 890102,
+            "fraction": 0.155801323914443
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.32620572759523253,
+        "recall": 0.298407481003463,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "rider",
+            "pixels": 53211,
+            "fraction": 0.2942874682683214
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 34599,
+            "fraction": 0.19135239169749962
+          },
+          {
+            "class_name": "person",
+            "pixels": 19730,
+            "fraction": 0.10911826030208005
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": -0.8619763286956141,
+      "sidewalk": -1.2225033260712557,
+      "building": -0.32081514639000447,
+      "wall": -1.0315551942280403,
+      "fence": -0.9794658409844541,
+      "pole": -0.4855524236068229,
+      "traffic light": -0.944140911536563,
+      "traffic sign": -0.9072956077438465,
+      "vegetation": -0.1798741427331654,
+      "terrain": -2.6984422490198328,
+      "sky": -0.8038206734711014,
+      "person": -0.9054903245335277,
+      "rider": -0.67342144570346,
+      "car": -0.5207339541550212,
+      "truck": -1.7273879115854833,
+      "bus": -1.1749663494819038,
+      "train": -1.2350913921719304,
+      "motorcycle": -0.9520864427466029,
+      "bicycle": -2.3574818128808173
+    }
+  },
+  "ft-seed0-B-night": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 45569588,
+        "fraction": 0.8502772176953823
+      },
+      {
+        "class_name": "terrain",
+        "pixels": 2479338,
+        "fraction": 0.04626165626879124
+      },
+      {
+        "class_name": "fence",
+        "pixels": 2115163,
+        "fraction": 0.03946656069421163
+      },
+      {
+        "class_name": "truck",
+        "pixels": 1618234,
+        "fraction": 0.030194424911194485
+      },
+      {
+        "class_name": "building",
+        "pixels": 858133,
+        "fraction": 0.01601179584183626
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 6.831465010533636,
+        "recall": 0.4164133572602443,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 8954635,
+            "fraction": 0.635285364720098
+          },
+          {
+            "class_name": "road",
+            "pixels": 2479338,
+            "fraction": 0.17589629790543093
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 1685939,
+            "fraction": 0.11960871353336427
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 94.94289981252582,
+        "recall": 0.9336849798226939,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 1618234,
+            "fraction": 0.5469660281136389
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 342948,
+            "fraction": 0.11591704624270423
+          },
+          {
+            "class_name": "train",
+            "pixels": 256772,
+            "fraction": 0.08678940188550932
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.3039100907418417,
+        "recall": 0.1760397426397131,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 220579,
+            "fraction": 0.7019667122808134
+          },
+          {
+            "class_name": "sky",
+            "pixels": 55490,
+            "fraction": 0.1765903955701238
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 13349,
+            "fraction": 0.04248162174203609
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.022321134354547245,
+        "recall": 0.019078982251719574,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 86366,
+            "fraction": 0.7239578530893485
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 16086,
+            "fraction": 0.13483993729934532
+          },
+          {
+            "class_name": "traffic sign",
+            "pixels": 7292,
+            "fraction": 0.06112475586142149
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.2913851260439648,
+        "recall": 0.6887657382667349,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sky",
+            "pixels": 14507338,
+            "fraction": 0.6320221020913009
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 2677963,
+            "fraction": 0.11666728965594698
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 1568644,
+            "fraction": 0.06833904871540918
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 3.5658105813673395,
+        "recall": 0.5942935324723289,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 3930403,
+            "fraction": 0.2581944350286494
+          },
+          {
+            "class_name": "sky",
+            "pixels": 2237804,
+            "fraction": 0.1470049100524429
+          },
+          {
+            "class_name": "road",
+            "pixels": 2115163,
+            "fraction": 0.1389484273695352
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.033520939160866556,
+        "recall": 0.03187340306524417,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 345,
+            "fraction": 0.4557463672391017
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 309,
+            "fraction": 0.4081902245706737
+          },
+          {
+            "class_name": "traffic sign",
+            "pixels": 58,
+            "fraction": 0.07661822985468957
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 3.9833361587287253,
+      "sidewalk": 0.1751242933134572,
+      "building": 1.2091547902674578,
+      "wall": 0.45382200321082533,
+      "fence": 0.5951701608680748,
+      "pole": 0.7435442445671308,
+      "traffic light": 1.1148802745720223,
+      "traffic sign": 0.38046118958922753,
+      "vegetation": 0.45885914010605877,
+      "terrain": 0.19348214898562907,
+      "sky": 0.09753837670623318,
+      "person": 0.3502374400522143,
+      "rider": 0.18871687119100775,
+      "car": 1.2970879157579907,
+      "truck": 0.05038349831653767,
+      "bus": 0.0,
+      "train": 0.8214817978154269,
+      "motorcycle": 0.5568464630496525,
+      "bicycle": -0.44093683097887465
+    }
+  },
+  "ft-seed0-B-snow": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 26812153,
+        "fraction": 0.9370838725822049
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 997362,
+        "fraction": 0.0348577693602723
+      },
+      {
+        "class_name": "train",
+        "pixels": 374658,
+        "fraction": 0.013094284876485068
+      },
+      {
+        "class_name": "truck",
+        "pixels": 148742,
+        "fraction": 0.005198528047174068
+      },
+      {
+        "class_name": "car",
+        "pixels": 117360,
+        "fraction": 0.004101728171036752
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.2252840190871628,
+        "recall": 0.16031708267549916,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "wall",
+            "pixels": 44862,
+            "fraction": 0.3215038197480256
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 41960,
+            "fraction": 0.300706617552208
+          },
+          {
+            "class_name": "road",
+            "pixels": 24305,
+            "fraction": 0.17418194326993364
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 2.4198265690259024,
+        "recall": 0.7495036802577116,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "car",
+            "pixels": 519431,
+            "fraction": 0.29121457937029865
+          },
+          {
+            "class_name": "fence",
+            "pixels": 216098,
+            "fraction": 0.12115350869078434
+          },
+          {
+            "class_name": "building",
+            "pixels": 215516,
+            "fraction": 0.12082721533287248
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.6154209826951234,
+        "recall": 0.98833239251465,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 374658,
+            "fraction": 0.32616905582321
+          },
+          {
+            "class_name": "building",
+            "pixels": 229439,
+            "fraction": 0.19974457238073515
+          },
+          {
+            "class_name": "person",
+            "pixels": 133671,
+            "fraction": 0.11637104735770835
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.006666225336285,
+        "recall": 0.9820440067923857,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 597922,
+            "fraction": 0.4150734352362791
+          },
+          {
+            "class_name": "building",
+            "pixels": 454528,
+            "fraction": 0.31553028383480697
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 122785,
+            "fraction": 0.08523652206389216
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 0.968731636077848,
+        "recall": 0.8921302892578709,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1093860,
+            "fraction": 0.45725383511172385
+          },
+          {
+            "class_name": "fence",
+            "pixels": 323370,
+            "fraction": 0.13517467743594075
+          },
+          {
+            "class_name": "wall",
+            "pixels": 270350,
+            "fraction": 0.11301133081240244
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.1852510486857835,
+        "recall": 0.5766111090835966,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 414399,
+            "fraction": 0.25099179550418343
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 396274,
+            "fraction": 0.2400139063357411
+          },
+          {
+            "class_name": "wall",
+            "pixels": 287042,
+            "fraction": 0.17385463518278715
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.8028264057410556,
+        "recall": 0.7075876925472689,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 2092,
+            "fraction": 0.2850524594631421
+          },
+          {
+            "class_name": "building",
+            "pixels": 1232,
+            "fraction": 0.16787028205477586
+          },
+          {
+            "class_name": "pole",
+            "pixels": 1229,
+            "fraction": 0.1674615070173048
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.42035274740790085,
+      "sidewalk": 0.8866196121263689,
+      "building": 1.3639669084840176,
+      "wall": 0.8795397163590676,
+      "fence": 0.9853371922351204,
+      "pole": 1.7365955866755272,
+      "traffic light": 1.391586155644303,
+      "traffic sign": 0.9332975639376803,
+      "vegetation": 1.166695731600398,
+      "terrain": 0.2616148219705296,
+      "sky": 1.6145018724059472,
+      "person": -0.12540182214187057,
+      "rider": -0.7052019110880968,
+      "car": 0.6941456736209864,
+      "truck": 0.45741012741687603,
+      "bus": 0.8496804653792528,
+      "train": 0.7363219600128333,
+      "motorcycle": 1.6877821034011602,
+      "bicycle": 1.6939362669755962
+    }
+  },
+  "ft-seed0-B-rain": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 26700495,
+        "fraction": 0.9481501454211643
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 603600,
+        "fraction": 0.021434187934576295
+      },
+      {
+        "class_name": "bus",
+        "pixels": 268951,
+        "fraction": 0.009550606824374138
+      },
+      {
+        "class_name": "truck",
+        "pixels": 178896,
+        "fraction": 0.006352701266971439
+      },
+      {
+        "class_name": "car",
+        "pixels": 167831,
+        "fraction": 0.0059597766654206005
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 1.0268878628440532,
+        "recall": 0.7611142131071262,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 274806,
+            "fraction": 0.3700866614144597
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 226032,
+            "fraction": 0.3044017534290851
+          },
+          {
+            "class_name": "fence",
+            "pixels": 130913,
+            "fraction": 0.17630311967624857
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 8.219242942890936,
+        "recall": 0.9361590018902477,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "car",
+            "pixels": 494515,
+            "fraction": 0.25018744517039043
+          },
+          {
+            "class_name": "building",
+            "pixels": 463161,
+            "fraction": 0.23432467628396147
+          },
+          {
+            "class_name": "bus",
+            "pixels": 300672,
+            "fraction": 0.15211744742681543
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 2.9852369987616685,
+        "recall": 0.948527181129617,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "bus",
+            "pixels": 462208,
+            "fraction": 0.5643076119164273
+          },
+          {
+            "class_name": "building",
+            "pixels": 164399,
+            "fraction": 0.20071397961837253
+          },
+          {
+            "class_name": "fence",
+            "pixels": 97794,
+            "fraction": 0.11939624281655681
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.0015716250606117,
+        "recall": 0.9899190036230597,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 335523,
+            "fraction": 0.43059159614688647
+          },
+          {
+            "class_name": "building",
+            "pixels": 192929,
+            "fraction": 0.24759437073769208
+          },
+          {
+            "class_name": "pole",
+            "pixels": 118230,
+            "fraction": 0.15172982004943442
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 0.960667862829743,
+        "recall": 0.9016092840927704,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 521123,
+            "fraction": 0.3300626210920404
+          },
+          {
+            "class_name": "fence",
+            "pixels": 308188,
+            "fraction": 0.19519641057699189
+          },
+          {
+            "class_name": "pole",
+            "pixels": 254652,
+            "fraction": 0.16128842247670946
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.022926426592215,
+        "recall": 0.5686693902445437,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 493858,
+            "fraction": 0.38108267859319994
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 225173,
+            "fraction": 0.17375344732061973
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 212567,
+            "fraction": 0.16402610009460358
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.15231360094538204,
+        "recall": 0.14479855238376602,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "person",
+            "pixels": 142,
+            "fraction": 0.3488943488943489
+          },
+          {
+            "class_name": "terrain",
+            "pixels": 103,
+            "fraction": 0.25307125307125306
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 81,
+            "fraction": 0.19901719901719903
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.5583649915266404,
+      "sidewalk": 1.0622939964672813,
+      "building": 0.7781990094451369,
+      "wall": 0.988283146546789,
+      "fence": 1.3486942394133261,
+      "pole": 1.297806020107976,
+      "traffic light": 1.2261320172580803,
+      "traffic sign": 0.29109022867871015,
+      "vegetation": 0.5932967838445058,
+      "terrain": 1.5441408153846312,
+      "sky": 0.6975952608379123,
+      "person": 0.07434191833934652,
+      "rider": 0.10495726639641574,
+      "car": 0.1423773060111677,
+      "truck": 0.24877413211349633,
+      "bus": 0.5616699357816974,
+      "train": 0.7607684491503314,
+      "motorcycle": 0.11481681349434698,
+      "bicycle": 0.27363570601476145
+    }
+  },
+  "ft-seed0-B-fog": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 29981688,
+        "fraction": 0.9791178781757246
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 267048,
+        "fraction": 0.008721039026590861
+      },
+      {
+        "class_name": "truck",
+        "pixels": 158348,
+        "fraction": 0.005171201760667032
+      },
+      {
+        "class_name": "train",
+        "pixels": 103483,
+        "fraction": 0.00337946467147742
+      },
+      {
+        "class_name": "car",
+        "pixels": 61530,
+        "fraction": 0.002009397304252927
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 1.1033262372415393,
+        "recall": 0.7637171836183739,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 505263,
+            "fraction": 0.6036256028633995
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 195072,
+            "fraction": 0.23304784558095304
+          },
+          {
+            "class_name": "wall",
+            "pixels": 56457,
+            "fraction": 0.06744782551039548
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.4522832589357662,
+        "recall": 0.8186368134569871,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "car",
+            "pixels": 397481,
+            "fraction": 0.43019472788747515
+          },
+          {
+            "class_name": "fence",
+            "pixels": 201832,
+            "fraction": 0.218443302494924
+          },
+          {
+            "class_name": "road",
+            "pixels": 158348,
+            "fraction": 0.17138045534635848
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.7522528324634574,
+        "recall": 0.9970889643411013,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 148413,
+            "fraction": 0.5062905525725085
+          },
+          {
+            "class_name": "road",
+            "pixels": 103483,
+            "fraction": 0.35301803246252617
+          },
+          {
+            "class_name": "car",
+            "pixels": 14383,
+            "fraction": 0.0490656277930531
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.9973370487633652,
+        "recall": 0.9859527911683234,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 450130,
+            "fraction": 0.6112226081619462
+          },
+          {
+            "class_name": "building",
+            "pixels": 168522,
+            "fraction": 0.22883268471923113
+          },
+          {
+            "class_name": "pole",
+            "pixels": 54365,
+            "fraction": 0.07382115631645127
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.0142448435074434,
+        "recall": 0.9365531240124861,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1005421,
+            "fraction": 0.44855369660932787
+          },
+          {
+            "class_name": "pole",
+            "pixels": 346547,
+            "fraction": 0.15460681435823675
+          },
+          {
+            "class_name": "wall",
+            "pixels": 306285,
+            "fraction": 0.13664451902833538
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.024293655541555,
+        "recall": 0.5643185798753091,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "wall",
+            "pixels": 370976,
+            "fraction": 0.3488685489232806
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 200836,
+            "fraction": 0.18886764613224571
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 111967,
+            "fraction": 0.10529458729754206
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.8259474512652863,
+        "recall": 0.7003571861000121,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1902,
+            "fraction": 0.4584237165582068
+          },
+          {
+            "class_name": "rider",
+            "pixels": 921,
+            "fraction": 0.22198120028922633
+          },
+          {
+            "class_name": "building",
+            "pixels": 584,
+            "fraction": 0.14075680886960715
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.1551443475042079,
+      "sidewalk": 0.5895362509149344,
+      "building": 1.0094205728181622,
+      "wall": 1.713591720857496,
+      "fence": 1.3912722012868641,
+      "pole": 1.7742833257726152,
+      "traffic light": 0.7831949451487088,
+      "traffic sign": 0.04054448342154235,
+      "vegetation": 0.8998365009114719,
+      "terrain": 0.8972339172048881,
+      "sky": 1.1165157474663652,
+      "person": 0.00034429134025552795,
+      "rider": 1.14643433451863,
+      "car": -0.06931848922503554,
+      "truck": 0.8680902315573235,
+      "bus": 0.6841797081731479,
+      "train": 0.8439569724239238,
+      "motorcycle": 1.0228271690636326,
+      "bicycle": 0.46782631757577137
+    }
+  },
+  "gsmf-seed0-E-clear": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 309673959,
+        "fraction": 0.8969181917667618
+      },
+      {
+        "class_name": "vegetation",
+        "pixels": 16048821,
+        "fraction": 0.04648269282244825
+      },
+      {
+        "class_name": "building",
+        "pixels": 5744253,
+        "fraction": 0.016637256262838674
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 5678596,
+        "fraction": 0.01644709187863603
+      },
+      {
+        "class_name": "sky",
+        "pixels": 4036396,
+        "fraction": 0.011690737617284088
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.23657047202199705,
+        "recall": 0.21149029524620638,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 129062,
+            "fraction": 0.6748798611147424
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 46893,
+            "fraction": 0.24520882465213323
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 6008,
+            "fraction": 0.031416514586612425
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.0326619957677148,
+        "recall": 0.7503658234823353,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "car",
+            "pixels": 173479,
+            "fraction": 0.22263817750838363
+          },
+          {
+            "class_name": "bus",
+            "pixels": 157041,
+            "fraction": 0.201542100393097
+          },
+          {
+            "class_name": "building",
+            "pixels": 156837,
+            "fraction": 0.20128029240358986
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.1932713483668849,
+        "recall": 0.6775198517323738,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 263750,
+            "fraction": 0.4957017256998087
+          },
+          {
+            "class_name": "road",
+            "pixels": 156026,
+            "fraction": 0.29324116570251507
+          },
+          {
+            "class_name": "bus",
+            "pixels": 39041,
+            "fraction": 0.07337513203050704
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.823003264029494,
+        "recall": 0.6570223635052775,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 4036396,
+            "fraction": 0.7904489607281757
+          },
+          {
+            "class_name": "building",
+            "pixels": 625616,
+            "fraction": 0.12251461873783404
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 238275,
+            "fraction": 0.046661483689287686
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 0.7189725642632895,
+        "recall": 0.5920644541002147,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sky",
+            "pixels": 7299746,
+            "fraction": 0.2861610933678526
+          },
+          {
+            "class_name": "road",
+            "pixels": 5744253,
+            "fraction": 0.22518341310253365
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 2935297,
+            "fraction": 0.1150680857771459
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.915497223315719,
+        "recall": 0.6607616507933469,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 6558711,
+            "fraction": 0.6949409586729783
+          },
+          {
+            "class_name": "wall",
+            "pixels": 718950,
+            "fraction": 0.07617774319343203
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 519487,
+            "fraction": 0.05504325374271705
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.9939955184699765,
+        "recall": 0.7513851617540231,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 550159,
+            "fraction": 0.34863150984155794
+          },
+          {
+            "class_name": "person",
+            "pixels": 210695,
+            "fraction": 0.1335157944631771
+          },
+          {
+            "class_name": "rider",
+            "pixels": 202705,
+            "fraction": 0.12845259316385443
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": -0.4132799437142303,
+      "sidewalk": -0.20749649388396937,
+      "building": -1.993377305639746,
+      "wall": -0.24883530932743644,
+      "fence": -1.2794215979092614,
+      "pole": -0.57645064554381,
+      "traffic light": -1.2637071597006029,
+      "traffic sign": -0.7324794398033243,
+      "vegetation": -0.8821465853582424,
+      "terrain": -2.093698393654187,
+      "sky": -1.9582936130839554,
+      "person": -0.38194834246353904,
+      "rider": -0.3406453433267793,
+      "car": -2.366008680082834,
+      "truck": -0.11129228077308166,
+      "bus": -1.134267887705071,
+      "train": -0.9984826561192831,
+      "motorcycle": -0.7837375286274842,
+      "bicycle": -0.7030280755983354
+    }
+  },
+  "gsmf-seed0-E-night": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 51194716,
+        "fraction": 0.9552357743762193
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 1306603,
+        "fraction": 0.024379741231639832
+      },
+      {
+        "class_name": "vegetation",
+        "pixels": 315689,
+        "fraction": 0.005890401391757976
+      },
+      {
+        "class_name": "fence",
+        "pixels": 159461,
+        "fraction": 0.0029753627663020206
+      },
+      {
+        "class_name": "car",
+        "pixels": 130780,
+        "fraction": 0.002440207590426363
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.04113738692099705,
+        "recall": 0.011057018168644673,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 29774,
+            "fraction": 0.45047961993524377
+          },
+          {
+            "class_name": "road",
+            "pixels": 18563,
+            "fraction": 0.28085756649620236
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 15956,
+            "fraction": 0.2414137440614882
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.2828000381303422,
+        "recall": 0.41762257316259416,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "car",
+            "pixels": 14419,
+            "fraction": 0.5295651535184369
+          },
+          {
+            "class_name": "sky",
+            "pixels": 7149,
+            "fraction": 0.2625605993829881
+          },
+          {
+            "class_name": "train",
+            "pixels": 3343,
+            "fraction": 0.12277802262376965
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.077776163612843,
+        "recall": 0.7568685091748999,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 571636,
+            "fraction": 0.7248726226918014
+          },
+          {
+            "class_name": "road",
+            "pixels": 130691,
+            "fraction": 0.16572491573696238
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 46676,
+            "fraction": 0.05918828509184608
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.8546522968045572,
+        "recall": 0.7210700969009328,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 2939922,
+            "fraction": 0.5981237945654739
+          },
+          {
+            "class_name": "building",
+            "pixels": 1657213,
+            "fraction": 0.33715810418209485
+          },
+          {
+            "class_name": "wall",
+            "pixels": 72686,
+            "fraction": 0.014787884213181859
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.1146013394233811,
+        "recall": 0.8422132908894332,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sky",
+            "pixels": 3521679,
+            "fraction": 0.3394293212317646
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 3061315,
+            "fraction": 0.2950581448583529
+          },
+          {
+            "class_name": "fence",
+            "pixels": 1124092,
+            "fraction": 0.10834314670986672
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.1706470650930125,
+        "recall": 0.4674337781244595,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1002076,
+            "fraction": 0.27816444267651624
+          },
+          {
+            "class_name": "sky",
+            "pixels": 984301,
+            "fraction": 0.27323031296123007
+          },
+          {
+            "class_name": "wall",
+            "pixels": 543298,
+            "fraction": 0.1508130973870903
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.24243156304818117,
+        "recall": 0.20162403095713793,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 4746,
+            "fraction": 0.25312
+          },
+          {
+            "class_name": "building",
+            "pixels": 4552,
+            "fraction": 0.24277333333333334
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 3971,
+            "fraction": 0.21178666666666668
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 4.408865728611275,
+      "sidewalk": 3.004704501717181,
+      "building": 2.4309465926894838,
+      "wall": 1.1677239283959269,
+      "fence": 1.2520300610102004,
+      "pole": 1.9827761585459238,
+      "traffic light": 2.314531038314725,
+      "traffic sign": 0.7992209861644909,
+      "vegetation": 1.1732294062981807,
+      "terrain": -0.045590052597101874,
+      "sky": 3.3453347760752083,
+      "person": 0.7669806874842946,
+      "rider": 0.2976707906718855,
+      "car": 2.2184782114408783,
+      "truck": 1.1771082203472776,
+      "bus": 0.0,
+      "train": 3.0157433458409306,
+      "motorcycle": 0.2522643435686809,
+      "bicycle": 0.4111572016282528
+    }
+  },
+  "gsmf-seed0-D-clear": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 274292062,
+        "fraction": 0.7944405175671116
+      },
+      {
+        "class_name": "building",
+        "pixels": 38474775,
+        "fraction": 0.1114356716756833
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 11657679,
+        "fraction": 0.03376449347772685
+      },
+      {
+        "class_name": "car",
+        "pixels": 8277241,
+        "fraction": 0.023973627148086103
+      },
+      {
+        "class_name": "terrain",
+        "pixels": 4774291,
+        "fraction": 0.013827925552785421
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 1.2246143160692173,
+        "recall": 0.38558294752044125,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 4774291,
+            "fraction": 0.7462586180270337
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 1305829,
+            "fraction": 0.20411117481519736
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 215250,
+            "fraction": 0.03364524021060279
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.9040805213804306,
+        "recall": 0.9004967373871056,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 626260,
+            "fraction": 0.22607823608003025
+          },
+          {
+            "class_name": "bus",
+            "pixels": 603345,
+            "fraction": 0.21780598049964206
+          },
+          {
+            "class_name": "car",
+            "pixels": 564434,
+            "fraction": 0.2037592103975917
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.8699537051397376,
+        "recall": 0.44073753838518565,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 366559,
+            "fraction": 0.8278206865401987
+          },
+          {
+            "class_name": "bus",
+            "pixels": 27130,
+            "fraction": 0.061269196025293585
+          },
+          {
+            "class_name": "road",
+            "pixels": 26629,
+            "fraction": 0.060137759710930445
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.0513369473778404,
+        "recall": 0.9616328071970064,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 1539065,
+            "fraction": 0.5576769009402565
+          },
+          {
+            "class_name": "road",
+            "pixels": 552477,
+            "fraction": 0.2001888557018515
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 430221,
+            "fraction": 0.15588965638190594
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.191256397314803,
+        "recall": 0.9299498071266016,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 38474775,
+            "fraction": 0.7325173920827077
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 5390827,
+            "fraction": 0.1026354159370405
+          },
+          {
+            "class_name": "pole",
+            "pixels": 2506235,
+            "fraction": 0.04771595743305594
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.6585758536487762,
+        "recall": 0.7558886965132141,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 2197435,
+            "fraction": 0.32363866334972025
+          },
+          {
+            "class_name": "road",
+            "pixels": 1215036,
+            "fraction": 0.17895074346307885
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 930552,
+            "fraction": 0.1370518834265445
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.7168647738672221,
+        "recall": 0.6404905853277936,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "rider",
+            "pixels": 117692,
+            "fraction": 0.23691255983606227
+          },
+          {
+            "class_name": "building",
+            "pixels": 106417,
+            "fraction": 0.21421612242186588
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 74274,
+            "fraction": 0.14951265565428143
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": -0.9867410862673894,
+      "sidewalk": -0.8902089861239566,
+      "building": -0.8781012806871787,
+      "wall": -0.49564990260876857,
+      "fence": -0.7308992738863719,
+      "pole": -0.256154108851873,
+      "traffic light": -0.9261919345690611,
+      "traffic sign": -0.25726516959081375,
+      "vegetation": -0.3040289529787356,
+      "terrain": -2.0760643550639717,
+      "sky": -0.27946089516490846,
+      "person": -0.3804275964145183,
+      "rider": -0.5693883030999752,
+      "car": -0.6898181922392447,
+      "truck": -0.8256635986544479,
+      "bus": -0.951037955824395,
+      "train": -1.7280037086705535,
+      "motorcycle": -0.6924155458973862,
+      "bicycle": -0.7537559727861435
+    }
+  },
+  "gsmf-seed0-D-night": {
+    "road_destinations_top5": [
+      {
+        "class_name": "building",
+        "pixels": 29835076,
+        "fraction": 0.556688934975894
+      },
+      {
+        "class_name": "road",
+        "pixels": 17744110,
+        "fraction": 0.3310851193405745
+      },
+      {
+        "class_name": "truck",
+        "pixels": 5125896,
+        "fraction": 0.09564344951014017
+      },
+      {
+        "class_name": "fence",
+        "pixels": 682244,
+        "fraction": 0.012729905087343963
+      },
+      {
+        "class_name": "car",
+        "pixels": 142420,
+        "fraction": 0.002657396888121445
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.04469638597754372,
+        "recall": 0.003110710812211827,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 62547,
+            "fraction": 0.6845163832162322
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 19146,
+            "fraction": 0.2095344408693939
+          },
+          {
+            "class_name": "wall",
+            "pixels": 4552,
+            "fraction": 0.049817234661938846
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 206.22458771567474,
+        "recall": 0.7314988402020908,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 5125896,
+            "fraction": 0.7926145259223145
+          },
+          {
+            "class_name": "train",
+            "pixels": 311043,
+            "fraction": 0.04809641084923581
+          },
+          {
+            "class_name": "building",
+            "pixels": 261975,
+            "fraction": 0.04050905254973927
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.18623828085737387,
+        "recall": 0.051105004413181186,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 259038,
+            "fraction": 0.7800516746065683
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 35963,
+            "fraction": 0.10829684592174128
+          },
+          {
+            "class_name": "sky",
+            "pixels": 24448,
+            "fraction": 0.07362125765633375
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.005139008253183171,
+        "recall": 0.004059450443844935,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 31941,
+            "fraction": 0.8040933464239861
+          },
+          {
+            "class_name": "train",
+            "pixels": 5356,
+            "fraction": 0.13483372353548323
+          },
+          {
+            "class_name": "traffic sign",
+            "pixels": 738,
+            "fraction": 0.01857865720111774
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 4.240614403912909,
+        "recall": 0.9570603108070906,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sky",
+            "pixels": 36019905,
+            "fraction": 0.2879957137297785
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 30097314,
+            "fraction": 0.24064187361902412
+          },
+          {
+            "class_name": "road",
+            "pixels": 29835076,
+            "fraction": 0.23854516014970573
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.41103669946479054,
+        "recall": 0.09852418202822098,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 682244,
+            "fraction": 0.4261478766437054
+          },
+          {
+            "class_name": "building",
+            "pixels": 573587,
+            "fraction": 0.3582778040121028
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 89384,
+            "fraction": 0.05583164059474464
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.06406891358379364,
+        "recall": 0.06019927134070698,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 1038,
+            "fraction": 0.5838020247469067
+          },
+          {
+            "class_name": "building",
+            "pixels": 740,
+            "fraction": 0.4161979752530934
+          },
+          {
+            "class_name": "road",
+            "pixels": 0,
+            "fraction": 0.0
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 1.4657205354597085,
+      "sidewalk": 0.09449352044339038,
+      "building": 0.12311108133146145,
+      "wall": -0.09928952355058625,
+      "fence": 0.20267755506583332,
+      "pole": 0.2655914125836027,
+      "traffic light": 1.0757056239097944,
+      "traffic sign": 0.252382256367176,
+      "vegetation": -0.9573118865792946,
+      "terrain": -0.08636698389782889,
+      "sky": 0.018789679693177005,
+      "person": 0.1469304086112155,
+      "rider": 0.0,
+      "car": 1.0615439926010404,
+      "truck": 0.01730547784680665,
+      "bus": 0.0,
+      "train": 0.23695341597275382,
+      "motorcycle": 0.32069448734204514,
+      "bicycle": -0.29279871099435745
+    }
+  },
+  "gsmf-seed0-D-snow": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 26956724,
+        "fraction": 0.9421366243154612
+      },
+      {
+        "class_name": "car",
+        "pixels": 804116,
+        "fraction": 0.028103827965076593
+      },
+      {
+        "class_name": "train",
+        "pixels": 361131,
+        "fraction": 0.01262151666781419
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 323707,
+        "fraction": 0.011313549088801925
+      },
+      {
+        "class_name": "truck",
+        "pixels": 53710,
+        "fraction": 0.001877162747668575
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.34509744947344556,
+        "recall": 0.2607067315817678,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 108702,
+            "fraction": 0.5997120111223291
+          },
+          {
+            "class_name": "wall",
+            "pixels": 33360,
+            "fraction": 0.18404806435061818
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 18654,
+            "fraction": 0.10291464605504891
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.0062142977543873,
+        "recall": 0.6146732717771992,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "bus",
+            "pixels": 175048,
+            "fraction": 0.4186639433069209
+          },
+          {
+            "class_name": "building",
+            "pixels": 62545,
+            "fraction": 0.1495894630851616
+          },
+          {
+            "class_name": "road",
+            "pixels": 53710,
+            "fraction": 0.12845871072514237
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.4897954838519483,
+        "recall": 0.9693318585954979,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 361131,
+            "fraction": 0.37880092683402683
+          },
+          {
+            "class_name": "building",
+            "pixels": 139673,
+            "fraction": 0.1465071175105129
+          },
+          {
+            "class_name": "person",
+            "pixels": 120247,
+            "fraction": 0.1261306147880166
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.0071244602783256,
+        "recall": 0.9829036438523302,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 650624,
+            "fraction": 0.4591439743634076
+          },
+          {
+            "class_name": "building",
+            "pixels": 443874,
+            "fraction": 0.3132409386628578
+          },
+          {
+            "class_name": "bus",
+            "pixels": 128288,
+            "fraction": 0.09053256901548795
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.0376447595802356,
+        "recall": 0.9255133380672866,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1559857,
+            "fraction": 0.4454402724059863
+          },
+          {
+            "class_name": "fence",
+            "pixels": 426632,
+            "fraction": 0.12183108727089136
+          },
+          {
+            "class_name": "wall",
+            "pixels": 357015,
+            "fraction": 0.10195092168899023
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.8503410463670442,
+        "recall": 0.5039188168457699,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 281583,
+            "fraction": 0.29964149391369677
+          },
+          {
+            "class_name": "building",
+            "pixels": 257257,
+            "fraction": 0.2737554177622793
+          },
+          {
+            "class_name": "wall",
+            "pixels": 161577,
+            "fraction": 0.1719392635993415
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.8440805097392907,
+        "recall": 0.7268975719902931,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 2356,
+            "fraction": 0.2609080841638981
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 2129,
+            "fraction": 0.23576965669988925
+          },
+          {
+            "class_name": "pole",
+            "pixels": 1167,
+            "fraction": 0.1292358803986711
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.40979195228369897,
+      "sidewalk": 1.3057815774513706,
+      "building": 1.38261720884301,
+      "wall": 1.5224109681462605,
+      "fence": 1.0685936588716023,
+      "pole": 1.8096500215162052,
+      "traffic light": 1.6206345810585663,
+      "traffic sign": 1.2189478640133526,
+      "vegetation": 1.1823549869908934,
+      "terrain": 0.7346704169552813,
+      "sky": 1.6208962526585708,
+      "person": 0.638160602487693,
+      "rider": -0.5530548131326983,
+      "car": 0.6278246912811007,
+      "truck": 1.3050007909282182,
+      "bus": 0.62522226042175,
+      "train": 0.8947432069722884,
+      "motorcycle": 2.2680932845145154,
+      "bicycle": 1.718116627678876
+    }
+  },
+  "gsmf-seed0-C-clear": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 262661496,
+        "fraction": 0.7607545523034196
+      },
+      {
+        "class_name": "building",
+        "pixels": 31374479,
+        "fraction": 0.09087086645314028
+      },
+      {
+        "class_name": "terrain",
+        "pixels": 30548119,
+        "fraction": 0.08847745462302777
+      },
+      {
+        "class_name": "car",
+        "pixels": 7961450,
+        "fraction": 0.02305899198273073
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 6594377,
+        "fraction": 0.019099496495500686
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 4.992708615026362,
+        "recall": 0.5528547705935691,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 30548119,
+            "fraction": 0.9023488538326682
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 2457225,
+            "fraction": 0.07258300134155488
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 526070,
+            "fraction": 0.015539374504065265
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.2524600474384024,
+        "recall": 0.8195761121160665,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 353649,
+            "fraction": 0.2959774900803531
+          },
+          {
+            "class_name": "building",
+            "pixels": 276484,
+            "fraction": 0.23139621592985235
+          },
+          {
+            "class_name": "car",
+            "pixels": 229747,
+            "fraction": 0.1922808785363196
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.6767686265082664,
+        "recall": 0.5271962917584292,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 96972,
+            "fraction": 0.6284395940533745
+          },
+          {
+            "class_name": "bus",
+            "pixels": 17144,
+            "fraction": 0.1111039104117792
+          },
+          {
+            "class_name": "road",
+            "pixels": 9959,
+            "fraction": 0.06454058818192422
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.066030979595322,
+        "recall": 0.9534493792642742,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 1876023,
+            "fraction": 0.5416377469531807
+          },
+          {
+            "class_name": "building",
+            "pixels": 1061800,
+            "fraction": 0.3065585868163062
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 285164,
+            "fraction": 0.08233139277725103
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.1641516417158646,
+        "recall": 0.9417346281812847,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 31374479,
+            "fraction": 0.7017795882513056
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 2971317,
+            "fraction": 0.0664619680481102
+          },
+          {
+            "class_name": "pole",
+            "pixels": 2806139,
+            "fraction": 0.0627672915937801
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.603273497452252,
+        "recall": 0.7540425813651387,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 1736341,
+            "fraction": 0.27182590903291404
+          },
+          {
+            "class_name": "building",
+            "pixels": 1265717,
+            "fraction": 0.19814925415192805
+          },
+          {
+            "class_name": "wall",
+            "pixels": 931551,
+            "fraction": 0.14583523477561156
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.7601076182166893,
+        "recall": 0.6466837062176425,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "rider",
+            "pixels": 174048,
+            "fraction": 0.2359131591039399
+          },
+          {
+            "class_name": "building",
+            "pixels": 148607,
+            "fraction": 0.20142918525325884
+          },
+          {
+            "class_name": "person",
+            "pixels": 92879,
+            "fraction": 0.12589273248997307
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": -1.1433932878256172,
+      "sidewalk": -0.6174098624430758,
+      "building": -0.7039090662068789,
+      "wall": -0.941994716086757,
+      "fence": -0.675710825171475,
+      "pole": -0.32476115544731504,
+      "traffic light": -0.5320618759980773,
+      "traffic sign": -0.3845161036947689,
+      "vegetation": -0.12771008731432837,
+      "terrain": -2.644674243171258,
+      "sky": -0.4136775847690697,
+      "person": -0.50390889568811,
+      "rider": -0.5352613999337483,
+      "car": -0.6441379585334256,
+      "truck": -0.18074988285867472,
+      "bus": -0.6999001438104454,
+      "train": -0.9373457972381004,
+      "motorcycle": -0.6106685562898924,
+      "bicycle": -0.8286936901141494
+    }
+  },
+  "gsmf-seed0-C-night": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 25470549,
+        "fraction": 0.47525177398781626
+      },
+      {
+        "class_name": "building",
+        "pixels": 21659551,
+        "fraction": 0.4041428410722352
+      },
+      {
+        "class_name": "fence",
+        "pixels": 3238888,
+        "fraction": 0.06043400429837025
+      },
+      {
+        "class_name": "truck",
+        "pixels": 1790823,
+        "fraction": 0.03341474138025777
+      },
+      {
+        "class_name": "terrain",
+        "pixels": 757833,
+        "fraction": 0.014140310742281555
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 1.7941100841188997,
+        "recall": 0.16032426031301897,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 2021864,
+            "fraction": 0.56321982845432
+          },
+          {
+            "class_name": "road",
+            "pixels": 757833,
+            "fraction": 0.21110548101010884
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 552807,
+            "fraction": 0.15399248599725168
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 59.74312859457913,
+        "recall": 0.5190492834673192,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 1790823,
+            "fraction": 0.9608239114817198
+          },
+          {
+            "class_name": "car",
+            "pixels": 35728,
+            "fraction": 0.01916901709963457
+          },
+          {
+            "class_name": "building",
+            "pixels": 15528,
+            "fraction": 0.008331182756469033
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.21595370086648102,
+        "recall": 0.09886705968191727,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 228361,
+            "fraction": 0.7936641990755222
+          },
+          {
+            "class_name": "sky",
+            "pixels": 34970,
+            "fraction": 0.12153755256664234
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 13969,
+            "fraction": 0.04854898689743857
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.0042983919200602705,
+        "recall": 0.0029027367142410777,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 41199,
+            "fraction": 0.802254936324337
+          },
+          {
+            "class_name": "train",
+            "pixels": 6169,
+            "fraction": 0.12012696187249289
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 2305,
+            "fraction": 0.04488452700860692
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 3.7508816852831295,
+        "recall": 0.9540159782108337,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sky",
+            "pixels": 35550488,
+            "fraction": 0.33370413564793977
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 24722056,
+            "fraction": 0.2320601711267638
+          },
+          {
+            "class_name": "road",
+            "pixels": 21659551,
+            "fraction": 0.20331315128437813
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.1017665153057261,
+        "recall": 0.20337550123427292,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 3238888,
+            "fraction": 0.7037502341207468
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 465753,
+            "fraction": 0.10119948043663139
+          },
+          {
+            "class_name": "building",
+            "pixels": 322160,
+            "fraction": 0.06999938726635184
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.09476270692139273,
+        "recall": 0.08719535817042967,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 1892,
+            "fraction": 0.54414725337935
+          },
+          {
+            "class_name": "building",
+            "pixels": 1248,
+            "fraction": 0.35893011216566006
+          },
+          {
+            "class_name": "traffic sign",
+            "pixels": 118,
+            "fraction": 0.03393730227207363
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 2.1905639487175153,
+      "sidewalk": 0.16315340353387614,
+      "building": 0.2696236753932618,
+      "wall": 0.40280505486830603,
+      "fence": 0.37144140631340755,
+      "pole": 0.44904424346343663,
+      "traffic light": 1.2497021627953422,
+      "traffic sign": 0.36330896590255796,
+      "vegetation": -0.3795955785578527,
+      "terrain": 0.2182943641847778,
+      "sky": 0.01270346065359324,
+      "person": 0.05192834959162583,
+      "rider": 0.0,
+      "car": 1.1018161076722646,
+      "truck": 0.044022045959028124,
+      "bus": 0.0,
+      "train": 0.46581252206410495,
+      "motorcycle": 0.5775885665431288,
+      "bicycle": -0.1529394659860783
+    }
+  },
+  "gsmf-seed0-C-snow": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 26767724,
+        "fraction": 0.9355310804817364
+      },
+      {
+        "class_name": "car",
+        "pixels": 676881,
+        "fraction": 0.023656968866219562
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 602071,
+        "fraction": 0.02104236180695525
+      },
+      {
+        "class_name": "train",
+        "pixels": 406283,
+        "fraction": 0.014199577594694316
+      },
+      {
+        "class_name": "sky",
+        "pixels": 81324,
+        "fraction": 0.0028422711467398845
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.09586461877121617,
+        "recall": 0.0745403153227605,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 20806,
+            "fraction": 0.4542695574332438
+          },
+          {
+            "class_name": "wall",
+            "pixels": 15010,
+            "fraction": 0.3277221021375079
+          },
+          {
+            "class_name": "pole",
+            "pixels": 3535,
+            "fraction": 0.07718172092312395
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 0.4589253272900942,
+        "recall": 0.39692094469312456,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 26370,
+            "fraction": 0.3982661753156527
+          },
+          {
+            "class_name": "building",
+            "pixels": 17372,
+            "fraction": 0.2623693590285749
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 9342,
+            "fraction": 0.14109224913912885
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.6051171073592403,
+        "recall": 0.9786383205458422,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 406283,
+            "fraction": 0.3540453751269013
+          },
+          {
+            "class_name": "building",
+            "pixels": 200306,
+            "fraction": 0.1745517604974097
+          },
+          {
+            "class_name": "person",
+            "pixels": 127586,
+            "fraction": 0.11118169657834769
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.01301852837239,
+        "recall": 0.9803035378749237,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 588190,
+            "fraction": 0.3073112266116611
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 576766,
+            "fraction": 0.301342537152793
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 301628,
+            "fraction": 0.1575913746585663
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 0.990379738372227,
+        "recall": 0.8898826540571364,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1178587,
+            "fraction": 0.3755261677969855
+          },
+          {
+            "class_name": "truck",
+            "pixels": 469103,
+            "fraction": 0.1494674995499435
+          },
+          {
+            "class_name": "wall",
+            "pixels": 327749,
+            "fraction": 0.10442871503698428
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.2219354210834226,
+        "recall": 0.631664394007257,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 443262,
+            "fraction": 0.2768281875598373
+          },
+          {
+            "class_name": "wall",
+            "pixels": 374160,
+            "fraction": 0.23367226303492905
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 345536,
+            "fraction": 0.21579586027377926
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 1.0063847182029355,
+        "recall": 0.7735371598385653,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 5113,
+            "fraction": 0.28495792230953576
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 3885,
+            "fraction": 0.21651897675973916
+          },
+          {
+            "class_name": "fence",
+            "pixels": 3010,
+            "fraction": 0.1677534414534916
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.41312479388133067,
+      "sidewalk": 1.0844206779860992,
+      "building": 1.2585172410123984,
+      "wall": 1.1885285831134556,
+      "fence": 1.1893327226135766,
+      "pole": 1.605163927832204,
+      "traffic light": 1.5404207516248778,
+      "traffic sign": 1.1880742222499252,
+      "vegetation": 1.1014052674454888,
+      "terrain": -0.14655971901384296,
+      "sky": 1.5661013709183689,
+      "person": -0.06907765218747086,
+      "rider": -0.6799411140443125,
+      "car": 0.6386365660492958,
+      "truck": 0.9472414294617861,
+      "bus": 1.4331247558151368,
+      "train": 0.7061513176212643,
+      "motorcycle": 1.7770486485235308,
+      "bicycle": 1.595943945234024
+    }
+  },
+  "gsmf-seed0-C-rain": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 27060237,
+        "fraction": 0.9609247935920727
+      },
+      {
+        "class_name": "bus",
+        "pixels": 347074,
+        "fraction": 0.012324800104713608
+      },
+      {
+        "class_name": "car",
+        "pixels": 300104,
+        "fraction": 0.010656868018419623
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 275575,
+        "fraction": 0.009785828926558751
+      },
+      {
+        "class_name": "train",
+        "pixels": 49227,
+        "fraction": 0.0017480794722587597
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.7202469666058198,
+        "recall": 0.5799194674111458,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 200080,
+            "fraction": 0.510328749862904
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 74849,
+            "fraction": 0.19091161834510445
+          },
+          {
+            "class_name": "fence",
+            "pixels": 48990,
+            "fraction": 0.12495504526081401
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 0.9854122987696808,
+        "recall": 0.7517216729981981,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 38925,
+            "fraction": 0.6137460187316705
+          },
+          {
+            "class_name": "building",
+            "pixels": 6500,
+            "fraction": 0.10248809561350951
+          },
+          {
+            "class_name": "fence",
+            "pixels": 5371,
+            "fraction": 0.08468670177540917
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 2.567807357380506,
+        "recall": 0.9344604305813196,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "bus",
+            "pixels": 441105,
+            "fraction": 0.671538858533897
+          },
+          {
+            "class_name": "building",
+            "pixels": 98087,
+            "fraction": 0.1493277836728542
+          },
+          {
+            "class_name": "road",
+            "pixels": 49227,
+            "fraction": 0.07494325248874564
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.999527488110375,
+        "recall": 0.9890333335701101,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 264212,
+            "fraction": 0.3765060627263102
+          },
+          {
+            "class_name": "building",
+            "pixels": 182726,
+            "fraction": 0.26038729057623333
+          },
+          {
+            "class_name": "pole",
+            "pixels": 162352,
+            "fraction": 0.2313540350012184
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.04652273134401,
+        "recall": 0.9354399987760819,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 909129,
+            "fraction": 0.3061385711856388
+          },
+          {
+            "class_name": "fence",
+            "pixels": 635897,
+            "fraction": 0.2141308868171999
+          },
+          {
+            "class_name": "pole",
+            "pixels": 349458,
+            "fraction": 0.11767589947014226
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.947261437186828,
+        "recall": 0.5418188382555782,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 348067,
+            "fraction": 0.30092083069285785
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 273051,
+            "fraction": 0.2360658543944572
+          },
+          {
+            "class_name": "wall",
+            "pixels": 240449,
+            "fraction": 0.20787984158011816
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.3244026736585546,
+        "recall": 0.19114442926252817,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 2016,
+            "fraction": 0.2793404461687682
+          },
+          {
+            "class_name": "person",
+            "pixels": 1149,
+            "fraction": 0.15920742690868783
+          },
+          {
+            "class_name": "motorcycle",
+            "pixels": 1098,
+            "fraction": 0.1521407787169184
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.48473872581003863,
+      "sidewalk": 0.9000256097770382,
+      "building": 0.7286548539264422,
+      "wall": 0.699259234055862,
+      "fence": 1.319625799456525,
+      "pole": 1.219863502780706,
+      "traffic light": 1.2544109670962096,
+      "traffic sign": 0.4624026706103155,
+      "vegetation": 0.5592598982979853,
+      "terrain": 1.0559914495463238,
+      "sky": 0.6988864955483693,
+      "person": 0.32892700980432427,
+      "rider": 0.11146383796932567,
+      "car": 0.4002769118311667,
+      "truck": 2.8609159898455476,
+      "bus": 0.7239913182114931,
+      "train": 0.9844683447601047,
+      "motorcycle": 0.4930943374853642,
+      "bicycle": 0.40494898795895695
+    }
+  },
+  "gsmf-seed0-B-clear": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 278971800,
+        "fraction": 0.8079945863640369
+      },
+      {
+        "class_name": "terrain",
+        "pixels": 41748488,
+        "fraction": 0.12091742711228862
+      },
+      {
+        "class_name": "building",
+        "pixels": 6819171,
+        "fraction": 0.019750574256934342
+      },
+      {
+        "class_name": "car",
+        "pixels": 3988170,
+        "fraction": 0.011551059173362544
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 3292494,
+        "fraction": 0.009536151423319752
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 7.3581836966851,
+        "recall": 0.6404595866296062,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 41748488,
+            "fraction": 0.815036875848755
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 8193266,
+            "fraction": 0.15995343169404902
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 690551,
+            "fraction": 0.013481315291088713
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 2.237537275230046,
+        "recall": 0.9108260201846888,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 1059956,
+            "fraction": 0.2894470594371441
+          },
+          {
+            "class_name": "car",
+            "pixels": 731670,
+            "fraction": 0.19980049169812258
+          },
+          {
+            "class_name": "building",
+            "pixels": 596715,
+            "fraction": 0.16294770921815194
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.6606255234343497,
+        "recall": 0.5106373491733615,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 64963,
+            "fraction": 0.41983390958735906
+          },
+          {
+            "class_name": "bus",
+            "pixels": 42776,
+            "fraction": 0.276446828448638
+          },
+          {
+            "class_name": "road",
+            "pixels": 20157,
+            "fraction": 0.1302678773386758
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.0895614471697654,
+        "recall": 0.960104756822668,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 2068669,
+            "fraction": 0.5194032811252441
+          },
+          {
+            "class_name": "building",
+            "pixels": 1349043,
+            "fraction": 0.3387189350152406
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 322036,
+            "fraction": 0.08085708977146616
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.054337970415406,
+        "recall": 0.9433786036862646,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 6819171,
+            "fraction": 0.30574532577605196
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 3974621,
+            "fraction": 0.17820667533947127
+          },
+          {
+            "class_name": "pole",
+            "pixels": 3252016,
+            "fraction": 0.14580785426101406
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.4619987580003087,
+        "recall": 0.6388891880217625,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 2451008,
+            "fraction": 0.395884686322576
+          },
+          {
+            "class_name": "wall",
+            "pixels": 1037216,
+            "fraction": 0.16753022870947668
+          },
+          {
+            "class_name": "building",
+            "pixels": 617092,
+            "fraction": 0.09967216461642356
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.5293039023134073,
+        "recall": 0.4716083926834987,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "rider",
+            "pixels": 85701,
+            "fraction": 0.2283660956248551
+          },
+          {
+            "class_name": "building",
+            "pixels": 66059,
+            "fraction": 0.1760263697142659
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 65505,
+            "fraction": 0.17455013469978337
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": -0.8900798425027754,
+      "sidewalk": -0.8423836481198003,
+      "building": -0.28933357917652214,
+      "wall": -0.915349479904634,
+      "fence": -0.9773993952755385,
+      "pole": -0.440255068434239,
+      "traffic light": -0.6098574064654517,
+      "traffic sign": -0.8416943096302766,
+      "vegetation": -0.19257478825759441,
+      "terrain": -2.742805268510789,
+      "sky": -0.45005312398690106,
+      "person": -0.5983895041380863,
+      "rider": -0.6155238767583855,
+      "car": -0.39838778858386764,
+      "truck": -1.1308110507488125,
+      "bus": -0.8550360022190091,
+      "train": -1.0140040109796893,
+      "motorcycle": -1.0567155880563965,
+      "bicycle": -1.5388169865574797
+    }
+  },
+  "gsmf-seed0-B-night": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 35142363,
+        "fraction": 0.6557169363673235
+      },
+      {
+        "class_name": "truck",
+        "pixels": 8793754,
+        "fraction": 0.16408155114805162
+      },
+      {
+        "class_name": "fence",
+        "pixels": 4058617,
+        "fraction": 0.07572922472880772
+      },
+      {
+        "class_name": "terrain",
+        "pixels": 2969248,
+        "fraction": 0.05540282541258829
+      },
+      {
+        "class_name": "building",
+        "pixels": 1645205,
+        "fraction": 0.03069767341189329
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 7.223964351754718,
+        "recall": 0.442783173671417,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 9362121,
+            "fraction": 0.6283332203574111
+          },
+          {
+            "class_name": "road",
+            "pixels": 2969248,
+            "fraction": 0.19927932547334115
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 1616640,
+            "fraction": 0.10849983858984573
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 316.35159353055195,
+        "recall": 0.8627943185790092,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 8793754,
+            "fraction": 0.8856860905322604
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 305686,
+            "fraction": 0.030787970447029172
+          },
+          {
+            "class_name": "building",
+            "pixels": 205505,
+            "fraction": 0.020697977227340243
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 0.3219607953248358,
+        "recall": 0.15665104453426798,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 295507,
+            "fraction": 0.7274304957241393
+          },
+          {
+            "class_name": "sky",
+            "pixels": 74125,
+            "fraction": 0.18246872492208924
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 13478,
+            "fraction": 0.033177922084315935
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.010149196829698838,
+        "recall": 0.007577939777127284,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 70912,
+            "fraction": 0.7495111562080519
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 11163,
+            "fraction": 0.11798839458413926
+          },
+          {
+            "class_name": "traffic sign",
+            "pixels": 4939,
+            "fraction": 0.05220323218230438
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.565746520843383,
+        "recall": 0.7578595048868575,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sky",
+            "pixels": 19627246,
+            "fraction": 0.6378174159635636
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 3584077,
+            "fraction": 0.11647007077582057
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 1889007,
+            "fraction": 0.06138617529311465
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 3.664345499598466,
+        "recall": 0.569651409155912,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 4058617,
+            "fraction": 0.2560049517884381
+          },
+          {
+            "class_name": "building",
+            "pixels": 2908761,
+            "fraction": 0.18347560747148325
+          },
+          {
+            "class_name": "sky",
+            "pixels": 2796636,
+            "fraction": 0.17640311080099708
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.039009824277325814,
+        "recall": 0.0354666422909675,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 924,
+            "fraction": 0.5675675675675675
+          },
+          {
+            "class_name": "building",
+            "pixels": 587,
+            "fraction": 0.3605651105651106
+          },
+          {
+            "class_name": "traffic sign",
+            "pixels": 70,
+            "fraction": 0.042997542997543
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 3.05209583304925,
+      "sidewalk": 0.21103490788274046,
+      "building": 1.153477326540516,
+      "wall": 0.42970432640347017,
+      "fence": 0.5398042831877217,
+      "pole": 0.7352966453024387,
+      "traffic light": 1.1051420674160888,
+      "traffic sign": 0.3602843279180677,
+      "vegetation": 0.717802588277034,
+      "terrain": 0.1974111760249805,
+      "sky": 0.03722879632301207,
+      "person": 0.2910490868552559,
+      "rider": 0.17572214998359442,
+      "car": 1.284736214312484,
+      "truck": 0.013008946543743153,
+      "bus": 0.0,
+      "train": 0.7075193365540476,
+      "motorcycle": 0.46332114719057055,
+      "bicycle": -0.4224081765224989
+    }
+  },
+  "gsmf-seed0-B-snow": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 26912234,
+        "fraction": 0.9405817002669828
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 824167,
+        "fraction": 0.02880460976089679
+      },
+      {
+        "class_name": "train",
+        "pixels": 459042,
+        "fraction": 0.016043502923390022
+      },
+      {
+        "class_name": "car",
+        "pixels": 127283,
+        "fraction": 0.0044485366972909935
+      },
+      {
+        "class_name": "truck",
+        "pixels": 119395,
+        "fraction": 0.00417285135464326
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.1691827708977103,
+        "recall": 0.1044635262271566,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "wall",
+            "pixels": 52130,
+            "fraction": 0.37501978331870567
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 39387,
+            "fraction": 0.28334748140368043
+          },
+          {
+            "class_name": "road",
+            "pixels": 20878,
+            "fraction": 0.15019495561342674
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.8249311707527205,
+        "recall": 0.7091294739010732,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "car",
+            "pixels": 304054,
+            "fraction": 0.2551816167584262
+          },
+          {
+            "class_name": "fence",
+            "pixels": 185656,
+            "fraction": 0.15581442191486505
+          },
+          {
+            "class_name": "bus",
+            "pixels": 162697,
+            "fraction": 0.1365457566805425
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.6547497513290657,
+        "recall": 0.9886643177135594,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 459042,
+            "fraction": 0.3762349458320424
+          },
+          {
+            "class_name": "building",
+            "pixels": 204378,
+            "fraction": 0.16751004430806152
+          },
+          {
+            "class_name": "person",
+            "pixels": 132102,
+            "fraction": 0.10827198560110943
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 1.006084445235489,
+        "recall": 0.9810403305718393,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 573151,
+            "fraction": 0.39117488076745627
+          },
+          {
+            "class_name": "building",
+            "pixels": 463824,
+            "fraction": 0.316559332352355
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 149820,
+            "fraction": 0.10225197310408653
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 0.9782622715188664,
+        "recall": 0.897403408651351,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1174037,
+            "fraction": 0.4649285066246264
+          },
+          {
+            "class_name": "fence",
+            "pixels": 330501,
+            "fraction": 0.13088117015728265
+          },
+          {
+            "class_name": "wall",
+            "pixels": 291712,
+            "fraction": 0.11552040057041049
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 1.1274547209937327,
+        "recall": 0.5616841788621663,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 461632,
+            "fraction": 0.3007854673873029
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 300158,
+            "fraction": 0.19557388638577494
+          },
+          {
+            "class_name": "wall",
+            "pixels": 280224,
+            "fraction": 0.18258549410166444
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.9599008551888812,
+        "recall": 0.7730959394749478,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 4765,
+            "fraction": 0.3310177144841959
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 2806,
+            "fraction": 0.19492879472038901
+          },
+          {
+            "class_name": "fence",
+            "pixels": 2369,
+            "fraction": 0.1645710316081973
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.3693093196847539,
+      "sidewalk": 0.8949896630394949,
+      "building": 1.3724645883623252,
+      "wall": 1.1269251663815334,
+      "fence": 0.9868143485013645,
+      "pole": 1.7703986354218513,
+      "traffic light": 1.352854746876183,
+      "traffic sign": 0.942871162241438,
+      "vegetation": 1.1775974861379912,
+      "terrain": -0.014298139765163703,
+      "sky": 1.6072721941783565,
+      "person": -0.14791057609912137,
+      "rider": -0.7083447612064816,
+      "car": 0.8733479905548287,
+      "truck": 0.7441454675231032,
+      "bus": 1.085440346057999,
+      "train": 0.6625414286818797,
+      "motorcycle": 1.9623040016204931,
+      "bicycle": 1.72210199480393
+    }
+  },
+  "gsmf-seed0-B-rain": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 26666082,
+        "fraction": 0.9469281197263455
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 524076,
+        "fraction": 0.018610244327370788
+      },
+      {
+        "class_name": "bus",
+        "pixels": 370437,
+        "fraction": 0.013154433856727368
+      },
+      {
+        "class_name": "car",
+        "pixels": 199740,
+        "fraction": 0.007092883860258896
+      },
+      {
+        "class_name": "truck",
+        "pixels": 150684,
+        "fraction": 0.005350876697703271
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 0.954830881563406,
+        "recall": 0.7230541536919718,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "sidewalk",
+            "pixels": 250326,
+            "fraction": 0.38656744306713964
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 159245,
+            "fraction": 0.24591505665103364
+          },
+          {
+            "class_name": "fence",
+            "pixels": 127091,
+            "fraction": 0.19626104722180612
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 5.305803760598099,
+        "recall": 0.9130633435644987,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 265329,
+            "fraction": 0.22256175560474736
+          },
+          {
+            "class_name": "car",
+            "pixels": 245544,
+            "fraction": 0.20596581496260147
+          },
+          {
+            "class_name": "fence",
+            "pixels": 156967,
+            "fraction": 0.13166616198007144
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 2.8926182507198734,
+        "recall": 0.9482163549287089,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "bus",
+            "pixels": 462261,
+            "fraction": 0.5911651527145633
+          },
+          {
+            "class_name": "building",
+            "pixels": 130482,
+            "fraction": 0.16686766016709528
+          },
+          {
+            "class_name": "fence",
+            "pixels": 91391,
+            "fraction": 0.11687590878689019
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.9984862780959103,
+        "recall": 0.9885013034565807,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 274846,
+            "fraction": 0.41163220497889763
+          },
+          {
+            "class_name": "building",
+            "pixels": 176039,
+            "fraction": 0.2636506324715665
+          },
+          {
+            "class_name": "pole",
+            "pixels": 108664,
+            "fraction": 0.16274423466896712
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 0.9771974540257314,
+        "recall": 0.9105732878433764,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 577700,
+            "fraction": 0.3243468428256859
+          },
+          {
+            "class_name": "fence",
+            "pixels": 318737,
+            "fraction": 0.17895333155916676
+          },
+          {
+            "class_name": "pole",
+            "pixels": 279239,
+            "fraction": 0.1567773724144049
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.9882353353558616,
+        "recall": 0.5675890727391587,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "building",
+            "pixels": 495418,
+            "fraction": 0.41283216407357376
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 223163,
+            "fraction": 0.18596188315957626
+          },
+          {
+            "class_name": "wall",
+            "pixels": 174320,
+            "fraction": 0.14526097727838994
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.25650873370508515,
+        "recall": 0.2166808227777983,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 591,
+            "fraction": 0.27399165507649514
+          },
+          {
+            "class_name": "person",
+            "pixels": 409,
+            "fraction": 0.18961520630505332
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 341,
+            "fraction": 0.15808993973110802
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.5137904147920319,
+      "sidewalk": 1.0221476412479056,
+      "building": 0.7906494337061855,
+      "wall": 1.0983877391488552,
+      "fence": 1.393383921313763,
+      "pole": 1.3214124596038623,
+      "traffic light": 1.1931569408756306,
+      "traffic sign": 0.3671770668143775,
+      "vegetation": 0.5903149189286844,
+      "terrain": 1.4688640624314628,
+      "sky": 0.6987110674660656,
+      "person": 0.09571687348628338,
+      "rider": 0.07560909726684831,
+      "car": 0.32221492634650717,
+      "truck": 0.5450522250624105,
+      "bus": 0.658865852860514,
+      "train": 0.8117516987600747,
+      "motorcycle": 0.1632795752342296,
+      "bicycle": 0.6139668904217007
+    }
+  },
+  "gsmf-seed0-B-fog": {
+    "road_destinations_top5": [
+      {
+        "class_name": "road",
+        "pixels": 29882848,
+        "fraction": 0.9758900408678689
+      },
+      {
+        "class_name": "sidewalk",
+        "pixels": 230131,
+        "fraction": 0.007515433301235663
+      },
+      {
+        "class_name": "truck",
+        "pixels": 191022,
+        "fraction": 0.006238243001023934
+      },
+      {
+        "class_name": "train",
+        "pixels": 186728,
+        "fraction": 0.006098012999001147
+      },
+      {
+        "class_name": "car",
+        "pixels": 77393,
+        "fraction": 0.0025274384132625838
+      }
+    ],
+    "classes": {
+      "terrain": {
+        "predicted_over_GT": 1.0891949120737832,
+        "recall": 0.7631678349454729,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 454809,
+            "fraction": 0.5659848351919121
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 184477,
+            "fraction": 0.22957150021591122
+          },
+          {
+            "class_name": "wall",
+            "pixels": 83602,
+            "fraction": 0.10403809993143108
+          }
+        ]
+      },
+      "truck": {
+        "predicted_over_GT": 1.3436961863503039,
+        "recall": 0.7969601352940733,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "car",
+            "pixels": 326213,
+            "fraction": 0.40918458607147024
+          },
+          {
+            "class_name": "road",
+            "pixels": 191022,
+            "fraction": 0.23960804137341057
+          },
+          {
+            "class_name": "fence",
+            "pixels": 168753,
+            "fraction": 0.21167496835907465
+          }
+        ]
+      },
+      "train": {
+        "predicted_over_GT": 1.8950043536727996,
+        "recall": 0.9971173018563648,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "road",
+            "pixels": 186728,
+            "fraction": 0.5357433866988007
+          },
+          {
+            "class_name": "building",
+            "pixels": 125330,
+            "fraction": 0.35958570035003157
+          },
+          {
+            "class_name": "sky",
+            "pixels": 15890,
+            "fraction": 0.04559017616342457
+          }
+        ]
+      },
+      "sky": {
+        "predicted_over_GT": 0.9985757040716928,
+        "recall": 0.9870585810316745,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 460482,
+            "fraction": 0.6180659484025626
+          },
+          {
+            "class_name": "building",
+            "pixels": 177322,
+            "fraction": 0.238004287035409
+          },
+          {
+            "class_name": "pole",
+            "pixels": 52246,
+            "fraction": 0.07012537632359198
+          }
+        ]
+      },
+      "building": {
+        "predicted_over_GT": 1.0336361885352399,
+        "recall": 0.9439984824023103,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1168612,
+            "fraction": 0.4518776161245106
+          },
+          {
+            "class_name": "pole",
+            "pixels": 411881,
+            "fraction": 0.15926569674706365
+          },
+          {
+            "class_name": "wall",
+            "pixels": 335548,
+            "fraction": 0.12974933539562086
+          }
+        ]
+      },
+      "fence": {
+        "predicted_over_GT": 0.899481226076511,
+        "recall": 0.5508744928728604,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "wall",
+            "pixels": 277019,
+            "fraction": 0.3437352650674767
+          },
+          {
+            "class_name": "vegetation",
+            "pixels": 122201,
+            "fraction": 0.15163145172898146
+          },
+          {
+            "class_name": "sidewalk",
+            "pixels": 111424,
+            "fraction": 0.13825895759813775
+          }
+        ]
+      },
+      "bicycle": {
+        "predicted_over_GT": 0.9404891633369657,
+        "recall": 0.7651350042378012,
+        "false_positive_sources_top3": [
+          {
+            "class_name": "vegetation",
+            "pixels": 1766,
+            "fraction": 0.3048506818574141
+          },
+          {
+            "class_name": "rider",
+            "pixels": 1188,
+            "fraction": 0.20507509062661833
+          },
+          {
+            "class_name": "building",
+            "pixels": 942,
+            "fraction": 0.16261004660797515
+          }
+        ]
+      }
+    },
+    "IoU_change_contribution_pp": {
+      "road": 0.1386658169804865,
+      "sidewalk": 0.6296001196766742,
+      "building": 0.9952384735366727,
+      "wall": 1.7893129305642241,
+      "fence": 1.5068015396924768,
+      "pole": 1.667263825193379,
+      "traffic light": 0.8274458976844037,
+      "traffic sign": 0.22521590082311269,
+      "vegetation": 0.9113684838967359,
+      "terrain": 0.9257869484583957,
+      "sky": 1.121595482207292,
+      "person": 0.09973559304266606,
+      "rider": 1.150032656785864,
+      "car": -0.018162275488939963,
+      "truck": 0.9425254218052658,
+      "bus": 0.7481632863566896,
+      "train": 0.6191887107167234,
+      "motorcycle": 1.2520609324980956,
+      "bicycle": 0.6192434493440582
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "stage": "ft",
+  "domain": "A",
+  "split": "official validation",
+  "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_4000.pth",
+  "checkpoint_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+  "metrics": {
+    "aAcc": 84.79,
+    "mIoU": 52.04,
+    "mAcc": 67.24,
+    "matrix_mIoU": 52.04
+  },
+  "state_unchanged": true,
+  "forward_calls": {
+    "backbone": 9000,
+    "decode_head.conv_seg": 9000
+  },
+  "output_shapes": {
+    "decode_head.conv_seg": [
+      1,
+      19,
+      128,
+      128
+    ]
+  },
+  "seconds": 264.7659417579998,
+  "peak_allocated_MiB": 555.20068359375,
+  "peak_reserved_MiB": 704.0,
+  "checkpoint_bytes": 575325399,
+  "parameters": 47832297,
+  "evaluated_images": 500,
+  "full_official_split": true,
+  "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog010/A_val.jsonl",
+  "manifest_sha256": "d0a9f7f075071c792cdd9026e8734e888d4e62ef87fa34676da72ca91f200689",
+  "gt_histogram": [
+    345264442,
+    49568652,
+    201005428,
+    6718315,
+    7521741,
+    13565658,
+    1808393,
+    6098373,
+    158868008,
+    7625026,
+    30765347,
+    11913424,
+    1975596,
+    59731217,
+    2760211,
+    3563120,
+    1031648,
+    729415,
+    6504475
+  ],
+  "checkpoint_training_iterations": 4000,
+  "debug": false,
+  "synthetic_fixture": false
+}

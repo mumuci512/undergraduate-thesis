@@ -1,0 +1,28 @@
+{
+  "stage": "source",
+  "domain": "A",
+  "split": "official validation",
+  "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source/iter_60000.pth",
+  "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+  "metrics": {
+    "aAcc": 94.73,
+    "mIoU": 71.51,
+    "mAcc": 83.01,
+    "matrix_mIoU": 71.51
+  },
+  "state_unchanged": true,
+  "forward_calls": {
+    "backbone": 9000,
+    "decode_head.conv_seg": 9000
+  },
+  "seconds": 440.02716385499934,
+  "peak_allocated_MiB": 564.22412109375,
+  "peak_reserved_MiB": 724.0,
+  "checkpoint_bytes": 612017669,
+  "parameters": 50196988,
+  "evaluated_images": 500,
+  "full_official_split": true,
+  "checkpoint_training_iterations": 60000,
+  "debug": false,
+  "synthetic_fixture": false
+}

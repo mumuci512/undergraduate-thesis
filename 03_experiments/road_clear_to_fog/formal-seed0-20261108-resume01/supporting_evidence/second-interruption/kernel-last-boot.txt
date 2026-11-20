@@ -1,0 +1,504 @@
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Linux version 6.6.87.2-microsoft-standard-WSL2 (root@439a258ad544) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Command line: initrd=\initrd.img WSL_ROOT_INIT=1 panic=-1 nr_cpus=16 hv_utils.timesync_implicit=1 console=hvc0 debug pty.legacy_count=0 WSL_ENABLE_CRASH_DUMP=1
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: KERNEL supported cpus:
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:   Intel GenuineIntel
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:   AMD AuthenticAMD
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: BIOS-provided physical RAM map:
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009ffff] usable
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: BIOS-e820: [mem 0x00000000000e0000-0x00000000000e0fff] reserved
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000001fffff] ACPI data
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: BIOS-e820: [mem 0x0000000000200000-0x00000000f7ffffff] usable
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: BIOS-e820: [mem 0x0000000100000000-0x00000003c0ffffff] usable
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NX (Execute Disable) protection: active
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: Static calls initialized
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: DMI not present or invalid.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Hypervisor detected: Microsoft Hyper-V
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Hyper-V: privilege flags low 0xae7f, high 0x3b8030, hints 0x900c2c, misc 0xe4bed7b6
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Hyper-V: Nested features: 0x0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Hyper-V: LAPIC Timer Frequency: 0xc3500
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Hyper-V: Using hypercall for remote TLB flush
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: clocksource: hyperv_clocksource_tsc_page: mask: 0xffffffffffffffff max_cycles: 0x24e6a1710, max_idle_ns: 440795202120 ns
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: clocksource: hyperv_clocksource_msr: mask: 0xffffffffffffffff max_cycles: 0x24e6a1710, max_idle_ns: 440795202120 ns
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: tsc: Detected 3992.255 MHz processor
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: last_pfn = 0x3c1000 max_arch_pfn = 0x400000000
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: MTRR map: 5 entries (4 fixed + 1 variable; max 20), built from 8 variable MTRRs
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: last_pfn = 0xf8000 max_arch_pfn = 0x400000000
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Using GB pages for direct mapping
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: RAMDISK: [mem 0x04be4000-0x04e8bfff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Early table checksum verification disabled
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VRTUAL)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: XSDT 0x0000000000100000 000044 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: FACP 0x0000000000101000 000114 (v06 VRTUAL MICROSFT 00000001 MSFT 00000001)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: DSDT 0x00000000001011B8 01E11C (v02 MSFTVM DSDT01   00000001 INTL 20230628)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: FACS 0x0000000000101114 000040
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: OEM0 0x0000000000101154 000064 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT 0x000000000011F2D4 0003B0 (v02 VRTUAL MICROSFT 00000001 MSFT 00000001)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: APIC 0x000000000011F684 0000C8 (v04 VRTUAL MICROSFT 00000001 MSFT 00000001)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Reserving FACP table memory at [mem 0x101000-0x101113]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Reserving DSDT table memory at [mem 0x1011b8-0x11f2d3]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Reserving FACS table memory at [mem 0x101114-0x101153]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Reserving OEM0 table memory at [mem 0x101154-0x1011b7]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Reserving SRAT table memory at [mem 0x11f2d4-0x11f683]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Reserving APIC table memory at [mem 0x11f684-0x11f74b]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x00 -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x01 -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x02 -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x03 -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x04 -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x05 -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x06 -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x07 -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x08 -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x09 -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x0a -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x0b -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x0c -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x0d -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x0e -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SRAT: PXM 0 -> APIC 0x0f -> Node 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0xf7ffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x3c0ffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x3c1000000-0x9ffdfffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x1000000000-0xfcffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x10000000000-0x1ffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x20000000000-0x3ffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x40000000000-0x7ffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x80000000000-0xfffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000000-0x1fffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x200000000000-0x3fffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x400000000000-0x7fffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x800000000000-0xffffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x1000000000000-0x1ffffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x2000000000000-0x3ffffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x4000000000000-0x7ffffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x8000000000000-0xfffffffffffff] hotplug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NUMA: Node 0 [mem 0x00000000-0xf7ffffff] + [mem 0x100000000-0x3c0ffffff] -> [mem 0x00000000-0x3c0ffffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NODE_DATA(0) allocated [mem 0x3c0fde000-0x3c0ffffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Zone ranges:
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:   DMA32    [mem 0x0000000000001000-0x00000000ffffffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:   Normal   [mem 0x0000000100000000-0x00000003c0ffffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:   Device   empty
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Movable zone start for each node
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Early memory node ranges
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:   node   0: [mem 0x0000000000200000-0x00000000f7ffffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:   node   0: [mem 0x0000000100000000-0x00000003c0ffffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Initmem setup node 0 [mem 0x0000000000001000-0x00000003c0ffffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: On node 0, zone DMA32: 1 pages in unavailable ranges
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: On node 0, zone DMA32: 352 pages in unavailable ranges
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: On node 0, zone Normal: 28672 pages in unavailable ranges
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: PM-Timer IO Port: 0x408
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: LAPIC_NMI (acpi_id[0x01] dfl dfl lint[0x1])
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: IOAPIC[0]: apic_id 16, version 17, address 0xfec00000, GSI 0-23
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: smpboot: Allowing 16 CPUs, 0 hotplug CPUs
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000dffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PM: hibernation: Registered nosave memory: [mem 0x000e0000-0x000e0fff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PM: hibernation: Registered nosave memory: [mem 0x000e1000-0x000fffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PM: hibernation: Registered nosave memory: [mem 0x00100000-0x001fffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PM: hibernation: Registered nosave memory: [mem 0xf8000000-0xffffffff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: [mem 0xf8000000-0xffffffff] available for PCI devices
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Booting paravirtualized kernel on Hyper-V
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: setup_percpu: NR_CPUS:8192 nr_cpumask_bits:16 nr_cpu_ids:16 nr_node_ids:1
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: percpu: Embedded 63 pages/cpu s221184 r8192 d28672 u262144
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pcpu-alloc: s221184 r8192 d28672 u262144 alloc=1*2097152
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pcpu-alloc: [0] 00 01 02 03 04 05 06 07 [0] 08 09 10 11 12 13 14 15 
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Hyper-V: PV spinlocks enabled
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Kernel command line: initrd=\initrd.img WSL_ROOT_INIT=1 panic=-1 nr_cpus=16 hv_utils.timesync_implicit=1 console=hvc0 debug pty.legacy_count=0 WSL_ENABLE_CRASH_DUMP=1
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Unknown kernel command line parameters "WSL_ROOT_INIT=1 WSL_ENABLE_CRASH_DUMP=1", will be passed to user space.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: random: crng init done
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Fallback order for Node 0: 0 
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Built 1 zonelists, mobility grouping on.  Total pages: 3841472
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Policy zone: Normal
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: mem auto-init: stack:off, heap alloc:on, heap free:off
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: software IO TLB: area num 16.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Memory: 4123740K/15612540K available (20480K kernel code, 3457K rwdata, 13496K rodata, 4492K init, 6208K bss, 393544K reserved, 0K cma-reserved)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=16, Nodes=1
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ftrace: allocating 55808 entries in 218 pages
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ftrace: allocated 218 pages with 5 groups
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Dynamic Preempt: none
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rcu: Preemptible hierarchical RCU implementation.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rcu:         RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=16.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:         Trampoline variant of Tasks RCU enabled.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:         Rude variant of Tasks RCU enabled.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:         Tracing variant of Tasks RCU enabled.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=16
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Using NULL legacy PIC
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NR_IRQS: 524544, nr_irqs: 552, preallocated irqs: 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Console: colour dummy device 80x25
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Core revision 20230628
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Failed to register legacy timer interrupt
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: Switch to symmetric I/O mode setup
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: Switched APIC routing to: physical flat
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Hyper-V: Host Build 10.0.26100.9711-9-0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Hyper-V: enabling crash_kexec_post_notifiers
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Hyper-V: Using IPI hypercalls
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: send_IPI() replaced with hv_send_ipi()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: send_IPI_mask() replaced with hv_send_ipi_mask()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: send_IPI_mask_allbutself() replaced with hv_send_ipi_mask_allbutself()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: send_IPI_allbutself() replaced with hv_send_ipi_allbutself()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: send_IPI_all() replaced with hv_send_ipi_all()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: send_IPI_self() replaced with hv_send_ipi_self()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Hyper-V: Using enlightened APIC (xapic mode)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: eoi() replaced with hv_apic_eoi_write()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: read() replaced with hv_apic_read()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: write() replaced with hv_apic_write()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: icr_write() replaced with hv_apic_icr_write()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: APIC: icr_read() replaced with hv_apic_icr_read()
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x73179212a3b, max_idle_ns: 881590574132 ns
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 7984.51 BogoMIPS (lpj=15969020)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/cpu: User Mode Instruction Prevention (UMIP) activated
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Last level iTLB entries: 4KB 512, 2MB 512, 4MB 256
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Last level dTLB entries: 4KB 3072, 2MB 3072, 4MB 1536, 1GB 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Spectre V2 : Mitigation: Retpolines
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Spectre V2 : Enabling Restricted Speculation for firmware calls
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Spectre V2 : User space: Mitigation: STIBP always-on protection
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Speculative Return Stack Overflow: IBPB-extending microcode not applied!
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Speculative Return Stack Overflow: WARNING: See https://kernel.org/doc/html/latest/admin-guide/hw-vuln/srso.html for mitigation options.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Speculative Return Stack Overflow: Vulnerable: Safe RET, no microcode
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: Supporting XSAVE feature 0x020: 'AVX-512 opmask'
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: Supporting XSAVE feature 0x040: 'AVX-512 Hi256'
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: Supporting XSAVE feature 0x080: 'AVX-512 ZMM_Hi256'
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: Supporting XSAVE feature 0x800: 'Control-flow User registers'
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: xstate_offset[5]:  832, xstate_sizes[5]:   64
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: xstate_offset[6]:  896, xstate_sizes[6]:  512
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: xstate_offset[7]: 1408, xstate_sizes[7]: 1024
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: xstate_offset[11]: 2432, xstate_sizes[11]:   16
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/fpu: Enabled xstate features 0x8e7, context size is 2448 bytes, using 'compacted' format.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Freeing SMP alternatives memory: 44K
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pid_max: default: 32768 minimum: 301
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: LSM: initializing lsm=capability,landlock,yama,safesetid,selinux,integrity
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: landlock: Up and running.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Yama: becoming mindful.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SELinux:  Initializing.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: smpboot: CPU0: AMD Ryzen 9 8945HS w/ Radeon 780M Graphics (family: 0x19, model: 0x75, stepping: 0x2)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: RCU Tasks: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=16.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: RCU Tasks Rude: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=16.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: RCU Tasks Trace: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=16.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Performance Events: Fam17h+ core perfctr, AMD PMU driver.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ... version:                0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ... bit width:              48
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ... generic registers:      6
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ... value mask:             0000ffffffffffff
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ... max period:             00007fffffffffff
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ... fixed-purpose events:   0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ... event mask:             000000000000003f
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: signal: max sigframe size: 3376
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rcu: Hierarchical SRCU implementation.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rcu:         Max phase no-delay instances is 1000.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: smp: Bringing up secondary CPUs ...
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: smpboot: x86: Booting SMP configuration:
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: .... node  #0, CPUs:        #2  #4  #6  #8 #10 #12 #14  #1  #3  #5  #7  #9 #11 #13 #15
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Spectre V2 : Update user space SMT mitigation: STIBP always-on
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: smp: Brought up 1 node, 16 CPUs
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: smpboot: Max logical packages: 1
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: smpboot: Total of 16 processors activated (127752.16 BogoMIPS)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: node 0 deferred pages initialised in 12ms
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: devtmpfs: initialized
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: x86/mm: Memory block size: 128MB
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: futex hash table entries: 4096 (order: 6, 262144 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pinctrl core: initialized pinctrl subsystem
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: audit: initializing netlink subsys (disabled)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: audit: type=2000 audit(1794104732.028:1): state=initialized audit_enabled=0 res=1
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: thermal_sys: Registered thermal governor 'step_wise'
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: thermal_sys: Registered thermal governor 'user_space'
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: cpuidle: using governor ladder
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: cpuidle: using governor menu
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: dca service started, version 1.12.1
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PCI: Fatal: No config space access function found
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: HugeTLB: 16380 KiB vmemmap can be freed for a 1.00 GiB page
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: cryptd: max_cpu_qlen set to 1000
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Added _OSI(Module Device)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Added _OSI(Processor Device)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Added _OSI(Processor Aggregator Device)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: 1 ACPI AML tables successfully acquired and loaded
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: _OSC evaluation for CPUs failed, trying _PDC
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Interpreter enabled
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: PM: (supports S0 S5)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Using IOAPIC for interrupt routing
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PCI: Using E820 reservations for host bridge windows
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: Enabled 1 GPEs in block 00 to 0F
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: iommu: Default domain type: Translated
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: iommu: DMA domain TLB invalidation policy: lazy mode
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SCSI subsystem initialized
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: libata version 3.00 loaded.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pps_core: LinuxPPS API ver. 1 registered
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PTP clock support registered
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: EDAC MC: Ver: 3.0.0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: Vmbus version:5.3
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: Unknown GUID: 6e382d18-3336-4f4b-acc4-2b7703d4df4a
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: Unknown GUID: dde9cbc0-5060-4436-9448-ea1254a5d177
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NetLabel: Initializing
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NetLabel:  domain hash size = 128
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: Unknown GUID: 6e382d18-3336-4f4b-acc4-2b7703d4df4a
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NetLabel:  unlabeled traffic allowed by default
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PCI: Using ACPI for IRQ routing
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PCI: System does not support PCI
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: Unknown GUID: 6e382d18-3336-4f4b-acc4-2b7703d4df4a
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: vgaarb: loaded
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: clocksource: Switched to clocksource tsc-early
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: VFS: Disk quotas dquot_6.6.0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: FS-Cache: Loaded
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pnp: PnP ACPI init
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pnp: PnP ACPI: found 1 devices
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NET: Registered PF_INET protocol family
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: TCP: Hash tables configured (established 131072 bind 65536)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: UDP hash table entries: 8192 (order: 6, 262144 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes, linear)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NET: Registered PF_XDP protocol family
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PCI: CLS 0 bytes, default 64
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: software IO TLB: mapped [mem 0x00000000f4000000-0x00000000f8000000] (64MB)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Trying to unpack rootfs image as initramfs...
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Freeing initrd memory: 2720K
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x73179212a3b, max_idle_ns: 881590574132 ns
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: clocksource: Switched to clocksource tsc
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Initialise system trusted keyrings
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Key type blacklist registered
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: workingset: timestamp_bits=36 max_order=22 bucket_order=0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: fuse: init (API version 7.39)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: SGI XFS with ACLs, security attributes, realtime, verbose warnings, quota, no debug enabled
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: 9p: Installing v9fs 9p2000 file system support
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Key type asymmetric registered
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Asymmetric key parser 'x509' registered
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: io scheduler mq-deadline registered
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: io scheduler kyber registered
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: registering driver hv_pci
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_pci c4b741f5-5582-4c98-8f8b-2e082933c396: PCI VMBus probing: Using version 0x10004
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_pci c4b741f5-5582-4c98-8f8b-2e082933c396: PCI host bridge to bus 5582:00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus 5582:00: root bus resource [mem 0x9ffe00000-0x9ffe02fff window]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus 5582:00: No busn resource found for root bus, will use [bus 00-ff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci 5582:00:00.0: [1af4:1043] type 00 class 0x010000
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci 5582:00:00.0: reg 0x10: [mem 0x9ffe00000-0x9ffe00fff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci 5582:00:00.0: reg 0x18: [mem 0x9ffe01000-0x9ffe01fff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci 5582:00:00.0: reg 0x20: [mem 0x9ffe02000-0x9ffe02fff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus 5582:00: busn_res: [bus 00-ff] end is updated to 00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci 5582:00:00.0: BAR 0: assigned [mem 0x9ffe00000-0x9ffe00fff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci 5582:00:00.0: BAR 2: assigned [mem 0x9ffe01000-0x9ffe01fff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci 5582:00:00.0: BAR 4: assigned [mem 0x9ffe02000-0x9ffe02fff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_pci b342c268-517e-4217-9ff8-b2d4edef93d4: PCI VMBus probing: Using version 0x10004
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_pci b342c268-517e-4217-9ff8-b2d4edef93d4: PCI host bridge to bus 517e:00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus 517e:00: No busn resource found for root bus, will use [bus 00-ff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci 517e:00:00.0: [1414:008e] type 00 class 0x030200
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus 517e:00: busn_res: [bus 00-ff] end is updated to 00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_pci d2b0ec9f-2ff1-45c9-9820-a51d81e680f7: PCI VMBus probing: Using version 0x10004
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_pci d2b0ec9f-2ff1-45c9-9820-a51d81e680f7: PCI host bridge to bus 2ff1:00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus 2ff1:00: No busn resource found for root bus, will use [bus 00-ff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci 2ff1:00:00.0: [1414:008a] type 00 class 0x030200
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus 2ff1:00: busn_res: [bus 00-ff] end is updated to 00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_pci c6d72406-a4cc-45b1-880d-9e8b5dd12b6e: PCI VMBus probing: Using version 0x10004
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_pci c6d72406-a4cc-45b1-880d-9e8b5dd12b6e: PCI host bridge to bus a4cc:00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus a4cc:00: No busn resource found for root bus, will use [bus 00-ff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci a4cc:00:00.0: [1414:008e] type 00 class 0x030200
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus a4cc:00: busn_res: [bus 00-ff] end is updated to 00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ioatdma: Intel(R) QuickData Technology Driver 5.00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: virtio-pci 5582:00:00.0: enabling device (0000 -> 0002)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Serial: 8250/16550 driver, 8 ports, IRQ sharing enabled
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Linux agpgart interface v0.103
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: AMD-Vi: AMD IOMMUv2 functionality not available on this system - This is not a bug.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ACPI: bus type drm_connector registered
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: printk: console [hvc0] enabled
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: brd: module loaded
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: loop: module loaded
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Loading iSCSI transport class v2.0-870.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rdac: device handler registered
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Microchip SmartPQI Driver (v2.1.24-046)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: VMware PVSCSI driver - version 1.0.7.0-k
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: registering driver hv_storvsc
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: PPP generic driver version 2.4.2
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: VMware vmxnet3 virtual NIC driver - version 1.7.0.0-k-NAPI
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: scsi host0: storvsc_host_t
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: registering driver hv_netvsc
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Fusion MPT base driver 3.04.20
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Copyright (c) 1999-2008 LSI Corporation
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Fusion MPT SPI Host driver 3.04.20
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Fusion MPT SAS Host driver 3.04.20
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Fusion MPT misc device (ioctl) driver 3.04.20
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: mptctl: Registered with Fusion MPT base driver
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: mptctl: /dev/mptctl @ (major,minor=10,220)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: i8042: PNP: No PS/2 controller found.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: registering driver hyperv_keyboard
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rtc_cmos 00:00: RTC can wake from S4
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rtc_cmos 00:00: registered as rtc0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rtc_cmos 00:00: setting system clock to 2026-11-08T02:25:32 UTC (1794104732)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: rtc_cmos 00:00: alarms up to one month, 114 bytes nvram
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: device-mapper: uevent: version 1.0.3
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_utils: Registering HyperV Utility Driver
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: registering driver hv_utils
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: registering driver hv_balloon
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: registering driver dxgkrnl
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_utils: TimeSync IC version 4.0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_balloon: Using Dynamic Memory protocol version 2.0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Free page reporting enabled
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_balloon: Cold memory discard hint enabled with order 9
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: drop_monitor: Initializing network drop monitor service
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NET: Registered PF_INET6 protocol family
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Segment Routing with IPv6
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: In-situ OAM (IOAM) with IPv6
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NET: Registered PF_PACKET protocol family
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: 9pnet: Installing 9P2000 support
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: NET: Registered PF_VSOCK protocol family
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_vmbus: registering driver hv_sock
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: IPI shorthand broadcast: enabled
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: AVX2 version of gcm_enc/dec engaged.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: AES CTR mode by8 optimization enabled
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sched_clock: Marking stable (264003999, 397620)->(284353599, -19951980)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: registered taskstats version 1
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Loading compiled-in X.509 certificates
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ima: No TPM chip found, activating TPM-bypass!
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ima: Allocated hash algorithm: sha256
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: ima: No architecture policies found
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: RAS: Correctable Errors collector initialized.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: clk: Disabling unused clocks
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Freeing unused decrypted memory: 2028K
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Freeing unused kernel image (initmem) memory: 4492K
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Write protecting the kernel read-only data: 34816k
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Freeing unused kernel image (rodata/data gap) memory: 840K
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Run /init as init process
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:   with arguments:
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:     /init
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:   with environment:
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:     HOME=/
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:     TERM=linux
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:     WSL_ROOT_INIT=1
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel:     WSL_ENABLE_CRASH_DUMP=1
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: scsi 0:0:0:0: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: scsi 0:0:0:1: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:0: [sda] 795880 512-byte logical blocks: (407 MB/389 MiB)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:1: Attached scsi generic sg1 type 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:1: [sdb] 381016 512-byte logical blocks: (195 MB/186 MiB)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:0: [sda] Write Protect is on
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:1: [sdb] Write Protect is on
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:1: [sdb] Mode Sense: 0f 00 80 00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:1: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:0: [sda] Mode Sense: 0f 00 80 00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:1: [sdb] Attached SCSI disk
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: scsi 0:0:0:2: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:2: Attached scsi generic sg2 type 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:2: [sdc] 8388616 512-byte logical blocks: (4.29 GB/4.00 GiB)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:2: [sdc] 4096-byte physical blocks
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:2: [sdc] Write Protect is off
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:2: [sdc] Mode Sense: 0f 00 00 00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:2: [sdc] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:2: [sdc] Attached SCSI disk
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: EXT4-fs (sda): mounted filesystem 00000000-0000-0000-0000-000000000000 ro without journal. Quota mode: none.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: EXT4-fs (sdb): mounted filesystem 00000000-0000-0000-0000-000000000000 ro without journal. Quota mode: none.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: tun: Universal TUN/TAP device driver, 1.6
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Bridge firewalling registered
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: Adding 4194304k swap on /dev/sdc.  Priority:-2 extents:1 across:4194304k 
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_netvsc fc232fd7-4443-4791-a539-deef713ec4d4 loopback0: renamed from eth4
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_pci cacc37c2-fe1a-4845-ab26-db574df8c5af: PCI VMBus probing: Using version 0x10004
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: hv_pci cacc37c2-fe1a-4845-ab26-db574df8c5af: PCI host bridge to bus fe1a:00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus fe1a:00: root bus resource [mem 0xc00000000-0xe00001fff window]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus fe1a:00: No busn resource found for root bus, will use [bus 00-ff]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci fe1a:00:00.0: [1af4:105a] type 00 class 0x088000
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci fe1a:00:00.0: reg 0x10: [mem 0xe00000000-0xe00000fff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci fe1a:00:00.0: reg 0x18: [mem 0xe00001000-0xe00001fff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci fe1a:00:00.0: reg 0x20: [mem 0xc00000000-0xdffffffff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci_bus fe1a:00: busn_res: [bus 00-ff] end is updated to 00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci fe1a:00:00.0: BAR 4: assigned [mem 0xc00000000-0xdffffffff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci fe1a:00:00.0: BAR 0: assigned [mem 0xe00000000-0xe00000fff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: pci fe1a:00:00.0: BAR 2: assigned [mem 0xe00001000-0xe00001fff 64bit]
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: virtio-pci fe1a:00:00.0: enabling device (0000 -> 0002)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: virtiofs virtio1: Cache len: 0x200000000 @ 0xc00000000
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: scsi 0:0:0:3: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:3: Attached scsi generic sg3 type 0
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:3: [sdd] 2147483648 512-byte logical blocks: (1.10 TB/1.00 TiB)
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:3: [sdd] 4096-byte physical blocks
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:3: [sdd] Write Protect is off
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:3: [sdd] Mode Sense: 0f 00 00 00
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: sd 0:0:0:3: [sdd] Attached SCSI disk
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: EXT4-fs (sdd): 1 orphan inode deleted
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: EXT4-fs (sdd): recovery complete
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: EXT4-fs (sdd): mounted filesystem aa03d809-1e80-45a7-b6d4-738d56ce15c9 r/w with ordered data mode. Quota mode: none.
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: systemd[314]: memfd_create() called without MFD_EXEC or MFD_NOEXEC_SEAL set
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+2026-11-08T10:25:35+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+2026-11-08T10:25:35+0800 UM890Pro-Win unknown: Failed to connect to bus: No such file or directory
+2026-11-08T10:25:37+0800 UM890Pro-Win unknown: WSL (266) ERROR: CheckConnection: getaddrinfo() failed: -5
+2026-11-08T10:26:19+0800 UM890Pro-Win unknown: WSL (266) ERROR: CheckConnection: getaddrinfo() failed: -5
+2026-11-08T10:26:19+0800 UM890Pro-Win kernel: hv_balloon: Max. dynamic memory size: 15248 MB
+2026-11-08T10:26:48+0800 UM890Pro-Win kernel: TCP: eth2: Driver has suspect GRO implementation, TCP performance may be compromised.
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:29:50+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:35:02+0800 UM890Pro-Win kernel: mini_init (246): drop_caches: 1
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:23+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:52+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:52+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:36:52+0800 UM890Pro-Win kernel: misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22
+2026-11-08T10:39:45+0800 UM890Pro-Win kernel: mini_init (246): drop_caches: 1

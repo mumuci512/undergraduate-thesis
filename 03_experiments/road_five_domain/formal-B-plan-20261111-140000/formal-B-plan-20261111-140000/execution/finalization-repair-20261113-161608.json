@@ -1,0 +1,10 @@
+{
+  "status": "diagnosed_and_fixed",
+  "time": "2026-11-13T16:16:08.551653+08:00",
+  "error": "Resume audit incorrectly expected three validations inside final checkpoint",
+  "evidence": "iter_3000 and iter_4000 both contain two prefix val histories; final checkpoint saved before final validation. Final hook audit has one validation taking44.9844s and completed100/100 log at2026-11-12 12:37:05.",
+  "fix": "Require exact preservation of two prefix histories and separate actual final validation evidence; supplement missing3000 validation. No assertion removed without replacement evidence.",
+  "training_code_changed": false,
+  "retrain": false,
+  "backup": "experiments/road_five_domain/formal-B-plan-20261111-140000/pre-recovery-20261113-161608"
+}

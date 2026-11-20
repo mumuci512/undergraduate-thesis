@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+    "train",
+    "--stage",
+    "lwf",
+    "--train-domain",
+    "D",
+    "--seed",
+    "0",
+    "--order",
+    "ABCDE",
+    "--manifests",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data",
+    "--work-dir",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/lwf-seed0-D",
+    "--load",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/initialization/lwf-seed0-D/lwf_init.pth"
+  ],
+  "cwd": "/home/ysheng4/research/GSMF-RS-DIL",
+  "stage": "lwf",
+  "manifests": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data",
+  "audit_sha256": "7bdae74d90f6f08f771f658fbefab2c529f568605e776191108f33a7dfb71ea7",
+  "initialization_sha256": "e672fef28ffec9d787d33f73a31e653ff071aa0efffd2c23ce0aa538c7156f6b",
+  "train_domain": "D",
+  "seed": 0,
+  "order": "ABCDE",
+  "debug": false,
+  "synthetic_fixture": false,
+  "optimizer": "fresh"
+}

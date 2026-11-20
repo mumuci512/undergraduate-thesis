@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-11-12T12:31:22.329433+08:00",
+  "interruption": "No tmux/driver/child/supervisor process; last log 00:31; cause unproven",
+  "checkpoints": [
+    {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/gsmf-seed2-D/iter_3000.pth",
+      "bytes": 765348075,
+      "sha256": "d31159ab6a53b28ad9cb018cc9594e56032fdef6ab94071b249221e9c8c65994",
+      "status": "PASS",
+      "iteration": 3000,
+      "optimizer_scheduler_present": true
+    },
+    {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/gsmf-seed2-D/iter_2000.pth",
+      "bytes": 765198891,
+      "sha256": "73ba7fc38712b61c90fbf1160820e6f9a8be4fb50668c4a9b300ec5e091ab905",
+      "status": "PASS",
+      "iteration": 2000,
+      "optimizer_scheduler_present": true
+    },
+    {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/gsmf-seed2-D/iter_1000.pth",
+      "bytes": 765047979,
+      "sha256": "c57ad64eaaaed7c4fe77795657c1f414ca06667f5cb4899972b7f2c690327f53",
+      "status": "PASS",
+      "iteration": 1000,
+      "optimizer_scheduler_present": true
+    }
+  ]
+}

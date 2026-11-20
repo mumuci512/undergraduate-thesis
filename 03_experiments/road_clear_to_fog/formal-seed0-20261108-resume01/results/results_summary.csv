@@ -1,0 +1,4 @@
+model,A_Cityscapes_val_mIoU_percent,B_ACDC_fog_val_mIoU_percent,old_domain_drop_pp,new_domain_gain_pp,equal_domain_mean_percent,status,seed,checkpoint_iteration
+source,71.50872218134401,49.60968798189637,0.0,0.0,60.55920508162019,completed_evaluated_independently_verified,0,60000
+ft,54.2915416984173,62.306646392978735,17.217180482926715,12.696958411082363,58.29909404569801,completed_evaluated_independently_verified,0,4000
+gsmf,55.20780120809538,63.03037335204614,16.30092097324863,13.42068537014977,59.11908728007076,completed_evaluated_independently_verified,0,4000

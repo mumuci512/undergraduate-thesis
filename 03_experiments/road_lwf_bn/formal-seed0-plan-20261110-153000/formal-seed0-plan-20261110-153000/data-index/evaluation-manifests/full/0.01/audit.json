@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "full_official_counts": true,
+  "evaluation_only": true,
+  "actual_n": 500,
+  "manifest_sha256": {
+    "A_val.jsonl": "6d1d1b5a98770f65db6f2e084f575d7ff4f9d07889b7cfcd8c914c4eb03d8b64"
+  },
+  "source": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.01",
+  "source_audit_sha256": "2b28e0780ff21ec6c33d1f5fe664348024248b4c25be425ac43bbcb517a05b3b",
+  "note": "Exact existing audited paired scene list; full requires 500, precheck requires 2. No training use."
+}

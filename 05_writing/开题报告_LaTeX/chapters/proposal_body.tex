@@ -1,0 +1,401 @@
+% 由开题报告 Markdown 转入；原文、数字、公式和参考文献顺序保持不变。
+% 项目内超链接仅保留显示文字，参考文献外部链接保留。
+
+\Needspace{95bp}
+\TJProposalSection[fixedfirst]{一、毕业论文课题背景}
+
+\Needspace{75bp}
+\TJProposalSubsection{1．课题来源及研究的目的和意义}
+
+\TJProposalBody{语义分割通过为图像中的每个像素预测语义类别，提取道路、车辆、行人等环境信息，是自动驾驶和移动机器人视觉感知的基础任务。道路图像的成像质量与天气、光照密切相关：雾会降低对比度并遮蔽远处目标，降雨会引入雨纹、遮挡和路面反射，积雪会改变道路与周围物体的外观，夜间场景则同时存在低照度和局部强光。恶劣天气道路感知综述指出，这些变化会影响目标特征的辨识，使常规条件下训练的模型难以在不同环境中保持稳定的感知性能[1]。}
+
+\TJProposalBody{随着新环境数据的积累，利用这些数据更新模型，是改善道路分割性能的一种途径。然而，模型在学习新数据时会调整已有参数，先前学到的知识可能因此受到影响，表现为旧环境上的分割精度下降，即灾难性遗忘。持续学习研究模型如何从依次获得的数据中学习，在适应新数据的同时保持已有知识。Wang等将稳定性与可塑性的协调、泛化能力及资源效率归纳为持续学习的主要目标[2]；Yuan和Zhao进一步总结了这一问题在像素级语义分割中的研究设定与方法[3]。对道路场景而言，模型完成雨天或夜间数据学习后，仍需具备识别先前道路环境的能力，因此评价应覆盖整个学习过程中已经出现的条件。}
+
+\TJProposalBody{本课题研究固定语义类别条件下的域增量语义分割。“域”用于描述具有特定数据分布的环境；不同天气、光照或采集条件下的道路图像可以构成不同的域。按照增量学习的常用划分，域增量学习保持预测任务和类别含义不变，依次学习输入分布不同的数据，并在测试时处理各个已学习域的样本[4]。本课题采用有像素标注的训练数据，研究不同天气与光照条件的数据陆续用于训练时，模型的新域适应与旧域遗忘，并通过过渡天气和复合条件评价，考察其在变化条件下的分割能力。}
+
+\TJProposalBody{本课题拟在可比较的数据划分、模型初始化和训练预算下，分析学习新域对已有分割能力的影响，探索兼顾新域适应与旧域保持的持续学习方法。其研究意义在于：为道路感知模型的持续更新建立可复现的实验依据；明确不同保持机制对分割精度、存储和计算开销的影响；结合夜间及复合条件的评价，识别平均精度难以反映的性能不足。上述工作也将为后续机器人平台的模型更新与推理验证提供基础。}
+
+\Needspace{75bp}
+\TJProposalSubsection{2．国内外在该方向的研究现状和发展趋势}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（1）道路语义分割方法与数据集}}
+
+\TJProposalBody{语义分割需要同时利用场景上下文和局部空间细节。DeepLabv3+通过空洞空间金字塔池化提取多尺度信息，再利用解码器融合低层特征，改善目标边界的分割[5]。SegFormer采用分层Transformer编码器获得不同尺度的特征，并通过多层感知机解码器完成特征融合与像素分类[6]。这些网络提供像素级预测所需的特征提取与解码结构，持续学习方法则在其训练过程中引入新知识学习与旧知识保持的机制。}
+
+\TJProposalBody{公开道路数据集为不同视觉条件下的模型训练与评价提供了图像和标注。Cityscapes提供城市道路图像及精细像素标注，是道路语义分割的常用基准[7]。Foggy Cityscapes根据场景深度合成雾图，沿用原图标注，并提供不同雾浓度下的同场景图像，适合控制场景内容、考察雾强度变化的影响[8]。ACDC提供真实雾天、雨天、雪天和夜间图像，并为不利条件图像提供正常条件对应图与不确定区域标注，支持不利条件下的语义分割研究[9]。}
+
+\TJProposalBody{其他道路数据集进一步扩展了夜间场景、地理环境和任务类型。NightCity针对夜间道路分割，关注低曝光与过曝光区域造成的识别困难[10]；BDD100K覆盖不同天气、时段和道路场景，其像素级语义分割标注来自专门的子集[11]；印度道路数据集IDD包含交通参与者、道路结构和场景布局更为多样的道路环境[12]。跨数据集实验通常同时涉及地理位置、相机、场景构成和标注体系的变化，分析天气与光照的影响时，需要结合数据集的采集条件和标签定义。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（2）\textbf{应对视觉条件变化的学习方法}}}
+
+\TJProposalBody{针对天气、光照等视觉条件变化带来的分割性能下降，相关研究从迁移学习、域泛化和域增量持续学习等角度提出了不同的解决方法。这些方法的区别主要在于：训练时能够获得哪些环境的数据，是否利用新环境数据更新模型，以及更新后是否要求保持对先前环境的识别能力。}
+
+\TJProposalBody{迁移学习研究如何利用已有领域或任务中的知识，改善另一领域或任务的学习[13]。例如，可以使用白天道路模型的参数初始化夜间分割模型，再利用夜间数据训练。域自适应是迁移学习中的典型设定，关注预测任务相同而数据分布不同的源域和目标域。源域指已有训练数据所属的环境，目标域指需要适应的新环境；训练时能够获取的目标域样本及标签，决定具体的监督设定。}
+
+\TJProposalBody{在语义分割中，无监督域自适应使用带像素标签的源域图像和不带标签的目标域图像，通过图像风格转换、特征分布对齐或伪标签自训练等方法，改善目标域分割性能[14][15]。这类方法适用于新环境图像容易获取而像素标注不足的情形。持续测试时适应进一步利用推理阶段到达的无标签数据更新模型：CoTTA结合平均预测与随机参数恢复缓解错误累积[16]；BECoTTA通过低秩专家及输入相关路由进行适配[17]；Hybrid-TTA根据师生预测差异选择更新范围[18]；GOLD将适应限制在动态低秩子空间内[19]。}
+
+\TJProposalBody{域泛化在训练时不使用实际目标域数据，模型训练完成后直接应用于未见环境。Rafi等从数据操作、表示学习和学习策略等方面总结了域泛化分割方法[14]；Schwonberg和Gottschalk进一步讨论了视觉基础模型预训练特征及参数高效适配的作用[15]。域泛化模型部署后通常无需针对新环境训练，其跨条件精度取决于训练数据的覆盖程度和所学特征的泛化能力。面对训练时覆盖不足的天气或光照变化，是否需要利用新数据更新模型，是需要通过实验回答的问题。}
+
+\TJProposalBody{本课题选择域增量持续学习，主要依据是新环境数据逐步获得、语义类别保持不变，以及已学习的天气和光照条件会再次出现。直接面向当前目标域进行迁移，可以改善该域的预测，但单次迁移目标通常不要求维持所有历史域的性能。域增量持续学习将新域适应和旧域保持共同纳入目标，期望模型在旧环境再次出现时直接使用已保留的知识，减少为恢复旧域能力而再次适应的需要[2][4]。实现这一目标可以依靠参数约束、知识蒸馏、历史信息利用或结构设计，具体方法决定是否保存及重用旧样本。}
+
+\TJProposalBody{本课题当前具备像素标注，可先在监督条件下研究适应与遗忘，并与域泛化、无监督域自适应及逐域监督迁移的代表方法进行比较。实验将分别记录可用训练数据、目标域标签、历史信息与更新成本，分析不同路线在新域精度、旧域保持和多条件综合性能上的差异，以检验选择持续学习的实际收益。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（3）持续学习机制}}
+
+\TJProposalBody{持续学习方法通常从历史数据利用、参数更新约束和模型结构设计等方面缓解遗忘[2][3]。经验回放保存少量旧样本，在学习新数据时重新使用这些样本。Chaudhry等表明，小容量样本缓存可以为持续学习提供有效的监督信息[20]。针对语义分割，Kalb等比较了随机选样、类别均衡、特征分布覆盖和预测不确定性等回放选择策略；其结果显示，选样策略的效果与类增量或域增量设定有关[21]。这说明缓存容量之外，保存哪些样本也是影响知识保持的重要因素。}
+
+\TJProposalBody{参数正则化限制对旧任务重要的参数发生较大变化。EWC利用Fisher信息矩阵的对角近似估计参数重要性，在新任务训练损失中加入加权参数距离约束[22]。知识蒸馏则利用旧模型的预测或中间特征指导新模型。LwF在当前任务输入上计算旧模型响应，通过蒸馏损失约束已有输出，从而减少对旧训练样本的依赖[23]。这类方法能否保留旧域能力，取决于当前输入上的教师响应能够提供何种历史信息，以及保持约束是否妨碍新域学习。}
+
+\TJProposalBody{训练数据的访问方式也会改变方法的适用条件。Mai等在在线持续学习设定中区分原始数据流与历史缓存：原始数据仅单遍到达，缓存中的样本允许重复使用；数据访问方式和每批更新预算共同限制训练与缓存更新方式[24]。这些研究说明，比较持续学习方法时需要明确数据访问次数、历史信息和计算预算。本课题采用阶段内可重复训练的监督协议。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（4）持续语义分割的研究进展}}
+
+\TJProposalBody{持续语义分割既包括语义类别逐步增加，也包括类别固定而图像分布变化。类增量分割中，当前阶段未标注的旧类或未来类别可能被标为背景，因而存在背景标签含义随阶段改变的问题。PLOP将多尺度局部特征蒸馏与伪标签结合，分别约束已有表征和补充当前图像中未标注的旧类监督[25]。RCIL利用可合并的并行卷积分支保留已有表示，并通过空间与通道方向的池化特征蒸馏约束模型更新[26]。FALCON进一步研究类别不均衡，采用公平对比聚类和注意力机制学习像素特征与类别中心的归属关系[27]。}
+
+\TJProposalBody{PLOP、RCIL和FALCON也在固定类别的城市域增量任务上开展实验，为空间特征蒸馏、表示保持和类别均衡机制的应用提供了参考[25][26][27]。Kalb等对类增量与域增量分割的比较表明，方法在不同设定下的效果需要分别评价[28]。在类别固定且各阶段使用完整标注的天气域增量任务中，可以借鉴其表征保持机制，针对背景标签变化设计的模块则需根据实际监督条件选择。}
+
+\TJProposalBody{近年来，研究进一步考虑类别与域同时变化的情况。LwS保存历史域的平均风格信息，将当前图像转换为历史风格进行回放，并结合跨域蒸馏保持分割能力[29]；JASCL面向类别、域与标签可用性共同变化的设定，利用梯度信息约束参数更新，并通过类别原型辅助判断伪标签是否可靠[30]。上述工作分别关注类别扩展、背景标注变化及类别与域共同变化。固定类别的域增量分割则将重点转向输入分布变化，研究模型在不同道路环境中的适应与保持。}
+
+\TJProposalBody{针对道路天气变化，Kalb和Beyerer分析了顺序训练前后的网络表征，指出低层特征变化与遗忘密切相关，并考察了预训练、数据增强和批归一化（Batch Normalization，BN）等因素[31]。这一研究为定位遗忘来源提供了依据：既要比较最终分割精度，也要观察哪些层的表示发生变化，以及变化是否伴随旧域性能下降。SimCS则面向计算预算受限的在线域增量分割，在真实数据流训练过程中加入模拟数据，并考察任务边界不可用时的持续学习[32]。其跨数据集实验和模拟数据生成方式，可为训练预算与外部数据使用的设计提供参考。}
+
+\TJProposalBody{在共享网络内保持表征是另一类研究思路。Huang等提出的GSMF-RS-DIL面向遥感域增量分割，以具有图空间建模能力的分割网络为基础，结合浅层参数冻结、输出蒸馏和多层特征蒸馏保持已有知识[33]。医学分割中的FOCUS将稀疏特征回放插入U-Net浅层，以保留后续多尺度跳跃连接所需的信息；该方法同时采用冻结编码器和域均衡采样[34]。这些工作分别说明了表征约束与特征缓存的实现方式，但其原始应用、网络结构和更新范围与道路天气任务存在差异。}
+
+\TJProposalBody{参数隔离方法为不同域设置专属参数，以减小共享更新带来的干扰。Garg等的MDIL-SS结合共享编码器、域专属适配器与解码器，并通过蒸馏约束旧域输出；推理时需要给定域身份以选择对应分支[35]。PSS为不同域维护分割专家，利用自编码器的重建误差选择专家，从而在推理时省去真实域标签输入[36]。前者需要额外的域身份信息，后者随域数增加保存多个完整分割模型，二者分别涉及推理信息要求与存储开销。}
+
+\TJProposalBody{MILE将参数隔离与低秩适配结合，在冻结的分割网络上为新域增加低秩适配（Low-Rank Adaptation，LoRA）专家，并依据图像特征与域原型的相似度选择专家[37]。其Cityscapes[7]到ACDC[9]四天气实验以平均交并比（mean Intersection over Union，mIoU）衡量分割精度，报告最终五域mIoU的等权均值为64.14\%，同表顺序微调为58.85\%，联合训练为66.85\%[37]。这些结果使MILE[37]成为与本课题设定接近的近期参照。比较时仍需统一源模型、训练配置和评价方式；采用专家结构时，还应同时考察专家本身的分割能力、路由选择及模型容量随域数的变化。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（5）过渡条件与复合条件评价}}
+
+\TJProposalBody{道路环境中的天气与光照可以同时变化，单一条件下的成绩不足以说明模型在夜雨、夜雪或不同雾浓度下的表现。SHIFT通过仿真构造离散和连续变化的天气、光照条件，为研究可控分布变化提供数据[38]。MUSES包含不同天气与昼夜组合，可用于真实复合条件下的感知评价[39]。Zhou等提出的可控极端雨景合成方法支持改变光照与降雨条件，为合成数据增强和条件控制提供了补充[40]。}
+
+\TJProposalBody{现有数据集使天气强度与昼夜组合的评价成为可能。相应地，持续分割研究需要同时考察模型在单一条件上的适应与保持，以及面对过渡和复合条件时的表现。逐域、逐类和不同学习阶段的评价，有助于识别总体均值难以反映的性能差异。}
+
+\Needspace{95bp}
+\TJProposalSection{二、毕业论文方案介绍}
+
+\Needspace{75bp}
+\TJProposalSubsection{1．主要研究内容}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（1）研究目标}}
+
+\TJProposalBody{本课题面向天气与光照变化下的道路语义分割，研究模型依次学习新环境数据时，如何提高对新条件的适应能力并保留对先前条件的分割能力，实现可塑性与稳定性的协调。以典型、过渡和复合视觉条件下的综合分割性能为评价目标，争取接近或达到同一评价协议下的先进方法水平。}
+
+\TJProposalBody{围绕这一目标，拟建立可复现的数据与评价协议，分析训练顺序和学习机制对新旧域性能的影响，再依据实验发现设计有针对性的改进。方法效果通过对照与消融实验验证，并结合存储、训练时间和推理开销评价其实际代价。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（2）主要研究任务}}
+
+\TJProposalBody{第一，构建数据协议并研究训练顺序。以Cityscapes[7]及ACDC[9]四种不利条件建立固定19类的道路实验，统一标签、忽略区域和图像预处理。已有实验采用的“Cityscapes[7]→雾→雨→雪→夜间”沿用MILE的设置[37]，作为文献参照顺序。后续将比较不同训练次序，并探索利用少量候选和较低训练预算筛选顺序的方法；测试条件覆盖典型天气、雾强度变化及夜雨、夜雪组合。}
+
+\TJProposalBody{第二，建立具有可比性的基线并分析性能差异。结合近期道路DIL研究，选择能够取得较高分割精度且具备复现条件的模型和方法，以同协议先进水平作为比较目标。分割网络的选择服务于实验效果和可比性，并根据验证结果调整。除持续学习方法间的比较外，补充域泛化、域自适应和逐域监督迁移对照，分析监督信息、模型更新与知识保持各自的作用。}
+
+\TJProposalBody{第三，根据实验反馈设计改进方法。结合模型刚学完新域时的精度、后续阶段的旧域性能、逐类错误和复合条件表现，判断主要问题来自新域学习不足、已有表征变化还是条件特定知识的使用方式。在此基础上选择相应机制，开展单项干预和消融实验，确定其对适应与保持的影响。}
+
+\TJProposalBody{第四，完成综合评价与论文撰写。保存各训练阶段在不同条件上的性能矩阵，分析训练顺序、方法组件和资源预算的作用，完成官方测试、实验整理及毕业论文。条件具备时开展机器人端的模型加载、推理与资源测试。}
+
+\Needspace{75bp}
+\TJProposalSubsection{2．研究方案}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（1）问题定义与技术路线}}
+
+\TJProposalBody{设依次学习的训练域为\(D_0,D_1,\ldots,D_T\)，其中\(D_0\)为源域，各域共享固定的19类语义标签。完成第\(t\)阶段训练后的模型记为\(f_{\theta_t}\)。在阶段\(t\)，模型使用当前域的训练数据，以及按照所用方法保留的历史信息进行训练，不读取未来阶段的训练数据。历史信息可以包括已学习的模型参数、教师模型、专属模块、统计量或样本。实验将分别记录各方法保存历史信息的方式和用量。}
+
+\TJProposalBody{本课题拟采用分阶段训练方案，训练时已知各阶段的切换点。推理时仅输入图像，不提供真实天气标签或任务编号，模型参数和归一化统计保持固定。若采用专家结构，模型需根据输入图像选择专家。历史样本的使用方式与资源预算依据实际方法和设备条件决定。}
+
+\TJProposalBody{研究首先统一数据处理与评价协议，建立可比较的分割模型和持续学习基线。在此基础上，分析训练顺序对新旧域性能的影响，以及模型在复合条件下的表现，据此选择并实现改进机制。随后通过对照与消融实验验证方法效果，完成官方测试、部署验证和论文整理。}
+
+\TJProposalBody{训练顺序是离线实验中的一个设计变量，模型按给定顺序逐阶段学习。测试时，使用不同天气强度、光照条件以及天气与光照组合下的图像，分析模型在条件变化时的分割性能。对于参数与状态固定的模型，改变同一组测试图像的输入顺序不会改变总体mIoU。因此，对过渡条件的评价需要依据不同条件下的实际图像及其分割结果。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（2）数据集与实验划分}}
+
+\TJProposalBody{主要数据集的训练集、验证集规模及研究用途如下表所示。}
+
+\begin{ProposalTable}{1}
+\toprule
+数据与条件 & 官方训练集 & 官方验证集 & 研究用途 \\
+\midrule
+\endhead
+Cityscapes[7] & 2975张 & 500张 & 源域训练及常规道路场景的性能保持 \\
+ACDC雾天[9] & 400张 & 100张 & 真实雾天适应与保持 \\
+ACDC雨天[9] & 400张 & 100张 & 雨天适应与保持 \\
+ACDC雪天[9] & 400张 & 100张 & 雪天适应与保持 \\
+ACDC夜间[9] & 400张 & 106张 & 低照度适应与保持 \\
+MUSES夜雨[39] & 150张 & 25张 & 后续复合条件验证 \\
+MUSES夜雪[39] & 150张 & 25张 & 后续复合条件验证 \\
+\bottomrule
+\end{ProposalTable}
+
+\TJProposalBody{Cityscapes[7]与ACDC[9]构成当前的五域主实验，训练样本合计4575张，验证样本合计906张。MUSES[39]用于后续扩展实验，目前尚未使用其数据进行主实验训练。在Foggy Cityscapes[8]上，使用与Cityscapes[7]验证集对应的500个场景，比较雾强度参数\(\beta=0.005,0.01,0.02\)下的分割结果，并保留无雾图像的结果作为参照。各数据集的官方train用于训练，val用于调参、早停和模型选择，test用于最终测试。对于测试标签不公开的数据集，按官方协议提交预测结果，以官网返回的评测结果作为正式成绩。对于复合条件，分别考察模型未经该条件组合训练时的迁移表现，以及将该组合加入训练后的适应效果和后续学习中的保持情况。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（3）对照方法与模型选择}}
+
+\TJProposalBody{比较持续学习方法时，统一数据划分、模型初始化、评价方式和超参数搜索预算，并记录实际训练成本。选择分割网络时，综合考虑验证集精度、计算资源需求及其与近期方法的可比性。当前已在SegFormer-B5[6]上完成一轮基线实验，具体选择依据与结果见前期研究基础部分；后续将根据实验结果确定主要研究方法和最终网络配置。}
+
+\TJProposalBody{当前实验对照包括固定源模型（Source）、顺序微调（Fine-Tuning，FT）、经验回放（Experience Replay，ER）[20]与离线联合训练（Joint）。Source用于评价模型未经新域训练时的迁移表现。FT继承上一阶段的参数，仅使用带有像素标注的当前域数据进行训练，用于观察直接迁移对新域精度和旧域遗忘的影响。ER[20]在训练中加入历史图像及标签，用于考察保留旧数据的作用。Joint同时使用全部指定域的训练数据，作为离线训练的性能参照。ER[20]是本轮基线比较中的一种方法。}
+
+\TJProposalBody{已有的GSMF[33]和LwF[23]实验用于分析特征约束与蒸馏的作用。后续将根据研究问题和实现条件，从EWC[22]、PLOP[25]、RCIL[26]及近期道路DIL方法中选择补充对照。MILE[37]作为近期道路DIL方法的参照，其完整的官方训练代码和部分训练配置仍未公开，因此将论文中的成绩与本项目的实验结果分别列出。}
+
+\TJProposalBody{不同学习路线的训练方式和比较目的如下表所示。}
+
+\begin{ProposalTable}{2}
+\toprule
+路线 & 训练与更新方式 & 比较目的 \\
+\midrule
+\endhead
+域泛化 & 选择适用于带标注源域数据的数据增强或特征约束方法，训练后固定模型，不使用待评价天气域的数据进行训练 & 评价直接应用于未见条件时的精度与部署成本 \\
+无监督域自适应 & 选择适用的代表方法，使用有标签的源域训练数据和无标签的目标域训练数据进行训练 & 分析目标域无标签时的适应效果，以及使用像素标注带来的差异 \\
+监督域增量学习（本课题主要研究） & 在固定类别的多域序列中学习，依据所选方法保持历史知识 & 评价新域适应、旧域保持及综合性能 \\
+\bottomrule
+\end{ProposalTable}
+
+\TJProposalBody{各路线使用相同的数据划分和类别定义，并分别说明是否使用目标域标签、允许访问哪些历史数据，以及使用了哪些外部预训练资源。实验重点比较模型适应前后在各域上的精度及综合性能，同时记录更新次数与耗时。对于监督信息不同的方法，比较结果用于分析学习条件的影响；对于知识保持机制本身的效果，则在监督信息和数据条件相同的情况下进行比较。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（4）训练顺序研究与改进方法设计}}
+
+\TJProposalBody{训练顺序研究首先考察已有文献采用的顺序，以及将夜间安排在较早阶段的顺序。固定Cityscapes[7]为初始域时，四种天气共有24种排列。拟先选取少量有代表性的候选顺序，以较低的训练预算开展分阶段实验，比较训练结束后的平均精度、夜间精度和旧域遗忘情况，再选出典型顺序进行完整训练与重复实验。顺序筛选使用训练集和验证集，并记录候选顺序的数量及计算开销。各方法均按相同的选定顺序训练，以比较不同方法对训练次序的敏感程度。}
+
+\TJProposalBody{改进方法将依据基线实验中发现的问题选择。首先，比较模型刚完成某一域的训练时及后续各阶段在该域上的精度，区分新域学习不足和后续遗忘。其次，结合各类别的分割错误与网络特征的变化，分析模型性能的变化与知识保持约束的强度、参数更新范围及视觉条件差异之间的关系。最后，在夜雨、夜雪等复合条件下，考察模型能否有效利用在单一条件下学到的知识；若采用专家模型，则进一步分析专家选择对分割结果的影响。}
+
+\TJProposalBody{上述分析将为共享特征的更新方式、知识保持约束，以及针对不同条件设置的参数提供设计依据。例如，当新域精度偏低且知识保持约束较强时，可调整约束强度或其作用的网络层，考察对新域学习的影响。当旧域表征变化明显时，可比较知识蒸馏、参数约束和历史信息利用等方式的效果。对于专家选择造成的误差，可研究用于识别视觉条件的特征及专家组合方式。先分别验证这些机制的作用，再选择效果稳定的方向开展深入研究。}
+
+\TJProposalBody{验证方法时，将同时给出新域学习效果和旧域性能的保持情况，并围绕最终选定的机制开展组件消融实验。除分割精度外，还将统计历史信息的存储量、教师模型或专家模块的规模、训练时间和推理开销，并根据设备实测结果及模型更新需求设置资源约束。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（5）评价指标与实验设计}}
+
+\TJProposalBody{主要精度指标为平均交并比（mIoU）。对类别\(c\)，有：}
+
+\[
+\operatorname{IoU}_c=\frac{TP_c}{TP_c+FP_c+FN_c},\qquad
+\operatorname{mIoU}=\frac{1}{19}\sum_{c=1}^{19}\operatorname{IoU}_c
+\]
+
+\TJProposalBody{其中，TP、FP和FN分别表示该类别的真阳性、假阳性和假阴性像素数。对每个评价域，先累计全部图像的混淆矩阵，再计算各类IoU。五域总体结果取各域mIoU的等权平均值，同时给出每个域的mIoU、其中的最低值及各类别的IoU。该均值与合并五域像素后计算的mIoU采用不同名称，以区分两种计算方式。}
+
+\TJProposalBody{设\(R_{t,j}\)为阶段\(t\)结束后模型在域\(j\)上的mIoU。每个训练阶段结束后，记录模型在各域上的评价结果，形成完整的评价矩阵。最终旧域平均遗忘定义为：}
+
+\[
+F_T=\frac{1}{T}\sum_{j=0}^{T-1}
+\left(\max_{j\leq k<T}R_{k,j}-R_{T,j}\right)
+\]
+
+\TJProposalBody{其中，域\(j\)的历史成绩从模型学习该域的阶段开始统计，最后一个阶段学习的新域不计入旧域平均遗忘。若某个旧域的差值为负，表示后续学习使模型在该域上的性能超过此前的最好记录，属于正的后向迁移，计算时保留负值。分析时同时考察遗忘程度与最终的绝对精度，避免因模型最初在该域上的精度较低、后续下降幅度较小，就将其判断为具有良好的知识保持能力。}
+
+\TJProposalBody{实验包括方法对照、训练顺序比较、机制消融和扩展条件下的评价。方法对照用于比较选定的持续学习方法及相关学习路线；训练顺序实验用于检验不同学习次序的影响；消融实验围绕实际选定的改进组件及其超参数展开。在扩展实验中，对同一组场景在不同雾强度下的图像进行评价，并考察模型在夜雨、夜雪条件下的表现。模型刚完成各域训练时的mIoU及其相较于学习前的变化，用于衡量新域学习能力；各阶段的评价矩阵和遗忘指标用于分析旧域性能的保持情况。对于主要的对比实验，计划使用至少3个不同的随机种子重复实验，报告结果的均值、样本标准差，以及不同方法在相同随机种子下的配对差值。若各次实验共用同一源模型权重，将明确说明这些统计结果仅反映增量训练阶段的随机性。}
+
+\TJProposalBody{资源指标包括峰值显存、训练时间、样本参与训练的次数、历史信息实际占用的字节数和推理延迟。对于使用样本缓存、教师模型或专家模块的方法，分别统计这些部分的开销。误差分析优先考察道路、行人、车辆等类别，以及前期实验中性能变化明显的类别，并结合预先确定的样例与定量结果解释相关现象。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（6）前期研究基础与初步效果}}
+
+\TJProposalBody{\textbf{①文献与工程基础。}已围绕持续学习、道路天气感知、域增量分割及相关数据集开展文献调研，并形成逐篇阅读报告和跨文献比较报告。已完成GSMF[33]在ISPRS数据上的双域复现。在本项目的复现实验中，模型在增量训练前的旧域mIoU为74.01\%，增量训练后在旧域和新域上的mIoU分别为63.76\%和65.67\%。随后将该方法迁移到道路场景，积累了数据读取、增量训练与蒸馏实现的经验。此外，已完成医学分割方法FOCUS[34]的临时两域实验，用于学习特征回放的实现方式，并将该实验设置与原论文的三域协议分别记录。GSMF复现记录、FOCUS实验记录}
+
+\TJProposalBody{\textbf{②五域顺序学习结果。}实验采用GSMF论文[33]中的ResNetV1c-101与GS-AUFPN分割结构，源模型在Cityscapes[7]上训练60000步，各天气增量阶段训练4000步。FT与GSMF[33]共用源模型，训练时将图像裁剪为512×512，批大小为2，采用AdamW优化器，学习率为\(10^{-5}\)，不回放历史训练图像。评价时，在原分辨率图像上进行滑窗推理。}
+
+\TJProposalBody{表1列出了按主序列“Cityscapes[7]→雾→雨→雪→夜间”训练的结果。每个阶段结束后，对已学习的各个真实域的mIoU取等权平均。增量训练使用3个不同的随机种子重复实验，表中数值以均值±样本标准差表示。}
+
+\begin{ProposalTable}{3}
+\toprule
+更新阶段 & FT／\% & GSMF[33]／\% & GSMF[33]相对FT的配对差值／百分点 \\
+\midrule
+\endhead
+雾天后，两域 & 57.6664±0.7011 & 58.4273±1.4163 & ＋0.7608±0.8474 \\
+雨天后，三域 & 58.7612±0.3579 & 57.1593±1.0286 & −1.6019±0.7916 \\
+雪天后，四域 & 55.2542±1.1299 & 54.8882±0.7624 & −0.3660±0.4400 \\
+夜间后，五域 & 48.0393±0.7148 & 49.4435±0.7367 & ＋1.4042±0.2349 \\
+\bottomrule
+\end{ProposalTable}
+
+\TJProposalBody{在3个随机种子的实验中，GSMF[33]的最终五域均值均高于FT；旧域平均遗忘由FT的12.1176±0.8545个百分点降至GSMF[33]的9.2811±1.0354个百分点。不过，完成雨天训练后的三域均值在3个随机种子的实验中均低于FT，说明GSMF[33]相对于FT的效果随学习阶段而变化。GSMF[33]刚完成部分域的训练时，在这些域上的精度也较低，表明最终的知识保持效果有所改善，但各阶段的新域精度并未一致提高。后续拟通过改变约束强度和训练配置，分析知识保持机制对新域学习的影响。以上比较使用固定的源模型，仅对增量训练阶段进行了重复实验，尚未进行统计显著性检验。实验依据}
+
+\TJProposalBody{\textbf{③训练顺序与过渡条件的实验结果。}在随机种子为0的顺序变化实验中，将增量训练顺序改为“夜间→雪→雨→雾”后，GSMF[33]的最终五域均值由48.6269\%变为48.7783\%，最终夜间mIoU却由38.6739\%降至17.4147\%。FT也出现类似现象，夜间mIoU由38.7919\%降至18.5916\%。两种方法的结果均显示，在该实验中，将夜间安排在序列前部时，模型最终的夜间精度明显低于将夜间安排在最后学习时的精度，而GSMF[33]的五域均值变化很小。因此，需要结合各域的结果分析平均精度，并在后续实验中重点考察夜间作为旧域时的性能保持情况。}
+
+\TJProposalBody{表2列出了固定源模型与完成真实雾天适应后的模型在不同合成雾强度下的分割结果。各雾强度下均使用同一组500个Cityscapes[7]验证场景。}
+
+\begin{ProposalTable}{4}
+\toprule
+模型 & 无雾／\% & β＝0.005／\% & β＝0.01／\% & β＝0.02／\% \\
+\midrule
+\endhead
+Source & 71.5087 & 69.0118 & 65.2689 & 57.1493 \\
+FT & 54.2915 & 53.9792 & 51.0625 & 44.8280 \\
+GSMF[33] & 55.2078 & 54.6756 & 51.7873 & 45.6621 \\
+\bottomrule
+\end{ProposalTable}
+
+\TJProposalBody{在同一轮ACDC真实雾天[9]验证中，Source、FT和GSMF[33]的mIoU分别为49.6097\%、62.3066\%和63.0304\%。FT和GSMF[33]在ACDC真实雾天[9]上的精度高于Source，但在Cityscapes[7]场景及其合成雾图像上的精度均低于Source。两类评价的场景内容和成像过程不同，这些结果表明，真实雾天适应后的性能变化与所评价数据的分布有关。实验依据}
+
+\TJProposalBody{此外，还比较了LwF-DIL[23]，以及将教师模型的BN统计量固定为源域统计量的GSMF[33]变体。两者在Cityscapes[7]／ACDC雾天[9]验证集上的mIoU分别为52.0610\%／59.7877\%和52.2870\%／58.7811\%，均未超过本轮原版GSMF[33]。在本轮配置下，固定教师模型的源域BN统计量没有改善结果。LwF[23]的表现则需在完成超参数选择与重复实验后进一步判断。这些实验结果为后续分析蒸馏约束和归一化状态的影响提供了依据。诊断依据}
+
+\TJProposalBody{\textbf{④后续模型选择的依据与SegFormer-B5[6]实验。}在道路实验中，GSMF[33]的最终五域均值较FT提高约1.4个百分点，部分中间阶段的适应效果较弱；与近期道路DIL研究相比，当前配置的综合精度仍有提升空间。MILE[37]采用SegFormer-B5[6]分割网络，取得了较好的效果。因此，项目开始在B5[6]上开展基线实验，考察初始分割精度较高时，模型的新域适应与旧域性能保持情况。该调整为下一阶段的方法比较提供基础，最终采用的网络和改进机制仍依据后续实验结果确定。}
+
+\TJProposalBody{已完成公开SegFormer-B5[6]源模型权重的加载、五域验证，以及使用真实数据进行的小规模训练。表3列出了加载原始源模型权重并保持模型固定时的验证结果，未使用此次训练后的权重。}
+
+\begin{ProposalTable}{5}
+\toprule
+验证条件 & 样本数 & Source的mIoU／\% \\
+\midrule
+\endhead
+Cityscapes[7] & 500 & 82.0842 \\
+ACDC雾天[9] & 100 & 75.0359 \\
+ACDC雨天[9] & 100 & 64.4077 \\
+ACDC雪天[9] & 100 & 61.4686 \\
+ACDC夜间[9] & 106 & 30.9138 \\
+五域等权均值 & 合计906 & 62.7820 \\
+\bottomrule
+\end{ProposalTable}
+
+\TJProposalBody{该结果说明，当前源模型在不同条件下的迁移能力存在明显差异，其中夜间分割精度较低。Cityscapes[7]上的结果较该权重公开的成绩82.25\%低0.1658个百分点，差异原因尚待查明。由于骨干网络、初始化和推理尺度不同，不能将表3与表1中的成绩直接相减，并将差值解释为持续学习方法带来的收益。}
+
+\TJProposalBody{在配备20GB显存的RTX3080上，从雾天训练集中固定选取32张图像进行训练。训练采用1024×1024裁剪和FP16混合精度，每个微批次包含1张图像，共完成200次实际优化更新。第21至200步的平均每步耗时为0.6957秒，峰值已分配显存为15.0855GiB。训练损失和梯度均通过检查，保存的模型权重也已通过严格模式的重新加载检查。这些结果验证了在现有设备上训练B5[6]的可行性；机器人端的推理延迟将通过独立部署实验测量。源模型与资源实测依据}
+
+\TJProposalBody{\textbf{⑤B5[6]基线比较与后续研究。}截至2026年11月18日，已在有限的搜索范围内完成B5[6]上FT、ER[20]与Joint的超参数选择，并完成训练和结果核验。三者使用同一Cityscapes[7]源模型权重，训练时采用1024×1024裁剪、AdamW优化器和混合精度。FT与ER[20]分别在首个雾天增量阶段，利用Cityscapes[7]和雾天验证集选择学习率及训练步数，随后固定配置，用于其余天气的增量训练。Joint依据五域验证集的平均精度选择配置。最终选定的FT和ER[20]配置均为每阶段训练4000步，Joint选用训练至16000步的检查点。本轮ER[20]保存200张历史图像及其标签，每4次更新中有1次使用历史样本，以检验历史数据的作用。}
+
+\TJProposalBody{表4列出了按主序列完成训练后，各方法在官方验证集上的结果，均来自随机种子为0的实验。}
+
+\begin{ProposalTable}{6}
+\toprule
+方法 & Cityscapes[7]／\% & 雾天／\% & 雨天／\% & 雪天／\% & 夜间／\% & 五域均值／\% & 旧域平均遗忘／百分点 \\
+\midrule
+\endhead
+FT & 79.2841 & 81.1611 & 68.1857 & 74.7467 & 51.6725 & 71.0100 & 3.2131 \\
+ER[20] & 81.3443 & 82.8569 & 74.7184 & 74.4542 & 54.0012 & 73.4750 & 1.0316 \\
+Joint & 81.8214 & 82.7361 & 75.6283 & 78.0320 & 53.0086 & 74.2453 & — \\
+\bottomrule
+\end{ProposalTable}
+
+\TJProposalBody{在各自经本轮验证集调参后选定的配置下，ER[20]的五域均值较FT高2.4650个百分点，旧域平均遗忘减少2.1816个百分点，与Joint的均值相差0.7703个百分点。三种方法的最低精度均出现在夜间。这些结果为后续研究提供了精度较高的基线，表明有必要继续分析模型在夜间的学习效果、训练顺序的影响及复合条件下的表现。本轮实验也为比较历史信息的不同利用方式提供了依据，具体改进机制仍需结合重复实验与误差分析确定。B5基线结果与核验记录}
+
+\TJProposalBody{B5[6]与前述GSMF[33]实验在网络、初始化和训练配置等方面存在差异，两组实验的绝对精度差异不能单独归因于持续学习机制。后续将筛选训练顺序，评价模型在复合条件下的表现，并使用不同的随机种子重复主要对比实验，据此确定改进方向。官方测试和机器人部署尚待完成。}
+
+\Needspace{70bp}
+\TJProposalBody{\textbf{（7）可行性分析}}
+
+\TJProposalBody{数据方面，已整理五域主实验的训练与验证数据清单，统一标签定义，并保存了运行记录；复合条件数据也已完成初步清点。方法方面，已具备源模型及顺序微调、蒸馏和多域评价所需的代码，能够在统一协议下比较方法效果、分析各机制的作用。计算方面，B5[6]的小规模训练和完整基线训练已验证现有设备能够完成相应实验，后续可根据实际训练耗时安排计算预算。}
+
+\TJProposalBody{后续研究以已经完成的基线实验为起点，先比较少量候选训练顺序，并评价模型在复合条件下的表现，据此确定需要重点解决的问题，再集中验证有针对性的改进方法。对于主要的对比实验，使用不同的随机种子进行多次重复，以检验结果的稳定性。对于不同的复合条件，分别给出评价样本数量和对应的评测结果。已有的复现代码、训练记录和各阶段的评价矩阵，为方法实现、误差分析及结果复核提供了基础。}
+
+\Needspace{75bp}
+\TJProposalSubsection{3．工作进度安排}
+
+\begin{ProposalTable}{7}
+\toprule
+时间 & 主要工作 & 预期阶段成果 \\
+\midrule
+\endhead
+2026年9月至11月18日 & 开展文献调研，完成GSMF[33]复现及道路场景迁移、多域预实验，以及B5[6]源模型验证与基线比较 & 已形成文献报告、复现记录及验证集结果 \\
+2026年11月下旬至12月上旬 & 完成开题报告与开题检查；分析基线结果；比较少量训练顺序，评价复合条件下的分割性能 & 开题材料、训练顺序比较结果与问题分析 \\
+2026年12月至2027年1月 & 根据实验反馈确定改进机制；完成首轮方法比较、相关学习路线对照及关键消融 & 改进方法原型、首轮主实验及阶段总结 \\
+2027年2月至3月 & 使用不同随机种子重复关键实验，比较不同训练顺序，分析资源预算的影响并评价复合条件下的性能；按学院安排参加中期检查 & 各阶段的性能矩阵、消融实验与资源统计结果、中期材料 \\
+2027年4月1日前 & 基本完成主要对照、主实验与消融；冻结配置并完成具备条件的官方测试 & 可用于论文的完整实验表格、图像与结果记录 \\
+2027年4月1日至20日 & 完成论文正文、图表和引用，核对结论与实验依据 & 不少于1.2万字的毕业论文初稿 \\
+2027年4月21日至28日 & 根据指导意见修改，整理代码、运行说明和归档材料 & 论文修订稿及可复现实验材料 \\
+2027年5月1日前及后续学院安排 & 提交用于检测和评阅的定稿，准备答辩并按意见修订 & 论文定稿、答辩材料及归档终稿 \\
+\bottomrule
+\end{ProposalTable}
+
+\TJProposalBody{预期成果包括：一份符合本科毕业论文规范的论文；一套附有数据清单、具备持续训练、评价及可视化功能的实验代码；一组记录不同训练阶段及视觉条件下模型性能的可追溯结果；一项经过对照和消融实验检验的持续学习改进方法，以及对其适用范围的分析。条件具备时，完成机器人端的推理验证，给出实际测得的资源开销与分割效果。论文结论以实际实验为依据，在成果进一步成熟后争取投稿。}
+
+\Needspace{95bp}
+\TJProposalSection[references]{三、毕业论文的主要参考文献}
+
+\begin{TJProposalReferences}
+
+\TJProposalReference{[1] MOCKEY A M Y，XIA K，PERERA P L，等．Review of Image Analysis Using Deep Learning Method Applied to the Road Context in Degraded Weather Conditions［J］．International Journal of Computational Intelligence Systems，2026，19：62．\href{https://doi.org/10.1007/s44196-025-01085-y}{DOI：\nolinkurl{10.1007/s44196-025-01085-y}}．}
+
+\TJProposalReference{[2] WANG L，ZHANG X，SU H，等．A Comprehensive Survey of Continual Learning：Theory，Method and Application［J］．IEEE Transactions on Pattern Analysis and Machine Intelligence，2024，46（8）：5362—5383．\href{https://doi.org/10.1109/TPAMI.2024.3367329}{DOI：\nolinkurl{10.1109/TPAMI.2024.3367329}}．}
+
+\TJProposalReference{[3] YUAN B，ZHAO D．A Survey on Continual Semantic Segmentation：Theory，Challenge，Method and Application［J］．IEEE Transactions on Pattern Analysis and Machine Intelligence，2024，46（12）：10891—10910．\href{https://doi.org/10.1109/TPAMI.2024.3446949}{DOI：\nolinkurl{10.1109/TPAMI.2024.3446949}}．}
+
+\TJProposalReference{[4] VAN DE VEN G M，TUYTELAARS T，TOLIAS A S．Three types of incremental learning［J］．Nature Machine Intelligence，2022，4：1185—1197．\href{https://doi.org/10.1038/s42256-022-00568-3}{DOI：\nolinkurl{10.1038/s42256-022-00568-3}}．}
+
+\TJProposalReference{[5] CHEN L C，ZHU Y，PAPANDREOU G，等．Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation［C］．ECCV，2018：833—851．\href{https://doi.org/10.1007/978-3-030-01234-2_49}{DOI：\nolinkurl{10.1007/978-3-030-01234-2_49}}．}
+
+\TJProposalReference{[6] XIE E，WANG W，YU Z，等．SegFormer：Simple and Efficient Design for Semantic Segmentation with Transformers［C］．NeurIPS，2021，34：12077—12090．\href{https://arxiv.org/abs/2105.15203}{论文原文}．}
+
+\TJProposalReference{[7] CORDTS M，OMRAN M，RAMOS S，等．The Cityscapes Dataset for Semantic Urban Scene Understanding［C］．CVPR，2016：3213—3223．\href{https://doi.org/10.1109/CVPR.2016.350}{DOI：\nolinkurl{10.1109/CVPR.2016.350}}．}
+
+\TJProposalReference{[8] SAKARIDIS C，DAI D，VAN GOOL L．Semantic Foggy Scene Understanding with Synthetic Data［J］．International Journal of Computer Vision，2018，126（9）：973—992．\href{https://doi.org/10.1007/s11263-018-1072-8}{DOI：\nolinkurl{10.1007/s11263-018-1072-8}}．}
+
+\TJProposalReference{[9] SAKARIDIS C，WANG H，LI K，等．ACDC：The Adverse Conditions Dataset with Correspondences for Robust Semantic Driving Scene Perception［EB/OL］．2025年扩展版，arXiv：2104.13395v5．\href{https://arxiv.org/abs/2104.13395v5}{DOI：\nolinkurl{10.48550/arXiv.2104.13395}}．}
+
+\TJProposalReference{[10] TAN X，XU K，CAO Y，等．Night-time Scene Parsing with a Large Real Dataset［J］．IEEE Transactions on Image Processing，2021，30：9085—9098．\href{https://doi.org/10.1109/TIP.2021.3122004}{DOI：\nolinkurl{10.1109/TIP.2021.3122004}}．}
+
+\TJProposalReference{[11] YU F，CHEN H，WANG X，等．BDD100K：A Diverse Driving Dataset for Heterogeneous Multitask Learning［C］．CVPR，2020：2636—2645．\href{https://openaccess.thecvf.com/content_CVPR_2020/html/Yu_BDD100K_A_Diverse_Driving_Dataset_for_Heterogeneous_Multitask_Learning_CVPR_2020_paper.html}{论文原文}．}
+
+\TJProposalReference{[12] VARMA G，SUBRAMANIAN A，NAMBOODIRI A，等．IDD：A Dataset for Exploring Problems of Autonomous Navigation in Unconstrained Environments［C］．WACV，2019．\href{https://doi.org/10.1109/WACV.2019.00190}{DOI：\nolinkurl{10.1109/WACV.2019.00190}}．}
+
+\TJProposalReference{[13] PAN S J，YANG Q．A Survey on Transfer Learning［J］．IEEE Transactions on Knowledge and Data Engineering，2010，22（10）：1345—1359．\href{https://doi.org/10.1109/TKDE.2009.191}{DOI：\nolinkurl{10.1109/TKDE.2009.191}}．}
+
+\TJProposalReference{[14] RAFI T H，MAHJABIN R，GHOSH E，等．Domain generalization for semantic segmentation：a survey［J］．Artificial Intelligence Review，2024，57：247．\href{https://doi.org/10.1007/s10462-024-10817-z}{DOI：\nolinkurl{10.1007/s10462-024-10817-z}}．}
+
+\TJProposalReference{[15] SCHWONBERG M，GOTTSCHALK H．Domain Generalization for Semantic Segmentation：A Survey［C］．CVPR Workshops，2025：6492—6503．\href{https://doi.org/10.1109/CVPRW67362.2025.00640}{DOI：\nolinkurl{10.1109/CVPRW67362.2025.00640}}．}
+
+\TJProposalReference{[16] WANG Q，FINK O，VAN GOOL L，等．Continual Test-Time Domain Adaptation［C］．CVPR，2022：7201—7211．\href{https://openaccess.thecvf.com/content/CVPR2022/html/Wang_Continual_Test-Time_Domain_Adaptation_CVPR_2022_paper.html}{论文原文}．}
+
+\TJProposalReference{[17] LEE D，YOON J，HWANG S J．BECoTTA：Input-dependent Online Blending of Experts for Continual Test-time Adaptation［C］．ICML，Proceedings of Machine Learning Research，2024，235：27072—27093．\href{https://proceedings.mlr.press/v235/lee24ab.html}{论文原文}．}
+
+\TJProposalReference{[18] PARK H，PARK H，KO J，等．Hybrid-TTA：Continual Test-time Adaptation via Dynamic Domain Shift Detection［C］．ICCV，2025：2877—2886．\href{https://openaccess.thecvf.com/content/ICCV2025/html/Park_Hybrid-TTA_Continual_Test-time_Adaptation_via_Dynamic_Domain_Shift_Detection_ICCV_2025_paper.html}{论文原文}．}
+
+\TJProposalReference{[19] LAI G，ZHOU D W，LI Z，等．The Golden Subspace：Where Efficiency Meets Generalization in Continual Test-Time Adaptation［C］．CVPR，2026：3866—3875．\href{https://openaccess.thecvf.com/content/CVPR2026/html/Lai_The_Golden_Subspace_Where_Efficiency_Meets_Generalization_in_Continual_Test-Time_CVPR_2026_paper.html}{论文原文}．}
+
+\TJProposalReference{[20] CHAUDHRY A，ROHRBACH M，ELHOSEINY M，等．On Tiny Episodic Memories in Continual Learning［EB/OL］．2019，arXiv：1902.10486．\href{https://doi.org/10.48550/arXiv.1902.10486}{DOI：\nolinkurl{10.48550/arXiv.1902.10486}}．}
+
+\TJProposalReference{[21] KALB T，MAUTHE B，BEYERER J．Improving Replay-Based Continual Semantic Segmentation with Smart Data Selection［C］．ITSC，2022：1114—1121．\href{https://doi.org/10.1109/ITSC55140.2022.9922284}{DOI：\nolinkurl{10.1109/ITSC55140.2022.9922284}}．}
+
+\TJProposalReference{[22] KIRKPATRICK J，PASCANU R，RABINOWITZ N，等．Overcoming catastrophic forgetting in neural networks［J］．Proceedings of the National Academy of Sciences，2017，114（13）：3521—3526．\href{https://doi.org/10.1073/pnas.1611835114}{DOI：\nolinkurl{10.1073/pnas.1611835114}}．}
+
+\TJProposalReference{[23] LI Z，HOIEM D．Learning without Forgetting［C］．ECCV，2016：614—629．\href{https://doi.org/10.1007/978-3-319-46493-0_37}{DOI：\nolinkurl{10.1007/978-3-319-46493-0_37}}．}
+
+\TJProposalReference{[24] MAI Z，LI R，JEONG J，等．Online continual learning in image classification：An empirical survey［J］．Neurocomputing，2022，469：28—51．\href{https://doi.org/10.1016/j.neucom.2021.10.021}{DOI：\nolinkurl{10.1016/j.neucom.2021.10.021}}．}
+
+\TJProposalReference{[25] DOUILLARD A，CHEN Y，DAPOGNY A，等．PLOP：Learning without Forgetting for Continual Semantic Segmentation［C］．CVPR，2021：4040—4050．\href{https://openaccess.thecvf.com/content/CVPR2021/html/Douillard_PLOP_Learning_Without_Forgetting_for_Continual_Semantic_Segmentation_CVPR_2021_paper.html}{论文原文}．}
+
+\TJProposalReference{[26] ZHANG C B，XIAO J W，LIU X，等．Representation Compensation Networks for Continual Semantic Segmentation［C］．CVPR，2022：7053—7064．\href{https://openaccess.thecvf.com/content/CVPR2022/html/Zhang_Representation_Compensation_Networks_for_Continual_Semantic_Segmentation_CVPR_2022_paper.html}{论文原文}．}
+
+\TJProposalReference{[27] TRUONG T D，PRABHU U，RAJ B，等．FALCON：Fairness Learning via Contrastive Attention Approach to Continual Semantic Scene Understanding［C］．CVPR，2025：15065—15075．\href{https://openaccess.thecvf.com/content/CVPR2025/html/Truong_FALCON_Fairness_Learning_via_Contrastive_Attention_Approach_to_Continual_Semantic_CVPR_2025_paper.html}{论文原文}．}
+
+\TJProposalReference{[28] KALB T，ROSCHANI M，RUF M，等．Continual Learning for Class- and Domain-Incremental Semantic Segmentation［C］．IEEE Intelligent Vehicles Symposium，2021：1345—1351．\href{https://doi.org/10.1109/IV48863.2021.9575493}{DOI：\nolinkurl{10.1109/IV48863.2021.9575493}}．}
+
+\TJProposalReference{[29] TOLDO M，MICHIELI U，ZANUTTIGH P．Learning With Style：Continual Semantic Segmentation Across Tasks and Domains［J］．IEEE Transactions on Pattern Analysis and Machine Intelligence，2024，46（11）：7434—7450．\href{https://doi.org/10.1109/TPAMI.2024.3397461}{DOI：\nolinkurl{10.1109/TPAMI.2024.3397461}}．}
+
+\TJProposalReference{[30] PANDEY P，KUMAR H，CHOWDARY D S V，等．Continual Segmentation under Joint Nonstationarity［C］．ICML，Proceedings of Machine Learning Research，2026，306：96212—96274．\href{https://proceedings.mlr.press/v306/pandey26b.html}{论文原文}．}
+
+\TJProposalReference{[31] KALB T，BEYERER J．Principles of Forgetting in Domain-Incremental Semantic Segmentation in Adverse Weather Conditions［C］．CVPR，2023：19508—19518．\href{https://doi.org/10.1109/CVPR52729.2023.01869}{DOI：\nolinkurl{10.1109/CVPR52729.2023.01869}}．}
+
+\TJProposalReference{[32] ALFARRA M，CAI Z，BIBI A，等．SimCS：Simulation for Domain Incremental Online Continual Segmentation［C］．AAAI，2024，38（10）：10795—10803．\href{https://doi.org/10.1609/aaai.v38i10.28952}{DOI：\nolinkurl{10.1609/aaai.v38i10.28952}}．}
+
+\TJProposalReference{[33] HUANG W，DING M，DENG F．Domain-Incremental Learning for Remote Sensing Semantic Segmentation With Multifeature Constraints in Graph Space［J］．IEEE Transactions on Geoscience and Remote Sensing，2024，62：1—15．\href{https://doi.org/10.1109/TGRS.2024.3481875}{DOI：\nolinkurl{10.1109/TGRS.2024.3481875}}．}
+
+\TJProposalReference{[34] JOHAM S J，THALER F，HADZIC A，等．FOCUS：Feature Replay with Optimized Channel-Consistent Dropout for U-Net Skip-Connections［C］．MICCAI，LNCS15973．Springer，2025：219—229．\href{https://doi.org/10.1007/978-3-032-05185-1_22}{DOI：\nolinkurl{10.1007/978-3-032-05185-1_22}}．}
+
+\TJProposalReference{[35] GARG P，SALUJA R，BALASUBRAMANIAN V N，等．Multi-Domain Incremental Learning for Semantic Segmentation［C］．WACV，2022：761—771．\href{https://openaccess.thecvf.com/content/WACV2022/html/Garg_Multi-Domain_Incremental_Learning_for_Semantic_Segmentation_WACV_2022_paper.html}{论文原文}．}
+
+\TJProposalReference{[36] MURALIDHARA S，SCHUSTER R，STRICKER D．Domain-Incremental Semantic Segmentation for Autonomous Driving Under Adverse Driving Conditions［C］．ICPRAM，2025：496—506．\href{https://doi.org/10.5220/0013249100003905}{DOI：\nolinkurl{10.5220/0013249100003905}}．}
+
+\TJProposalReference{[37] MURALIDHARA S，STRICKER D，SCHUSTER R．MILE：Mixture of Incremental LoRA Experts for Continual Semantic Segmentation Across Domains and Modalities［C］．Pattern Recognition，ICPR2026，LNCS16821．Springer，2027：387—401．2026年8月6日首次在线发表．\href{https://doi.org/10.1007/978-3-032-31438-3_26}{DOI：\nolinkurl{10.1007/978-3-032-31438-3_26}}．}
+
+\TJProposalReference{[38] SUN T，SEGU M，POSTELS J，等．SHIFT：A Synthetic Driving Dataset for Continuous Multi-Task Domain Adaptation［C］．CVPR，2022：21371—21382．\href{https://doi.org/10.1109/CVPR52688.2022.02068}{DOI：\nolinkurl{10.1109/CVPR52688.2022.02068}}．}
+
+\TJProposalReference{[39] BRÖDERMANN T，BRUGGEMANN D，SAKARIDIS C，等．MUSES：The Multi-Sensor Semantic Perception Dataset for Driving under Uncertainty［C］．ECCV，LNCS15117．Springer，2024：21—38．\href{https://doi.org/10.1007/978-3-031-73202-7_2}{DOI：\nolinkurl{10.1007/978-3-031-73202-7_2}}．}
+
+\TJProposalReference{[40] ZHOU K，HUANG K，DENG H，等．Learning from Rendering：Realistic and Controllable Extreme Rainy Image Synthesis for Autonomous Driving Simulation［J］．ACM Transactions on Multimedia Computing，Communications，and Applications，2026，22（8）：文章220，1—23．\href{https://doi.org/10.1145/3820051}{DOI：\nolinkurl{10.1145/3820051}}．}
+
+\end{TJProposalReferences}
+
+\Needspace{435bp}
+\TJProposalSection[fixedlast]{四、审核意见}
+
+\ProposalReview{指导教师意见}{（由指导教师填写。）}{指导教师签名：\_\_\_\_\_\_\_\_\_\_}{日期：\_\_\_\_年\_\_\_\_月\_\_\_\_日}
+
+\ProposalReview{专业审核意见}{（由专业审核负责人填写。）}{负责人签名：\_\_\_\_\_\_\_\_\_\_}{日期：\_\_\_\_年\_\_\_\_月\_\_\_\_日}

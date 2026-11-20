@@ -1,0 +1,415 @@
+diff --git a/REPRO.md b/REPRO.md
+index 0f5ae4f..107982d 100644
+--- a/REPRO.md
++++ b/REPRO.md
+@@ -1,3 +1,15 @@
++<!-- ROAD_RAIN_CHAIN_CURRENT_BEGIN -->
++## 当前道路工作：第3项 Rain 三域链准备通过，正式未启动（2026-11-10）
++
++- 本轮唯一准备目录：`experiments/road_clear_fog_rain/prepare-seed0-20261110-180543`；具体正式方案、42格来源及资源见`PREPARED_PLAN.md`、`evaluation-plan.json`、`READY.json`。拟正式目录`experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543`尚未创建，等待用户提示词二或明确确认；未创建authorization.json，未启动任何4000步或22格完整新增评价。
++- Rain独立审计train400/val100，1500个选定RGB/trainIds/交叉核对labelIds成员CRC/长度/SHA及全部解码、像素编码一致；A2975/500、B400/100原清单与实际文件SHA重核。C与A/B及C train/val无帧ID、RGB字节/解码哈希重合。Rain官方五个共享视频目录保留披露，不宣称地理或邻近帧独立；未取normal/test/其他天气。
++- 各方法严格复用各自Fog部署学生，不重训Source/Fog：FT 698键，GSMF/LwF 698键父学生→1396键独立教师/学生，参数与全部缓冲逐值一致、真实输入eval最大误差0、严格重载通过；共同Source祖先及旧训练各自源码来源另存，当前HEAD不代作历史来源。
++- 三组真实Rain各8步，均新AdamW从0、同一运行iter4→8完整resume，loss/逐步梯度有限。首次FT保存兼容失败4步保留；本轮独立账本28/64（成功24+失败4），未重置。GSMF教师参数固定但342个BN缓冲更新；LwF教师全部参数/缓冲固定于自己的Fog学生。保存重载/实际验证后model.train()策略核验通过。
++- 三方法六条件小样本18格48张及独立预测重读通过，另三组C验证模式恢复检查12张，无新增优化；旧20正式格checkpoint/清单/预处理/分支/矩阵/GT直方图核查通过。拟新增22格7000逐图，连同旧20格汇总七checkpoint×六条件42格；小样本mIoU不作正式效果证据。
++- 唯一拟正式：FT/GSMF/LwF各seed0、C4000步、batch2/crop512/FP32、AdamW1e-5/PolyLR4000，每1000验证与保存，固定iter4000；约3–5小时或更长，新增预留30GiB（准备文件另存），入口`tools/road/rain_start.sh`，状态/恢复入口`rain_status.sh`/`rain_resume.sh`。严格拒绝Fog优化器及跨Rain运行resume，RNG/采样游标不能精确恢复。
++- 未更改原模型/损失/冻结方法；新增C域入口、增量到增量转换、元信息兼容保存及审计/驱动。无环境升级、下载、删除、checkpoint覆盖、Git提交或推送。仍仅单seed工程/现象验证，不声称纯天气因果、严格未见强度泛化或统计显著；不扩Snow/Night/搜索/架构。下列已完成道路第1/2项保留作历史结果。
++<!-- ROAD_RAIN_CHAIN_CURRENT_END -->
++
+ <!-- ROAD_LWF_BN_CURRENT_BEGIN -->
+ ## 道路第2项：seed0正式实验与轻量交接全部完成（2026-11-10）
+ 
+diff --git a/road_dil/checkpoints.py b/road_dil/checkpoints.py
+index 054ac7d..b419970 100644
+--- a/road_dil/checkpoints.py
++++ b/road_dil/checkpoints.py
+@@ -69,3 +69,76 @@ def convert(source_path, output, stages=('ft', 'gsmf')):
+     report['status']='PASS'
+     write_json(out/'conversion.json',report)
+     return report
++
++
++def validate_rain_input(checkpoint, method, work, resume):
++    """A new C stage accepts only conversion; resume accepts only its own C run."""
++    meta = checkpoint.get('meta', {})
++    if meta.get('road_domain') != 'C' or meta.get('road_stage') != method:
++        raise ValueError('Rain input must identify the same method and domain C; Fog resume forbidden')
++    if resume:
++        if meta.get('initialization_only') is not False or meta.get('road_run') != str(Path(work).resolve()):
++            raise ValueError('Resume requires a checkpoint from this exact Rain run')
++    elif meta.get('initialization_only') is not True or any(
++            k in checkpoint for k in ('optimizer', 'param_schedulers')) or 'iter' in meta:
++        raise ValueError('New Rain stage requires a pristine initialization without training state')
++
++
++def convert_incremental(parent_path, output, method, expected_sha256):
++    """Clone the parent's deployed student, including every persistent buffer."""
++    if method not in ('ft', 'gsmf', 'lwf'):
++        raise ValueError(method)
++    parent_sha = sha256(parent_path)
++    if parent_sha != expected_sha256:
++        raise ValueError('Parent checkpoint SHA mismatch')
++    out = Path(output)
++    out.mkdir(parents=True, exist_ok=False)
++    parent = torch.load(str(parent_path), map_location='cpu')
++    state = parent['state_dict']
++    model = build(method)
++    assert_state(state, model)
++    del model
++    dual = method != 'ft'
++    source_prefixes = ('backbone_1.', 'decode_head_1.') if dual else ('backbone.', 'decode_head.')
++    deployed = {k:v for k,v in state.items() if k.startswith(source_prefixes)}
++    converted, rows = {}, []
++    for source, value in deployed.items():
++        single = source.replace('backbone_1.', 'backbone.', 1).replace('decode_head_1.', 'decode_head.', 1)
++        targets = [single, source] if dual else [single]
++        for target in targets:
++            converted[target] = value.clone()
++            rows.append(dict(parent_checkpoint_sha256=parent_sha, source=source, target=target,
++                             shape=list(value.shape), dtype=str(value.dtype), sha256=tensor_hash(value)))
++    model = build(method)
++    assert_state(converted, model)
++    assert converted['decode_head.conv_seg.weight'].shape[0] == 19
++    if dual:
++        for source in deployed:
++            teacher = source.replace('backbone_1.', 'backbone.', 1).replace('decode_head_1.', 'decode_head.', 1)
++            assert torch.equal(converted[source], converted[teacher])
++            assert converted[source].data_ptr() != converted[teacher].data_ptr()
++        actual = model.state_dict()
++        for source in deployed:
++            teacher = source.replace('backbone_1.', 'backbone.', 1).replace('decode_head_1.', 'decode_head.', 1)
++            assert actual[source].data_ptr() != actual[teacher].data_ptr()
++    assert all(torch.equal(converted[r['target']], state[r['source']]) for r in rows)
++    meta = dict(parent_checkpoint=str(Path(parent_path).resolve()), parent_sha256=parent_sha,
++                parent_run=str(Path(parent_path).resolve().parent), parent_domain='B', road_domain='C',
++                road_stage=method, initialization_only=True, dataset_meta=dict(classes=CLASSES),
++                conversion='parent deployed student -> fresh teacher and independent student' if dual else 'complete deployed single branch')
++    target = out/(method+'_init.pth')
++    with target.open('xb') as f:
++        torch.save(dict(state_dict=converted, meta=meta), f)
++    loaded = torch.load(str(target), map_location='cpu')
++    assert_state(loaded['state_dict'], model)
++    validate_rain_input(loaded, method, out, False)
++    assert all(torch.equal(loaded['state_dict'][r['target']], state[r['source']]) for r in rows)
++    report = dict(status='PASS', method=method, parent=str(Path(parent_path).resolve()),
++                  parent_sha256=parent_sha, checkpoint=str(target.resolve()), sha256=sha256(target),
++                  deployed_parent_tensors=len(deployed), target_tensors=len(converted), keys=rows,
++                  excluded_parent_keys=sorted(set(state)-set(deployed)),
++                  excluded_training_state=sorted(set(parent)-{'state_dict'}),
++                  missing_keys=[], unexpected_keys=[], shape_mismatches=[], all_values_exact=True,
++                  independent_parameter_and_buffer_storage=True, strict_save_reload=True)
++    write_json(out/'conversion.json', report)
++    return report
+diff --git a/road_dil/config.py b/road_dil/config.py
+index da1c85d..7b38eb0 100644
+--- a/road_dil/config.py
++++ b/road_dil/config.py
+@@ -8,7 +8,7 @@ from mmengine.config import Config
+ from .protocol import ROOT, EXP
+ 
+ 
+-def make_config(stage):
++def make_config(stage, train_domain=None):
+     if stage not in ('source', 'ft', 'gsmf', 'lwf', 'gsmf_teacher_bn'):
+         raise ValueError(stage)
+     original = ('gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py' if stage in ('gsmf', 'lwf', 'gsmf_teacher_bn')
+@@ -42,7 +42,9 @@ def make_config(stage):
+     steps = 60000 if stage == 'source' else 4000
+     interval = 10000 if stage == 'source' else 1000
+     manifest_dir = Path(os.environ.get('ROAD_MANIFEST_DIR', str(EXP / 'data')))
+-    train_domain = 'A' if stage == 'source' else 'B'
++    train_domain = train_domain or ('A' if stage == 'source' else 'B')
++    if train_domain not in (('A',) if stage == 'source' else ('B', 'C')):
++        raise ValueError('Invalid training domain: ' + train_domain)
+     train_pipeline = [dict(type='LoadImageFromFile'), dict(type='LoadRoadAnnotations'),
+                       dict(type='RandomResize', scale=(2048,1024), ratio_range=(0.5,2.0), keep_ratio=True),
+                       dict(type='RandomCrop', crop_size=(512,512), cat_max_ratio=0.75),
+diff --git a/road_dil/data.py b/road_dil/data.py
+index 6d60bc4..1ea4909 100644
+--- a/road_dil/data.py
++++ b/road_dil/data.py
+@@ -1,4 +1,5 @@
+ import json
++from pathlib import Path
+ 
+ import mmcv
+ import numpy as np
+@@ -19,8 +20,11 @@ class RoadManifestDataset(BaseSegDataset):
+         if not records:
+             raise ValueError('Empty road manifest: ' + self.ann_file)
+         data = []
++        expected = Path(self.ann_file).stem.split('_')[:2]
++        if len(expected) != 2 or expected[0] not in ('A', 'B', 'C') or expected[1] not in ('train', 'val'):
++            raise ValueError('Manifest filename must identify domain and split')
+         for r in records:
+-            if r['domain'] not in ('A', 'B') or r['split'] not in ('train', 'val'):
++            if [r['domain'], r['split']] != expected:
+                 raise ValueError('Invalid domain/split')
+             data.append(dict(img_path=r['image'], seg_map_path=r['label'],
+                              label_encoding=r['encoding'], label_map=None,
+diff --git a/road_dil/hooks.py b/road_dil/hooks.py
+index a69b6d4..f1b6760 100644
+--- a/road_dil/hooks.py
++++ b/road_dil/hooks.py
+@@ -40,6 +40,19 @@ def group(name):
+     return 'other'
+ 
+ 
++@HOOKS.register_module()
++class RoadDebugStopHook(Hook):
++    """Stop at a saved debug boundary without changing the planned scheduler."""
++    priority = 'LOWEST'
++
++    def __init__(self, iteration):
++        self.iteration = iteration
++
++    def after_train_iter(self, runner, batch_idx, data_batch=None, outputs=None):
++        if runner.iter + 1 == self.iteration:
++            runner.train_loop.stop_training = True
++
++
+ @HOOKS.register_module()
+ class RoadAuditHook(Hook):
+     priority = 'NORMAL'
+@@ -58,6 +71,13 @@ class RoadAuditHook(Hook):
+                        dict(optimizer_exact=True,scheduler_exact=True,iteration=runner.iter,
+                             checkpoint=runner._load_from))
+             del saved
++        elif runner.cfg.get('rain_checkpoint_meta', {}).get('road_domain') == 'C':
++            assert runner.iter == 0
++            assert not runner.optim_wrapper.state_dict()['state']
++            write_json(Path(runner.work_dir)/'fresh-optimizer.json',
++                       dict(iteration=0, optimizer_state_empty=True, domain='C',
++                            scheduler_end=runner.cfg.param_scheduler[0].end,
++                            seed=runner.cfg.randomness.seed))
+         self.before = state_hashes(runner.model)
+         self.grads = set()
+         self.handles = []
+@@ -81,6 +101,9 @@ class RoadAuditHook(Hook):
+         if torch.cuda.is_available():
+             torch.cuda.reset_peak_memory_stats()
+ 
++    def before_save_checkpoint(self, runner, checkpoint):
++        checkpoint['meta'].update(runner.cfg.get('rain_checkpoint_meta', {}))
++
+     def _check_policy(self, model):
+         policy = getattr(model, 'teacher_policy', None)
+         if policy:
+@@ -91,6 +114,14 @@ class RoadAuditHook(Hook):
+             assert model.backbone_1.training and model.decode_head_1.training
+             assert all(m.training for branch in (model.backbone_1, model.decode_head_1)
+                        for m in branch.modules() if isinstance(m, _BatchNorm))
++        elif hasattr(model, 'backbone_1'):
++            from torch.nn.modules.batchnorm import _BatchNorm
++            assert all(m.training for branch in (model.backbone, model.decode_head,
++                       model.backbone_1, model.decode_head_1) for m in branch.modules()
++                       if isinstance(m, _BatchNorm))
++            assert model.decode_head.dropout.training
++        if hasattr(model, 'backbone_1'):
++            assert not any(p.requires_grad for branch in (model.backbone, model.decode_head) for p in branch.parameters())
+ 
+     def before_train_iter(self, runner, batch_idx, data_batch=None):
+         self.data_times.append(float(runner.message_hub.get_scalar('train/data_time').current()))
+diff --git a/tools/road/extract_data.py b/tools/road/extract_data.py
+index 72aa380..8dbf644 100644
+--- a/tools/road/extract_data.py
++++ b/tools/road/extract_data.py
+@@ -10,14 +10,14 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+ from road_dil.protocol import sha256, write_json
+ 
+ 
+-def selected(name,kind):
++def selected(name,kind,weather='fog'):
+     p=PurePosixPath(name)
+     if p.is_absolute() or '..' in p.parts: raise ValueError('Unsafe archive path: '+name)
+     parts=p.parts
+     if kind=='cityscapes':
+         return (len(parts)>=4 and parts[0] in ('leftImg8bit','gtFine') and parts[1] in ('train','val')
+                 and name.endswith(('_leftImg8bit.png','_gtFine_labelIds.png','_gtFine_labelTrainIds.png')))
+-    return (len(parts)>=5 and parts[0] in ('rgb_anon','gt') and parts[1]=='fog' and parts[2] in ('train','val')
++    return (len(parts)>=5 and parts[0] in ('rgb_anon','gt') and parts[1]==weather and parts[2] in ('train','val')
+             and name.endswith(('_rgb_anon.png','_gt_labelIds.png','_gt_labelTrainIds.png')))
+ 
+ 
+@@ -29,7 +29,7 @@ def main(a):
+     for path in archives:
+         with zipfile.ZipFile(path) as z:
+             for m in z.infolist():
+-                if not m.is_dir() and selected(m.filename,a.kind):
++                if not m.is_dir() and selected(m.filename,a.kind,a.weather):
+                     if m.filename in names: raise ValueError('Duplicate archive member: '+m.filename)
+                     names.add(m.filename);chosen.append((path,m.filename,m.file_size,m.CRC))
+     if not chosen: raise ValueError('No expected official train/val members; inspect actual archive layout')
+@@ -48,11 +48,12 @@ def main(a):
+                 with z.open(name) as src,destination.open('xb') as dst: shutil.copyfileobj(src,dst,8*1024*1024)
+                 assert destination.stat().st_size==size
+                 records.append(dict(archive=str(archive),member=name,bytes=size,crc32='%08x'%crc,sha256=sha256(destination)))
+-    write_json(output/'archive-provenance.json',dict(kind=a.kind,archives=[dict(path=str(p),sha256=sha256(p),bytes=p.stat().st_size) for p in archives],
++    write_json(output/'archive-provenance.json',dict(kind=a.kind,weather=a.weather,archives=[dict(path=str(p),sha256=sha256(p),bytes=p.stat().st_size) for p in archives],
+                members=records,bytes_extracted=required,normal_reference_included=False,official_test_included=False))
+ 
+ 
+ if __name__=='__main__':
+  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--kind',choices=['cityscapes','acdc'],required=True)
+  p.add_argument('--archives',nargs='+',required=True);p.add_argument('--output',required=True)
++ p.add_argument('--weather',choices=['fog','rain'],default='fog')
+  main(p.parse_args())
+diff --git a/tools/road/run.py b/tools/road/run.py
+index b0daad4..63e9f44 100644
+--- a/tools/road/run.py
++++ b/tools/road/run.py
+@@ -35,7 +35,12 @@ def checked_data(directory, allow_subset=False):
+     return audit
+ 
+ 
+-def cfg_for(stage, manifests):
++def cfg_for(stage, manifests, train_domain=None):
++    if train_domain is not None:
++        cfg=Config(make_config(stage, train_domain))
++        for key in ('train_dataloader','val_dataloader','test_dataloader'):
++            cfg[key].dataset.ann_file=str(Path(manifests)/Path(cfg[key].dataset.ann_file).name)
++        return cfg
+     cfg=Config.fromfile(str(ROOT/'configs/road'/dict(source='source_cityscapes.py',ft='ft_acdc_fog.py',gsmf='gsmf_acdc_fog.py',lwf='lwf_acdc_fog.py',gsmf_teacher_bn='gsmf_teacher_bn_acdc_fog.py')[stage]))
+     for split in ('train_dataloader','val_dataloader','test_dataloader'):
+         old=Path(cfg[split].dataset.ann_file)
+@@ -49,7 +54,8 @@ def train(a):
+         raise ValueError('Fixture option may not be used with real full data')
+     if not torch.cuda.is_available() and not a.cpu:
+         raise RuntimeError('CUDA unavailable; no implicit CPU fallback')
+-    cfg=cfg_for(a.stage,a.manifests)
++    cfg=cfg_for(a.stage,a.manifests,a.train_domain)
++    domain=Path(cfg.train_dataloader.dataset.ann_file).name.split('_')[0]
+     work=Path(a.work_dir).resolve()
+     if a.resume:
+         if not work.is_dir(): raise FileNotFoundError(work)
+@@ -86,6 +92,12 @@ def train(a):
+     # Test inference stays native-resolution / 512 slide for every comparison.
+     if a.debug and not a.fixture:
+         cfg.custom_hooks[0]['check_all_gradients']=True
++    if a.stop_after:
++        if not a.debug or not 0 < a.stop_after < cfg.train_cfg.max_iters:
++            raise ValueError('--stop-after is restricted to an intermediate debug checkpoint')
++        if a.stop_after % cfg.default_hooks.checkpoint.interval:
++            raise ValueError('Debug stop must coincide with a saved checkpoint')
++        cfg.custom_hooks.append(dict(type='RoadDebugStopHook',iteration=a.stop_after))
+     for split in ('train_dataloader','val_dataloader','test_dataloader'):
+         cfg[split].num_workers=0 if a.fixture else 2
+         cfg[split].persistent_workers=not a.fixture
+@@ -100,6 +112,9 @@ def train(a):
+         model=build(a.stage)
+         assert_state(ck['state_dict'],model)
+         del model
++        if domain=='C':
++            from road_dil.checkpoints import validate_rain_input
++            validate_rain_input(ck, a.stage, work, bool(a.resume))
+         if a.resume:
+             if not all(k in ck for k in ('optimizer','param_schedulers','meta')):
+                 raise ValueError('Resume checkpoint lacks optimizer/scheduler/meta')
+@@ -114,9 +129,14 @@ def train(a):
+         del ck
+         gc.collect()
+     if a.debug and not a.fixture:
++        if domain=='C':
++            if not a.budget_ledger:
++                raise ValueError('Rain debug requires an independent 64-step ledger')
++            ledger=json.loads(Path(a.budget_ledger).read_text())
++            if ledger['limit']!=64: raise ValueError('Rain ledger must have limit=64')
+         if a.stage in ('lwf', 'gsmf_teacher_bn') and not a.budget_ledger:
+             raise ValueError('New road debug stages require their independent --budget-ledger')
+-        reserve(cfg.train_cfg.max_iters-start_iteration,work,path=a.budget_ledger)
++        reserve((a.stop_after or cfg.train_cfg.max_iters)-start_iteration,work,path=a.budget_ledger)
+     if a.stage=='source' and not a.fixture and not a.resume:
+         expected='e67eebb62faab570c7c2268f93f5b68db2cd1730d5397923f34b39820c691d64'
+         if sha256(cfg.model.pretrained)!=expected:
+@@ -126,22 +146,30 @@ def train(a):
+                    manifests=str(Path(a.manifests).resolve()),audit_sha256=sha256(Path(a.manifests)/'audit.json'),
+                    initialization_sha256=sha256(incoming) if incoming else
+                      (None if a.fixture else sha256(cfg.model.pretrained)),
+-                   seed=0,debug=a.debug,synthetic_fixture=a.fixture,
++                   train_domain=domain,seed=0,debug=a.debug,synthetic_fixture=a.fixture,
+                    optimizer='fresh' if not a.resume else 'restored'))
+-    cfg.dump(str(work/('resolved-resume-%s.py' % time.time_ns() if a.resume else 'resolved.py')))
+     from road_dil.models import freeze_before_training
++    if domain=='C':
++        cfg.rain_checkpoint_meta=dict(road_domain='C', road_stage=a.stage, road_run=str(work),
++                                     parent_sha256=ck_parent_sha(incoming), initialization_only=False)
++    cfg.dump(str(work/('resolved-resume-%s.py' % time.time_ns() if a.resume else 'resolved.py')))
+     runner=Runner.from_cfg(cfg)
+     freeze_before_training(runner.model)
+     runner.train()
+-    last=work/('iter_%d.pth' % cfg.train_cfg.max_iters)
++    end_iteration=a.stop_after or cfg.train_cfg.max_iters
++    last=work/('iter_%d.pth' % end_iteration)
+     ck=torch.load(str(last),map_location='cpu')
+-    assert ck['meta']['iter']==cfg.train_cfg.max_iters
++    assert ck['meta']['iter']==end_iteration
+     assert 'optimizer' in ck and 'param_schedulers' in ck
+     assert {k:tensor_hash(v) for k,v in ck['state_dict'].items()} == state_hashes(runner.model), 'Saved state differs from trained model'
+     assert_state(ck['state_dict'],runner.model)
+     write_json(work/('completion-%s.json' % time.time_ns()),
+                dict(status='PASS',checkpoint=str(last),sha256=sha256(last),bytes=last.stat().st_size,
+-                    optimizer_saved=True,scheduler_saved=True,iterations=cfg.train_cfg.max_iters))
++                    optimizer_saved=True,scheduler_saved=True,iterations=end_iteration))
++
++
++def ck_parent_sha(path):
++    return torch.load(path,map_location='cpu')['meta']['parent_sha256']
+ 
+ 
+ def evaluate(a):
+@@ -195,13 +223,22 @@ def evaluate(a):
+     matrix=np.zeros((19,19),dtype=np.int64)
+     with open(cfg.test_dataloader.dataset.ann_file) as f:
+         records=[json.loads(line) for line in f if line.strip()]
++    expected_names={Path(r['image']).stem+'.png' for r in records}
++    assert len(expected_names)==len(records)
++    assert {p.name for p in (work/'predictions').glob('*.png')}==expected_names
++    histogram_actual=np.zeros(19,dtype=np.int64)
+     for record in records:
+         pred=np.array(Image.open(work/'predictions'/(Path(record['image']).stem+'.png')))
+         target=map_label(np.array(Image.open(record['label'])),record['encoding'])
++        histogram_actual+=np.bincount(target[target!=255],minlength=19)
+         matrix+=confusion(pred,target)
+     recomputed=score(matrix)
+     saved=json.loads((work/'independent-metrics.json').read_text())
+     assert recomputed['confusion_matrix']==saved['confusion_matrix']
++    histogram=histogram_actual.tolist()
++    if all('label_histogram' in r for r in records):
++        assert histogram==[sum(r['label_histogram'].get(str(i),0) for r in records) for i in range(19)]
++    assert matrix.sum(1).tolist()==histogram
+     write_json(work/'reloaded-prediction-metrics.json',recomputed)
+     if hasattr(runner.model, 'backbone_1'):
+         assert calls['backbone']==calls['decode_head.conv_seg']==0,calls
+@@ -214,6 +251,8 @@ def evaluate(a):
+                checkpoint_bytes=Path(a.checkpoint).stat().st_size,
+                parameters=sum(p.numel() for p in runner.model.parameters()),
+                evaluated_images=len(records),full_official_split=not (a.debug or a.fixture) or a.full_eval,
++               manifest=str(Path(cfg.test_dataloader.dataset.ann_file).resolve()),
++               manifest_sha256=sha256(cfg.test_dataloader.dataset.ann_file),gt_histogram=histogram,
+                checkpoint_training_iterations=ck.get('meta',{}).get('iter'),
+                debug=a.debug,synthetic_fixture=a.fixture))
+     print(metrics)
+@@ -290,17 +329,23 @@ for action in ('train','eval'):
+     q.add_argument('--fixture',action='store_true',help='explicit SYNTHETIC fixture mode, never formal evidence')
+     if action=='train':
+         q.add_argument('--load'); q.add_argument('--resume'); q.add_argument('--steps',type=int,default=4)
++        q.add_argument('--train-domain',choices=['A','B','C'],help='Explicit optimization domain; old stage defaults remain A/B')
++        q.add_argument('--stop-after',type=int,help='Debug only: stop at a saved boundary, preserving the full planned scheduler')
+         q.add_argument('--cpu',action='store_true')
+         q.add_argument('--budget-ledger',help='Independent locked real-debug ledger; default preserves the first-round ledger')
+         q.add_argument('--debug-crop',type=int,choices=[384,512],default=512)
+     else:
+-        q.add_argument('--checkpoint',required=True); q.add_argument('--domain',choices=['A','B'],required=True)
++        q.add_argument('--checkpoint',required=True); q.add_argument('--domain',choices=['A','B','C'],required=True)
+         q.add_argument('--full-eval',action='store_true',help='In debug mode evaluate full official val while retaining debug labels')
+ q=sub.add_parser('convert'); q.add_argument('--stages',nargs='+',choices=['ft','gsmf','lwf','gsmf_teacher_bn'],default=['ft','gsmf']); q.add_argument('--source',required=True); q.add_argument('--output',required=True)
++q=sub.add_parser('convert-incremental'); q.add_argument('--stage',choices=['ft','gsmf','lwf'],required=True); q.add_argument('--parent',required=True); q.add_argument('--parent-sha256',required=True); q.add_argument('--output',required=True)
+ q=sub.add_parser('summary'); q.add_argument('--directory',required=True)
+ if __name__=='__main__':
+     a=p.parse_args()
+     if a.action=='train': train(a)
+     elif a.action=='eval': evaluate(a)
+     elif a.action=='convert': convert(a.source,a.output,a.stages)
++    elif a.action=='convert-incremental':
++        from road_dil.checkpoints import convert_incremental
++        convert_incremental(a.parent,a.output,a.stage,a.parent_sha256)
+     else: summary(a)

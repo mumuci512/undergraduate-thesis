@@ -1,0 +1,18 @@
+{
+  "time_utc": "2026-11-07T16:14:06.382522Z",
+  "pid": 5645,
+  "stage": "train_source",
+  "state": "running",
+  "child_pid": 5741,
+  "command": [
+    "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+    "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+    "train",
+    "--stage",
+    "source",
+    "--work-dir",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-001/source",
+    "--manifests",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data"
+  ]
+}

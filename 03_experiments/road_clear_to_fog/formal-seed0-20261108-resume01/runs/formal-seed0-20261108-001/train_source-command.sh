@@ -1,0 +1,1 @@
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python /home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py train --stage source --work-dir /home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-001/source --manifests /home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data

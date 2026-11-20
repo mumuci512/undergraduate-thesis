@@ -1,0 +1,18 @@
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/models/builder.py:36: UserWarning: ``build_loss`` would be deprecated soon, please use ``mmseg.registry.MODELS.build()`` 
+  warnings.warn('``build_loss`` would be deprecated soon, please use '
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/models/losses/cross_entropy_loss.py:249: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+Traceback (most recent call last):
+  File "tools/road/five_smoke.py", line 103, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--prepare',required=True);p.add_argument('--finish-existing',action='store_true');a=p.parse_args();main(a.prepare,a.finish_existing)
+  File "tools/road/five_smoke.py", line 59, in main
+    equivalent(m,ck,target/(m+'_init.pth'),'D->E')
+  File "tools/road/five_smoke.py", line 42, in equivalent
+    write_json(prep/'conversion-logits.json',dict(status='PASS',checks=checks))
+  File "/home/ysheng4/research/GSMF-RS-DIL/road_dil/protocol.py", line 32, in write_json
+    with path.open('x') as f:
+  File "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/pathlib.py", line 1222, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/pathlib.py", line 1078, in _opener
+    return self._accessor.open(self, flags, mode)
+FileExistsError: [Errno 17] File exists: '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/conversion-logits.json'

@@ -1,0 +1,84 @@
+{
+  "gsmf_teacher_bn": [
+    {
+      "path": ".model.teacher_policy",
+      "original": null,
+      "new": "teacher_bn_source_stats"
+    },
+    {
+      "path": ".model.type",
+      "original": "DIL_EncoderDecoder",
+      "new": "RoadDIL"
+    }
+  ],
+  "lwf_vs_gsmf": [
+    {
+      "path": ".model.DIL_type",
+      "original": "GSMF-RS",
+      "new": "LwF"
+    },
+    {
+      "path": ".model.decode_head_1.loss_decode",
+      "original": [
+        {
+          "type": "CrossEntropyLoss",
+          "use_sigmoid": false,
+          "loss_name": "loss_ce",
+          "loss_weight": 1.0
+        },
+        {
+          "type": "DIL_HinLoss",
+          "temperature": 2.0,
+          "loss_name": "loss_dilhin",
+          "loss_weight": 0.5
+        },
+        {
+          "type": "DIL_KLDivLoss",
+          "temperature": 1.0,
+          "idx": [
+            1,
+            2,
+            3
+          ],
+          "loss_name": "loss_kld",
+          "loss_weight": 1.0
+        }
+      ],
+      "new": [
+        {
+          "type": "CrossEntropyLoss",
+          "use_sigmoid": false,
+          "loss_name": "loss_ce",
+          "loss_weight": 1.0
+        },
+        {
+          "type": "DIL_HinLoss",
+          "temperature": 2.0,
+          "loss_name": "loss_dilhin",
+          "loss_weight": 0.5
+        }
+      ]
+    },
+    {
+      "path": ".model.frozen_backbone_1",
+      "original": true,
+      "new": false
+    },
+    {
+      "path": ".model.frozen_backbone_layer",
+      "original": 0,
+      "new": -1
+    },
+    {
+      "path": ".model.teacher_policy",
+      "original": null,
+      "new": "fixed_eval"
+    },
+    {
+      "path": ".model.type",
+      "original": "DIL_EncoderDecoder",
+      "new": "RoadDIL"
+    }
+  ],
+  "unchanged_old_static_configs": true
+}

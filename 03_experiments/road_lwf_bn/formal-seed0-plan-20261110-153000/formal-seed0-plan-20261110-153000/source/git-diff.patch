@@ -1,0 +1,267 @@
+diff --git a/REPRO.md b/REPRO.md
+index 462fa30..1a7398d 100644
+--- a/REPRO.md
++++ b/REPRO.md
+@@ -1,3 +1,23 @@
++<!-- ROAD_LWF_BN_CURRENT_BEGIN -->
++## 道路第2项：已授权正式seed0，运行中（2026-11-10）
++
++用户明确发送“继续提示词二”；对应准备READY SHA为dc22681b3b1ba0139f225836c5932178af1f14f583b8fa26e5ad646d346eae48，授权原文及范围已保存在prepare/formal目录authorization.json。已核对代码/数据/配置/初始化指纹、GPU和磁盘；独立短测34/64步及五条件预检通过。
++
++- 正式目录：`experiments/road_lwf_bn/formal-seed0-plan-20261110-153000`；tmux会话`road-lwf-bn-20261110-160913`。当前真实阶段见status.json/events.jsonl；后台启动不代表完成。
++- 已授权范围：LwF-DIL与teacher_bn_source_stats各seed0/4000步，随后五条件各2100张完整评价、独立核验、五模型汇总及轻量回传包。全部从同一Source重新初始化与新优化器；不重训旧组，不追加seed/搜索/天气。
++- 方案与配置：本正式目录PLAN.md、PREPARED_PLAN.md及provenance.json。教师BN诊断保留教师Dropout/学生BN；LwF学生全量更新，KD T2/0.5全像素无T²。原遥感实现未改。
++- 两组各4000步训练均完成退出0，LwF五条件2100次完整评价通过；正在BN变体五条件评价。待完成余下评价、全部新预测第三路径矩阵与GT核验、25条目/19类表/曲线/固定样例、轻量包及解包哈希核验。当前不得记为complete。
++- 失败停止，无无限重试；resume恢复模型/optimizer/scheduler/iter，不恢复RNG/采样游标。主机停机会中断tmux，恢复须核对实际进程和checkpoint。
++<!-- ROAD_LWF_BN_CURRENT_END -->
++
++<!-- ROAD_FOG_SEVERITY_CURRENT_BEGIN -->
++## 固定模型的受控合成多雾强度评价：完成（2026-11-10）
++
++500个共同 Cityscapes fine val 场景，晴天与三档合成雾，预检和12/12正式单元、矩阵独立复核、图表及回传包核验通过。完整证据、结果和约束见 `experiments/road_fog_severity/eval-final-seed0-20261109-182100/SUMMARY.md`，预测远程保留。ZIP val 图通过内部CRC，ZIP MD5 与用户提供的官方值一致。训练清单的原帧/记录与哈希检查未见重叠，跨数据集地理或邻近帧独立未证明。
++
++本次评价 Git 归档已独立提交至本地分支 `repro/road-fog-severity-20261110` 并推送个人仓库 `main`，提交 `f204c4f5754ec91f0052a779c8f4c92143886183`；远程提交及树 `961576d643cea1c050c963d040a0e0463a02702d` 均已核验。未包含其他实验未提交修改、数据集、权重或含原图的预览；当前工作分支未切换。
++<!-- ROAD_FOG_SEVERITY_CURRENT_END -->
++
+ # GSMF-RS-DIL 复现状态
+ 
+ <!-- ROAD_FORMAL_CURRENT_BEGIN -->
+diff --git a/road_dil/__init__.py b/road_dil/__init__.py
+index 23526ca..ee42814 100644
+--- a/road_dil/__init__.py
++++ b/road_dil/__init__.py
+@@ -2,4 +2,4 @@
+ from gsmf_rs_dil.decode_head import gs_aufpn_head, gsmf_rs_dil_head
+ from gsmf_rs_dil.segmentors import DIL_encoder_decoder
+ from gsmf_rs_dil.losses import dil_hin_loss, dil_kldivergence_loss
+-from . import data, metrics, hooks
++from . import data, metrics, hooks, models
+diff --git a/road_dil/budget.py b/road_dil/budget.py
+index 3512f37..e574e19 100644
+--- a/road_dil/budget.py
++++ b/road_dil/budget.py
+@@ -16,7 +16,7 @@ def reserve(steps, run_directory, path=None):
+         text=f.read()
+         state=json.loads(text) if text else dict(limit=100,reserved_steps=0,runs=[])
+         if not 0<steps<=32 or state['reserved_steps']+steps>state['limit']:
+-            raise ValueError('First-round real-data debug cap (100) would be exceeded: '+str(state))
++            raise ValueError('Real-data debug ledger cap would be exceeded: '+str(state))
+         state['reserved_steps']+=steps
+         state['runs'].append(dict(directory=str(run_directory),reserved=steps,time_ns=time.time_ns()))
+         # Failed attempts retain their reservation; never undercount an interrupted step.
+diff --git a/road_dil/checkpoints.py b/road_dil/checkpoints.py
+index 02d4a45..054ac7d 100644
+--- a/road_dil/checkpoints.py
++++ b/road_dil/checkpoints.py
+@@ -26,7 +26,7 @@ def assert_state(state, model):
+     model.load_state_dict(state,strict=True)
+ 
+ 
+-def convert(source_path, output):
++def convert(source_path, output, stages=('ft', 'gsmf')):
+     out = Path(output)
+     out.mkdir(parents=True,exist_ok=False)
+     source = torch.load(str(source_path),map_location='cpu')
+@@ -45,9 +45,9 @@ def convert(source_path, output):
+                   classes=list(CLASSES),removed_auxiliary_keys=removed,
+                   reason='Upstream incremental branch has no auxiliary head; FT also uses deployment head only',
+                   fresh_B_optimizer=True, stages={})
+-    for stage in ('ft','gsmf'):
++    for stage in stages:
+         converted = dict(kept)
+-        if stage=='gsmf':
++        if stage in ('gsmf', 'lwf', 'gsmf_teacher_bn'):
+             converted.update({k.replace('backbone.','backbone_1.',1).replace('decode_head.','decode_head_1.',1):v.clone()
+                               for k,v in kept.items()})
+         model = build(stage)
+diff --git a/road_dil/config.py b/road_dil/config.py
+index 90ef244..da1c85d 100644
+--- a/road_dil/config.py
++++ b/road_dil/config.py
+@@ -9,9 +9,9 @@ from .protocol import ROOT, EXP
+ 
+ 
+ def make_config(stage):
+-    if stage not in ('source', 'ft', 'gsmf'):
++    if stage not in ('source', 'ft', 'gsmf', 'lwf', 'gsmf_teacher_bn'):
+         raise ValueError(stage)
+-    original = ('gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py' if stage == 'gsmf'
++    original = ('gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py' if stage in ('gsmf', 'lwf', 'gsmf_teacher_bn')
+                 else 'gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py')
+     model = copy.deepcopy(Config.fromfile(str(ROOT / 'configs' / original)).model.to_dict())
+     model['pretrained'] = (str(ROOT / 'checkpoints/pretrained/resnet101_v1c-e67eebb6.pth')
+@@ -23,6 +23,16 @@ def make_config(stage):
+     # FT trains exactly the deployed single branch with CE, without auxiliary loss.
+     if stage == 'ft':
+         model['auxiliary_head'] = None
++    if stage in ('lwf', 'gsmf_teacher_bn'):
++        model['type'] = 'RoadDIL'
++        model['teacher_policy'] = ('fixed_eval' if stage == 'lwf' else 'teacher_bn_source_stats')
++    if stage == 'lwf':
++        model['DIL_type'] = 'LwF'
++        model['frozen_backbone_1'] = False
++        model['frozen_backbone_layer'] = -1
++        model['decode_head_1']['loss_decode'] = model['decode_head_1']['loss_decode'][:2]
++        # Existing DIL_HinLoss: native stride-4 logits, all pixels including
++        # ignored GT/padding, class sum then N/H/W mean; no T**2 factor.
+     model['data_preprocessor'] = dict(
+         type='SegDataPreProcessor', mean=[123.675,116.28,103.53],
+         std=[58.395,57.12,57.375], bgr_to_rgb=True, size=(512,512),
+diff --git a/road_dil/hooks.py b/road_dil/hooks.py
+index c8bcd22..a69b6d4 100644
+--- a/road_dil/hooks.py
++++ b/road_dil/hooks.py
+@@ -81,10 +81,22 @@ class RoadAuditHook(Hook):
+         if torch.cuda.is_available():
+             torch.cuda.reset_peak_memory_stats()
+ 
++    def _check_policy(self, model):
++        policy = getattr(model, 'teacher_policy', None)
++        if policy:
++            from torch.nn.modules.batchnorm import _BatchNorm
++            for branch in (model.backbone, model.decode_head):
++                for m in branch.modules():
++                    assert m.training == (policy != 'fixed_eval' and not isinstance(m, _BatchNorm)), type(m)
++            assert model.backbone_1.training and model.decode_head_1.training
++            assert all(m.training for branch in (model.backbone_1, model.decode_head_1)
++                       for m in branch.modules() if isinstance(m, _BatchNorm))
++
+     def before_train_iter(self, runner, batch_idx, data_batch=None):
+         self.data_times.append(float(runner.message_hub.get_scalar('train/data_time').current()))
+         self.after_validation.append(self.next_after_validation)
+         self.next_after_validation=False
++        self._check_policy(runner.model)
+         if torch.cuda.is_available():
+             torch.cuda.synchronize()
+         self.start = time.perf_counter()
+@@ -145,9 +157,17 @@ class RoadAuditHook(Hook):
+             if different:
+                 changed.append(name)
+         if hasattr(runner.model, 'backbone_1'):
+-            for prefix in ('backbone', 'decode_head', 'backbone_1.stem', 'backbone_1.layer1'):
++            for prefix in (('backbone', 'decode_head', 'backbone_1.stem', 'backbone_1.layer1')
++                           if runner.model.frozen_backbone_1 else ('backbone', 'decode_head')):
+                 assert groups[prefix]['changed_parameters'] == 0, prefix
+                 assert groups[prefix]['gradient_tensors_first_step'] == 0, prefix
++            if not runner.model.frozen_backbone_1:
++                for prefix in ('backbone_1.stem', 'backbone_1.layer1'):
++                    assert groups[prefix]['changed_parameters'] > 0, prefix
++                    assert groups[prefix]['gradient_tensors_first_step'] > 0, prefix
++            if getattr(runner.model, 'teacher_policy', None) in ('fixed_eval', 'teacher_bn_source_stats'):
++                for prefix in ('backbone', 'decode_head'):
++                    assert groups[prefix]['changed_bn_buffers'] == 0, prefix
+             assert groups['backbone_1']['changed_parameters'] > 0
+             assert groups['decode_head_1']['changed_parameters'] > 0
+         else:
+diff --git a/tools/road/run.py b/tools/road/run.py
+index 463c660..b0daad4 100644
+--- a/tools/road/run.py
++++ b/tools/road/run.py
+@@ -19,7 +19,7 @@ import road_dil
+ from road_dil.checkpoints import assert_state, build, convert
+ from road_dil.budget import reserve
+ from road_dil.config import make_config
+-from road_dil.hooks import state_hashes
++from road_dil.hooks import state_hashes, tensor_hash
+ from road_dil.protocol import ROOT, EXP, CLASSES, sha256, write_json
+ from road_dil.protocol import confusion, score, map_label
+ from PIL import Image
+@@ -36,7 +36,7 @@ def checked_data(directory, allow_subset=False):
+ 
+ 
+ def cfg_for(stage, manifests):
+-    cfg=Config.fromfile(str(ROOT/'configs/road'/dict(source='source_cityscapes.py',ft='ft_acdc_fog.py',gsmf='gsmf_acdc_fog.py')[stage]))
++    cfg=Config.fromfile(str(ROOT/'configs/road'/dict(source='source_cityscapes.py',ft='ft_acdc_fog.py',gsmf='gsmf_acdc_fog.py',lwf='lwf_acdc_fog.py',gsmf_teacher_bn='gsmf_teacher_bn_acdc_fog.py')[stage]))
+     for split in ('train_dataloader','val_dataloader','test_dataloader'):
+         old=Path(cfg[split].dataset.ann_file)
+         cfg[split].dataset.ann_file=str(Path(manifests)/old.name)
+@@ -114,7 +114,9 @@ def train(a):
+         del ck
+         gc.collect()
+     if a.debug and not a.fixture:
+-        reserve(cfg.train_cfg.max_iters-start_iteration,work)
++        if a.stage in ('lwf', 'gsmf_teacher_bn') and not a.budget_ledger:
++            raise ValueError('New road debug stages require their independent --budget-ledger')
++        reserve(cfg.train_cfg.max_iters-start_iteration,work,path=a.budget_ledger)
+     if a.stage=='source' and not a.fixture and not a.resume:
+         expected='e67eebb62faab570c7c2268f93f5b68db2cd1730d5397923f34b39820c691d64'
+         if sha256(cfg.model.pretrained)!=expected:
+@@ -127,12 +129,15 @@ def train(a):
+                    seed=0,debug=a.debug,synthetic_fixture=a.fixture,
+                    optimizer='fresh' if not a.resume else 'restored'))
+     cfg.dump(str(work/('resolved-resume-%s.py' % time.time_ns() if a.resume else 'resolved.py')))
++    from road_dil.models import freeze_before_training
+     runner=Runner.from_cfg(cfg)
++    freeze_before_training(runner.model)
+     runner.train()
+     last=work/('iter_%d.pth' % cfg.train_cfg.max_iters)
+     ck=torch.load(str(last),map_location='cpu')
+     assert ck['meta']['iter']==cfg.train_cfg.max_iters
+     assert 'optimizer' in ck and 'param_schedulers' in ck
++    assert {k:tensor_hash(v) for k,v in ck['state_dict'].items()} == state_hashes(runner.model), 'Saved state differs from trained model'
+     assert_state(ck['state_dict'],runner.model)
+     write_json(work/('completion-%s.json' % time.time_ns()),
+                dict(status='PASS',checkpoint=str(last),sha256=sha256(last),bytes=last.stat().st_size,
+@@ -163,12 +168,17 @@ def evaluate(a):
+     runner.model.eval()
+     before=state_hashes(runner.model)
+     calls={}
++    output_shapes={}
+     handles=[]
+     for name in ('backbone','decode_head.conv_seg','backbone_1','decode_head_1.conv_seg'):
+         modules=dict(runner.model.named_modules())
+         if name in modules:
+             calls[name]=0
+-            def count(module,inputs,outputs,key=name): calls[key]+=1
++            def count(module,inputs,outputs,key=name):
++                calls[key]+=1
++                if key.endswith('conv_seg'):
++                    assert outputs.shape[1]==19
++                    output_shapes[key]=list(outputs.shape)
+             handles.append(modules[name].register_forward_hook(count))
+     if torch.cuda.is_available():
+         torch.cuda.reset_peak_memory_stats(); torch.cuda.synchronize()
+@@ -193,12 +203,12 @@ def evaluate(a):
+     saved=json.loads((work/'independent-metrics.json').read_text())
+     assert recomputed['confusion_matrix']==saved['confusion_matrix']
+     write_json(work/'reloaded-prediction-metrics.json',recomputed)
+-    if a.stage=='gsmf':
++    if hasattr(runner.model, 'backbone_1'):
+         assert calls['backbone']==calls['decode_head.conv_seg']==0,calls
+         assert calls['backbone_1']>0 and calls['decode_head_1.conv_seg']>0,calls
+-    write_json(work/'evaluation.json',dict(stage=a.stage,domain=a.domain,split='official validation' if not a.fixture else 'SYNTHETIC FIXTURE',
++    write_json(work/'evaluation.json',dict(stage=a.stage,domain=a.domain,split=('SYNTHETIC FIXTURE' if a.fixture else ('validation subset' if a.debug and not a.full_eval else 'official validation')),
+                checkpoint=str(Path(a.checkpoint).resolve()),checkpoint_sha256=sha256(a.checkpoint),
+-               metrics=metrics,state_unchanged=True,forward_calls=calls,seconds=elapsed,
++               metrics=metrics,state_unchanged=True,forward_calls=calls,output_shapes=output_shapes,seconds=elapsed,
+                peak_allocated_MiB=saved.get('peak_allocated_MiB'),
+                peak_reserved_MiB=saved.get('peak_reserved_MiB'),
+                checkpoint_bytes=Path(a.checkpoint).stat().st_size,
+@@ -273,7 +283,7 @@ p=argparse.ArgumentParser(description=__doc__)
+ sub=p.add_subparsers(dest='action',required=True)
+ for action in ('train','eval'):
+     q=sub.add_parser(action)
+-    q.add_argument('--stage',choices=['source','ft','gsmf'],required=True)
++    q.add_argument('--stage',choices=['source','ft','gsmf','lwf','gsmf_teacher_bn'],required=True)
+     q.add_argument('--manifests',default=str(EXP/'data'))
+     q.add_argument('--work-dir',required=True)
+     q.add_argument('--debug',action='store_true')
+@@ -281,15 +291,16 @@ for action in ('train','eval'):
+     if action=='train':
+         q.add_argument('--load'); q.add_argument('--resume'); q.add_argument('--steps',type=int,default=4)
+         q.add_argument('--cpu',action='store_true')
++        q.add_argument('--budget-ledger',help='Independent locked real-debug ledger; default preserves the first-round ledger')
+         q.add_argument('--debug-crop',type=int,choices=[384,512],default=512)
+     else:
+         q.add_argument('--checkpoint',required=True); q.add_argument('--domain',choices=['A','B'],required=True)
+         q.add_argument('--full-eval',action='store_true',help='In debug mode evaluate full official val while retaining debug labels')
+-q=sub.add_parser('convert'); q.add_argument('--source',required=True); q.add_argument('--output',required=True)
++q=sub.add_parser('convert'); q.add_argument('--stages',nargs='+',choices=['ft','gsmf','lwf','gsmf_teacher_bn'],default=['ft','gsmf']); q.add_argument('--source',required=True); q.add_argument('--output',required=True)
+ q=sub.add_parser('summary'); q.add_argument('--directory',required=True)
+ if __name__=='__main__':
+     a=p.parse_args()
+     if a.action=='train': train(a)
+     elif a.action=='eval': evaluate(a)
+-    elif a.action=='convert': convert(a.source,a.output)
++    elif a.action=='convert': convert(a.source,a.output,a.stages)
+     else: summary(a)

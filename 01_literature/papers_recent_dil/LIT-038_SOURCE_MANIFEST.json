@@ -1,0 +1,113 @@
+{
+  "literature_id": "LIT-038",
+  "title": "The Golden Subspace: Where Efficiency Meets Generalization in Continual Test-Time Adaptation",
+  "date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "setting": "CTTA; adjacent reference, not supervised DIL",
+  "files": [
+    {
+      "path": "LIT-038_GOLD_CVPR2026.pdf",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Lai_The_Golden_Subspace_Where_Efficiency_Meets_Generalization_in_Continual_Test-Time_CVPR_2026_paper.pdf",
+      "pages": 10,
+      "bytes": 1198151,
+      "sha256": "1d0632aa24fe3cae586d8ec8082d9a4339f008ab9608b80402dddb1a98eea1bb"
+    },
+    {
+      "path": "LIT-038_GOLD_CVPR2026_supplement.pdf",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2026/supplemental/Lai_The_Golden_Subspace_CVPR_2026_supplemental.pdf",
+      "pages": 5,
+      "bytes": 482429,
+      "sha256": "9c877a2c884315a930090c24a17554a6669d275f8dfc63bc2ac32aab3c5772b5"
+    }
+  ],
+  "code": {
+    "repository": "https://github.com/AIGNLAI/GOLD",
+    "commit": "0bd18942e804df7dbccc01609f4f59effcc85ff7",
+    "scope": "static reading only; no installation, model execution or reproduction",
+    "snapshot_dir": "../../tmp/lit038_gold/code",
+    "files": [
+      {
+        "path": "classification/cfgs/cifar100_c/gold.yaml",
+        "sha256": "548e3ee54229ced4723a30e841166484c13a6277150263a612bb391039d0cf3e",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/classification/cfgs/cifar100_c/gold.yaml"
+      },
+      {
+        "path": "classification/conf.py",
+        "sha256": "e776c087cdab9cf14ffbd74812811aed1c23da492e92e2a27b9acd00f304b541",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/classification/conf.py"
+      },
+      {
+        "path": "classification/methods/base.py",
+        "sha256": "44f78a40b9e4a83b63f37ddc854f9f510189683efb9f1bbcd07bff85361d66b2",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/classification/methods/base.py"
+      },
+      {
+        "path": "classification/methods/gold.py",
+        "sha256": "97c7b26ad8e02c7f956028c845c8930bf8a644890aca009299e4578380ad42ed",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/classification/methods/gold.py"
+      },
+      {
+        "path": "environment.yml",
+        "sha256": "7962059ba6e31e986325551f75c542a0a982be7d722fc5ca6440a7c34759c68e",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/environment.yml"
+      },
+      {
+        "path": "README.md",
+        "sha256": "709f7e2a459e9d662dafb62833c140932d30eb9c65545febab5bdb86e90ec95d",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/README.md"
+      },
+      {
+        "path": "segmentation/cfgs/gold.yaml",
+        "sha256": "53d390e402b3a544d72f3747de560e396bb5932e83a54ff0f475a337ce77ae6f",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/segmentation/cfgs/gold.yaml"
+      },
+      {
+        "path": "segmentation/conf.py",
+        "sha256": "3f0499046970b04bdfbf5c9630e8a78496ee5d77622d114b81464a4af85f91fe",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/segmentation/conf.py"
+      },
+      {
+        "path": "segmentation/datasets/carla_dataset.py",
+        "sha256": "f95facd7cb0faf09da04e743f060d3a3922e3444c927aea1d76ae68fd49d1177",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/segmentation/datasets/carla_dataset.py"
+      },
+      {
+        "path": "segmentation/methods/base.py",
+        "sha256": "c6ba26abc5c3b620a8ccbf40bb865b62c8b6a543fbd27a127ca7ca00091838fa",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/segmentation/methods/base.py"
+      },
+      {
+        "path": "segmentation/methods/gold.py",
+        "sha256": "4d0c1a49c5287baf6c5552a3b49a07081788b71fdae0b84a05f50319169a7d45",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/segmentation/methods/gold.py"
+      },
+      {
+        "path": "segmentation/models/deeplabv2.py",
+        "sha256": "a17f48adf3e2bf83d62929f65048b29da3ceb27c38fd2b1bff9fa5fd1028a454",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/segmentation/models/deeplabv2.py"
+      },
+      {
+        "path": "segmentation/test_time.py",
+        "sha256": "318d477ab2af352098e02a36298ae92b399ceb315b58ebe523865caa3089f1db",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/segmentation/test_time.py"
+      },
+      {
+        "path": "segmentation/utils/arch_utils.py",
+        "sha256": "9e89b0109b220522bd98779537230ab326e3fcf303c5fd1f13357dc366b6bc1b",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/segmentation/utils/arch_utils.py"
+      },
+      {
+        "path": "segmentation/utils/eval_utils.py",
+        "sha256": "a6d5f2fb9f93b7b15bd3ae9d2f59a672379190ae398da4136128bd15122e38ad",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/segmentation/utils/eval_utils.py"
+      },
+      {
+        "path": "segmentation/utils/func.py",
+        "sha256": "fe7f217567931e24538a8c74f56c9ac09fa5747e347fe1c5a50a475eded0a500",
+        "url": "https://github.com/AIGNLAI/GOLD/blob/0bd18942e804df7dbccc01609f4f59effcc85ff7/segmentation/utils/func.py"
+      }
+    ]
+  },
+  "reading": "AI-assisted focused reading of official main paper and supplementary material; does not attest human reading",
+  "report": "../paper_reports/LIT-038_gold_golden_subspace_ctta.docx"
+}

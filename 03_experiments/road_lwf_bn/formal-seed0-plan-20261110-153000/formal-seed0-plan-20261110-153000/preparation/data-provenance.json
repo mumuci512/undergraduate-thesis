@@ -1,0 +1,22 @@
+{
+  "training_audit_sha256": "6d05a2501335f32f00ed40574272614ae71d536addf81c3e186a6c99724b6790",
+  "training_manifests": {
+    "B_train_debug.jsonl": "c932f3aed401663ba1a95e1b63589653e6e52a21d0299ee8db1a91ee4a9e7b34",
+    "B_train.jsonl": "3b81ee477c5c6150faae84e65789648b9892410da16b56c5931fa102e82d9bd5",
+    "B_val.jsonl": "fea0e683557ff85bceb302d8934797a750498caee2e9a207d61900f6294fe5a8",
+    "A_val_debug.jsonl": "a806309c49850f1cbc8e90e20bdaf1b3fadd5fceff746a0e678c1db793e1e519",
+    "B_val_debug.jsonl": "42427cd8e34425e418d8a9e2e12df2db27d23275d250784c8307a40904878b8a",
+    "A_val.jsonl": "249f53ddbebef79fdb9a4a9b852d2216c43274404b3081b47f632cdc742ff9a0",
+    "A_train_debug.jsonl": "7231d1c578d9ac2523ab0a499440b713980263306f53c74b365e8d892090ee7a",
+    "A_train.jsonl": "01ad6b2cf1e87c935c234b214f1d99047bac0936b72bf75659227b60291e14ca"
+  },
+  "severity_audit_sha256": "1b49f8ad1730e70d4b09d5c6f8157f6ec5b679eae7880434434b4d8eb595a6e4",
+  "severity_scenes_sha256": "d51665334c4c5e47c37fb7950011834aa5ab56e2a190645587985e0f657900e6",
+  "formal_evaluation_counts": [
+    500,
+    500,
+    500,
+    500,
+    100
+  ]
+}

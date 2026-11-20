@@ -1,0 +1,340 @@
+{
+  "status": "PASS",
+  "same_seed0_samples_augmentation_inputs_bit_equal": true,
+  "first_loss_bit_equal": true,
+  "later_loss_abs_differences": [
+    0.0,
+    2.3365020751953125e-05,
+    7.426738739013672e-05,
+    3.910064697265625e-05
+  ],
+  "all_losses_bit_equal": false,
+  "determinism_diagnostic": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/determinism-diagnostic.json",
+  "first_k_batches": 4,
+  "seed0_seed1_different_samples": true,
+  "scope": "Fresh same Source, real E_train debug, worker2; Python/NumPy/Torch and sampler/worker seeds via MMEngine Runner; identical augmentation/input hashes and first loss; later loss differences disclosed in diagnostic. Source training seed not repeated.",
+  "same_seed": [
+    {
+      "iteration": 0,
+      "samples": [
+        {
+          "id": "E/train/GOPR0351/GOPR0351_frame_000159_rgb_anon.png",
+          "crop_bbox": [
+            629,
+            1141,
+            1216,
+            1728
+          ],
+          "scale": [
+            2709,
+            1354
+          ],
+          "flip": false,
+          "flip_direction": null
+        },
+        {
+          "id": "E/train/GOPR0376/GOPR0376_frame_000034_rgb_anon.png",
+          "crop_bbox": [
+            193,
+            705,
+            551,
+            1063
+          ],
+          "scale": [
+            1861,
+            930
+          ],
+          "flip": false,
+          "flip_direction": null
+        }
+      ],
+      "input_sha256": [
+        "98d921fc65ef870d8f04309670b421e09e44dfd78b7924756cf57d3ec0c63994",
+        "3145f44af52ad9bc0280dda06dba117ff9c47e754b606f6fd648ec85cefd2ba9"
+      ],
+      "loss": 1.7687300443649292
+    },
+    {
+      "iteration": 1,
+      "samples": [
+        {
+          "id": "E/train/GP010397/GP010397_frame_000037_rgb_anon.png",
+          "crop_bbox": [
+            72,
+            584,
+            905,
+            1417
+          ],
+          "scale": [
+            2305,
+            1152
+          ],
+          "flip": true,
+          "flip_direction": "horizontal"
+        },
+        {
+          "id": "E/train/GP010376/GP010376_frame_000001_rgb_anon.png",
+          "crop_bbox": [
+            357,
+            869,
+            2516,
+            3028
+          ],
+          "scale": [
+            3897,
+            1948
+          ],
+          "flip": true,
+          "flip_direction": "horizontal"
+        }
+      ],
+      "input_sha256": [
+        "49635bb2af492f2f3b759c5f1a2fcf811e804408e41c2313e2d9e3437d883d7d",
+        "b52ee9f0e3f4865fb9547d100eda7b592cec4b58b390ebd73225d365d85245a3"
+      ],
+      "loss": 2.8322410583496094
+    },
+    {
+      "iteration": 2,
+      "samples": [
+        {
+          "id": "E/train/GOPR0351/GOPR0351_frame_000159_rgb_anon.png",
+          "crop_bbox": [
+            19,
+            531,
+            197,
+            709
+          ],
+          "scale": [
+            1086,
+            543
+          ],
+          "flip": false,
+          "flip_direction": null
+        },
+        {
+          "id": "E/train/GP010376/GP010376_frame_000001_rgb_anon.png",
+          "crop_bbox": [
+            32,
+            544,
+            265,
+            777
+          ],
+          "scale": [
+            1387,
+            693
+          ],
+          "flip": false,
+          "flip_direction": null
+        }
+      ],
+      "input_sha256": [
+        "02a710e637fc2bc09074f83495fd84bf56cd7d2ed7c72ea97e96b424d8a68822",
+        "58695a5b4d07fb3d88ca7f109bd45cade0c50fb242543d844a1c02f1888616dc"
+      ],
+      "loss": 1.9271836280822754
+    },
+    {
+      "iteration": 3,
+      "samples": [
+        {
+          "id": "E/train/GP010397/GP010397_frame_000037_rgb_anon.png",
+          "crop_bbox": [
+            478,
+            990,
+            1110,
+            1622
+          ],
+          "scale": [
+            2347,
+            1173
+          ],
+          "flip": false,
+          "flip_direction": null
+        },
+        {
+          "id": "E/train/GOPR0376/GOPR0376_frame_000034_rgb_anon.png",
+          "crop_bbox": [
+            728,
+            1240,
+            431,
+            943
+          ],
+          "scale": [
+            3571,
+            1785
+          ],
+          "flip": true,
+          "flip_direction": "horizontal"
+        }
+      ],
+      "input_sha256": [
+        "bf872d9b758a74b0612b11eebf6858c415238583d7c256dc71f1e2fbcadf522e",
+        "838b3f68d4ced51a7ff6ba9041851a6503a0ae7a87551947a959660287890a65"
+      ],
+      "loss": 1.2018017768859863
+    }
+  ],
+  "different_seed": [
+    {
+      "iteration": 0,
+      "samples": [
+        {
+          "id": "E/train/GOPR0376/GOPR0376_frame_000034_rgb_anon.png",
+          "crop_bbox": [
+            72,
+            584,
+            905,
+            1417
+          ],
+          "scale": [
+            2305,
+            1152
+          ],
+          "flip": true,
+          "flip_direction": "horizontal"
+        },
+        {
+          "id": "E/train/GP010397/GP010397_frame_000037_rgb_anon.png",
+          "crop_bbox": [
+            357,
+            869,
+            2516,
+            3028
+          ],
+          "scale": [
+            3897,
+            1948
+          ],
+          "flip": true,
+          "flip_direction": "horizontal"
+        }
+      ],
+      "input_sha256": [
+        "d0c803293bc78e999dc4c85d30d8b5b9b98f4882a3104b574ffb97cd9da01ff8",
+        "6926e4b1e2b813ea754252998187849682a2d1b75f684c1945e4d9cda0bba7c0"
+      ],
+      "loss": 2.283506393432617
+    },
+    {
+      "iteration": 1,
+      "samples": [
+        {
+          "id": "E/train/GP010376/GP010376_frame_000001_rgb_anon.png",
+          "crop_bbox": [
+            493,
+            1005,
+            1558,
+            2070
+          ],
+          "scale": [
+            2363,
+            1181
+          ],
+          "flip": false,
+          "flip_direction": null
+        },
+        {
+          "id": "E/train/GOPR0351/GOPR0351_frame_000159_rgb_anon.png",
+          "crop_bbox": [
+            628,
+            1140,
+            1219,
+            1731
+          ],
+          "scale": [
+            2967,
+            1483
+          ],
+          "flip": true,
+          "flip_direction": "horizontal"
+        }
+      ],
+      "input_sha256": [
+        "7ecb047a39d0cec095787ca62186dfd855e69d493020940e40de17fe132c7c40",
+        "1447d284c39812ad51888e4514e933ad13e5e0c1527ad8d2730911fb75a5cfc5"
+      ],
+      "loss": 1.8378015756607056
+    },
+    {
+      "iteration": 2,
+      "samples": [
+        {
+          "id": "E/train/GOPR0351/GOPR0351_frame_000159_rgb_anon.png",
+          "crop_bbox": [
+            478,
+            990,
+            1110,
+            1622
+          ],
+          "scale": [
+            2347,
+            1173
+          ],
+          "flip": false,
+          "flip_direction": null
+        },
+        {
+          "id": "E/train/GP010376/GP010376_frame_000001_rgb_anon.png",
+          "crop_bbox": [
+            728,
+            1240,
+            431,
+            943
+          ],
+          "scale": [
+            3571,
+            1785
+          ],
+          "flip": true,
+          "flip_direction": "horizontal"
+        }
+      ],
+      "input_sha256": [
+        "56c06fd2c0499352cf5d04374e1d26d6f1d2419893c203b3e9ee21b5c6af2ae4",
+        "b1a16d747498c2cb6b3d2d1299a4981601fef0bc3eb1d969d6aede79fb7f228d"
+      ],
+      "loss": 0.8366275429725647
+    },
+    {
+      "iteration": 3,
+      "samples": [
+        {
+          "id": "E/train/GP010397/GP010397_frame_000037_rgb_anon.png",
+          "crop_bbox": [
+            68,
+            580,
+            302,
+            814
+          ],
+          "scale": [
+            1268,
+            634
+          ],
+          "flip": true,
+          "flip_direction": "horizontal"
+        },
+        {
+          "id": "E/train/GOPR0376/GOPR0376_frame_000034_rgb_anon.png",
+          "crop_bbox": [
+            319,
+            831,
+            1231,
+            1743
+          ],
+          "scale": [
+            2762,
+            1381
+          ],
+          "flip": false,
+          "flip_direction": null
+        }
+      ],
+      "input_sha256": [
+        "bf399ce386d4b2bdca10f77aef73b9089a8728b4383b615a7ea1ab7a1149ff56",
+        "1e265bcddaced1b32099812535cc883ee537348a3ae77ecd51188f41ec97f1ba"
+      ],
+      "loss": 1.7440495491027832
+    }
+  ]
+}

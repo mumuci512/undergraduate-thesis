@@ -1,0 +1,965 @@
+{
+  "status": "PASS",
+  "new_cells": 10,
+  "reused_cells": 15,
+  "new_images": 4200,
+  "classes": [
+    "road",
+    "sidewalk",
+    "building",
+    "wall",
+    "fence",
+    "pole",
+    "traffic light",
+    "traffic sign",
+    "vegetation",
+    "terrain",
+    "sky",
+    "person",
+    "rider",
+    "car",
+    "truck",
+    "bus",
+    "train",
+    "motorcycle",
+    "bicycle"
+  ],
+  "matrix_direction": "GT rows / predicted columns",
+  "classes_union_zero_excluded": true,
+  "GT_absent_prediction_present_IoU_zero": true,
+  "not_per_image_average": true,
+  "checks": [
+    {
+      "model": "source",
+      "condition": "clear",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 9000,
+        "decode_head.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0/source_cityscapes.py",
+        "config_sha256": "776d6bfc6b8e2e5335b332c4b3bcc601528333ce96d94f08438f9367bb2d5774",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0/A_val_debug.jsonl",
+        "manifest_sha256": "9457c4218b4dd23881661c062c35eb69fbc1570a231f648c9a7b9ce43b271647",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93"
+    },
+    {
+      "model": "source",
+      "condition": "fog005",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 9000,
+        "decode_head.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.005/source_cityscapes.py",
+        "config_sha256": "2a58de23c4a6abc91dae7f17cf574f96e3de01209a71a87f9e1d59808bc45a61",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.005/A_val_debug.jsonl",
+        "manifest_sha256": "445a346e35ad8d751aba1e0d37dc3ca496efc5dc5bbf5c514775642ada499d6e",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93"
+    },
+    {
+      "model": "source",
+      "condition": "fog010",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 9000,
+        "decode_head.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.01/source_cityscapes.py",
+        "config_sha256": "848c3f1b690592d49b9855e3ca6096a3b8e52b4d84aa088a02e029731193c9fc",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.01/A_val_debug.jsonl",
+        "manifest_sha256": "6d1d1b5a98770f65db6f2e084f575d7ff4f9d07889b7cfcd8c914c4eb03d8b64",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93"
+    },
+    {
+      "model": "source",
+      "condition": "fog020",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 9000,
+        "decode_head.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.02/source_cityscapes.py",
+        "config_sha256": "15fe198e44704e42dc0f6dc4d8f3675b7780b2c74dd63270d720f0233fccb690",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.02/A_val_debug.jsonl",
+        "manifest_sha256": "d54b8d142747bd3b35d130b60c0c8e4fc8c1e785d1b14062383ff91da4e1c1c8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93"
+    },
+    {
+      "model": "source",
+      "condition": "acdc",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 1800,
+        "decode_head.conv_seg": 1800
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1080,
+          1920
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_source_B/source_cityscapes.py",
+        "config_sha256": "30b62be4d323c6338ea0abaaa181f2287834e9240d3789487aee0fee5a192e0f",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_val.jsonl",
+        "manifest_sha256": "fea0e683557ff85bceb302d8934797a750498caee2e9a207d61900f6294fe5a8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93"
+    },
+    {
+      "model": "ft",
+      "condition": "clear",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 9000,
+        "decode_head.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0/ft_acdc_fog.py",
+        "config_sha256": "a7a25e56625173a213647d25d342d99412e2641de4e7d5328c78950702c6eb3d",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0/A_val_debug.jsonl",
+        "manifest_sha256": "9457c4218b4dd23881661c062c35eb69fbc1570a231f648c9a7b9ce43b271647",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516"
+    },
+    {
+      "model": "ft",
+      "condition": "fog005",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 9000,
+        "decode_head.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.005/ft_acdc_fog.py",
+        "config_sha256": "c074218b975e4d25cb43099e969dc1af26d2ecb468829cbeecdf0cf49d46a747",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.005/A_val_debug.jsonl",
+        "manifest_sha256": "445a346e35ad8d751aba1e0d37dc3ca496efc5dc5bbf5c514775642ada499d6e",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516"
+    },
+    {
+      "model": "ft",
+      "condition": "fog010",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 9000,
+        "decode_head.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.01/ft_acdc_fog.py",
+        "config_sha256": "4ff3a02eb1d1660f65d3bc8ae16043870a6968c7d4dddb0860c5430e5ca1b58b",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.01/A_val_debug.jsonl",
+        "manifest_sha256": "6d1d1b5a98770f65db6f2e084f575d7ff4f9d07889b7cfcd8c914c4eb03d8b64",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516"
+    },
+    {
+      "model": "ft",
+      "condition": "fog020",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 9000,
+        "decode_head.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.02/ft_acdc_fog.py",
+        "config_sha256": "184987738e71d50f2d8fc3a59abe34fedef0cf3c6bcca1140696e41deb9686d0",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.02/A_val_debug.jsonl",
+        "manifest_sha256": "d54b8d142747bd3b35d130b60c0c8e4fc8c1e785d1b14062383ff91da4e1c1c8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516"
+    },
+    {
+      "model": "ft",
+      "condition": "acdc",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 1800,
+        "decode_head.conv_seg": 1800
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1080,
+          1920
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_ft_B/ft_acdc_fog.py",
+        "config_sha256": "20d04b403d1fd7debfdb32f2a199dcbd0dcd9fdf3da196287b0ba4254beb0351",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_val.jsonl",
+        "manifest_sha256": "fea0e683557ff85bceb302d8934797a750498caee2e9a207d61900f6294fe5a8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516"
+    },
+    {
+      "model": "gsmf",
+      "condition": "clear",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0/gsmf_acdc_fog.py",
+        "config_sha256": "015c62b1912b5aff58208292ec39c42df9b45aaa17899c066dbd6d82a18c314d",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0/A_val_debug.jsonl",
+        "manifest_sha256": "9457c4218b4dd23881661c062c35eb69fbc1570a231f648c9a7b9ce43b271647",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a"
+    },
+    {
+      "model": "gsmf",
+      "condition": "fog005",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.005/gsmf_acdc_fog.py",
+        "config_sha256": "527dc19a3d26b60b684a3dbfe6766b157adfcc392ed622b20fc2d918caed83a3",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.005/A_val_debug.jsonl",
+        "manifest_sha256": "445a346e35ad8d751aba1e0d37dc3ca496efc5dc5bbf5c514775642ada499d6e",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a"
+    },
+    {
+      "model": "gsmf",
+      "condition": "fog010",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.01/gsmf_acdc_fog.py",
+        "config_sha256": "e06379c46d8b09b571c196f41f66b8956b9f70b1e7b3d4e4ffdb27abde195ee8",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.01/A_val_debug.jsonl",
+        "manifest_sha256": "6d1d1b5a98770f65db6f2e084f575d7ff4f9d07889b7cfcd8c914c4eb03d8b64",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a"
+    },
+    {
+      "model": "gsmf",
+      "condition": "fog020",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.02/gsmf_acdc_fog.py",
+        "config_sha256": "00693364ab9e6f403bd7350c4d5302970f675994052ba123cb36d5ff3261ef3c",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/full/0.02/A_val_debug.jsonl",
+        "manifest_sha256": "d54b8d142747bd3b35d130b60c0c8e4fc8c1e785d1b14062383ff91da4e1c1c8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a"
+    },
+    {
+      "model": "gsmf",
+      "condition": "acdc",
+      "origin": "reused_verified_previous_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": false,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 1800,
+        "decode_head_1.conv_seg": 1800
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1080,
+          1920
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_gsmf_B/gsmf_acdc_fog.py",
+        "config_sha256": "bd5e5d09391fbd4fda6a18d520e84d60da1377e028bb7c314a8021a872d1a04d",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_val.jsonl",
+        "manifest_sha256": "fea0e683557ff85bceb302d8934797a750498caee2e9a207d61900f6294fe5a8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a"
+    },
+    {
+      "model": "lwf",
+      "condition": "clear",
+      "origin": "new_inference_this_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": true,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0/lwf_acdc_fog.py",
+        "config_sha256": "f4412a90a81f5d0979ff621da61e19c6a49a7edca159e5b539bd28146ad54911",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/eval-manifests/full/0/A_val.jsonl",
+        "manifest_sha256": "9457c4218b4dd23881661c062c35eb69fbc1570a231f648c9a7b9ce43b271647",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843"
+    },
+    {
+      "model": "lwf",
+      "condition": "fog005",
+      "origin": "new_inference_this_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": true,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.005/lwf_acdc_fog.py",
+        "config_sha256": "557580c409ade84673ad84fb3fb5193ac270d74b4875b3bb170da46206948ec3",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/eval-manifests/full/0.005/A_val.jsonl",
+        "manifest_sha256": "445a346e35ad8d751aba1e0d37dc3ca496efc5dc5bbf5c514775642ada499d6e",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843"
+    },
+    {
+      "model": "lwf",
+      "condition": "fog010",
+      "origin": "new_inference_this_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": true,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.01/lwf_acdc_fog.py",
+        "config_sha256": "4e28b9659c0bfbb2e105fa8ab6c1c3d30d538525c03966a2c8f9b6dfdef77f0e",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/eval-manifests/full/0.01/A_val.jsonl",
+        "manifest_sha256": "6d1d1b5a98770f65db6f2e084f575d7ff4f9d07889b7cfcd8c914c4eb03d8b64",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843"
+    },
+    {
+      "model": "lwf",
+      "condition": "fog020",
+      "origin": "new_inference_this_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": true,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.02/lwf_acdc_fog.py",
+        "config_sha256": "1041880887930ac80f8bdb7ec3ab55fea504234797e7d8a8bd26e1d1dc7d61b6",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/eval-manifests/full/0.02/A_val.jsonl",
+        "manifest_sha256": "d54b8d142747bd3b35d130b60c0c8e4fc8c1e785d1b14062383ff91da4e1c1c8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843"
+    },
+    {
+      "model": "lwf",
+      "condition": "acdc",
+      "origin": "new_inference_this_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": true,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 1800,
+        "decode_head_1.conv_seg": 1800
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1080,
+          1920
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-acdc/lwf_acdc_fog.py",
+        "config_sha256": "ed2da5c66fc3f240e529af07b44ab9cc13f589bd5ecce6749410b1f10b5d2bff",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_val.jsonl",
+        "manifest_sha256": "fea0e683557ff85bceb302d8934797a750498caee2e9a207d61900f6294fe5a8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843"
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "condition": "clear",
+      "origin": "new_inference_this_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": true,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-gsmf_teacher_bn-beta0/gsmf_teacher_bn_acdc_fog.py",
+        "config_sha256": "e522d9f88661233e42cb423e08b7b269015c9c4e4c3cf0dd650b971f8e14c9e6",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/eval-manifests/full/0/A_val.jsonl",
+        "manifest_sha256": "9457c4218b4dd23881661c062c35eb69fbc1570a231f648c9a7b9ce43b271647",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "b95423aea7da0e983cdffa17e38c84073a7e06221d066d560234cad892581ea8"
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "condition": "fog005",
+      "origin": "new_inference_this_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": true,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-gsmf_teacher_bn-beta0.005/gsmf_teacher_bn_acdc_fog.py",
+        "config_sha256": "a037a7a61d815fb8ba0bb48146d50a6313edc8023df609d9362af9a2ca00c917",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/eval-manifests/full/0.005/A_val.jsonl",
+        "manifest_sha256": "445a346e35ad8d751aba1e0d37dc3ca496efc5dc5bbf5c514775642ada499d6e",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "b95423aea7da0e983cdffa17e38c84073a7e06221d066d560234cad892581ea8"
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "condition": "fog010",
+      "origin": "new_inference_this_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": true,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-gsmf_teacher_bn-beta0.01/gsmf_teacher_bn_acdc_fog.py",
+        "config_sha256": "9ee04b277e70a342bae634430897ef78ec796b6ea38e9aa14d8fd8f6cc428b71",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/eval-manifests/full/0.01/A_val.jsonl",
+        "manifest_sha256": "6d1d1b5a98770f65db6f2e084f575d7ff4f9d07889b7cfcd8c914c4eb03d8b64",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "b95423aea7da0e983cdffa17e38c84073a7e06221d066d560234cad892581ea8"
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "condition": "fog020",
+      "origin": "new_inference_this_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": true,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 9000,
+        "decode_head_1.conv_seg": 9000
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1024,
+          2048
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-gsmf_teacher_bn-beta0.02/gsmf_teacher_bn_acdc_fog.py",
+        "config_sha256": "be1ab96e5f7899b76b5d9ebebc69bcb6d3a5689e1b42cad3d448fb90851815ad",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/eval-manifests/full/0.02/A_val.jsonl",
+        "manifest_sha256": "d54b8d142747bd3b35d130b60c0c8e4fc8c1e785d1b14062383ff91da4e1c1c8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "b95423aea7da0e983cdffa17e38c84073a7e06221d066d560234cad892581ea8"
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "condition": "acdc",
+      "origin": "new_inference_this_run",
+      "matrix_equals_saved_and_reloaded": true,
+      "GT_histogram_matches_original_labels": true,
+      "independent_third_prediction_reread": true,
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 1800,
+        "decode_head_1.conv_seg": 1800
+      },
+      "actual_logit_shapes": [
+        [
+          19,
+          1080,
+          1920
+        ]
+      ],
+      "protocol": {
+        "resolved_config": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-gsmf_teacher_bn-acdc/gsmf_teacher_bn_acdc_fog.py",
+        "config_sha256": "1c421014f90e88c6c9a2a75a822e7f0a1ac66ebc36b33fdc5ef11aa33fbbf622",
+        "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_val.jsonl",
+        "manifest_sha256": "fea0e683557ff85bceb302d8934797a750498caee2e9a207d61900f6294fe5a8",
+        "slide": [
+          512,
+          512
+        ],
+        "stride": [
+          341,
+          341
+        ],
+        "TTA": false
+      },
+      "checkpoint_sha256": "b95423aea7da0e983cdffa17e38c84073a7e06221d066d560234cad892581ea8"
+    }
+  ],
+  "old_severity_verification": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/independent-final-check.json",
+  "old_two_domain_verification": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/final-independent-verification.json"
+}

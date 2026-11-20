@@ -1,0 +1,41 @@
+{
+  "id": "LIT-054",
+  "title": "SHIFT: A Synthetic Driving Dataset for Continuous Multi-Task Domain Adaptation",
+  "date": "2026-11-03",
+  "timezone": "Asia/Shanghai",
+  "publication": "CVPR 2022, 21371–21382",
+  "doi": "10.1109/CVPR52688.2022.02068",
+  "version": "CVF official proceedings PDF and separate CVF supplemental PDF; not substituted with a later arXiv revision",
+  "metadata_sources": [
+    "https://openaccess.thecvf.com/content/CVPR2022/html/Sun_SHIFT_A_Synthetic_Driving_Dataset_for_Continuous_Multi-Task_Domain_Adaptation_CVPR_2022_paper.html",
+    "https://ieeexplore.ieee.org/document/9880320/"
+  ],
+  "records": [
+    {
+      "kind": "main",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Sun_SHIFT_A_Synthetic_Driving_Dataset_for_Continuous_Multi-Task_Domain_Adaptation_CVPR_2022_paper.pdf",
+      "pages": 12,
+      "bytes": 16946682,
+      "sha256": "82d66990f7a1a2e04f03a49883ba9c908385916616005fc934b26464018ba38a",
+      "access_date": "2026-11-03",
+      "local_path": "01_literature/papers_datasets/LIT-054_Sun_2022_SHIFT_CVPR.pdf",
+      "all_pages_text_extractable": true
+    },
+    {
+      "kind": "supp",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2022/supplemental/Sun_SHIFT_A_Synthetic_CVPR_2022_supplemental.pdf",
+      "pages": 8,
+      "bytes": 2132886,
+      "sha256": "82024b8e200e3841437031b4d1b4835d640580ed6154b169efbf1c211fb78d8e",
+      "access_date": "2026-11-03",
+      "local_path": "01_literature/papers_datasets/LIT-054_Sun_2022_SHIFT_CVPR_supplement.pdf",
+      "all_pages_text_extractable": true
+    }
+  ],
+  "resource_verification": {
+    "devkit_url": "https://github.com/SysCV/shift-dev",
+    "scope": "README download/loader options inspected; training repository commit, dataset files and full benchmark execution not verified",
+    "dataset_downloaded": false,
+    "experiment_run": false
+  }
+}

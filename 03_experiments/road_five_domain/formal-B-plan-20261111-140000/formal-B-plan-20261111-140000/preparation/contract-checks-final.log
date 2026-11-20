@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "tools/road/check_five_contracts.py", line 41, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--prepare',required=True);main(p.parse_args().prepare)
+  File "tools/road/check_five_contracts.py", line 39, in main
+    write_json(prep/'contract-checks.json',dict(status='PASS',loaders=checks,rejected=bad,seed_runtime='Installed MMEngine Runner passes configured seed to sampler and worker; global Python/NumPy/Torch/CUDA seeded; deterministic flag preserved. Legacy seed0 config comparison in compatibility.json.'))
+  File "/home/ysheng4/research/GSMF-RS-DIL/road_dil/protocol.py", line 32, in write_json
+    with path.open('x') as f:
+  File "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/pathlib.py", line 1222, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/pathlib.py", line 1078, in _opener
+    return self._accessor.open(self, flags, mode)
+FileExistsError: [Errno 17] File exists: '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/contract-checks.json'

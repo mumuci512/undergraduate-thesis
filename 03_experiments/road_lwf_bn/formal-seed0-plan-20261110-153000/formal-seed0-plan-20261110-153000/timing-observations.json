@@ -1,0 +1,74 @@
+{
+  "logger_negative_time_lines": [
+    "11/10 16:09:41 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [  20/4000]  lr: 9.9572e-06  eta: 0:06:57  time: -0.0168  data_time: 0.0075  memory: 2618  loss: 1.2229  decode.acc_seg: 90.7763  decode.loss_ce: 0.4430  decode.loss_dilhin: 0.7799",
+    "11/10 16:10:11 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 200/4000]  lr: 9.5510e-06  eta: 0:10:08  time: -0.0068  data_time: 0.0075  memory: 2618  loss: 1.2633  decode.acc_seg: 91.8974  decode.loss_ce: 0.4280  decode.loss_dilhin: 0.8352",
+    "11/10 16:13:45 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1200/4000]  lr: 7.2558e-06  eta: 0:07:44  time: -0.0230  data_time: 0.0076  memory: 2618  loss: 0.8738  decode.acc_seg: 98.3990  decode.loss_ce: 0.1981  decode.loss_dilhin: 0.6756",
+    "11/10 16:14:15 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1380/4000]  lr: 6.8346e-06  eta: 0:07:14  time: -0.0126  data_time: 0.0076  memory: 2618  loss: 0.9177  decode.acc_seg: 87.4476  decode.loss_ce: 0.2408  decode.loss_dilhin: 0.6769",
+    "11/10 16:14:45 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1560/4000]  lr: 6.4105e-06  eta: 0:06:44  time: -0.0116  data_time: 0.0074  memory: 2618  loss: 1.0155  decode.acc_seg: 87.1549  decode.loss_ce: 0.3073  decode.loss_dilhin: 0.7082",
+    "11/10 16:18:21 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2560/4000]  lr: 3.9881e-06  eta: 0:03:59  time: -0.0159  data_time: 0.0081  memory: 2618  loss: 1.1678  decode.acc_seg: 89.6641  decode.loss_ce: 0.3388  decode.loss_dilhin: 0.8290",
+    "11/10 16:18:51 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2740/4000]  lr: 3.5365e-06  eta: 0:03:29  time: -0.0088  data_time: 0.0081  memory: 2618  loss: 0.9687  decode.acc_seg: 97.7364  decode.loss_ce: 0.2421  decode.loss_dilhin: 0.7266",
+    "11/10 16:19:21 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2920/4000]  lr: 3.0784e-06  eta: 0:02:59  time: -0.0161  data_time: 0.0079  memory: 2618  loss: 1.1510  decode.acc_seg: 89.5159  decode.loss_ce: 0.3655  decode.loss_dilhin: 0.7855",
+    "11/10 16:20:53 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3180/4000]  lr: 2.4026e-06  eta: 0:02:17  time: -0.0121  data_time: 0.0077  memory: 2618  loss: 0.9143  decode.acc_seg: 95.8745  decode.loss_ce: 0.1742  decode.loss_dilhin: 0.7401",
+    "11/10 16:21:23 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3360/4000]  lr: 1.9222e-06  eta: 0:01:46  time: -0.0175  data_time: 0.0080  memory: 2618  loss: 1.1603  decode.acc_seg: 67.5814  decode.loss_ce: 0.2968  decode.loss_dilhin: 0.8635",
+    "11/10 16:21:53 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3540/4000]  lr: 1.4280e-06  eta: 0:01:16  time: -0.0178  data_time: 0.0078  memory: 2618  loss: 1.0325  decode.acc_seg: 92.1622  decode.loss_ce: 0.2763  decode.loss_dilhin: 0.7562",
+    "11/10 16:22:24 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3720/4000]  lr: 9.1345e-07  eta: 0:00:46  time: -0.0183  data_time: 0.0079  memory: 2618  loss: 1.1208  decode.acc_seg: 87.0309  decode.loss_ce: 0.3876  decode.loss_dilhin: 0.7332",
+    "11/10 16:22:54 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3900/4000]  lr: 3.6161e-07  eta: 0:00:16  time: -0.0126  data_time: 0.0077  memory: 2618  loss: 1.1015  decode.acc_seg: 97.9367  decode.loss_ce: 0.3589  decode.loss_dilhin: 0.7425"
+  ],
+  "MMEngine_timer_implementation": "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmengine/hooks/iter_timer_hook.py",
+  "logger_clock": "time.time() differences; wall-clock adjustment is a possible explanation, not independently established",
+  "stage_duration_clock": "time.monotonic()",
+  "road_audit_step_clock": "time.perf_counter() with CUDA synchronization",
+  "interpretation": "Use stage monotonic durations and audit step timings for cost; do not interpret the negative logger time as negative computation time.",
+  "negative_logger_entries": {
+    "eval-gsmf_teacher_bn-beta0.02.log": [],
+    "eval-lwf-beta0.log": [
+      "11/10 16:24:27 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(test) [ 20/500]    eta: 0:03:53  time: 0.3920  data_time: -0.1453  memory: 741  "
+    ],
+    "eval-gsmf_teacher_bn-beta0.005.log": [],
+    "eval-gsmf_teacher_bn-beta0.01.log": [
+      "11/10 17:09:29 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(test) [300/500]    eta: 0:01:40  time: 0.3090  data_time: -0.1622  memory: 741  ",
+      "11/10 17:09:59 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(test) [360/500]    eta: 0:01:10  time: 0.3028  data_time: -0.1708  memory: 741  "
+    ],
+    "train-lwf.log": [
+      "11/10 16:09:41 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [  20/4000]  lr: 9.9572e-06  eta: 0:06:57  time: -0.0168  data_time: 0.0075  memory: 2618  loss: 1.2229  decode.acc_seg: 90.7763  decode.loss_ce: 0.4430  decode.loss_dilhin: 0.7799",
+      "11/10 16:10:11 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 200/4000]  lr: 9.5510e-06  eta: 0:10:08  time: -0.0068  data_time: 0.0075  memory: 2618  loss: 1.2633  decode.acc_seg: 91.8974  decode.loss_ce: 0.4280  decode.loss_dilhin: 0.8352",
+      "11/10 16:13:45 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1200/4000]  lr: 7.2558e-06  eta: 0:07:44  time: -0.0230  data_time: 0.0076  memory: 2618  loss: 0.8738  decode.acc_seg: 98.3990  decode.loss_ce: 0.1981  decode.loss_dilhin: 0.6756",
+      "11/10 16:14:15 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1380/4000]  lr: 6.8346e-06  eta: 0:07:14  time: -0.0126  data_time: 0.0076  memory: 2618  loss: 0.9177  decode.acc_seg: 87.4476  decode.loss_ce: 0.2408  decode.loss_dilhin: 0.6769",
+      "11/10 16:14:45 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1560/4000]  lr: 6.4105e-06  eta: 0:06:44  time: -0.0116  data_time: 0.0074  memory: 2618  loss: 1.0155  decode.acc_seg: 87.1549  decode.loss_ce: 0.3073  decode.loss_dilhin: 0.7082",
+      "11/10 16:18:21 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2560/4000]  lr: 3.9881e-06  eta: 0:03:59  time: -0.0159  data_time: 0.0081  memory: 2618  loss: 1.1678  decode.acc_seg: 89.6641  decode.loss_ce: 0.3388  decode.loss_dilhin: 0.8290",
+      "11/10 16:18:51 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2740/4000]  lr: 3.5365e-06  eta: 0:03:29  time: -0.0088  data_time: 0.0081  memory: 2618  loss: 0.9687  decode.acc_seg: 97.7364  decode.loss_ce: 0.2421  decode.loss_dilhin: 0.7266",
+      "11/10 16:19:21 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2920/4000]  lr: 3.0784e-06  eta: 0:02:59  time: -0.0161  data_time: 0.0079  memory: 2618  loss: 1.1510  decode.acc_seg: 89.5159  decode.loss_ce: 0.3655  decode.loss_dilhin: 0.7855",
+      "11/10 16:20:53 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3180/4000]  lr: 2.4026e-06  eta: 0:02:17  time: -0.0121  data_time: 0.0077  memory: 2618  loss: 0.9143  decode.acc_seg: 95.8745  decode.loss_ce: 0.1742  decode.loss_dilhin: 0.7401",
+      "11/10 16:21:23 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3360/4000]  lr: 1.9222e-06  eta: 0:01:46  time: -0.0175  data_time: 0.0080  memory: 2618  loss: 1.1603  decode.acc_seg: 67.5814  decode.loss_ce: 0.2968  decode.loss_dilhin: 0.8635",
+      "11/10 16:21:53 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3540/4000]  lr: 1.4280e-06  eta: 0:01:16  time: -0.0178  data_time: 0.0078  memory: 2618  loss: 1.0325  decode.acc_seg: 92.1622  decode.loss_ce: 0.2763  decode.loss_dilhin: 0.7562",
+      "11/10 16:22:24 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3720/4000]  lr: 9.1345e-07  eta: 0:00:46  time: -0.0183  data_time: 0.0079  memory: 2618  loss: 1.1208  decode.acc_seg: 87.0309  decode.loss_ce: 0.3876  decode.loss_dilhin: 0.7332",
+      "11/10 16:22:54 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3900/4000]  lr: 3.6161e-07  eta: 0:00:16  time: -0.0126  data_time: 0.0077  memory: 2618  loss: 1.1015  decode.acc_seg: 97.9367  decode.loss_ce: 0.3589  decode.loss_dilhin: 0.7425"
+    ],
+    "eval-lwf-beta0.005.log": [
+      "11/10 16:29:03 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(test) [ 20/500]    eta: 0:03:28  time: 0.3199  data_time: -0.1424  memory: 741  "
+    ],
+    "eval-gsmf_teacher_bn-acdc.log": [],
+    "eval-lwf-beta0.01.log": [],
+    "eval-lwf-acdc.log": [],
+    "train-gsmf_teacher_bn.log": [
+      "11/10 16:44:13 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 180/4000]  lr: 9.5962e-06  eta: 0:10:18  time: -0.0397  data_time: 0.0076  memory: 2279  loss: 1.2523  decode.acc_seg: 88.5171  decode.loss_ce: 0.3817  decode.loss_dilhin: 0.8694  decode.loss_kld: 0.0012",
+      "11/10 16:45:44 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [ 760/4000]  lr: 8.2744e-06  eta: 0:08:33  time: -0.0463  data_time: 0.0077  memory: 2279  loss: 1.1048  decode.acc_seg: 88.6400  decode.loss_ce: 0.3612  decode.loss_dilhin: 0.7424  decode.loss_kld: 0.0012",
+      "11/10 16:47:16 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1040/4000]  lr: 7.6279e-06  eta: 0:07:45  time: -0.0417  data_time: 0.0079  memory: 2279  loss: 1.0143  decode.acc_seg: 92.2951  decode.loss_ce: 0.3074  decode.loss_dilhin: 0.7056  decode.loss_kld: 0.0013",
+      "11/10 16:48:16 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [1420/4000]  lr: 6.7406e-06  eta: 0:06:46  time: -0.0302  data_time: 0.0078  memory: 2279  loss: 1.0929  decode.acc_seg: 91.3554  decode.loss_ce: 0.3364  decode.loss_dilhin: 0.7551  decode.loss_kld: 0.0014",
+      "11/10 16:49:47 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2000/4000]  lr: 5.3601e-06  eta: 0:05:15  time: -0.0383  data_time: 0.0080  memory: 2279  loss: 1.0573  decode.acc_seg: 91.9143  decode.loss_ce: 0.2468  decode.loss_dilhin: 0.8093  decode.loss_kld: 0.0011",
+      "11/10 16:50:47 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2080/4000]  lr: 5.1667e-06  eta: 0:05:01  time: -0.0372  data_time: 0.0076  memory: 2279  loss: 1.1006  decode.acc_seg: 66.6136  decode.loss_ce: 0.3043  decode.loss_dilhin: 0.7951  decode.loss_kld: 0.0013",
+      "11/10 16:52:19 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [2660/4000]  lr: 3.7380e-06  eta: 0:03:30  time: -0.0352  data_time: 0.0077  memory: 2279  loss: 1.0775  decode.acc_seg: 76.9194  decode.loss_ce: 0.3240  decode.loss_dilhin: 0.7522  decode.loss_kld: 0.0012",
+      "11/10 16:54:21 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3120/4000]  lr: 2.5602e-06  eta: 0:02:19  time: -0.0423  data_time: 0.0075  memory: 2279  loss: 0.9673  decode.acc_seg: 92.1768  decode.loss_ce: 0.3124  decode.loss_dilhin: 0.6536  decode.loss_kld: 0.0013",
+      "11/10 16:55:21 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3500/4000]  lr: 1.5393e-06  eta: 0:01:19  time: -0.0322  data_time: 0.0077  memory: 2279  loss: 1.0742  decode.acc_seg: 72.3555  decode.loss_ce: 0.3475  decode.loss_dilhin: 0.7256  decode.loss_kld: 0.0012",
+      "11/10 16:56:22 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [3880/4000]  lr: 4.2610e-07  eta: 0:00:18  time: -0.0432  data_time: 0.0078  memory: 2279  loss: 0.9072  decode.acc_seg: 95.4619  decode.loss_ce: 0.2054  decode.loss_dilhin: 0.7006  decode.loss_kld: 0.0013",
+      "11/10 16:57:30 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(val) [100/100]    aAcc: 90.9700  mIoU: 58.7800  mAcc: 71.5000  matrix_mIoU: 58.7800  data_time: -0.0107  time: 0.4468"
+    ],
+    "eval-gsmf_teacher_bn-beta0.log": [
+      "11/10 16:59:27 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(test) [200/500]    eta: 0:02:24  time: 0.3077  data_time: -0.1584  memory: 741  "
+    ],
+    "eval-lwf-beta0.02.log": [
+      "11/10 16:38:39 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(test) [ 80/500]    eta: 0:03:17  time: 0.3141  data_time: -0.1489  memory: 741  "
+    ]
+  },
+  "resource_step_statistic": "RoadAudit seconds_per_step_after_warmup: synchronized perf_counter compute step, excluding data wait. Stage wall duration uses monotonic; raw wall-based data waits retained with possible negative clock observations."
+}

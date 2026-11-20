@@ -1,0 +1,1628 @@
+{
+  "status": "PASS",
+  "verification_status": "ANALYZED",
+  "model_rerun": "CANNOT_VERIFY",
+  "checked": 311,
+  "passed": 311,
+  "archive_sha256": "c09bbf786f0b55cdf8500c8ac691d8e69d69baaeed751b3616d685ac959ba31e",
+  "archive_bytes": 22550630,
+  "payload_files": 1519,
+  "sha_manifest_files": 1520,
+  "archive_members": 1790,
+  "training_source_files": 102,
+  "unchanged_model_source_files": 15,
+  "data": {
+    "shared_video_directories_DE": {
+      "D_train vs D_val": [
+        "GOPR0122",
+        "GOPR0604",
+        "GOPR0606",
+        "GOPR0607",
+        "GP010607",
+        "GP030176"
+      ],
+      "E_train vs E_val": [
+        "GOPR0351"
+      ]
+    },
+    "night_val_images": 106,
+    "snow_val_images": 100
+  },
+  "training": {
+    "ft-seed0-D": {
+      "parent_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "initialization_sha256": "af2aeb25bef84a696d39a0ace3de25d242b060e2f4872f16779a801ba168b4e8",
+      "final_sha256": "0f324a583c56a2803b83f6fa89a077666aaed2c8f363b61221660e47d471b4ab",
+      "wall_minutes": 12.73814893613356,
+      "peak_allocated_MiB": 2435.38134765625,
+      "teacher_changed_buffers": 0
+    },
+    "ft-seed0-E": {
+      "parent_sha256": "0f324a583c56a2803b83f6fa89a077666aaed2c8f363b61221660e47d471b4ab",
+      "initialization_sha256": "6cb4f8ad63369b8a6ab45c649defe3851085200c6a5d230dccbf40a7ed75f194",
+      "final_sha256": "5ff9b27b6e15f5717000de494c3b6d01ec46cc30d20247b1446c5be9b55d7b46",
+      "wall_minutes": 13.179783113249384,
+      "peak_allocated_MiB": 2435.38134765625,
+      "teacher_changed_buffers": 0
+    },
+    "gsmf-seed0-D": {
+      "parent_sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "initialization_sha256": "26ae5602ebdd5f5752a3203ca67017fdb15985d89896cb54fd17dc8160e30593",
+      "final_sha256": "f2b4af4166dc1189b82b1832278839cd409cf73d9bd961a090da1242c8df9c36",
+      "wall_minutes": 14.256325924600242,
+      "peak_allocated_MiB": 2279.3740234375,
+      "teacher_changed_buffers": 342
+    },
+    "gsmf-seed0-E": {
+      "parent_sha256": "f2b4af4166dc1189b82b1832278839cd409cf73d9bd961a090da1242c8df9c36",
+      "initialization_sha256": "2fdb8c5c18d6b07fd44c977b50e3fe3e5264b52ff2d77e23bed0bac236e0f047",
+      "final_sha256": "22f0d3701b126ad2a6357cd87ee4f0687604bffc93db65b6c02345cdbd072fa4",
+      "wall_minutes": 14.85209576615016,
+      "peak_allocated_MiB": 2279.3740234375,
+      "teacher_changed_buffers": 342
+    },
+    "lwf-seed0-D": {
+      "parent_sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "initialization_sha256": "e672fef28ffec9d787d33f73a31e653ff071aa0efffd2c23ce0aa538c7156f6b",
+      "final_sha256": "9fc81c96de9b130ae619df8bb91bb444607e1493da629eea3d08bdbe1256b4ff",
+      "wall_minutes": 14.954075489134024,
+      "peak_allocated_MiB": 2618.95703125,
+      "teacher_changed_buffers": 0
+    },
+    "lwf-seed0-E": {
+      "parent_sha256": "9fc81c96de9b130ae619df8bb91bb444607e1493da629eea3d08bdbe1256b4ff",
+      "initialization_sha256": "1542b9c4a37c6437b42c9e0f742d03695f8a1d28fb7819d39a64b42c48c6e350",
+      "final_sha256": "0696e1e153b5d8498b6f78f54b815e7d880cd349de51111e58c5f57214ab3e22",
+      "wall_minutes": 15.48272669048359,
+      "peak_allocated_MiB": 2618.95703125,
+      "teacher_changed_buffers": 0
+    }
+  },
+  "real_domain_results": {
+    "ft": {
+      "stages": {
+        "source": {
+          "clear": 71.50872218134401,
+          "fog": 49.60968798189637,
+          "rain": 38.59910080251736,
+          "snow": 35.48217472613336,
+          "night": 6.362446360346152
+        },
+        "ft_fog": {
+          "clear": 54.2915416984173,
+          "fog": 62.306646392978735,
+          "rain": 46.95818788314523,
+          "snow": 46.52750591595432,
+          "night": 14.47073730633927
+        },
+        "ft_rain": {
+          "clear": 57.705620759360514,
+          "fog": 63.11179610965187,
+          "rain": 54.64429100936181,
+          "snow": 51.55098847537119,
+          "night": 12.710357870137857
+        },
+        "ft-seed0-D": {
+          "clear": 54.13016655937883,
+          "fog": 59.43233900129544,
+          "rain": 52.55548991908345,
+          "snow": 60.015708872770716,
+          "night": 6.77636584820057
+        },
+        "ft-seed0-E": {
+          "clear": 53.278608333804776,
+          "fog": 57.08099248629305,
+          "rain": 43.21477510604107,
+          "snow": 43.706352035609356,
+          "night": 38.79194046409994
+        }
+      },
+      "seen_mean": [
+        71.50872218134401,
+        58.29909404569801,
+        58.48723595945807,
+        56.53342608813211,
+        47.214533685169634
+      ],
+      "forgetting": {
+        "clear": {
+          "reference_stage": "source",
+          "signed_forgetting": 18.230113847539236
+        },
+        "fog": {
+          "reference_stage": "ft_rain",
+          "signed_forgetting": 6.030803623358821
+        },
+        "rain": {
+          "reference_stage": "ft_rain",
+          "signed_forgetting": 11.429515903320741
+        },
+        "snow": {
+          "reference_stage": "ft-seed0-D",
+          "signed_forgetting": 16.30935683716136
+        }
+      },
+      "mean_forgetting": 12.99994755284504,
+      "final_five_mean": 47.214533685169634
+    },
+    "gsmf": {
+      "stages": {
+        "source": {
+          "clear": 71.50872218134401,
+          "fog": 49.60968798189637,
+          "rain": 38.59910080251736,
+          "snow": 35.48217472613336,
+          "night": 6.362446360346152
+        },
+        "gsmf_fog": {
+          "clear": 55.20780120809538,
+          "fog": 63.03037335204614,
+          "rain": 46.97632106570381,
+          "snow": 45.89760427232752,
+          "night": 14.29365868697896
+        },
+        "gsmf_rain": {
+          "clear": 55.80556592155607,
+          "fog": 62.35713360742022,
+          "rain": 53.25374449379536,
+          "snow": 50.625922413174806,
+          "night": 12.452704802997406
+        },
+        "gsmf-seed0-D": {
+          "clear": 54.797742515775994,
+          "fog": 58.1356563771279,
+          "rain": 52.176531756169176,
+          "snow": 57.95704949933025,
+          "night": 7.391482451795038
+        },
+        "gsmf-seed0-E": {
+          "clear": 52.90357978777648,
+          "fog": 59.38766238000511,
+          "rain": 45.7989207694238,
+          "snow": 46.37037282948967,
+          "night": 38.673948264060996
+        }
+      },
+      "seen_mean": [
+        71.50872218134401,
+        59.11908728007076,
+        57.13881467425722,
+        55.76674503710083,
+        48.62689680615121
+      ],
+      "forgetting": {
+        "clear": {
+          "reference_stage": "source",
+          "signed_forgetting": 18.605142393567533
+        },
+        "fog": {
+          "reference_stage": "gsmf_fog",
+          "signed_forgetting": 3.64271097204103
+        },
+        "rain": {
+          "reference_stage": "gsmf_rain",
+          "signed_forgetting": 7.454823724371558
+        },
+        "snow": {
+          "reference_stage": "gsmf-seed0-D",
+          "signed_forgetting": 11.586676669840585
+        }
+      },
+      "mean_forgetting": 10.322338439955177,
+      "final_five_mean": 48.62689680615121
+    },
+    "lwf": {
+      "stages": {
+        "source": {
+          "clear": 71.50872218134401,
+          "fog": 49.60968798189637,
+          "rain": 38.59910080251736,
+          "snow": 35.48217472613336,
+          "night": 6.362446360346152
+        },
+        "lwf_fog": {
+          "clear": 52.0610492279663,
+          "fog": 59.787712521752994,
+          "rain": 46.17275843122428,
+          "snow": 45.827264387178275,
+          "night": 12.92013780455021
+        },
+        "lwf_rain": {
+          "clear": 49.24201134715698,
+          "fog": 55.83769340752357,
+          "rain": 50.004377590079116,
+          "snow": 47.36880551713134,
+          "night": 10.832212140826995
+        },
+        "lwf-seed0-D": {
+          "clear": 48.60774629345119,
+          "fog": 51.06793890121926,
+          "rain": 49.474892839737564,
+          "snow": 53.310039454629816,
+          "night": 6.827840075059929
+        },
+        "lwf-seed0-E": {
+          "clear": 42.093734160426145,
+          "fog": 52.157237820839725,
+          "rain": 42.96027481629282,
+          "snow": 42.734350646475576,
+          "night": 33.68912839019929
+        }
+      },
+      "seen_mean": [
+        71.50872218134401,
+        55.92438087485965,
+        51.69469411491989,
+        50.615154372259454,
+        42.72694516684671
+      ],
+      "forgetting": {
+        "clear": {
+          "reference_stage": "source",
+          "signed_forgetting": 29.414988020917868
+        },
+        "fog": {
+          "reference_stage": "lwf_fog",
+          "signed_forgetting": 7.630474700913268
+        },
+        "rain": {
+          "reference_stage": "lwf_rain",
+          "signed_forgetting": 7.0441027737863
+        },
+        "snow": {
+          "reference_stage": "lwf-seed0-D",
+          "signed_forgetting": 10.57568880815424
+        }
+      },
+      "mean_forgetting": 13.666313575942919,
+      "final_five_mean": 42.72694516684671
+    }
+  },
+  "confusion_summary": {
+    "source": {
+      "road": 97.40506408708025,
+      "sidewalk": 1.5467576009463495,
+      "building": 0.28356062220852735,
+      "car": 0.21675675481230122,
+      "vegetation": 0.14340486298904767
+    },
+    "ft_fog": {
+      "road": 87.26923144897731,
+      "terrain": 7.302260509062211,
+      "car": 1.2383146017683455,
+      "sky": 1.1636697879244686,
+      "fence": 0.7053657150133057
+    },
+    "ft_rain": {
+      "road": 86.11588621106833,
+      "building": 5.473807812505639,
+      "terrain": 3.553342165481379,
+      "sidewalk": 1.7287708416842995,
+      "car": 1.0075291796193713
+    },
+    "ft-seed0-D": {
+      "road": 71.74596276554885,
+      "building": 20.71903019772885,
+      "sidewalk": 3.4673130342220415,
+      "terrain": 2.2488797152184006,
+      "wall": 0.5895263897462109
+    },
+    "ft-seed0-E": {
+      "road": 92.48158111804632,
+      "sidewalk": 2.5256901491176436,
+      "sky": 1.897516281158197,
+      "vegetation": 1.1224416790652307,
+      "building": 1.0864733067415033
+    },
+    "gsmf_fog": {
+      "road": 88.19586987761689,
+      "terrain": 7.268109584247312,
+      "car": 1.2666042221631384,
+      "truck": 0.6154462323693327,
+      "sidewalk": 0.5741923461669418
+    },
+    "gsmf_rain": {
+      "road": 80.52638997212462,
+      "building": 7.558063277190879,
+      "terrain": 4.977040468013211,
+      "sky": 1.7883593700622087,
+      "car": 1.5468911217912211
+    },
+    "gsmf-seed0-D": {
+      "road": 73.56632253488762,
+      "building": 18.677445504220213,
+      "terrain": 2.6155163699133546,
+      "sidewalk": 2.136909018855756,
+      "car": 0.8317931563888065
+    },
+    "gsmf-seed0-E": {
+      "road": 93.09537412485703,
+      "sidewalk": 2.496072850733931,
+      "sky": 1.642493494884712,
+      "building": 1.0543454689145197,
+      "vegetation": 0.5666042493886468
+    },
+    "lwf_fog": {
+      "road": 81.40300905935746,
+      "terrain": 5.15544661850814,
+      "fence": 5.150162263161754,
+      "truck": 3.1660572796546482,
+      "car": 2.052142687777851
+    },
+    "lwf_rain": {
+      "road": 62.47465558587698,
+      "building": 14.99763969322969,
+      "truck": 7.804056752534048,
+      "fence": 6.473832020037557,
+      "car": 3.0331797098294877
+    },
+    "lwf-seed0-D": {
+      "road": 54.4882551212731,
+      "building": 31.929629173918812,
+      "car": 3.7226309565929756,
+      "truck": 3.6085514418539515,
+      "fence": 1.906011508709026
+    },
+    "lwf-seed0-E": {
+      "road": 81.99782733490986,
+      "building": 12.946785582976425,
+      "sidewalk": 1.8130421898470506,
+      "car": 1.1719286748908826,
+      "vegetation": 0.6791252485826501
+    }
+  },
+  "checks": [
+    {
+      "name": "external_archive_sha",
+      "passed": true
+    },
+    {
+      "name": "remote_complete",
+      "passed": true
+    },
+    {
+      "name": "remote_scope_B_not_started",
+      "passed": true
+    },
+    {
+      "name": "safe_archive_members",
+      "passed": true
+    },
+    {
+      "name": "extracted_file_set_equals_archive",
+      "passed": true
+    },
+    {
+      "name": "extracted_files_match_archive",
+      "passed": true
+    },
+    {
+      "name": "sha_manifest_all_match",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "sha_manifest_exact_coverage",
+      "passed": true
+    },
+    {
+      "name": "json_manifest_exact_coverage",
+      "passed": true
+    },
+    {
+      "name": "json_manifest_hashes_and_sizes",
+      "passed": true
+    },
+    {
+      "name": "authorization_A_binding",
+      "passed": true
+    },
+    {
+      "name": "authorization_scope_A_only",
+      "passed": true
+    },
+    {
+      "name": "training_code_fingerprint",
+      "passed": true
+    },
+    {
+      "name": "training_source_coverage",
+      "passed": true
+    },
+    {
+      "name": "training_source_hashes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "original_model_and_loss_source_unchanged_vs_step3",
+      "passed": true
+    },
+    {
+      "name": "manifest:A_train",
+      "passed": true
+    },
+    {
+      "name": "ABC_manifest_identical_to_step3:A_train",
+      "passed": true
+    },
+    {
+      "name": "manifest:A_val",
+      "passed": true
+    },
+    {
+      "name": "ABC_manifest_identical_to_step3:A_val",
+      "passed": true
+    },
+    {
+      "name": "manifest:B_train",
+      "passed": true
+    },
+    {
+      "name": "ABC_manifest_identical_to_step3:B_train",
+      "passed": true
+    },
+    {
+      "name": "manifest:B_val",
+      "passed": true
+    },
+    {
+      "name": "ABC_manifest_identical_to_step3:B_val",
+      "passed": true
+    },
+    {
+      "name": "manifest:C_train",
+      "passed": true
+    },
+    {
+      "name": "ABC_manifest_identical_to_step3:C_train",
+      "passed": true
+    },
+    {
+      "name": "manifest:C_val",
+      "passed": true
+    },
+    {
+      "name": "ABC_manifest_identical_to_step3:C_val",
+      "passed": true
+    },
+    {
+      "name": "manifest:D_train",
+      "passed": true
+    },
+    {
+      "name": "manifest:D_val",
+      "passed": true
+    },
+    {
+      "name": "manifest:E_train",
+      "passed": true
+    },
+    {
+      "name": "manifest:E_val",
+      "passed": true
+    },
+    {
+      "name": "DE_recorded_data_audit",
+      "passed": true
+    },
+    {
+      "name": "DE_audit_group:D_train",
+      "passed": true
+    },
+    {
+      "name": "DE_audit_group:D_val",
+      "passed": true
+    },
+    {
+      "name": "DE_audit_group:E_train",
+      "passed": true
+    },
+    {
+      "name": "DE_audit_group:E_val",
+      "passed": true
+    },
+    {
+      "name": "local_DE_overlap_recheck",
+      "passed": true,
+      "detail": {
+        "frame_id": 0,
+        "image_sha256": 0,
+        "rgb_pixels_sha256": 0
+      }
+    },
+    {
+      "name": "DE_no_cross_domain_shared_sequences",
+      "passed": true
+    },
+    {
+      "name": "thirteen_by_eight_unique_cells",
+      "passed": true
+    },
+    {
+      "name": "new_reused_counts",
+      "passed": true
+    },
+    {
+      "name": "reuse_scope",
+      "passed": true
+    },
+    {
+      "name": "recorded_student_only_frozen_evaluation",
+      "passed": true
+    },
+    {
+      "name": "protocol_GT_histograms_equal_manifests",
+      "passed": true
+    },
+    {
+      "name": "verification_summary",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-clear",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:source-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-fog005",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:source-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-fog010",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:source-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-fog020",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:source-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-fog",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:source-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_fog-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_fog-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_fog-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_fog-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_fog-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-rain",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:source-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_fog-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:ft_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:gsmf_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_rain-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_rain-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_rain-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_rain-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_rain-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "reused_matrix_identical_to_step3:lwf_rain-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:source-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:source-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:source-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft_fog-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_fog-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft_fog-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf_fog-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_fog-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf_fog-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf_fog-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_fog-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf_fog-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft_rain-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft_rain-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft_rain-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf_rain-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf_rain-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf_rain-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf_rain-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf_rain-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf_rain-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-D-clear",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-D-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-D-fog005",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-D-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-D-fog010",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-D-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-D-fog020",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-D-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-D-fog",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-D-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-D-rain",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-D-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-D-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-D-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-D-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-D-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-D-clear",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-D-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-D-fog005",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-D-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-D-fog010",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-D-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-D-fog020",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-D-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-D-fog",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-D-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-D-rain",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-D-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-D-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-D-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-D-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-D-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-D-clear",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-D-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-D-fog005",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-D-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-D-fog010",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-D-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-D-fog020",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-D-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-D-fog",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-D-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-D-rain",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-D-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-D-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-D-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-D-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-D-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-E-clear",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-E-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-E-fog005",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-E-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-E-fog010",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-E-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-E-fog020",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-E-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-E-fog",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-E-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-E-rain",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-E-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-E-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-E-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:ft-seed0-E-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:ft-seed0-E-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-E-clear",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-E-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-E-fog005",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-E-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-E-fog010",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-E-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-E-fog020",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-E-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-E-fog",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-E-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-E-rain",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-E-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-E-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-E-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:gsmf-seed0-E-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:gsmf-seed0-E-night",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-E-clear",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-E-clear",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-E-fog005",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-E-fog005",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-E-fog010",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-E-fog010",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-E-fog020",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-E-fog020",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-E-fog",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-E-fog",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-E-rain",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-E-rain",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-E-snow",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-E-snow",
+      "passed": true
+    },
+    {
+      "name": "matrix_and_metrics:lwf-seed0-E-night",
+      "passed": true
+    },
+    {
+      "name": "new_cell_reread_record:lwf-seed0-E-night",
+      "passed": true
+    },
+    {
+      "name": "training_independent_check_pass",
+      "passed": true
+    },
+    {
+      "name": "parent_and_conversion:ft-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "ft_full_inheritance:ft-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "fresh_training_invocation:ft-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "training_config:ft-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "losses_4000_finite_local:ft-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "method_parameter_policy:ft-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "completed_training_record:ft-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "parent_and_conversion:ft-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "ft_full_inheritance:ft-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "fresh_training_invocation:ft-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "training_config:ft-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "losses_4000_finite_local:ft-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "method_parameter_policy:ft-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "completed_training_record:ft-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "parent_and_conversion:gsmf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "student_promoted_to_teacher_and_student:gsmf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "fresh_training_invocation:gsmf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "training_config:gsmf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "losses_4000_finite_local:gsmf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "method_parameter_policy:gsmf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "completed_training_record:gsmf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "parent_and_conversion:gsmf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "student_promoted_to_teacher_and_student:gsmf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "fresh_training_invocation:gsmf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "training_config:gsmf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "losses_4000_finite_local:gsmf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "method_parameter_policy:gsmf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "completed_training_record:gsmf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "parent_and_conversion:lwf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "student_promoted_to_teacher_and_student:lwf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "fresh_training_invocation:lwf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "training_config:lwf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "losses_4000_finite_local:lwf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "method_parameter_policy:lwf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "completed_training_record:lwf-seed0-D",
+      "passed": true
+    },
+    {
+      "name": "parent_and_conversion:lwf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "student_promoted_to_teacher_and_student:lwf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "fresh_training_invocation:lwf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "training_config:lwf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "losses_4000_finite_local:lwf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "method_parameter_policy:lwf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "completed_training_record:lwf-seed0-E",
+      "passed": true
+    },
+    {
+      "name": "remote_index_weights_cover_13_checkpoints",
+      "passed": true
+    },
+    {
+      "name": "stage_matrix:ft",
+      "passed": true
+    },
+    {
+      "name": "signed_stage_changes:ft",
+      "passed": true
+    },
+    {
+      "name": "old_domain_forgetting:ft",
+      "passed": true
+    },
+    {
+      "name": "stage_matrix:gsmf",
+      "passed": true
+    },
+    {
+      "name": "signed_stage_changes:gsmf",
+      "passed": true
+    },
+    {
+      "name": "old_domain_forgetting:gsmf",
+      "passed": true
+    },
+    {
+      "name": "stage_matrix:lwf",
+      "passed": true
+    },
+    {
+      "name": "signed_stage_changes:lwf",
+      "passed": true
+    },
+    {
+      "name": "old_domain_forgetting:lwf",
+      "passed": true
+    },
+    {
+      "name": "summary_headline_numbers",
+      "passed": true
+    },
+    {
+      "name": "road_destinations_top5_clear",
+      "passed": true
+    },
+    {
+      "name": "road_destinations_csv_all_rows",
+      "passed": true,
+      "detail": 45
+    },
+    {
+      "name": "confusion_shift_old_checkpoints_match_step3_analysis",
+      "passed": true
+    },
+    {
+      "name": "fixed_sample_predictions",
+      "passed": true
+    }
+  ]
+}

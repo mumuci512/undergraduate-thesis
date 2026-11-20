@@ -1,0 +1,9 @@
+SOURCE_RESOLVED /home/ysheng4/research/GSMF-RS-DIL/experiments/segformer_b5_p0_20261116
+DESTINATION_RESOLVED /home/ysheng4/research/segformer_b5_p0_20261116 EXISTS False
+SOURCE_FILES ['EVIDENCE_MANIFEST.json', 'source_C_confusion.csv', 'effective_probe_config.json', 'source_state_check.json', 'source_B_confusion.csv', 'source_D_confusion.csv', 'source_cityscapes_official.pth', 'source_A_confusion.csv', 'source_A_confusion.npy', 'source_D_confusion.npy', 'source_B_confusion.npy', 'source_eval_resolved.py', 'environment.json', 'official_resolved.py', 'run_b5_p0.py', 'checkpoint_meta_config.py', 'source_E_confusion.csv', 'source_C_confusion.npy', 'data_audit.json', 'source_E_confusion.npy', 'prepare.json', 'source_results.json', 'checkpoint_meta.json', 'pip_freeze.txt', 'runtime_source/data_preprocessor.py', 'runtime_source/mit.py', 'runtime_source/segformer_head.py', 'runtime_source/encoder_decoder.py', 'train_amp/steps.jsonl', 'train_amp/resolved.py', 'manifests/B_train_debug.jsonl', 'manifests/B_train.jsonl', 'manifests/B_val.jsonl', 'manifests/D_train.jsonl', 'manifests/E_val.jsonl', 'manifests/D_val.jsonl', 'manifests/A_val_debug.jsonl', 'manifests/B_val_debug.jsonl', 'manifests/A_val.jsonl', 'manifests/C_train.jsonl', 'manifests/E_train.jsonl', 'manifests/A_train_debug.jsonl', 'manifests/A_train.jsonl', 'manifests/C_val.jsonl', 'train_amp_scale256/steps.jsonl', 'train_amp_scale256/smoke_200.pth', 'train_amp_scale256/result.json', 'train_amp_scale256/resolved.py']
+PIDS 227 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+267 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+2735 /home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python -
+
+DATASET_ROOTS ['acdc', 'acdc_night_step5_20261111-140000', 'acdc_rain_step3_20261110-180543', 'acdc_snow_step5_20261111-140000', 'cityscapes']
+ARCHIVE /home/ysheng4/research/GSMF-RS-DIL/handoff_exports/segformer_b5_p0_20261116.tar.gz

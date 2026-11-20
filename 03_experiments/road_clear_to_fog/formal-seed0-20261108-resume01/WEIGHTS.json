@@ -1,0 +1,235 @@
+[
+  {
+    "purpose": "source_final",
+    "run_id": "formal-seed0-20261108-resume01",
+    "role": "final_reported",
+    "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source/iter_60000.pth",
+    "exists": true,
+    "bytes": 612017669,
+    "sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+    "disposition": "家中保留",
+    "best_checkpoint": false,
+    "readable": true,
+    "iteration": 60000,
+    "optimizer_present": true,
+    "scheduler_present": true,
+    "message_hub_present": true,
+    "rng_state_present": false,
+    "dataloader_state_present": false,
+    "optimizer_steps": [
+      60000
+    ],
+    "schedulers": [
+      {
+        "eta_min": 0.0,
+        "power": 0.9,
+        "total_iters": 59999,
+        "param_name": "lr",
+        "begin": 0,
+        "end": 60000,
+        "by_epoch": false,
+        "base_values": [
+          0.0001
+        ],
+        "last_step": 59999,
+        "_global_step": 60000,
+        "verbose": false,
+        "_last_value": [
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "purpose": "ft_final",
+    "run_id": "formal-seed0-20261108-resume01",
+    "role": "final_reported",
+    "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/ft/iter_4000.pth",
+    "exists": true,
+    "bytes": 575325719,
+    "sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516",
+    "disposition": "家中保留",
+    "best_checkpoint": false,
+    "readable": true,
+    "iteration": 4000,
+    "optimizer_present": true,
+    "scheduler_present": true,
+    "message_hub_present": true,
+    "rng_state_present": false,
+    "dataloader_state_present": false,
+    "optimizer_steps": [
+      4000
+    ],
+    "schedulers": [
+      {
+        "eta_min": 0.0,
+        "power": 0.9,
+        "total_iters": 3999,
+        "param_name": "lr",
+        "begin": 0,
+        "end": 4000,
+        "by_epoch": false,
+        "base_values": [
+          1e-05
+        ],
+        "last_step": 3999,
+        "_global_step": 4000,
+        "verbose": false,
+        "_last_value": [
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "purpose": "gsmf_final",
+    "run_id": "formal-seed0-20261108-resume01",
+    "role": "final_reported",
+    "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/gsmf/iter_4000.pth",
+    "exists": true,
+    "bytes": 765495339,
+    "sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a",
+    "disposition": "家中保留",
+    "best_checkpoint": false,
+    "readable": true,
+    "iteration": 4000,
+    "optimizer_present": true,
+    "scheduler_present": true,
+    "message_hub_present": true,
+    "rng_state_present": false,
+    "dataloader_state_present": false,
+    "optimizer_steps": [
+      4000
+    ],
+    "schedulers": [
+      {
+        "eta_min": 0.0,
+        "power": 0.9,
+        "total_iters": 3999,
+        "param_name": "lr",
+        "begin": 0,
+        "end": 4000,
+        "by_epoch": false,
+        "base_values": [
+          1e-05
+        ],
+        "last_step": 3999,
+        "_global_step": 4000,
+        "verbose": false,
+        "_last_value": [
+          0.0
+        ]
+      }
+    ]
+  },
+  {
+    "purpose": "source_resume_origin",
+    "run_id": "formal-seed0-20261108-001",
+    "role": "resume_input",
+    "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-001/source/iter_40000.pth",
+    "exists": true,
+    "bytes": 609092933,
+    "sha256": "92b3dceb3a00150d9348d697baa1d363ff57b44b2095f8cfdefe4e59f070b825",
+    "disposition": "家中保留",
+    "best_checkpoint": false,
+    "readable": true,
+    "iteration": 40000,
+    "optimizer_present": true,
+    "scheduler_present": true,
+    "message_hub_present": true,
+    "rng_state_present": false,
+    "dataloader_state_present": false,
+    "optimizer_steps": [
+      40000
+    ],
+    "schedulers": [
+      {
+        "eta_min": 0.0,
+        "power": 0.9,
+        "total_iters": 59999,
+        "param_name": "lr",
+        "begin": 0,
+        "end": 60000,
+        "by_epoch": false,
+        "base_values": [
+          0.0001
+        ],
+        "last_step": 40000,
+        "_global_step": 40000,
+        "verbose": false,
+        "_last_value": [
+          3.720298965749365e-05
+        ]
+      }
+    ]
+  },
+  {
+    "purpose": "ft_initialization",
+    "run_id": "formal-seed0-20261108-resume01",
+    "role": "converted_initialization",
+    "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/conversion/ft_init.pth",
+    "exists": true,
+    "bytes": 191978765,
+    "sha256": "1de1098b67934dcb03f7f716976513aa2e4c8ffcbfd6b7eea227fbe5eb0ef833",
+    "disposition": "家中保留",
+    "best_checkpoint": false,
+    "readable": true,
+    "iteration": null,
+    "optimizer_present": false,
+    "scheduler_present": false,
+    "message_hub_present": false,
+    "rng_state_present": false,
+    "dataloader_state_present": false
+  },
+  {
+    "purpose": "gsmf_initialization",
+    "run_id": "formal-seed0-20261108-resume01",
+    "role": "converted_initialization",
+    "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/conversion/gsmf_init.pth",
+    "exists": true,
+    "bytes": 383959909,
+    "sha256": "90ad8f6a2034ab25d1b6e98c200fba769bfa11449a0770523b5bf912031c1f2f",
+    "disposition": "家中保留",
+    "best_checkpoint": false,
+    "readable": true,
+    "iteration": null,
+    "optimizer_present": false,
+    "scheduler_present": false,
+    "message_hub_present": false,
+    "rng_state_present": false,
+    "dataloader_state_present": false
+  },
+  {
+    "purpose": "imagenet_initialization",
+    "run_id": "pretrained",
+    "role": "imagenet_backbone",
+    "path": "/home/ysheng4/research/GSMF-RS-DIL/checkpoints/pretrained/resnet101_v1c-e67eebb6.pth",
+    "exists": true,
+    "bytes": 178791759,
+    "sha256": "e67eebb62faab570c7c2268f93f5b68db2cd1730d5397923f34b39820c691d64",
+    "disposition": "家中保留",
+    "best_checkpoint": false,
+    "readable": true,
+    "iteration": null,
+    "optimizer_present": false,
+    "scheduler_present": false,
+    "message_hub_present": false,
+    "rng_state_present": false,
+    "dataloader_state_present": false
+  },
+  {
+    "purpose": "corrupt_source_50000",
+    "run_id": "formal-seed0-20261108-001",
+    "role": "corrupt_not_reported",
+    "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-001/source/iter_50000.pth",
+    "exists": true,
+    "bytes": 67108864,
+    "sha256": "cda06997f22ec25282377bcd67f2621ab2c7eae2c0bbebc6889f7e33363a4496",
+    "disposition": "家中保留",
+    "best_checkpoint": false,
+    "readable": false,
+    "error": "PytorchStreamReader failed reading zip archive: failed finding central directory",
+    "optimizer_present": null,
+    "scheduler_present": null
+  }
+]

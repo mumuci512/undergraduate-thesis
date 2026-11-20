@@ -1,0 +1,2907 @@
+2026/11/11 16:00:51 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.8.20 (default, Oct  3 2024, 15:24:27) [GCC 11.2.0]
+    CUDA available: True
+    numpy_random_seed: 0
+    GPU 0: NVIDIA GeForce RTX 3080
+    CUDA_HOME: None
+    GCC: gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+    PyTorch: 1.9.1+cu111
+    PyTorch compiling details: PyTorch built with:
+  - GCC 7.3
+  - C++ Version: 201402
+  - Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191122 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v2.1.2 (Git Hash 98be7e8afa711dc9b66c8ff3504129cb82013cdb)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.1
+  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86
+  - CuDNN 8.0.5
+  - Magma 2.5.2
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.1, CUDNN_VERSION=8.0.5, CXX_COMPILER=/opt/rh/devtoolset-7/root/usr/bin/c++, CXX_FLAGS= -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function -Wno-unused-result -Wno-unused-local-typedefs -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.9.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, 
+
+    TorchVision: 0.10.1+cu111
+    OpenCV: 4.8.0
+    MMEngine: 0.8.2
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 0
+    deterministic: True
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+2026/11/11 16:00:52 - mmengine - INFO - Config:
+default_scope = 'mmseg'
+custom_imports = dict(imports=[
+    'road_dil',
+])
+model = dict(
+    type='RoadDIL',
+    data_preprocessor=dict(
+        type='SegDataPreProcessor',
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        bgr_to_rgb=True,
+        size=(
+            512,
+            512,
+        ),
+        pad_val=0,
+        seg_pad_val=255,
+        test_cfg=dict(size_divisor=32)),
+    pretrained=None,
+    DIL_type='LwF',
+    backbone=dict(
+        type='ResNetV1c',
+        depth=101,
+        in_channels=3,
+        num_stages=4,
+        base_channels=64,
+        out_indices=(
+            0,
+            1,
+            2,
+            3,
+        ),
+        dilations=(
+            1,
+            1,
+            1,
+            1,
+        ),
+        strides=(
+            1,
+            2,
+            2,
+            2,
+        ),
+        norm_cfg=dict(type='BN', requires_grad=False),
+        norm_eval=False,
+        style='pytorch',
+        contract_dilation=True),
+    backbone_1=dict(
+        type='ResNetV1c',
+        depth=101,
+        in_channels=3,
+        num_stages=4,
+        base_channels=64,
+        out_indices=(
+            0,
+            1,
+            2,
+            3,
+        ),
+        dilations=(
+            1,
+            1,
+            1,
+            1,
+        ),
+        strides=(
+            1,
+            2,
+            2,
+            2,
+        ),
+        norm_cfg=dict(type='BN', requires_grad=True),
+        norm_eval=False,
+        style='pytorch',
+        contract_dilation=True),
+    decode_head=dict(
+        type='GSMF_RS_DIL_Head',
+        in_channels=[
+            256,
+            512,
+            1024,
+            2048,
+        ],
+        in_index=[
+            0,
+            1,
+            2,
+            3,
+        ],
+        channels=256,
+        dropout_ratio=0.1,
+        num_classes=19,
+        mid_channels=128,
+        N=64,
+        reduction=16,
+        norm_cfg=dict(type='BN', requires_grad=False),
+        align_corners=False,
+        loss_decode=dict(
+            type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0),
+        kernel_size=3),
+    decode_head_1=dict(
+        type='GSMF_RS_DIL_Head',
+        in_channels=[
+            256,
+            512,
+            1024,
+            2048,
+        ],
+        in_index=[
+            0,
+            1,
+            2,
+            3,
+        ],
+        channels=256,
+        dropout_ratio=0.1,
+        num_classes=19,
+        mid_channels=128,
+        N=64,
+        reduction=16,
+        norm_cfg=dict(type='BN', requires_grad=True),
+        align_corners=False,
+        loss_decode=[
+            dict(
+                type='CrossEntropyLoss',
+                use_sigmoid=False,
+                loss_name='loss_ce',
+                loss_weight=1.0),
+            dict(
+                type='DIL_HinLoss',
+                temperature=2.0,
+                loss_name='loss_dilhin',
+                loss_weight=0.5),
+        ],
+        kernel_size=3),
+    train_cfg=dict(),
+    test_cfg=dict(mode='slide', crop_size=(
+        512,
+        512,
+    ), stride=(
+        341,
+        341,
+    )),
+    frozen_backbone_1=False,
+    frozen_backbone_layer=-1,
+    frozen_decode_1=False,
+    frozen_decode_layer=-1,
+    teacher_policy='fixed_eval')
+train_dataloader = dict(
+    batch_size=2,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(type='InfiniteSampler', shuffle=True),
+    dataset=dict(
+        type='RoadManifestDataset',
+        ann_file=
+        '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/E_train.jsonl',
+        data_prefix=dict(img_path='', seg_map_path=''),
+        reduce_zero_label=False,
+        ignore_index=255,
+        test_mode=False,
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadRoadAnnotations'),
+            dict(
+                type='RandomResize',
+                scale=(
+                    2048,
+                    1024,
+                ),
+                ratio_range=(
+                    0.5,
+                    2.0,
+                ),
+                keep_ratio=True),
+            dict(
+                type='RandomCrop', crop_size=(
+                    512,
+                    512,
+                ), cat_max_ratio=0.75),
+            dict(type='RandomFlip', prob=0.5),
+            dict(type='PhotoMetricDistortion'),
+            dict(type='PackSegInputs'),
+        ]))
+val_dataloader = dict(
+    batch_size=1,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(type='DefaultSampler', shuffle=False),
+    dataset=dict(
+        type='RoadManifestDataset',
+        ann_file=
+        '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/E_val.jsonl',
+        data_prefix=dict(img_path='', seg_map_path=''),
+        reduce_zero_label=False,
+        ignore_index=255,
+        test_mode=True,
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadRoadAnnotations'),
+            dict(type='PackSegInputs'),
+        ]))
+test_dataloader = dict(
+    batch_size=1,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(type='DefaultSampler', shuffle=False),
+    dataset=dict(
+        type='RoadManifestDataset',
+        ann_file=
+        '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/A_val.jsonl',
+        data_prefix=dict(img_path='', seg_map_path=''),
+        reduce_zero_label=False,
+        ignore_index=255,
+        test_mode=True,
+        pipeline=[
+            dict(type='LoadImageFromFile'),
+            dict(type='LoadRoadAnnotations'),
+            dict(type='PackSegInputs'),
+        ]))
+val_evaluator = [
+    dict(type='IoUMetric', iou_metrics=[
+        'mIoU',
+    ]),
+    dict(type='RoadConfusionMetric'),
+]
+test_evaluator = [
+    dict(type='IoUMetric', iou_metrics=[
+        'mIoU',
+    ]),
+    dict(type='RoadConfusionMetric'),
+]
+train_cfg = dict(type='IterBasedTrainLoop', max_iters=4000, val_interval=1000)
+val_cfg = dict(type='ValLoop')
+test_cfg = dict(type='TestLoop')
+optim_wrapper = dict(
+    type='OptimWrapper',
+    optimizer=dict(
+        type='AdamW', lr=1e-05, betas=(
+            0.9,
+            0.999,
+        ), weight_decay=0.001),
+    clip_grad=None)
+param_scheduler = [
+    dict(
+        type='PolyLR',
+        eta_min=0.0,
+        power=0.9,
+        begin=0,
+        end=4000,
+        by_epoch=False),
+]
+default_hooks = dict(
+    timer=dict(type='IterTimerHook'),
+    logger=dict(type='LoggerHook', interval=20, log_metric_by_epoch=False),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    checkpoint=dict(
+        type='CheckpointHook',
+        by_epoch=False,
+        interval=1000,
+        save_last=True,
+        max_keep_ckpts=-1),
+    sampler_seed=dict(type='DistSamplerSeedHook'))
+custom_hooks = [
+    dict(type='RoadAuditHook'),
+]
+env_cfg = dict(
+    cudnn_benchmark=False,
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0),
+    dist_cfg=dict(backend='nccl'))
+visualizer = dict(
+    type='SegLocalVisualizer',
+    vis_backends=[
+        dict(type='LocalVisBackend'),
+    ],
+    name='visualizer')
+log_processor = dict(by_epoch=False)
+log_level = 'INFO'
+randomness = dict(seed=0, deterministic=True)
+load_from = '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/initialization/lwf-seed0-E/lwf_init.pth'
+resume = False
+work_dir = '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/lwf-seed0-E'
+road_checkpoint_meta = dict(
+    road_domain='E',
+    road_stage='lwf',
+    road_run=
+    '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/lwf-seed0-E',
+    road_seed=0,
+    road_order='ABCDE',
+    parent_sha256=
+    '9fc81c96de9b130ae619df8bb91bb444607e1493da629eea3d08bdbe1256b4ff',
+    parent_domain='D',
+    parent_checkpoint=
+    '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/lwf-seed0-D/iter_4000.pth',
+    parent_run=
+    '/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/lwf-seed0-D',
+    initialization_only=False)
+
+2026/11/11 16:01:00 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+2026/11/11 16:01:00 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) RoadAuditHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) RoadAuditHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+before_save_checkpoint:
+(NORMAL      ) RoadAuditHook                      
+ -------------------- 
+after_train:
+(NORMAL      ) RoadAuditHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+2026/11/11 16:01:01 - mmengine - WARNING - The prefix is not set in metric class IoUMetric.
+2026/11/11 16:01:01 - mmengine - WARNING - The prefix is not set in metric class RoadConfusionMetric.
+Name of parameter - Initialization information
+
+backbone.stem.0.weight - torch.Size([32, 3, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.stem.1.weight - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.stem.1.bias - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.stem.3.weight - torch.Size([32, 32, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.stem.4.weight - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.stem.4.bias - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.stem.6.weight - torch.Size([64, 32, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.stem.7.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.stem.7.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.0.conv1.weight - torch.Size([64, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.0.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.0.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.0.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.0.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.0.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.0.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.0.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer1.0.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.0.downsample.0.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.0.downsample.1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.0.downsample.1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.1.conv1.weight - torch.Size([64, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.1.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.1.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.1.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.1.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.1.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.1.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.1.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer1.1.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.2.conv1.weight - torch.Size([64, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.2.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.2.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.2.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.2.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.2.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer1.2.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer1.2.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer1.2.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.0.conv1.weight - torch.Size([128, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.0.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.0.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.0.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.0.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.0.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.0.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.0.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer2.0.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.0.downsample.0.weight - torch.Size([512, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.0.downsample.1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.0.downsample.1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.1.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.1.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.1.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.1.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.1.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.1.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.1.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.1.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer2.1.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.2.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.2.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.2.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.2.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.2.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.2.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.2.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.2.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer2.2.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.3.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.3.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.3.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.3.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.3.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.3.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer2.3.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer2.3.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer2.3.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.0.conv1.weight - torch.Size([256, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.0.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.0.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.0.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.0.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.0.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.0.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.0.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.0.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.0.downsample.0.weight - torch.Size([1024, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.0.downsample.1.weight - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.0.downsample.1.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.1.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.1.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.1.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.1.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.1.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.1.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.1.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.1.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.1.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.2.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.2.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.2.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.2.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.2.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.2.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.2.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.2.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.2.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.3.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.3.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.3.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.3.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.3.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.3.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.3.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.3.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.3.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.4.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.4.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.4.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.4.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.4.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.4.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.4.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.4.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.4.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.5.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.5.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.5.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.5.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.5.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.5.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.5.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.5.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.5.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.6.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.6.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.6.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.6.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.6.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.6.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.6.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.6.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.6.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.7.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.7.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.7.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.7.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.7.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.7.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.7.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.7.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.7.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.8.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.8.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.8.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.8.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.8.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.8.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.8.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.8.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.8.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.9.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.9.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.9.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.9.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.9.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.9.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.9.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.9.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.9.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.10.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.10.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.10.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.10.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.10.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.10.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.10.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.10.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.10.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.11.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.11.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.11.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.11.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.11.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.11.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.11.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.11.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.11.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.12.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.12.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.12.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.12.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.12.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.12.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.12.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.12.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.12.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.13.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.13.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.13.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.13.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.13.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.13.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.13.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.13.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.13.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.14.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.14.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.14.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.14.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.14.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.14.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.14.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.14.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.14.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.15.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.15.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.15.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.15.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.15.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.15.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.15.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.15.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.15.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.16.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.16.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.16.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.16.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.16.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.16.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.16.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.16.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.16.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.17.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.17.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.17.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.17.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.17.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.17.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.17.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.17.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.17.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.18.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.18.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.18.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.18.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.18.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.18.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.18.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.18.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.18.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.19.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.19.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.19.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.19.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.19.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.19.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.19.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.19.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.19.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.20.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.20.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.20.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.20.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.20.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.20.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.20.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.20.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.20.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.21.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.21.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.21.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.21.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.21.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.21.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.21.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.21.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.21.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.22.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.22.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.22.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.22.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.22.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.22.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer3.22.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer3.22.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer3.22.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.0.conv1.weight - torch.Size([512, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.0.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.0.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.0.conv2.weight - torch.Size([512, 512, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.0.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.0.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.0.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.0.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer4.0.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.0.downsample.0.weight - torch.Size([2048, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.0.downsample.1.weight - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.0.downsample.1.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.1.conv1.weight - torch.Size([512, 2048, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.1.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.1.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.1.conv2.weight - torch.Size([512, 512, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.1.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.1.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.1.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.1.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer4.1.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.2.conv1.weight - torch.Size([512, 2048, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.2.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.2.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.2.conv2.weight - torch.Size([512, 512, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.2.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.2.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone.layer4.2.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.layer4.2.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+
+backbone.layer4.2.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.stem.0.weight - torch.Size([32, 3, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.stem.1.weight - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.stem.1.bias - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.stem.3.weight - torch.Size([32, 32, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.stem.4.weight - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.stem.4.bias - torch.Size([32]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.stem.6.weight - torch.Size([64, 32, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.stem.7.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.stem.7.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.0.conv1.weight - torch.Size([64, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer1.0.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.0.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.0.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer1.0.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.0.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.0.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer1.0.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer1.0.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.0.downsample.0.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer1.0.downsample.1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.0.downsample.1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.1.conv1.weight - torch.Size([64, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer1.1.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.1.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.1.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer1.1.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.1.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.1.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer1.1.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer1.1.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.2.conv1.weight - torch.Size([64, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer1.2.bn1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.2.bn1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.2.conv2.weight - torch.Size([64, 64, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer1.2.bn2.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.2.bn2.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer1.2.conv3.weight - torch.Size([256, 64, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer1.2.bn3.weight - torch.Size([256]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer1.2.bn3.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.0.conv1.weight - torch.Size([128, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.0.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.0.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.0.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.0.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.0.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.0.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.0.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer2.0.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.0.downsample.0.weight - torch.Size([512, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.0.downsample.1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.0.downsample.1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.1.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.1.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.1.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.1.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.1.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.1.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.1.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.1.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer2.1.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.2.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.2.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.2.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.2.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.2.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.2.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.2.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.2.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer2.2.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.3.conv1.weight - torch.Size([128, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.3.bn1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.3.bn1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.3.conv2.weight - torch.Size([128, 128, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.3.bn2.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.3.bn2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer2.3.conv3.weight - torch.Size([512, 128, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer2.3.bn3.weight - torch.Size([512]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer2.3.bn3.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.0.conv1.weight - torch.Size([256, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.0.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.0.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.0.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.0.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.0.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.0.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.0.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.0.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.0.downsample.0.weight - torch.Size([1024, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.0.downsample.1.weight - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.0.downsample.1.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.1.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.1.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.1.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.1.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.1.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.1.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.1.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.1.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.1.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.2.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.2.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.2.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.2.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.2.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.2.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.2.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.2.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.2.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.3.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.3.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.3.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.3.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.3.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.3.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.3.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.3.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.3.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.4.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.4.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.4.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.4.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.4.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.4.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.4.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.4.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.4.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.5.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.5.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.5.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.5.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.5.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.5.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.5.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.5.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.5.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.6.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.6.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.6.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.6.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.6.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.6.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.6.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.6.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.6.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.7.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.7.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.7.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.7.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.7.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.7.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.7.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.7.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.7.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.8.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.8.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.8.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.8.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.8.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.8.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.8.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.8.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.8.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.9.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.9.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.9.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.9.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.9.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.9.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.9.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.9.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.9.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.10.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.10.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.10.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.10.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.10.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.10.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.10.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.10.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.10.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.11.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.11.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.11.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.11.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.11.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.11.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.11.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.11.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.11.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.12.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.12.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.12.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.12.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.12.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.12.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.12.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.12.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.12.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.13.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.13.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.13.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.13.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.13.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.13.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.13.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.13.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.13.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.14.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.14.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.14.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.14.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.14.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.14.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.14.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.14.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.14.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.15.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.15.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.15.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.15.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.15.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.15.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.15.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.15.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.15.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.16.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.16.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.16.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.16.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.16.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.16.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.16.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.16.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.16.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.17.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.17.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.17.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.17.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.17.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.17.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.17.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.17.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.17.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.18.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.18.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.18.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.18.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.18.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.18.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.18.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.18.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.18.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.19.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.19.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.19.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.19.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.19.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.19.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.19.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.19.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.19.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.20.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.20.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.20.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.20.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.20.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.20.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.20.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.20.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.20.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.21.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.21.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.21.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.21.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.21.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.21.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.21.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.21.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.21.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.22.conv1.weight - torch.Size([256, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.22.bn1.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.22.bn1.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.22.conv2.weight - torch.Size([256, 256, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.22.bn2.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.22.bn2.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer3.22.conv3.weight - torch.Size([1024, 256, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer3.22.bn3.weight - torch.Size([1024]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer3.22.bn3.bias - torch.Size([1024]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.0.conv1.weight - torch.Size([512, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer4.0.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.0.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.0.conv2.weight - torch.Size([512, 512, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer4.0.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.0.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.0.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer4.0.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer4.0.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.0.downsample.0.weight - torch.Size([2048, 1024, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer4.0.downsample.1.weight - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.0.downsample.1.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.1.conv1.weight - torch.Size([512, 2048, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer4.1.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.1.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.1.conv2.weight - torch.Size([512, 512, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer4.1.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.1.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.1.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer4.1.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer4.1.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.2.conv1.weight - torch.Size([512, 2048, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer4.2.bn1.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.2.bn1.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.2.conv2.weight - torch.Size([512, 512, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer4.2.bn2.weight - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.2.bn2.bias - torch.Size([512]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+backbone_1.layer4.2.conv3.weight - torch.Size([2048, 512, 1, 1]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone_1.layer4.2.bn3.weight - torch.Size([2048]): 
+ConstantInit: val=0, bias=0 
+
+backbone_1.layer4.2.bn3.bias - torch.Size([2048]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.conv_seg.weight - torch.Size([19, 256, 1, 1]): 
+NormalInit: mean=0, std=0.01, bias=0 
+
+decode_head.conv_seg.bias - torch.Size([19]): 
+NormalInit: mean=0, std=0.01, bias=0 
+
+decode_head.lateral_convs.0.conv.weight - torch.Size([256, 1024, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.lateral_convs.0.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.lateral_convs.0.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.lateral_convs.1.conv.weight - torch.Size([256, 512, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.lateral_convs.1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.lateral_convs.1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.lateral_convs.2.conv.weight - torch.Size([256, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.lateral_convs.2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.lateral_convs.2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.cam.0.fc.0.weight - torch.Size([16, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.cam.0.fc.2.weight - torch.Size([256, 16, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.cam.1.fc.0.weight - torch.Size([16, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.cam.1.fc.2.weight - torch.Size([256, 16, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.cam.2.fc.0.weight - torch.Size([16, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.cam.2.fc.2.weight - torch.Size([256, 16, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.sam.0.conv.weight - torch.Size([1, 2, 3, 3]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.sam.1.conv.weight - torch.Size([1, 2, 3, 3]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.sam.2.conv.weight - torch.Size([1, 2, 3, 3]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.bottleneck.conv.weight - torch.Size([256, 2048, 3, 3]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head.bottleneck.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.bottleneck.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.phi.conv.weight - torch.Size([128, 256, 1, 1]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head.phi.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.phi.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.theta.conv.weight - torch.Size([64, 256, 1, 1]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head.theta.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.theta.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.gcn.conv1d_1.weight - torch.Size([64, 64, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.gcn.conv1d_1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.gcn.conv1d_2.weight - torch.Size([128, 128, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.gcn.conv1d_2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.blocker.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.blocker.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.phi_inv.conv.weight - torch.Size([256, 128, 1, 1]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head.phi_inv.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head.phi_inv.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.conv_seg.weight - torch.Size([19, 256, 1, 1]): 
+NormalInit: mean=0, std=0.01, bias=0 
+
+decode_head_1.conv_seg.bias - torch.Size([19]): 
+NormalInit: mean=0, std=0.01, bias=0 
+
+decode_head_1.lateral_convs.0.conv.weight - torch.Size([256, 1024, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.lateral_convs.0.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.lateral_convs.0.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.lateral_convs.1.conv.weight - torch.Size([256, 512, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.lateral_convs.1.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.lateral_convs.1.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.lateral_convs.2.conv.weight - torch.Size([256, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.lateral_convs.2.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.lateral_convs.2.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.cam.0.fc.0.weight - torch.Size([16, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.cam.0.fc.2.weight - torch.Size([256, 16, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.cam.1.fc.0.weight - torch.Size([16, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.cam.1.fc.2.weight - torch.Size([256, 16, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.cam.2.fc.0.weight - torch.Size([16, 256, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.cam.2.fc.2.weight - torch.Size([256, 16, 1, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.sam.0.conv.weight - torch.Size([1, 2, 3, 3]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.sam.1.conv.weight - torch.Size([1, 2, 3, 3]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.sam.2.conv.weight - torch.Size([1, 2, 3, 3]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.bottleneck.conv.weight - torch.Size([256, 2048, 3, 3]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head_1.bottleneck.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.bottleneck.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.phi.conv.weight - torch.Size([128, 256, 1, 1]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head_1.phi.bn.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.phi.bn.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.theta.conv.weight - torch.Size([64, 256, 1, 1]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head_1.theta.bn.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.theta.bn.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.gcn.conv1d_1.weight - torch.Size([64, 64, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.gcn.conv1d_1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.gcn.conv1d_2.weight - torch.Size([128, 128, 1]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.gcn.conv1d_2.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.blocker.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.blocker.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.phi_inv.conv.weight - torch.Size([256, 128, 1, 1]): 
+Initialized by user-defined `init_weights` in ConvModule  
+
+decode_head_1.phi_inv.bn.weight - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+
+decode_head_1.phi_inv.bn.bias - torch.Size([256]): 
+The value is the same before and after calling `init_weights` of RoadDIL  
+2026/11/11 16:01:03 - mmengine - INFO - Load checkpoint from /home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/initialization/lwf-seed0-E/lwf_init.pth
+2026/11/11 16:01:04 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+2026/11/11 16:01:04 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+2026/11/11 16:01:04 - mmengine - INFO - Checkpoints will be saved to /home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/lwf-seed0-E.
+2026/11/11 16:01:07 - mmengine - INFO - Iter(train) [  20/4000]  lr: 9.9572e-06  eta: 0:12:09  time: 0.1723  data_time: 0.0072  memory: 2618  loss: 2.1751  decode.acc_seg: 91.4156  decode.loss_ce: 0.9099  decode.loss_dilhin: 1.2651
+2026/11/11 16:01:11 - mmengine - INFO - Iter(train) [  40/4000]  lr: 9.9122e-06  eta: 0:11:47  time: 0.1726  data_time: 0.0078  memory: 2618  loss: 1.7493  decode.acc_seg: 81.9200  decode.loss_ce: 0.5157  decode.loss_dilhin: 1.2337
+2026/11/11 16:01:14 - mmengine - INFO - Iter(train) [  60/4000]  lr: 9.8671e-06  eta: 0:11:37  time: 0.1727  data_time: 0.0074  memory: 2618  loss: 2.2026  decode.acc_seg: 73.9203  decode.loss_ce: 1.1120  decode.loss_dilhin: 1.0906
+2026/11/11 16:01:17 - mmengine - INFO - Iter(train) [  80/4000]  lr: 9.8220e-06  eta: 0:11:02  time: 0.1170  data_time: 0.0071  memory: 2618  loss: 1.9590  decode.acc_seg: 71.6359  decode.loss_ce: 0.7791  decode.loss_dilhin: 1.1799
+2026/11/11 16:01:21 - mmengine - INFO - Iter(train) [ 100/4000]  lr: 9.7769e-06  eta: 0:11:02  time: 0.1744  data_time: 0.0078  memory: 2618  loss: 2.2239  decode.acc_seg: 82.5751  decode.loss_ce: 1.1001  decode.loss_dilhin: 1.1238
+2026/11/11 16:01:24 - mmengine - INFO - Iter(train) [ 120/4000]  lr: 9.7318e-06  eta: 0:11:01  time: 0.1722  data_time: 0.0075  memory: 2618  loss: 1.9056  decode.acc_seg: 67.8177  decode.loss_ce: 0.8240  decode.loss_dilhin: 1.0817
+2026/11/11 16:01:28 - mmengine - INFO - Iter(train) [ 140/4000]  lr: 9.6866e-06  eta: 0:11:05  time: 0.1770  data_time: 0.0076  memory: 2618  loss: 1.7805  decode.acc_seg: 59.1913  decode.loss_ce: 0.7149  decode.loss_dilhin: 1.0656
+2026/11/11 16:01:31 - mmengine - INFO - Iter(train) [ 160/4000]  lr: 9.6414e-06  eta: 0:11:02  time: 0.1760  data_time: 0.0073  memory: 2618  loss: 1.7847  decode.acc_seg: 86.2525  decode.loss_ce: 0.6586  decode.loss_dilhin: 1.1262
+2026/11/11 16:01:35 - mmengine - INFO - Iter(train) [ 180/4000]  lr: 9.5962e-06  eta: 0:11:00  time: 0.1725  data_time: 0.0072  memory: 2618  loss: 1.9671  decode.acc_seg: 87.0229  decode.loss_ce: 0.9021  decode.loss_dilhin: 1.0651
+2026/11/11 16:01:38 - mmengine - INFO - Exp name: 20261111_160051
+2026/11/11 16:01:38 - mmengine - INFO - Iter(train) [ 200/4000]  lr: 9.5510e-06  eta: 0:10:56  time: 0.1732  data_time: 0.0071  memory: 2618  loss: 1.9122  decode.acc_seg: 77.1984  decode.loss_ce: 0.6823  decode.loss_dilhin: 1.2300
+2026/11/11 16:01:42 - mmengine - INFO - Iter(train) [ 220/4000]  lr: 9.5057e-06  eta: 0:10:53  time: 0.1748  data_time: 0.0073  memory: 2618  loss: 1.8354  decode.acc_seg: 80.5220  decode.loss_ce: 0.6752  decode.loss_dilhin: 1.1601
+2026/11/11 16:01:45 - mmengine - INFO - Iter(train) [ 240/4000]  lr: 9.4605e-06  eta: 0:10:50  time: 0.1731  data_time: 0.0072  memory: 2618  loss: 1.6988  decode.acc_seg: 68.9026  decode.loss_ce: 0.5485  decode.loss_dilhin: 1.1502
+2026/11/11 16:01:49 - mmengine - INFO - Iter(train) [ 260/4000]  lr: 9.4152e-06  eta: 0:10:47  time: 0.1730  data_time: 0.0073  memory: 2618  loss: 1.8815  decode.acc_seg: 51.1345  decode.loss_ce: 0.6889  decode.loss_dilhin: 1.1926
+2026/11/11 16:01:52 - mmengine - INFO - Iter(train) [ 280/4000]  lr: 9.3698e-06  eta: 0:10:37  time: 0.1743  data_time: 0.0074  memory: 2618  loss: 1.7551  decode.acc_seg: 43.0540  decode.loss_ce: 0.6625  decode.loss_dilhin: 1.0927
+2026/11/11 16:01:55 - mmengine - INFO - Iter(train) [ 300/4000]  lr: 9.3245e-06  eta: 0:10:34  time: 0.1739  data_time: 0.0074  memory: 2618  loss: 1.6772  decode.acc_seg: 84.6615  decode.loss_ce: 0.5552  decode.loss_dilhin: 1.1220
+2026/11/11 16:01:59 - mmengine - INFO - Iter(train) [ 320/4000]  lr: 9.2791e-06  eta: 0:10:31  time: 0.1723  data_time: 0.0073  memory: 2618  loss: 2.1349  decode.acc_seg: 27.3668  decode.loss_ce: 1.0370  decode.loss_dilhin: 1.0979
+2026/11/11 16:02:02 - mmengine - INFO - Iter(train) [ 340/4000]  lr: 9.2337e-06  eta: 0:10:28  time: 0.1750  data_time: 0.0071  memory: 2618  loss: 1.8185  decode.acc_seg: 90.7492  decode.loss_ce: 0.6665  decode.loss_dilhin: 1.1520
+2026/11/11 16:02:06 - mmengine - INFO - Iter(train) [ 360/4000]  lr: 9.1883e-06  eta: 0:10:25  time: 0.1732  data_time: 0.0073  memory: 2618  loss: 1.9779  decode.acc_seg: 32.4155  decode.loss_ce: 0.8301  decode.loss_dilhin: 1.1478
+2026/11/11 16:02:09 - mmengine - INFO - Iter(train) [ 380/4000]  lr: 9.1428e-06  eta: 0:10:22  time: 0.1731  data_time: 0.0073  memory: 2618  loss: 1.7836  decode.acc_seg: 73.2587  decode.loss_ce: 0.6614  decode.loss_dilhin: 1.1222
+2026/11/11 16:02:13 - mmengine - INFO - Iter(train) [ 400/4000]  lr: 9.0974e-06  eta: 0:10:19  time: 0.1732  data_time: 0.0073  memory: 2618  loss: 1.7759  decode.acc_seg: 78.1136  decode.loss_ce: 0.7080  decode.loss_dilhin: 1.0680
+2026/11/11 16:02:16 - mmengine - INFO - Iter(train) [ 420/4000]  lr: 9.0519e-06  eta: 0:10:16  time: 0.1736  data_time: 0.0074  memory: 2618  loss: 1.9603  decode.acc_seg: 86.2916  decode.loss_ce: 0.7442  decode.loss_dilhin: 1.2161
+2026/11/11 16:02:19 - mmengine - INFO - Iter(train) [ 440/4000]  lr: 9.0063e-06  eta: 0:10:13  time: 0.1741  data_time: 0.0078  memory: 2618  loss: 1.8482  decode.acc_seg: 79.0619  decode.loss_ce: 0.7766  decode.loss_dilhin: 1.0716
+2026/11/11 16:02:22 - mmengine - INFO - Iter(train) [ 460/4000]  lr: 8.9608e-06  eta: 0:10:05  time: 0.1736  data_time: 0.0072  memory: 2618  loss: 1.6478  decode.acc_seg: 58.2273  decode.loss_ce: 0.6781  decode.loss_dilhin: 0.9697
+2026/11/11 16:02:26 - mmengine - INFO - Iter(train) [ 480/4000]  lr: 8.9152e-06  eta: 0:10:02  time: 0.1723  data_time: 0.0077  memory: 2618  loss: 1.9085  decode.acc_seg: 82.4385  decode.loss_ce: 0.8257  decode.loss_dilhin: 1.0828
+2026/11/11 16:02:29 - mmengine - INFO - Iter(train) [ 500/4000]  lr: 8.8696e-06  eta: 0:09:59  time: 0.1725  data_time: 0.0072  memory: 2618  loss: 1.8461  decode.acc_seg: 85.5675  decode.loss_ce: 0.7763  decode.loss_dilhin: 1.0699
+2026/11/11 16:02:33 - mmengine - INFO - Iter(train) [ 520/4000]  lr: 8.8240e-06  eta: 0:09:56  time: 0.1747  data_time: 0.0076  memory: 2618  loss: 1.9960  decode.acc_seg: 85.8460  decode.loss_ce: 0.8896  decode.loss_dilhin: 1.1064
+2026/11/11 16:02:36 - mmengine - INFO - Iter(train) [ 540/4000]  lr: 8.7783e-06  eta: 0:09:53  time: 0.1743  data_time: 0.0071  memory: 2618  loss: 1.8314  decode.acc_seg: 79.2320  decode.loss_ce: 0.7611  decode.loss_dilhin: 1.0703
+2026/11/11 16:02:40 - mmengine - INFO - Iter(train) [ 560/4000]  lr: 8.7327e-06  eta: 0:09:50  time: 0.1755  data_time: 0.0076  memory: 2618  loss: 1.8272  decode.acc_seg: 46.1841  decode.loss_ce: 0.7954  decode.loss_dilhin: 1.0319
+2026/11/11 16:02:43 - mmengine - INFO - Iter(train) [ 580/4000]  lr: 8.6869e-06  eta: 0:09:47  time: 0.1754  data_time: 0.0075  memory: 2618  loss: 2.1611  decode.acc_seg: 46.0139  decode.loss_ce: 1.0597  decode.loss_dilhin: 1.1014
+2026/11/11 16:02:47 - mmengine - INFO - Iter(train) [ 600/4000]  lr: 8.6412e-06  eta: 0:09:44  time: 0.1734  data_time: 0.0072  memory: 2618  loss: 1.6814  decode.acc_seg: 77.3445  decode.loss_ce: 0.5992  decode.loss_dilhin: 1.0822
+2026/11/11 16:02:50 - mmengine - INFO - Iter(train) [ 620/4000]  lr: 8.5955e-06  eta: 0:09:40  time: 0.1752  data_time: 0.0074  memory: 2618  loss: 1.8150  decode.acc_seg: 86.3593  decode.loss_ce: 0.7151  decode.loss_dilhin: 1.0999
+2026/11/11 16:02:53 - mmengine - INFO - Iter(train) [ 640/4000]  lr: 8.5497e-06  eta: 0:09:34  time: 0.1169  data_time: 0.0072  memory: 2618  loss: 1.8464  decode.acc_seg: 77.1133  decode.loss_ce: 0.7604  decode.loss_dilhin: 1.0860
+2026/11/11 16:02:57 - mmengine - INFO - Iter(train) [ 660/4000]  lr: 8.5038e-06  eta: 0:09:31  time: 0.1751  data_time: 0.0074  memory: 2618  loss: 1.9395  decode.acc_seg: 57.9195  decode.loss_ce: 0.7867  decode.loss_dilhin: 1.1528
+2026/11/11 16:03:00 - mmengine - INFO - Iter(train) [ 680/4000]  lr: 8.4580e-06  eta: 0:09:28  time: 0.1749  data_time: 0.0076  memory: 2618  loss: 1.7635  decode.acc_seg: 72.2385  decode.loss_ce: 0.7262  decode.loss_dilhin: 1.0373
+2026/11/11 16:03:04 - mmengine - INFO - Iter(train) [ 700/4000]  lr: 8.4121e-06  eta: 0:09:25  time: 0.1735  data_time: 0.0074  memory: 2618  loss: 1.8245  decode.acc_seg: 84.5644  decode.loss_ce: 0.7067  decode.loss_dilhin: 1.1178
+2026/11/11 16:03:07 - mmengine - INFO - Iter(train) [ 720/4000]  lr: 8.3662e-06  eta: 0:09:22  time: 0.1711  data_time: 0.0078  memory: 2618  loss: 2.0918  decode.acc_seg: 91.7475  decode.loss_ce: 0.9677  decode.loss_dilhin: 1.1241
+2026/11/11 16:03:11 - mmengine - INFO - Iter(train) [ 740/4000]  lr: 8.3203e-06  eta: 0:09:18  time: 0.1726  data_time: 0.0072  memory: 2618  loss: 1.8871  decode.acc_seg: 65.4454  decode.loss_ce: 0.7946  decode.loss_dilhin: 1.0925
+2026/11/11 16:03:14 - mmengine - INFO - Iter(train) [ 760/4000]  lr: 8.2744e-06  eta: 0:09:15  time: 0.1759  data_time: 0.0077  memory: 2618  loss: 1.8675  decode.acc_seg: 85.0697  decode.loss_ce: 0.7823  decode.loss_dilhin: 1.0852
+2026/11/11 16:03:17 - mmengine - INFO - Iter(train) [ 780/4000]  lr: 8.2284e-06  eta: 0:09:12  time: 0.1726  data_time: 0.0073  memory: 2618  loss: 1.8731  decode.acc_seg: 62.7787  decode.loss_ce: 0.7383  decode.loss_dilhin: 1.1348
+2026/11/11 16:03:21 - mmengine - INFO - Iter(train) [ 800/4000]  lr: 8.1824e-06  eta: 0:09:09  time: 0.1730  data_time: 0.0075  memory: 2618  loss: 1.8210  decode.acc_seg: 75.6446  decode.loss_ce: 0.6974  decode.loss_dilhin: 1.1235
+2026/11/11 16:03:24 - mmengine - INFO - Iter(train) [ 820/4000]  lr: 8.1363e-06  eta: 0:09:05  time: 0.1726  data_time: 0.0073  memory: 2618  loss: 1.7270  decode.acc_seg: 86.7094  decode.loss_ce: 0.6123  decode.loss_dilhin: 1.1147
+2026/11/11 16:03:27 - mmengine - INFO - Iter(train) [ 840/4000]  lr: 8.0903e-06  eta: 0:09:00  time: 0.1744  data_time: 0.0073  memory: 2618  loss: 1.8775  decode.acc_seg: 88.8459  decode.loss_ce: 0.9029  decode.loss_dilhin: 0.9746
+2026/11/11 16:03:31 - mmengine - INFO - Iter(train) [ 860/4000]  lr: 8.0442e-06  eta: 0:08:57  time: 0.1748  data_time: 0.0073  memory: 2618  loss: 1.7771  decode.acc_seg: 76.6252  decode.loss_ce: 0.6750  decode.loss_dilhin: 1.1021
+2026/11/11 16:03:34 - mmengine - INFO - Iter(train) [ 880/4000]  lr: 7.9980e-06  eta: 0:08:53  time: 0.1713  data_time: 0.0073  memory: 2618  loss: 1.7910  decode.acc_seg: 89.0845  decode.loss_ce: 0.6217  decode.loss_dilhin: 1.1693
+2026/11/11 16:03:38 - mmengine - INFO - Iter(train) [ 900/4000]  lr: 7.9519e-06  eta: 0:08:50  time: 0.1722  data_time: 0.0074  memory: 2618  loss: 1.7434  decode.acc_seg: 82.6579  decode.loss_ce: 0.7393  decode.loss_dilhin: 1.0041
+2026/11/11 16:03:41 - mmengine - INFO - Iter(train) [ 920/4000]  lr: 7.9057e-06  eta: 0:08:47  time: 0.1744  data_time: 0.0074  memory: 2618  loss: 2.0287  decode.acc_seg: 82.1437  decode.loss_ce: 0.9648  decode.loss_dilhin: 1.0639
+2026/11/11 16:03:45 - mmengine - INFO - Iter(train) [ 940/4000]  lr: 7.8595e-06  eta: 0:08:44  time: 0.1734  data_time: 0.0073  memory: 2618  loss: 1.9241  decode.acc_seg: 84.1152  decode.loss_ce: 0.8134  decode.loss_dilhin: 1.1107
+2026/11/11 16:03:48 - mmengine - INFO - Iter(train) [ 960/4000]  lr: 7.8132e-06  eta: 0:08:41  time: 0.1734  data_time: 0.0075  memory: 2618  loss: 1.7421  decode.acc_seg: 83.7395  decode.loss_ce: 0.6689  decode.loss_dilhin: 1.0732
+2026/11/11 16:03:52 - mmengine - INFO - Iter(train) [ 980/4000]  lr: 7.7669e-06  eta: 0:08:37  time: 0.1726  data_time: 0.0074  memory: 2618  loss: 1.7354  decode.acc_seg: 89.5172  decode.loss_ce: 0.6238  decode.loss_dilhin: 1.1116
+2026/11/11 16:03:55 - mmengine - INFO - Exp name: 20261111_160051
+2026/11/11 16:03:55 - mmengine - INFO - Iter(train) [1000/4000]  lr: 7.7206e-06  eta: 0:08:34  time: 0.1710  data_time: 0.0072  memory: 2618  loss: 1.8534  decode.acc_seg: 64.9133  decode.loss_ce: 0.7628  decode.loss_dilhin: 1.0906
+2026/11/11 16:03:55 - mmengine - INFO - Saving checkpoint at 1000 iterations
+2026/11/11 16:04:07 - mmengine - INFO - Iter(val) [ 20/106]    eta: 0:00:40  time: 0.4592  data_time: 0.0101  memory: 1295  
+2026/11/11 16:04:16 - mmengine - INFO - Iter(val) [ 40/106]    eta: 0:00:30  time: 0.4537  data_time: 0.0104  memory: 1295  
+2026/11/11 16:04:26 - mmengine - INFO - Iter(val) [ 60/106]    eta: 0:00:21  time: 0.4959  data_time: 0.0106  memory: 1295  
+2026/11/11 16:04:34 - mmengine - INFO - Iter(val) [ 80/106]    eta: 0:00:11  time: 0.4546  data_time: 0.0104  memory: 1295  
+2026/11/11 16:04:43 - mmengine - INFO - Iter(val) [100/106]    eta: 0:00:02  time: 0.4513  data_time: 0.0101  memory: 1295  
+2026/11/11 16:04:46 - mmengine - INFO - per class results:
+2026/11/11 16:04:46 - mmengine - INFO - 
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 77.33 | 84.21 |
+|    sidewalk   | 53.92 | 61.78 |
+|    building   | 55.11 | 85.67 |
+|      wall     | 26.55 | 38.07 |
+|     fence     | 25.82 | 33.91 |
+|      pole     | 30.63 | 34.75 |
+| traffic light | 44.76 | 62.17 |
+|  traffic sign | 19.71 | 20.47 |
+|   vegetation  | 56.97 | 75.95 |
+|    terrain    |  1.05 |  1.07 |
+|      sky      | 56.75 | 63.25 |
+|     person    | 21.76 | 22.98 |
+|     rider     |  2.11 |  2.14 |
+|      car      | 52.05 | 69.48 |
+|     truck     |  0.83 | 75.36 |
+|      bus      |  0.0  |  nan  |
+|     train     | 37.02 | 74.59 |
+|   motorcycle  |  1.55 |  1.59 |
+|    bicycle    |  8.52 |  8.59 |
++---------------+-------+-------+
+2026/11/11 16:04:46 - mmengine - INFO - Iter(val) [106/106]    aAcc: 72.9200  mIoU: 30.1300  mAcc: 45.3300  matrix_mIoU: 30.1300  data_time: 0.0120  time: 0.4563
+2026/11/11 16:04:50 - mmengine - INFO - Iter(train) [1020/4000]  lr: 7.6743e-06  eta: 0:08:31  time: 0.1765  data_time: 0.0080  memory: 2618  loss: 1.8446  decode.acc_seg: 16.4860  decode.loss_ce: 0.8489  decode.loss_dilhin: 0.9957
+2026/11/11 16:04:53 - mmengine - INFO - Iter(train) [1040/4000]  lr: 7.6279e-06  eta: 0:08:28  time: 0.1750  data_time: 0.0077  memory: 2618  loss: 1.7472  decode.acc_seg: 79.2857  decode.loss_ce: 0.6342  decode.loss_dilhin: 1.1130
+2026/11/11 16:04:57 - mmengine - INFO - Iter(train) [1060/4000]  lr: 7.5815e-06  eta: 0:08:24  time: 0.1747  data_time: 0.0079  memory: 2618  loss: 1.9331  decode.acc_seg: 80.9628  decode.loss_ce: 0.8521  decode.loss_dilhin: 1.0811
+2026/11/11 16:05:00 - mmengine - INFO - Iter(train) [1080/4000]  lr: 7.5351e-06  eta: 0:08:20  time: 0.1239  data_time: 0.0084  memory: 2618  loss: 1.7322  decode.acc_seg: 67.3071  decode.loss_ce: 0.6666  decode.loss_dilhin: 1.0656
+2026/11/11 16:05:03 - mmengine - INFO - Iter(train) [1100/4000]  lr: 7.4886e-06  eta: 0:08:17  time: 0.1770  data_time: 0.0079  memory: 2618  loss: 1.9677  decode.acc_seg: 78.5540  decode.loss_ce: 0.8872  decode.loss_dilhin: 1.0804
+2026/11/11 16:05:07 - mmengine - INFO - Iter(train) [1120/4000]  lr: 7.4421e-06  eta: 0:08:13  time: 0.1758  data_time: 0.0076  memory: 2618  loss: 2.0843  decode.acc_seg: 87.0087  decode.loss_ce: 0.9952  decode.loss_dilhin: 1.0892
+2026/11/11 16:05:10 - mmengine - INFO - Iter(train) [1140/4000]  lr: 7.3956e-06  eta: 0:08:10  time: 0.1751  data_time: 0.0077  memory: 2618  loss: 1.6563  decode.acc_seg: 87.9096  decode.loss_ce: 0.5623  decode.loss_dilhin: 1.0941
+2026/11/11 16:05:14 - mmengine - INFO - Iter(train) [1160/4000]  lr: 7.3490e-06  eta: 0:08:07  time: 0.1755  data_time: 0.0076  memory: 2618  loss: 1.9453  decode.acc_seg: 88.5633  decode.loss_ce: 0.8597  decode.loss_dilhin: 1.0857
+2026/11/11 16:05:17 - mmengine - INFO - Iter(train) [1180/4000]  lr: 7.3024e-06  eta: 0:08:04  time: 0.1765  data_time: 0.0077  memory: 2618  loss: 1.8043  decode.acc_seg: 86.4378  decode.loss_ce: 0.6877  decode.loss_dilhin: 1.1166
+2026/11/11 16:05:21 - mmengine - INFO - Iter(train) [1200/4000]  lr: 7.2558e-06  eta: 0:08:01  time: 0.1867  data_time: 0.0084  memory: 2618  loss: 1.8545  decode.acc_seg: 42.8345  decode.loss_ce: 0.7253  decode.loss_dilhin: 1.1292
+2026/11/11 16:05:25 - mmengine - INFO - Iter(train) [1220/4000]  lr: 7.2091e-06  eta: 0:07:58  time: 0.1768  data_time: 0.0082  memory: 2618  loss: 1.6381  decode.acc_seg: 68.5572  decode.loss_ce: 0.5495  decode.loss_dilhin: 1.0886
+2026/11/11 16:05:28 - mmengine - INFO - Iter(train) [1240/4000]  lr: 7.1625e-06  eta: 0:07:54  time: 0.1749  data_time: 0.0077  memory: 2618  loss: 1.8877  decode.acc_seg: 83.0794  decode.loss_ce: 0.7473  decode.loss_dilhin: 1.1404
+2026/11/11 16:05:32 - mmengine - INFO - Iter(train) [1260/4000]  lr: 7.1157e-06  eta: 0:07:51  time: 0.1722  data_time: 0.0077  memory: 2618  loss: 1.7994  decode.acc_seg: 76.2301  decode.loss_ce: 0.7416  decode.loss_dilhin: 1.0578
+2026/11/11 16:05:35 - mmengine - INFO - Iter(train) [1280/4000]  lr: 7.0690e-06  eta: 0:07:46  time: 0.1753  data_time: 0.0077  memory: 2618  loss: 1.8123  decode.acc_seg: 72.1782  decode.loss_ce: 0.7560  decode.loss_dilhin: 1.0562
+2026/11/11 16:05:38 - mmengine - INFO - Iter(train) [1300/4000]  lr: 7.0222e-06  eta: 0:07:43  time: 0.1862  data_time: 0.0081  memory: 2618  loss: 1.6493  decode.acc_seg: 85.5326  decode.loss_ce: 0.5510  decode.loss_dilhin: 1.0983
+2026/11/11 16:05:42 - mmengine - INFO - Iter(train) [1320/4000]  lr: 6.9753e-06  eta: 0:07:41  time: 0.1921  data_time: 0.0083  memory: 2618  loss: 1.8056  decode.acc_seg: 55.0932  decode.loss_ce: 0.7184  decode.loss_dilhin: 1.0872
+2026/11/11 16:05:46 - mmengine - INFO - Iter(train) [1340/4000]  lr: 6.9285e-06  eta: 0:07:38  time: 0.1774  data_time: 0.0077  memory: 2618  loss: 1.7576  decode.acc_seg: 64.1933  decode.loss_ce: 0.6809  decode.loss_dilhin: 1.0767
+2026/11/11 16:05:49 - mmengine - INFO - Iter(train) [1360/4000]  lr: 6.8816e-06  eta: 0:07:35  time: 0.1886  data_time: 0.0083  memory: 2618  loss: 1.7577  decode.acc_seg: 72.8342  decode.loss_ce: 0.6983  decode.loss_dilhin: 1.0595
+2026/11/11 16:05:53 - mmengine - INFO - Iter(train) [1380/4000]  lr: 6.8346e-06  eta: 0:07:31  time: 0.1761  data_time: 0.0079  memory: 2618  loss: 1.6835  decode.acc_seg: 86.4157  decode.loss_ce: 0.5450  decode.loss_dilhin: 1.1385
+2026/11/11 16:05:56 - mmengine - INFO - Iter(train) [1400/4000]  lr: 6.7877e-06  eta: 0:07:28  time: 0.1758  data_time: 0.0075  memory: 2618  loss: 1.7468  decode.acc_seg: 80.1082  decode.loss_ce: 0.7076  decode.loss_dilhin: 1.0392
+2026/11/11 16:06:00 - mmengine - INFO - Iter(train) [1420/4000]  lr: 6.7406e-06  eta: 0:07:25  time: 0.1747  data_time: 0.0079  memory: 2618  loss: 1.7572  decode.acc_seg: 73.8252  decode.loss_ce: 0.6828  decode.loss_dilhin: 1.0745
+2026/11/11 16:06:03 - mmengine - INFO - Iter(train) [1440/4000]  lr: 6.6936e-06  eta: 0:07:21  time: 0.1754  data_time: 0.0083  memory: 2618  loss: 1.9444  decode.acc_seg: 87.5602  decode.loss_ce: 0.8278  decode.loss_dilhin: 1.1166
+2026/11/11 16:06:06 - mmengine - INFO - Iter(train) [1460/4000]  lr: 6.6465e-06  eta: 0:07:17  time: 0.1752  data_time: 0.0078  memory: 2618  loss: 1.5734  decode.acc_seg: 86.6715  decode.loss_ce: 0.5039  decode.loss_dilhin: 1.0695
+2026/11/11 16:06:10 - mmengine - INFO - Iter(train) [1480/4000]  lr: 6.5994e-06  eta: 0:07:14  time: 0.1746  data_time: 0.0077  memory: 2618  loss: 1.8598  decode.acc_seg: 41.4080  decode.loss_ce: 0.7410  decode.loss_dilhin: 1.1188
+2026/11/11 16:06:13 - mmengine - INFO - Iter(train) [1500/4000]  lr: 6.5522e-06  eta: 0:07:10  time: 0.1759  data_time: 0.0080  memory: 2618  loss: 2.0071  decode.acc_seg: 61.5120  decode.loss_ce: 0.8759  decode.loss_dilhin: 1.1312
+2026/11/11 16:06:17 - mmengine - INFO - Iter(train) [1520/4000]  lr: 6.5050e-06  eta: 0:07:07  time: 0.1764  data_time: 0.0077  memory: 2618  loss: 1.8558  decode.acc_seg: 55.1637  decode.loss_ce: 0.7197  decode.loss_dilhin: 1.1361
+2026/11/11 16:06:20 - mmengine - INFO - Iter(train) [1540/4000]  lr: 6.4578e-06  eta: 0:07:04  time: 0.1759  data_time: 0.0078  memory: 2618  loss: 1.5857  decode.acc_seg: 90.9895  decode.loss_ce: 0.5544  decode.loss_dilhin: 1.0313
+2026/11/11 16:06:24 - mmengine - INFO - Iter(train) [1560/4000]  lr: 6.4105e-06  eta: 0:07:00  time: 0.1794  data_time: 0.0087  memory: 2618  loss: 1.7706  decode.acc_seg: 84.7665  decode.loss_ce: 0.6695  decode.loss_dilhin: 1.1011
+2026/11/11 16:06:27 - mmengine - INFO - Iter(train) [1580/4000]  lr: 6.3632e-06  eta: 0:06:57  time: 0.1742  data_time: 0.0075  memory: 2618  loss: 1.5629  decode.acc_seg: 65.2377  decode.loss_ce: 0.5603  decode.loss_dilhin: 1.0026
+2026/11/11 16:06:31 - mmengine - INFO - Iter(train) [1600/4000]  lr: 6.3159e-06  eta: 0:06:54  time: 0.1799  data_time: 0.0084  memory: 2618  loss: 1.8042  decode.acc_seg: 51.5722  decode.loss_ce: 0.6579  decode.loss_dilhin: 1.1462
+2026/11/11 16:06:35 - mmengine - INFO - Iter(train) [1620/4000]  lr: 6.2685e-06  eta: 0:06:51  time: 0.1839  data_time: 0.0090  memory: 2618  loss: 1.9654  decode.acc_seg: 67.1043  decode.loss_ce: 0.9234  decode.loss_dilhin: 1.0420
+2026/11/11 16:06:38 - mmengine - INFO - Iter(train) [1640/4000]  lr: 6.2211e-06  eta: 0:06:46  time: 0.1725  data_time: 0.0077  memory: 2618  loss: 1.8571  decode.acc_seg: 29.5080  decode.loss_ce: 0.8073  decode.loss_dilhin: 1.0498
+2026/11/11 16:06:41 - mmengine - INFO - Iter(train) [1660/4000]  lr: 6.1736e-06  eta: 0:06:43  time: 0.1736  data_time: 0.0076  memory: 2618  loss: 1.7086  decode.acc_seg: 76.4932  decode.loss_ce: 0.6708  decode.loss_dilhin: 1.0378
+2026/11/11 16:06:45 - mmengine - INFO - Iter(train) [1680/4000]  lr: 6.1261e-06  eta: 0:06:40  time: 0.1744  data_time: 0.0074  memory: 2618  loss: 1.7131  decode.acc_seg: 76.3469  decode.loss_ce: 0.5748  decode.loss_dilhin: 1.1383
+2026/11/11 16:06:48 - mmengine - INFO - Iter(train) [1700/4000]  lr: 6.0785e-06  eta: 0:06:36  time: 0.1755  data_time: 0.0078  memory: 2618  loss: 1.6633  decode.acc_seg: 85.6458  decode.loss_ce: 0.6015  decode.loss_dilhin: 1.0618
+2026/11/11 16:06:52 - mmengine - INFO - Iter(train) [1720/4000]  lr: 6.0309e-06  eta: 0:06:33  time: 0.1741  data_time: 0.0075  memory: 2618  loss: 1.7445  decode.acc_seg: 89.9846  decode.loss_ce: 0.6104  decode.loss_dilhin: 1.1341
+2026/11/11 16:06:55 - mmengine - INFO - Iter(train) [1740/4000]  lr: 5.9833e-06  eta: 0:06:30  time: 0.1764  data_time: 0.0080  memory: 2618  loss: 1.8517  decode.acc_seg: 86.7120  decode.loss_ce: 0.7837  decode.loss_dilhin: 1.0680
+2026/11/11 16:06:59 - mmengine - INFO - Iter(train) [1760/4000]  lr: 5.9356e-06  eta: 0:06:26  time: 0.1769  data_time: 0.0078  memory: 2618  loss: 1.7585  decode.acc_seg: 87.2757  decode.loss_ce: 0.6959  decode.loss_dilhin: 1.0626
+2026/11/11 16:07:02 - mmengine - INFO - Iter(train) [1780/4000]  lr: 5.8879e-06  eta: 0:06:23  time: 0.1741  data_time: 0.0077  memory: 2618  loss: 1.6234  decode.acc_seg: 88.6722  decode.loss_ce: 0.5869  decode.loss_dilhin: 1.0365
+2026/11/11 16:07:06 - mmengine - INFO - Iter(train) [1800/4000]  lr: 5.8402e-06  eta: 0:06:20  time: 0.1743  data_time: 0.0082  memory: 2618  loss: 1.6850  decode.acc_seg: 78.1031  decode.loss_ce: 0.6058  decode.loss_dilhin: 1.0793
+2026/11/11 16:07:09 - mmengine - INFO - Iter(train) [1820/4000]  lr: 5.7923e-06  eta: 0:06:15  time: 0.1757  data_time: 0.0075  memory: 2618  loss: 1.7764  decode.acc_seg: 81.7775  decode.loss_ce: 0.7650  decode.loss_dilhin: 1.0115
+2026/11/11 16:07:12 - mmengine - INFO - Iter(train) [1840/4000]  lr: 5.7445e-06  eta: 0:06:12  time: 0.1738  data_time: 0.0078  memory: 2618  loss: 1.9100  decode.acc_seg: 82.2393  decode.loss_ce: 0.7785  decode.loss_dilhin: 1.1315
+2026/11/11 16:07:16 - mmengine - INFO - Iter(train) [1860/4000]  lr: 5.6966e-06  eta: 0:06:09  time: 0.1751  data_time: 0.0079  memory: 2618  loss: 1.8075  decode.acc_seg: 84.3339  decode.loss_ce: 0.6876  decode.loss_dilhin: 1.1199
+2026/11/11 16:07:19 - mmengine - INFO - Iter(train) [1880/4000]  lr: 5.6487e-06  eta: 0:06:05  time: 0.1821  data_time: 0.0079  memory: 2618  loss: 1.7953  decode.acc_seg: 87.6978  decode.loss_ce: 0.6598  decode.loss_dilhin: 1.1355
+2026/11/11 16:07:23 - mmengine - INFO - Iter(train) [1900/4000]  lr: 5.6007e-06  eta: 0:06:02  time: 0.1757  data_time: 0.0078  memory: 2618  loss: 1.7281  decode.acc_seg: 76.9846  decode.loss_ce: 0.6046  decode.loss_dilhin: 1.1236
+2026/11/11 16:07:26 - mmengine - INFO - Iter(train) [1920/4000]  lr: 5.5527e-06  eta: 0:05:59  time: 0.1723  data_time: 0.0075  memory: 2618  loss: 1.7459  decode.acc_seg: 85.0374  decode.loss_ce: 0.6877  decode.loss_dilhin: 1.0581
+2026/11/11 16:07:30 - mmengine - INFO - Iter(train) [1940/4000]  lr: 5.5046e-06  eta: 0:05:55  time: 0.1725  data_time: 0.0077  memory: 2618  loss: 1.7516  decode.acc_seg: 80.5099  decode.loss_ce: 0.7196  decode.loss_dilhin: 1.0321
+2026/11/11 16:07:33 - mmengine - INFO - Iter(train) [1960/4000]  lr: 5.4565e-06  eta: 0:05:52  time: 0.1749  data_time: 0.0075  memory: 2618  loss: 1.7698  decode.acc_seg: 77.7205  decode.loss_ce: 0.6669  decode.loss_dilhin: 1.1029
+2026/11/11 16:07:37 - mmengine - INFO - Iter(train) [1980/4000]  lr: 5.4083e-06  eta: 0:05:48  time: 0.1720  data_time: 0.0080  memory: 2618  loss: 1.7379  decode.acc_seg: 52.7603  decode.loss_ce: 0.6579  decode.loss_dilhin: 1.0800
+2026/11/11 16:07:40 - mmengine - INFO - Exp name: 20261111_160051
+2026/11/11 16:07:40 - mmengine - INFO - Iter(train) [2000/4000]  lr: 5.3601e-06  eta: 0:05:44  time: 0.1088  data_time: 0.0076  memory: 2618  loss: 1.6630  decode.acc_seg: 64.3548  decode.loss_ce: 0.5912  decode.loss_dilhin: 1.0718
+2026/11/11 16:07:40 - mmengine - INFO - Saving checkpoint at 2000 iterations
+2026/11/11 16:07:52 - mmengine - INFO - Iter(val) [ 20/106]    eta: 0:00:39  time: 0.4582  data_time: 0.0100  memory: 1295  
+2026/11/11 16:08:02 - mmengine - INFO - Iter(val) [ 40/106]    eta: 0:00:30  time: 0.4635  data_time: 0.0103  memory: 1295  
+2026/11/11 16:08:11 - mmengine - INFO - Iter(val) [ 60/106]    eta: 0:00:20  time: 0.4528  data_time: 0.0099  memory: 1295  
+2026/11/11 16:08:19 - mmengine - INFO - Iter(val) [ 80/106]    eta: 0:00:11  time: 0.4484  data_time: 0.0100  memory: 1295  
+2026/11/11 16:08:28 - mmengine - INFO - Iter(val) [100/106]    eta: 0:00:02  time: 0.4533  data_time: 0.0102  memory: 1295  
+2026/11/11 16:08:31 - mmengine - INFO - per class results:
+2026/11/11 16:08:31 - mmengine - INFO - 
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 85.58 | 91.67 |
+|    sidewalk   | 58.29 | 66.24 |
+|    building   | 59.38 | 88.48 |
+|      wall     | 26.84 | 38.57 |
+|     fence     | 28.75 | 41.34 |
+|      pole     | 34.87 |  40.0 |
+| traffic light | 44.24 | 63.56 |
+|  traffic sign | 22.56 | 23.61 |
+|   vegetation  |  60.0 | 69.95 |
+|    terrain    |  0.8  |  0.81 |
+|      sky      |  67.0 | 79.52 |
+|     person    | 27.36 | 29.74 |
+|     rider     |  4.8  |  4.99 |
+|      car      |  54.3 |  73.7 |
+|     truck     |  1.83 | 63.92 |
+|      bus      |  0.0  |  nan  |
+|     train     | 45.08 | 63.01 |
+|   motorcycle  |  2.57 |  2.64 |
+|    bicycle    | 12.15 | 12.31 |
++---------------+-------+-------+
+2026/11/11 16:08:31 - mmengine - INFO - Iter(val) [106/106]    aAcc: 77.7900  mIoU: 33.4900  mAcc: 47.4500  matrix_mIoU: 33.4900  data_time: 0.0107  time: 0.4495
+2026/11/11 16:08:34 - mmengine - INFO - Iter(train) [2020/4000]  lr: 5.3118e-06  eta: 0:05:41  time: 0.1762  data_time: 0.0081  memory: 2618  loss: 1.6613  decode.acc_seg: 46.1632  decode.loss_ce: 0.5665  decode.loss_dilhin: 1.0948
+2026/11/11 16:08:38 - mmengine - INFO - Iter(train) [2040/4000]  lr: 5.2635e-06  eta: 0:05:38  time: 0.1741  data_time: 0.0076  memory: 2618  loss: 1.7152  decode.acc_seg: 83.9745  decode.loss_ce: 0.6189  decode.loss_dilhin: 1.0963
+2026/11/11 16:08:41 - mmengine - INFO - Iter(train) [2060/4000]  lr: 5.2151e-06  eta: 0:05:34  time: 0.1720  data_time: 0.0073  memory: 2618  loss: 1.6040  decode.acc_seg: 86.7096  decode.loss_ce: 0.5205  decode.loss_dilhin: 1.0835
+2026/11/11 16:08:44 - mmengine - INFO - Iter(train) [2080/4000]  lr: 5.1667e-06  eta: 0:05:30  time: 0.1738  data_time: 0.0078  memory: 2618  loss: 1.8435  decode.acc_seg: 40.7807  decode.loss_ce: 0.8552  decode.loss_dilhin: 0.9883
+2026/11/11 16:08:48 - mmengine - INFO - Iter(train) [2100/4000]  lr: 5.1183e-06  eta: 0:05:27  time: 0.1721  data_time: 0.0076  memory: 2618  loss: 1.7243  decode.acc_seg: 88.4855  decode.loss_ce: 0.6308  decode.loss_dilhin: 1.0935
+2026/11/11 16:08:51 - mmengine - INFO - Iter(train) [2120/4000]  lr: 5.0697e-06  eta: 0:05:23  time: 0.1725  data_time: 0.0073  memory: 2618  loss: 1.6445  decode.acc_seg: 95.8624  decode.loss_ce: 0.5545  decode.loss_dilhin: 1.0900
+2026/11/11 16:08:55 - mmengine - INFO - Iter(train) [2140/4000]  lr: 5.0212e-06  eta: 0:05:20  time: 0.1734  data_time: 0.0078  memory: 2618  loss: 1.8007  decode.acc_seg: 70.8734  decode.loss_ce: 0.7518  decode.loss_dilhin: 1.0489
+2026/11/11 16:08:58 - mmengine - INFO - Iter(train) [2160/4000]  lr: 4.9726e-06  eta: 0:05:16  time: 0.1724  data_time: 0.0074  memory: 2618  loss: 1.6475  decode.acc_seg: 86.7305  decode.loss_ce: 0.6266  decode.loss_dilhin: 1.0209
+2026/11/11 16:09:02 - mmengine - INFO - Iter(train) [2180/4000]  lr: 4.9239e-06  eta: 0:05:13  time: 0.1758  data_time: 0.0083  memory: 2618  loss: 1.8470  decode.acc_seg: 62.6220  decode.loss_ce: 0.8045  decode.loss_dilhin: 1.0424
+2026/11/11 16:09:05 - mmengine - INFO - Iter(train) [2200/4000]  lr: 4.8752e-06  eta: 0:05:10  time: 0.1745  data_time: 0.0076  memory: 2618  loss: 1.7159  decode.acc_seg: 85.9812  decode.loss_ce: 0.6578  decode.loss_dilhin: 1.0581
+2026/11/11 16:09:09 - mmengine - INFO - Iter(train) [2220/4000]  lr: 4.8264e-06  eta: 0:05:06  time: 0.1738  data_time: 0.0080  memory: 2618  loss: 1.4180  decode.acc_seg: 87.4726  decode.loss_ce: 0.3829  decode.loss_dilhin: 1.0351
+2026/11/11 16:09:12 - mmengine - INFO - Iter(train) [2240/4000]  lr: 4.7775e-06  eta: 0:05:03  time: 0.1828  data_time: 0.0077  memory: 2618  loss: 1.9806  decode.acc_seg: 50.1982  decode.loss_ce: 0.8777  decode.loss_dilhin: 1.1028
+2026/11/11 16:09:15 - mmengine - INFO - Iter(train) [2260/4000]  lr: 4.7287e-06  eta: 0:04:59  time: 0.1178  data_time: 0.0073  memory: 2618  loss: 1.9759  decode.acc_seg: 64.1364  decode.loss_ce: 0.9245  decode.loss_dilhin: 1.0514
+2026/11/11 16:09:19 - mmengine - INFO - Iter(train) [2280/4000]  lr: 4.6797e-06  eta: 0:04:56  time: 0.1755  data_time: 0.0083  memory: 2618  loss: 1.7833  decode.acc_seg: 79.6268  decode.loss_ce: 0.6392  decode.loss_dilhin: 1.1441
+2026/11/11 16:09:22 - mmengine - INFO - Iter(train) [2300/4000]  lr: 4.6307e-06  eta: 0:04:52  time: 0.1745  data_time: 0.0075  memory: 2618  loss: 1.5521  decode.acc_seg: 79.4879  decode.loss_ce: 0.4949  decode.loss_dilhin: 1.0572
+2026/11/11 16:09:26 - mmengine - INFO - Iter(train) [2320/4000]  lr: 4.5817e-06  eta: 0:04:49  time: 0.1736  data_time: 0.0077  memory: 2618  loss: 1.7363  decode.acc_seg: 84.9341  decode.loss_ce: 0.5640  decode.loss_dilhin: 1.1723
+2026/11/11 16:09:29 - mmengine - INFO - Iter(train) [2340/4000]  lr: 4.5325e-06  eta: 0:04:45  time: 0.1743  data_time: 0.0076  memory: 2618  loss: 1.6710  decode.acc_seg: 88.0437  decode.loss_ce: 0.6534  decode.loss_dilhin: 1.0175
+2026/11/11 16:09:32 - mmengine - INFO - Iter(train) [2360/4000]  lr: 4.4834e-06  eta: 0:04:42  time: 0.1751  data_time: 0.0080  memory: 2618  loss: 1.8425  decode.acc_seg: 83.4001  decode.loss_ce: 0.7912  decode.loss_dilhin: 1.0513
+2026/11/11 16:09:36 - mmengine - INFO - Iter(train) [2380/4000]  lr: 4.4341e-06  eta: 0:04:38  time: 0.1739  data_time: 0.0076  memory: 2618  loss: 1.5706  decode.acc_seg: 88.9201  decode.loss_ce: 0.4927  decode.loss_dilhin: 1.0779
+2026/11/11 16:09:39 - mmengine - INFO - Iter(train) [2400/4000]  lr: 4.3848e-06  eta: 0:04:35  time: 0.1763  data_time: 0.0084  memory: 2618  loss: 1.7375  decode.acc_seg: 72.4895  decode.loss_ce: 0.6671  decode.loss_dilhin: 1.0704
+2026/11/11 16:09:43 - mmengine - INFO - Iter(train) [2420/4000]  lr: 4.3355e-06  eta: 0:04:32  time: 0.1763  data_time: 0.0077  memory: 2618  loss: 1.6585  decode.acc_seg: 88.6040  decode.loss_ce: 0.5364  decode.loss_dilhin: 1.1221
+2026/11/11 16:09:46 - mmengine - INFO - Iter(train) [2440/4000]  lr: 4.2860e-06  eta: 0:04:28  time: 0.1108  data_time: -0.0568  memory: 2618  loss: 1.7466  decode.acc_seg: 82.8657  decode.loss_ce: 0.6398  decode.loss_dilhin: 1.1068
+2026/11/11 16:09:49 - mmengine - INFO - Iter(train) [2460/4000]  lr: 4.2366e-06  eta: 0:04:24  time: 0.1754  data_time: 0.0081  memory: 2618  loss: 1.8406  decode.acc_seg: 60.2669  decode.loss_ce: 0.7884  decode.loss_dilhin: 1.0521
+2026/11/11 16:09:53 - mmengine - INFO - Iter(train) [2480/4000]  lr: 4.1870e-06  eta: 0:04:21  time: 0.1766  data_time: 0.0074  memory: 2618  loss: 1.8086  decode.acc_seg: 95.7126  decode.loss_ce: 0.7552  decode.loss_dilhin: 1.0534
+2026/11/11 16:09:56 - mmengine - INFO - Iter(train) [2500/4000]  lr: 4.1374e-06  eta: 0:04:18  time: 0.1721  data_time: 0.0077  memory: 2618  loss: 1.7819  decode.acc_seg: 83.8310  decode.loss_ce: 0.7053  decode.loss_dilhin: 1.0766
+2026/11/11 16:10:00 - mmengine - INFO - Iter(train) [2520/4000]  lr: 4.0877e-06  eta: 0:04:14  time: 0.1754  data_time: 0.0075  memory: 2618  loss: 1.6477  decode.acc_seg: 71.1711  decode.loss_ce: 0.6123  decode.loss_dilhin: 1.0353
+2026/11/11 16:10:03 - mmengine - INFO - Iter(train) [2540/4000]  lr: 4.0380e-06  eta: 0:04:11  time: 0.1728  data_time: 0.0078  memory: 2618  loss: 1.7154  decode.acc_seg: 67.9543  decode.loss_ce: 0.6790  decode.loss_dilhin: 1.0364
+2026/11/11 16:10:07 - mmengine - INFO - Iter(train) [2560/4000]  lr: 3.9881e-06  eta: 0:04:07  time: 0.1744  data_time: 0.0079  memory: 2618  loss: 1.7638  decode.acc_seg: 88.1930  decode.loss_ce: 0.6938  decode.loss_dilhin: 1.0700
+2026/11/11 16:10:10 - mmengine - INFO - Iter(train) [2580/4000]  lr: 3.9382e-06  eta: 0:04:04  time: 0.1749  data_time: 0.0074  memory: 2618  loss: 1.7693  decode.acc_seg: 88.7572  decode.loss_ce: 0.7385  decode.loss_dilhin: 1.0308
+2026/11/11 16:10:14 - mmengine - INFO - Iter(train) [2600/4000]  lr: 3.8883e-06  eta: 0:04:01  time: 0.1754  data_time: 0.0086  memory: 2618  loss: 1.8655  decode.acc_seg: 60.6415  decode.loss_ce: 0.7335  decode.loss_dilhin: 1.1320
+2026/11/11 16:10:17 - mmengine - INFO - Iter(train) [2620/4000]  lr: 3.8383e-06  eta: 0:03:57  time: 0.1758  data_time: 0.0075  memory: 2618  loss: 1.6964  decode.acc_seg: 74.2574  decode.loss_ce: 0.6691  decode.loss_dilhin: 1.0273
+2026/11/11 16:10:20 - mmengine - INFO - Iter(train) [2640/4000]  lr: 3.7882e-06  eta: 0:03:53  time: 0.1741  data_time: 0.0075  memory: 2618  loss: 1.8686  decode.acc_seg: 80.2328  decode.loss_ce: 0.7423  decode.loss_dilhin: 1.1263
+2026/11/11 16:10:24 - mmengine - INFO - Iter(train) [2660/4000]  lr: 3.7380e-06  eta: 0:03:50  time: 0.1759  data_time: 0.0074  memory: 2618  loss: 1.7124  decode.acc_seg: 85.5768  decode.loss_ce: 0.6329  decode.loss_dilhin: 1.0795
+2026/11/11 16:10:27 - mmengine - INFO - Iter(train) [2680/4000]  lr: 3.6877e-06  eta: 0:03:47  time: 0.1730  data_time: 0.0077  memory: 2618  loss: 1.6758  decode.acc_seg: 75.1914  decode.loss_ce: 0.5928  decode.loss_dilhin: 1.0830
+2026/11/11 16:10:31 - mmengine - INFO - Iter(train) [2700/4000]  lr: 3.6374e-06  eta: 0:03:43  time: 0.1797  data_time: 0.0076  memory: 2618  loss: 1.6943  decode.acc_seg: 75.4053  decode.loss_ce: 0.6176  decode.loss_dilhin: 1.0767
+2026/11/11 16:10:34 - mmengine - INFO - Iter(train) [2720/4000]  lr: 3.5870e-06  eta: 0:03:40  time: 0.1752  data_time: 0.0077  memory: 2618  loss: 1.7827  decode.acc_seg: 86.6012  decode.loss_ce: 0.6757  decode.loss_dilhin: 1.1071
+2026/11/11 16:10:38 - mmengine - INFO - Iter(train) [2740/4000]  lr: 3.5365e-06  eta: 0:03:36  time: 0.1754  data_time: 0.0078  memory: 2618  loss: 1.8446  decode.acc_seg: 79.5915  decode.loss_ce: 0.7440  decode.loss_dilhin: 1.1006
+2026/11/11 16:10:41 - mmengine - INFO - Iter(train) [2760/4000]  lr: 3.4860e-06  eta: 0:03:33  time: 0.1749  data_time: 0.0076  memory: 2618  loss: 1.7401  decode.acc_seg: 78.6875  decode.loss_ce: 0.6647  decode.loss_dilhin: 1.0754
+2026/11/11 16:10:45 - mmengine - INFO - Iter(train) [2780/4000]  lr: 3.4353e-06  eta: 0:03:30  time: 0.1744  data_time: 0.0074  memory: 2618  loss: 1.6939  decode.acc_seg: 60.3973  decode.loss_ce: 0.6033  decode.loss_dilhin: 1.0906
+2026/11/11 16:10:48 - mmengine - INFO - Iter(train) [2800/4000]  lr: 3.3846e-06  eta: 0:03:26  time: 0.1737  data_time: 0.0074  memory: 2618  loss: 1.7028  decode.acc_seg: 76.1001  decode.loss_ce: 0.6795  decode.loss_dilhin: 1.0233
+2026/11/11 16:10:51 - mmengine - INFO - Iter(train) [2820/4000]  lr: 3.3338e-06  eta: 0:03:22  time: 0.1743  data_time: 0.0078  memory: 2618  loss: 1.6511  decode.acc_seg: 89.1918  decode.loss_ce: 0.5933  decode.loss_dilhin: 1.0578
+2026/11/11 16:10:55 - mmengine - INFO - Iter(train) [2840/4000]  lr: 3.2829e-06  eta: 0:03:19  time: 0.1731  data_time: 0.0075  memory: 2618  loss: 1.6836  decode.acc_seg: 93.3003  decode.loss_ce: 0.5645  decode.loss_dilhin: 1.1191
+2026/11/11 16:10:58 - mmengine - INFO - Iter(train) [2860/4000]  lr: 3.2319e-06  eta: 0:03:16  time: 0.1735  data_time: 0.0076  memory: 2618  loss: 1.7024  decode.acc_seg: 85.6512  decode.loss_ce: 0.6328  decode.loss_dilhin: 1.0697
+2026/11/11 16:11:02 - mmengine - INFO - Iter(train) [2880/4000]  lr: 3.1808e-06  eta: 0:03:12  time: 0.1742  data_time: 0.0075  memory: 2618  loss: 1.7258  decode.acc_seg: 77.5313  decode.loss_ce: 0.6868  decode.loss_dilhin: 1.0389
+2026/11/11 16:11:05 - mmengine - INFO - Iter(train) [2900/4000]  lr: 3.1297e-06  eta: 0:03:09  time: 0.1753  data_time: 0.0080  memory: 2618  loss: 1.7808  decode.acc_seg: 71.2794  decode.loss_ce: 0.7106  decode.loss_dilhin: 1.0702
+2026/11/11 16:11:09 - mmengine - INFO - Iter(train) [2920/4000]  lr: 3.0784e-06  eta: 0:03:05  time: 0.1732  data_time: 0.0074  memory: 2618  loss: 1.8032  decode.acc_seg: 89.7383  decode.loss_ce: 0.7380  decode.loss_dilhin: 1.0652
+2026/11/11 16:11:12 - mmengine - INFO - Iter(train) [2940/4000]  lr: 3.0270e-06  eta: 0:03:02  time: 0.1734  data_time: 0.0077  memory: 2618  loss: 1.7574  decode.acc_seg: 58.7268  decode.loss_ce: 0.6443  decode.loss_dilhin: 1.1130
+2026/11/11 16:11:15 - mmengine - INFO - Iter(train) [2960/4000]  lr: 2.9756e-06  eta: 0:02:58  time: 0.1738  data_time: 0.0076  memory: 2618  loss: 1.9281  decode.acc_seg: 78.7769  decode.loss_ce: 0.8008  decode.loss_dilhin: 1.1273
+2026/11/11 16:11:19 - mmengine - INFO - Iter(train) [2980/4000]  lr: 2.9240e-06  eta: 0:02:55  time: 0.1764  data_time: 0.0079  memory: 2618  loss: 1.6688  decode.acc_seg: 73.2645  decode.loss_ce: 0.6053  decode.loss_dilhin: 1.0635
+2026/11/11 16:11:22 - mmengine - INFO - Exp name: 20261111_160051
+2026/11/11 16:11:22 - mmengine - INFO - Iter(train) [3000/4000]  lr: 2.8724e-06  eta: 0:02:51  time: 0.1124  data_time: -0.0547  memory: 2618  loss: 1.8358  decode.acc_seg: 56.6349  decode.loss_ce: 0.8190  decode.loss_dilhin: 1.0168
+2026/11/11 16:11:22 - mmengine - INFO - Saving checkpoint at 3000 iterations
+2026/11/11 16:11:34 - mmengine - INFO - Iter(val) [ 20/106]    eta: 0:00:40  time: 0.4583  data_time: 0.0096  memory: 1295  
+2026/11/11 16:11:43 - mmengine - INFO - Iter(val) [ 40/106]    eta: 0:00:30  time: 0.4594  data_time: 0.0097  memory: 1295  
+2026/11/11 16:11:52 - mmengine - INFO - Iter(val) [ 60/106]    eta: 0:00:21  time: 0.4502  data_time: 0.0097  memory: 1295  
+2026/11/11 16:12:00 - mmengine - INFO - Iter(val) [ 80/106]    eta: 0:00:11  time: 0.4532  data_time: 0.0096  memory: 1295  
+2026/11/11 16:12:10 - mmengine - INFO - Iter(val) [100/106]    eta: 0:00:02  time: 0.4747  data_time: 0.0098  memory: 1295  
+2026/11/11 16:12:13 - mmengine - INFO - per class results:
+2026/11/11 16:12:13 - mmengine - INFO - 
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 86.89 | 93.96 |
+|    sidewalk   | 60.77 | 70.77 |
+|    building   | 62.92 | 85.28 |
+|      wall     | 32.48 |  46.7 |
+|     fence     | 31.81 |  44.6 |
+|      pole     | 37.39 | 43.11 |
+| traffic light |  46.0 | 66.14 |
+|  traffic sign | 21.64 | 22.42 |
+|   vegetation  | 62.42 | 77.22 |
+|    terrain    |  0.39 |  0.39 |
+|      sky      | 66.81 | 75.71 |
+|     person    | 28.47 | 30.84 |
+|     rider     |  4.17 |  4.44 |
+|      car      | 55.91 | 75.88 |
+|     truck     |  3.94 | 60.53 |
+|      bus      |  0.0  |  nan  |
+|     train     | 39.81 | 74.56 |
+|   motorcycle  |  3.56 |  3.84 |
+|    bicycle    | 11.54 | 11.69 |
++---------------+-------+-------+
+2026/11/11 16:12:13 - mmengine - INFO - Iter(val) [106/106]    aAcc: 79.2700  mIoU: 34.5800  mAcc: 49.3400  matrix_mIoU: 34.5800  data_time: 0.0101  time: 0.4534
+2026/11/11 16:12:16 - mmengine - INFO - Iter(train) [3020/4000]  lr: 2.8206e-06  eta: 0:02:48  time: 0.1773  data_time: 0.0076  memory: 2618  loss: 1.7248  decode.acc_seg: 71.5040  decode.loss_ce: 0.6620  decode.loss_dilhin: 1.0628
+2026/11/11 16:12:20 - mmengine - INFO - Iter(train) [3040/4000]  lr: 2.7688e-06  eta: 0:02:45  time: 0.1752  data_time: 0.0085  memory: 2618  loss: 1.7600  decode.acc_seg: 58.7495  decode.loss_ce: 0.6696  decode.loss_dilhin: 1.0904
+2026/11/11 16:12:23 - mmengine - INFO - Iter(train) [3060/4000]  lr: 2.7168e-06  eta: 0:02:41  time: 0.1760  data_time: 0.0076  memory: 2618  loss: 1.6514  decode.acc_seg: 89.1506  decode.loss_ce: 0.5720  decode.loss_dilhin: 1.0795
+2026/11/11 16:12:26 - mmengine - INFO - Iter(train) [3080/4000]  lr: 2.6647e-06  eta: 0:02:38  time: 0.1745  data_time: 0.0076  memory: 2618  loss: 1.8858  decode.acc_seg: 95.4233  decode.loss_ce: 0.8305  decode.loss_dilhin: 1.0553
+2026/11/11 16:12:29 - mmengine - INFO - Iter(train) [3100/4000]  lr: 2.6125e-06  eta: 0:02:34  time: 0.1751  data_time: 0.0076  memory: 2618  loss: 1.5589  decode.acc_seg: 63.7180  decode.loss_ce: 0.5251  decode.loss_dilhin: 1.0338
+2026/11/11 16:12:33 - mmengine - INFO - Iter(train) [3120/4000]  lr: 2.5602e-06  eta: 0:02:31  time: 0.1819  data_time: 0.0079  memory: 2618  loss: 1.5684  decode.acc_seg: 84.8917  decode.loss_ce: 0.4989  decode.loss_dilhin: 1.0695
+2026/11/11 16:12:37 - mmengine - INFO - Iter(train) [3140/4000]  lr: 2.5078e-06  eta: 0:02:27  time: 0.1754  data_time: 0.0074  memory: 2618  loss: 1.5965  decode.acc_seg: 73.7756  decode.loss_ce: 0.4761  decode.loss_dilhin: 1.1204
+2026/11/11 16:12:40 - mmengine - INFO - Iter(train) [3160/4000]  lr: 2.4552e-06  eta: 0:02:24  time: 0.1743  data_time: 0.0077  memory: 2618  loss: 1.6961  decode.acc_seg: 78.9130  decode.loss_ce: 0.5704  decode.loss_dilhin: 1.1257
+2026/11/11 16:12:44 - mmengine - INFO - Iter(train) [3180/4000]  lr: 2.4026e-06  eta: 0:02:21  time: 0.1776  data_time: 0.0082  memory: 2618  loss: 1.6182  decode.acc_seg: 89.9937  decode.loss_ce: 0.5455  decode.loss_dilhin: 1.0727
+2026/11/11 16:12:47 - mmengine - INFO - Iter(train) [3200/4000]  lr: 2.3498e-06  eta: 0:02:17  time: 0.1751  data_time: 0.0076  memory: 2618  loss: 1.7695  decode.acc_seg: 67.1586  decode.loss_ce: 0.7068  decode.loss_dilhin: 1.0628
+2026/11/11 16:12:51 - mmengine - INFO - Iter(train) [3220/4000]  lr: 2.2968e-06  eta: 0:02:14  time: 0.1770  data_time: 0.0075  memory: 2618  loss: 1.7878  decode.acc_seg: 58.8077  decode.loss_ce: 0.7391  decode.loss_dilhin: 1.0487
+2026/11/11 16:12:54 - mmengine - INFO - Iter(train) [3240/4000]  lr: 2.2438e-06  eta: 0:02:10  time: 0.1762  data_time: 0.0079  memory: 2618  loss: 1.8054  decode.acc_seg: 64.7917  decode.loss_ce: 0.7235  decode.loss_dilhin: 1.0819
+2026/11/11 16:12:57 - mmengine - INFO - Iter(train) [3260/4000]  lr: 2.1905e-06  eta: 0:02:07  time: 0.1109  data_time: 0.0074  memory: 2618  loss: 1.8479  decode.acc_seg: 67.5895  decode.loss_ce: 0.7514  decode.loss_dilhin: 1.0965
+2026/11/11 16:13:01 - mmengine - INFO - Iter(train) [3280/4000]  lr: 2.1372e-06  eta: 0:02:03  time: 0.1741  data_time: 0.0073  memory: 2618  loss: 1.8590  decode.acc_seg: 92.8413  decode.loss_ce: 0.7392  decode.loss_dilhin: 1.1199
+2026/11/11 16:13:04 - mmengine - INFO - Iter(train) [3300/4000]  lr: 2.0837e-06  eta: 0:02:00  time: 0.1744  data_time: 0.0072  memory: 2618  loss: 1.7317  decode.acc_seg: 67.3721  decode.loss_ce: 0.5784  decode.loss_dilhin: 1.1533
+2026/11/11 16:13:07 - mmengine - INFO - Iter(train) [3320/4000]  lr: 2.0300e-06  eta: 0:01:56  time: 0.1734  data_time: 0.0075  memory: 2618  loss: 1.6521  decode.acc_seg: 80.6544  decode.loss_ce: 0.5112  decode.loss_dilhin: 1.1409
+2026/11/11 16:13:11 - mmengine - INFO - Iter(train) [3340/4000]  lr: 1.9762e-06  eta: 0:01:53  time: 0.1740  data_time: 0.0074  memory: 2618  loss: 1.6585  decode.acc_seg: 80.7507  decode.loss_ce: 0.6350  decode.loss_dilhin: 1.0235
+2026/11/11 16:13:14 - mmengine - INFO - Iter(train) [3360/4000]  lr: 1.9222e-06  eta: 0:01:50  time: 0.1750  data_time: 0.0081  memory: 2618  loss: 1.5813  decode.acc_seg: 85.1282  decode.loss_ce: 0.4900  decode.loss_dilhin: 1.0913
+2026/11/11 16:13:18 - mmengine - INFO - Iter(train) [3380/4000]  lr: 1.8681e-06  eta: 0:01:46  time: 0.1742  data_time: 0.0075  memory: 2618  loss: 1.7650  decode.acc_seg: 69.1051  decode.loss_ce: 0.6821  decode.loss_dilhin: 1.0828
+2026/11/11 16:13:21 - mmengine - INFO - Iter(train) [3400/4000]  lr: 1.8138e-06  eta: 0:01:43  time: 0.1733  data_time: 0.0077  memory: 2618  loss: 1.6445  decode.acc_seg: 87.2402  decode.loss_ce: 0.5831  decode.loss_dilhin: 1.0614
+2026/11/11 16:13:25 - mmengine - INFO - Iter(train) [3420/4000]  lr: 1.7593e-06  eta: 0:01:39  time: 0.1758  data_time: 0.0074  memory: 2618  loss: 1.6434  decode.acc_seg: 64.8112  decode.loss_ce: 0.5968  decode.loss_dilhin: 1.0467
+2026/11/11 16:13:28 - mmengine - INFO - Iter(train) [3440/4000]  lr: 1.7046e-06  eta: 0:01:36  time: 0.1124  data_time: 0.0074  memory: 2618  loss: 1.8729  decode.acc_seg: 74.4798  decode.loss_ce: 0.7992  decode.loss_dilhin: 1.0738
+2026/11/11 16:13:31 - mmengine - INFO - Iter(train) [3460/4000]  lr: 1.6497e-06  eta: 0:01:32  time: 0.1769  data_time: 0.0076  memory: 2618  loss: 2.0542  decode.acc_seg: 31.5275  decode.loss_ce: 1.0302  decode.loss_dilhin: 1.0241
+2026/11/11 16:13:35 - mmengine - INFO - Iter(train) [3480/4000]  lr: 1.5946e-06  eta: 0:01:29  time: 0.1725  data_time: 0.0076  memory: 2618  loss: 1.8589  decode.acc_seg: 58.8550  decode.loss_ce: 0.7992  decode.loss_dilhin: 1.0597
+2026/11/11 16:13:38 - mmengine - INFO - Iter(train) [3500/4000]  lr: 1.5393e-06  eta: 0:01:25  time: 0.1744  data_time: 0.0074  memory: 2618  loss: 1.8763  decode.acc_seg: 81.2550  decode.loss_ce: 0.8224  decode.loss_dilhin: 1.0539
+2026/11/11 16:13:42 - mmengine - INFO - Iter(train) [3520/4000]  lr: 1.4838e-06  eta: 0:01:22  time: 0.1755  data_time: 0.0076  memory: 2618  loss: 1.6129  decode.acc_seg: 82.2888  decode.loss_ce: 0.5971  decode.loss_dilhin: 1.0158
+2026/11/11 16:13:45 - mmengine - INFO - Iter(train) [3540/4000]  lr: 1.4280e-06  eta: 0:01:19  time: 0.1752  data_time: 0.0077  memory: 2618  loss: 1.5742  decode.acc_seg: 83.0103  decode.loss_ce: 0.5237  decode.loss_dilhin: 1.0505
+2026/11/11 16:13:49 - mmengine - INFO - Iter(train) [3560/4000]  lr: 1.3720e-06  eta: 0:01:15  time: 0.1766  data_time: 0.0081  memory: 2618  loss: 1.7798  decode.acc_seg: 84.8906  decode.loss_ce: 0.6624  decode.loss_dilhin: 1.1175
+2026/11/11 16:13:52 - mmengine - INFO - Iter(train) [3580/4000]  lr: 1.3157e-06  eta: 0:01:12  time: 0.1747  data_time: 0.0073  memory: 2618  loss: 1.7398  decode.acc_seg: 62.0978  decode.loss_ce: 0.5936  decode.loss_dilhin: 1.1462
+2026/11/11 16:13:56 - mmengine - INFO - Iter(train) [3600/4000]  lr: 1.2592e-06  eta: 0:01:08  time: 0.1755  data_time: 0.0077  memory: 2618  loss: 1.6989  decode.acc_seg: 81.3251  decode.loss_ce: 0.6838  decode.loss_dilhin: 1.0151
+2026/11/11 16:13:59 - mmengine - INFO - Iter(train) [3620/4000]  lr: 1.2024e-06  eta: 0:01:05  time: 0.1744  data_time: 0.0075  memory: 2618  loss: 1.6358  decode.acc_seg: 78.2683  decode.loss_ce: 0.6002  decode.loss_dilhin: 1.0357
+2026/11/11 16:14:02 - mmengine - INFO - Iter(train) [3640/4000]  lr: 1.1453e-06  eta: 0:01:01  time: 0.1742  data_time: 0.0080  memory: 2618  loss: 1.8247  decode.acc_seg: 56.6746  decode.loss_ce: 0.7985  decode.loss_dilhin: 1.0262
+2026/11/11 16:14:06 - mmengine - INFO - Iter(train) [3660/4000]  lr: 1.0879e-06  eta: 0:00:58  time: 0.1747  data_time: 0.0075  memory: 2618  loss: 1.6069  decode.acc_seg: 81.8833  decode.loss_ce: 0.5363  decode.loss_dilhin: 1.0707
+2026/11/11 16:14:09 - mmengine - INFO - Iter(train) [3680/4000]  lr: 1.0301e-06  eta: 0:00:54  time: 0.1738  data_time: 0.0079  memory: 2618  loss: 1.7265  decode.acc_seg: 79.8761  decode.loss_ce: 0.6647  decode.loss_dilhin: 1.0618
+2026/11/11 16:14:13 - mmengine - INFO - Iter(train) [3700/4000]  lr: 9.7197e-07  eta: 0:00:51  time: 0.1732  data_time: 0.0075  memory: 2618  loss: 1.8025  decode.acc_seg: 84.1298  decode.loss_ce: 0.6053  decode.loss_dilhin: 1.1971
+2026/11/11 16:14:16 - mmengine - INFO - Iter(train) [3720/4000]  lr: 9.1345e-07  eta: 0:00:48  time: 0.1757  data_time: 0.0081  memory: 2618  loss: 1.7742  decode.acc_seg: 86.8677  decode.loss_ce: 0.6720  decode.loss_dilhin: 1.1023
+2026/11/11 16:14:20 - mmengine - INFO - Iter(train) [3740/4000]  lr: 8.5452e-07  eta: 0:00:44  time: 0.1740  data_time: 0.0079  memory: 2618  loss: 1.9206  decode.acc_seg: 47.9004  decode.loss_ce: 0.8663  decode.loss_dilhin: 1.0543
+2026/11/11 16:14:23 - mmengine - INFO - Iter(train) [3760/4000]  lr: 7.9512e-07  eta: 0:00:41  time: 0.1777  data_time: 0.0084  memory: 2618  loss: 1.6754  decode.acc_seg: 58.4885  decode.loss_ce: 0.6268  decode.loss_dilhin: 1.0486
+2026/11/11 16:14:27 - mmengine - INFO - Iter(train) [3780/4000]  lr: 7.3523e-07  eta: 0:00:37  time: 0.1729  data_time: 0.0077  memory: 2618  loss: 1.5834  decode.acc_seg: 88.1929  decode.loss_ce: 0.5661  decode.loss_dilhin: 1.0173
+2026/11/11 16:14:30 - mmengine - INFO - Iter(train) [3800/4000]  lr: 6.7479e-07  eta: 0:00:34  time: 0.1754  data_time: 0.0083  memory: 2618  loss: 1.7919  decode.acc_seg: 74.5920  decode.loss_ce: 0.7429  decode.loss_dilhin: 1.0490
+2026/11/11 16:14:33 - mmengine - INFO - Iter(train) [3820/4000]  lr: 6.1375e-07  eta: 0:00:30  time: 0.1748  data_time: 0.0077  memory: 2618  loss: 1.9413  decode.acc_seg: 64.4853  decode.loss_ce: 0.8201  decode.loss_dilhin: 1.1212
+2026/11/11 16:14:37 - mmengine - INFO - Iter(train) [3840/4000]  lr: 5.5202e-07  eta: 0:00:27  time: 0.1738  data_time: 0.0076  memory: 2618  loss: 1.6276  decode.acc_seg: 67.8156  decode.loss_ce: 0.5792  decode.loss_dilhin: 1.0483
+2026/11/11 16:14:40 - mmengine - INFO - Iter(train) [3860/4000]  lr: 4.8951e-07  eta: 0:00:24  time: 0.1757  data_time: 0.0077  memory: 2618  loss: 1.8266  decode.acc_seg: 60.1071  decode.loss_ce: 0.7712  decode.loss_dilhin: 1.0555
+2026/11/11 16:14:44 - mmengine - INFO - Iter(train) [3880/4000]  lr: 4.2610e-07  eta: 0:00:20  time: 0.1756  data_time: 0.0076  memory: 2618  loss: 1.6797  decode.acc_seg: 76.2620  decode.loss_ce: 0.6326  decode.loss_dilhin: 1.0471
+2026/11/11 16:14:47 - mmengine - INFO - Iter(train) [3900/4000]  lr: 3.6161e-07  eta: 0:00:17  time: 0.1759  data_time: 0.0075  memory: 2618  loss: 1.6921  decode.acc_seg: 62.0024  decode.loss_ce: 0.5902  decode.loss_dilhin: 1.1019
+2026/11/11 16:14:51 - mmengine - INFO - Iter(train) [3920/4000]  lr: 2.9582e-07  eta: 0:00:13  time: 0.1744  data_time: 0.0078  memory: 2618  loss: 1.7038  decode.acc_seg: 66.6812  decode.loss_ce: 0.7326  decode.loss_dilhin: 0.9712
+2026/11/11 16:14:54 - mmengine - INFO - Iter(train) [3940/4000]  lr: 2.2834e-07  eta: 0:00:10  time: 0.1769  data_time: 0.0075  memory: 2618  loss: 1.7892  decode.acc_seg: 55.2749  decode.loss_ce: 0.7407  decode.loss_dilhin: 1.0485
+2026/11/11 16:14:58 - mmengine - INFO - Iter(train) [3960/4000]  lr: 1.5852e-07  eta: 0:00:06  time: 0.1749  data_time: 0.0077  memory: 2618  loss: 1.5676  decode.acc_seg: 60.4115  decode.loss_ce: 0.4661  decode.loss_dilhin: 1.1015
+2026/11/11 16:15:01 - mmengine - INFO - Iter(train) [3980/4000]  lr: 8.4951e-08  eta: 0:00:03  time: 0.1765  data_time: 0.0078  memory: 2618  loss: 1.7440  decode.acc_seg: 87.6947  decode.loss_ce: 0.5977  decode.loss_dilhin: 1.1463
+2026/11/11 16:15:04 - mmengine - INFO - Exp name: 20261111_160051
+2026/11/11 16:15:04 - mmengine - INFO - Iter(train) [4000/4000]  lr: 0.0000e+00  eta: 0:00:00  time: 0.1038  data_time: 0.0077  memory: 2618  loss: 1.6530  decode.acc_seg: 86.7577  decode.loss_ce: 0.5724  decode.loss_dilhin: 1.0806
+2026/11/11 16:15:04 - mmengine - INFO - Saving checkpoint at 4000 iterations
+2026/11/11 16:15:16 - mmengine - INFO - Iter(val) [ 20/106]    eta: 0:00:39  time: 0.4591  data_time: 0.0099  memory: 1295  
+2026/11/11 16:15:25 - mmengine - INFO - Iter(val) [ 40/106]    eta: 0:00:30  time: 0.4471  data_time: 0.0096  memory: 1295  
+2026/11/11 16:15:34 - mmengine - INFO - Iter(val) [ 60/106]    eta: 0:00:20  time: 0.4427  data_time: 0.0095  memory: 1295  
+2026/11/11 16:15:42 - mmengine - INFO - Iter(val) [ 80/106]    eta: 0:00:11  time: 0.4401  data_time: 0.0096  memory: 1295  
+2026/11/11 16:15:51 - mmengine - INFO - Iter(val) [100/106]    eta: 0:00:02  time: 0.4444  data_time: 0.0096  memory: 1295  
+2026/11/11 16:15:54 - mmengine - INFO - per class results:
+2026/11/11 16:15:54 - mmengine - INFO - 
++---------------+-------+-------+
+|     Class     |  IoU  |  Acc  |
++---------------+-------+-------+
+|      road     | 86.51 | 92.75 |
+|    sidewalk   | 60.74 | 69.47 |
+|    building   |  55.8 |  88.9 |
+|      wall     | 30.15 | 44.47 |
+|     fence     | 20.37 | 29.02 |
+|      pole     | 37.43 | 42.32 |
+| traffic light | 50.86 | 64.34 |
+|  traffic sign | 22.59 |  23.5 |
+|   vegetation  | 61.85 | 76.16 |
+|    terrain    |  0.73 |  0.75 |
+|      sky      | 57.58 | 62.38 |
+|     person    | 28.21 | 30.87 |
+|     rider     |  4.94 |  5.11 |
+|      car      | 58.41 | 72.48 |
+|     truck     |  3.36 | 62.58 |
+|      bus      |  0.0  |  nan  |
+|     train     | 43.09 | 71.01 |
+|   motorcycle  |  4.79 |  5.16 |
+|    bicycle    | 12.71 | 12.91 |
++---------------+-------+-------+
+2026/11/11 16:15:54 - mmengine - INFO - Iter(val) [106/106]    aAcc: 76.4100  mIoU: 33.6900  mAcc: 47.4500  matrix_mIoU: 33.6900  data_time: 0.0103  time: 0.4418

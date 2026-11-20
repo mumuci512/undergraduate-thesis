@@ -1,0 +1,21 @@
+{
+  "experiment": "segformer_b5_p1_20261117",
+  "seed": 0,
+  "source_sha256": "87a052ecf2a4913dae3a0561a95a4c6c8f603d84f2706228125f51990b4687e1",
+  "domain_order": ["A", "B", "C", "D", "E"],
+  "learning_rates": [0.000006, 0.00002, 0.00006],
+  "incremental_checkpoints": [2000, 4000],
+  "joint_checkpoints": [5000, 16000],
+  "warmup_steps": 150,
+  "poly_power": 1.0,
+  "microbatch": 1,
+  "effective_batch": 1,
+  "er_capacity_images": 200,
+  "er_replay_every": 4,
+  "selection": "FT and ER separately maximize equal-domain mean on A+B official val after Fog, tie by fewer steps then smaller lr. Lock selected lr/checkpoint for C,D,E. Joint maximizes A-E official val mean, same tie rule.",
+  "schedule": "Each lr follows one polynomial trajectory to the largest checkpoint. Earlier checkpoints are selectable training budgets on that trajectory.",
+  "data_protocol": "Entire official train is eligible. Epoch permutations cover each current-domain image. Official val selects hyperparameters. Official test reserved for final website evaluation. No train holdout.",
+  "source_stage": "Reuse full official Cityscapes-trained checkpoint. No new source training.",
+  "test_account": "registered_pending_review",
+  "checkpoint_interval": 500
+}

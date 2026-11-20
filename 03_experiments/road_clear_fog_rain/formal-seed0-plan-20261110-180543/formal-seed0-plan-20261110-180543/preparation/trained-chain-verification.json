@@ -1,0 +1,187 @@
+{
+  "status": "PASS",
+  "methods": {
+    "ft": {
+      "real_input_image": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_rain_step3_20261110-180543/rgb_anon/rain/train/GOPR0400/GOPR0400_frame_000216_rgb_anon.png",
+      "image_sha256": "cee373a04c546284f783b3d342e5e2eaf606ff943fc5a928b1c469af72f0fca5",
+      "input": "normalized top-left 512x512 RGB",
+      "parent_deployed_student_max_abs_error": 0.0,
+      "new_teacher_max_abs_error": null,
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "strict_reload_logits_bit_equal": true,
+      "Fog_resume_rejected": true,
+      "checkpoint_sha256": "da7f272aca808dd6d3958797c166550e6f4bb7fb8984c3c77d3c6446446c2f66",
+      "optimizer_active_steps_all_8": true,
+      "resume_exact_optimizer_scheduler_iter": true,
+      "strict_trained_reload_real_logits_bit_equal": true,
+      "policy_after_reload_train": true,
+      "groups": {
+        "backbone": {
+          "parameters": 318,
+          "elements": 42519392,
+          "trainable_elements": 42519392,
+          "gradient_tensors_first_step": 318,
+          "changed_parameters": 318,
+          "bn_buffers": 318,
+          "changed_bn_buffers": 318
+        },
+        "decode_head": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 5312905,
+          "gradient_tensors_first_step": 38,
+          "changed_parameters": 38,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        }
+      }
+    },
+    "gsmf": {
+      "real_input_image": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_rain_step3_20261110-180543/rgb_anon/rain/train/GOPR0400/GOPR0400_frame_000216_rgb_anon.png",
+      "image_sha256": "cee373a04c546284f783b3d342e5e2eaf606ff943fc5a928b1c469af72f0fca5",
+      "input": "normalized top-left 512x512 RGB",
+      "parent_deployed_student_max_abs_error": 0.0,
+      "new_teacher_max_abs_error": 0.0,
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "strict_reload_logits_bit_equal": true,
+      "Fog_resume_rejected": true,
+      "teacher_changed_buffers": 342,
+      "checkpoint_sha256": "b600c582d3d6aacbc88023777c682e9aa2292d7ecfaa7edc5513f68d1fd986ac",
+      "optimizer_active_steps_all_8": true,
+      "resume_exact_optimizer_scheduler_iter": true,
+      "strict_trained_reload_real_logits_bit_equal": true,
+      "policy_after_reload_train": true,
+      "groups": {
+        "backbone": {
+          "parameters": 318,
+          "elements": 42519392,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 318,
+          "changed_bn_buffers": 318
+        },
+        "backbone_1.stem": {
+          "parameters": 9,
+          "elements": 28768,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 9,
+          "changed_bn_buffers": 9
+        },
+        "backbone_1.layer1": {
+          "parameters": 30,
+          "elements": 215808,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 30,
+          "changed_bn_buffers": 30
+        },
+        "backbone_1": {
+          "parameters": 279,
+          "elements": 42274816,
+          "trainable_elements": 42274816,
+          "gradient_tensors_first_step": 279,
+          "changed_parameters": 279,
+          "bn_buffers": 279,
+          "changed_bn_buffers": 279
+        },
+        "decode_head": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        },
+        "decode_head_1": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 5312905,
+          "gradient_tensors_first_step": 38,
+          "changed_parameters": 38,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        }
+      }
+    },
+    "lwf": {
+      "real_input_image": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_rain_step3_20261110-180543/rgb_anon/rain/train/GOPR0400/GOPR0400_frame_000216_rgb_anon.png",
+      "image_sha256": "cee373a04c546284f783b3d342e5e2eaf606ff943fc5a928b1c469af72f0fca5",
+      "input": "normalized top-left 512x512 RGB",
+      "parent_deployed_student_max_abs_error": 0.0,
+      "new_teacher_max_abs_error": 0.0,
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "strict_reload_logits_bit_equal": true,
+      "Fog_resume_rejected": true,
+      "teacher_changed_buffers": 0,
+      "checkpoint_sha256": "91a641a5b63e90fed90f889f32583f3e3e5e01ec7974d0995594b52e0402c85d",
+      "optimizer_active_steps_all_8": true,
+      "resume_exact_optimizer_scheduler_iter": true,
+      "strict_trained_reload_real_logits_bit_equal": true,
+      "policy_after_reload_train": true,
+      "groups": {
+        "backbone": {
+          "parameters": 318,
+          "elements": 42519392,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 318,
+          "changed_bn_buffers": 0
+        },
+        "backbone_1.stem": {
+          "parameters": 9,
+          "elements": 28768,
+          "trainable_elements": 28768,
+          "gradient_tensors_first_step": 9,
+          "changed_parameters": 9,
+          "bn_buffers": 9,
+          "changed_bn_buffers": 9
+        },
+        "backbone_1.layer1": {
+          "parameters": 30,
+          "elements": 215808,
+          "trainable_elements": 215808,
+          "gradient_tensors_first_step": 30,
+          "changed_parameters": 30,
+          "bn_buffers": 30,
+          "changed_bn_buffers": 30
+        },
+        "backbone_1": {
+          "parameters": 279,
+          "elements": 42274816,
+          "trainable_elements": 42274816,
+          "gradient_tensors_first_step": 279,
+          "changed_parameters": 279,
+          "bn_buffers": 279,
+          "changed_bn_buffers": 279
+        },
+        "decode_head": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 0
+        },
+        "decode_head_1": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 5312905,
+          "gradient_tensors_first_step": 38,
+          "changed_parameters": 38,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        }
+      }
+    }
+  }
+}

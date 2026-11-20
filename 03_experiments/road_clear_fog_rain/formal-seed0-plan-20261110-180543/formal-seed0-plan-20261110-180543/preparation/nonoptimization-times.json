@@ -1,0 +1,41 @@
+{
+  "optimization_steps": 0,
+  "checks": [
+    {
+      "check": "incremental_conversion_ft",
+      "seconds_approx_lower_bound": 1.8077399730682373,
+      "timing_basis": "ext4 directory birth to report mtime; excludes parent SHA before directory creation and process teardown"
+    },
+    {
+      "check": "incremental_conversion_gsmf",
+      "seconds_approx_lower_bound": 2.681480646133423,
+      "timing_basis": "ext4 directory birth to report mtime; excludes parent SHA before directory creation and process teardown"
+    },
+    {
+      "check": "incremental_conversion_lwf",
+      "seconds_approx_lower_bound": 2.2854995727539062,
+      "timing_basis": "ext4 directory birth to report mtime; excludes parent SHA before directory creation and process teardown"
+    },
+    {
+      "check": "real_init_logits",
+      "seconds_approx_lower_bound": 17.461865186691284,
+      "timing_basis": "shell log birth to final report mtime; includes imports and setup; excludes process teardown"
+    },
+    {
+      "check": "trained_reload_real_logits",
+      "seconds_approx_lower_bound": 32.78832983970642,
+      "timing_basis": "shell log birth to final report mtime; includes imports and setup; excludes process teardown"
+    },
+    {
+      "check": "18_small_evaluations_test_loops",
+      "seconds": 41.48945037298836,
+      "timing_basis": "sum synchronized perf_counter test-loop seconds; excludes model loading and independent reread"
+    },
+    {
+      "check": "3_validation_reentry",
+      "seconds": 11.013159299007384,
+      "timing_basis": "sum monotonic validation and mode/state checks"
+    }
+  ],
+  "note": "Approximate filesystem intervals are explicitly distinguished from monotonic timings; no optimization reservations consumed."
+}

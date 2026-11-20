@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/ft-seed1-B/iter_1000.pth",
+  "sha256": "f950fcd916d69f7de6287fcb58b71b2b86e606f9a631bda1b940453c79599342",
+  "seed": 1,
+  "iteration": 1000,
+  "optimizer_step": 1000,
+  "scheduler_end": 4000,
+  "model_strictly_loaded": true,
+  "all_model_tensors_finite": true,
+  "sampler": "InfiniteSampler",
+  "workers": 2,
+  "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+  "scope": "Read-only intermediate checkpoint verification; not final results or phase completion.",
+  "recorded_at": "2026-11-11T21:15:11.410580+08:00"
+}

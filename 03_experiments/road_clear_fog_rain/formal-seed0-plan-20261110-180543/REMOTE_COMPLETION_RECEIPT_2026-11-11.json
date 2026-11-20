@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-11",
+  "ssh_host": "home-wsl",
+  "remote_root": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543",
+  "files": [
+    {
+      "remote_relative_path": "handoff/formal-seed0-plan-20261110-180543-light.tar.gz.sha256",
+      "local_file": "formal-seed0-plan-20261110-180543-light.tar.gz.sha256",
+      "sha256": "b3afdd243a2dd02104e23f4abcd796b2b84c64205cf8a4c2df2c7f174bfb6291"
+    },
+    {
+      "remote_relative_path": "handoff/handoff-verification.json",
+      "local_file": "handoff-verification.json",
+      "sha256": "ded95e41335945beece56ee281d991c9f9d19486b76b2ebb16e29e6b99d3ffef"
+    },
+    {
+      "remote_relative_path": "completion.json",
+      "local_file": "completion.json",
+      "sha256": "059635ef30dac9d9be68bfa48f053bc7d5c07cd41957bb1832fe53472462986c"
+    },
+    {
+      "remote_relative_path": "STATUS.md",
+      "local_file": "REMOTE_FINAL_STATUS.md",
+      "sha256": "ab10dd9f8afd41a220953aa33108ceb7bdabc9fcb20a43fedf87040e45e48b40"
+    },
+    {
+      "remote_relative_path": "status.json",
+      "local_file": "remote-final-status.json",
+      "sha256": "c947f58ae0dbdcf1ec46a77a967e919717ace1af83eb2f2640889a698ffe9fc7"
+    },
+    {
+      "remote_relative_path": "pipeline-final-status.json",
+      "local_file": "pipeline-final-status.json",
+      "sha256": "f10109fd1dee38e3e13f1695fe6b784749dcbd34185bbfda3fb0bda90918ad1a"
+    }
+  ]
+}

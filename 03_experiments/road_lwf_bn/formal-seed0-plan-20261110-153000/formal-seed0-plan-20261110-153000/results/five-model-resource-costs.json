@@ -1,0 +1,70 @@
+{
+  "rows": [
+    {
+      "model": "source",
+      "origin": "reused_previous_run",
+      "training_wall_seconds": 10248.92654454284,
+      "peak_allocated_MiB": 2552.224609375,
+      "total_parameters": 50196988,
+      "trainable_parameters": 50196988,
+      "deploy_parameters": 47832297,
+      "evaluation_five_conditions_test_loop_seconds": 1126.105506925992,
+      "evaluation_five_conditions_stage_wall_seconds": null
+    },
+    {
+      "model": "ft",
+      "origin": "reused_previous_run",
+      "training_wall_seconds": 1153.7591603459996,
+      "peak_allocated_MiB": 2435.38134765625,
+      "total_parameters": 47832297,
+      "trainable_parameters": 47832297,
+      "deploy_parameters": 47832297,
+      "evaluation_five_conditions_test_loop_seconds": 1078.6969228740245,
+      "evaluation_five_conditions_stage_wall_seconds": null
+    },
+    {
+      "model": "gsmf",
+      "origin": "reused_previous_run",
+      "training_wall_seconds": 931.9823232790004,
+      "peak_allocated_MiB": 2279.3740234375,
+      "total_parameters": 95664594,
+      "trainable_parameters": 47587721,
+      "deploy_parameters": 47832297,
+      "evaluation_five_conditions_test_loop_seconds": 1082.1702963780326,
+      "evaluation_five_conditions_stage_wall_seconds": null
+    },
+    {
+      "model": "lwf",
+      "origin": "new_this_run",
+      "training_wall_seconds": 938.5150962889893,
+      "peak_allocated_MiB": 2618.95703125,
+      "total_parameters": 95664594,
+      "trainable_parameters": 47832297,
+      "deploy_parameters": 47832297,
+      "evaluation_five_conditions_test_loop_seconds": 1098.4964545290277,
+      "evaluation_five_conditions_stage_wall_seconds": 1241.1723159459652
+    },
+    {
+      "model": "gsmf_teacher_bn",
+      "origin": "new_this_run",
+      "training_wall_seconds": 904.1532926129876,
+      "peak_allocated_MiB": 2279.3740234375,
+      "total_parameters": 95664594,
+      "trainable_parameters": 47587721,
+      "deploy_parameters": 47832297,
+      "evaluation_five_conditions_test_loop_seconds": 1120.3628579450306,
+      "evaluation_five_conditions_stage_wall_seconds": 1261.6616187679756
+    }
+  ],
+  "old_summary_source": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/summary-1794113050186463970.json",
+  "old_source_segment_accounting": {
+    "source_prior_checkpoint_wall_seconds": 6492.536019086838,
+    "source_resume_wall_seconds": 3756.3905254560004,
+    "source_useful_segments_wall_seconds": 10248.92654454284,
+    "source_observed_prior_attempt_wall_seconds": 8167.631344079971,
+    "source_observed_total_attempts_wall_seconds": 11924.021869535973,
+    "source_discarded_updates": 10000,
+    "note": "Current summary source training wall time covers resumed 40000..60000 only. Prior useful segment ends at iter40000 checkpoint mtime; excludes its subsequent validation. Interrupted-attempt duration ends at last observed log and is a lower bound."
+  },
+  "source_note": "Source wall time is useful pre-resume and resumed segments; original discarded10000 updates not included. Observed all-attempt lower bound retained in accounting."
+}

@@ -1,0 +1,638 @@
+{
+  "run": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543",
+  "preparation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543",
+  "project": "/home/ysheng4/research/GSMF-RS-DIL",
+  "python": "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+  "unique_checkpoints": {
+    "source": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source/iter_60000.pth",
+      "sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "bytes": 612017669
+    },
+    "ft_fog": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/ft/iter_4000.pth",
+      "sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516",
+      "bytes": 575325719
+    },
+    "gsmf_fog": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/gsmf/iter_4000.pth",
+      "sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a",
+      "bytes": 765495339
+    },
+    "lwf_fog": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/lwf/iter_4000.pth",
+      "sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843",
+      "bytes": 767403741
+    },
+    "ft_rain": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_4000.pth",
+      "sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "bytes": 575325399
+    },
+    "gsmf_rain": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_4000.pth",
+      "sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "bytes": 765496747
+    },
+    "lwf_rain": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_4000.pth",
+      "sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "bytes": 767406429
+    }
+  },
+  "Rain_periodic_checkpoints": [
+    {
+      "method": "ft",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_1000.pth",
+      "sha256": "a633ef8f59f1d4ba0a42fcd05b56b475860d4e8408cc598a60bb5493c0763a82",
+      "bytes": 574984407,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "ft",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_2000.pth",
+      "sha256": "f785f2dc6c01b8a336c1bd5cc86f4be6700b3bb7a06cfd7deb708604c30acef6",
+      "bytes": 575099223,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "ft",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_3000.pth",
+      "sha256": "167387c9dad6367ac75e619cdea279bf3ed8853d3a34f63f87e7b378bda02267",
+      "bytes": 575212247,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "ft",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_4000.pth",
+      "sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "bytes": 575325399,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "gsmf",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_1000.pth",
+      "sha256": "fe622684049916c6b42b012dbc1e856fbd943ab1ad0d70c764d4b7919b08492d",
+      "bytes": 765047019,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "gsmf",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_2000.pth",
+      "sha256": "e4bbd3137f3b86965ab645c2e6ef65b67199291e02d541870a82bcd646626517",
+      "bytes": 765197995,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "gsmf",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_3000.pth",
+      "sha256": "0abc7f89519b4c511e4d23178ba8cdfecbe7c98256a166106488de564ed96260",
+      "bytes": 765347435,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "gsmf",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_4000.pth",
+      "sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "bytes": 765496747,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "lwf",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_1000.pth",
+      "sha256": "4624f721b2258ec811b1d06537906ec01ca4d43cfc13b3189cc0acbaa00fb2f8",
+      "bytes": 767007709,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "lwf",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_2000.pth",
+      "sha256": "1e1a78a0c32c39b3e9308f9df4bb5dfd80c5c8f37a0a8becbb7cf6c39a2727ae",
+      "bytes": 767141597,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "lwf",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_3000.pth",
+      "sha256": "ed356cea203f6e1dfec3701ba94825e87a35baac5cd3bf7f2e6cda63953cbbfd",
+      "bytes": 767274013,
+      "optimizer_active_steps_all_equal_iteration": true
+    },
+    {
+      "method": "lwf",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_4000.pth",
+      "sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "bytes": 767406429,
+      "optimizer_active_steps_all_equal_iteration": true
+    }
+  ],
+  "initializations": {
+    "ft": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/conversion/ft/ft_init.pth",
+      "sha256": "08c88c478e77f3d973ee190cd9a70cf744d6b3f2532f586c3bc8fd1e62c4328d",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/ft/iter_4000.pth",
+      "parent_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516"
+    },
+    "gsmf": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/conversion/gsmf/gsmf_init.pth",
+      "sha256": "3fa5208149044b2a1838aedeca0d9081b0468d04910fb957fede0e0db98d7c5f",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/gsmf/iter_4000.pth",
+      "parent_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a"
+    },
+    "lwf": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/conversion/lwf/lwf_init.pth",
+      "sha256": "a4c48fd47ce7db2a01084e386e2d1d0026228265f4e56b30f8c5da1a8da0d96b",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/lwf/iter_4000.pth",
+      "parent_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843"
+    }
+  },
+  "predictions": [
+    {
+      "model": "source",
+      "condition": "clear",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0/predictions",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "source",
+      "condition": "fog005",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.005/predictions",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.005/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.005/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "source",
+      "condition": "fog010",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.01/predictions",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.01/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.01/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "source",
+      "condition": "fog020",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.02/predictions",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.02/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.02/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "source",
+      "condition": "fog",
+      "provenance": "reused",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_source_B/predictions",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_source_B/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_source_B/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "ft_fog",
+      "condition": "clear",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0/predictions",
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "ft_fog",
+      "condition": "fog005",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.005/predictions",
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.005/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.005/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "ft_fog",
+      "condition": "fog010",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.01/predictions",
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.01/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.01/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "ft_fog",
+      "condition": "fog020",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.02/predictions",
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.02/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/ft/0.02/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "ft_fog",
+      "condition": "fog",
+      "provenance": "reused",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_ft_B/predictions",
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_ft_B/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_ft_B/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "gsmf_fog",
+      "condition": "clear",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0/predictions",
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "gsmf_fog",
+      "condition": "fog005",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.005/predictions",
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.005/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.005/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "gsmf_fog",
+      "condition": "fog010",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.01/predictions",
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.01/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.01/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "gsmf_fog",
+      "condition": "fog020",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.02/predictions",
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.02/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/gsmf/0.02/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "gsmf_fog",
+      "condition": "fog",
+      "provenance": "reused",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_gsmf_B/predictions",
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_gsmf_B/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_gsmf_B/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "lwf_fog",
+      "condition": "clear",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0/predictions",
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "lwf_fog",
+      "condition": "fog005",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.005/predictions",
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.005/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.005/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "lwf_fog",
+      "condition": "fog010",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.01/predictions",
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.01/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.01/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "lwf_fog",
+      "condition": "fog020",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.02/predictions",
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.02/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-beta0.02/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "lwf_fog",
+      "condition": "fog",
+      "provenance": "reused",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-acdc/predictions",
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-acdc/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/eval-lwf-acdc/independent-metrics.json",
+      "independent_prediction_index": null
+    },
+    {
+      "model": "source",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/predictions",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/source-rain.json"
+    },
+    {
+      "model": "ft_fog",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain/predictions",
+      "checkpoint_sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/ft_fog-rain.json"
+    },
+    {
+      "model": "gsmf_fog",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain/predictions",
+      "checkpoint_sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/gsmf_fog-rain.json"
+    },
+    {
+      "model": "lwf_fog",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain/predictions",
+      "checkpoint_sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/lwf_fog-rain.json"
+    },
+    {
+      "model": "ft_rain",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear/predictions",
+      "checkpoint_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/ft_rain-clear.json"
+    },
+    {
+      "model": "ft_rain",
+      "condition": "fog005",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005/predictions",
+      "checkpoint_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/ft_rain-fog005.json"
+    },
+    {
+      "model": "ft_rain",
+      "condition": "fog010",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010/predictions",
+      "checkpoint_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/ft_rain-fog010.json"
+    },
+    {
+      "model": "ft_rain",
+      "condition": "fog020",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020/predictions",
+      "checkpoint_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/ft_rain-fog020.json"
+    },
+    {
+      "model": "ft_rain",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog/predictions",
+      "checkpoint_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/ft_rain-fog.json"
+    },
+    {
+      "model": "ft_rain",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain/predictions",
+      "checkpoint_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/ft_rain-rain.json"
+    },
+    {
+      "model": "gsmf_rain",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear/predictions",
+      "checkpoint_sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/gsmf_rain-clear.json"
+    },
+    {
+      "model": "gsmf_rain",
+      "condition": "fog005",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005/predictions",
+      "checkpoint_sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/gsmf_rain-fog005.json"
+    },
+    {
+      "model": "gsmf_rain",
+      "condition": "fog010",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010/predictions",
+      "checkpoint_sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/gsmf_rain-fog010.json"
+    },
+    {
+      "model": "gsmf_rain",
+      "condition": "fog020",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020/predictions",
+      "checkpoint_sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/gsmf_rain-fog020.json"
+    },
+    {
+      "model": "gsmf_rain",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog/predictions",
+      "checkpoint_sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/gsmf_rain-fog.json"
+    },
+    {
+      "model": "gsmf_rain",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain/predictions",
+      "checkpoint_sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/gsmf_rain-rain.json"
+    },
+    {
+      "model": "lwf_rain",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear/predictions",
+      "checkpoint_sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/lwf_rain-clear.json"
+    },
+    {
+      "model": "lwf_rain",
+      "condition": "fog005",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005/predictions",
+      "checkpoint_sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/lwf_rain-fog005.json"
+    },
+    {
+      "model": "lwf_rain",
+      "condition": "fog010",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010/predictions",
+      "checkpoint_sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/lwf_rain-fog010.json"
+    },
+    {
+      "model": "lwf_rain",
+      "condition": "fog020",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020/predictions",
+      "checkpoint_sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/lwf_rain-fog020.json"
+    },
+    {
+      "model": "lwf_rain",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog/predictions",
+      "checkpoint_sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/lwf_rain-fog.json"
+    },
+    {
+      "model": "lwf_rain",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain/predictions",
+      "checkpoint_sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain/evaluation.json",
+      "metrics": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain/independent-metrics.json",
+      "independent_prediction_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/verification/lwf_rain-rain.json"
+    }
+  ],
+  "datasets": {
+    "road_manifests": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+    "Rain_archive_provenance": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_rain_step3_20261110-180543/archive-provenance.json",
+    "six_conditions": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests"
+  },
+  "excluded": [
+    "all checkpoint payloads",
+    "raw datasets and archives",
+    "full prediction PNG sets",
+    "Conda environment",
+    "cookies/authentication files",
+    ".git"
+  ]
+}

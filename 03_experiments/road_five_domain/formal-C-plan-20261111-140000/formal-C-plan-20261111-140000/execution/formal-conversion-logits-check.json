@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "optimization_steps": 0,
+  "rows": [
+    {
+      "run": "ft-seed0-E",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "initialization_sha256": "ec3b611bc8d99c0a718f7709a539fef5f8b86649cbfca413316b4f69c01578bf",
+      "image_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "input": "normalized top-left 512x512 real RGB",
+      "target_tensors": 698,
+      "all_tensor_values_shapes_hashes_and_key_sets_exact": true,
+      "independent_teacher_student_storage": true,
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 19.12441039501573
+    },
+    {
+      "run": "ft-seed0-D",
+      "parent_sha256": "e02770953f4feaff679b391b23f4d29c890de5df635be286c0ebd10ba14b0a79",
+      "initialization_sha256": "b9e0a6d96aa2b9bae7fd3deb99b4a0f3a566c91f6e266ecdfd574930baa22a87",
+      "image_sha256": "54dcca2388e7ec8c3152200616f37d13e3d7d763e44f94f52b3d4c8a8ba5ffec",
+      "input": "normalized top-left 512x512 real RGB",
+      "target_tensors": 698,
+      "all_tensor_values_shapes_hashes_and_key_sets_exact": true,
+      "independent_teacher_student_storage": true,
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 3.4966856979881413
+    },
+    {
+      "run": "ft-seed0-C",
+      "parent_sha256": "3b74ef14b273a0fbd5d26d28ca207ca91b47e3a644ebfb9a10a0032ed8dd99ca",
+      "initialization_sha256": "52d0cd444dd572a82775e48492d8b481986c24823c6c7261ffe7e44fff3123f2",
+      "image_sha256": "53db60f341b2a3426c62bf5020fbe640e5db2473123a966af8c055593039f361",
+      "input": "normalized top-left 512x512 real RGB",
+      "target_tensors": 698,
+      "all_tensor_values_shapes_hashes_and_key_sets_exact": true,
+      "independent_teacher_student_storage": true,
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 3.381279442983214
+    },
+    {
+      "run": "ft-seed0-B",
+      "parent_sha256": "82e0ebeebac0fde5475d36b92c580909293210c380836eb4dc41a109086f0db4",
+      "initialization_sha256": "bf6735f1ddc1d53b699f08e26de56aa230ab616acf3fa256e5033f248a580f11",
+      "image_sha256": "44a23c7c88d39ad014731f58c530b5f91e268d5ef4c36b7db73fc54a07004289",
+      "input": "normalized top-left 512x512 real RGB",
+      "target_tensors": 698,
+      "all_tensor_values_shapes_hashes_and_key_sets_exact": true,
+      "independent_teacher_student_storage": true,
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 3.7603879499947652
+    },
+    {
+      "run": "gsmf-seed0-E",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "initialization_sha256": "3d52e10cdec54f8afecf677eaaee7aae8dbe84bf5dba0cc1041fc87d1b6e8493",
+      "image_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "input": "normalized top-left 512x512 real RGB",
+      "target_tensors": 1396,
+      "all_tensor_values_shapes_hashes_and_key_sets_exact": true,
+      "independent_teacher_student_storage": true,
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 5.36769551501493
+    },
+    {
+      "run": "gsmf-seed0-D",
+      "parent_sha256": "b286ede26b8a5314b14e8925003dd7a14c2bb1d64fec125d45fd13fbe8240ebd",
+      "initialization_sha256": "67c200393f54d8cebed92447286f6e630d52e80af4d685f87fa40f3af0536363",
+      "image_sha256": "54dcca2388e7ec8c3152200616f37d13e3d7d763e44f94f52b3d4c8a8ba5ffec",
+      "input": "normalized top-left 512x512 real RGB",
+      "target_tensors": 1396,
+      "all_tensor_values_shapes_hashes_and_key_sets_exact": true,
+      "independent_teacher_student_storage": true,
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 6.542462478013476
+    },
+    {
+      "run": "gsmf-seed0-C",
+      "parent_sha256": "5455894b41604ec641eb2b15ebdb8b4ba542337b77b946919a4e799ece6f46e9",
+      "initialization_sha256": "0da717d628222b819eaf631488d657e238dbeb30b4c23fb7115f3065452abf21",
+      "image_sha256": "53db60f341b2a3426c62bf5020fbe640e5db2473123a966af8c055593039f361",
+      "input": "normalized top-left 512x512 real RGB",
+      "target_tensors": 1396,
+      "all_tensor_values_shapes_hashes_and_key_sets_exact": true,
+      "independent_teacher_student_storage": true,
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 6.038192668987904
+    },
+    {
+      "run": "gsmf-seed0-B",
+      "parent_sha256": "1e545216d8e489094a697bd3b67ba4ae51298669af6c492df9369bc2e9c25975",
+      "initialization_sha256": "3f5eefb54c942a5e5d643b9b88b7b7715d69e9d49b0867986c0b0e9e08933177",
+      "image_sha256": "44a23c7c88d39ad014731f58c530b5f91e268d5ef4c36b7db73fc54a07004289",
+      "input": "normalized top-left 512x512 real RGB",
+      "target_tensors": 1396,
+      "all_tensor_values_shapes_hashes_and_key_sets_exact": true,
+      "independent_teacher_student_storage": true,
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 6.97287301698816
+    }
+  ]
+}

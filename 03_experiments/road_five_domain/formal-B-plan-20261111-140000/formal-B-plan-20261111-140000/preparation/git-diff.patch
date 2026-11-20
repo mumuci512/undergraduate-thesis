@@ -1,0 +1,338 @@
+diff --git a/REPRO.md b/REPRO.md
+index edcb1a3..111a985 100644
+--- a/REPRO.md
++++ b/REPRO.md
+@@ -1,5 +1,15 @@
++<!-- ROAD_FIVE_DOMAIN_CURRENT_BEGIN -->
++## 当前道路工作：第5项五域链准备通过／正式未启动（2026-11-11）
++
++- 唯一准备目录：`experiments/road_five_domain/prepare-20261111-140000`，方案/状态/指纹见PREPARED_PLAN.md、STATUS.md、READY.json；当前源码起点89b6e01，旧三域已完成结果保留，旧训练源码来源仍按原provenance追溯。
++- Snow400/100、Night400/106独立审计通过；A/B/C原manifest保留并重核文件SHA。D/E涉及帧/字节/像素哈希无重复；Snow共享6视频目录、Night共享1个，地理/邻帧隔离未独立证明。
++- D/E入口、真实seed、严格Source首域B或E与后续同方法/seed/顺序学生转换、新域iter0/新AdamW和同运行resume已接通。独立账本60/64；真实seed0两次前4batch增强/输入及首loss逐位相等，后续loss微差及CUDA限制已披露，seed1样本不同；三方法D/E及seed1/反序首域短训、24格66张小样本独立核验通过。GSMF训练态教师BN更新、LwF教师全部状态固定；推理仅学生且状态不变。
++- 分阶段待授权：A六次训练/62新格15878图（42旧格复用）；B十六次/104新格26496图；C八次/46新格10248图。各次4000步、seed/方法/顺序与独立输出锁定，失败停止，不自动串联阶段。
++- 正式磁盘门禁按A40/B70/C35 GiB在WSL及宿主各自检查；资源估算见resource-estimate.json；本次宿主约57GiB，阶段B的70GiB门禁未通过，A/C门禁通过。三阶段累计空间不预留，须每次启动前复查。未删除数据/checkpoint；本轮未创建授权或正式目录，未启动4000步/完整评价。收到对应提示词二/三/四或明确授权后才执行。
++<!-- ROAD_FIVE_DOMAIN_CURRENT_END -->
++
+ <!-- ROAD_RAIN_CHAIN_CURRENT_BEGIN -->
+-## 当前道路工作：第3项真实三域链正式实验与轻量交接完成（2026-11-11）
++## 第3项真实三域链正式实验与轻量交接完成（2026-11-11）
+ 
+ - 用户“继续提示词二”授权的FT／原版GSMF／LwF-DIL，各自Fog学生→Rain4000步、22格7000次完整逐图、7000保存预测独立重读/GT直方图/协议核验、旧20格指纹核对复用、七checkpoint六条件42格/19类/阶段均值及差值、固定样例与图表、轻量包和实际解包全SHA核验全部完成。
+ - 唯一正式目录：`experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543`；实际流水线exit-code.txt=0，completion.json及handoff/handoff-verification.json均complete/PASS。详情见RESULTS.md/SUMMARY.md、results/*check.json与remote-index.json。
+diff --git a/road_dil/checkpoints.py b/road_dil/checkpoints.py
+index b419970..f97eb65 100644
+--- a/road_dil/checkpoints.py
++++ b/road_dil/checkpoints.py
+@@ -26,7 +26,9 @@ def assert_state(state, model):
+     model.load_state_dict(state,strict=True)
+ 
+ 
+-def convert(source_path, output, stages=('ft', 'gsmf')):
++def convert(source_path, output, stages=('ft', 'gsmf'), domain=None, seed=0, order=None):
++    if domain is not None and (order not in ('ABCDE','AEDCB') or domain != order[1]):
++        raise ValueError('Source must initialize the first domain in the selected order')
+     out = Path(output)
+     out.mkdir(parents=True,exist_ok=False)
+     source = torch.load(str(source_path),map_location='cpu')
+@@ -56,11 +58,19 @@ def convert(source_path, output, stages=('ft', 'gsmf')):
+         for name,value in converted.items():
+             original=name.replace('backbone_1.','backbone.',1).replace('decode_head_1.','decode_head.',1)
+             assert torch.equal(value,state[original]), name
+-            keys.append(dict(target=name,source=original,shape=list(value.shape),sha256=tensor_hash(value)))
++            keys.append(dict(parent_checkpoint_sha256=report['source_sha256'],target=name,source=original,shape=list(value.shape),sha256=tensor_hash(value)))
+         target=out/(stage+'_init.pth')
+         with target.open('xb') as f:
+             torch.save(dict(state_dict=converted,meta=dict(source_sha256=report['source_sha256'],
+-                       dataset_meta=dict(classes=CLASSES),road_stage=stage)),f)
++                       dataset_meta=dict(classes=CLASSES),road_stage=stage, **(dict(parent_sha256=report['source_sha256'], parent_checkpoint=str(Path(source_path).resolve()), parent_domain='A', road_domain=domain, road_seed=seed, road_order=order, initialization_only=True) if domain else {}))),f)
++        loaded=torch.load(str(target),map_location='cpu')
++        assert_state(loaded['state_dict'],model)
++        assert all(torch.equal(loaded['state_dict'][r['target']],state[r['source']]) for r in keys)
++        if stage in ('gsmf','lwf','gsmf_teacher_bn'):
++            for k in kept:
++                student=k.replace('backbone.','backbone_1.',1).replace('decode_head.','decode_head_1.',1)
++                assert loaded['state_dict'][k].data_ptr()!=loaded['state_dict'][student].data_ptr()
++        del loaded
+         report['stages'][stage]=dict(checkpoint=str(target),sha256=sha256(target),
+                                     missing_keys=[],unexpected_keys=[],shape_mismatches=[],
+                                     exact_value_copy_verified=True,keys=keys)
+@@ -84,16 +94,24 @@ def validate_rain_input(checkpoint, method, work, resume):
+         raise ValueError('New Rain stage requires a pristine initialization without training state')
+ 
+ 
+-def convert_incremental(parent_path, output, method, expected_sha256):
++def convert_incremental(parent_path, output, method, expected_sha256, parent_domain='B', domain='C', seed=None, order=None):
+     """Clone the parent's deployed student, including every persistent buffer."""
+     if method not in ('ft', 'gsmf', 'lwf'):
+         raise ValueError(method)
++    if seed is not None and (order not in ('ABCDE','AEDCB') or parent_domain not in order[:-1] or order[order.index(parent_domain)+1] != domain):
++        raise ValueError('Parent and target must be consecutive in the selected order')
+     parent_sha = sha256(parent_path)
+     if parent_sha != expected_sha256:
+         raise ValueError('Parent checkpoint SHA mismatch')
+     out = Path(output)
+     out.mkdir(parents=True, exist_ok=False)
+     parent = torch.load(str(parent_path), map_location='cpu')
++    if seed is not None:
++        pm = parent.get('meta', {})
++        if pm.get('road_domain') != parent_domain or pm.get('road_stage') != method:
++            raise ValueError('Parent method/domain mismatch')
++        if pm.get('road_seed', 0) != seed or pm.get('road_order', 'ABCDE') != order:
++            raise ValueError('Parent seed/order mismatch')
+     state = parent['state_dict']
+     model = build(method)
+     assert_state(state, model)
+@@ -123,15 +141,17 @@ def convert_incremental(parent_path, output, method, expected_sha256):
+             assert actual[source].data_ptr() != actual[teacher].data_ptr()
+     assert all(torch.equal(converted[r['target']], state[r['source']]) for r in rows)
+     meta = dict(parent_checkpoint=str(Path(parent_path).resolve()), parent_sha256=parent_sha,
+-                parent_run=str(Path(parent_path).resolve().parent), parent_domain='B', road_domain='C',
++                parent_run=str(Path(parent_path).resolve().parent), parent_domain=parent_domain, road_domain=domain,
+                 road_stage=method, initialization_only=True, dataset_meta=dict(classes=CLASSES),
+                 conversion='parent deployed student -> fresh teacher and independent student' if dual else 'complete deployed single branch')
++    if seed is not None:
++        meta.update(road_seed=seed, road_order=order)
+     target = out/(method+'_init.pth')
+     with target.open('xb') as f:
+         torch.save(dict(state_dict=converted, meta=meta), f)
+     loaded = torch.load(str(target), map_location='cpu')
+     assert_state(loaded['state_dict'], model)
+-    validate_rain_input(loaded, method, out, False)
++    validate_stage_input(loaded, method, out, False, domain, seed, order) if seed is not None else validate_rain_input(loaded, method, out, False)
+     assert all(torch.equal(loaded['state_dict'][r['target']], state[r['source']]) for r in rows)
+     report = dict(status='PASS', method=method, parent=str(Path(parent_path).resolve()),
+                   parent_sha256=parent_sha, checkpoint=str(target.resolve()), sha256=sha256(target),
+@@ -142,3 +162,20 @@ def convert_incremental(parent_path, output, method, expected_sha256):
+                   independent_parameter_and_buffer_storage=True, strict_save_reload=True)
+     write_json(out/'conversion.json', report)
+     return report
++
++
++def validate_stage_input(checkpoint, method, work, resume, domain, seed, order):
++    meta = checkpoint.get('meta', {})
++    if (meta.get('road_domain'), meta.get('road_stage'), meta.get('road_seed'), meta.get('road_order')) != (domain, method, seed, order):
++        raise ValueError('Stage method/domain/seed/order mismatch')
++    if order not in ('ABCDE','AEDCB') or domain not in order[1:]:
++        raise ValueError('Invalid stage order/domain')
++    if not resume and meta.get('parent_domain') != order[order.index(domain)-1]:
++        raise ValueError('Initialization parent does not precede this domain')
++    if resume:
++        if meta.get('seed',seed) != seed:
++            raise ValueError('Resume RNG seed metadata conflicts with stage seed')
++        if meta.get('initialization_only') is not False or meta.get('road_run') != str(Path(work).resolve()):
++            raise ValueError('Resume requires this exact stage run; previous-domain optimizer forbidden')
++    elif meta.get('initialization_only') is not True or any(k in checkpoint for k in ('optimizer','param_schedulers')) or 'iter' in meta:
++        raise ValueError('Fresh stage requires pristine converted weights without training state')
+diff --git a/road_dil/config.py b/road_dil/config.py
+index 7b38eb0..045ea20 100644
+--- a/road_dil/config.py
++++ b/road_dil/config.py
+@@ -43,7 +43,7 @@ def make_config(stage, train_domain=None):
+     interval = 10000 if stage == 'source' else 1000
+     manifest_dir = Path(os.environ.get('ROAD_MANIFEST_DIR', str(EXP / 'data')))
+     train_domain = train_domain or ('A' if stage == 'source' else 'B')
+-    if train_domain not in (('A',) if stage == 'source' else ('B', 'C')):
++    if train_domain not in (('A',) if stage == 'source' else ('B', 'C', 'D', 'E')):
+         raise ValueError('Invalid training domain: ' + train_domain)
+     train_pipeline = [dict(type='LoadImageFromFile'), dict(type='LoadRoadAnnotations'),
+                       dict(type='RandomResize', scale=(2048,1024), ratio_range=(0.5,2.0), keep_ratio=True),
+diff --git a/road_dil/data.py b/road_dil/data.py
+index 1ea4909..e137401 100644
+--- a/road_dil/data.py
++++ b/road_dil/data.py
+@@ -21,7 +21,7 @@ class RoadManifestDataset(BaseSegDataset):
+             raise ValueError('Empty road manifest: ' + self.ann_file)
+         data = []
+         expected = Path(self.ann_file).stem.split('_')[:2]
+-        if len(expected) != 2 or expected[0] not in ('A', 'B', 'C') or expected[1] not in ('train', 'val'):
++        if len(expected) != 2 or expected[0] not in ('A', 'B', 'C', 'D', 'E') or expected[1] not in ('train', 'val'):
+             raise ValueError('Manifest filename must identify domain and split')
+         for r in records:
+             if [r['domain'], r['split']] != expected:
+@@ -42,3 +42,14 @@ class LoadRoadAnnotations(BaseTransform):
+             raise ValueError('Road image/label dimensions differ')
+         results['seg_fields'].append('gt_seg_map')
+         return results
++
++
++# Debug instrumentation delegates each random draw to the original transform.
++from mmseg.datasets.transforms import RandomCrop
++
++@TRANSFORMS.register_module()
++class RoadTraceCrop(RandomCrop):
++    def crop_bbox(self, results):
++        box = super().crop_bbox(results)
++        results['crop_bbox'] = tuple(int(x) for x in box)
++        return box
+diff --git a/road_dil/hooks.py b/road_dil/hooks.py
+index f1b6760..f090fe1 100644
+--- a/road_dil/hooks.py
++++ b/road_dil/hooks.py
+@@ -71,11 +71,11 @@ class RoadAuditHook(Hook):
+                        dict(optimizer_exact=True,scheduler_exact=True,iteration=runner.iter,
+                             checkpoint=runner._load_from))
+             del saved
+-        elif runner.cfg.get('rain_checkpoint_meta', {}).get('road_domain') == 'C':
++        elif runner.cfg.get('road_checkpoint_meta') or runner.cfg.get('rain_checkpoint_meta', {}).get('road_domain') == 'C':
+             assert runner.iter == 0
+             assert not runner.optim_wrapper.state_dict()['state']
+             write_json(Path(runner.work_dir)/'fresh-optimizer.json',
+-                       dict(iteration=0, optimizer_state_empty=True, domain='C',
++                       dict(iteration=0, optimizer_state_empty=True, domain=runner.cfg.get('road_checkpoint_meta', runner.cfg.get('rain_checkpoint_meta', {})).get('road_domain'),
+                             scheduler_end=runner.cfg.param_scheduler[0].end,
+                             seed=runner.cfg.randomness.seed))
+         self.before = state_hashes(runner.model)
+@@ -102,7 +102,7 @@ class RoadAuditHook(Hook):
+             torch.cuda.reset_peak_memory_stats()
+ 
+     def before_save_checkpoint(self, runner, checkpoint):
+-        checkpoint['meta'].update(runner.cfg.get('rain_checkpoint_meta', {}))
++        checkpoint['meta'].update(runner.cfg.get('road_checkpoint_meta', runner.cfg.get('rain_checkpoint_meta', {})))
+ 
+     def _check_policy(self, model):
+         policy = getattr(model, 'teacher_policy', None)
+@@ -223,3 +223,14 @@ class RoadAuditHook(Hook):
+                         total_parameters=sum(p.numel() for p in params.values()),
+                         trainable_parameters=sum(p.numel() for p in params.values() if p.requires_grad),
+                         note='Debug timing includes gradient diagnostics; frozen BN retains original training semantics'))
++
++
++@HOOKS.register_module()
++class RoadRNGTraceHook(Hook):
++    def before_train_iter(self, runner, batch_idx, data_batch=None):
++        self.row=dict(iteration=runner.iter, samples=[dict(id=s.metainfo['sample_id'], crop_bbox=s.metainfo['crop_bbox'], scale=s.metainfo['scale'], flip=s.metainfo['flip'], flip_direction=s.metainfo.get('flip_direction')) for s in data_batch['data_samples']], input_sha256=[tensor_hash(x) for x in data_batch['inputs']])
++    def after_train_iter(self, runner, batch_idx, data_batch=None, outputs=None):
++        import json
++        self.row['loss']=float(outputs['loss'])
++        with (Path(runner.work_dir)/'rng-trace.jsonl').open('a') as f:
++            f.write(json.dumps(self.row)+'\n')
+diff --git a/tools/road/extract_data.py b/tools/road/extract_data.py
+index 8dbf644..87bc63f 100644
+--- a/tools/road/extract_data.py
++++ b/tools/road/extract_data.py
+@@ -55,5 +55,5 @@ def main(a):
+ if __name__=='__main__':
+  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--kind',choices=['cityscapes','acdc'],required=True)
+  p.add_argument('--archives',nargs='+',required=True);p.add_argument('--output',required=True)
+- p.add_argument('--weather',choices=['fog','rain'],default='fog')
++ p.add_argument('--weather',choices=['fog','rain','snow','night'],default='fog')
+  main(p.parse_args())
+diff --git a/tools/road/run.py b/tools/road/run.py
+index 63e9f44..f584770 100644
+--- a/tools/road/run.py
++++ b/tools/road/run.py
+@@ -48,6 +48,17 @@ def cfg_for(stage, manifests, train_domain=None):
+     return cfg
+ 
+ 
++def audit_loaders(cfg, work):
++    rows={}
++    for key in ('train_dataloader','val_dataloader','test_dataloader'):
++        path=Path(cfg[key].dataset.ann_file)
++        domain,split=path.stem.split('_')[:2]
++        records=[json.loads(x) for x in path.read_text().splitlines() if x.strip()]
++        assert records and all(r['domain']==domain and r['split']==split for r in records)
++        rows[key]=dict(manifest=str(path.resolve()),sha256=sha256(path),domain=domain,split=split,records=len(records))
++    write_json(work/('manifest-resolution-%d.json'%time.time_ns()), rows)
++
++
+ def train(a):
+     audit=checked_data(a.manifests,a.debug or a.fixture)
+     if a.fixture and audit['full_official_counts']:
+@@ -56,12 +67,19 @@ def train(a):
+         raise RuntimeError('CUDA unavailable; no implicit CPU fallback')
+     cfg=cfg_for(a.stage,a.manifests,a.train_domain)
+     domain=Path(cfg.train_dataloader.dataset.ann_file).name.split('_')[0]
++    if domain in ('D','E') and not a.order:
++        raise ValueError('D/E require an explicit --order and strict stage initialization')
++    if a.order and a.stage=='source':
++        raise ValueError('Five-domain order is for incremental stages; Source is read-only')
++    if not 0<=a.seed<2**32:
++        raise ValueError('Seed must be in [0, 2**32)')
+     work=Path(a.work_dir).resolve()
+     if a.resume:
+         if not work.is_dir(): raise FileNotFoundError(work)
+     else:
+         work.mkdir(parents=True,exist_ok=False)
+     cfg.work_dir=str(work)
++    cfg.randomness.seed=a.seed
+     if a.debug or a.fixture:
+         if not 1<=a.steps<=32: raise ValueError('Per-stage debug cap is 32; chain cap is 96')
+         cfg.train_cfg.max_iters=a.steps
+@@ -112,7 +130,10 @@ def train(a):
+         model=build(a.stage)
+         assert_state(ck['state_dict'],model)
+         del model
+-        if domain=='C':
++        if a.order:
++            from road_dil.checkpoints import validate_stage_input
++            validate_stage_input(ck,a.stage,work,bool(a.resume),domain,a.seed,a.order)
++        elif domain=='C':
+             from road_dil.checkpoints import validate_rain_input
+             validate_rain_input(ck, a.stage, work, bool(a.resume))
+         if a.resume:
+@@ -129,7 +150,7 @@ def train(a):
+         del ck
+         gc.collect()
+     if a.debug and not a.fixture:
+-        if domain=='C':
++        if domain in ('C','D','E') or a.order:
+             if not a.budget_ledger:
+                 raise ValueError('Rain debug requires an independent 64-step ledger')
+             ledger=json.loads(Path(a.budget_ledger).read_text())
+@@ -146,12 +167,25 @@ def train(a):
+                    manifests=str(Path(a.manifests).resolve()),audit_sha256=sha256(Path(a.manifests)/'audit.json'),
+                    initialization_sha256=sha256(incoming) if incoming else
+                      (None if a.fixture else sha256(cfg.model.pretrained)),
+-                   train_domain=domain,seed=0,debug=a.debug,synthetic_fixture=a.fixture,
++                   train_domain=domain,seed=a.seed,order=a.order,debug=a.debug,synthetic_fixture=a.fixture,
+                    optimizer='fresh' if not a.resume else 'restored'))
+     from road_dil.models import freeze_before_training
+-    if domain=='C':
++    if a.order:
++        incoming_meta=torch.load(incoming,map_location='cpu')['meta']
++        cfg.road_checkpoint_meta=dict(road_domain=domain, road_stage=a.stage, road_run=str(work), road_seed=a.seed, road_order=a.order, parent_sha256=ck_parent_sha(incoming), parent_domain=incoming_meta.get('parent_domain'), parent_checkpoint=incoming_meta.get('parent_checkpoint'), parent_run=incoming_meta.get('parent_run',str(Path(incoming_meta.get('parent_checkpoint',incoming)).parent)), initialization_only=False)
++    elif domain=='C':
+         cfg.rain_checkpoint_meta=dict(road_domain='C', road_stage=a.stage, road_run=str(work),
+                                      parent_sha256=ck_parent_sha(incoming), initialization_only=False)
++    if a.trace_rng:
++        if not a.debug: raise ValueError('RNG tracing restricted to debug')
++        pipeline=cfg.train_dataloader.dataset.pipeline
++        for tr in pipeline:
++            if tr.type=='RandomCrop': tr.type='RoadTraceCrop'
++            if tr.type=='PackSegInputs':
++                from mmseg.datasets.transforms import PackSegInputs
++                tr.meta_keys=tuple(PackSegInputs().meta_keys)+('sample_id','crop_bbox','scale')
++        cfg.custom_hooks.append(dict(type='RoadRNGTraceHook'))
++    audit_loaders(cfg,work)
+     cfg.dump(str(work/('resolved-resume-%s.py' % time.time_ns() if a.resume else 'resolved.py')))
+     runner=Runner.from_cfg(cfg)
+     freeze_before_training(runner.model)
+@@ -189,6 +223,7 @@ def evaluate(a):
+     cfg.load_from=None
+     cfg.custom_hooks=[]
+     cfg.test_evaluator[1]['output']=str(work/'independent-metrics.json')
++    audit_loaders(cfg,work)
+     runner=Runner.from_cfg(cfg)
+     ck=torch.load(a.checkpoint,map_location='cpu')
+     assert_state(ck['state_dict'],runner.model)
+@@ -328,14 +363,17 @@ for action in ('train','eval'):
+     q.add_argument('--debug',action='store_true')
+     q.add_argument('--fixture',action='store_true',help='explicit SYNTHETIC fixture mode, never formal evidence')
+     if action=='train':
++        q.add_argument('--seed',type=int,default=0)
++        q.add_argument('--order',choices=['ABCDE','AEDCB'],help='Enable strict generic five-domain stage contract')
++        q.add_argument('--trace-rng',action='store_true',help='Debug only: record actual input augmentation and loss')
+         q.add_argument('--load'); q.add_argument('--resume'); q.add_argument('--steps',type=int,default=4)
+-        q.add_argument('--train-domain',choices=['A','B','C'],help='Explicit optimization domain; old stage defaults remain A/B')
++        q.add_argument('--train-domain',choices=['A','B','C','D','E'],help='Explicit optimization domain; old stage defaults remain A/B')
+         q.add_argument('--stop-after',type=int,help='Debug only: stop at a saved boundary, preserving the full planned scheduler')
+         q.add_argument('--cpu',action='store_true')
+         q.add_argument('--budget-ledger',help='Independent locked real-debug ledger; default preserves the first-round ledger')
+         q.add_argument('--debug-crop',type=int,choices=[384,512],default=512)
+     else:
+-        q.add_argument('--checkpoint',required=True); q.add_argument('--domain',choices=['A','B','C'],required=True)
++        q.add_argument('--checkpoint',required=True); q.add_argument('--domain',choices=['A','B','C','D','E'],required=True)
+         q.add_argument('--full-eval',action='store_true',help='In debug mode evaluate full official val while retaining debug labels')
+ q=sub.add_parser('convert'); q.add_argument('--stages',nargs='+',choices=['ft','gsmf','lwf','gsmf_teacher_bn'],default=['ft','gsmf']); q.add_argument('--source',required=True); q.add_argument('--output',required=True)
+ q=sub.add_parser('convert-incremental'); q.add_argument('--stage',choices=['ft','gsmf','lwf'],required=True); q.add_argument('--parent',required=True); q.add_argument('--parent-sha256',required=True); q.add_argument('--output',required=True)

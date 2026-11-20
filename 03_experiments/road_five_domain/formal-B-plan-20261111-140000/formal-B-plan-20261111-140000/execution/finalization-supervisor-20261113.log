@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "experiments/road_five_domain/formal-B-plan-20261111-140000/scripts/finish_B_20261113.py", line 25, in <module>
+    write_json(run/('finalization-'+name+'-'+stamp+'-exit.json'),dict(command=cmd,exit_code=rc,seconds=time.monotonic()-t));assert rc==0,(name,rc)
+AssertionError: ('verify_report_B', 1)
+Traceback (most recent call last):
+  File "experiments/road_five_domain/formal-B-plan-20261111-140000/scripts/finish_B_20261113.py", line 25, in <module>
+    write_json(run/('finalization-'+name+'-'+stamp+'-exit.json'),dict(command=cmd,exit_code=rc,seconds=time.monotonic()-t));assert rc==0,(name,rc)
+AssertionError: ('verify_report_B', 1)

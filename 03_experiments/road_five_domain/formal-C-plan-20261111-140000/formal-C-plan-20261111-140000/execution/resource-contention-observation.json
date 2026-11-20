@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-11-13T20:02:41.389701+08:00",
+  "progress": {
+    "training_runs_complete": 8,
+    "new_evaluation_cells_complete": 28,
+    "new_evaluation_cells_total": 46
+  },
+  "observed": "GSMF Snow-after Cityscapes evaluation slowed from about 0.5 seconds/image to about 4 seconds/image.",
+  "gpu": {
+    "SM_clock_MHz": 1935,
+    "memory_clock_MHz": 9251,
+    "utilization_percent": 97,
+    "memory_used_MiB": 6115,
+    "temperature_C": 52,
+    "power_W": 289.89
+  },
+  "host_engine_sample": [
+    {
+      "pid": 42600,
+      "process_name": "Dungeons-WinGDK-Shipping",
+      "engine": "3D",
+      "utilization_percent": 64
+    },
+    {
+      "pid": 10408,
+      "process_name": "vmwp",
+      "engine": "3D",
+      "utilization_percent": 5
+    }
+  ],
+  "scope": "Single read-only host-engine sample; coincident external GPU workload and evaluation slowdown, no isolated causal experiment or per-process GPU memory attribution. WSL NVML compute-app query did not list valid process attribution.",
+  "action": "Preserve all host processes; no driver/settings/model/config changes. Authorized evaluation continues. Actual timings include contention; finish-time estimate becomes conditional on GPU availability."
+}

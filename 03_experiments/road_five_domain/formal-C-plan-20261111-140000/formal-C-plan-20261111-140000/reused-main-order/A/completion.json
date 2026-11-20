@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "phase": "A",
+  "completed_at": "2026-11-11T18:58:45.626547+08:00",
+  "training_runs": 6,
+  "steps_per_run": 4000,
+  "periodic_checkpoints": 24,
+  "new_cells": 62,
+  "new_images": 15878,
+  "reused_cells": 42,
+  "total_cells": 104,
+  "training_check_sha256": "0b1a1132775c41a454fe6683e7de6db8cfa2a94543fdeadcdc27d0d262f5a085",
+  "protocol_check_sha256": "6e68cf379568bc9ca055a3fd4ad3f9e2bf3f9ceba7b537014f301c64c2ef00c8",
+  "independent_result_check_sha256": "0c6ed7edabcf3f41f56957cf7d16e62e2d897db391b858a733a540dd4efa0143",
+  "handoff": {
+    "status": "PASS",
+    "archive": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/formal-A-plan-20261111-140000-light.tar.gz",
+    "archive_sha256": "c09bbf786f0b55cdf8500c8ac691d8e69d69baaeed751b3616d685ac959ba31e",
+    "sha256_file": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/formal-A-plan-20261111-140000-light.tar.gz.sha256",
+    "bytes": 22550630,
+    "payload_files": 1519,
+    "safe_members": true,
+    "actual_safe_unpack": true,
+    "exact_unpacked_file_set": true,
+    "all_unpacked_SHA_match": true,
+    "raw_CS_samples": 36,
+    "raw_DE_samples": 156,
+    "aligned_figures": 18,
+    "weights_and_full_predictions_remote": true
+  },
+  "next_phase": "B deferred by latest user instruction; C not authorized"
+}

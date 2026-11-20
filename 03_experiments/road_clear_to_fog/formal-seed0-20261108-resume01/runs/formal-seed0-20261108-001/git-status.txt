@@ -1,0 +1,22 @@
+ M configs/_base_/datasets/Potsdam_IRRG_512.py
+ M configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py
+ M configs/_base_/datasets/Vaihingen_512.py
+ M configs/gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py
+ M configs/gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py
+ M tools/checkpoint_process.py
+ M tools/test/test_GS-AUFPN.py
+ M tools/test/test_GSMF-RS-DIL.py
+ M tools/train/train_GS-AUFPN.py
+ M tools/train/train_GSMF-RS-DIL.py
+?? .gitignore
+?? AGENTS.md
+?? REPRO.md
+?? configs/road/
+?? environment/
+?? experiments/
+?? gsmf_rs_dil/
+?? mmseg/datasets/isprs_tif_loader.py
+?? road_dil/
+?? tools/prepare_isprs.py
+?? tools/road/
+?? tools/verify_environment.py

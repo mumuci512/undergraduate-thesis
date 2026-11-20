@@ -1,0 +1,617 @@
+{
+  "status": "PASS",
+  "scope": "archive/file integrity and offline artifact consistency; no model, raw image/label, checkpoint or remote Git re-execution",
+  "checks": [
+    {
+      "name": "archive_sha256",
+      "pass": true,
+      "evidence": "e544fab7df12e65b0cbc59b2653002db8877ff51502d13cc7017fadb3c8eec44"
+    },
+    {
+      "name": "manifest_file_hashes",
+      "pass": true,
+      "evidence": {
+        "entries": 249,
+        "mismatches": []
+      }
+    },
+    {
+      "name": "A_train_count",
+      "pass": true,
+      "evidence": 2975
+    },
+    {
+      "name": "A_train_recorded_hash",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "A_train_label_values",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "A_train_pixel_totals",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "A_val_count",
+      "pass": true,
+      "evidence": 500
+    },
+    {
+      "name": "A_val_recorded_hash",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "A_val_label_values",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "A_val_pixel_totals",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "B_train_count",
+      "pass": true,
+      "evidence": 400
+    },
+    {
+      "name": "B_train_recorded_hash",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "B_train_label_values",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "B_train_pixel_totals",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "B_val_count",
+      "pass": true,
+      "evidence": 100
+    },
+    {
+      "name": "B_val_recorded_hash",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "B_val_label_values",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "B_val_pixel_totals",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "A_no_train_val_image_sha256_overlap",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "A_no_train_val_rgb_pixels_sha256_overlap",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "B_no_train_val_image_sha256_overlap",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "B_no_train_val_rgb_pixels_sha256_overlap",
+      "pass": true,
+      "evidence": 0
+    },
+    {
+      "name": "A_sequence_disjoint",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "B_recording_overlap_matches_declared",
+      "pass": true,
+      "evidence": [
+        "GOPR0476",
+        "GP010476",
+        "GP020475"
+      ]
+    },
+    {
+      "name": "nineteen_consistent_class_names",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_A_matrix_structure",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_A_GT_histogram",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_A_final_JSON_matrix",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_A_final_JSON_metric",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_A_summary_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_A_per_class_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_A_evaluation_metadata",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_B_matrix_structure",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_B_GT_histogram",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_B_final_JSON_matrix",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_B_final_JSON_metric",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_B_summary_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_B_per_class_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_B_evaluation_metadata",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_old_domain_drop_pp",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_new_domain_gain_pp",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_equal_domain_mean_percent",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_A_matrix_structure",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_A_GT_histogram",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_A_final_JSON_matrix",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_A_final_JSON_metric",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_A_summary_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_A_per_class_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_A_evaluation_metadata",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_B_matrix_structure",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_B_GT_histogram",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_B_final_JSON_matrix",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_B_final_JSON_metric",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_B_summary_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_B_per_class_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_B_evaluation_metadata",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_old_domain_drop_pp",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_new_domain_gain_pp",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_equal_domain_mean_percent",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_A_matrix_structure",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_A_GT_histogram",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_A_final_JSON_matrix",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_A_final_JSON_metric",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_A_summary_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_A_per_class_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_A_evaluation_metadata",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_A_incremental_branch_only",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_B_matrix_structure",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_B_GT_histogram",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_B_final_JSON_matrix",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_B_final_JSON_metric",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_B_summary_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_B_per_class_csv",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_B_evaluation_metadata",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_B_incremental_branch_only",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_old_domain_drop_pp",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_new_domain_gain_pp",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_equal_domain_mean_percent",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "FT_GSMF_matching_train_dataloader",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "FT_GSMF_matching_optim_wrapper",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "FT_GSMF_matching_param_scheduler",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "FT_GSMF_matching_train_cfg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "FT_GSMF_matching_randomness",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "FT_GSMF_matching_model_data_preprocessor",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "FT_GSMF_matching_model_test_cfg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "conversion_shared_source_checkpoint",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "ft_conversion_and_initialization",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "gsmf_conversion_and_initialization",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "source_initial_and_recovery_code_hashes",
+      "pass": true,
+      "evidence": 66
+    },
+    {
+      "name": "snapshot_hashes_crossmatch_Git_index",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "pipeline_completion_record",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "frozen_parameter_record_backbone",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "frozen_parameter_record_decode_head",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "frozen_parameter_record_backbone_1.stem",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "name": "frozen_parameter_record_backbone_1.layer1",
+      "pass": true,
+      "evidence": null
+    }
+  ],
+  "details": {
+    "data_counts": {
+      "A_train": 2975,
+      "A_val": 500,
+      "B_train": 400,
+      "B_val": 100
+    },
+    "sequence_overlaps": {
+      "A": [],
+      "B": [
+        "GOPR0476",
+        "GP010476",
+        "GP020475"
+      ]
+    },
+    "recomputed_mIoU_percent": {
+      "source": {
+        "A": 71.50872218134401,
+        "B": 49.609687981896364
+      },
+      "ft": {
+        "A": 54.29154169841731,
+        "B": 62.306646392978735
+      },
+      "gsmf": {
+        "A": 55.20780120809538,
+        "B": 63.03037335204615
+      }
+    },
+    "gsmf_minus_ft_pp": {
+      "A": 0.9162595096780706,
+      "B": 0.7237269590674131
+    },
+    "shared_B_configuration": {
+      "optim_wrapper": {
+        "type": "OptimWrapper",
+        "optimizer": {
+          "type": "AdamW",
+          "lr": 1e-05,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "weight_decay": 0.001
+        },
+        "clip_grad": null
+      },
+      "param_scheduler": [
+        {
+          "type": "PolyLR",
+          "eta_min": 0.0,
+          "power": 0.9,
+          "begin": 0,
+          "end": 4000,
+          "by_epoch": false
+        }
+      ],
+      "train_cfg": {
+        "type": "IterBasedTrainLoop",
+        "max_iters": 4000,
+        "val_interval": 1000
+      },
+      "randomness": {
+        "seed": 0,
+        "deterministic": true
+      },
+      "batch_size": 2,
+      "crop": [
+        512,
+        512
+      ]
+    },
+    "GSMF_parameter_and_BN_audit": {
+      "backbone": {
+        "parameters": 318,
+        "elements": 42519392,
+        "trainable_elements": 0,
+        "gradient_tensors_first_step": 0,
+        "changed_parameters": 0,
+        "bn_buffers": 318,
+        "changed_bn_buffers": 318
+      },
+      "backbone_1.stem": {
+        "parameters": 9,
+        "elements": 28768,
+        "trainable_elements": 0,
+        "gradient_tensors_first_step": 0,
+        "changed_parameters": 0,
+        "bn_buffers": 9,
+        "changed_bn_buffers": 9
+      },
+      "backbone_1.layer1": {
+        "parameters": 30,
+        "elements": 215808,
+        "trainable_elements": 0,
+        "gradient_tensors_first_step": 0,
+        "changed_parameters": 0,
+        "bn_buffers": 30,
+        "changed_bn_buffers": 30
+      },
+      "backbone_1": {
+        "parameters": 279,
+        "elements": 42274816,
+        "trainable_elements": 42274816,
+        "gradient_tensors_first_step": 279,
+        "changed_parameters": 279,
+        "bn_buffers": 279,
+        "changed_bn_buffers": 279
+      },
+      "decode_head": {
+        "parameters": 38,
+        "elements": 5312905,
+        "trainable_elements": 0,
+        "gradient_tensors_first_step": 0,
+        "changed_parameters": 0,
+        "bn_buffers": 24,
+        "changed_bn_buffers": 24
+      },
+      "decode_head_1": {
+        "parameters": 38,
+        "elements": 5312905,
+        "trainable_elements": 5312905,
+        "gradient_tensors_first_step": 38,
+        "changed_parameters": 38,
+        "bn_buffers": 24,
+        "changed_bn_buffers": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "methods": {
+    "ft": {
+      "real_input_image": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_rain_step3_20261110-180543/rgb_anon/rain/train/GOPR0400/GOPR0400_frame_000216_rgb_anon.png",
+      "image_sha256": "cee373a04c546284f783b3d342e5e2eaf606ff943fc5a928b1c469af72f0fca5",
+      "input": "normalized top-left 512x512 RGB",
+      "parent_deployed_student_max_abs_error": 0.0,
+      "new_teacher_max_abs_error": null,
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "strict_reload_logits_bit_equal": true,
+      "Fog_resume_rejected": true
+    },
+    "gsmf": {
+      "real_input_image": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_rain_step3_20261110-180543/rgb_anon/rain/train/GOPR0400/GOPR0400_frame_000216_rgb_anon.png",
+      "image_sha256": "cee373a04c546284f783b3d342e5e2eaf606ff943fc5a928b1c469af72f0fca5",
+      "input": "normalized top-left 512x512 RGB",
+      "parent_deployed_student_max_abs_error": 0.0,
+      "new_teacher_max_abs_error": 0.0,
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "strict_reload_logits_bit_equal": true,
+      "Fog_resume_rejected": true
+    },
+    "lwf": {
+      "real_input_image": "/home/ysheng4/research/GSMF-RS-DIL/data/acdc_rain_step3_20261110-180543/rgb_anon/rain/train/GOPR0400/GOPR0400_frame_000216_rgb_anon.png",
+      "image_sha256": "cee373a04c546284f783b3d342e5e2eaf606ff943fc5a928b1c469af72f0fca5",
+      "input": "normalized top-left 512x512 RGB",
+      "parent_deployed_student_max_abs_error": 0.0,
+      "new_teacher_max_abs_error": 0.0,
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "strict_reload_logits_bit_equal": true,
+      "Fog_resume_rejected": true
+    }
+  }
+}

@@ -1,0 +1,508 @@
+{
+  "status": "PASS",
+  "train_stages": 3,
+  "evaluation_stages": 22,
+  "all_recorded_exits_zero": true,
+  "stages": [
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005-1794311147148444194-exit.json",
+      "exit_code": 0,
+      "seconds": 295.7379723939812,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "ft",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog005",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear-1794313296365740622-exit.json",
+      "exit_code": 0,
+      "seconds": 275.2963590619911,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "lwf",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/clear",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain-1794310810592763498-exit.json",
+      "exit_code": 0,
+      "seconds": 69.66433789601433,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "lwf",
+        "--domain",
+        "C",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/lwf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain-1794313230049436257-exit.json",
+      "exit_code": 0,
+      "seconds": 67.30922631299472,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "gsmf",
+        "--domain",
+        "C",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010-1794313836927434981-exit.json",
+      "exit_code": 0,
+      "seconds": 272.0543307730113,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "lwf",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog010",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain-1794310680680776763-exit.json",
+      "exit_code": 0,
+      "seconds": 70.77608003502246,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "ft",
+        "--domain",
+        "C",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/ft/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020-1794311684633189216-exit.json",
+      "exit_code": 0,
+      "seconds": 292.8715410149889,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "ft",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog020",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog-1794314384873280440-exit.json",
+      "exit_code": 0,
+      "seconds": 67.1063849219936,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "lwf",
+        "--domain",
+        "B",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005-1794313566928991139-exit.json",
+      "exit_code": 0,
+      "seconds": 270.7603529879998,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "lwf",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog005",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/train-gsmf-1794308865033255221-exit.json",
+      "exit_code": 0,
+      "seconds": 941.2683021470148,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "train",
+        "--stage",
+        "gsmf",
+        "--train-domain",
+        "C",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf",
+        "--load",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/conversion/gsmf/gsmf_init.pth"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010-1794311417249966024-exit.json",
+      "exit_code": 0,
+      "seconds": 295.97973237599945,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "ft",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog010",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/train-ft-1794308083448512243-exit.json",
+      "exit_code": 0,
+      "seconds": 852.7997238799871,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "train",
+        "--stage",
+        "ft",
+        "--train-domain",
+        "C",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft",
+        "--load",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/conversion/ft/ft_init.pth"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain-1794314451982439784-exit.json",
+      "exit_code": 0,
+      "seconds": 65.58799845998874,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "lwf",
+        "--domain",
+        "C",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain-1794310745752142923-exit.json",
+      "exit_code": 0,
+      "seconds": 70.57179284299491,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "gsmf",
+        "--domain",
+        "C",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/gsmf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog-1794311951665401860-exit.json",
+      "exit_code": 0,
+      "seconds": 70.59189438598696,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "ft",
+        "--domain",
+        "B",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020-1794312895446009627-exit.json",
+      "exit_code": 0,
+      "seconds": 281.61820392200025,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "gsmf",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog020",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear-1794310874567892979-exit.json",
+      "exit_code": 0,
+      "seconds": 298.3547515120008,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "ft",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/clear",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog-1794313165013942953-exit.json",
+      "exit_code": 0,
+      "seconds": 66.30304443300702,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "gsmf",
+        "--domain",
+        "B",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010-1794312625893080584-exit.json",
+      "exit_code": 0,
+      "seconds": 295.83341338299215,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "gsmf",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog010",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/train-lwf-1794309724279096944-exit.json",
+      "exit_code": 0,
+      "seconds": 977.3649635589973,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "train",
+        "--stage",
+        "lwf",
+        "--train-domain",
+        "C",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf",
+        "--load",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/conversion/lwf/lwf_init.pth"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain-1794310616288408676-exit.json",
+      "exit_code": 0,
+      "seconds": 72.91853165699285,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "source",
+        "--domain",
+        "C",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source/iter_60000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain-1794312016537441884-exit.json",
+      "exit_code": 0,
+      "seconds": 71.53564154397463,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "ft",
+        "--domain",
+        "C",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020-1794314108983854580-exit.json",
+      "exit_code": 0,
+      "seconds": 275.8860194910085,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "lwf",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog020",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear-1794312082320270950-exit.json",
+      "exit_code": 0,
+      "seconds": 297.7931361840165,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "gsmf",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/clear",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear"
+      ]
+    },
+    {
+      "evidence": "experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005-1794312353991284363-exit.json",
+      "exit_code": 0,
+      "seconds": 297.9538855900173,
+      "command": [
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+        "eval",
+        "--stage",
+        "gsmf",
+        "--domain",
+        "A",
+        "--manifests",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/eval-manifests/fog005",
+        "--checkpoint",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_4000.pth",
+        "--work-dir",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005"
+      ]
+    }
+  ]
+}

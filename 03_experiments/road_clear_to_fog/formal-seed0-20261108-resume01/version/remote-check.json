@@ -1,0 +1,29 @@
+{
+  "checked_local_time": "20261108-174551",
+  "queries": [
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "personal",
+        "HEAD",
+        "refs/heads/main"
+      ],
+      "exit_code": 0,
+      "stdout": "315f273929c09ffa991a1f1d6f95e304641386ce\tHEAD\n315f273929c09ffa991a1f1d6f95e304641386ce\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "origin",
+        "HEAD",
+        "refs/heads/master"
+      ],
+      "exit_code": 0,
+      "stdout": "e141e523e86f98f772ee787bb2aa95272f38e4fe\tHEAD\ne141e523e86f98f772ee787bb2aa95272f38e4fe\trefs/heads/master\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+    "train",
+    "--stage",
+    "lwf",
+    "--load",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/prepare-seed0-20261110-153000/conversion/lwf_init.pth",
+    "--work-dir",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/lwf"
+  ],
+  "cwd": "/home/ysheng4/research/GSMF-RS-DIL",
+  "stage": "lwf",
+  "manifests": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data",
+  "audit_sha256": "6d05a2501335f32f00ed40574272614ae71d536addf81c3e186a6c99724b6790",
+  "initialization_sha256": "c3c80442ec46445891585242ec8ff0132c52b003cc2dcfdf7744567f2c696af5",
+  "seed": 0,
+  "debug": false,
+  "synthetic_fixture": false,
+  "optimizer": "fresh"
+}

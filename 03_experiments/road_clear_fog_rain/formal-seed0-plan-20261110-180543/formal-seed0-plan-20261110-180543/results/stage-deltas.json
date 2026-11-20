@@ -1,0 +1,44 @@
+{
+  "ft": {
+    "CS_after_minus_Fog_stage": 3.414079060943216,
+    "Fog_after_minus_Fog_stage": 0.8051497166731352,
+    "CS_cumulative_after_minus_Source": -13.803101421983499,
+    "Rain_adaptation_after_minus_own_Fog": 7.6861031262165795,
+    "old_domain_forgetting_CS": 13.803101421983499,
+    "old_domain_forgetting_Fog": -0.8051497166731352,
+    "synthetic_after_minus_own_Fog": {
+      "clear": 3.414079060943216,
+      "fog005": 1.5669080948895697,
+      "fog010": 0.9749990524329988,
+      "fog020": 0.059269605309864914
+    }
+  },
+  "gsmf": {
+    "CS_after_minus_Fog_stage": 0.597764713460684,
+    "Fog_after_minus_Fog_stage": -0.6732397446259242,
+    "CS_cumulative_after_minus_Source": -15.703156259787946,
+    "Rain_adaptation_after_minus_own_Fog": 6.277423428091552,
+    "old_domain_forgetting_CS": 15.703156259787946,
+    "old_domain_forgetting_Fog": 0.6732397446259242,
+    "synthetic_after_minus_own_Fog": {
+      "clear": 0.597764713460684,
+      "fog005": -0.29346235085108674,
+      "fog010": -0.6938449123212678,
+      "fog020": -0.8534447510826908
+    }
+  },
+  "lwf": {
+    "CS_after_minus_Fog_stage": -2.8190378808093186,
+    "Fog_after_minus_Fog_stage": -3.950019114229427,
+    "CS_cumulative_after_minus_Source": -22.26671083418703,
+    "Rain_adaptation_after_minus_own_Fog": 3.831619158854835,
+    "old_domain_forgetting_CS": 22.26671083418703,
+    "old_domain_forgetting_Fog": 3.950019114229427,
+    "synthetic_after_minus_own_Fog": {
+      "clear": -2.8190378808093186,
+      "fog005": -3.4117102356082825,
+      "fog010": -3.4654718328582987,
+      "fog020": -3.46398007105428
+    }
+  }
+}

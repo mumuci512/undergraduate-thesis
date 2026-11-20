@@ -1,0 +1,58 @@
+{
+  "status": "PREPARED_FORMAL_NOT_STARTED",
+  "ready_sha256": "bbabd9eb5714e9c1e768ebae02f27f2bbb038855fea973755483e986da6fd8ec",
+  "code_fingerprint": "043d820c3c0aa9f2173dace3b2a68c7c97382d1bfc044323173ac49d5ad932ca",
+  "code_unchanged_since_snapshot": true,
+  "REPRO_sha256": "99d68d7dd3ae11037c32c3ca3e534d4ed9d2693c4268c74b5a51153b9f3fc826",
+  "diff_sha256": "87ddd77b342af48dad1ff5029d824576be19a37f391c2f5b14d48ac1cf065925",
+  "data_audit_sha256": "7bdae74d90f6f08f771f658fbefab2c529f568605e776191108f33a7dfb71ea7",
+  "real_debug_steps": 60,
+  "debug_limit": 64,
+  "small_evaluation_cells": 24,
+  "small_evaluation_images": 66,
+  "formal_preflight": {
+    "rows": [
+      {
+        "phase": "A",
+        "exit_code": 0,
+        "result": "PASS",
+        "evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/preflight-A.log"
+      },
+      {
+        "phase": "B",
+        "exit_code": 1,
+        "seconds": 39.42643400095403,
+        "result": "EXPECTED_DISK_GATE_BLOCK",
+        "command": [
+          "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+          "tools/road/five_formal.py",
+          "--prepare",
+          "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000",
+          "--phase",
+          "B",
+          "--check-only"
+        ]
+      },
+      {
+        "phase": "C",
+        "exit_code": 0,
+        "seconds": 39.665732610970736,
+        "result": "PASS",
+        "command": [
+          "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+          "tools/road/five_formal.py",
+          "--prepare",
+          "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000",
+          "--phase",
+          "C",
+          "--check-only"
+        ]
+      }
+    ],
+    "formal_started": false,
+    "authorization_files_present": false
+  },
+  "no_authorization_files": true,
+  "no_formal_directories": true,
+  "git_head": "89b6e014891630da865578197396236ef2a49140"
+}

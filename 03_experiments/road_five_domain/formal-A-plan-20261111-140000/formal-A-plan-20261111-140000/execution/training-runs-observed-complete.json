@@ -1,0 +1,77 @@
+{
+  "state": "six_training_runs_complete_pending_independent_verification",
+  "runs": [
+    {
+      "run": "ft-seed0-D",
+      "loss_count": 4000,
+      "validations": 4,
+      "finite_checked_gradients": true,
+      "checkpoints": [
+        "iter_1000.pth",
+        "iter_2000.pth",
+        "iter_3000.pth",
+        "iter_4000.pth"
+      ]
+    },
+    {
+      "run": "gsmf-seed0-D",
+      "loss_count": 4000,
+      "validations": 4,
+      "finite_checked_gradients": true,
+      "checkpoints": [
+        "iter_1000.pth",
+        "iter_2000.pth",
+        "iter_3000.pth",
+        "iter_4000.pth"
+      ]
+    },
+    {
+      "run": "lwf-seed0-D",
+      "loss_count": 4000,
+      "validations": 4,
+      "finite_checked_gradients": true,
+      "checkpoints": [
+        "iter_1000.pth",
+        "iter_2000.pth",
+        "iter_3000.pth",
+        "iter_4000.pth"
+      ]
+    },
+    {
+      "run": "ft-seed0-E",
+      "loss_count": 4000,
+      "validations": 4,
+      "finite_checked_gradients": true,
+      "checkpoints": [
+        "iter_1000.pth",
+        "iter_2000.pth",
+        "iter_3000.pth",
+        "iter_4000.pth"
+      ]
+    },
+    {
+      "run": "gsmf-seed0-E",
+      "loss_count": 4000,
+      "validations": 4,
+      "finite_checked_gradients": true,
+      "checkpoints": [
+        "iter_1000.pth",
+        "iter_2000.pth",
+        "iter_3000.pth",
+        "iter_4000.pth"
+      ]
+    },
+    {
+      "run": "lwf-seed0-E",
+      "loss_count": 4000,
+      "validations": 4,
+      "finite_checked_gradients": true,
+      "checkpoints": [
+        "iter_1000.pth",
+        "iter_2000.pth",
+        "iter_3000.pth",
+        "iter_4000.pth"
+      ]
+    }
+  ]
+}

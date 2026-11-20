@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/home/ysheng4/research/GSMF-RS-DIL/tools/road/run.py",
+    "train",
+    "--stage",
+    "ft",
+    "--train-domain",
+    "C",
+    "--manifests",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+    "--work-dir",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft",
+    "--load",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/conversion/ft/ft_init.pth"
+  ],
+  "cwd": "/home/ysheng4/research/GSMF-RS-DIL",
+  "stage": "ft",
+  "manifests": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/data",
+  "audit_sha256": "734b3f2e739612f9dac3f3bcf23e573881e8f042084797f1786a79c22e888a3d",
+  "initialization_sha256": "08c88c478e77f3d973ee190cd9a70cf744d6b3f2532f586c3bc8fd1e62c4328d",
+  "train_domain": "C",
+  "seed": 0,
+  "debug": false,
+  "synthetic_fixture": false,
+  "optimizer": "fresh"
+}

@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "optimization_steps": 0,
+  "rows": [
+    {
+      "run": "ft-seed1-B",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "initialization_sha256": "ac1a75347f84fe2f2752096ed435121ff7da6028833626403a1ea30a5ea168cd",
+      "image_sha256": "44a23c7c88d39ad014731f58c530b5f91e268d5ef4c36b7db73fc54a07004289",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 12.972746639003162
+    },
+    {
+      "run": "ft-seed1-C",
+      "parent_sha256": "70414218b7f27c2de7369d0e2d6027710409410b39458c9cca075955655b8cdd",
+      "initialization_sha256": "4c6db6f232d58e09d1da57ac2de65c25cc8166eab2daa9c654d0c9d50e6c4722",
+      "image_sha256": "53db60f341b2a3426c62bf5020fbe640e5db2473123a966af8c055593039f361",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 2.630848189997778
+    },
+    {
+      "run": "ft-seed1-D",
+      "parent_sha256": "714da1eb55664201d9795f581ff3e3d32d1270852449d5c6f2c3efa9ca98bd52",
+      "initialization_sha256": "0029ee1185275e69d5d53ac13142c93f4bd8aceec6aa6b7956e45853b72743ee",
+      "image_sha256": "54dcca2388e7ec8c3152200616f37d13e3d7d763e44f94f52b3d4c8a8ba5ffec",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 2.6335021590057295
+    },
+    {
+      "run": "ft-seed1-E",
+      "parent_sha256": "38786f43d0115c8651ff8683155d77fca082635360a8feb2cd2852d4deecd078",
+      "initialization_sha256": "71fd731f568f9d68f7bb6cc695ca77de0b3177222a618b035dda892a8a3f10e1",
+      "image_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 2.7230462709994754
+    },
+    {
+      "run": "gsmf-seed1-B",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "initialization_sha256": "dfe1e95a7f837495d0f933440489b086426aaafc789252e1f93e089e62a54f53",
+      "image_sha256": "44a23c7c88d39ad014731f58c530b5f91e268d5ef4c36b7db73fc54a07004289",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 3.2429124449990923
+    },
+    {
+      "run": "gsmf-seed1-C",
+      "parent_sha256": "1e7dee64c5f7d198d2126a53c6d36bfa294c6a6e06f63d80cbb94eb0747510c1",
+      "initialization_sha256": "4aaa7e0d75fc68d1195737593113860c09c878aa3277ad2242b4a96568e1edb2",
+      "image_sha256": "53db60f341b2a3426c62bf5020fbe640e5db2473123a966af8c055593039f361",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 4.790508609003155
+    },
+    {
+      "run": "gsmf-seed1-D",
+      "parent_sha256": "280827db9689dbbdeb9be329822baa04b6e439992c0a3b393af306fada3145bf",
+      "initialization_sha256": "059407e9ba604820d17a78d43073d74d8cf9afb4eba87b79ef1b31ffad1428b5",
+      "image_sha256": "54dcca2388e7ec8c3152200616f37d13e3d7d763e44f94f52b3d4c8a8ba5ffec",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 4.349365191999823
+    },
+    {
+      "run": "gsmf-seed1-E",
+      "parent_sha256": "c68e1a67487aa581decf6cf08009078e9edb7bf9feef3dd4b216de4bcbf6f95c",
+      "initialization_sha256": "8da11e05472fe8fd2737efc6503d10757518f4f48145f86d15284bcc55c2b880",
+      "image_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 4.3415277660024
+    },
+    {
+      "run": "ft-seed2-B",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "initialization_sha256": "e9d75b7d82ad29889cf821221c80de48e880ba783008ed105e01eebc82743110",
+      "image_sha256": "44a23c7c88d39ad014731f58c530b5f91e268d5ef4c36b7db73fc54a07004289",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 2.201174000998435
+    },
+    {
+      "run": "ft-seed2-C",
+      "parent_sha256": "e0f32f160ae0d86c8189a21d195f7a1b60999c92bafea49efb874ba9c405061a",
+      "initialization_sha256": "4ed4c49d9c59db0bf26b16697b84759a4d3d4fd26e50a6e59ca1a63656e16eec",
+      "image_sha256": "53db60f341b2a3426c62bf5020fbe640e5db2473123a966af8c055593039f361",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 2.935468566000054
+    },
+    {
+      "run": "ft-seed2-D",
+      "parent_sha256": "3b56bb62a9d15aabc9e99d59a2d8e0ecca730bfe1aa297396b40b8ededec5bf8",
+      "initialization_sha256": "5d856d503598009574f2f49494f8e3c8aadc27e0276e53547deb23d3ca7bc938",
+      "image_sha256": "54dcca2388e7ec8c3152200616f37d13e3d7d763e44f94f52b3d4c8a8ba5ffec",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 2.4731014990029507
+    },
+    {
+      "run": "ft-seed2-E",
+      "parent_sha256": "f6bda8271e72ea99db71f9a79499de75d2cc141926e757cc8fdfdf5cf0d9dec0",
+      "initialization_sha256": "9d3d13649c63e8652a9a52a8979ce1bb8bf15c2910828b3ba194b9b007baf389",
+      "image_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 2.718220150003617
+    },
+    {
+      "run": "gsmf-seed2-B",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "initialization_sha256": "5d00003cab7020c6a425d179095c0c43bac570acc69988893da3c52c50f6bb3e",
+      "image_sha256": "44a23c7c88d39ad014731f58c530b5f91e268d5ef4c36b7db73fc54a07004289",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 3.3602669709944166
+    },
+    {
+      "run": "gsmf-seed2-C",
+      "parent_sha256": "47684d3b572a2f1d6a4769891e9027ec72296de278c5981ffcffd82d60162ff4",
+      "initialization_sha256": "d360ec816f316091b7118154f71854089f18c9b63ee0d586d4616edcde09a812",
+      "image_sha256": "53db60f341b2a3426c62bf5020fbe640e5db2473123a966af8c055593039f361",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 4.64910622699972
+    },
+    {
+      "run": "gsmf-seed2-D",
+      "parent_sha256": "db5f39d08d6a75102074c7cecab1e8d9d531b1de05b173e3e40c327236dbb311",
+      "initialization_sha256": "4a129f1d3066ff213e8d8a046f9d5392b92e12d7b834c8e939c0075fe610011d",
+      "image_sha256": "54dcca2388e7ec8c3152200616f37d13e3d7d763e44f94f52b3d4c8a8ba5ffec",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 4.427725353001733
+    },
+    {
+      "run": "gsmf-seed2-E",
+      "parent_sha256": "ef68c81ee164d554e650cb55ee06f733e53c2502a4d4a43c0cffd1ab6d9c9af1",
+      "initialization_sha256": "647157d95b70e2f8af9793cf8fdb93247f7f5914c426749f7c1d0bde60d92997",
+      "image_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 4.526248390000546
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "time_local": "2026-11-08 10:32:40 +08:00",
+  "state": "interrupted",
+  "last_logged_iteration": 50000,
+  "last_log_local": "2026-11-08 02:30:14 +08:00",
+  "wsl_crash_dump_time_local": "2026-11-08 02:30:32 +08:00",
+  "wsl_boot_local": "2026-11-08 10:25:20 +08:00",
+  "windows_last_boot_local": "2026-11-07 22:58:01 +08:00",
+  "pipeline_exit_code": null,
+  "monitor_exit_code": null,
+  "no_training_or_monitor_processes": true,
+  "damaged_checkpoint": {
+    "path": "source/iter_50000.pth",
+    "bytes": 67108864,
+    "readable": false,
+    "error": "PytorchStreamReader failed reading zip archive: failed finding central directory"
+  },
+  "recovery_candidate": {
+    "path": "source/iter_40000.pth",
+    "bytes": 609092933,
+    "sha256": "92b3dceb3a00150d9348d697baa1d363ff57b44b2095f8cfdefe4e59f070b825",
+    "readable": true,
+    "meta_iter": 40000,
+    "optimizer_state_count": 361,
+    "all_adam_steps": 40000,
+    "scheduler_last_step": 40000,
+    "scheduler_global_step": 40000,
+    "scheduler_end": 60000,
+    "lr": 3.720298965749365e-05
+  },
+  "not_started": [
+    "conversion",
+    "source final A/B evaluation",
+    "FT",
+    "GSMF",
+    "final result verification"
+  ],
+  "cause_evidence": "WSL crash dumps for multiple processes including systemd, journald, tmux, monitor Python; Windows did not reboot. No matching Linux OOM or Windows System/Application warnings/errors in queried 02:20-02:40 interval. Exact root cause unresolved.",
+  "resumed": false
+}

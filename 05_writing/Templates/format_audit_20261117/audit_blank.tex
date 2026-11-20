@@ -1,0 +1,10 @@
+% Audit fixture: preserve the template implementation; clear sample metadata only.
+\AddToHook{begindocument/end}{%
+  \typeout{AUDIT BASELINE=\the\baselineskip; PARSKIP=\the\parskip; PARINDENT=\the\parindent; FBOXRULE=\the\fboxrule; FBOXSEP=\the\fboxsep}%
+  \typeout{AUDIT HEADHEIGHT=\the\headheight; HEADSEP=\the\headsep; FOOTSKIP=\the\footskip; TEXTWIDTH=\the\textwidth; TEXTHEIGHT=\the\textheight}%
+  \let\AuditOriginalMakeDocument\MakeDocument
+  \renewcommand{\MakeDocument}{%
+    \thesistitle{}{}\student{}{}\school{}\major{}%
+    \AuditOriginalMakeDocument}%
+}
+\input{proposal.tex}

@@ -1,0 +1,12 @@
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/models/builder.py:36: UserWarning: ``build_loss`` would be deprecated soon, please use ``mmseg.registry.MODELS.build()`` 
+  warnings.warn('``build_loss`` would be deprecated soon, please use '
+/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/models/losses/cross_entropy_loss.py:249: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/scripts/verify_report_B.py", line 83, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--prepare',required=True);p.add_argument('--run',required=True);a=p.parse_args();main(a.prepare,a.run)
+  File "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/scripts/verify_report_B.py", line 80, in main
+    report(prep,run,out,training,cells)
+  File "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-B-plan-20261111-140000/scripts/analysis_B.py", line 94, in report
+    lines+=['','该表只按与共同Source比较描述方向，不把计数解释为统计检验。每个seed的road全去向与指定类别面积比/召回/误报来源top3、19类signed ΔIoU/19见CSV及confusion-tracking.json；seed0证据见阶段A。','', '## 方法、核验及限制','', 'FT全量CE；原版GSMF教师参数冻结但训练态BN更新，学生stem/layer1参数冻结但BN更新；CE+输出Hin(T2/.5)+特征KL(T1/1,idx1/2/3)。KD覆盖stride4全部像素含ignore/padding，无显式T²。每阶段仅当前域train，新AdamW/iter0；无旧图回放。所有评价仅当前学生，19类、原生分辨率、ImageNet、slide512/stride341，无oracle/TTA/测试更新，参数和全部缓冲不变。','', '真实seed由invocation/resolved、MMEngine全局随机源/采样器/worker初始化及准备阶段真实样本序列证据核验。全训练不保证逐位确定：CUDA双线性反向存在非确定性；resume不保证RNG/采样游标精确恢复。n=3只检验固定Source下增量随机性，不覆盖Source训练随机性，不构成显著性或稳定排序证明。官方视频目录交叉已披露，地理/邻帧隔离未独立证明；跨库差异不能全部归因天气，不主张严格未见强度泛化。未加入LwF、BN变体或阶段C。','', '有退出码的训练命令墙钟合计%.2f分钟（不包含中断命令的原始3000步前缀时间）；评价入口墙钟与显存见resource-costs.json，独立复核/图表/打包另计。' + (' Snow seed2-GSMF从3000步恢复模型/优化器/调度器；前缀与续训loss由checkpoint历史核对，原始hook审计保留。3000步周期验证在中断前未执行，后续补做100张，单独记录且不计104最终评价格；RNG/采样游标未恢复，不保证不停机等价。详见resume-audit-reconciliation.json。' if (run/'resume-audit-reconciliation.json').exists() else '')% (sum(v['training_wall_seconds'] for v in training.values())/60)]
+TypeError: not all arguments converted during string formatting

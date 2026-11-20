@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "weight_initializations": {
+    "ft": {
+      "tensors": 698,
+      "seed1_seed2_weights_all_exact": true,
+      "same_Source_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93"
+    },
+    "gsmf": {
+      "tensors": 1396,
+      "seed1_seed2_weights_all_exact": true,
+      "same_Source_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93"
+    }
+  },
+  "sampler_first8": {
+    "0": [
+      44,
+      214,
+      287,
+      174,
+      155,
+      34,
+      237,
+      248
+    ],
+    "1": [
+      245,
+      165,
+      308,
+      146,
+      227,
+      18,
+      333,
+      36
+    ],
+    "2": [
+      248,
+      172,
+      261,
+      131,
+      246,
+      144,
+      362,
+      356
+    ]
+  },
+  "rejected": [
+    "nonconsecutive incremental order",
+    "Source wrong first domain",
+    "D/E without explicit order"
+  ],
+  "negative_cli": {
+    "command": [
+      "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+      "tools/road/run.py",
+      "train",
+      "--stage",
+      "ft",
+      "--manifests",
+      "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data",
+      "--work-dir",
+      "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/must-not-create",
+      "--train-domain",
+      "D",
+      "--debug",
+      "--steps",
+      "4",
+      "--cpu"
+    ],
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"tools/road/run.py\", line 383, in <module>\n    if a.action=='train': train(a)\n  File \"tools/road/run.py\", line 71, in train\n    raise ValueError('D/E require an explicit --order and strict stage initialization')\nValueError: D/E require an explicit --order and strict stage initialization\n"
+  },
+  "optimization_steps": 0
+}

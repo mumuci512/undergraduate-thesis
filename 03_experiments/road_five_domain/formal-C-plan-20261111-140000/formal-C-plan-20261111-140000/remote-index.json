@@ -1,0 +1,976 @@
+{
+  "project": "/home/ysheng4/research/GSMF-RS-DIL",
+  "preparation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000",
+  "run": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000",
+  "results": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858",
+  "weights": {
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-E/iter_4000.pth": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-E/iter_4000.pth",
+      "sha256": "e02770953f4feaff679b391b23f4d29c890de5df635be286c0ebd10ba14b0a79",
+      "bytes": 575328855
+    },
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-D/iter_4000.pth": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-D/iter_4000.pth",
+      "sha256": "3b74ef14b273a0fbd5d26d28ca207ca91b47e3a644ebfb9a10a0032ed8dd99ca",
+      "bytes": 575326807
+    },
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-C/iter_4000.pth": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-C/iter_4000.pth",
+      "sha256": "82e0ebeebac0fde5475d36b92c580909293210c380836eb4dc41a109086f0db4",
+      "bytes": 575326551
+    },
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-B/iter_4000.pth": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-B/iter_4000.pth",
+      "sha256": "2cff5e20d721d872538d6e192ee11be594768e359ae39578f7f0e7f2a9cfc3d0",
+      "bytes": 575326743
+    },
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-E/iter_4000.pth": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-E/iter_4000.pth",
+      "sha256": "b286ede26b8a5314b14e8925003dd7a14c2bb1d64fec125d45fd13fbe8240ebd",
+      "bytes": 765497707
+    },
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-D/iter_4000.pth": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-D/iter_4000.pth",
+      "sha256": "5455894b41604ec641eb2b15ebdb8b4ba542337b77b946919a4e799ece6f46e9",
+      "bytes": 765498411
+    },
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-C/iter_4000.pth": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-C/iter_4000.pth",
+      "sha256": "1e545216d8e489094a697bd3b67ba4ae51298669af6c492df9369bc2e9c25975",
+      "bytes": 765498347
+    },
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-B/iter_4000.pth": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-B/iter_4000.pth",
+      "sha256": "cb2547e60233719f2b6f89a5e287ef809bd6b7e87f9d3fb3d9ba9648b3f86f22",
+      "bytes": 765498027
+    },
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source/iter_60000.pth": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source/iter_60000.pth",
+      "sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "bytes": 612017669
+    }
+  },
+  "periodic_checkpoints": [
+    {
+      "run": "ft-seed0-E",
+      "domain": "E",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-E/iter_1000.pth",
+      "sha256": "f192901d895083c725a052b7934078823c6ba62e34084d57cd16e1056d77d6df",
+      "bytes": 574985815,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-E",
+      "domain": "E",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-E/iter_2000.pth",
+      "sha256": "495ae92283249a1b3b0cb480cd225987b2719f4980a20e5bd1b89ba7785ff987",
+      "bytes": 575101271,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-E",
+      "domain": "E",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-E/iter_3000.pth",
+      "sha256": "36b1dc464bceb1705e65c1c81839c433fb741638ec820f3b6dff1e37bf9e3d62",
+      "bytes": 575215191,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-E",
+      "domain": "E",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-E/iter_4000.pth",
+      "sha256": "e02770953f4feaff679b391b23f4d29c890de5df635be286c0ebd10ba14b0a79",
+      "bytes": 575328855,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-D",
+      "domain": "D",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-D/iter_1000.pth",
+      "sha256": "2bc55f89424cb89f9915372aac674a55d16f160103f35f7ca4f37fdca8bffd6a",
+      "bytes": 574985559,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-D",
+      "domain": "D",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-D/iter_2000.pth",
+      "sha256": "07121599a2e1718dafabc01ee7aa70f953729256ed866d9c8d41887f1672388b",
+      "bytes": 575100375,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-D",
+      "domain": "D",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-D/iter_3000.pth",
+      "sha256": "fb6f9174ce204a73b9dee29660daa9198f2a15dff09b3b675117f36b4a64315b",
+      "bytes": 575213719,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-D",
+      "domain": "D",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-D/iter_4000.pth",
+      "sha256": "3b74ef14b273a0fbd5d26d28ca207ca91b47e3a644ebfb9a10a0032ed8dd99ca",
+      "bytes": 575326807,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-C",
+      "domain": "C",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-C/iter_1000.pth",
+      "sha256": "827d6bd59bf9cbc1abb14b20ba265b9ac8716003305990a15f1e724743cea734",
+      "bytes": 574985495,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-C",
+      "domain": "C",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-C/iter_2000.pth",
+      "sha256": "3ed3c4d957cd0dca90d774db2dffb3a78c5ec74b6b47023d3bfa5b9e6c8d84fb",
+      "bytes": 575100311,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-C",
+      "domain": "C",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-C/iter_3000.pth",
+      "sha256": "bbb21e50124ac560b76b9bf4623db6524ea60deef4040570aab6e397866a34a6",
+      "bytes": 575213463,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-C",
+      "domain": "C",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-C/iter_4000.pth",
+      "sha256": "82e0ebeebac0fde5475d36b92c580909293210c380836eb4dc41a109086f0db4",
+      "bytes": 575326551,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-B",
+      "domain": "B",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-B/iter_1000.pth",
+      "sha256": "0987f1402c5d911a04da8f53e8839c4a452a2b1186011763266ab7fe0db363d1",
+      "bytes": 574985495,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-B",
+      "domain": "B",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-B/iter_2000.pth",
+      "sha256": "f329ea796f480fffb994a061093b24748c6d9234da5070d4260e9271e3372721",
+      "bytes": 575100375,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-B",
+      "domain": "B",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-B/iter_3000.pth",
+      "sha256": "d664e0afde2dac8fada078197c23f8e94e5e29cec6c706e5fd0aca3d61f4ce70",
+      "bytes": 575213591,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "ft-seed0-B",
+      "domain": "B",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-B/iter_4000.pth",
+      "sha256": "2cff5e20d721d872538d6e192ee11be594768e359ae39578f7f0e7f2a9cfc3d0",
+      "bytes": 575326743,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-E",
+      "domain": "E",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-E/iter_1000.pth",
+      "sha256": "7fd137a15dc39c2310be823fb4fe44e4f7d18c05bbd53bcf61aafb610ef7a2ed",
+      "bytes": 765047467,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-E",
+      "domain": "E",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-E/iter_2000.pth",
+      "sha256": "953bdf1c53bd3cd07f756a4ad57a498c31aa00889d25f732476644c224027c9b",
+      "bytes": 765198699,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-E",
+      "domain": "E",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-E/iter_3000.pth",
+      "sha256": "c92f5b7ea9c4d6d1e2989c8555f89eb179768d374548622b651e4cf8411f505e",
+      "bytes": 765348267,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-E",
+      "domain": "E",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-E/iter_4000.pth",
+      "sha256": "b286ede26b8a5314b14e8925003dd7a14c2bb1d64fec125d45fd13fbe8240ebd",
+      "bytes": 765497707,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-D",
+      "domain": "D",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-D/iter_1000.pth",
+      "sha256": "a4cd0b8048ee8e6cb60af97b389fcdb5b4bacc9f17f3289fa792b8bb734aca18",
+      "bytes": 765048043,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-D",
+      "domain": "D",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-D/iter_2000.pth",
+      "sha256": "216151ff14743d3b68cc9d0970e6a4fc1cb0d0ca10973f7a649ec56b884034b5",
+      "bytes": 765199275,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-D",
+      "domain": "D",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-D/iter_3000.pth",
+      "sha256": "a1fd48521a5165223178a34a8236131649aa039971ab6729526b036a7920388e",
+      "bytes": 765348779,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-D",
+      "domain": "D",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-D/iter_4000.pth",
+      "sha256": "5455894b41604ec641eb2b15ebdb8b4ba542337b77b946919a4e799ece6f46e9",
+      "bytes": 765498411,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-C",
+      "domain": "C",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-C/iter_1000.pth",
+      "sha256": "8b61c188aa37427ea144027e0fe64575b937bdb81f67af7c58a3bf4dd41fad69",
+      "bytes": 765048235,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-C",
+      "domain": "C",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-C/iter_2000.pth",
+      "sha256": "e96552dacb2405805ffbc92359217708f7d82855ad6ae1fce6adba34bb927f93",
+      "bytes": 765199403,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-C",
+      "domain": "C",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-C/iter_3000.pth",
+      "sha256": "04c5684a3c20126ad778547eea30b7150d3cc7b565bc25e022dc474886488382",
+      "bytes": 765348971,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-C",
+      "domain": "C",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-C/iter_4000.pth",
+      "sha256": "1e545216d8e489094a697bd3b67ba4ae51298669af6c492df9369bc2e9c25975",
+      "bytes": 765498347,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-B",
+      "domain": "B",
+      "iteration": 1000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-B/iter_1000.pth",
+      "sha256": "582b05d5627a642cf3424a356dc10c4d2775848fa29328a3d5f9ab09d6d5b975",
+      "bytes": 765047979,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-B",
+      "domain": "B",
+      "iteration": 2000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-B/iter_2000.pth",
+      "sha256": "03f1ff714b0090273969a2b5dba4379d5a7ebc9c7520922f1d578da62302ac5b",
+      "bytes": 765198955,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-B",
+      "domain": "B",
+      "iteration": 3000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-B/iter_3000.pth",
+      "sha256": "e18ac992e24d5f7ecb677a94f1645b8a325fbf2530084c0e8bb1dea817e8b854",
+      "bytes": 765348587,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    },
+    {
+      "run": "gsmf-seed0-B",
+      "domain": "B",
+      "iteration": 4000,
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-B/iter_4000.pth",
+      "sha256": "cb2547e60233719f2b6f89a5e287ef809bd6b7e87f9d3fb3d9ba9648b3f86f22",
+      "bytes": 765498027,
+      "optimizer_scheduler_iteration_exact": true,
+      "all_model_and_optimizer_tensors_finite": true
+    }
+  ],
+  "predictions": [
+    {
+      "model": "ft-seed0-E",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-E-clear/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-E-clear/evaluation.json",
+      "checkpoint_sha256": "e02770953f4feaff679b391b23f4d29c890de5df635be286c0ebd10ba14b0a79",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-E-clear.json"
+    },
+    {
+      "model": "ft-seed0-E",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-E-fog/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-E-fog/evaluation.json",
+      "checkpoint_sha256": "e02770953f4feaff679b391b23f4d29c890de5df635be286c0ebd10ba14b0a79",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-E-fog.json"
+    },
+    {
+      "model": "ft-seed0-E",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-E-rain/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-E-rain/evaluation.json",
+      "checkpoint_sha256": "e02770953f4feaff679b391b23f4d29c890de5df635be286c0ebd10ba14b0a79",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-E-rain.json"
+    },
+    {
+      "model": "ft-seed0-E",
+      "condition": "snow",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-E-snow/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-E-snow/evaluation.json",
+      "checkpoint_sha256": "e02770953f4feaff679b391b23f4d29c890de5df635be286c0ebd10ba14b0a79",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-E-snow.json"
+    },
+    {
+      "model": "ft-seed0-E",
+      "condition": "night",
+      "provenance": "new",
+      "images": 106,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-E-night/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-E-night/evaluation.json",
+      "checkpoint_sha256": "e02770953f4feaff679b391b23f4d29c890de5df635be286c0ebd10ba14b0a79",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-E-night.json"
+    },
+    {
+      "model": "ft-seed0-D",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-D-clear/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-D-clear/evaluation.json",
+      "checkpoint_sha256": "3b74ef14b273a0fbd5d26d28ca207ca91b47e3a644ebfb9a10a0032ed8dd99ca",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-D-clear.json"
+    },
+    {
+      "model": "ft-seed0-D",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-D-fog/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-D-fog/evaluation.json",
+      "checkpoint_sha256": "3b74ef14b273a0fbd5d26d28ca207ca91b47e3a644ebfb9a10a0032ed8dd99ca",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-D-fog.json"
+    },
+    {
+      "model": "ft-seed0-D",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-D-rain/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-D-rain/evaluation.json",
+      "checkpoint_sha256": "3b74ef14b273a0fbd5d26d28ca207ca91b47e3a644ebfb9a10a0032ed8dd99ca",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-D-rain.json"
+    },
+    {
+      "model": "ft-seed0-D",
+      "condition": "snow",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-D-snow/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-D-snow/evaluation.json",
+      "checkpoint_sha256": "3b74ef14b273a0fbd5d26d28ca207ca91b47e3a644ebfb9a10a0032ed8dd99ca",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-D-snow.json"
+    },
+    {
+      "model": "ft-seed0-D",
+      "condition": "night",
+      "provenance": "new",
+      "images": 106,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-D-night/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-D-night/evaluation.json",
+      "checkpoint_sha256": "3b74ef14b273a0fbd5d26d28ca207ca91b47e3a644ebfb9a10a0032ed8dd99ca",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-D-night.json"
+    },
+    {
+      "model": "ft-seed0-C",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-C-clear/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-C-clear/evaluation.json",
+      "checkpoint_sha256": "82e0ebeebac0fde5475d36b92c580909293210c380836eb4dc41a109086f0db4",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-C-clear.json"
+    },
+    {
+      "model": "ft-seed0-C",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-C-fog/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-C-fog/evaluation.json",
+      "checkpoint_sha256": "82e0ebeebac0fde5475d36b92c580909293210c380836eb4dc41a109086f0db4",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-C-fog.json"
+    },
+    {
+      "model": "ft-seed0-C",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-C-rain/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-C-rain/evaluation.json",
+      "checkpoint_sha256": "82e0ebeebac0fde5475d36b92c580909293210c380836eb4dc41a109086f0db4",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-C-rain.json"
+    },
+    {
+      "model": "ft-seed0-C",
+      "condition": "snow",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-C-snow/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-C-snow/evaluation.json",
+      "checkpoint_sha256": "82e0ebeebac0fde5475d36b92c580909293210c380836eb4dc41a109086f0db4",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-C-snow.json"
+    },
+    {
+      "model": "ft-seed0-C",
+      "condition": "night",
+      "provenance": "new",
+      "images": 106,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-C-night/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-C-night/evaluation.json",
+      "checkpoint_sha256": "82e0ebeebac0fde5475d36b92c580909293210c380836eb4dc41a109086f0db4",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-C-night.json"
+    },
+    {
+      "model": "ft-seed0-B",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-clear/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-clear/evaluation.json",
+      "checkpoint_sha256": "2cff5e20d721d872538d6e192ee11be594768e359ae39578f7f0e7f2a9cfc3d0",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-B-clear.json"
+    },
+    {
+      "model": "ft-seed0-B",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-fog/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-fog/evaluation.json",
+      "checkpoint_sha256": "2cff5e20d721d872538d6e192ee11be594768e359ae39578f7f0e7f2a9cfc3d0",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-B-fog.json"
+    },
+    {
+      "model": "ft-seed0-B",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-rain/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-rain/evaluation.json",
+      "checkpoint_sha256": "2cff5e20d721d872538d6e192ee11be594768e359ae39578f7f0e7f2a9cfc3d0",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-B-rain.json"
+    },
+    {
+      "model": "ft-seed0-B",
+      "condition": "snow",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-snow/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-snow/evaluation.json",
+      "checkpoint_sha256": "2cff5e20d721d872538d6e192ee11be594768e359ae39578f7f0e7f2a9cfc3d0",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-B-snow.json"
+    },
+    {
+      "model": "ft-seed0-B",
+      "condition": "night",
+      "provenance": "new",
+      "images": 106,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-night/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-night/evaluation.json",
+      "checkpoint_sha256": "2cff5e20d721d872538d6e192ee11be594768e359ae39578f7f0e7f2a9cfc3d0",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-B-night.json"
+    },
+    {
+      "model": "ft-seed0-B",
+      "condition": "fog005",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-fog005/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-fog005/evaluation.json",
+      "checkpoint_sha256": "2cff5e20d721d872538d6e192ee11be594768e359ae39578f7f0e7f2a9cfc3d0",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-B-fog005.json"
+    },
+    {
+      "model": "ft-seed0-B",
+      "condition": "fog010",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-fog010/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-fog010/evaluation.json",
+      "checkpoint_sha256": "2cff5e20d721d872538d6e192ee11be594768e359ae39578f7f0e7f2a9cfc3d0",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-B-fog010.json"
+    },
+    {
+      "model": "ft-seed0-B",
+      "condition": "fog020",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-fog020/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-ft-seed0-B-fog020/evaluation.json",
+      "checkpoint_sha256": "2cff5e20d721d872538d6e192ee11be594768e359ae39578f7f0e7f2a9cfc3d0",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/ft-seed0-B-fog020.json"
+    },
+    {
+      "model": "gsmf-seed0-E",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-E-clear/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-E-clear/evaluation.json",
+      "checkpoint_sha256": "b286ede26b8a5314b14e8925003dd7a14c2bb1d64fec125d45fd13fbe8240ebd",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-E-clear.json"
+    },
+    {
+      "model": "gsmf-seed0-E",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-E-fog/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-E-fog/evaluation.json",
+      "checkpoint_sha256": "b286ede26b8a5314b14e8925003dd7a14c2bb1d64fec125d45fd13fbe8240ebd",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-E-fog.json"
+    },
+    {
+      "model": "gsmf-seed0-E",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-E-rain/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-E-rain/evaluation.json",
+      "checkpoint_sha256": "b286ede26b8a5314b14e8925003dd7a14c2bb1d64fec125d45fd13fbe8240ebd",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-E-rain.json"
+    },
+    {
+      "model": "gsmf-seed0-E",
+      "condition": "snow",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-E-snow/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-E-snow/evaluation.json",
+      "checkpoint_sha256": "b286ede26b8a5314b14e8925003dd7a14c2bb1d64fec125d45fd13fbe8240ebd",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-E-snow.json"
+    },
+    {
+      "model": "gsmf-seed0-E",
+      "condition": "night",
+      "provenance": "new",
+      "images": 106,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-E-night/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-E-night/evaluation.json",
+      "checkpoint_sha256": "b286ede26b8a5314b14e8925003dd7a14c2bb1d64fec125d45fd13fbe8240ebd",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-E-night.json"
+    },
+    {
+      "model": "gsmf-seed0-D",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-D-clear/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-D-clear/evaluation.json",
+      "checkpoint_sha256": "5455894b41604ec641eb2b15ebdb8b4ba542337b77b946919a4e799ece6f46e9",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-D-clear.json"
+    },
+    {
+      "model": "gsmf-seed0-D",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-D-fog/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-D-fog/evaluation.json",
+      "checkpoint_sha256": "5455894b41604ec641eb2b15ebdb8b4ba542337b77b946919a4e799ece6f46e9",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-D-fog.json"
+    },
+    {
+      "model": "gsmf-seed0-D",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-D-rain/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-D-rain/evaluation.json",
+      "checkpoint_sha256": "5455894b41604ec641eb2b15ebdb8b4ba542337b77b946919a4e799ece6f46e9",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-D-rain.json"
+    },
+    {
+      "model": "gsmf-seed0-D",
+      "condition": "snow",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-D-snow/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-D-snow/evaluation.json",
+      "checkpoint_sha256": "5455894b41604ec641eb2b15ebdb8b4ba542337b77b946919a4e799ece6f46e9",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-D-snow.json"
+    },
+    {
+      "model": "gsmf-seed0-D",
+      "condition": "night",
+      "provenance": "new",
+      "images": 106,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-D-night/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-D-night/evaluation.json",
+      "checkpoint_sha256": "5455894b41604ec641eb2b15ebdb8b4ba542337b77b946919a4e799ece6f46e9",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-D-night.json"
+    },
+    {
+      "model": "gsmf-seed0-C",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-clear/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-clear/evaluation.json",
+      "checkpoint_sha256": "1e545216d8e489094a697bd3b67ba4ae51298669af6c492df9369bc2e9c25975",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-C-clear.json"
+    },
+    {
+      "model": "gsmf-seed0-C",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-fog/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-fog/evaluation.json",
+      "checkpoint_sha256": "1e545216d8e489094a697bd3b67ba4ae51298669af6c492df9369bc2e9c25975",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-C-fog.json"
+    },
+    {
+      "model": "gsmf-seed0-C",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-rain/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-rain/evaluation.json",
+      "checkpoint_sha256": "1e545216d8e489094a697bd3b67ba4ae51298669af6c492df9369bc2e9c25975",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-C-rain.json"
+    },
+    {
+      "model": "gsmf-seed0-C",
+      "condition": "snow",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-snow/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-snow/evaluation.json",
+      "checkpoint_sha256": "1e545216d8e489094a697bd3b67ba4ae51298669af6c492df9369bc2e9c25975",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-C-snow.json"
+    },
+    {
+      "model": "gsmf-seed0-C",
+      "condition": "night",
+      "provenance": "new",
+      "images": 106,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-night/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-C-night/evaluation.json",
+      "checkpoint_sha256": "1e545216d8e489094a697bd3b67ba4ae51298669af6c492df9369bc2e9c25975",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-C-night.json"
+    },
+    {
+      "model": "gsmf-seed0-B",
+      "condition": "clear",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-clear/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-clear/evaluation.json",
+      "checkpoint_sha256": "cb2547e60233719f2b6f89a5e287ef809bd6b7e87f9d3fb3d9ba9648b3f86f22",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-B-clear.json"
+    },
+    {
+      "model": "gsmf-seed0-B",
+      "condition": "fog",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-fog/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-fog/evaluation.json",
+      "checkpoint_sha256": "cb2547e60233719f2b6f89a5e287ef809bd6b7e87f9d3fb3d9ba9648b3f86f22",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-B-fog.json"
+    },
+    {
+      "model": "gsmf-seed0-B",
+      "condition": "rain",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-rain/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-rain/evaluation.json",
+      "checkpoint_sha256": "cb2547e60233719f2b6f89a5e287ef809bd6b7e87f9d3fb3d9ba9648b3f86f22",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-B-rain.json"
+    },
+    {
+      "model": "gsmf-seed0-B",
+      "condition": "snow",
+      "provenance": "new",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-snow/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-snow/evaluation.json",
+      "checkpoint_sha256": "cb2547e60233719f2b6f89a5e287ef809bd6b7e87f9d3fb3d9ba9648b3f86f22",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-B-snow.json"
+    },
+    {
+      "model": "gsmf-seed0-B",
+      "condition": "night",
+      "provenance": "new",
+      "images": 106,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-night/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-night/evaluation.json",
+      "checkpoint_sha256": "cb2547e60233719f2b6f89a5e287ef809bd6b7e87f9d3fb3d9ba9648b3f86f22",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-B-night.json"
+    },
+    {
+      "model": "gsmf-seed0-B",
+      "condition": "fog005",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-fog005/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-fog005/evaluation.json",
+      "checkpoint_sha256": "cb2547e60233719f2b6f89a5e287ef809bd6b7e87f9d3fb3d9ba9648b3f86f22",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-B-fog005.json"
+    },
+    {
+      "model": "gsmf-seed0-B",
+      "condition": "fog010",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-fog010/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-fog010/evaluation.json",
+      "checkpoint_sha256": "cb2547e60233719f2b6f89a5e287ef809bd6b7e87f9d3fb3d9ba9648b3f86f22",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-B-fog010.json"
+    },
+    {
+      "model": "gsmf-seed0-B",
+      "condition": "fog020",
+      "provenance": "new",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-fog020/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/eval-gsmf-seed0-B-fog020/evaluation.json",
+      "checkpoint_sha256": "cb2547e60233719f2b6f89a5e287ef809bd6b7e87f9d3fb3d9ba9648b3f86f22",
+      "independent_index": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/results-1794575803050927858/verification/gsmf-seed0-B-fog020.json"
+    },
+    {
+      "model": "source",
+      "condition": "clear",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0/evaluation.json",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "independent_index": null
+    },
+    {
+      "model": "source",
+      "condition": "fog005",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.005/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.005/evaluation.json",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "independent_index": null
+    },
+    {
+      "model": "source",
+      "condition": "fog010",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.01/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.01/evaluation.json",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "independent_index": null
+    },
+    {
+      "model": "source",
+      "condition": "fog020",
+      "provenance": "reused",
+      "images": 500,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.02/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/evaluation-20261110/full/source/0.02/evaluation.json",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "independent_index": null
+    },
+    {
+      "model": "source",
+      "condition": "fog",
+      "provenance": "reused",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_source_B/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/eval_source_B/evaluation.json",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "independent_index": null
+    },
+    {
+      "model": "source",
+      "condition": "rain",
+      "provenance": "reused",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/evaluation.json",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "independent_index": null
+    },
+    {
+      "model": "source",
+      "condition": "snow",
+      "provenance": "reused",
+      "images": 100,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/eval-source-snow/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/eval-source-snow/evaluation.json",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "independent_index": null
+    },
+    {
+      "model": "source",
+      "condition": "night",
+      "provenance": "reused",
+      "images": 106,
+      "directory": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/eval-source-night/predictions",
+      "evaluation": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/eval-source-night/evaluation.json",
+      "checkpoint_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "independent_index": null
+    }
+  ],
+  "initializations": {
+    "ft-seed0-E": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/initialization/ft-seed0-E/ft_init.pth",
+      "sha256": "ec3b611bc8d99c0a718f7709a539fef5f8b86649cbfca413316b4f69c01578bf",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source/iter_60000.pth",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93"
+    },
+    "ft-seed0-D": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/initialization/ft-seed0-D/ft_init.pth",
+      "sha256": "b9e0a6d96aa2b9bae7fd3deb99b4a0f3a566c91f6e266ecdfd574930baa22a87",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-E/iter_4000.pth",
+      "parent_sha256": "e02770953f4feaff679b391b23f4d29c890de5df635be286c0ebd10ba14b0a79"
+    },
+    "ft-seed0-C": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/initialization/ft-seed0-C/ft_init.pth",
+      "sha256": "52d0cd444dd572a82775e48492d8b481986c24823c6c7261ffe7e44fff3123f2",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-D/iter_4000.pth",
+      "parent_sha256": "3b74ef14b273a0fbd5d26d28ca207ca91b47e3a644ebfb9a10a0032ed8dd99ca"
+    },
+    "ft-seed0-B": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/initialization/ft-seed0-B/ft_init.pth",
+      "sha256": "bf6735f1ddc1d53b699f08e26de56aa230ab616acf3fa256e5033f248a580f11",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/ft-seed0-C/iter_4000.pth",
+      "parent_sha256": "82e0ebeebac0fde5475d36b92c580909293210c380836eb4dc41a109086f0db4"
+    },
+    "gsmf-seed0-E": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/initialization/gsmf-seed0-E/gsmf_init.pth",
+      "sha256": "3d52e10cdec54f8afecf677eaaee7aae8dbe84bf5dba0cc1041fc87d1b6e8493",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source/iter_60000.pth",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93"
+    },
+    "gsmf-seed0-D": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/initialization/gsmf-seed0-D/gsmf_init.pth",
+      "sha256": "67c200393f54d8cebed92447286f6e630d52e80af4d685f87fa40f3af0536363",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-E/iter_4000.pth",
+      "parent_sha256": "b286ede26b8a5314b14e8925003dd7a14c2bb1d64fec125d45fd13fbe8240ebd"
+    },
+    "gsmf-seed0-C": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/initialization/gsmf-seed0-C/gsmf_init.pth",
+      "sha256": "0da717d628222b819eaf631488d657e238dbeb30b4c23fb7115f3065452abf21",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-D/iter_4000.pth",
+      "parent_sha256": "5455894b41604ec641eb2b15ebdb8b4ba542337b77b946919a4e799ece6f46e9"
+    },
+    "gsmf-seed0-B": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/initialization/gsmf-seed0-B/gsmf_init.pth",
+      "sha256": "3f5eefb54c942a5e5d643b9b88b7b7715d69e9d49b0867986c0b0e9e08933177",
+      "parent": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-C-plan-20261111-140000/gsmf-seed0-C/iter_4000.pth",
+      "parent_sha256": "1e545216d8e489094a697bd3b67ba4ae51298669af6c492df9369bc2e9c25975"
+    }
+  },
+  "data_audit": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/audit.json",
+  "excludes": [
+    "weights",
+    "raw images/labels/archives",
+    "full predictions",
+    "Conda environment",
+    ".git",
+    "cookies/authentication files"
+  ]
+}

@@ -60,3 +60,23 @@ wandb/
 # Keep documents, Markdown, source code, configs, formal experiment logs,
 # metric summaries and result analyses trackable; ignore large source PDFs.
 *.pdf
+
+# Agent scratch workspace
+/.codex-tmp/
+
+# Local-only experiment artifacts; keep metrics, configs and formal logs
+/03_experiments/**/results/fixed-samples/**/*.png
+/03_experiments/segformer_b5_p0_20261116/muses/sources/*.bin
+/03_experiments/**/*.tar.gz
+/03_experiments/**/*.zip
+
+# Local document revision backups and generated format-audit artifacts
+/05_writing/backups/
+/06_meetings/backups/
+/05_writing/Templates/format_audit_20261117/ooxml/
+/05_writing/Templates/format_audit_20261117/*.png
+/05_writing/Templates/format_audit_20261117/word_converted.docx
+
+# Independent local clones of the upstream thesis template
+/05_writing/TongjiThesis/
+/05_writing/Templates/format_audit_20261117/TongjiThesis/

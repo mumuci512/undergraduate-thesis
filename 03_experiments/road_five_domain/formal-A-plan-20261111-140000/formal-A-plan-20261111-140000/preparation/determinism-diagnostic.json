@@ -1,0 +1,9 @@
+{
+  "strict_deterministic_backward": false,
+  "error": "upsample_bilinear2d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True)'. You can turn off determinism just for this operation if that's acceptable for your application. You can also file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation.",
+  "optimization_steps": 0,
+  "input_sha256": "fc9b79cc26341544ebd03d87077b6a3c776d6555b85de5c708cefda2b86b4dbb",
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "seconds": 0.17689984699245542,
+  "scope": "Diagnostic only; original cudnn deterministic config and training methods unchanged. Strict flag covers more CUDA operators than cudnn.deterministic."
+}

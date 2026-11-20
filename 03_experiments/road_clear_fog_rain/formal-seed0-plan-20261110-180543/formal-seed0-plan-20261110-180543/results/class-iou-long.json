@@ -1,0 +1,6386 @@
+[
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "road",
+    "IoU": 96.59484891505767,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "sidewalk",
+    "IoU": 79.47756158458172,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "building",
+    "IoU": 90.41300926456718,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "wall",
+    "IoU": 40.81768478049766,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "fence",
+    "IoU": 53.614515575424235,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "pole",
+    "IoU": 56.415179600172785,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "traffic light",
+    "IoU": 66.02228206404787,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "traffic sign",
+    "IoU": 72.65649818166537,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "vegetation",
+    "IoU": 91.01901427395951,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "terrain",
+    "IoU": 60.41185518733114,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "sky",
+    "IoU": 93.55690334249752,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "person",
+    "IoU": 78.03886415024267,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "rider",
+    "IoU": 57.06888902594057,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "car",
+    "IoU": 93.9097866593505,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "truck",
+    "IoU": 60.63190990957339,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "bus",
+    "IoU": 80.0226213222806,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "train",
+    "IoU": 63.669780577270764,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "motorcycle",
+    "IoU": 50.498699414311744,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "clear",
+    "class_name": "bicycle",
+    "IoU": 73.82581761676342,
+    "mIoU": 71.50872218134401,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "road",
+    "IoU": 96.30451841845144,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "sidewalk",
+    "IoU": 78.44792580208978,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "building",
+    "IoU": 87.17016751943785,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "wall",
+    "IoU": 37.64323503653737,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "fence",
+    "IoU": 52.14168306980268,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "pole",
+    "IoU": 52.690404980834046,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "traffic light",
+    "IoU": 63.95398740600724,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "traffic sign",
+    "IoU": 70.93226572314326,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "vegetation",
+    "IoU": 87.76541447456593,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "terrain",
+    "IoU": 57.66760861132726,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "sky",
+    "IoU": 86.80678623149795,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "person",
+    "IoU": 76.76169943257311,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "rider",
+    "IoU": 55.87680570429057,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "car",
+    "IoU": 93.07392813228921,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "truck",
+    "IoU": 59.679990137506124,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "bus",
+    "IoU": 75.0617000430596,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "train",
+    "IoU": 56.42361205320079,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "motorcycle",
+    "IoU": 49.43906300868576,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog005",
+    "class_name": "bicycle",
+    "IoU": 73.38384734726114,
+    "mIoU": 69.01182332276636,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "road",
+    "IoU": 96.00467703050303,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "sidewalk",
+    "IoU": 76.98402598339612,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "building",
+    "IoU": 82.14726766700494,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "wall",
+    "IoU": 33.1974257173194,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "fence",
+    "IoU": 50.11123465104167,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "pole",
+    "IoU": 47.47444204282549,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "traffic light",
+    "IoU": 59.119915006045495,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "traffic sign",
+    "IoU": 67.6907797591486,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "vegetation",
+    "IoU": 81.18008823933171,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "terrain",
+    "IoU": 54.18486552568336,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "sky",
+    "IoU": 79.14201424511967,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "person",
+    "IoU": 74.93727236582362,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "rider",
+    "IoU": 54.55871207588413,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "car",
+    "IoU": 92.19449895248529,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "truck",
+    "IoU": 55.88555705300988,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "bus",
+    "IoU": 69.7227606028773,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "train",
+    "IoU": 45.350318630763766,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "motorcycle",
+    "IoU": 47.70715373371271,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog010",
+    "class_name": "bicycle",
+    "IoU": 72.51600494507855,
+    "mIoU": 65.26889548563445,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "road",
+    "IoU": 95.07688594090149,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "sidewalk",
+    "IoU": 73.59035340081205,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "building",
+    "IoU": 69.18755190266229,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "wall",
+    "IoU": 22.03736253232581,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "fence",
+    "IoU": 44.268757116150226,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "pole",
+    "IoU": 38.35988733585466,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "traffic light",
+    "IoU": 48.88182875240582,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "traffic sign",
+    "IoU": 61.49750720771156,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "vegetation",
+    "IoU": 61.9240373329633,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "terrain",
+    "IoU": 47.426212516249755,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "sky",
+    "IoU": 62.28535394862068,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "person",
+    "IoU": 71.33907899050912,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "rider",
+    "IoU": 49.75845309833924,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "car",
+    "IoU": 89.46077850652112,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "truck",
+    "IoU": 47.93698748184534,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "bus",
+    "IoU": 56.4636011997226,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "train",
+    "IoU": 33.064054498953524,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "motorcycle",
+    "IoU": 44.67457908878279,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog020",
+    "class_name": "bicycle",
+    "IoU": 68.6034754932176,
+    "mIoU": 57.14930243918679,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "road",
+    "IoU": 92.45838634557705,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "sidewalk",
+    "IoU": 69.31806968933901,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "building",
+    "IoU": 67.72462979671648,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "wall",
+    "IoU": 19.121610694386252,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "fence",
+    "IoU": 12.218445557924262,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "pole",
+    "IoU": 21.313580242594448,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "traffic light",
+    "IoU": 52.380323752923566,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "traffic sign",
+    "IoU": 47.879622522237774,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "vegetation",
+    "IoU": 71.9435812286596,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "terrain",
+    "IoU": 39.96300810422363,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "sky",
+    "IoU": 76.2716801067461,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "person",
+    "IoU": 49.454448140077226,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "rider",
+    "IoU": 44.36607300299771,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "car",
+    "IoU": 80.98311939063754,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "truck",
+    "IoU": 33.61730048509517,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "bus",
+    "IoU": 63.3573799327812,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "train",
+    "IoU": 40.773699158898985,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "motorcycle",
+    "IoU": 6.106487734739227,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "fog",
+    "class_name": "bicycle",
+    "IoU": 53.3326257694757,
+    "mIoU": 49.60968798189637,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "road",
+    "IoU": 85.71890461714953,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "sidewalk",
+    "IoU": 63.59798716948679,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "building",
+    "IoU": 86.6667743967493,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "wall",
+    "IoU": 31.558237394925072,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "fence",
+    "IoU": 27.82392060167187,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "pole",
+    "IoU": 46.84403658643955,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "traffic light",
+    "IoU": 48.922346709544534,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "traffic sign",
+    "IoU": 56.861863621631706,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "vegetation",
+    "IoU": 86.18032051595131,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "terrain",
+    "IoU": 11.850085261516105,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "sky",
+    "IoU": 79.3579828174262,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "person",
+    "IoU": 64.90703430603769,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "rider",
+    "IoU": 45.666229698392364,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "car",
+    "IoU": 85.40301884754992,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "truck",
+    "IoU": 28.032370709515288,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "bus",
+    "IoU": 61.83048891945017,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "train",
+    "IoU": 47.77861741830128,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "motorcycle",
+    "IoU": 34.63698846661935,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "clear",
+    "class_name": "bicycle",
+    "IoU": 37.90208421157078,
+    "mIoU": 54.2915416984173,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "road",
+    "IoU": 85.75337547801104,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "sidewalk",
+    "IoU": 65.4708869524481,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "building",
+    "IoU": 84.71518432669698,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "wall",
+    "IoU": 30.154833615076242,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "fence",
+    "IoU": 32.68207093079424,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "pole",
+    "IoU": 46.76116429884276,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "traffic light",
+    "IoU": 52.249597791835335,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "traffic sign",
+    "IoU": 58.20923278079567,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "vegetation",
+    "IoU": 85.12646645247742,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "terrain",
+    "IoU": 12.502978057635577,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "sky",
+    "IoU": 71.22113658903243,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "person",
+    "IoU": 64.77506038875688,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "rider",
+    "IoU": 44.00991806858225,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "car",
+    "IoU": 85.24327176674244,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "truck",
+    "IoU": 30.72450056173846,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "bus",
+    "IoU": 61.33700640786648,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "train",
+    "IoU": 46.31487615093263,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "motorcycle",
+    "IoU": 31.16766877545559,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog005",
+    "class_name": "bicycle",
+    "IoU": 37.18479284985213,
+    "mIoU": 53.97915906545119,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "road",
+    "IoU": 85.23456585515582,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "sidewalk",
+    "IoU": 65.85069914383983,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "building",
+    "IoU": 81.58862761687976,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "wall",
+    "IoU": 28.219167877230227,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "fence",
+    "IoU": 32.7430185031549,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "pole",
+    "IoU": 43.92773203052616,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "traffic light",
+    "IoU": 50.881469163770376,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "traffic sign",
+    "IoU": 57.07875841850472,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "vegetation",
+    "IoU": 78.71640269137679,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "terrain",
+    "IoU": 12.97253022233374,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "sky",
+    "IoU": 55.469775072787684,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "person",
+    "IoU": 63.532173756941305,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "rider",
+    "IoU": 42.214362211825716,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "car",
+    "IoU": 84.23757537975159,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "truck",
+    "IoU": 27.20960743242603,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "bus",
+    "IoU": 58.633862492477576,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "train",
+    "IoU": 39.533179804724426,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "motorcycle",
+    "IoU": 27.8271531859118,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog010",
+    "class_name": "bicycle",
+    "IoU": 34.317647590128445,
+    "mIoU": 51.06254254998668,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "road",
+    "IoU": 82.09221333426471,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "sidewalk",
+    "IoU": 63.801624083606924,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "building",
+    "IoU": 76.09660312914535,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "wall",
+    "IoU": 26.593408073273455,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "fence",
+    "IoU": 32.15294933206367,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "pole",
+    "IoU": 37.87881103513841,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "traffic light",
+    "IoU": 46.286331209565944,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "traffic sign",
+    "IoU": 52.7882710982536,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "vegetation",
+    "IoU": 61.025451951704405,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "terrain",
+    "IoU": 13.750235046236881,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "sky",
+    "IoU": 28.93055893872325,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "person",
+    "IoU": 59.41511498714228,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "rider",
+    "IoU": 38.08938577509795,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "car",
+    "IoU": 81.22199233156473,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "truck",
+    "IoU": 18.703512783976937,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "bus",
+    "IoU": 50.27903812189622,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "train",
+    "IoU": 29.20314249600156,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "motorcycle",
+    "IoU": 26.02551917790653,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog020",
+    "class_name": "bicycle",
+    "IoU": 27.39824554952094,
+    "mIoU": 44.82802149763599,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "road",
+    "IoU": 95.07797382994102,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "sidewalk",
+    "IoU": 80.53040493997634,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "building",
+    "IoU": 84.70175170005835,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "wall",
+    "IoU": 46.070323516754186,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "fence",
+    "IoU": 32.317658218868964,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "pole",
+    "IoU": 53.34883814830517,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "traffic light",
+    "IoU": 63.7767030640177,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "traffic sign",
+    "IoU": 46.476150748553145,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "vegetation",
+    "IoU": 87.14233678674728,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "terrain",
+    "IoU": 54.73095566612963,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "sky",
+    "IoU": 96.6224184331144,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "person",
+    "IoU": 47.43558239135014,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "rider",
+    "IoU": 62.39115467174274,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "car",
+    "IoU": 79.66389152766386,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "truck",
+    "IoU": 48.30818196957944,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "bus",
+    "IoU": 74.87855552315563,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "train",
+    "IoU": 58.076856694756906,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "motorcycle",
+    "IoU": 15.027463096464128,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "fog",
+    "class_name": "bicycle",
+    "IoU": 57.24908053941687,
+    "mIoU": 62.306646392978735,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "road",
+    "IoU": 86.64788095452327,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "sidewalk",
+    "IoU": 65.09408545453633,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "building",
+    "IoU": 85.81075276524169,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "wall",
+    "IoU": 31.712119218213903,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "fence",
+    "IoU": 36.3398793882494,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "pole",
+    "IoU": 47.51691010065228,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "traffic light",
+    "IoU": 51.60482630811087,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "traffic sign",
+    "IoU": 60.93955042295226,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "vegetation",
+    "IoU": 86.53555947629748,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "terrain",
+    "IoU": 11.323470446463208,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "sky",
+    "IoU": 83.62648539514875,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "person",
+    "IoU": 67.46294825260838,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "rider",
+    "IoU": 46.02228674532689,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "car",
+    "IoU": 84.29435190725903,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "truck",
+    "IoU": 32.579748204903254,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "bus",
+    "IoU": 66.55322846591334,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "train",
+    "IoU": 16.609756539507448,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "motorcycle",
+    "IoU": 34.3237097158159,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "clear",
+    "class_name": "bicycle",
+    "IoU": 53.95067319208865,
+    "mIoU": 55.20780120809538,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "road",
+    "IoU": 86.9325502969844,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "sidewalk",
+    "IoU": 66.38836767836372,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "building",
+    "IoU": 83.21229328380498,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "wall",
+    "IoU": 29.68191473780946,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "fence",
+    "IoU": 38.85747814832061,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "pole",
+    "IoU": 48.346012906593614,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "traffic light",
+    "IoU": 55.413825876226596,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "traffic sign",
+    "IoU": 62.494931941332865,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "vegetation",
+    "IoU": 85.25270993054825,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "terrain",
+    "IoU": 11.957596991199585,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "sky",
+    "IoU": 81.2135105521414,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "person",
+    "IoU": 66.78159963455236,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "rider",
+    "IoU": 44.44991162679185,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "car",
+    "IoU": 85.31561966984245,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "truck",
+    "IoU": 35.179198574908376,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "bus",
+    "IoU": 64.1437729148892,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "train",
+    "IoU": 11.943594018743411,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "motorcycle",
+    "IoU": 29.370649153386996,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog005",
+    "class_name": "bicycle",
+    "IoU": 51.90042795298812,
+    "mIoU": 54.67557715207517,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "road",
+    "IoU": 86.97210994317702,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "sidewalk",
+    "IoU": 66.67640559904964,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "building",
+    "IoU": 79.28541230778684,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "wall",
+    "IoU": 27.941796829988025,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "fence",
+    "IoU": 37.22248828182925,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "pole",
+    "IoU": 45.97572087118797,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "traffic light",
+    "IoU": 53.402447120401945,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "traffic sign",
+    "IoU": 61.22626202669165,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "vegetation",
+    "IoU": 78.9382135057555,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "terrain",
+    "IoU": 12.23457242337117,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "sky",
+    "IoU": 66.55164547031225,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "person",
+    "IoU": 65.58125883149268,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "rider",
+    "IoU": 42.839873666862424,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "car",
+    "IoU": 84.26639433722688,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "truck",
+    "IoU": 31.909694379161696,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "bus",
+    "IoU": 60.66412172283797,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "train",
+    "IoU": 8.159564194214418,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "motorcycle",
+    "IoU": 25.319641387180354,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog010",
+    "class_name": "bicycle",
+    "IoU": 48.79073702493394,
+    "mIoU": 51.78728210123482,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "road",
+    "IoU": 85.50786531455569,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "sidewalk",
+    "IoU": 64.81217870667881,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "building",
+    "IoU": 72.93614540809212,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "wall",
+    "IoU": 25.910033226268258,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "fence",
+    "IoU": 35.21221146686523,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "pole",
+    "IoU": 40.314720543512294,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "traffic light",
+    "IoU": 48.065682518795406,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "traffic sign",
+    "IoU": 56.97060609790918,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "vegetation",
+    "IoU": 61.266469959322734,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "terrain",
+    "IoU": 12.102777222650301,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "sky",
+    "IoU": 36.28761258479113,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "person",
+    "IoU": 62.234266199184006,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "rider",
+    "IoU": 39.6315743263677,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "car",
+    "IoU": 80.89482862401037,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "truck",
+    "IoU": 22.741617973011927,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "bus",
+    "IoU": 53.29552383196805,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "train",
+    "IoU": 5.456644927876219,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "motorcycle",
+    "IoU": 23.132179677636657,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog020",
+    "class_name": "bicycle",
+    "IoU": 40.80783306922206,
+    "mIoU": 45.66214587782727,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "road",
+    "IoU": 94.37342467863057,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "sidewalk",
+    "IoU": 78.68542131460858,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "building",
+    "IoU": 84.82301324287083,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "wall",
+    "IoU": 42.590826618602726,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "fence",
+    "IoU": 35.610735120439315,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "pole",
+    "IoU": 52.79884662980795,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "traffic light",
+    "IoU": 65.01604300406701,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "traffic sign",
+    "IoU": 46.77864451486683,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "vegetation",
+    "IoU": 87.84513550414921,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "terrain",
+    "IoU": 54.4251333244557,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "sky",
+    "IoU": 96.36704257491175,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "person",
+    "IoU": 48.785083890151874,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "rider",
+    "IoU": 59.94391983835718,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "car",
+    "IoU": 79.38260088727598,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "truck",
+    "IoU": 49.76007429957174,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "bus",
+    "IoU": 74.41017367063408,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "train",
+    "IoU": 49.61639385871244,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "motorcycle",
+    "IoU": 33.60620329171887,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "fog",
+    "class_name": "bicycle",
+    "IoU": 62.75837742504409,
+    "mIoU": 63.03037335204614,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "road",
+    "IoU": 79.98354435303386,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "sidewalk",
+    "IoU": 64.4000618570543,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "building",
+    "IoU": 85.95380476955505,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "wall",
+    "IoU": 28.021614096149662,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "fence",
+    "IoU": 16.406819907214672,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "pole",
+    "IoU": 46.04123671483051,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "traffic light",
+    "IoU": 50.71633428047906,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "traffic sign",
+    "IoU": 54.785767148832456,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "vegetation",
+    "IoU": 86.97007885574848,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "terrain",
+    "IoU": 14.600769056079388,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "sky",
+    "IoU": 85.2594221170773,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "person",
+    "IoU": 66.74136100778195,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "rider",
+    "IoU": 45.08040431324,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "car",
+    "IoU": 81.65509858679063,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "truck",
+    "IoU": 14.042827973765078,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "bus",
+    "IoU": 60.28897068105974,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "train",
+    "IoU": 37.20303859385702,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "motorcycle",
+    "IoU": 38.30178854905281,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "clear",
+    "class_name": "bicycle",
+    "IoU": 32.70699246975773,
+    "mIoU": 52.0610492279663,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "road",
+    "IoU": 79.81745135118804,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "sidewalk",
+    "IoU": 65.08430609153643,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "building",
+    "IoU": 83.423659555765,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "wall",
+    "IoU": 27.01864365092585,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "fence",
+    "IoU": 15.218507894401418,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "pole",
+    "IoU": 46.53197370057584,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "traffic light",
+    "IoU": 54.034250043440814,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "traffic sign",
+    "IoU": 55.82254109269525,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "vegetation",
+    "IoU": 84.27575698547484,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "terrain",
+    "IoU": 15.116570204623958,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "sky",
+    "IoU": 74.96411266056504,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "person",
+    "IoU": 66.5899583734979,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "rider",
+    "IoU": 43.99232690806173,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "car",
+    "IoU": 81.21605485778596,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "truck",
+    "IoU": 16.787189423829123,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "bus",
+    "IoU": 59.122781998016116,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "train",
+    "IoU": 36.10716738168996,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "motorcycle",
+    "IoU": 34.77011300489016,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog005",
+    "class_name": "bicycle",
+    "IoU": 31.155235066254537,
+    "mIoU": 51.107821065537784,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "road",
+    "IoU": 78.56150515882155,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "sidewalk",
+    "IoU": 64.83841111090693,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "building",
+    "IoU": 79.67845708183347,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "wall",
+    "IoU": 25.70601104603415,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "fence",
+    "IoU": 13.614376088455424,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "pole",
+    "IoU": 44.400067219537796,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "traffic light",
+    "IoU": 51.89327851780512,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "traffic sign",
+    "IoU": 54.847063014065526,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "vegetation",
+    "IoU": 76.35803698695575,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "terrain",
+    "IoU": 15.390966449248555,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "sky",
+    "IoU": 55.68829022892536,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "person",
+    "IoU": 65.17402361345566,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "rider",
+    "IoU": 41.80997625089598,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "car",
+    "IoU": 80.08767565431863,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "truck",
+    "IoU": 16.19698482039848,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "bus",
+    "IoU": 55.586786733194025,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "train",
+    "IoU": 30.024942523968996,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "motorcycle",
+    "IoU": 31.941605391900723,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog010",
+    "class_name": "bicycle",
+    "IoU": 28.147974960765737,
+    "mIoU": 47.891917518499355,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "road",
+    "IoU": 73.57350163540664,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "sidewalk",
+    "IoU": 60.844620647162294,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "building",
+    "IoU": 73.49971538383235,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "wall",
+    "IoU": 22.720533556062353,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "fence",
+    "IoU": 11.484535658310884,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "pole",
+    "IoU": 39.72157112164346,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "traffic light",
+    "IoU": 46.274024006537125,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "traffic sign",
+    "IoU": 52.202072897647625,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "vegetation",
+    "IoU": 56.080742043149066,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "terrain",
+    "IoU": 15.957854599581816,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "sky",
+    "IoU": 27.748969950443026,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "person",
+    "IoU": 60.99068436885409,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "rider",
+    "IoU": 35.298459681507374,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "car",
+    "IoU": 77.11758762039393,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "truck",
+    "IoU": 10.762977138606573,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "bus",
+    "IoU": 48.37718189175075,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "train",
+    "IoU": 25.00239017161432,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "motorcycle",
+    "IoU": 31.564735091709338,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog020",
+    "class_name": "bicycle",
+    "IoU": 20.2999823913193,
+    "mIoU": 41.5537968345017,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "road",
+    "IoU": 93.364399714244,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "sidewalk",
+    "IoU": 76.11436675890695,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "building",
+    "IoU": 82.38230633668292,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "wall",
+    "IoU": 38.13599410605873,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "fence",
+    "IoU": 28.371743715045422,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "pole",
+    "IoU": 46.14049784837951,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "traffic light",
+    "IoU": 61.5274330479489,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "traffic sign",
+    "IoU": 57.262977624301634,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "vegetation",
+    "IoU": 84.65632686886438,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "terrain",
+    "IoU": 54.87096965992296,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "sky",
+    "IoU": 92.87058369891878,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "person",
+    "IoU": 48.50278521178942,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "rider",
+    "IoU": 58.223797993773786,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "car",
+    "IoU": 79.3208016345035,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "truck",
+    "IoU": 48.343826668060686,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "bus",
+    "IoU": 71.89204542794315,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "train",
+    "IoU": 39.72353900452285,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "motorcycle",
+    "IoU": 20.04762935700368,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "fog",
+    "class_name": "bicycle",
+    "IoU": 54.21451323643567,
+    "mIoU": 59.787712521752994,
+    "provenance": "reused"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "road",
+    "IoU": 75.16440121161034,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "sidewalk",
+    "IoU": 33.559869022994384,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "building",
+    "IoU": 70.34730798054191,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "wall",
+    "IoU": 8.767911070970639,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "fence",
+    "IoU": 13.47858382054865,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "pole",
+    "IoU": 23.724448354764263,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "traffic light",
+    "IoU": 46.732123447135336,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "traffic sign",
+    "IoU": 58.944920896665444,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "vegetation",
+    "IoU": 79.95013525853278,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "terrain",
+    "IoU": 30.791681405650266,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "sky",
+    "IoU": 84.59736191701872,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "person",
+    "IoU": 56.25687832899824,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "rider",
+    "IoU": 0.0,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "car",
+    "IoU": 74.98262910100473,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "truck",
+    "IoU": 6.57535010180965,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "bus",
+    "IoU": 34.24053115563734,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "train",
+    "IoU": 16.780757405917292,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "motorcycle",
+    "IoU": 9.315253095258148,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "source",
+    "condition": "rain",
+    "class_name": "bicycle",
+    "IoU": 9.172771672771672,
+    "mIoU": 38.59910080251736,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "road",
+    "IoU": 79.42253301531323,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "sidewalk",
+    "IoU": 36.622009751209305,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "building",
+    "IoU": 82.72463922093462,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "wall",
+    "IoU": 16.80379662699292,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "fence",
+    "IoU": 29.26308959063802,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "pole",
+    "IoU": 43.83787882320873,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "traffic light",
+    "IoU": 66.84371365629373,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "traffic sign",
+    "IoU": 66.17718615029872,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "vegetation",
+    "IoU": 89.06217193259847,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "terrain",
+    "IoU": 56.38882680475861,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "sky",
+    "IoU": 97.46240366707435,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "person",
+    "IoU": 49.75415753676238,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "rider",
+    "IoU": 0.0,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "car",
+    "IoU": 76.40615965244027,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "truck",
+    "IoU": 9.42575489753188,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "bus",
+    "IoU": 35.4641062560129,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "train",
+    "IoU": 33.766812080601596,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "motorcycle",
+    "IoU": 8.77465562650397,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_fog",
+    "condition": "rain",
+    "class_name": "bicycle",
+    "IoU": 14.005674490585504,
+    "mIoU": 46.95818788314523,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "road",
+    "IoU": 79.4082370339354,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "sidewalk",
+    "IoU": 34.09452676084156,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "building",
+    "IoU": 82.32312621300245,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "wall",
+    "IoU": 16.861273371615926,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "fence",
+    "IoU": 28.72498003776806,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "pole",
+    "IoU": 43.493678112504156,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "traffic light",
+    "IoU": 67.06511343452547,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "traffic sign",
+    "IoU": 66.58483689267749,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "vegetation",
+    "IoU": 89.218982010113,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "terrain",
+    "IoU": 55.26503317726783,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "sky",
+    "IoU": 96.96554036597347,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "person",
+    "IoU": 49.20932876876818,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "rider",
+    "IoU": 0.1295582380079631,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "car",
+    "IoU": 76.19724077738985,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "truck",
+    "IoU": 14.035379591487779,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "bus",
+    "IoU": 39.043113339019314,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "train",
+    "IoU": 28.138288705326904,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "motorcycle",
+    "IoU": 5.406491547627125,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_fog",
+    "condition": "rain",
+    "class_name": "bicycle",
+    "IoU": 20.385371870520387,
+    "mIoU": 46.97632106570381,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "road",
+    "IoU": 78.72415643323495,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "sidewalk",
+    "IoU": 30.93353585737477,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "building",
+    "IoU": 80.74195857859519,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "wall",
+    "IoU": 18.524596803993017,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "fence",
+    "IoU": 27.781959249359666,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "pole",
+    "IoU": 40.914868690065674,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "traffic light",
+    "IoU": 65.33695336317165,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "traffic sign",
+    "IoU": 65.36143860902703,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "vegetation",
+    "IoU": 88.35265962434968,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "terrain",
+    "IoU": 55.43847751290344,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "sky",
+    "IoU": 95.85977746504739,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "person",
+    "IoU": 54.28306326834195,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "rider",
+    "IoU": 0.14783917210063624,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "car",
+    "IoU": 76.93117351230721,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "truck",
+    "IoU": 11.014011582043826,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "bus",
+    "IoU": 37.69170431567098,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "train",
+    "IoU": 25.964489509942247,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "motorcycle",
+    "IoU": 10.296409185088786,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_fog",
+    "condition": "rain",
+    "class_name": "bicycle",
+    "IoU": 12.983337460643153,
+    "mIoU": 46.17275843122428,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "road",
+    "IoU": 84.32964268703952,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "sidewalk",
+    "IoU": 67.17699670128631,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "building",
+    "IoU": 80.96256140730176,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "wall",
+    "IoU": 22.032509633411067,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "fence",
+    "IoU": 39.76725258129687,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "pole",
+    "IoU": 47.496462277392446,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "traffic light",
+    "IoU": 56.54667326797795,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "traffic sign",
+    "IoU": 63.51317414588015,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "vegetation",
+    "IoU": 88.0324783580751,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "terrain",
+    "IoU": 15.18061885663553,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "sky",
+    "IoU": 84.29808751911929,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "person",
+    "IoU": 63.99152847242344,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "rider",
+    "IoU": 45.04569734002261,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "car",
+    "IoU": 86.85373774841047,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "truck",
+    "IoU": 53.766154268240825,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "bus",
+    "IoU": 63.223065218421425,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "train",
+    "IoU": 45.772292159523644,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "motorcycle",
+    "IoU": 35.965255142033264,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "clear",
+    "class_name": "bicycle",
+    "IoU": 52.45260664335787,
+    "mIoU": 57.705620759360514,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "road",
+    "IoU": 83.48062982061744,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "sidewalk",
+    "IoU": 65.9217249124702,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "building",
+    "IoU": 78.46705295882794,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "wall",
+    "IoU": 18.527151958033613,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "fence",
+    "IoU": 37.97560154135009,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "pole",
+    "IoU": 46.02608161496512,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "traffic light",
+    "IoU": 56.417896076701325,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "traffic sign",
+    "IoU": 61.994972381651095,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "vegetation",
+    "IoU": 86.00080154056249,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "terrain",
+    "IoU": 14.816557989018555,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "sky",
+    "IoU": 72.65560763907708,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "person",
+    "IoU": 62.68158078952653,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "rider",
+    "IoU": 43.07434963104313,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "car",
+    "IoU": 86.29115663502296,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "truck",
+    "IoU": 54.1161135361276,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "bus",
+    "IoU": 61.69935494598303,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "train",
+    "IoU": 42.63312966406646,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "motorcycle",
+    "IoU": 32.149229843980656,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog005",
+    "class_name": "bicycle",
+    "IoU": 50.446282567449266,
+    "mIoU": 55.54606716034076,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "road",
+    "IoU": 82.02494048925702,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "sidewalk",
+    "IoU": 64.14320871516813,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "building",
+    "IoU": 74.61017318251287,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "wall",
+    "IoU": 15.413241376717055,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "fence",
+    "IoU": 35.37436169739518,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "pole",
+    "IoU": 42.3704327951085,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "traffic light",
+    "IoU": 53.44161883121241,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "traffic sign",
+    "IoU": 58.942607772119494,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "vegetation",
+    "IoU": 80.36250012743791,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "terrain",
+    "IoU": 14.448199961363336,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "sky",
+    "IoU": 54.62748738670218,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "person",
+    "IoU": 60.241616504361275,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "rider",
+    "IoU": 40.32746395205191,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "car",
+    "IoU": 85.08273354377329,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "truck",
+    "IoU": 50.827668591960894,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "bus",
+    "IoU": 59.51336928566765,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "train",
+    "IoU": 39.2949472498745,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "motorcycle",
+    "IoU": 30.631163192484696,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog010",
+    "class_name": "bicycle",
+    "IoU": 47.035555790805816,
+    "mIoU": 52.03754160241968,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "road",
+    "IoU": 77.67822083612914,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "sidewalk",
+    "IoU": 60.10166581780538,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "building",
+    "IoU": 67.13342397462428,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "wall",
+    "IoU": 9.938532711501672,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "fence",
+    "IoU": 32.37050804637672,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "pole",
+    "IoU": 35.03701891777141,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "traffic light",
+    "IoU": 46.62901895547461,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "traffic sign",
+    "IoU": 52.974707707320036,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "vegetation",
+    "IoU": 63.55246603891962,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "terrain",
+    "IoU": 14.54150708866293,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "sky",
+    "IoU": 26.538204900349832,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "person",
+    "IoU": 54.462621740994,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "rider",
+    "IoU": 32.30742443725955,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "car",
+    "IoU": 81.57185881735847,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "truck",
+    "IoU": 41.683761116967204,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "bus",
+    "IoU": 51.47753329122358,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "train",
+    "IoU": 35.901717188089236,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "motorcycle",
+    "IoU": 30.70156401742051,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog020",
+    "class_name": "bicycle",
+    "IoU": 38.25677535172298,
+    "mIoU": 44.88729110294585,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "road",
+    "IoU": 95.10134241636214,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "sidewalk",
+    "IoU": 76.0518265788847,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "building",
+    "IoU": 82.2704287989314,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "wall",
+    "IoU": 33.328336035468524,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "fence",
+    "IoU": 36.001520037886756,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "pole",
+    "IoU": 51.98583346005772,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "traffic light",
+    "IoU": 66.51397509965155,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "traffic sign",
+    "IoU": 64.16491154910308,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "vegetation",
+    "IoU": 88.11667089095106,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "terrain",
+    "IoU": 55.341779551685214,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "sky",
+    "IoU": 97.05427601625681,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "person",
+    "IoU": 43.4998421440348,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "rider",
+    "IoU": 57.98553908109098,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "car",
+    "IoU": 80.73342159586672,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "truck",
+    "IoU": 50.99977341152382,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "bus",
+    "IoU": 73.06527265219748,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "train",
+    "IoU": 54.77730444258885,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "motorcycle",
+    "IoU": 27.89482736380445,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "fog",
+    "class_name": "bicycle",
+    "IoU": 64.2372449570393,
+    "mIoU": 63.11179610965187,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "road",
+    "IoU": 85.07534589613182,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "sidewalk",
+    "IoU": 53.41655926499177,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "building",
+    "IoU": 84.30601542997562,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "wall",
+    "IoU": 23.141157564367,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "fence",
+    "IoU": 39.19510938478578,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "pole",
+    "IoU": 47.037611833207535,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "traffic light",
+    "IoU": 70.3857907965118,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "traffic sign",
+    "IoU": 69.23370883315705,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "vegetation",
+    "IoU": 90.36663499562681,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "terrain",
+    "IoU": 48.32463308341693,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "sky",
+    "IoU": 97.90461458679269,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "person",
+    "IoU": 59.6599118762796,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "rider",
+    "IoU": 0.015834476934445264,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "car",
+    "IoU": 83.445117092172,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "truck",
+    "IoU": 66.7872452802378,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "bus",
+    "IoU": 49.5664102426166,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "train",
+    "IoU": 36.46192084233488,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "motorcycle",
+    "IoU": 18.641895654172153,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "ft_rain",
+    "condition": "rain",
+    "class_name": "bicycle",
+    "IoU": 15.276012044161927,
+    "mIoU": 54.64429100936181,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "road",
+    "IoU": 78.7046238546929,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "sidewalk",
+    "IoU": 67.60318943090941,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "building",
+    "IoU": 78.43077978937893,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "wall",
+    "IoU": 21.27313075462628,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "fence",
+    "IoU": 33.58506731255537,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "pole",
+    "IoU": 49.113335527707896,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "traffic light",
+    "IoU": 55.23135246505835,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "traffic sign",
+    "IoU": 61.32867290038122,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "vegetation",
+    "IoU": 86.72894187701976,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "terrain",
+    "IoU": 13.697563293132136,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "sky",
+    "IoU": 69.35161525783417,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "person",
+    "IoU": 67.76924043695122,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "rider",
+    "IoU": 46.13589598306147,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "car",
+    "IoU": 82.23291488174269,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "truck",
+    "IoU": 47.56030331679361,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "bus",
+    "IoU": 60.74539128265489,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "train",
+    "IoU": 46.08787373534053,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "motorcycle",
+    "IoU": 36.84383148781515,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "clear",
+    "class_name": "bicycle",
+    "IoU": 57.88202892190951,
+    "mIoU": 55.80556592155607,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "road",
+    "IoU": 77.88003231078963,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "sidewalk",
+    "IoU": 66.6266738266016,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "building",
+    "IoU": 76.04116396387154,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "wall",
+    "IoU": 18.738719670334124,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "fence",
+    "IoU": 32.868413958177825,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "pole",
+    "IoU": 48.31820718535415,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "traffic light",
+    "IoU": 56.0008252262577,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "traffic sign",
+    "IoU": 60.87750260525782,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "vegetation",
+    "IoU": 85.50493870872796,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "terrain",
+    "IoU": 14.318689719168884,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "sky",
+    "IoU": 62.169368257231106,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "person",
+    "IoU": 66.52365389216754,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "rider",
+    "IoU": 44.671850884066615,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "car",
+    "IoU": 83.31243228716751,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "truck",
+    "IoU": 47.80448518077426,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "bus",
+    "IoU": 59.43826940635285,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "train",
+    "IoU": 42.68327568329745,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "motorcycle",
+    "IoU": 33.13107831152485,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog005",
+    "class_name": "bicycle",
+    "IoU": 56.35060014613421,
+    "mIoU": 54.382114801224084,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "road",
+    "IoU": 76.05746448645132,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "sidewalk",
+    "IoU": 64.81337093739583,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "building",
+    "IoU": 72.41573531547706,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "wall",
+    "IoU": 15.455611562215452,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "fence",
+    "IoU": 32.21430342047967,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "pole",
+    "IoU": 45.23527441273055,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "traffic light",
+    "IoU": 53.65577564851939,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "traffic sign",
+    "IoU": 59.00999817873356,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "vegetation",
+    "IoU": 80.01363764136909,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "terrain",
+    "IoU": 14.861182729083739,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "sky",
+    "IoU": 46.69370737347099,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "person",
+    "IoU": 64.53972034321595,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "rider",
+    "IoU": 42.86463746400673,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "car",
+    "IoU": 82.15159857364984,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "truck",
+    "IoU": 45.02411398810657,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "bus",
+    "IoU": 57.40362676347228,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "train",
+    "IoU": 33.555059606165884,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "motorcycle",
+    "IoU": 31.267153360651623,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog010",
+    "class_name": "bicycle",
+    "IoU": 53.543334784162035,
+    "mIoU": 51.093437188913555,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "road",
+    "IoU": 71.06773322360048,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "sidewalk",
+    "IoU": 60.19720814333871,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "building",
+    "IoU": 66.1258743328423,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "wall",
+    "IoU": 9.214367184399112,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "fence",
+    "IoU": 30.81482801228252,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "pole",
+    "IoU": 38.63847374259989,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "traffic light",
+    "IoU": 47.54987933921818,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "traffic sign",
+    "IoU": 54.365885612394074,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "vegetation",
+    "IoU": 64.21310140525127,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "terrain",
+    "IoU": 15.898696941502019,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "sky",
+    "IoU": 24.334603975556874,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "person",
+    "IoU": 59.99953752082533,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "rider",
+    "IoU": 36.95682801650398,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "car",
+    "IoU": 78.60864363652337,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "truck",
+    "IoU": 38.333087090002365,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "bus",
+    "IoU": 52.53609943709628,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "train",
+    "IoU": 26.57029710003374,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "motorcycle",
+    "IoU": 30.379546001740927,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog020",
+    "class_name": "bicycle",
+    "IoU": 45.56063069243567,
+    "mIoU": 44.80870112674458,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "road",
+    "IoU": 93.61043222852499,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "sidewalk",
+    "IoU": 76.05029243025513,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "building",
+    "IoU": 83.60705228186097,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "wall",
+    "IoU": 31.674022925556166,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "fence",
+    "IoU": 33.41027176666279,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "pole",
+    "IoU": 52.62025291027611,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "traffic light",
+    "IoU": 66.09640421795118,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "traffic sign",
+    "IoU": 66.71088114456289,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "vegetation",
+    "IoU": 88.29175292390984,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "terrain",
+    "IoU": 55.869715571129404,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "sky",
+    "IoU": 96.29267609328947,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "person",
+    "IoU": 43.13984399594249,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "rider",
+    "IoU": 54.034792616528705,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "car",
+    "IoU": 76.83078179810016,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "truck",
+    "IoU": 52.85355576474825,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "bus",
+    "IoU": 73.12136788200772,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "train",
+    "IoU": 45.98753404019714,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "motorcycle",
+    "IoU": 30.842563036911674,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "fog",
+    "class_name": "bicycle",
+    "IoU": 63.74134491256894,
+    "mIoU": 62.35713360742022,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "road",
+    "IoU": 83.62440274443777,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "sidewalk",
+    "IoU": 50.36212837149605,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "building",
+    "IoU": 84.3878576851594,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "wall",
+    "IoU": 21.512015415341544,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "fence",
+    "IoU": 36.120105820470116,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "pole",
+    "IoU": 46.74429824170593,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "traffic light",
+    "IoU": 69.65678796941116,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "traffic sign",
+    "IoU": 67.94519733124486,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "vegetation",
+    "IoU": 90.5115369366713,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "terrain",
+    "IoU": 53.17962842831771,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "sky",
+    "IoU": 97.6421178580409,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "person",
+    "IoU": 58.31916888534568,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "rider",
+    "IoU": 0.2050352851420942,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "car",
+    "IoU": 82.2998081595725,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "truck",
+    "IoU": 60.65209685637697,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "bus",
+    "IoU": 45.286935976667365,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "train",
+    "IoU": 33.140214124718256,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "motorcycle",
+    "IoU": 15.350847419274546,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "gsmf_rain",
+    "condition": "rain",
+    "class_name": "bicycle",
+    "IoU": 14.880961872717705,
+    "mIoU": 53.25374449379536,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "road",
+    "IoU": 61.28277421105912,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "sidewalk",
+    "IoU": 65.29948052301795,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "building",
+    "IoU": 70.2372963522566,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "wall",
+    "IoU": 19.15356970247246,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "fence",
+    "IoU": 14.718666510835599,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "pole",
+    "IoU": 48.78368963003349,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "traffic light",
+    "IoU": 55.7670484696585,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "traffic sign",
+    "IoU": 61.05498925933945,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "vegetation",
+    "IoU": 86.65590758984798,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "terrain",
+    "IoU": 22.797195528939813,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "sky",
+    "IoU": 83.57507224812052,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "person",
+    "IoU": 64.18764028013125,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "rider",
+    "IoU": 44.04629109887616,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "car",
+    "IoU": 76.38938444469979,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "truck",
+    "IoU": 7.288940181673685,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "bus",
+    "IoU": 46.62049740829104,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "train",
+    "IoU": 27.694041211969278,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "motorcycle",
+    "IoU": 34.02823094190102,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "clear",
+    "class_name": "bicycle",
+    "IoU": 46.01750000285892,
+    "mIoU": 49.24201134715698,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "road",
+    "IoU": 61.3504259304546,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "sidewalk",
+    "IoU": 64.01806492604977,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "building",
+    "IoU": 67.81877053560497,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "wall",
+    "IoU": 16.15350698983196,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "fence",
+    "IoU": 13.926405910465704,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "pole",
+    "IoU": 47.86165566177653,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "traffic light",
+    "IoU": 56.525225190220304,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "traffic sign",
+    "IoU": 60.03596269049958,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "vegetation",
+    "IoU": 84.67086100059515,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "terrain",
+    "IoU": 22.27284770398484,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "sky",
+    "IoU": 73.98193703838464,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "person",
+    "IoU": 62.85433459642225,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "rider",
+    "IoU": 42.27299957886911,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "car",
+    "IoU": 75.61385727842126,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "truck",
+    "IoU": 8.413443439130381,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "bus",
+    "IoU": 46.63693459882008,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "train",
+    "IoU": 27.69467563612193,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "motorcycle",
+    "IoU": 30.53065221926145,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog005",
+    "class_name": "bicycle",
+    "IoU": 43.59354484374609,
+    "mIoU": 47.6961108299295,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "road",
+    "IoU": 59.74578465814211,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "sidewalk",
+    "IoU": 61.91131508295247,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "building",
+    "IoU": 63.748591272669245,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "wall",
+    "IoU": 13.81234653324288,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "fence",
+    "IoU": 13.830089152515757,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "pole",
+    "IoU": 44.459568445433945,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "traffic light",
+    "IoU": 53.32787978647505,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "traffic sign",
+    "IoU": 57.73247367176264,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "vegetation",
+    "IoU": 77.6123698388296,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "terrain",
+    "IoU": 21.56459017364756,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "sky",
+    "IoU": 54.230163781022654,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "person",
+    "IoU": 60.661722243522775,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "rider",
+    "IoU": 40.20278359924627,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "car",
+    "IoU": 74.27331732516487,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "truck",
+    "IoU": 8.576190537066042,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "bus",
+    "IoU": 45.79323161966182,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "train",
+    "IoU": 23.644096413316817,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "motorcycle",
+    "IoU": 29.386629201932635,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog010",
+    "class_name": "bicycle",
+    "IoU": 39.589324690575054,
+    "mIoU": 44.426445685641056,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "road",
+    "IoU": 54.418465432497165,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "sidewalk",
+    "IoU": 56.41667382190001,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "building",
+    "IoU": 56.464951829386045,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "wall",
+    "IoU": 9.973234633944607,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "fence",
+    "IoU": 14.181411660304082,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "pole",
+    "IoU": 37.53698511497078,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "traffic light",
+    "IoU": 46.21536921265785,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "traffic sign",
+    "IoU": 53.0388379724386,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "vegetation",
+    "IoU": 57.51494861224701,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "terrain",
+    "IoU": 20.12317404405744,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "sky",
+    "IoU": 26.198784361769505,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "person",
+    "IoU": 55.196323085131304,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "rider",
+    "IoU": 33.017403962651194,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "car",
+    "IoU": 70.93101954231815,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "truck",
+    "IoU": 7.67670262290465,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "bus",
+    "IoU": 41.67412980285089,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "train",
+    "IoU": 23.05829478460344,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "motorcycle",
+    "IoU": 30.269448365518958,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog020",
+    "class_name": "bicycle",
+    "IoU": 29.800359643349488,
+    "mIoU": 38.08981676344742,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "road",
+    "IoU": 69.01554537669254,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "sidewalk",
+    "IoU": 71.04062640622861,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "building",
+    "IoU": 80.47405092526289,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "wall",
+    "IoU": 30.41204832980484,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "fence",
+    "IoU": 26.976948396515592,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "pole",
+    "IoU": 49.05815972222222,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "traffic light",
+    "IoU": 64.05204123986775,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "traffic sign",
+    "IoU": 66.26552147700343,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "vegetation",
+    "IoU": 85.45684150055493,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "terrain",
+    "IoU": 54.20996810386296,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "sky",
+    "IoU": 93.08690148838672,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "person",
+    "IoU": 42.03902714932127,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "rider",
+    "IoU": 55.765827093260725,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "car",
+    "IoU": 58.64499324712074,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "truck",
+    "IoU": 43.12765153020617,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "bus",
+    "IoU": 63.15227023927436,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "train",
+    "IoU": 5.699067458520787,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "motorcycle",
+    "IoU": 38.41148611170372,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "fog",
+    "class_name": "bicycle",
+    "IoU": 64.02719894713753,
+    "mIoU": 55.83769340752357,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "road",
+    "IoU": 81.9062849939253,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "sidewalk",
+    "IoU": 48.18659294951204,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "building",
+    "IoU": 83.30723255880896,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "wall",
+    "IoU": 21.630734996477653,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "fence",
+    "IoU": 34.04651397255539,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "pole",
+    "IoU": 46.64548353515986,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "traffic light",
+    "IoU": 69.8478467599511,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "traffic sign",
+    "IoU": 65.88896598906983,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "vegetation",
+    "IoU": 89.4921370732586,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "terrain",
+    "IoU": 49.752749870151426,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "sky",
+    "IoU": 96.44640907733701,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "person",
+    "IoU": 55.98708126936162,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "rider",
+    "IoU": 0.12732545801796702,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "car",
+    "IoU": 78.87631392562193,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "truck",
+    "IoU": 32.40119251612544,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "bus",
+    "IoU": 41.941002217195894,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "train",
+    "IoU": 26.578994920992383,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "motorcycle",
+    "IoU": 13.15768042948513,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  },
+  {
+    "model": "lwf_rain",
+    "condition": "rain",
+    "class_name": "bicycle",
+    "IoU": 13.862631698495623,
+    "mIoU": 50.004377590079116,
+    "provenance": "new"
+  }
+]

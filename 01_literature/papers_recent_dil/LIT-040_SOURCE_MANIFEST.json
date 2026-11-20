@@ -1,0 +1,104 @@
+{
+  "checked_date": "2026-11-03",
+  "sources": [
+    {
+      "id": "LIT-040",
+      "file": "LIT-040_Douillard_2021_PLOP_CVPR.pdf",
+      "role": "paper",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2021/papers/Douillard_PLOP_Learning_Without_Forgetting_for_Continual_Semantic_Segmentation_CVPR_2021_paper.pdf",
+      "version": "CVPR 2021 CVF accepted open-access version",
+      "downloaded_date": "2026-11-03",
+      "pages": 11,
+      "bytes": 1728882,
+      "sha256": "b6140cee47d26c28ba39fc66c6cb9de8e1eaa7c0a78468f10f970aaee9162b9c"
+    },
+    {
+      "id": "LIT-040",
+      "file": "LIT-040_Douillard_2021_PLOP_CVPR_supplement.pdf",
+      "role": "supplement",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2021/supplemental/Douillard_PLOP_Learning_Without_CVPR_2021_supplemental.pdf",
+      "version": "CVPR 2021 CVF accepted open-access version",
+      "downloaded_date": "2026-11-03",
+      "pages": 4,
+      "bytes": 179019,
+      "sha256": "73473814d36478d3816258f771434c28e90d8d7e95245f957cfb9e2b26997321"
+    }
+  ],
+  "official_page": "https://openaccess.thecvf.com/content/CVPR2021/html/Douillard_PLOP_Learning_Without_Forgetting_for_Continual_Semantic_Segmentation_CVPR_2021_paper.html",
+  "arxiv_record": "https://arxiv.org/abs/2011.11390",
+  "code_repository": "https://github.com/arthurdouillard/CVPR2021_PLOP",
+  "code_commit": "4b4a0605b2afb84f988d246dee9a00e0c7517363",
+  "code_scope": "Static source review only; no author-code import, execution, model loading, dataset acquisition, training or reproduction",
+  "code_findings": [
+    "City domain scripts use supervised cross entropy plus Local POD and logits; no pseudo-label pipeline enabled",
+    "City loader combines official train and val then re-splits selected domains 80/20 with seed 1; cumulative evaluation re-split can overlap prior training and requires actual file-list verification",
+    "City scripts use 50 epochs and differ from CIL presets in distillation factors; generic method=PLOP overrides parameters with CIL settings",
+    "Paper squared L2 versus code Frobenius norm; entropy threshold clamp direction and spatial embedding dimensions require implementation-aware interpretation"
+  ],
+  "code_files": [
+    {
+      "path": "README.md",
+      "sha256": "f6b1ec7f8b6bc9138e43651d02b24e9266e96ff7b1fe98869cf1bab0662b3c23",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/README.md"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "6b78766b2b9711fd0728a8bb3897cf4e0e7a554d53d9604dc4184d6975f3ff8b",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/LICENSE"
+    },
+    {
+      "path": "argparser.py",
+      "sha256": "a0407b20e4bf4dcaa4d4cb5c75d25817fa2e194faec0471ed30166373a953d4b",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/argparser.py"
+    },
+    {
+      "path": "tasks.py",
+      "sha256": "560a115544916063ca360ed195be1429893d7a85a384ab4e51931dd7b2b11b98",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/tasks.py"
+    },
+    {
+      "path": "run.py",
+      "sha256": "d3040ed8639e1191be73c63d1ecd1f986228bea9d2422b0fbcc1daa81fbcd1aa",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/run.py"
+    },
+    {
+      "path": "train.py",
+      "sha256": "3e9793c2433c838b30ed2027ba0446d4dd777fceb7ee15ac5939aa327bf3717a",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/train.py"
+    },
+    {
+      "path": "dataset/cityscapes_domain.py",
+      "sha256": "43b4708cbb8af4fdf2f3187004490ae14645b57b9fb31d1bda874fbb001ae722",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/dataset/cityscapes_domain.py"
+    },
+    {
+      "path": "metrics/stream_metrics.py",
+      "sha256": "adcffc3f08e0358c56b0e608a27701040aa892fa97da702758fee9189c31ca0d",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/metrics/stream_metrics.py"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "41c7db67e1af1c6a5577c68a8d9170f7f2f133bd73907dc08ff69be3d406e348",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/requirements.txt"
+    },
+    {
+      "path": "scripts/cityscapesDomain/plop_cityscapesDomain_11-1.sh",
+      "sha256": "92358732704614289007747dbe5def26bb40008a8c6410b3f3479997a74c3258",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/scripts/cityscapesDomain/plop_cityscapesDomain_11-1.sh"
+    },
+    {
+      "path": "scripts/cityscapesDomain/plop_cityscapesDomain_1-1.sh",
+      "sha256": "27280de96737f091cbf5cf3621fd33da30ec30faa8efc1fff4be3a132d628b5a",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/scripts/cityscapesDomain/plop_cityscapesDomain_1-1.sh"
+    },
+    {
+      "path": "scripts/cityscapesDomain/mib_cityscapesDomain_1-1.sh",
+      "sha256": "ca921e54038ab507b0624c4afad0f3ae82e06bded5c4b29a528645821121432b",
+      "url": "https://github.com/arthurdouillard/CVPR2021_PLOP/blob/4b4a0605b2afb84f988d246dee9a00e0c7517363/scripts/cityscapesDomain/mib_cityscapesDomain_1-1.sh"
+    }
+  ],
+  "related_source_check": "PODNet publication and prior pooled outputs distillation confirmed against ECVA ECCV 2020 official page; MiB comparison based on PLOP and code, not a separate full-text review",
+  "related_source_url": "https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/3384_ECCV_2020_paper.php",
+  "report": "01_literature/paper_reports/LIT-040_plop_local_pod_continual_segmentation.docx",
+  "unique_experiment_configurations": 66
+}

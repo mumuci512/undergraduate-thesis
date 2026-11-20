@@ -1,0 +1,4 @@
+model,total_parameters,trainable_parameters,observed_training_wall_seconds,useful_segments_wall_seconds,step_seconds_with_data,peak_allocated_MiB,checkpoint_bytes,eval_A_seconds,eval_B_seconds,deployment_state_bytes,note
+source,50196988,50196988,3756.3905254560004,10248.92654454284,0.161638027165547,2552.224609375,612017669,440.02716385499934,111.65820662500028,191765812,source timing/peak measured on resumed segment; shared system load prevents causal speed comparisons
+ft,47832297,47832297,1153.7591603459996,1153.7591603459996,0.21354333165180217,2435.38134765625,575325719,280.6564228470006,53.38640563399986,191765812,source timing/peak measured on resumed segment; shared system load prevents causal speed comparisons
+gsmf,95664594,47587721,931.9823232790004,931.9823232790004,0.17613125560442547,2279.3740234375,765495339,269.957529366,53.428223481000714,191765812,source timing/peak measured on resumed segment; shared system load prevents causal speed comparisons

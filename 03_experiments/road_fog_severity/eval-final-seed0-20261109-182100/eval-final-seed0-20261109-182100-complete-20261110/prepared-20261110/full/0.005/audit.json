@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "full_official_counts": false,
+  "manifest_sha256": {
+    "A_val_debug.jsonl": "445a346e35ad8d751aba1e0d37dc3ca496efc5dc5bbf5c514775642ada499d6e"
+  },
+  "actual_n": 500,
+  "source_manifest_sha256": "58e5635b86a00cf0eac42ae194cf3e372103e27d3eb389a316cae0db6125140c",
+  "note": "Existing evaluator debug flag selects this explicitly named manifest; native sliding inference is unchanged."
+}

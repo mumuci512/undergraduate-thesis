@@ -1,0 +1,250 @@
+{
+  "WindowsLastBoot": "2026-11-08T10:41:36.5000000+08:00",
+  "VisibleMemoryKiB": 31230488,
+  "FreePhysicalMemoryKiB": 20730560,
+  "Disks": [
+    {
+      "DeviceID": "C:",
+      "Size": 1021499666432,
+      "FreeSpace": 3927396352
+    }
+  ],
+  "Events": [
+    {
+      "Time": "2026-11-08T10:43:58.1699249+08:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "Message": "The 应用程序-特定 permission settings do not grant 本地 启动 permission for the COM Server application with CLSID \r\nWindows.SecurityCenter.SecurityAppBroker\r\n and APPID \r\n不可用\r\n to the user NT AUTHORITY\\SYSTEM SID (S-1-5-18) from address LocalHost (使用 LRPC) running in the application container 不可用 SID (不可用). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "Time": "2026-11-08T10:43:58.1693911+08:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "Message": "The 应用程序-特定 permission settings do not grant 本地 启动 permission for the COM Server application with CLSID \r\nWindows.SecurityCenter.WscBrokerManager\r\n and APPID \r\n不可用\r\n to the user NT AUTHORITY\\SYSTEM SID (S-1-5-18) from address LocalHost (使用 LRPC) running in the application container 不可用 SID (不可用). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "Time": "2026-11-08T10:43:58.1688576+08:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "Message": "The 应用程序-特定 permission settings do not grant 本地 启动 permission for the COM Server application with CLSID \r\nWindows.SecurityCenter.WscDataProtection\r\n and APPID \r\n不可用\r\n to the user NT AUTHORITY\\SYSTEM SID (S-1-5-18) from address LocalHost (使用 LRPC) running in the application container 不可用 SID (不可用). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "Time": "2026-11-08T10:43:56.7618425+08:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "Message": "The 应用程序-特定 permission settings do not grant 本地 激活 permission for the COM Server application with CLSID \r\n{9EA82395-E31B-41CA-8DF7-EC1CEE7194DF}\r\n and APPID \r\n{2ED83BAA-B2FD-43B1-99BF-E6149C622692}\r\n to the user NT AUTHORITY\\NETWORK SERVICE SID (S-1-5-20) from address LocalHost (使用 LRPC) running in the application container 不可用 SID (不可用). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "Time": "2026-11-08T10:42:34.8131841+08:00",
+      "Id": 506,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "Message": "The system is entering Modern Standby \r\n\r\nReason: Idle Timeout."
+    },
+    {
+      "Time": "2026-11-08T10:42:34.8126784+08:00",
+      "Id": 566,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "Message": "The system session has transitioned from 0 to 1.\r\n\r\nReason SessionUnlock \r\n\r\nBootId: 994"
+    },
+    {
+      "Time": "2026-11-08T10:42:12.7987702+08:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "Message": "The 应用程序-特定 permission settings do not grant 本地 启动 permission for the COM Server application with CLSID \r\nWindows.SecurityCenter.WscCloudBackupProvider\r\n and APPID \r\n不可用\r\n to the user UM890Pro-Win\\orish SID (S-1-5-21-2586662047-953548121-2191686649-1002) from address LocalHost (使用 LRPC) running in the application container 不可用 SID (不可用). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "Time": "2026-11-08T10:42:10.5481799+08:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "Message": "The 应用程序-特定 permission settings do not grant 本地 启动 permission for the COM Server application with CLSID \r\nWindows.SecurityCenter.WscCloudBackupProvider\r\n and APPID \r\n不可用\r\n to the user UM890Pro-Win\\orish SID (S-1-5-21-2586662047-953548121-2191686649-1002) from address LocalHost (使用 LRPC) running in the application container 不可用 SID (不可用). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "Time": "2026-11-08T10:41:57.5075509+08:00",
+      "Id": 11,
+      "ProviderName": "Microsoft-Windows-FilterManager",
+      "Message": "File System Filter 'ClawFlt' (Version 10.0, ‎1988‎-‎12‎-‎30T13:38:55.000000000Z) does not support bypass IO.\r\nSupported features: 0x7."
+    },
+    {
+      "Time": "2026-11-08T10:41:57.5073101+08:00",
+      "Id": 11,
+      "ProviderName": "Microsoft-Windows-FilterManager",
+      "Message": "File System Filter 'ClawFlt' (Version 10.0, ‎1988‎-‎12‎-‎30T13:38:55.000000000Z) does not support bypass IO.\r\nSupported features: 0x7."
+    },
+    {
+      "Time": "2026-11-08T10:41:57.5069224+08:00",
+      "Id": 11,
+      "ProviderName": "Microsoft-Windows-FilterManager",
+      "Message": "File System Filter 'ClawFlt' (Version 10.0, ‎1988‎-‎12‎-‎30T13:38:55.000000000Z) does not support bypass IO.\r\nSupported features: 0x7."
+    },
+    {
+      "Time": "2026-11-08T10:41:55.8427045+08:00",
+      "Id": 3502,
+      "ProviderName": "Microsoft-Windows-DeviceAssociationService",
+      "Message": "Device Disassociation (Unpairing) Failed."
+    },
+    {
+      "Time": "2026-11-08T10:41:55.7682053+08:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "Message": "The 应用程序-特定 permission settings do not grant 本地 激活 permission for the COM Server application with CLSID \r\n{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}\r\n and APPID \r\n{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}\r\n to the user NT AUTHORITY\\LOCAL SERVICE SID (S-1-5-19) from address LocalHost (使用 LRPC) running in the application container 不可用 SID (不可用). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "Time": "2026-11-08T10:41:55.7637983+08:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "Message": "The 应用程序-特定 permission settings do not grant 本地 激活 permission for the COM Server application with CLSID \r\n{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}\r\n and APPID \r\n{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}\r\n to the user NT AUTHORITY\\LOCAL SERVICE SID (S-1-5-19) from address LocalHost (使用 LRPC) running in the application container 不可用 SID (不可用). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "Time": "2026-11-08T10:41:39.1442742+08:00",
+      "Id": 219,
+      "ProviderName": "Microsoft-Windows-Kernel-PnP",
+      "Message": "The driver \\Driver\\WUDFRd failed to load.\r\nDevice: ROOT\\DISPLAY\\0000\r\nStatus: 0xC0000365"
+    },
+    {
+      "Time": "2026-11-08T10:41:39.1360068+08:00",
+      "Id": 125,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "Message": "ACPI thermal zone \\_TZ.TZ01 has been enumerated.             \r\n_PSV = 0K             \r\n_TC1 = 1             \r\n_TC2 = 2             \r\n_TSP = 2000ms             \r\n_AC0 = 0K             \r\n_AC1 = 0K             \r\n_AC2 = 0K             \r\n_AC3 = 0K             \r\n_AC4 = 0K             \r\n_AC5 = 0K             \r\n_AC6 = 0K             \r\n_AC7 = 0K             \r\n_AC8 = 0K             \r\n_AC9 = 0K             \r\n_CRT = 383K             \r\n_HOT = 0K             \r\nminimum throttle = 0             \r\n_CR3 = 0K"
+    },
+    {
+      "Time": "2026-11-08T10:41:37.3693198+08:00",
+      "Id": 24641,
+      "ProviderName": "Microsoft-Windows-BitLocker-Driver",
+      "Message": "An unexpected error was encountered attempting to retrieve the BitLocker volume master key during restart."
+    },
+    {
+      "Time": "2026-11-08T10:41:37.3693087+08:00",
+      "Id": 24641,
+      "ProviderName": "Microsoft-Windows-BitLocker-Driver",
+      "Message": "An unexpected error was encountered attempting to retrieve the BitLocker volume master key during restart."
+    },
+    {
+      "Time": "2026-11-08T10:41:36.9995032+08:00",
+      "Id": 56,
+      "ProviderName": "Application Popup",
+      "Message": null
+    },
+    {
+      "Time": "2026-11-08T10:41:17.3153812+08:00",
+      "Id": 577,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "Message": "The system has prepared for a system initiated reboot from Active."
+    },
+    {
+      "Time": "2026-11-08T10:41:16.0134187+08:00",
+      "Id": 109,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "Message": "The kernel power manager has initiated a shutdown transition.\r\n\r\nAction: Power Action Shutdown Off \r\nEvent Code: 0x0 \r\nReason: Kernel API"
+    },
+    {
+      "Time": "2026-11-08T10:41:11.2936962+08:00",
+      "Id": 10002,
+      "ProviderName": "Microsoft-Windows-WLAN-AutoConfig",
+      "Message": "WLAN Extensibility Module has stopped.\r\n\r\nModule Path: C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\netwtw6e.inf_amd64_c3785d6f1e6d5b0e\\IntelIHVRouter14.dll\r\n"
+    },
+    {
+      "Time": "2026-11-08T10:41:09.9826045+08:00",
+      "Id": 7034,
+      "ProviderName": "Service Control Manager",
+      "Message": "The OpenSSH SSH Server service terminated unexpectedly.  It has done this 1 time(s)."
+    },
+    {
+      "Time": "2026-11-08T10:31:13.5362974+08:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "Message": "The 应用程序-特定 permission settings do not grant 本地 激活 permission for the COM Server application with CLSID \r\n{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}\r\n and APPID \r\n{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}\r\n to the user NT AUTHORITY\\LOCAL SERVICE SID (S-1-5-19) from address LocalHost (使用 LRPC) running in the application container 不可用 SID (不可用). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "Time": "2026-11-08T10:31:13.5319378+08:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "Message": "The 应用程序-特定 permission settings do not grant 本地 激活 permission for the COM Server application with CLSID \r\n{6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}\r\n and APPID \r\n{4839DDB7-58C2-48F5-8283-E1D1807D0D7D}\r\n to the user NT AUTHORITY\\LOCAL SERVICE SID (S-1-5-19) from address LocalHost (使用 LRPC) running in the application container 不可用 SID (不可用). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "Time": "2026-11-08T10:31:05.5672571+08:00",
+      "Id": 566,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "Message": "The system session has transitioned from 19 to 21.\r\n\r\nReason InputHid \r\n\r\nBootId: 993"
+    },
+    {
+      "Time": "2026-11-08T10:31:05.5672221+08:00",
+      "Id": 507,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "Message": "The system is exiting Modern Standby \r\n\r\nReason: Input Mouse."
+    },
+    {
+      "Time": "2026-11-08T10:42:37.8570908+08:00",
+      "Id": 87,
+      "ProviderName": "Microsoft-Windows-CertificateServicesClient-CertEnroll",
+      "Message": "SCEP Certificate enrollment for WORKGROUP\\UM890PRO-WIN$ via https://MSFT-KeyId-eef8218c2041947588930b6845839c85cde73857.microsoftaik.azure.net/templates/Aik/scep failed:\r\n\r\nPkiStatus(11): SCEPDispositionPendingChallenge\nEnrollStatus(32): EnrollUnknown\n操作成功完成。 0x0 (WIN32: 0)\n_CreateAikClaim\nSubmit(Request): OK\nHTTP/1.1 200 OK\nDate: Sun, 08 Nov 2026 02:42:34 GMT\nContent-Length: 5690\nContent-Type: application/x-pki-message\nX-Content-Type-Options: nosniff\nStrict-Transport-Security: max-age=31536000;includeSubDomains\nx-ms-request-id: ada3c5a0-5809-4954-b5d0-d3cd8e476139\n\r\nMethod: POST(6344ms)\r\nStage: _CreateAikClaim\r\n该 TPM 密钥未加载。 0x8029040f (-2144795633 TPM_E_KEY_NOT_LOADED)"
+    },
+    {
+      "Time": "2026-11-08T10:42:33.3570671+08:00",
+      "Id": 903,
+      "ProviderName": "Microsoft-Windows-Security-SPP",
+      "Message": "The Software Protection service has stopped.\r\n"
+    },
+    {
+      "Time": "2026-11-08T10:42:21.9474538+08:00",
+      "Id": 2,
+      "ProviderName": "NVIDIA OpenGL Driver",
+      "Message": "DrvSetContext failed functionality indeterminant\n(pid=24252 cncmd.exe 64bit)"
+    },
+    {
+      "Time": "2026-11-08T10:42:02.5894840+08:00",
+      "Id": 902,
+      "ProviderName": "Microsoft-Windows-Security-SPP",
+      "Message": "The Software Protection service has started.\r\n10.0.26100.9711"
+    },
+    {
+      "Time": "2026-11-08T10:41:56.8768116+08:00",
+      "Id": 21,
+      "ProviderName": "Microsoft-Windows-AppModel-State",
+      "Message": "Repair for operation InitializeDataChangedSignaler against package Microsoft.MicrosoftPCManager_8wekyb3d8bbwe with error -2147024894 returned Error Code: -2147024891"
+    },
+    {
+      "Time": "2026-11-08T10:41:56.8767542+08:00",
+      "Id": 20,
+      "ProviderName": "Microsoft-Windows-AppModel-State",
+      "Message": "Triggered repair because operation InitializeDataChangedSignaler against package Microsoft.MicrosoftPCManager_8wekyb3d8bbwe hit error -2147024894."
+    },
+    {
+      "Time": "2026-11-08T10:41:56.8767346+08:00",
+      "Id": 24,
+      "ProviderName": "Microsoft-Windows-AppModel-State",
+      "Message": "Repair of state locations for operation InitializeDataChangedSignaler against package Microsoft.MicrosoftPCManager_8wekyb3d8bbwe with error -2147024894 returned Error Code: -2147023584"
+    },
+    {
+      "Time": "2026-11-08T10:41:56.8733029+08:00",
+      "Id": 23,
+      "ProviderName": "Microsoft-Windows-AppModel-State",
+      "Message": "Triggered repair of state locations because operation InitializeDataChangedSignaler against package Microsoft.MicrosoftPCManager_8wekyb3d8bbwe hit error -2147024894."
+    },
+    {
+      "Time": "2026-11-08T10:36:40.1424501+08:00",
+      "Id": 2,
+      "ProviderName": "NVIDIA OpenGL Driver",
+      "Message": "DrvSetContext failed functionality indeterminant\n(pid=31884 cncmd.exe 64bit)"
+    },
+    {
+      "Time": "2026-11-08T10:36:39.7430886+08:00",
+      "Id": 2,
+      "ProviderName": "NVIDIA OpenGL Driver",
+      "Message": "DrvSetContext failed functionality indeterminant\n(pid=31992 cncmd.exe 64bit)"
+    },
+    {
+      "Time": "2026-11-08T10:31:36.5562639+08:00",
+      "Id": 2,
+      "ProviderName": "NVIDIA OpenGL Driver",
+      "Message": "DrvSetContext failed functionality indeterminant\n(pid=35992 cncmd.exe 64bit)"
+    },
+    {
+      "Time": "2026-11-08T10:40:05.8131971+08:00",
+      "Id": 18590,
+      "ProviderName": "Microsoft-Windows-Hyper-V-Worker",
+      "Message": "'AF6D4C64-4BFF-42B5-A559-9D91B49E592A' has encountered a fatal error.  The guest operating system reported that it failed with the following error codes: ErrorCode0: 0x0, ErrorCode1: 0x0, ErrorCode2: 0x0, ErrorCode3: 0x0, ErrorCode4: 0x0,  PreOSId: 0, VTL 0x0.  If the problem persists, contact Product Support for the guest operating system.  (Virtual machine ID AF6D4C64-4BFF-42B5-A559-9D91B49E592A)\r\n\r\nGuest message:\r\n[    1.361441] sd 0:0:0:3: [sdd] 4096-byte physical blocks\n[    1.361683] sd 0:0:0:3: [sdd] Write Protect is off\n[    1.361875] sd 0:0:0:3: [sdd] Mode Sense: 0f 00 00 00\n[    1.362149] sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA\n[    1.364010] sd 0:0:0:3: [sdd] Attached SCSI disk\n[    2.455491] EXT4-fs (sdd): 1 orphan inode deleted\n[    2.455860] EXT4-fs (sdd): recovery complete\n[    2.462186] EXT4-fs (sdd): mounted filesystem aa03d809-1e80-45a7-b6d4-738d56ce15c9 r/w with ordered data mode. Quota mode: none.\n[    2.933842] systemd[314]: memfd_create() called without MFD_EXEC or MFD_NOEXEC_SEAL set\n[    2.953851] misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22\n[    2.956490] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.956973] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.957350] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.957768] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2\n[    2.958473] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.959248] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.959670] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.960081] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.960386] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.960741] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2\n[    2.961195] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.961994] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.962402] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.962785] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22\n[    2.963227] misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2\n[    3.109722] Failed to connect to bus: No such file or directory\n[    3.222194] systemd-journald[60]: Received client request to flush runtime journal.\n[    3.229440] systemd-journald[60]: File /var/log/journal/897ddc46a6a9451aa0090da740afc053/system.journal corrupted or uncleanly shut down, renaming and replacing.\n[    6.413329] WSL (266) ERROR: CheckConnection: getaddrinfo() failed: -5\n[    6.452386] WSL (266) ERROR: CheckConnection: getaddrinfo() failed: -5\n[   48.347590] hv_balloon: Max. dynamic memory size: 15248 MB\n[   76.414013] TCP: eth2: Driver has suspect GRO implementation, TCP performance may be compromised.\n[  257.715504] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  257.716220] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  257.716767] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  257.783206] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  257.783659] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  257.784025] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  570.403094] mini_init (246): drop_caches: 1\n[  652.009935] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  652.010598] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  652.010893] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  652.109155] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  652.109569] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  652.109931] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  681.402729] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  681.404526] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  681.405510] misc dxg: dxgk: dxgkio_escape: Ioctl failed: -22\n[  852.714281] mini_init (246): drop_caches: 1\n[  873.035481] mce: [Hardware Error]: CPU 8: Machine Check Exception: 4 Bank 0: b200000080060001\n[  873.035517] mce: [Hardware Error]: TSC 32ba8a89d44 \n[  873.035534] mce: [Hardware Error]: PROCESSOR 2:a70f52 TIME 1794105604 SOCKET 0 APIC 8 microcode ffffffff\n[  873.035537] mce: [Hardware Error]: Machine check: Processor Context Corrupt\n[  873.035539] Kernel panic - not syncing: Fatal local machine check\n[  873.036875] Kernel Offset: 0x34000000 from 0xffffffff81000000 (relocation range: 0xffffffff80000000-0xffffffffbfffffff)\n"
+    }
+  ],
+  "CrashDumps": [],
+  "WslConfig": "[wsl2]\r\nnetworkingMode=Mirrored\r\n\r\n[general]\r\ninstanceIdleTimeout=-1"
+}

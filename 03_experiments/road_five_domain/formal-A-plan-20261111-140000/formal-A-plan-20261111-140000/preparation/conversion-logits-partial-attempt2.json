@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "label": "Rain->D",
+      "method": "ft",
+      "parent_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "init_sha256": "af2aeb25bef84a696d39a0ace3de25d242b060e2f4872f16779a801ba168b4e8",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": null,
+      "strict_reload": true,
+      "seconds": 12.068316088989377
+    }
+  ]
+}

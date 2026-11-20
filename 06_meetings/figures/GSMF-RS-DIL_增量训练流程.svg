@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650"><title>GSMF-RS-DIL增量训练流程</title><desc>当前域图像同时输入旧教师和新学生，以新域真值分割损失、输出蒸馏和多层特征蒸馏联合训练学生。教师只在训练阶段使用，推理采用学生。</desc><rect width="1200" height="650" fill="white"/>
+<text x='600' y='30' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='35' font-weight='700' fill='#171d26'>GSMF-RS-DIL 在阶段 t 的训练与推理</text>
+<rect x='15' y='230' width='165' height='100' rx='8' fill='#f0f3f6' stroke='#434b55' stroke-width='2'/>
+<text x='97' y='260' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='31' font-weight='400' fill='#171d26'>当前域</text>
+<text x='97' y='300' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='31' font-weight='400' fill='#171d26'>图像 xₜ</text>
+<rect x='240' y='85' width='350' height='145' rx='8' fill='#f0f3f6' stroke='#434b55' stroke-width='2'/>
+<text x='415' y='120' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='31' font-weight='700' fill='#171d26'>旧教师 GS-AUFPN</text>
+<text x='415' y='163' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='30' font-weight='400' fill='#171d26'>上一阶段模型</text>
+<text x='415' y='201' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='30' font-weight='400' fill='#171d26'>参数固定</text>
+<rect x='240' y='310' width='350' height='150' rx='8' fill='#eaf1f8' stroke='#365c7d' stroke-width='2'/>
+<text x='415' y='348' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='31' font-weight='700' fill='#23486b'>新学生 GS-AUFPN</text>
+<text x='415' y='390' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='29' font-weight='400' fill='#171d26'>复制教师权重初始化</text>
+<text x='415' y='430' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='29' font-weight='400' fill='#171d26'>冻结浅层  训练其余层</text>
+<rect x='650' y='110' width='185' height='100' rx='8' fill='#f8f9fa' stroke='#434b55' stroke-width='2'/>
+<text x='743' y='142' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='28' font-weight='400' fill='#171d26'>教师特征 Fᵀ</text>
+<text x='743' y='180' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='28' font-weight='400' fill='#171d26'>教师输出 pᵀ</text>
+<rect x='650' y='335' width='185' height='100' rx='8' fill='#f1f6fb' stroke='#365c7d' stroke-width='2'/>
+<text x='743' y='366' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='28' font-weight='400' fill='#171d26'>学生特征 Fˢ</text>
+<text x='743' y='405' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='28' font-weight='400' fill='#171d26'>学生输出 pˢ</text>
+<rect x='900' y='205' width='280' height='120' rx='8' fill='#f7f3e9' stroke='#8a7344' stroke-width='2'/>
+<text x='1040' y='241' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='31' font-weight='700' fill='#6b5427'>知识保持约束</text>
+<text x='1040' y='284' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='31' font-weight='400' fill='#6b5427'>Lout ＋ Lfeat</text>
+<rect x='900' y='365' width='280' height='105' rx='8' fill='#eaf1f8' stroke='#365c7d' stroke-width='2'/>
+<text x='1040' y='398' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='28' font-weight='400' fill='#23486b'>新域真值 yₜ ＋ pˢ</text>
+<text x='1040' y='437' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='28' font-weight='400' fill='#23486b'>监督分割损失 Lseg</text>
+<path d='M 180,260 L 210,260 L 210,158 L 240,158' fill='none' stroke='#526071' stroke-width='3'/>
+<polygon points='240,158 228.294187669415,163.654551943446 228.294187669415,152.345448056554' fill='#526071'/>
+<path d='M 180,300 L 210,300 L 210,385 L 240,385' fill='none' stroke='#526071' stroke-width='3'/>
+<polygon points='240,385 228.294187669415,390.654551943446 228.294187669415,379.345448056554' fill='#526071'/>
+<path d='M 590,158 L 650,158' fill='none' stroke='#526071' stroke-width='3'/>
+<polygon points='650,158 638.294187669415,163.654551943446 638.294187669415,152.345448056554' fill='#526071'/>
+<path d='M 590,385 L 650,385' fill='none' stroke='#526071' stroke-width='3'/>
+<polygon points='650,385 638.294187669415,390.654551943446 638.294187669415,379.345448056554' fill='#526071'/>
+<path d='M 835,158 L 870,158 L 870,240 L 900,240' fill='none' stroke='#8a7344' stroke-width='3'/>
+<polygon points='900,240 888.294187669415,245.654551943446 888.294187669415,234.345448056554' fill='#8a7344'/>
+<path d='M 835,365 L 870,365 L 870,295 L 900,295' fill='none' stroke='#8a7344' stroke-width='3'/>
+<polygon points='900,295 888.294187669415,300.654551943446 888.294187669415,289.345448056554' fill='#8a7344'/>
+<path d='M 835,405 L 900,405' fill='none' stroke='#365c7d' stroke-width='3'/>
+<polygon points='900,405 888.294187669415,410.654551943446 888.294187669415,399.345448056554' fill='#365c7d'/>
+<text x='600' y='515' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='30' font-weight='400' fill='#303a46'>GS-AUFPN：ResNet-101 ＋ GSR全局推理 ＋ DCAU跨层融合</text>
+<text x='600' y='565' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='35' font-weight='700' fill='#171d26'>L = Lseg + α Lout + β Lfeat</text>
+<text x='600' y='612' text-anchor='middle' dominant-baseline='middle' font-family='Microsoft YaHei,SimSun,sans-serif' font-size='28' font-weight='400' fill='#303a46'>无旧图回放；两分支仅用于增量训练；推理只用学生，无需外部域ID</text>
+</svg>

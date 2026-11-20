@@ -1,0 +1,47 @@
+{
+  "time_local": "2026-11-08T10:55:11.717803+08:00",
+  "state": "running",
+  "processes": {
+    "1607": "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python experiments/road_clear_to_fog/recovery_pipeline.py --parent experiments/road_clear_to_fog/formal-seed0-20261108-001 --checkpoint experiments/road_clear_to_fog/formal-seed0-20261108-001/source/iter_40000.pth --output experiments/road_clear_to_fog/formal-seed0-20261108-resume01 --confirmed-seed0 ",
+    "1708": "bash /home/ysheng4/research/GSMF-RS-DIL/tools/road/resume_session.sh /home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source-session /home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python source /home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source /home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-001/source/iter_40000.pth ",
+    "1699": "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python experiments/road_clear_to_fog/formal_control.py watch --run experiments/road_clear_to_fog/formal-seed0-20261108-resume01 --session experiments/road_clear_to_fog/session-recovery-xB79mCPB ",
+    "1710": "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python tools/road/run.py train --stage source --work-dir /home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source --resume /home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-001/source/iter_40000.pth "
+  },
+  "restored_state_verification": {
+    "optimizer_exact": true,
+    "scheduler_exact": true,
+    "iteration": 40000,
+    "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-001/source/iter_40000.pth"
+  },
+  "logged_iteration_first": 40020,
+  "logged_iteration_latest": 40500,
+  "all_logged_losses_finite": true,
+  "latest_training_lines": [
+    "11/08 10:55:02 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [40460/60000]  lr: 3.6434e-05  eta: 0:49:04  time: 0.1561  data_time: 0.0065  memory: 2552  loss: 0.3580  decode.loss_ce: 0.2415  decode.acc_seg: 94.5017  aux.loss_ce: 0.1165  aux.acc_seg: 94.2023",
+    "11/08 10:55:05 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [40480/60000]  lr: 3.6400e-05  eta: 0:49:06  time: 0.1560  data_time: 0.0066  memory: 2552  loss: 0.2183  decode.loss_ce: 0.1505  decode.acc_seg: 94.5517  aux.loss_ce: 0.0678  aux.acc_seg: 94.6354",
+    "11/08 10:55:08 - mmengine - \u001b[4m\u001b[37mINFO\u001b[0m - Iter(train) [40500/60000]  lr: 3.6367e-05  eta: 0:49:07  time: 0.1565  data_time: 0.0066  memory: 2552  loss: 0.2455  decode.loss_ce: 0.1625  decode.acc_seg: 95.7453  aux.loss_ce: 0.0830  aux.acc_seg: 95.9100"
+  ],
+  "monitor_heartbeat": {
+    "time_local": "2026-11-08 10:55:07 +08:00",
+    "pid": 1699,
+    "pipeline_state": {
+      "time_utc": "2026-11-08T02:53:36.845567Z",
+      "pid": 1607,
+      "stage": "train_source",
+      "state": "running",
+      "child_pid": 1708,
+      "command": [
+        "bash",
+        "/home/ysheng4/research/GSMF-RS-DIL/tools/road/resume_session.sh",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source-session",
+        "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+        "source",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source",
+        "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-001/source/iter_40000.pth"
+      ]
+    }
+  },
+  "pipeline_exit_code": null,
+  "formal_training_complete": false,
+  "gpu": "5917 MiB, 64 %\n"
+}

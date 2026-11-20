@@ -1,0 +1,141 @@
+{
+  "literature_id": "LIT-035",
+  "date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "files": [
+    {
+      "path": "LIT-035_Handoyo_2026_MineC2FNet_IJCAI.pdf",
+      "source_url": "https://ijcai.org/proceedings/2026/0800.pdf",
+      "pages": 9,
+      "bytes": 2124382,
+      "sha256": "9543269f111f19c0c1258d8d1b9a8b55b119f9479fa4a4e12851631018ec3da1"
+    },
+    {
+      "path": "LIT-035_Handoyo_2026_MineC2FNet_arxiv_v2.pdf",
+      "source_url": "https://arxiv.org/pdf/2605.24460v2",
+      "pages": 19,
+      "bytes": 5493383,
+      "sha256": "d61c6f15344f23fee888e79e6c6f1dc1c0bea2827ceb474704527171be6b0b04"
+    }
+  ],
+  "code": {
+    "repository": "https://github.com/risqiutama/MineC2FNet",
+    "commit": "8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a",
+    "scope": "Static source reading only; no installation, model execution, dataset/weights download or reproduction",
+    "snapshot_dir": "../../tmp/lit035_minec2fnet/code",
+    "files": [
+      {
+        "path": "config/config_RGBNIRSWIR_COARSE.yml",
+        "sha256": "e35fd2f4ca1b2cf0b6b0177bb84b734c623af50666e9b75334408898ad7df58d",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/config/config_RGBNIRSWIR_COARSE.yml"
+      },
+      {
+        "path": "config/config_RGBNIRSWIR_DISTIL_FINE.yml",
+        "sha256": "2d40c7ec825972e8f30bf61c3e6bb3034059c212b5dea7729daf3300467b5b02",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/config/config_RGBNIRSWIR_DISTIL_FINE.yml"
+      },
+      {
+        "path": "config/config_RGBNIRSWIR_FINE.yml",
+        "sha256": "810bf8fa28b3f47d4e02b3d05ce2dfee2929d2fbe9080ff816f256295f931946",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/config/config_RGBNIRSWIR_FINE.yml"
+      },
+      {
+        "path": "dataloader_dual.py",
+        "sha256": "1b3b170b390848fc4b3c7203d46ae6643c45f4058ca6b70271d717427cd1824a",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/dataloader_dual.py"
+      },
+      {
+        "path": "distiller_dual_phase.py",
+        "sha256": "d0bb55cb44c611fe14cc26122d0a58d56d5bbdbf7029dbce019a09a1bb5588d3",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/distiller_dual_phase.py"
+      },
+      {
+        "path": "environment.yml",
+        "sha256": "632d3976edce9b7a2105c6ca5a598bbf5efeb7cf56b100f4f60aa62efd0a8bc8",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/environment.yml"
+      },
+      {
+        "path": "import_config_kickoff.py",
+        "sha256": "61fbbb22b64f971d075a3699849ed9c3eb90043de2bfa10a773944a3ac8ed877",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/import_config_kickoff.py"
+      },
+      {
+        "path": "loss_new.py",
+        "sha256": "a19030a17bbe78a7e1463cfddc0749bc8a0f45e469e2dd4d1df5f494f61f09bf",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/loss_new.py"
+      },
+      {
+        "path": "main.py",
+        "sha256": "da5dea7f5ee98792454b1e7abc7de6efd1f7df255a46ccbca0ae17df3f9de3ec",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/main.py"
+      },
+      {
+        "path": "main_dualphase.py",
+        "sha256": "08dcfca4af74223e202ae23bb497622b25fb7ce2c4d41b912c554814ade3fb1f",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/main_dualphase.py"
+      },
+      {
+        "path": "Modules/custom_layers/attention.py",
+        "sha256": "f7102d16cab84f1017096ed44cdd50b529692e52ae94eaba4932af2ee37594fe",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/Modules/custom_layers/attention.py"
+      },
+      {
+        "path": "Modules/custom_layers/blocks.py",
+        "sha256": "150787e6c0cb98786dbf923f00189f99a414bca9c45a649f18e43da47cda6296",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/Modules/custom_layers/blocks.py"
+      },
+      {
+        "path": "Modules/custom_layers/custom_pretrained.py",
+        "sha256": "67308191051cd3db8f8b3629613c0e1a0fa648eb3052fbe5043a4e9068564182",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/Modules/custom_layers/custom_pretrained.py"
+      },
+      {
+        "path": "Modules/Models/DeepLabv3.py",
+        "sha256": "3f67965cf2009b22083f8b1e9e11a0f99c1be4816eed0d1d45e71098b110c463",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/Modules/Models/DeepLabv3.py"
+      },
+      {
+        "path": "Modules/Models/FPN.py",
+        "sha256": "fac05abfaa887aebe822f811a202977fdc06f032a8d549893a60c790f0ce9922",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/Modules/Models/FPN.py"
+      },
+      {
+        "path": "Modules/Models/FPN_distil.py",
+        "sha256": "4c715e75bc413838cb81a56082eb085d12801821896fce090be63c97f88103f9",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/Modules/Models/FPN_distil.py"
+      },
+      {
+        "path": "Modules/Models/FPN_dual_hal.py",
+        "sha256": "9d5200fbed49efb106f42cc473047eb9fb6b704feb7533b0b4d13e4af371375b",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/Modules/Models/FPN_dual_hal.py"
+      },
+      {
+        "path": "Modules/Models/UNET.py",
+        "sha256": "c9c38017186d81999bfd184339443d2dd86ccaa7565be9eb3f24a533d7e562f0",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/Modules/Models/UNET.py"
+      },
+      {
+        "path": "README.md",
+        "sha256": "3b2617b0f646ac732f7306808300d54028ea66a252b55aa971b71dbcaf2f6399",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/README.md"
+      },
+      {
+        "path": "train.py",
+        "sha256": "4fcc9e47f49d5a26e5c67f533be07d988fee4d507f16ce1cd8ebc94ceaec5afa",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/train.py"
+      },
+      {
+        "path": "train_dualphase.py",
+        "sha256": "452b04abfebb1cfa4a1a74287564cc70fa8bc6f4068a28225d9def21917ec69d",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/train_dualphase.py"
+      },
+      {
+        "path": "utils.py",
+        "sha256": "a54afa9622f1ba907f454c72a212cc675719933acc4b769a315dcc20a962f660",
+        "url": "https://github.com/risqiutama/MineC2FNet/blob/8fbaf6596591a7222a8a5e6c1c6c41d5cb5ca99a/utils.py"
+      }
+    ]
+  },
+  "reading": "AI-assisted focused reading of official main paper and relevant arXiv v2 supplementary material; no human-read attestation",
+  "report": "../paper_reports/LIT-035_minec2fnet_coarse_to_fine_dil.docx"
+}

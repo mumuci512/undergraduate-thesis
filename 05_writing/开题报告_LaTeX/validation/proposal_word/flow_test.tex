@@ -1,0 +1,30 @@
+% Regression fixture only. This text is not thesis research content.
+\documentclass{tongji-proposal-word}
+\school{计算机科学与技术学院}
+\major{计算机科学与技术}
+\student{1234567}{测试学生}
+\thesistitle{视觉条件变化下道路场景语义分割的持续学习方法研究}{版面与分页测试}
+\proposaldate{2026}{11}{17}
+\begin{document}
+\MakeProposal
+\TJProposalSection[fixedfirst]{正文分页测试}
+\newcommand{\TestParagraph}{本段仅用于验证长正文的自动分页与中文行距，不构成研究结论。连续填写内容应保持小四宋体、首行缩进两字符，并在超过一页时自然换页。}
+\newcount\TestCounter
+\TestCounter=0
+\loop\ifnum\TestCounter<30
+  \TJProposalBody{\TestParagraph\TestParagraph}
+  \advance\TestCounter1
+\repeat
+\TJProposalSection{参考文献悬挂缩进测试}
+\begin{TJProposalReferences}
+\TJProposalReference{[1] 版面测试条目。这里的文字仅用于核验参考文献第二行相对第一行悬挂二十一磅，重复足够长度以产生自动换行。这里的文字仅用于核验参考文献第二行相对第一行悬挂二十一磅。}
+\end{TJProposalReferences}
+\TJProposalSection[fixedlast]{审核意见跨页测试}
+\newcommand{\LongTestOpinion}{%
+  \TestCounter=0
+  \loop\ifnum\TestCounter<30
+    \TestParagraph\par
+    \advance\TestCounter1
+  \repeat}
+\TJProposalReviews{\LongTestOpinion}{本段为专业审核栏填写测试，应保留签名和日期，并使表格下边线完整。}
+\end{document}

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "note": "Roundtrip forward input is synthetic; checkpoints come from real B short training. Resume restores optimizer/scheduler/iteration, not RNG or sampler cursor.",
+  "rows": {
+    "short-lwf": {
+      "checkpoint_sha256": "d28ab25763640f19aac7470d9d9370ef3d5084844520fb5759d8912fabc858a4",
+      "strict_state_roundtrip": true,
+      "synthetic_input_logits_bit_equal": true,
+      "teacher_source_parameters_and_all_buffers_exact": true,
+      "resume_state_exact": false,
+      "resume_restored_iteration": null,
+      "teacher_policy_after_reload_train": true
+    },
+    "resume-lwf": {
+      "checkpoint_sha256": "849af489a37398119c7cf9df70bd508224a719621f77710fbc30e5d34e103034",
+      "strict_state_roundtrip": true,
+      "synthetic_input_logits_bit_equal": true,
+      "teacher_source_parameters_and_all_buffers_exact": true,
+      "resume_state_exact": true,
+      "resume_restored_iteration": 4,
+      "teacher_policy_after_reload_train": true
+    },
+    "short-gsmf_teacher_bn": {
+      "checkpoint_sha256": "f52b2cd7d4793699bb42e9724f6e5c6c9cf625b0c2cbd7630e51a72e78c43cdb",
+      "strict_state_roundtrip": true,
+      "synthetic_input_logits_bit_equal": true,
+      "teacher_source_parameters_and_all_buffers_exact": true,
+      "resume_state_exact": false,
+      "resume_restored_iteration": null,
+      "teacher_policy_after_reload_train": true
+    },
+    "resume-gsmf_teacher_bn": {
+      "checkpoint_sha256": "23c9e946d7f6ed0d5e4675ae5356e620f0e19b9f519800da7802d7252081d4b1",
+      "strict_state_roundtrip": true,
+      "synthetic_input_logits_bit_equal": true,
+      "teacher_source_parameters_and_all_buffers_exact": true,
+      "resume_state_exact": true,
+      "resume_restored_iteration": 4,
+      "teacher_policy_after_reload_train": true
+    }
+  }
+}

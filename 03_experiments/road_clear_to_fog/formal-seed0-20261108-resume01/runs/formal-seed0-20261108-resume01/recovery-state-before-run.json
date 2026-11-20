@@ -1,0 +1,26 @@
+{
+  "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-001/source/iter_40000.pth",
+  "sha256": "92b3dceb3a00150d9348d697baa1d363ff57b44b2095f8cfdefe4e59f070b825",
+  "iteration": 40000,
+  "optimizer_steps": 40000,
+  "scheduler": {
+    "eta_min": 0.0,
+    "power": 0.9,
+    "total_iters": 59999,
+    "param_name": "lr",
+    "begin": 0,
+    "end": 60000,
+    "by_epoch": false,
+    "base_values": [
+      0.0001
+    ],
+    "last_step": 40000,
+    "_global_step": 40000,
+    "verbose": false,
+    "_last_value": [
+      3.720298965749365e-05
+    ]
+  },
+  "remaining_updates": 20000,
+  "limitation": "MMEngine 0.8.2 restores model/optimizer/scheduler/iteration. Original checkpoint has no RNG or dataloader cursor state; not bitwise equivalent to uninterrupted training."
+}

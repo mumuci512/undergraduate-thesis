@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "source_files_unchanged": 298,
+  "snapshot_files_verified_per_run": 66,
+  "git_files_verified": 79,
+  "internal_links_verified": 18,
+  "config_dependencies_verified": true,
+  "weights_CPU_structure_checked": 8,
+  "config_dependency_validation_scope": "required_road_closure; unused baseline missing references are explicitly listed",
+  "prediction_files_indexed_only": 1800,
+  "no_models_evaluated": true,
+  "no_training_started": true,
+  "no_git_mutation": true,
+  "excluded": [
+    "datasets",
+    "Conda directories",
+    ".git",
+    "checkpoints",
+    "full predictions",
+    "temporary caches"
+  ],
+  "original_evidence_links": "Historical raw evidence may retain absolute or repository-relative paths; classification and mapping are explicit."
+}

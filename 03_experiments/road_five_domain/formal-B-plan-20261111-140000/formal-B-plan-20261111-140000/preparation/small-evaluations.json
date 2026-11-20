@@ -1,0 +1,1453 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "stage": "ft",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-E/iter_4.pth",
+      "checkpoint_sha256": "a3affb23d6155672f0bb88a288e832d31c60c8192655b045b08d94f789af460f",
+      "metrics": {
+        "aAcc": 94.71,
+        "mIoU": 52.53,
+        "mAcc": 78.09,
+        "matrix_mIoU": 52.53
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 36,
+        "decode_head.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.3224927819683217,
+      "peak_allocated_MiB": 555.20068359375,
+      "peak_reserved_MiB": 704.0,
+      "checkpoint_bytes": 574877783,
+      "parameters": 47832297,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/clear/A_val_debug.jsonl",
+      "manifest_sha256": "25374ff512b9c7f6c585f279ae299927295ef4c73bb98bc661e60a8619fe827d",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "ft",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-E/iter_4.pth",
+      "checkpoint_sha256": "a3affb23d6155672f0bb88a288e832d31c60c8192655b045b08d94f789af460f",
+      "metrics": {
+        "aAcc": 94.48,
+        "mIoU": 57.33,
+        "mAcc": 80.04,
+        "matrix_mIoU": 57.33
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 36,
+        "decode_head.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.1787555209593847,
+      "peak_allocated_MiB": 555.20068359375,
+      "peak_reserved_MiB": 704.0,
+      "checkpoint_bytes": 574877783,
+      "parameters": 47832297,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/fog005/A_val_debug.jsonl",
+      "manifest_sha256": "cd88f7488b079f0745d59e30ca646266f729796275a1110b122849201887e435",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "ft",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-E/iter_4.pth",
+      "checkpoint_sha256": "a3affb23d6155672f0bb88a288e832d31c60c8192655b045b08d94f789af460f",
+      "metrics": {
+        "aAcc": 93.95,
+        "mIoU": 56.74,
+        "mAcc": 79.23,
+        "matrix_mIoU": 56.74
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 36,
+        "decode_head.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.1559961370076053,
+      "peak_allocated_MiB": 555.20068359375,
+      "peak_reserved_MiB": 704.0,
+      "checkpoint_bytes": 574877783,
+      "parameters": 47832297,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/fog010/A_val_debug.jsonl",
+      "manifest_sha256": "70d55bb1a39e2ffae05a6a986a1ea49a1e467d240e1de99e97435c1a3387c0a2",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "ft",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-E/iter_4.pth",
+      "checkpoint_sha256": "a3affb23d6155672f0bb88a288e832d31c60c8192655b045b08d94f789af460f",
+      "metrics": {
+        "aAcc": 89.16,
+        "mIoU": 47.61,
+        "mAcc": 71.19,
+        "matrix_mIoU": 47.61
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 36,
+        "decode_head.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.0096568879671395,
+      "peak_allocated_MiB": 555.20068359375,
+      "peak_reserved_MiB": 704.0,
+      "checkpoint_bytes": 574877783,
+      "parameters": 47832297,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/fog020/A_val_debug.jsonl",
+      "manifest_sha256": "32a153b83d40a3ab0a57254cf94c9619108f076347dbad749e8394e577420f8d",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "ft",
+      "domain": "B",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-E/iter_4.pth",
+      "checkpoint_sha256": "a3affb23d6155672f0bb88a288e832d31c60c8192655b045b08d94f789af460f",
+      "metrics": {
+        "aAcc": 94.6,
+        "mIoU": 59.5,
+        "mAcc": 72.36,
+        "matrix_mIoU": 59.5
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 72,
+        "decode_head.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 3.4984138770378195,
+      "peak_allocated_MiB": 555.16943359375,
+      "peak_reserved_MiB": 704.0,
+      "checkpoint_bytes": 574877783,
+      "parameters": 47832297,
+      "evaluated_images": 4,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/B_val_debug.jsonl",
+      "manifest_sha256": "42427cd8e34425e418d8a9e2e12df2db27d23275d250784c8307a40904878b8a",
+      "gt_histogram": [
+        1351686,
+        224524,
+        930837,
+        46075,
+        245822,
+        96783,
+        6247,
+        23649,
+        1299575,
+        93923,
+        3405188,
+        6597,
+        0,
+        126038,
+        0,
+        7369,
+        0,
+        0,
+        0
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "ft",
+      "domain": "C",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-E/iter_4.pth",
+      "checkpoint_sha256": "a3affb23d6155672f0bb88a288e832d31c60c8192655b045b08d94f789af460f",
+      "metrics": {
+        "aAcc": 90.55,
+        "mIoU": 47.09,
+        "mAcc": 61.7,
+        "matrix_mIoU": 47.09
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 72,
+        "decode_head.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 5.407926674000919,
+      "peak_allocated_MiB": 555.16943359375,
+      "peak_reserved_MiB": 704.0,
+      "checkpoint_bytes": 574877783,
+      "parameters": 47832297,
+      "evaluated_images": 4,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/C_val_debug.jsonl",
+      "manifest_sha256": "293dec57641073201ace265695815643fd783b02085b0d417b4ee4ec71999262",
+      "gt_histogram": [
+        1172335,
+        238868,
+        720200,
+        1792,
+        5790,
+        37858,
+        517,
+        7964,
+        1979032,
+        501291,
+        2658659,
+        49284,
+        0,
+        208725,
+        122727,
+        159756,
+        0,
+        0,
+        7887
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "ft",
+      "domain": "D",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-E/iter_4.pth",
+      "checkpoint_sha256": "a3affb23d6155672f0bb88a288e832d31c60c8192655b045b08d94f789af460f",
+      "metrics": {
+        "aAcc": 85.08,
+        "mIoU": 38.19,
+        "mAcc": 56.38,
+        "matrix_mIoU": 38.19
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 72,
+        "decode_head.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 3.3099287500372157,
+      "peak_allocated_MiB": 555.16943359375,
+      "peak_reserved_MiB": 704.0,
+      "checkpoint_bytes": 574877783,
+      "parameters": 47832297,
+      "evaluated_images": 4,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/D_val_debug.jsonl",
+      "manifest_sha256": "af5dc80dd107dd095b7aa40d5e9e7f9bbccdbe47faa7855018a80371edac7f67",
+      "gt_histogram": [
+        963944,
+        308417,
+        661475,
+        66687,
+        143127,
+        80824,
+        35,
+        9042,
+        2781171,
+        222996,
+        2230009,
+        18810,
+        0,
+        71699,
+        13263,
+        0,
+        305508,
+        48022,
+        0
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "ft",
+      "domain": "E",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/ft-E/iter_4.pth",
+      "checkpoint_sha256": "a3affb23d6155672f0bb88a288e832d31c60c8192655b045b08d94f789af460f",
+      "metrics": {
+        "aAcc": 55.43,
+        "mIoU": 16.22,
+        "mAcc": 33.16,
+        "matrix_mIoU": 16.22
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 36,
+        "decode_head.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.297820867970586,
+      "peak_allocated_MiB": 555.16943359375,
+      "peak_reserved_MiB": 704.0,
+      "checkpoint_bytes": 574877783,
+      "parameters": 47832297,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/E_val_debug.jsonl",
+      "manifest_sha256": "ef3682105b04be6a532b3a0db5a2d36749f1935f9a707711493529fd756a558f",
+      "gt_histogram": [
+        1014222,
+        310090,
+        188954,
+        16610,
+        137487,
+        8515,
+        0,
+        3751,
+        1316119,
+        84144,
+        437293,
+        0,
+        0,
+        3097,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "gsmf",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/gsmf-E/iter_4.pth",
+      "checkpoint_sha256": "96d8792ec02615df12209ac8f214b76a8f8a78bfd3c2810003753fd6d7549572",
+      "metrics": {
+        "aAcc": 86.18,
+        "mIoU": 50.41,
+        "mAcc": 75.65,
+        "matrix_mIoU": 50.41
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.323464637971483,
+      "peak_allocated_MiB": 741.400390625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 764904235,
+      "parameters": 95664594,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/clear/A_val_debug.jsonl",
+      "manifest_sha256": "25374ff512b9c7f6c585f279ae299927295ef4c73bb98bc661e60a8619fe827d",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "gsmf",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/gsmf-E/iter_4.pth",
+      "checkpoint_sha256": "96d8792ec02615df12209ac8f214b76a8f8a78bfd3c2810003753fd6d7549572",
+      "metrics": {
+        "aAcc": 86.08,
+        "mIoU": 56.75,
+        "mAcc": 79.64,
+        "matrix_mIoU": 56.75
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.212746465986129,
+      "peak_allocated_MiB": 741.400390625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 764904235,
+      "parameters": 95664594,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/fog005/A_val_debug.jsonl",
+      "manifest_sha256": "cd88f7488b079f0745d59e30ca646266f729796275a1110b122849201887e435",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "gsmf",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/gsmf-E/iter_4.pth",
+      "checkpoint_sha256": "96d8792ec02615df12209ac8f214b76a8f8a78bfd3c2810003753fd6d7549572",
+      "metrics": {
+        "aAcc": 85.42,
+        "mIoU": 57.09,
+        "mAcc": 79.78,
+        "matrix_mIoU": 57.09
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.7192326989606954,
+      "peak_allocated_MiB": 741.400390625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 764904235,
+      "parameters": 95664594,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/fog010/A_val_debug.jsonl",
+      "manifest_sha256": "70d55bb1a39e2ffae05a6a986a1ea49a1e467d240e1de99e97435c1a3387c0a2",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "gsmf",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/gsmf-E/iter_4.pth",
+      "checkpoint_sha256": "96d8792ec02615df12209ac8f214b76a8f8a78bfd3c2810003753fd6d7549572",
+      "metrics": {
+        "aAcc": 79.57,
+        "mIoU": 46.92,
+        "mAcc": 70.57,
+        "matrix_mIoU": 46.92
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 1.9892840890097432,
+      "peak_allocated_MiB": 741.400390625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 764904235,
+      "parameters": 95664594,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/fog020/A_val_debug.jsonl",
+      "manifest_sha256": "32a153b83d40a3ab0a57254cf94c9619108f076347dbad749e8394e577420f8d",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "gsmf",
+      "domain": "B",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/gsmf-E/iter_4.pth",
+      "checkpoint_sha256": "96d8792ec02615df12209ac8f214b76a8f8a78bfd3c2810003753fd6d7549572",
+      "metrics": {
+        "aAcc": 93.27,
+        "mIoU": 57.81,
+        "mAcc": 70.83,
+        "matrix_mIoU": 57.81
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 72,
+        "decode_head_1.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 3.1575561199570075,
+      "peak_allocated_MiB": 741.369140625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 764904235,
+      "parameters": 95664594,
+      "evaluated_images": 4,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/B_val_debug.jsonl",
+      "manifest_sha256": "42427cd8e34425e418d8a9e2e12df2db27d23275d250784c8307a40904878b8a",
+      "gt_histogram": [
+        1351686,
+        224524,
+        930837,
+        46075,
+        245822,
+        96783,
+        6247,
+        23649,
+        1299575,
+        93923,
+        3405188,
+        6597,
+        0,
+        126038,
+        0,
+        7369,
+        0,
+        0,
+        0
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "gsmf",
+      "domain": "C",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/gsmf-E/iter_4.pth",
+      "checkpoint_sha256": "96d8792ec02615df12209ac8f214b76a8f8a78bfd3c2810003753fd6d7549572",
+      "metrics": {
+        "aAcc": 90.61,
+        "mIoU": 46.56,
+        "mAcc": 62.49,
+        "matrix_mIoU": 46.56
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 72,
+        "decode_head_1.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 3.1278768940246664,
+      "peak_allocated_MiB": 741.369140625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 764904235,
+      "parameters": 95664594,
+      "evaluated_images": 4,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/C_val_debug.jsonl",
+      "manifest_sha256": "293dec57641073201ace265695815643fd783b02085b0d417b4ee4ec71999262",
+      "gt_histogram": [
+        1172335,
+        238868,
+        720200,
+        1792,
+        5790,
+        37858,
+        517,
+        7964,
+        1979032,
+        501291,
+        2658659,
+        49284,
+        0,
+        208725,
+        122727,
+        159756,
+        0,
+        0,
+        7887
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "gsmf",
+      "domain": "D",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/gsmf-E/iter_4.pth",
+      "checkpoint_sha256": "96d8792ec02615df12209ac8f214b76a8f8a78bfd3c2810003753fd6d7549572",
+      "metrics": {
+        "aAcc": 84.32,
+        "mIoU": 37.48,
+        "mAcc": 55.36,
+        "matrix_mIoU": 37.48
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 72,
+        "decode_head_1.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.914331317995675,
+      "peak_allocated_MiB": 741.369140625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 764904235,
+      "parameters": 95664594,
+      "evaluated_images": 4,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/D_val_debug.jsonl",
+      "manifest_sha256": "af5dc80dd107dd095b7aa40d5e9e7f9bbccdbe47faa7855018a80371edac7f67",
+      "gt_histogram": [
+        963944,
+        308417,
+        661475,
+        66687,
+        143127,
+        80824,
+        35,
+        9042,
+        2781171,
+        222996,
+        2230009,
+        18810,
+        0,
+        71699,
+        13263,
+        0,
+        305508,
+        48022,
+        0
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "gsmf",
+      "domain": "E",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/gsmf-E/iter_4.pth",
+      "checkpoint_sha256": "96d8792ec02615df12209ac8f214b76a8f8a78bfd3c2810003753fd6d7549572",
+      "metrics": {
+        "aAcc": 56.94,
+        "mIoU": 14.79,
+        "mAcc": 34.47,
+        "matrix_mIoU": 14.79
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 1.8192775140050799,
+      "peak_allocated_MiB": 741.369140625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 764904235,
+      "parameters": 95664594,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/E_val_debug.jsonl",
+      "manifest_sha256": "ef3682105b04be6a532b3a0db5a2d36749f1935f9a707711493529fd756a558f",
+      "gt_histogram": [
+        1014222,
+        310090,
+        188954,
+        16610,
+        137487,
+        8515,
+        0,
+        3751,
+        1316119,
+        84144,
+        437293,
+        0,
+        0,
+        3097,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "lwf",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/lwf-E/iter_4.pth",
+      "checkpoint_sha256": "156223ca38e3a9a4b0bbea783ca441eae8be973c01215971717c7b3297707d86",
+      "metrics": {
+        "aAcc": 86.84,
+        "mIoU": 47.96,
+        "mAcc": 73.8,
+        "matrix_mIoU": 47.96
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.414384460018482,
+      "peak_allocated_MiB": 741.400390625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 766882077,
+      "parameters": 95664594,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/clear/A_val_debug.jsonl",
+      "manifest_sha256": "25374ff512b9c7f6c585f279ae299927295ef4c73bb98bc661e60a8619fe827d",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "lwf",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/lwf-E/iter_4.pth",
+      "checkpoint_sha256": "156223ca38e3a9a4b0bbea783ca441eae8be973c01215971717c7b3297707d86",
+      "metrics": {
+        "aAcc": 87.24,
+        "mIoU": 50.72,
+        "mAcc": 77.72,
+        "matrix_mIoU": 50.72
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 1.8518571520107798,
+      "peak_allocated_MiB": 741.400390625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 766882077,
+      "parameters": 95664594,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/fog005/A_val_debug.jsonl",
+      "manifest_sha256": "cd88f7488b079f0745d59e30ca646266f729796275a1110b122849201887e435",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "lwf",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/lwf-E/iter_4.pth",
+      "checkpoint_sha256": "156223ca38e3a9a4b0bbea783ca441eae8be973c01215971717c7b3297707d86",
+      "metrics": {
+        "aAcc": 87.18,
+        "mIoU": 53.45,
+        "mAcc": 76.84,
+        "matrix_mIoU": 53.45
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 1.9154317350476049,
+      "peak_allocated_MiB": 741.400390625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 766882077,
+      "parameters": 95664594,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/fog010/A_val_debug.jsonl",
+      "manifest_sha256": "70d55bb1a39e2ffae05a6a986a1ea49a1e467d240e1de99e97435c1a3387c0a2",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "lwf",
+      "domain": "A",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/lwf-E/iter_4.pth",
+      "checkpoint_sha256": "156223ca38e3a9a4b0bbea783ca441eae8be973c01215971717c7b3297707d86",
+      "metrics": {
+        "aAcc": 82.79,
+        "mIoU": 42.96,
+        "mAcc": 66.35,
+        "matrix_mIoU": 42.96
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 1.8644408700056374,
+      "peak_allocated_MiB": 741.400390625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 766882077,
+      "parameters": 95664594,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/eval-manifests/fog020/A_val_debug.jsonl",
+      "manifest_sha256": "32a153b83d40a3ab0a57254cf94c9619108f076347dbad749e8394e577420f8d",
+      "gt_histogram": [
+        1349265,
+        208837,
+        1359495,
+        0,
+        17479,
+        36066,
+        0,
+        15840,
+        220842,
+        0,
+        68395,
+        6821,
+        4712,
+        430810,
+        0,
+        0,
+        0,
+        0,
+        1330
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "lwf",
+      "domain": "B",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/lwf-E/iter_4.pth",
+      "checkpoint_sha256": "156223ca38e3a9a4b0bbea783ca441eae8be973c01215971717c7b3297707d86",
+      "metrics": {
+        "aAcc": 91.1,
+        "mIoU": 49.48,
+        "mAcc": 68.76,
+        "matrix_mIoU": 49.48
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 72,
+        "decode_head_1.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.999652709986549,
+      "peak_allocated_MiB": 741.369140625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 766882077,
+      "parameters": 95664594,
+      "evaluated_images": 4,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/B_val_debug.jsonl",
+      "manifest_sha256": "42427cd8e34425e418d8a9e2e12df2db27d23275d250784c8307a40904878b8a",
+      "gt_histogram": [
+        1351686,
+        224524,
+        930837,
+        46075,
+        245822,
+        96783,
+        6247,
+        23649,
+        1299575,
+        93923,
+        3405188,
+        6597,
+        0,
+        126038,
+        0,
+        7369,
+        0,
+        0,
+        0
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "lwf",
+      "domain": "C",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/lwf-E/iter_4.pth",
+      "checkpoint_sha256": "156223ca38e3a9a4b0bbea783ca441eae8be973c01215971717c7b3297707d86",
+      "metrics": {
+        "aAcc": 87.45,
+        "mIoU": 43.61,
+        "mAcc": 60.64,
+        "matrix_mIoU": 43.61
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 72,
+        "decode_head_1.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.956768529023975,
+      "peak_allocated_MiB": 741.369140625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 766882077,
+      "parameters": 95664594,
+      "evaluated_images": 4,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/C_val_debug.jsonl",
+      "manifest_sha256": "293dec57641073201ace265695815643fd783b02085b0d417b4ee4ec71999262",
+      "gt_histogram": [
+        1172335,
+        238868,
+        720200,
+        1792,
+        5790,
+        37858,
+        517,
+        7964,
+        1979032,
+        501291,
+        2658659,
+        49284,
+        0,
+        208725,
+        122727,
+        159756,
+        0,
+        0,
+        7887
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "lwf",
+      "domain": "D",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/lwf-E/iter_4.pth",
+      "checkpoint_sha256": "156223ca38e3a9a4b0bbea783ca441eae8be973c01215971717c7b3297707d86",
+      "metrics": {
+        "aAcc": 81.57,
+        "mIoU": 33.73,
+        "mAcc": 51.25,
+        "matrix_mIoU": 33.73
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 72,
+        "decode_head_1.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 2.9880887620383874,
+      "peak_allocated_MiB": 741.369140625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 766882077,
+      "parameters": 95664594,
+      "evaluated_images": 4,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/D_val_debug.jsonl",
+      "manifest_sha256": "af5dc80dd107dd095b7aa40d5e9e7f9bbccdbe47faa7855018a80371edac7f67",
+      "gt_histogram": [
+        963944,
+        308417,
+        661475,
+        66687,
+        143127,
+        80824,
+        35,
+        9042,
+        2781171,
+        222996,
+        2230009,
+        18810,
+        0,
+        71699,
+        13263,
+        0,
+        305508,
+        48022,
+        0
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    },
+    {
+      "stage": "lwf",
+      "domain": "E",
+      "split": "validation subset",
+      "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/short/lwf-E/iter_4.pth",
+      "checkpoint_sha256": "156223ca38e3a9a4b0bbea783ca441eae8be973c01215971717c7b3297707d86",
+      "metrics": {
+        "aAcc": 41.72,
+        "mIoU": 14.23,
+        "mAcc": 28.75,
+        "matrix_mIoU": 14.23
+      },
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "seconds": 1.849829601997044,
+      "peak_allocated_MiB": 741.369140625,
+      "peak_reserved_MiB": 896.0,
+      "checkpoint_bytes": 766882077,
+      "parameters": 95664594,
+      "evaluated_images": 2,
+      "full_official_split": false,
+      "manifest": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/prepare-20261111-140000/data/E_val_debug.jsonl",
+      "manifest_sha256": "ef3682105b04be6a532b3a0db5a2d36749f1935f9a707711493529fd756a558f",
+      "gt_histogram": [
+        1014222,
+        310090,
+        188954,
+        16610,
+        137487,
+        8515,
+        0,
+        3751,
+        1316119,
+        84144,
+        437293,
+        0,
+        0,
+        3097,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "checkpoint_training_iterations": 4,
+      "debug": true,
+      "synthetic_fixture": false
+    }
+  ]
+}

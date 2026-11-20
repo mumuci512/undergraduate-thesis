@@ -1,0 +1,78 @@
+{
+  "time_utc": "2026-11-08T02:53:22.020336Z",
+  "python": "3.8.20 (default, Oct  3 2024, 15:24:27) \n[GCC 11.2.0]",
+  "python_executable": "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/bin/python",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.17",
+  "versions": {
+    "torch": "1.9.1+cu111",
+    "torchvision": "0.10.1+cu111",
+    "mmcv": "2.0.0",
+    "mmengine": "0.8.2",
+    "mmseg": "1.2.1",
+    "numpy": "1.24.4",
+    "cv2": "4.8.0",
+    "PIL": "9.5.0"
+  },
+  "cuda_available": true,
+  "torch_cuda": "11.1",
+  "cudnn": 8005,
+  "disk": {
+    "total": 1081101176832,
+    "free": 793433853952
+  },
+  "gpu": {
+    "command": [
+      "/usr/lib/wsl/lib/nvidia-smi"
+    ],
+    "exit_code": 0,
+    "stdout": "Sun Nov  8 10:53:22 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 615.71.08              KMD Version: 616.92        CUDA UMD Version: 13.4     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3080        On  |   00000000:01:00.0  On |                  N/A |\n|  0%   31C    P8             17W /  320W |    1374MiB /  20480MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "stderr": ""
+  },
+  "process_names": {
+    "command": [
+      "ps",
+      "-eo",
+      "pid,comm,etime"
+    ],
+    "exit_code": 0,
+    "stdout": "    PID COMMAND             ELAPSED\n      1 systemd               11:12\n      2 init-systemd(Ub       11:12\n      6 init                  11:11\n     60 systemd-journal       11:11\n     82 systemd-udevd         11:11\n     92 snapfuse              11:11\n     93 snapfuse              11:11\n     99 snapfuse              11:11\n    125 systemd-resolve       11:11\n    127 systemd-timesyn       11:11\n    214 cron                  11:11\n    216 dbus-daemon           11:11\n    221 networkd-dispat       11:11\n    222 rsyslogd              11:11\n    224 snapd                 11:11\n    226 systemd-logind        11:11\n    239 agetty                11:11\n    250 agetty                11:11\n    251 sshd                  11:11\n    267 unattended-upgr       11:10\n    371 login                 11:09\n    414 systemd               11:09\n    415 (sd-pam)              11:09\n    425 bash                  11:09\n    459 systemd               10:11\n    460 (sd-pam)              10:11\n    526 sshd                  10:05\n    565 sshd                  10:04\n    566 sh                    10:04\n    584 code-c4453f8ea4       10:04\n    633 code-c4453f8ea4       10:03\n    655 sh                    10:03\n    659 MainThread            10:03\n    684 sh                    10:02\n    685 MainThread            10:02\n    689 MainThread            10:02\n    739 MainThread            10:02\n    766 MainThread            10:02\n    852 copilot-runtime       10:01\n    895 MainThread            10:01\n    928 codex                 10:01\n    991 MainThread            09:59\n   1163 codex-code-mode       08:48\n   1547 sleep                 01:04\n   1603 tmux: server          00:18\n   1604 bash                  00:18\n   1607 python                00:18\n   1637 systemd-udevd         00:05\n   1638 systemd-udevd         00:05\n   1639 systemd-udevd         00:05\n   1640 systemd-udevd         00:05\n   1653 python                00:02\n   1663 ps                    00:00\n",
+    "stderr": ""
+  },
+  "tmux": {
+    "command": [
+      "tmux",
+      "list-sessions"
+    ],
+    "exit_code": 0,
+    "stdout": "road-recovery-20261108-105307-1597: 1 windows (created Sun Nov  8 10:53:07 2026)\n",
+    "stderr": ""
+  },
+  "git_head": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "e141e523e86f98f772ee787bb2aa95272f38e4fe\n",
+    "stderr": ""
+  },
+  "git_status": {
+    "command": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "exit_code": 0,
+    "stdout": " M configs/_base_/datasets/Potsdam_IRRG_512.py\n M configs/_base_/datasets/Potsdam_my_dataset_IRRG_512.py\n M configs/_base_/datasets/Vaihingen_512.py\n M configs/gs_aufpn_r101-d8_4xb4-80k_Potsdam-512x512.py\n M configs/gsmf_rs_dil_r101-d8_4xb4-80k_ISPRS-512x512.py\n M tools/checkpoint_process.py\n M tools/test/test_GS-AUFPN.py\n M tools/test/test_GSMF-RS-DIL.py\n M tools/train/train_GS-AUFPN.py\n M tools/train/train_GSMF-RS-DIL.py\n?? .gitignore\n?? AGENTS.md\n?? REPRO.md\n?? configs/road/\n?? environment/\n?? experiments/\n?? gsmf_rs_dil/\n?? mmseg/datasets/isprs_tif_loader.py\n?? road_dil/\n?? tools/prepare_isprs.py\n?? tools/road/\n?? tools/verify_environment.py\n",
+    "stderr": ""
+  },
+  "pretrained": {
+    "path": "checkpoints/pretrained/resnet101_v1c-e67eebb6.pth",
+    "sha256": "e67eebb62faab570c7c2268f93f5b68db2cd1730d5397923f34b39820c691d64"
+  },
+  "cuda_kernel_checks": {
+    "matmul_finite": true,
+    "mmcv_roi_align_finite": true
+  }
+}

@@ -1,0 +1,1320 @@
+{
+  "checked_date": "2026-11-03",
+  "paper_version": "16-page author-public Journal Pre-proof",
+  "sources": "Tables 2-8; values preserved as printed; own calculations are separate",
+  "group_count": 65,
+  "independence_note": "Repeated baseline/full TED rows and Tables 7-8 are not independent experiments",
+  "groups": [
+    {
+      "id": "G01",
+      "task": "prostate",
+      "method": "Upper bound",
+      "source": "Table 2"
+    },
+    {
+      "id": "G02",
+      "task": "prostate",
+      "method": "SEQ",
+      "source": "Table 2"
+    },
+    {
+      "id": "G03",
+      "task": "prostate",
+      "method": "EWC",
+      "source": "Table 2"
+    },
+    {
+      "id": "G04",
+      "task": "prostate",
+      "method": "MAS",
+      "source": "Table 2"
+    },
+    {
+      "id": "G05",
+      "task": "prostate",
+      "method": "KD",
+      "source": "Table 2"
+    },
+    {
+      "id": "G06",
+      "task": "prostate",
+      "method": "MiB",
+      "source": "Table 2"
+    },
+    {
+      "id": "G07",
+      "task": "prostate",
+      "method": "PLOP",
+      "source": "Table 2"
+    },
+    {
+      "id": "G08",
+      "task": "prostate",
+      "method": "TED",
+      "source": "Table 2"
+    },
+    {
+      "id": "G09",
+      "task": "LV-endo",
+      "method": "Upper bound",
+      "source": "Table 3"
+    },
+    {
+      "id": "G10",
+      "task": "LV-endo",
+      "method": "SEQ",
+      "source": "Table 3"
+    },
+    {
+      "id": "G11",
+      "task": "LV-endo",
+      "method": "EWC",
+      "source": "Table 3"
+    },
+    {
+      "id": "G12",
+      "task": "LV-endo",
+      "method": "MAS",
+      "source": "Table 3"
+    },
+    {
+      "id": "G13",
+      "task": "LV-endo",
+      "method": "KD",
+      "source": "Table 3"
+    },
+    {
+      "id": "G14",
+      "task": "LV-endo",
+      "method": "MiB",
+      "source": "Table 3"
+    },
+    {
+      "id": "G15",
+      "task": "LV-endo",
+      "method": "PLOP",
+      "source": "Table 3"
+    },
+    {
+      "id": "G16",
+      "task": "LV-endo",
+      "method": "TED",
+      "source": "Table 3"
+    },
+    {
+      "id": "G17",
+      "task": "LV-epi",
+      "method": "Upper bound",
+      "source": "Table 3"
+    },
+    {
+      "id": "G18",
+      "task": "LV-epi",
+      "method": "SEQ",
+      "source": "Table 3"
+    },
+    {
+      "id": "G19",
+      "task": "LV-epi",
+      "method": "EWC",
+      "source": "Table 3"
+    },
+    {
+      "id": "G20",
+      "task": "LV-epi",
+      "method": "MAS",
+      "source": "Table 3"
+    },
+    {
+      "id": "G21",
+      "task": "LV-epi",
+      "method": "KD",
+      "source": "Table 3"
+    },
+    {
+      "id": "G22",
+      "task": "LV-epi",
+      "method": "MiB",
+      "source": "Table 3"
+    },
+    {
+      "id": "G23",
+      "task": "LV-epi",
+      "method": "PLOP",
+      "source": "Table 3"
+    },
+    {
+      "id": "G24",
+      "task": "LV-epi",
+      "method": "TED",
+      "source": "Table 3"
+    },
+    {
+      "id": "G25",
+      "task": "RV",
+      "method": "Upper bound",
+      "source": "Table 3"
+    },
+    {
+      "id": "G26",
+      "task": "RV",
+      "method": "SEQ",
+      "source": "Table 3"
+    },
+    {
+      "id": "G27",
+      "task": "RV",
+      "method": "EWC",
+      "source": "Table 3"
+    },
+    {
+      "id": "G28",
+      "task": "RV",
+      "method": "MAS",
+      "source": "Table 3"
+    },
+    {
+      "id": "G29",
+      "task": "RV",
+      "method": "KD",
+      "source": "Table 3"
+    },
+    {
+      "id": "G30",
+      "task": "RV",
+      "method": "MiB",
+      "source": "Table 3"
+    },
+    {
+      "id": "G31",
+      "task": "RV",
+      "method": "PLOP",
+      "source": "Table 3"
+    },
+    {
+      "id": "G32",
+      "task": "RV",
+      "method": "TED",
+      "source": "Table 3"
+    },
+    {
+      "id": "G33",
+      "task": "prostate",
+      "method": "KD",
+      "source": "Table 5"
+    },
+    {
+      "id": "G34",
+      "task": "prostate",
+      "method": "KD + SKA",
+      "source": "Table 5"
+    },
+    {
+      "id": "G35",
+      "task": "prostate",
+      "method": "KD + AKT",
+      "source": "Table 5"
+    },
+    {
+      "id": "G36",
+      "task": "prostate",
+      "method": "KD + AKT + GVU",
+      "source": "Table 5"
+    },
+    {
+      "id": "G37",
+      "task": "prostate",
+      "method": "KD + SKA + AKT",
+      "source": "Table 5"
+    },
+    {
+      "id": "G38",
+      "task": "prostate",
+      "method": "完整 TED",
+      "source": "Table 5"
+    },
+    {
+      "id": "G39",
+      "task": "LV-endo",
+      "method": "KD",
+      "source": "Table 4"
+    },
+    {
+      "id": "G40",
+      "task": "LV-endo",
+      "method": "KD + SKA",
+      "source": "Table 4"
+    },
+    {
+      "id": "G41",
+      "task": "LV-endo",
+      "method": "KD + AKT",
+      "source": "Table 4"
+    },
+    {
+      "id": "G42",
+      "task": "LV-endo",
+      "method": "KD + AKT + GVU",
+      "source": "Table 4"
+    },
+    {
+      "id": "G43",
+      "task": "LV-endo",
+      "method": "KD + SKA + AKT",
+      "source": "Table 4"
+    },
+    {
+      "id": "G44",
+      "task": "LV-endo",
+      "method": "完整 TED",
+      "source": "Table 4"
+    },
+    {
+      "id": "G45",
+      "task": "LV-epi",
+      "method": "KD",
+      "source": "Table 4"
+    },
+    {
+      "id": "G46",
+      "task": "LV-epi",
+      "method": "KD + SKA",
+      "source": "Table 4"
+    },
+    {
+      "id": "G47",
+      "task": "LV-epi",
+      "method": "KD + AKT",
+      "source": "Table 4"
+    },
+    {
+      "id": "G48",
+      "task": "LV-epi",
+      "method": "KD + AKT + GVU",
+      "source": "Table 4"
+    },
+    {
+      "id": "G49",
+      "task": "LV-epi",
+      "method": "KD + SKA + AKT",
+      "source": "Table 4"
+    },
+    {
+      "id": "G50",
+      "task": "LV-epi",
+      "method": "完整 TED",
+      "source": "Table 4"
+    },
+    {
+      "id": "G51",
+      "task": "RV",
+      "method": "KD",
+      "source": "Table 4"
+    },
+    {
+      "id": "G52",
+      "task": "RV",
+      "method": "KD + SKA",
+      "source": "Table 4"
+    },
+    {
+      "id": "G53",
+      "task": "RV",
+      "method": "KD + AKT",
+      "source": "Table 4"
+    },
+    {
+      "id": "G54",
+      "task": "RV",
+      "method": "KD + AKT + GVU",
+      "source": "Table 4"
+    },
+    {
+      "id": "G55",
+      "task": "RV",
+      "method": "KD + SKA + AKT",
+      "source": "Table 4"
+    },
+    {
+      "id": "G56",
+      "task": "RV",
+      "method": "完整 TED",
+      "source": "Table 4"
+    },
+    {
+      "id": "G57",
+      "task": "prostate SKA noise study",
+      "sigma": 0.1,
+      "mu": 0,
+      "source": "Table 6",
+      "full_component_configuration": "not fully reported"
+    },
+    {
+      "id": "G58",
+      "task": "prostate SKA noise study",
+      "sigma": 0.1,
+      "mu": -0.5,
+      "source": "Table 6",
+      "full_component_configuration": "not fully reported"
+    },
+    {
+      "id": "G59",
+      "task": "prostate SKA noise study",
+      "sigma": 0.1,
+      "mu": 0.5,
+      "source": "Table 6",
+      "full_component_configuration": "not fully reported"
+    },
+    {
+      "id": "G60",
+      "task": "prostate SKA noise study",
+      "sigma": 0.5,
+      "mu": 0,
+      "source": "Table 6",
+      "full_component_configuration": "not fully reported"
+    },
+    {
+      "id": "G61",
+      "task": "prostate SKA noise study",
+      "sigma": 0.5,
+      "mu": -0.5,
+      "source": "Table 6",
+      "full_component_configuration": "not fully reported"
+    },
+    {
+      "id": "G62",
+      "task": "prostate SKA noise study",
+      "sigma": 0.5,
+      "mu": 0.5,
+      "source": "Table 6",
+      "full_component_configuration": "not fully reported"
+    },
+    {
+      "id": "G63",
+      "task": "prostate SKA noise study",
+      "sigma": 1,
+      "mu": 0,
+      "source": "Table 6",
+      "full_component_configuration": "not fully reported"
+    },
+    {
+      "id": "G64",
+      "task": "prostate SKA noise study",
+      "sigma": 1,
+      "mu": -0.5,
+      "source": "Table 6",
+      "full_component_configuration": "not fully reported"
+    },
+    {
+      "id": "G65",
+      "task": "prostate SKA noise study",
+      "sigma": 1,
+      "mu": 0.5,
+      "source": "Table 6",
+      "full_component_configuration": "not fully reported"
+    }
+  ],
+  "reported": {
+    "methods": [
+      "Upper bound",
+      "SEQ",
+      "EWC",
+      "MAS",
+      "KD",
+      "MiB",
+      "PLOP",
+      "TED"
+    ],
+    "prostate_dsc": [
+      [
+        0.887,
+        0.85,
+        0.797,
+        0.87,
+        0.77,
+        0.845,
+        0.837,
+        null
+      ],
+      [
+        0.697,
+        0.718,
+        0.451,
+        0.705,
+        0.751,
+        0.756,
+        0.68,
+        -0.154
+      ],
+      [
+        0.627,
+        0.618,
+        0.495,
+        0.699,
+        0.62,
+        0.705,
+        0.628,
+        -0.186
+      ],
+      [
+        0.655,
+        0.675,
+        0.558,
+        0.716,
+        0.617,
+        0.715,
+        0.656,
+        -0.151
+      ],
+      [
+        0.728,
+        0.707,
+        0.647,
+        0.749,
+        0.653,
+        0.768,
+        0.709,
+        -0.105
+      ],
+      [
+        0.634,
+        0.671,
+        0.667,
+        0.678,
+        0.649,
+        0.777,
+        0.68,
+        -0.154
+      ],
+      [
+        0.607,
+        0.664,
+        0.576,
+        0.701,
+        0.544,
+        0.721,
+        0.645,
+        -0.166
+      ],
+      [
+        0.845,
+        0.742,
+        0.632,
+        0.823,
+        0.707,
+        0.803,
+        0.759,
+        -0.059
+      ]
+    ],
+    "prostate_hd95": [
+      [
+        12.65,
+        13.91,
+        13.75,
+        15.69,
+        23.56,
+        27.3,
+        17.81,
+        null
+      ],
+      [
+        32.86,
+        34.51,
+        45.03,
+        47.31,
+        26.38,
+        14.47,
+        33.43,
+        20.29
+      ],
+      [
+        35.85,
+        38.86,
+        53.74,
+        37.95,
+        31.02,
+        29.76,
+        37.86,
+        23.02
+      ],
+      [
+        36.14,
+        24.77,
+        25.5,
+        38.57,
+        34.31,
+        21.3,
+        30.1,
+        30.1
+      ],
+      [
+        27.95,
+        29.44,
+        26.54,
+        39.72,
+        34.97,
+        16.49,
+        29.18,
+        15.02
+      ],
+      [
+        46.53,
+        37.53,
+        30.7,
+        48.28,
+        34.63,
+        29.83,
+        37.92,
+        21.31
+      ],
+      [
+        42.57,
+        35.35,
+        37.25,
+        37.44,
+        30.2,
+        26.17,
+        34.83,
+        21.31
+      ],
+      [
+        11.94,
+        23.67,
+        29.35,
+        21.16,
+        19.37,
+        23.14,
+        21.44,
+        6.72
+      ]
+    ],
+    "cardiac": [
+      [
+        [
+          0.884,
+          null,
+          8.73,
+          null
+        ],
+        [
+          0.844,
+          -0.05,
+          20.92,
+          12.59
+        ],
+        [
+          0.846,
+          -0.043,
+          22.22,
+          8.09
+        ],
+        [
+          0.832,
+          -0.059,
+          28.92,
+          17.17
+        ],
+        [
+          0.853,
+          -0.035,
+          21.26,
+          12.3
+        ],
+        [
+          0.857,
+          -0.032,
+          18.88,
+          7.19
+        ],
+        [
+          0.864,
+          -0.016,
+          21.51,
+          8.06
+        ],
+        [
+          0.887,
+          0.015,
+          13.91,
+          2.9
+        ]
+      ],
+      [
+        [
+          0.81,
+          null,
+          7.79,
+          null
+        ],
+        [
+          0.661,
+          -0.182,
+          32.04,
+          28.53
+        ],
+        [
+          0.705,
+          -0.117,
+          32.04,
+          22.03
+        ],
+        [
+          0.718,
+          -0.1,
+          24.31,
+          20.21
+        ],
+        [
+          0.729,
+          -0.089,
+          19.14,
+          11.54
+        ],
+        [
+          0.733,
+          -0.081,
+          21.12,
+          14.54
+        ],
+        [
+          0.748,
+          -0.065,
+          15.68,
+          7.48
+        ],
+        [
+          0.735,
+          -0.075,
+          20.6,
+          9.91
+        ]
+      ],
+      [
+        [
+          0.853,
+          null,
+          19.07,
+          null
+        ],
+        [
+          0.78,
+          -0.093,
+          19.25,
+          4.06
+        ],
+        [
+          0.752,
+          -0.108,
+          25.92,
+          10.77
+        ],
+        [
+          0.803,
+          -0.042,
+          16.65,
+          0.46
+        ],
+        [
+          0.805,
+          -0.048,
+          19.2,
+          4.06
+        ],
+        [
+          0.765,
+          -0.092,
+          23.29,
+          7.28
+        ],
+        [
+          0.789,
+          -0.065,
+          20.04,
+          6.58
+        ],
+        [
+          0.831,
+          -0.012,
+          16.27,
+          -2.84
+        ]
+      ]
+    ],
+    "whole": [
+      [
+        0.849,
+        null,
+        11.86,
+        null
+      ],
+      [
+        0.761,
+        -0.108,
+        24.07,
+        15.06
+      ],
+      [
+        0.768,
+        -0.089,
+        26.72,
+        13.63
+      ],
+      [
+        0.784,
+        -0.089,
+        23.29,
+        12.61
+      ],
+      [
+        0.795,
+        -0.057,
+        19.86,
+        7.88
+      ],
+      [
+        0.785,
+        -0.068,
+        21.1,
+        9.67
+      ],
+      [
+        0.8,
+        -0.048,
+        19.07,
+        7.37
+      ],
+      [
+        0.817,
+        -0.024,
+        16.93,
+        3.32
+      ]
+    ],
+    "ablation": [
+      [
+        [
+          0.709,
+          -0.105,
+          29.18,
+          15.02
+        ],
+        [
+          0.754,
+          -0.065,
+          22.12,
+          7.27
+        ],
+        [
+          0.741,
+          -0.078,
+          30.37,
+          16.36
+        ],
+        [
+          0.744,
+          -0.088,
+          29.94,
+          17.4
+        ],
+        [
+          0.753,
+          -0.056,
+          22.07,
+          8.39
+        ],
+        [
+          0.759,
+          -0.059,
+          21.44,
+          6.72
+        ]
+      ],
+      [
+        [
+          0.853,
+          -0.035,
+          21.26,
+          12.3
+        ],
+        [
+          0.867,
+          -0.014,
+          15.0,
+          2.71
+        ],
+        [
+          0.878,
+          -0.009,
+          19.69,
+          8.18
+        ],
+        [
+          0.879,
+          -0.006,
+          18.31,
+          6.11
+        ],
+        [
+          0.874,
+          -0.014,
+          16.58,
+          3.24
+        ],
+        [
+          0.887,
+          0.015,
+          13.91,
+          2.9
+        ]
+      ],
+      [
+        [
+          0.72,
+          -0.091,
+          19.14,
+          11.54
+        ],
+        [
+          0.733,
+          -0.07,
+          22.56,
+          11.31
+        ],
+        [
+          0.737,
+          -0.078,
+          22.05,
+          15.42
+        ],
+        [
+          0.724,
+          -0.095,
+          19.04,
+          13.42
+        ],
+        [
+          0.72,
+          -0.091,
+          18.2,
+          10.23
+        ],
+        [
+          0.735,
+          -0.075,
+          20.6,
+          9.91
+        ]
+      ],
+      [
+        [
+          0.805,
+          -0.048,
+          19.2,
+          4.85
+        ],
+        [
+          0.824,
+          -0.017,
+          16.18,
+          -1.35
+        ],
+        [
+          0.802,
+          -0.04,
+          15.44,
+          -0.01
+        ],
+        [
+          0.814,
+          -0.037,
+          19.41,
+          5.23
+        ],
+        [
+          0.823,
+          -0.03,
+          17.36,
+          1.16
+        ],
+        [
+          0.831,
+          -0.012,
+          16.27,
+          -2.84
+        ]
+      ]
+    ],
+    "noise": [
+      [
+        0.1,
+        0,
+        0.76,
+        -0.048
+      ],
+      [
+        0.1,
+        -0.5,
+        0.711,
+        -0.11
+      ],
+      [
+        0.1,
+        0.5,
+        0.763,
+        -0.059
+      ],
+      [
+        0.5,
+        0,
+        0.759,
+        -0.065
+      ],
+      [
+        0.5,
+        -0.5,
+        0.755,
+        -0.064
+      ],
+      [
+        0.5,
+        0.5,
+        0.758,
+        -0.057
+      ],
+      [
+        1,
+        0,
+        0.754,
+        -0.065
+      ],
+      [
+        1,
+        -0.5,
+        0.763,
+        -0.063
+      ],
+      [
+        1,
+        0.5,
+        0.759,
+        -0.048
+      ]
+    ]
+  },
+  "recalculations": {
+    "prostate_printed_dsc_means": [
+      0.8365,
+      0.6796666666666668,
+      0.6273333333333333,
+      0.656,
+      0.7086666666666667,
+      0.6793333333333335,
+      0.6355,
+      0.7586666666666666
+    ],
+    "prostate_printed_hd95_means": [
+      17.81,
+      33.42666666666667,
+      37.86333333333334,
+      30.098333333333333,
+      29.185,
+      37.916666666666664,
+      34.83,
+      21.438333333333333
+    ],
+    "cardiac_recomputed_whole": [
+      [
+        0.8490000000000001,
+        null,
+        11.863333333333335,
+        null
+      ],
+      [
+        0.7616666666666667,
+        -0.10833333333333334,
+        24.070000000000004,
+        15.06
+      ],
+      [
+        0.7676666666666666,
+        -0.08933333333333333,
+        26.72666666666667,
+        13.63
+      ],
+      [
+        0.7843333333333332,
+        -0.067,
+        23.293333333333333,
+        12.613333333333335
+      ],
+      [
+        0.7956666666666666,
+        -0.057333333333333326,
+        19.866666666666667,
+        9.299999999999999
+      ],
+      [
+        0.785,
+        -0.06833333333333334,
+        21.096666666666668,
+        9.67
+      ],
+      [
+        0.8003333333333332,
+        -0.04866666666666667,
+        19.076666666666668,
+        7.373333333333334
+      ],
+      [
+        0.8176666666666667,
+        -0.023999999999999997,
+        16.926666666666666,
+        3.3233333333333337
+      ]
+    ],
+    "noise_avg_range": 0.052000000000000046,
+    "noise_bwt_range": 0.062,
+    "table8_expected_lv_endo_hdavg_delta": 1.3800000000000026,
+    "table8_expected_lv_endo_hdbwt_delta": 2.0699999999999994,
+    "table8_expected_rv_dsc_delta": 0.008000000000000007
+  },
+  "source_checks": [
+    {
+      "source": "Table 2",
+      "row": 1,
+      "values_checked": 7
+    },
+    {
+      "source": "Table 2",
+      "row": 2,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 3,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 4,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 5,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 6,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 7,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 8,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 9,
+      "values_checked": 7
+    },
+    {
+      "source": "Table 2",
+      "row": 10,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 11,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 12,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 13,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 14,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 15,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 2",
+      "row": 16,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 0,
+      "row": 1,
+      "values_checked": 4
+    },
+    {
+      "source": "Table 3",
+      "metric": 0,
+      "row": 2,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 0,
+      "row": 3,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 0,
+      "row": 4,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 0,
+      "row": 5,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 0,
+      "row": 6,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 0,
+      "row": 7,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 0,
+      "row": 8,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 1,
+      "row": 1,
+      "values_checked": 4
+    },
+    {
+      "source": "Table 3",
+      "metric": 1,
+      "row": 2,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 1,
+      "row": 3,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 1,
+      "row": 4,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 1,
+      "row": 5,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 1,
+      "row": 6,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 1,
+      "row": 7,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 3",
+      "metric": 1,
+      "row": 8,
+      "values_checked": 8
+    },
+    {
+      "source": "Table 4:",
+      "row": 1,
+      "values_checked": 12
+    },
+    {
+      "source": "Table 4:",
+      "row": 2,
+      "values_checked": 12
+    },
+    {
+      "source": "Table 4:",
+      "row": 3,
+      "values_checked": 12
+    },
+    {
+      "source": "Table 4:",
+      "row": 4,
+      "values_checked": 12
+    },
+    {
+      "source": "Table 4:",
+      "row": 5,
+      "values_checked": 12
+    },
+    {
+      "source": "Table 4:",
+      "row": 6,
+      "values_checked": 12
+    },
+    {
+      "source": "Table 5:",
+      "row": 1,
+      "values_checked": 4
+    },
+    {
+      "source": "Table 5:",
+      "row": 2,
+      "values_checked": 4
+    },
+    {
+      "source": "Table 5:",
+      "row": 3,
+      "values_checked": 4
+    },
+    {
+      "source": "Table 5:",
+      "row": 4,
+      "values_checked": 4
+    },
+    {
+      "source": "Table 5:",
+      "row": 5,
+      "values_checked": 4
+    },
+    {
+      "source": "Table 5:",
+      "row": 6,
+      "values_checked": 4
+    }
+  ]
+}

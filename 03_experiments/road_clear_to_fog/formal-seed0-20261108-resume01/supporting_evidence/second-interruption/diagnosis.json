@@ -1,0 +1,24 @@
+{
+  "time_local": "2026-11-08 10:47:54 +08:00",
+  "training_restarted": false,
+  "gpu_game_closed": true,
+  "gpu_observed_utilization_percent": 0,
+  "latest_valid_checkpoint_sha256_unchanged": true,
+  "checkpoint_iteration": 40000,
+  "second_wsl_failure_local": "2026-11-08 10:40:05 +08:00",
+  "direct_failure": "Hyper-V Worker Admin event18590: CPU8 Machine Check Exception, Bank0 b200000080060001; Processor Context Corrupt; Kernel panic - not syncing: Fatal local machine check",
+  "attribution": "No evidence directly attributes the machine check to the game. Physical hardware, firmware and virtualization cause not resolved. No host WHEA event found in queried interval. Earlier 02:30 crash has not been proven to have the identical machine-check cause.",
+  "host_shutdown_event_local": "2026-11-08 10:41:03 +08:00",
+  "host_shutdown_initiator": "StartMenuExperienceHost, user initiated power off",
+  "windows_next_boot": "2026-11-08T10:41:36.5000000+08:00",
+  "windows_C_free_bytes": 3927396352,
+  "wsl_vhd_on_C": true,
+  "wsl_vhd_base_path": "C:\\Users\\samsh\\AppData\\Local\\Packages\\CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc\\LocalState",
+  "recovery_state": "prepared_not_started; blocked_by_host_storage_and_unresolved_recurrent_machine_check",
+  "needed_free_space_GiB": 20,
+  "prepared_scripts": [
+    "recovery_pipeline.py",
+    "formal_control.py"
+  ],
+  "protocol_unchanged": true
+}

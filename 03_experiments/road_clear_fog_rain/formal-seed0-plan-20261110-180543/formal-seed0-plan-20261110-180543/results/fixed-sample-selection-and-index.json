@@ -1,0 +1,884 @@
+{
+  "status": "PASS",
+  "CS_selection_evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_fog_severity/eval-final-seed0-20261109-182100/prepared-20261110/sample_ids.json",
+  "CS_selection_sha256": "f8266a44458becd0cfc76ff2fc45743dbdd19c72469f59c532a2b5217392b0c7",
+  "Rain_selection_evidence": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/rain-fixed-samples.json",
+  "Rain_selection_sha256": "f44a1d5a628756f0ee53d1ee137495c855fa97598b3bb7abf2d7c237080eee9b",
+  "CS_new_raw_predictions": 72,
+  "Rain_unique_raw_predictions": 42,
+  "Rain_fixed_scenes": 6,
+  "selected_before_inference": true,
+  "samples": [
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "clear",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear/predictions/frankfurt_000000_011074_leftImg8bit.png",
+      "sha256": "f82520fdd446314585632b60ee16806b83ae3f8307d353e6883e75a1d37ec058"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "clear",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear/predictions/frankfurt_000000_011074_leftImg8bit.png",
+      "sha256": "bca75cc12459fbcd23073ceaf472c42c02e8fa870ba8044965b8ec2152b06114"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "clear",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear/predictions/frankfurt_000000_011074_leftImg8bit.png",
+      "sha256": "bfb5a3c1523c66802a340ab34b1e7c4bdaa679092b084f3268c9ab813f2fae5f"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "fog005",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005/predictions/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "2b9031fbeac03646a05e202ad3a15545bc586605747d5eb015e6ff6c67b85b61"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "fog005",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005/predictions/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "229083266e906a36be27772653e0beb248580cc7afb5fffc7831944c98b724c3"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "fog005",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005/predictions/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "e1d86eb171c91e527410c7865733f97d35619ea797993c8aac9f117dae806a42"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "fog010",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010/predictions/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "70ca50c2286e98ee639d1f47453d6acdfb5f4c56233d9077ef55033065aca2d2"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "fog010",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010/predictions/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "85801f4e8b61adc9ca074bd3c9a884acd07563efd152a253b1d25a5b4b138d8a"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "fog010",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010/predictions/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "d43035a22b540c9dd06cd559f0331eb4bff5c369baa53d81003e8d2929905b3b"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "fog020",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020/predictions/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "6b2c9414ce209db34b28d69fae92eb64021cab4bc1d9e703484c86d3bd747ef8"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "fog020",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020/predictions/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "7f7b62ce3daea3341d0f42c794262231ccd88220ba9fa77060820d2ccde79ad6"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000000_011074",
+      "condition": "fog020",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020/predictions/frankfurt_000000_011074_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "e6fc84e19b1cdfb058ff1d4a3dd9f74fa85232d6470341d891157507590f5087"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "clear",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear/predictions/frankfurt_000001_008688_leftImg8bit.png",
+      "sha256": "2a5f910ee20fa69b58d107d8dc6003a9213cd3b32d904e9b6d39b7891875c4f0"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "clear",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear/predictions/frankfurt_000001_008688_leftImg8bit.png",
+      "sha256": "9b7d82a4379e27674bf91a1883290e2b2ff69517b8af9ec3e96e9c869d502796"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "clear",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear/predictions/frankfurt_000001_008688_leftImg8bit.png",
+      "sha256": "bfe1ce5f8bb1b0ee2e56397f9fee31b162d136a2c57fb32f8479aa0766d9446d"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "fog005",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005/predictions/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "297236691358cb812db59cb065b83689e9b0d197735df6262dcf0e165406f2e8"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "fog005",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005/predictions/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "8b1996d7752e613a96379f28b2bed18c5d76ae93c7381460210a5b9134a12f8b"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "fog005",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005/predictions/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "d3cc07a75357a5137d049728992d316e7783c18f39d38df38128311abecfc251"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "fog010",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010/predictions/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "8e7e4dc95550409e1583852cc4f02a39edc1cd7877a52672701e0d653ab2b7cd"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "fog010",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010/predictions/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "99e7dd3489cba4a4cff23f2df4b940f3a7dccb14d01160b375e4226a87ebcbe9"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "fog010",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010/predictions/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "4185a9f95129904225da7319ecc062b4f59c52f8cf1642a9b2c337343427b1fa"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "fog020",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020/predictions/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "c30e940ff651900e66652068843bd74ec89b821e7ec3711f276b04fab5c5057b"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "fog020",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020/predictions/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "ef20f0329012aaf437357aa74acbb33a35d521b7adbf784a619d9d421b00523c"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_008688",
+      "condition": "fog020",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020/predictions/frankfurt_000001_008688_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "f077139baac0fd1e3359914d35bce80ecdc223411ba3120946b834acff987996"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "clear",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear/predictions/frankfurt_000001_015328_leftImg8bit.png",
+      "sha256": "7744f14fee41e6e268350f4630810753403728241080f44970d120914aaf3785"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "clear",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear/predictions/frankfurt_000001_015328_leftImg8bit.png",
+      "sha256": "1f971e64c60cdbfcef0db92049923922380417001d7fe53549ef96f29255088a"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "clear",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear/predictions/frankfurt_000001_015328_leftImg8bit.png",
+      "sha256": "4950864944233910258c9c60643634357e512bce86e666a622b58033762966a9"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "fog005",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005/predictions/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "debddf4a62be67b8d08d91ad3d455744fded7553897b38cc317719fb9f992e29"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "fog005",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005/predictions/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "e98c46b40c03dbbc226c34e3ca5e7c162ab9d1d6555795e6dd8ba69bfb501618"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "fog005",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005/predictions/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "a5410ffb5b238a65e4053b86f6930fc78dff2380e609380e8834abefbe9e9aa8"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "fog010",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010/predictions/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "5bdc6c74d2173c3db7cbf632020951cdb6ce543c4ae4c1106da7b1d067153560"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "fog010",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010/predictions/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "545b33374321e14985a4ec221ed6dfa532c66360956df9320423e14df8b25f60"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "fog010",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010/predictions/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "f5c08fd15232bd6ab411b6730d4dafca35e0d5eaf9cc2fe878b6ad5170a93e18"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "fog020",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020/predictions/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "4dbc04582e2027acf5badf613891e82515d41843b47a6cbb5610738e518720e5"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "fog020",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020/predictions/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "4b194d896a1433f070935994cb71622893e01fe48dfacd85e84534a84aab7e29"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_015328",
+      "condition": "fog020",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020/predictions/frankfurt_000001_015328_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "2024269eb00ba943663855b6c43a0038214e3b555a1a84504c2efd5d8ec15fad"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "clear",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear/predictions/frankfurt_000001_041074_leftImg8bit.png",
+      "sha256": "d3d780dc02d7c40eb91af14d07a83189071c50c5c045e3c3c140895c0d793c86"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "clear",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear/predictions/frankfurt_000001_041074_leftImg8bit.png",
+      "sha256": "be79bf0a465f8e7fde01cd21cdd98fc9521447dbd3150481d08566165b168771"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "clear",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear/predictions/frankfurt_000001_041074_leftImg8bit.png",
+      "sha256": "32cc63072f8639a172ea2855ca3dd49eb4f2bd900a3ebd19fe3a7eb18819ae67"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "fog005",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005/predictions/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "e87df574b60f884c0dcb05272ef298cb02e419764ef07e99e6313f5ac4f43f13"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "fog005",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005/predictions/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "13c335c20242464881cb2337e0f4cb831fac9fda65b47988c1378b593d124769"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "fog005",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005/predictions/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "29b96ff03bd005192c5579d807c4a871aaacfd9dbb9a574029ec91a20006a78f"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "fog010",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010/predictions/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "792c763526eb472bede2b00de9d9c6bf306798ee7094b46e3741f36fbe7786ee"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "fog010",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010/predictions/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "301cbc1e751d75a83fc7bb87beab9d1d249a0123862093dfe944e8770cb06a53"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "fog010",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010/predictions/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "b53a4e55a98464973b2dc77aa3b3fb756c54660225e06d6eb626a0dfe5f72005"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "fog020",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020/predictions/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "d25c048f841ebd1707bddf862e3be64d38bc6e4f0d8351d81e29a7b0cc186575"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "fog020",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020/predictions/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "04d1c76822817330be6ee9f4bc1312078cad0aafa4e6e587cabefe1958bc7fd9"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_041074",
+      "condition": "fog020",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020/predictions/frankfurt_000001_041074_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "df60ed632f5b368d96df4c36876b648acf75b4eed269477ae8679f23f2bf8678"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "clear",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear/predictions/frankfurt_000001_073911_leftImg8bit.png",
+      "sha256": "c9386eafe12a8385cbae82975188fe21234b5119ebfa7250c5b21786a521c10a"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "clear",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear/predictions/frankfurt_000001_073911_leftImg8bit.png",
+      "sha256": "2542c20565d2d798ceaf9aa49acd1e8fdffbb71dd57b707441743c81e2b8b94e"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "clear",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear/predictions/frankfurt_000001_073911_leftImg8bit.png",
+      "sha256": "b3ccf637f7a640391cd1afb388a986aaf622e8f347adc2918a8a3de79ae125b8"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "fog005",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005/predictions/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "aff34e8bce3d1bd185c5459df1cf1ee8f48e5d1905ae025c3cb7dac0f43aad93"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "fog005",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005/predictions/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "ccf442f3d5d6d82edf5c3d27315b8fbb3eac52ed612197f4f533a3bf9ac1c02f"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "fog005",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005/predictions/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "fc71747417b71da60fc26790061a9785fb736d7bf2dcfcf6bc1b9177ac473748"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "fog010",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010/predictions/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "b969a30a785fd5b4144515df6ae382411be9db7ef253bc1b3f550167b7fad9ed"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "fog010",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010/predictions/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "c81c8a4cfdf89f8a0c352452fe201cd66b94c021a841580b35505c65a8ecec6a"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "fog010",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010/predictions/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "d5247de546ae68a8228f4cfc55a4678f5ec91bde3f923884ab5f10898a96e6f0"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "fog020",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020/predictions/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "9f0609cff01c3b1f8db2775cde9d9eb60649dce9761cd5c57ada7e066d88bc02"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "fog020",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020/predictions/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "b7a4a924176a92937d907a6f3bcbbedb097e221bb33b9a9163f1615b6f126505"
+    },
+    {
+      "type": "CS",
+      "scene": "frankfurt_000001_073911",
+      "condition": "fog020",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020/predictions/frankfurt_000001_073911_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "0ee187dd6ca632610a1277b8ed7ed1f98a1fad594f8cf0743f1755a36dd781f2"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "clear",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-clear/predictions/lindau_000049_000019_leftImg8bit.png",
+      "sha256": "5118605c49e0d2ddd10cc1e4737023ddcdc9447b00d7c91687fe3d0efb3737c2"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "clear",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-clear/predictions/lindau_000049_000019_leftImg8bit.png",
+      "sha256": "4095135f81160acfd086f72bf6778e38d192405dff4d7f7e247f79da1567dccd"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "clear",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-clear/predictions/lindau_000049_000019_leftImg8bit.png",
+      "sha256": "2c27153017bf908e4f499d32df9bf10ee06da5193ab71f7cfa82b93126419565"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "fog005",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog005/predictions/lindau_000049_000019_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "702ae7fce71cdd7ac35256e580da369c734102b072b80d389482f4e580c33196"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "fog005",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog005/predictions/lindau_000049_000019_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "3891478464d3a181a38da1c58f8a027e2af18b0a4f45500cf2542aef5d3ec970"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "fog005",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog005/predictions/lindau_000049_000019_leftImg8bit_foggy_beta_0.005.png",
+      "sha256": "85a65a20376f733be8bc586da1a8eb42ec58f6abb25c65f4d664a8904383628b"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "fog010",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog010/predictions/lindau_000049_000019_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "e478f22615f21031c4f0bd7f7f8d3e688991429c650c4f46ae94c41f98311705"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "fog010",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog010/predictions/lindau_000049_000019_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "660105207e02ec905dca5b977922fd2f0972f2d34ebd30b6e0c5491b508b46ce"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "fog010",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog010/predictions/lindau_000049_000019_leftImg8bit_foggy_beta_0.01.png",
+      "sha256": "03a261bd45c7e57e65bb6902ddf80837fca6f6640f82ee88860724d76b3f8a3f"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "fog020",
+      "method": "ft",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-fog020/predictions/lindau_000049_000019_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "24ebf504e899c1f629d6b3355acc01c1cb22700260b45ae7392acfa3f78e1f32"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "fog020",
+      "method": "gsmf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-fog020/predictions/lindau_000049_000019_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "a3a19ee7eb417adfab4e49dea5140393bb574cc2afede55b698c4d564ceac433"
+    },
+    {
+      "type": "CS",
+      "scene": "lindau_000049_000019",
+      "condition": "fog020",
+      "method": "lwf",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-fog020/predictions/lindau_000049_000019_leftImg8bit_foggy_beta_0.02.png",
+      "sha256": "f17ec766be9ccc6884f64884573dd8b115da570f6de933c7af96574a1bb1ef8a"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0400/GOPR0400_frame_000094_rgb_anon.png",
+      "model": "ft_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain/predictions/GOPR0400_frame_000094_rgb_anon.png",
+      "sha256": "517696102fffc7c0abd296587dd246c05df8708fd354a50bbba401ab2fc4ef0c"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0400/GOPR0400_frame_000094_rgb_anon.png",
+      "model": "gsmf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain/predictions/GOPR0400_frame_000094_rgb_anon.png",
+      "sha256": "d0d42eac2450862c70d2d5355041feec7b34ab4b6105850c18a7b2e723b8f759"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0400/GOPR0400_frame_000094_rgb_anon.png",
+      "model": "lwf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain/predictions/GOPR0400_frame_000094_rgb_anon.png",
+      "sha256": "701b547472bde1894400dd977dfafd9e3f58643a09705182da899e2005a57176"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0400/GOPR0400_frame_000094_rgb_anon.png",
+      "model": "source",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/predictions/GOPR0400_frame_000094_rgb_anon.png",
+      "sha256": "d05e30c473f322d6551ccb8f3eb9b09176c98f11c67f8d1753b87ccff4602567"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0400/GOPR0400_frame_000094_rgb_anon.png",
+      "model": "ft_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain/predictions/GOPR0400_frame_000094_rgb_anon.png",
+      "sha256": "925eeb61d946b95c9525f150f5fc0d3cf52699f73b2381cbe3f85f7a8bd631ee"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0400/GOPR0400_frame_000094_rgb_anon.png",
+      "model": "gsmf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain/predictions/GOPR0400_frame_000094_rgb_anon.png",
+      "sha256": "a686efc0fe7852d74a8efc0591bf67ffed8c8290fac04e4f0e100da3d29c943b"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0400/GOPR0400_frame_000094_rgb_anon.png",
+      "model": "lwf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain/predictions/GOPR0400_frame_000094_rgb_anon.png",
+      "sha256": "132f044aed597661eecdc2a3a526df75481b3b48155a719483e80431020e90eb"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0402/GOPR0402_frame_000408_rgb_anon.png",
+      "model": "ft_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain/predictions/GOPR0402_frame_000408_rgb_anon.png",
+      "sha256": "0a09a7f76787b7e366ef15a00b5dd228de37cca4b1e5ceac65ac20dc2a0ff347"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0402/GOPR0402_frame_000408_rgb_anon.png",
+      "model": "gsmf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain/predictions/GOPR0402_frame_000408_rgb_anon.png",
+      "sha256": "d450b39c9d3b00480ea2568dbf72ea79b20e2af791790abb8b93a7eedf0fe722"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0402/GOPR0402_frame_000408_rgb_anon.png",
+      "model": "lwf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain/predictions/GOPR0402_frame_000408_rgb_anon.png",
+      "sha256": "66d978b464fe88f9d565cd8ca7f66ca68b0e9d1cf0f1fdae3e56303f6bcaac7c"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0402/GOPR0402_frame_000408_rgb_anon.png",
+      "model": "source",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/predictions/GOPR0402_frame_000408_rgb_anon.png",
+      "sha256": "bc79abc472902cb7a4ae788cdbdf8111d6badfa932760c8472c151eeccffc149"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0402/GOPR0402_frame_000408_rgb_anon.png",
+      "model": "ft_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain/predictions/GOPR0402_frame_000408_rgb_anon.png",
+      "sha256": "7e339714f1acc80276318ab5fbf7ea3630a5fc8627fdb476e424a04a025b01ad"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0402/GOPR0402_frame_000408_rgb_anon.png",
+      "model": "gsmf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain/predictions/GOPR0402_frame_000408_rgb_anon.png",
+      "sha256": "910840a29f7f006d94c3d23c06d9d583b0ee9f931da2e72940af7db2a76dd5f4"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GOPR0402/GOPR0402_frame_000408_rgb_anon.png",
+      "model": "lwf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain/predictions/GOPR0402_frame_000408_rgb_anon.png",
+      "sha256": "2dad2f02354f81fbd258de9292cf884d6d95ac4666c43d4444e3571b5c8e1728"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP010400/GP010400_frame_000360_rgb_anon.png",
+      "model": "ft_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain/predictions/GP010400_frame_000360_rgb_anon.png",
+      "sha256": "2bccb2eeb5b147e6a3ec35dfecb3161b776520de2c5305213694a76d953ecc2c"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP010400/GP010400_frame_000360_rgb_anon.png",
+      "model": "gsmf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain/predictions/GP010400_frame_000360_rgb_anon.png",
+      "sha256": "7c2819f68284968a966d491ffa5f834b618e70c4b498be2d872613dac48f85a3"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP010400/GP010400_frame_000360_rgb_anon.png",
+      "model": "lwf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain/predictions/GP010400_frame_000360_rgb_anon.png",
+      "sha256": "8c2b63cbc0fd4ef59743ec69b802334e4e91f66f6fe74503deb05abe82328351"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP010400/GP010400_frame_000360_rgb_anon.png",
+      "model": "source",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/predictions/GP010400_frame_000360_rgb_anon.png",
+      "sha256": "de37e127f1b65d14589b3bf1ca64dd50289780cf9860fb6387bffde1e5c35649"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP010400/GP010400_frame_000360_rgb_anon.png",
+      "model": "ft_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain/predictions/GP010400_frame_000360_rgb_anon.png",
+      "sha256": "b5c824e92d53d83c780ef1b174e2e34b96b6675d4e95c7909aaea1c0b6ebd2ec"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP010400/GP010400_frame_000360_rgb_anon.png",
+      "model": "gsmf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain/predictions/GP010400_frame_000360_rgb_anon.png",
+      "sha256": "5207165dd6166916a020952f75a5d4b76f8ef77b726c6708517efe86f5dc481b"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP010400/GP010400_frame_000360_rgb_anon.png",
+      "model": "lwf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain/predictions/GP010400_frame_000360_rgb_anon.png",
+      "sha256": "0dc4b3f327219c35378c91fcb80ad247d0155826f82df747744cdfc5f34d2933"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000898_rgb_anon.png",
+      "model": "ft_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain/predictions/GP020402_frame_000898_rgb_anon.png",
+      "sha256": "b983d3f8c6511320918d1a7889df23839f8c229ede0f680aa9c06cd06b2186dc"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000898_rgb_anon.png",
+      "model": "gsmf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain/predictions/GP020402_frame_000898_rgb_anon.png",
+      "sha256": "ad05910fea22dfecfcfd6356250547cc7f5297fa1fad3a63b57726e99d41de75"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000898_rgb_anon.png",
+      "model": "lwf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain/predictions/GP020402_frame_000898_rgb_anon.png",
+      "sha256": "5b92153a3416439a8dd6424c886788a59e8d3540d617179488858f7bb1a91c72"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000898_rgb_anon.png",
+      "model": "source",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/predictions/GP020402_frame_000898_rgb_anon.png",
+      "sha256": "8f81f5a8d65776cd28fc1f1b3a6aea0290c2fbef7afb10efdee0ad1c65c7fcd5"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000898_rgb_anon.png",
+      "model": "ft_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain/predictions/GP020402_frame_000898_rgb_anon.png",
+      "sha256": "ec9aa7b69ddc91df9755f272c6f802bd81fac4b5edcdedead3dc05b16a36a0a3"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000898_rgb_anon.png",
+      "model": "gsmf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain/predictions/GP020402_frame_000898_rgb_anon.png",
+      "sha256": "ff13a02f2aa817bff548d469a13ce98cbc4db3dfc8a8050ec0a2b9dd0e2b23b3"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000898_rgb_anon.png",
+      "model": "lwf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain/predictions/GP020402_frame_000898_rgb_anon.png",
+      "sha256": "c4378b8cdd9d119ace7a21d00fdfe9c71fcd74fa6b781ebcb6172c94f733789f"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000981_rgb_anon.png",
+      "model": "ft_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain/predictions/GP020402_frame_000981_rgb_anon.png",
+      "sha256": "1617df9add93d114ed33f8a973b2744ba37b15b5a1670cd94b9c52584ced2175"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000981_rgb_anon.png",
+      "model": "gsmf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain/predictions/GP020402_frame_000981_rgb_anon.png",
+      "sha256": "59fd60886b9243339f02a4ba456eae32b0477bff98e3e41178732114c35e5d1d"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000981_rgb_anon.png",
+      "model": "lwf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain/predictions/GP020402_frame_000981_rgb_anon.png",
+      "sha256": "19454af888e58b7b704ce6aec7e268392d68db97b1d3230b7cd3832837b77bd0"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000981_rgb_anon.png",
+      "model": "source",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/predictions/GP020402_frame_000981_rgb_anon.png",
+      "sha256": "d10486380fb3c8cdf8fd44acd920265ee7f13f0a8a000e0c4dfd2a6a020e0a75"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000981_rgb_anon.png",
+      "model": "ft_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain/predictions/GP020402_frame_000981_rgb_anon.png",
+      "sha256": "1920d42a1c4f8bdbaf857a7b85505bc5e53d54ba9727bccc6655958895944884"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000981_rgb_anon.png",
+      "model": "gsmf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain/predictions/GP020402_frame_000981_rgb_anon.png",
+      "sha256": "8981f00d2aa0b477d453112fc5cf59b8e5994baed87da8efe68a541190138ce4"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP020402/GP020402_frame_000981_rgb_anon.png",
+      "model": "lwf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain/predictions/GP020402_frame_000981_rgb_anon.png",
+      "sha256": "ff48e9c579fe2a169155a20e6dbe0728779ddbf67217d1eee33533ac7e3021fc"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP030400/GP030400_frame_000154_rgb_anon.png",
+      "model": "ft_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_fog-rain/predictions/GP030400_frame_000154_rgb_anon.png",
+      "sha256": "611de693f13684b73ddd4728cef626f540154989c4792bef7e457c33c3efc4ad"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP030400/GP030400_frame_000154_rgb_anon.png",
+      "model": "gsmf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_fog-rain/predictions/GP030400_frame_000154_rgb_anon.png",
+      "sha256": "56dce51f03b1326b1fc26230989f8006686701ec35dfa37860afee46e7bfb453"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP030400/GP030400_frame_000154_rgb_anon.png",
+      "model": "lwf_fog",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_fog-rain/predictions/GP030400_frame_000154_rgb_anon.png",
+      "sha256": "627db6e0aec1c460adf288ad79e09d9ab715b2fc7c0297ca12a7d6ea9ba443da"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP030400/GP030400_frame_000154_rgb_anon.png",
+      "model": "source",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-source-rain/predictions/GP030400_frame_000154_rgb_anon.png",
+      "sha256": "2db19579da8b8b7e5696675a0a6a6830bef213ea7c3d725d9824c7b2f37b1f7d"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP030400/GP030400_frame_000154_rgb_anon.png",
+      "model": "ft_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-ft_rain-rain/predictions/GP030400_frame_000154_rgb_anon.png",
+      "sha256": "4a30c7d17f32a66d783e445c38db415b92080fd4a36681d3007c61c18ed057df"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP030400/GP030400_frame_000154_rgb_anon.png",
+      "model": "gsmf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-gsmf_rain-rain/predictions/GP030400_frame_000154_rgb_anon.png",
+      "sha256": "2c6601e08c35c1d7d1b385f273e099c1587c7128cbaf41989b9030b4803bd91e"
+    },
+    {
+      "type": "Rain",
+      "id": "C/val/GP030400/GP030400_frame_000154_rgb_anon.png",
+      "model": "lwf_rain",
+      "prediction": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/eval-lwf_rain-rain/predictions/GP030400_frame_000154_rgb_anon.png",
+      "sha256": "2ead0dbcc7d743412a9ac1a51fcfcec854e78caa35f040fe0ab0fd4839a3ae67"
+    }
+  ],
+  "display": "Full frame resized by nearest neighbor; colorized GT/prediction, no selected crops"
+}

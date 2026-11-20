@@ -1,0 +1,89 @@
+{
+  "checked_date": "2026-11-03",
+  "sources": [
+    {
+      "id": "LIT-039",
+      "file": "LIT-039_Truong_2025_FALCON_CVPR.pdf",
+      "role": "paper",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Truong_FALCON_Fairness_Learning_via_Contrastive_Attention_Approach_to_Continual_Semantic_CVPR_2025_paper.pdf",
+      "version": "CVPR 2025 CVF accepted open-access version",
+      "downloaded_date": "2026-11-03",
+      "pages": 11,
+      "bytes": 9448401,
+      "sha256": "8743063bc79ac434eeb5a5dced6a52a36b2e4234dcae43b87e19edc1b0b5e00a"
+    },
+    {
+      "id": "LIT-039",
+      "file": "LIT-039_Truong_2025_FALCON_CVPR_supplement.pdf",
+      "role": "supplement",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2025/supplemental/Truong_FALCON_Fairness_Learning_CVPR_2025_supplemental.pdf",
+      "version": "CVPR 2025 CVF accepted open-access version",
+      "downloaded_date": "2026-11-03",
+      "pages": 4,
+      "bytes": 414314,
+      "sha256": "8de06601334b66bdba430662a8331fb58463bf9d41b7bf43a3f8fea99e93daa7"
+    }
+  ],
+  "official_page": "https://openaccess.thecvf.com/content/CVPR2025/html/Truong_FALCON_Fairness_Learning_via_Contrastive_Attention_Approach_to_Continual_Semantic_CVPR_2025_paper.html",
+  "code_repository": "https://github.com/uark-cviu/FALCON",
+  "code_commit": "0403d4803a80a8ce39452b217abae15596942fab",
+  "code_scope": "Static source review only; no dependencies installed, author code execution, model loading, training or reproduction",
+  "code_findings": [
+    "Public scripts invoke run_test.py and require pre-existing checkpoint; train.py lacks training loop",
+    "FairContrastiveLoss and VisualGrammar are not wired into a training entry; DBSCAN implementation not located",
+    "Cityscapes loader merges official train and val cities, then splits 80/20 with seed1",
+    "No complete training instructions, grammar pretraining procedure, checkpoint download instructions, dependency manifest or repository license located"
+  ],
+  "code_files": [
+    {
+      "path": "README.md",
+      "sha256": "a9b722681de13e3aea475a4b9331565e2e36fdd8779232c3cba226016e1b9cdb",
+      "url": "https://github.com/uark-cviu/FALCON/blob/0403d4803a80a8ce39452b217abae15596942fab/README.md"
+    },
+    {
+      "path": "train.py",
+      "sha256": "f0cd55fc3f4249b23b3f2fac20957512a10480aa241d4ae43d4bdcabd3ebb73b",
+      "url": "https://github.com/uark-cviu/FALCON/blob/0403d4803a80a8ce39452b217abae15596942fab/train.py"
+    },
+    {
+      "path": "run_test.py",
+      "sha256": "daf741f2ee8d1e7942c2d11d94af5c0d97bd832cf457650206f52e9f6da07174",
+      "url": "https://github.com/uark-cviu/FALCON/blob/0403d4803a80a8ce39452b217abae15596942fab/run_test.py"
+    },
+    {
+      "path": "tasks.py",
+      "sha256": "5a1effec64ed4b77eb5a26f3c42659a5b3967c9d96eab2b30514555831571448",
+      "url": "https://github.com/uark-cviu/FALCON/blob/0403d4803a80a8ce39452b217abae15596942fab/tasks.py"
+    },
+    {
+      "path": "dataset/cityscapes_domain.py",
+      "sha256": "43b4708cbb8af4fdf2f3187004490ae14645b57b9fb31d1bda874fbb001ae722",
+      "url": "https://github.com/uark-cviu/FALCON/blob/0403d4803a80a8ce39452b217abae15596942fab/dataset/cityscapes_domain.py"
+    },
+    {
+      "path": "loss/fair_contrastive_loss.py",
+      "sha256": "229e6b12b3dbfec76abb1f1d7c05b227680553f1606068bab5eb8607eb235dea",
+      "url": "https://github.com/uark-cviu/FALCON/blob/0403d4803a80a8ce39452b217abae15596942fab/loss/fair_contrastive_loss.py"
+    },
+    {
+      "path": "models/grammar_model.py",
+      "sha256": "a4eadba7cdcda732750099aab3e2ebd8a984e1b599c2d66657150b757843dd1d",
+      "url": "https://github.com/uark-cviu/FALCON/blob/0403d4803a80a8ce39452b217abae15596942fab/models/grammar_model.py"
+    },
+    {
+      "path": "metrics/stream_metrics.py",
+      "sha256": "adcffc3f08e0358c56b0e608a27701040aa892fa97da702758fee9189c31ca0d",
+      "url": "https://github.com/uark-cviu/FALCON/blob/0403d4803a80a8ce39452b217abae15596942fab/metrics/stream_metrics.py"
+    },
+    {
+      "path": "average_csv.py",
+      "sha256": "857fcd49fad1573ab73a08d9e3801eb4b8d4612073798a66fb39e713b1dc5a1b",
+      "url": "https://github.com/uark-cviu/FALCON/blob/0403d4803a80a8ce39452b217abae15596942fab/average_csv.py"
+    },
+    {
+      "path": "scripts/cityscapesDomain/FALCON_cityscapes_11-5_segformer.sh",
+      "sha256": "db643848b6681a2e3039f761569000de5545af65fec02a1b55bf1169efaac301",
+      "url": "https://github.com/uark-cviu/FALCON/blob/0403d4803a80a8ce39452b217abae15596942fab/scripts/cityscapesDomain/FALCON_cityscapes_11-5_segformer.sh"
+    }
+  ]
+}

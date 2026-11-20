@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checkpoints": {
+    "source": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/source/iter_60000.pth",
+      "sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93"
+    },
+    "ft": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/ft/iter_4000.pth",
+      "sha256": "99914df527d8506c33178ef6ea1caf7f0ed1d07369858e37275205d60a57d516"
+    },
+    "gsmf": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/gsmf/iter_4000.pth",
+      "sha256": "fc227c57dc3e47a134ef51b282964654a0210f3c06f00bd0d3e81b706850b24a"
+    },
+    "lwf": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_lwf_bn/formal-seed0-plan-20261110-153000/lwf/iter_4000.pth",
+      "sha256": "854d83357a912713a27cf27283b024f3e7fd7dab47043434d312b136ec9b6843"
+    },
+    "ft_rain": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/ft/iter_4000.pth",
+      "sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34"
+    },
+    "gsmf_rain": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/gsmf/iter_4000.pth",
+      "sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3"
+    },
+    "lwf_rain": {
+      "path": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/lwf/iter_4000.pth",
+      "sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527"
+    }
+  },
+  "old_provenance_files": {
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/provenance.json": "acbf9f3e78224224319258c4857b5a15e2d614aabbdbe22f96cbe7d393d8b144",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/formal-seed0-plan-20261110-180543/results/training-independent-check.json": "a89c23b0ff11ee2b9b350707d6693504640ccdbcee6123953c60a3279bc60f29",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_fog_rain/prepare-seed0-20261110-180543/ancestor-provenance.json": "2fe2d90891cb94c96248f3827eb5c061986a2476a6e209c6d2cf5d10d10058ac",
+    "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/formal-seed0-20261108-resume01/provenance.json": "1e9a2d34909eaac7d47950bb69dff261e279f39ef3f599c12fda807c76e502b2"
+  }
+}

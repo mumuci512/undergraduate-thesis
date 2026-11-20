@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "label": "Rain->D",
+      "method": "ft",
+      "parent_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "init_sha256": "af2aeb25bef84a696d39a0ace3de25d242b060e2f4872f16779a801ba168b4e8",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": null,
+      "strict_reload": true,
+      "seconds": 16.69964434899157
+    },
+    {
+      "label": "D->E",
+      "method": "ft",
+      "parent_sha256": "9645db9e7104bb95a35ea0b953eac1639b3573e29ab5628e0c234314eec21c84",
+      "init_sha256": "bac8bf0bf7d07b19f8d85c0feb2a38487b0936188685281a56d5042cafccdcbf",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": null,
+      "strict_reload": true,
+      "seconds": 2.9189924499951303
+    },
+    {
+      "label": "Rain->D",
+      "method": "gsmf",
+      "parent_sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "init_sha256": "26ae5602ebdd5f5752a3203ca67017fdb15985d89896cb54fd17dc8160e30593",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": 0.0,
+      "strict_reload": true,
+      "seconds": 7.7497005829936825
+    },
+    {
+      "label": "D->E",
+      "method": "gsmf",
+      "parent_sha256": "9e676e2c10290aaaa48ed818629f20614e8fcb8a8011dd8f5c0e09f7da8be9e0",
+      "init_sha256": "3da0ebdf3c5477c2f1ef0d66f34a5bc7543cc6d309bbefcda969783b8c4b905f",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": 0.0,
+      "strict_reload": true,
+      "seconds": 4.802117096027359
+    },
+    {
+      "label": "Rain->D",
+      "method": "lwf",
+      "parent_sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "init_sha256": "e672fef28ffec9d787d33f73a31e653ff071aa0efffd2c23ce0aa538c7156f6b",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": 0.0,
+      "strict_reload": true,
+      "seconds": 5.88116449204972
+    },
+    {
+      "label": "D->E",
+      "method": "lwf",
+      "parent_sha256": "8aa6bfdd73163a9c6e0ad31a85adfdbe48ef37811eb04f5721c0278be9dacd67",
+      "init_sha256": "00a8452cdf9b6e9a859e9f9a338f7af71c73a90300a1d441a1bc83fe1796d35c",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": 0.0,
+      "strict_reload": true,
+      "seconds": 5.410351124010049
+    },
+    {
+      "label": "Source->B seed1",
+      "method": "ft",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "init_sha256": "ac1a75347f84fe2f2752096ed435121ff7da6028833626403a1ea30a5ea168cd",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": null,
+      "strict_reload": true,
+      "seconds": 3.507061456970405
+    },
+    {
+      "label": "Source->E reverse",
+      "method": "ft",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "init_sha256": "ec3b611bc8d99c0a718f7709a539fef5f8b86649cbfca413316b4f69c01578bf",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": null,
+      "strict_reload": true,
+      "seconds": 2.6296346349990927
+    },
+    {
+      "label": "Source->B seed1",
+      "method": "gsmf",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "init_sha256": "dfe1e95a7f837495d0f933440489b086426aaafc789252e1f93e089e62a54f53",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": 0.0,
+      "strict_reload": true,
+      "seconds": 3.576538183959201
+    },
+    {
+      "label": "Source->E reverse",
+      "method": "gsmf",
+      "parent_sha256": "a66c958ee774d27566b901ad6570c0a3b83263e9d74389e1c2e025c6c2673d93",
+      "init_sha256": "3d52e10cdec54f8afecf677eaaee7aae8dbe84bf5dba0cc1041fc87d1b6e8493",
+      "real_input_sha256": "2d6b37f1acbc50b966e1c9730830a19bdc1b9b8c5339bd736853e571fed523ec",
+      "student_max_error": 0.0,
+      "teacher_max_error": 0.0,
+      "strict_reload": true,
+      "seconds": 5.818811619945336
+    }
+  ]
+}

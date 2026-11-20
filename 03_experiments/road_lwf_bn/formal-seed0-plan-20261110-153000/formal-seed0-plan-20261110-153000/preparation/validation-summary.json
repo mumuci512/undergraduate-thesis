@@ -1,0 +1,670 @@
+{
+  "status": "PASS",
+  "real_updates": 34,
+  "limit": 64,
+  "controlled_real_updates": 2,
+  "training": {
+    "short-gsmf": {
+      "real_optimization_steps": 4,
+      "finite_losses": true,
+      "finite_all_checked_gradients": true,
+      "groups": {
+        "backbone": {
+          "parameters": 318,
+          "elements": 42519392,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 318,
+          "changed_bn_buffers": 318
+        },
+        "backbone_1.stem": {
+          "parameters": 9,
+          "elements": 28768,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 9,
+          "changed_bn_buffers": 9
+        },
+        "backbone_1.layer1": {
+          "parameters": 30,
+          "elements": 215808,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 30,
+          "changed_bn_buffers": 30
+        },
+        "backbone_1": {
+          "parameters": 279,
+          "elements": 42274816,
+          "trainable_elements": 42274816,
+          "gradient_tensors_first_step": 279,
+          "changed_parameters": 279,
+          "bn_buffers": 279,
+          "changed_bn_buffers": 279
+        },
+        "decode_head": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        },
+        "decode_head_1": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 5312905,
+          "gradient_tensors_first_step": 38,
+          "changed_parameters": 38,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        }
+      },
+      "seconds_per_step": 0.22998648445354775,
+      "peak_allocated_MiB": 2279.3740234375,
+      "checkpoint_bytes": 764901995
+    },
+    "short-lwf": {
+      "real_optimization_steps": 8,
+      "finite_losses": true,
+      "finite_all_checked_gradients": true,
+      "groups": {
+        "backbone": {
+          "parameters": 318,
+          "elements": 42519392,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 318,
+          "changed_bn_buffers": 0
+        },
+        "backbone_1.stem": {
+          "parameters": 9,
+          "elements": 28768,
+          "trainable_elements": 28768,
+          "gradient_tensors_first_step": 9,
+          "changed_parameters": 9,
+          "bn_buffers": 9,
+          "changed_bn_buffers": 9
+        },
+        "backbone_1.layer1": {
+          "parameters": 30,
+          "elements": 215808,
+          "trainable_elements": 215808,
+          "gradient_tensors_first_step": 30,
+          "changed_parameters": 30,
+          "bn_buffers": 30,
+          "changed_bn_buffers": 30
+        },
+        "backbone_1": {
+          "parameters": 279,
+          "elements": 42274816,
+          "trainable_elements": 42274816,
+          "gradient_tensors_first_step": 279,
+          "changed_parameters": 279,
+          "bn_buffers": 279,
+          "changed_bn_buffers": 279
+        },
+        "decode_head": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 0
+        },
+        "decode_head_1": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 5312905,
+          "gradient_tensors_first_step": 38,
+          "changed_parameters": 38,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        }
+      },
+      "seconds_per_step": 0.20958683239296078,
+      "peak_allocated_MiB": 2618.95703125,
+      "checkpoint_bytes": 766880349
+    },
+    "short-gsmf_teacher_bn": {
+      "real_optimization_steps": 8,
+      "finite_losses": true,
+      "finite_all_checked_gradients": true,
+      "groups": {
+        "backbone": {
+          "parameters": 318,
+          "elements": 42519392,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 318,
+          "changed_bn_buffers": 0
+        },
+        "backbone_1.stem": {
+          "parameters": 9,
+          "elements": 28768,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 9,
+          "changed_bn_buffers": 9
+        },
+        "backbone_1.layer1": {
+          "parameters": 30,
+          "elements": 215808,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 30,
+          "changed_bn_buffers": 30
+        },
+        "backbone_1": {
+          "parameters": 279,
+          "elements": 42274816,
+          "trainable_elements": 42274816,
+          "gradient_tensors_first_step": 279,
+          "changed_parameters": 279,
+          "bn_buffers": 279,
+          "changed_bn_buffers": 279
+        },
+        "decode_head": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 0
+        },
+        "decode_head_1": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 5312905,
+          "gradient_tensors_first_step": 38,
+          "changed_parameters": 38,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        }
+      },
+      "seconds_per_step": 0.18823886910104193,
+      "peak_allocated_MiB": 2279.3740234375,
+      "checkpoint_bytes": 764902699
+    },
+    "resume-lwf": {
+      "real_optimization_steps": 4,
+      "finite_losses": true,
+      "finite_all_checked_gradients": true,
+      "groups": {
+        "backbone": {
+          "parameters": 318,
+          "elements": 42519392,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 318,
+          "changed_bn_buffers": 0
+        },
+        "backbone_1.stem": {
+          "parameters": 9,
+          "elements": 28768,
+          "trainable_elements": 28768,
+          "gradient_tensors_first_step": 9,
+          "changed_parameters": 9,
+          "bn_buffers": 9,
+          "changed_bn_buffers": 9
+        },
+        "backbone_1.layer1": {
+          "parameters": 30,
+          "elements": 215808,
+          "trainable_elements": 215808,
+          "gradient_tensors_first_step": 30,
+          "changed_parameters": 30,
+          "bn_buffers": 30,
+          "changed_bn_buffers": 30
+        },
+        "backbone_1": {
+          "parameters": 279,
+          "elements": 42274816,
+          "trainable_elements": 42274816,
+          "gradient_tensors_first_step": 279,
+          "changed_parameters": 279,
+          "bn_buffers": 279,
+          "changed_bn_buffers": 279
+        },
+        "decode_head": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 0
+        },
+        "decode_head_1": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 5312905,
+          "gradient_tensors_first_step": 38,
+          "changed_parameters": 38,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        }
+      },
+      "seconds_per_step": 0.25882903550518677,
+      "peak_allocated_MiB": 2622.70703125,
+      "checkpoint_bytes": 766878685
+    },
+    "resume-gsmf_teacher_bn": {
+      "real_optimization_steps": 4,
+      "finite_losses": true,
+      "finite_all_checked_gradients": true,
+      "groups": {
+        "backbone": {
+          "parameters": 318,
+          "elements": 42519392,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 318,
+          "changed_bn_buffers": 0
+        },
+        "backbone_1.stem": {
+          "parameters": 9,
+          "elements": 28768,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 9,
+          "changed_bn_buffers": 9
+        },
+        "backbone_1.layer1": {
+          "parameters": 30,
+          "elements": 215808,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 30,
+          "changed_bn_buffers": 30
+        },
+        "backbone_1": {
+          "parameters": 279,
+          "elements": 42274816,
+          "trainable_elements": 42274816,
+          "gradient_tensors_first_step": 279,
+          "changed_parameters": 279,
+          "bn_buffers": 279,
+          "changed_bn_buffers": 279
+        },
+        "decode_head": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 0
+        },
+        "decode_head_1": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 5312905,
+          "gradient_tensors_first_step": 38,
+          "changed_parameters": 38,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        }
+      },
+      "seconds_per_step": 0.1820232661702903,
+      "peak_allocated_MiB": 2275.6240234375,
+      "checkpoint_bytes": 764901035
+    },
+    "final-save-lwf": {
+      "real_optimization_steps": 2,
+      "finite_losses": true,
+      "finite_all_checked_gradients": true,
+      "groups": {
+        "backbone": {
+          "parameters": 318,
+          "elements": 42519392,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 318,
+          "changed_bn_buffers": 0
+        },
+        "backbone_1.stem": {
+          "parameters": 9,
+          "elements": 28768,
+          "trainable_elements": 28768,
+          "gradient_tensors_first_step": 9,
+          "changed_parameters": 9,
+          "bn_buffers": 9,
+          "changed_bn_buffers": 9
+        },
+        "backbone_1.layer1": {
+          "parameters": 30,
+          "elements": 215808,
+          "trainable_elements": 215808,
+          "gradient_tensors_first_step": 30,
+          "changed_parameters": 30,
+          "bn_buffers": 30,
+          "changed_bn_buffers": 30
+        },
+        "backbone_1": {
+          "parameters": 279,
+          "elements": 42274816,
+          "trainable_elements": 42274816,
+          "gradient_tensors_first_step": 279,
+          "changed_parameters": 279,
+          "bn_buffers": 279,
+          "changed_bn_buffers": 279
+        },
+        "decode_head": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 0
+        },
+        "decode_head_1": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 5312905,
+          "gradient_tensors_first_step": 38,
+          "changed_parameters": 38,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        }
+      },
+      "seconds_per_step": null,
+      "peak_allocated_MiB": 2618.95703125,
+      "checkpoint_bytes": 766879581
+    },
+    "final-save-gsmf_teacher_bn": {
+      "real_optimization_steps": 2,
+      "finite_losses": true,
+      "finite_all_checked_gradients": true,
+      "groups": {
+        "backbone": {
+          "parameters": 318,
+          "elements": 42519392,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 318,
+          "changed_bn_buffers": 0
+        },
+        "backbone_1.stem": {
+          "parameters": 9,
+          "elements": 28768,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 9,
+          "changed_bn_buffers": 9
+        },
+        "backbone_1.layer1": {
+          "parameters": 30,
+          "elements": 215808,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 30,
+          "changed_bn_buffers": 30
+        },
+        "backbone_1": {
+          "parameters": 279,
+          "elements": 42274816,
+          "trainable_elements": 42274816,
+          "gradient_tensors_first_step": 279,
+          "changed_parameters": 279,
+          "bn_buffers": 279,
+          "changed_bn_buffers": 279
+        },
+        "decode_head": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 0,
+          "gradient_tensors_first_step": 0,
+          "changed_parameters": 0,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 0
+        },
+        "decode_head_1": {
+          "parameters": 38,
+          "elements": 5312905,
+          "trainable_elements": 5312905,
+          "gradient_tensors_first_step": 38,
+          "changed_parameters": 38,
+          "bn_buffers": 24,
+          "changed_bn_buffers": 24
+        }
+      },
+      "seconds_per_step": null,
+      "peak_allocated_MiB": 2279.3740234375,
+      "checkpoint_bytes": 764901867
+    }
+  },
+  "evaluation_precheck": {
+    "eval-precheck-gsmf_teacher_bn-0": {
+      "images": 2,
+      "checkpoint_sha256": "f52b2cd7d4793699bb42e9724f6e5c6c9cf625b0c2cbd7630e51a72e78c43cdb",
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "prediction_recomputed_matrix_equal": true
+    },
+    "eval-precheck-gsmf_teacher_bn-0.005": {
+      "images": 2,
+      "checkpoint_sha256": "f52b2cd7d4793699bb42e9724f6e5c6c9cf625b0c2cbd7630e51a72e78c43cdb",
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "prediction_recomputed_matrix_equal": true
+    },
+    "eval-precheck-gsmf_teacher_bn-0.01": {
+      "images": 2,
+      "checkpoint_sha256": "f52b2cd7d4793699bb42e9724f6e5c6c9cf625b0c2cbd7630e51a72e78c43cdb",
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "prediction_recomputed_matrix_equal": true
+    },
+    "eval-precheck-gsmf_teacher_bn-0.02": {
+      "images": 2,
+      "checkpoint_sha256": "f52b2cd7d4793699bb42e9724f6e5c6c9cf625b0c2cbd7630e51a72e78c43cdb",
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "prediction_recomputed_matrix_equal": true
+    },
+    "eval-precheck-gsmf_teacher_bn-acdc": {
+      "images": 4,
+      "checkpoint_sha256": "f52b2cd7d4793699bb42e9724f6e5c6c9cf625b0c2cbd7630e51a72e78c43cdb",
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 72,
+        "decode_head_1.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "prediction_recomputed_matrix_equal": true
+    },
+    "eval-precheck-lwf-0": {
+      "images": 2,
+      "checkpoint_sha256": "d28ab25763640f19aac7470d9d9370ef3d5084844520fb5759d8912fabc858a4",
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "prediction_recomputed_matrix_equal": true
+    },
+    "eval-precheck-lwf-0.005": {
+      "images": 2,
+      "checkpoint_sha256": "d28ab25763640f19aac7470d9d9370ef3d5084844520fb5759d8912fabc858a4",
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "prediction_recomputed_matrix_equal": true
+    },
+    "eval-precheck-lwf-0.01": {
+      "images": 2,
+      "checkpoint_sha256": "d28ab25763640f19aac7470d9d9370ef3d5084844520fb5759d8912fabc858a4",
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "prediction_recomputed_matrix_equal": true
+    },
+    "eval-precheck-lwf-0.02": {
+      "images": 2,
+      "checkpoint_sha256": "d28ab25763640f19aac7470d9d9370ef3d5084844520fb5759d8912fabc858a4",
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 36,
+        "decode_head_1.conv_seg": 36
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "prediction_recomputed_matrix_equal": true
+    },
+    "eval-precheck-lwf-acdc": {
+      "images": 4,
+      "checkpoint_sha256": "d28ab25763640f19aac7470d9d9370ef3d5084844520fb5759d8912fabc858a4",
+      "state_unchanged": true,
+      "forward_calls": {
+        "backbone": 0,
+        "decode_head.conv_seg": 0,
+        "backbone_1": 72,
+        "decode_head_1.conv_seg": 72
+      },
+      "output_shapes": {
+        "decode_head_1.conv_seg": [
+          1,
+          19,
+          128,
+          128
+        ]
+      },
+      "prediction_recomputed_matrix_equal": true
+    }
+  },
+  "formal_training_started": false,
+  "formal_evaluation_started": false,
+  "failed_attempts": [
+    {
+      "name": "controlled attempt1 missing default scope",
+      "updates": 0
+    },
+    {
+      "name": "manifest static equality relative/absolute path",
+      "updates": 0
+    }
+  ]
+}

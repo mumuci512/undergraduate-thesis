@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "optimization_steps": 0,
+  "rows": [
+    {
+      "run": "ft-seed0-D",
+      "parent_sha256": "ac04f676ed6ec53d6e8bf2267c5c06aad05e3db1537558e752cd7c98b8e68e34",
+      "initialization_sha256": "af2aeb25bef84a696d39a0ace3de25d242b060e2f4872f16779a801ba168b4e8",
+      "image_sha256": "54dcca2388e7ec8c3152200616f37d13e3d7d763e44f94f52b3d4c8a8ba5ffec",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 12.658160275954287
+    },
+    {
+      "run": "gsmf-seed0-D",
+      "parent_sha256": "754f53ec406b6efeac4ed9fb82364614b0fd9a9d603bd9298f35878a8f2a83f3",
+      "initialization_sha256": "26ae5602ebdd5f5752a3203ca67017fdb15985d89896cb54fd17dc8160e30593",
+      "image_sha256": "54dcca2388e7ec8c3152200616f37d13e3d7d763e44f94f52b3d4c8a8ba5ffec",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 5.97049708297709
+    },
+    {
+      "run": "lwf-seed0-D",
+      "parent_sha256": "f88ed8621d7fab8cfef1d6a91fb1991de60b4da649547bd625df06450d498527",
+      "initialization_sha256": "e672fef28ffec9d787d33f73a31e653ff071aa0efffd2c23ce0aa538c7156f6b",
+      "image_sha256": "54dcca2388e7ec8c3152200616f37d13e3d7d763e44f94f52b3d4c8a8ba5ffec",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 4.872419061022811
+    },
+    {
+      "run": "ft-seed0-E",
+      "parent_sha256": "0f324a583c56a2803b83f6fa89a077666aaed2c8f363b61221660e47d471b4ab",
+      "initialization_sha256": "6cb4f8ad63369b8a6ab45c649defe3851085200c6a5d230dccbf40a7ed75f194",
+      "image_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 2.8928829669603147
+    },
+    {
+      "run": "gsmf-seed0-E",
+      "parent_sha256": "f2b4af4166dc1189b82b1832278839cd409cf73d9bd961a090da1242c8df9c36",
+      "initialization_sha256": "2fdb8c5c18d6b07fd44c977b50e3fe3e5264b52ff2d77e23bed0bac236e0f047",
+      "image_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 4.587222960020881
+    },
+    {
+      "run": "lwf-seed0-E",
+      "parent_sha256": "9fc81c96de9b130ae619df8bb91bb444607e1493da629eea3d08bdbe1256b4ff",
+      "initialization_sha256": "1542b9c4a37c6437b42c9e0f742d03695f8a1d28fb7819d39a64b42c48c6e350",
+      "image_sha256": "731a3c2077fa835eec6607fb48dae77294d9e7e6f80c5c08a01c1c174207ac20",
+      "input": "normalized top-left 512x512 real RGB",
+      "student_and_teacher_max_abs_error": 0,
+      "independent_reload_equal": true,
+      "seconds": 4.8042796140071005
+    }
+  ]
+}

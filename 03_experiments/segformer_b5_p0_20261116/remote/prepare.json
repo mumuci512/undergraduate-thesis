@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-11-16T12:47:01.159212+00:00",
+  "root": "/home/ysheng4/research/GSMF-RS-DIL",
+  "output": "/home/ysheng4/research/GSMF-RS-DIL/experiments/segformer_b5_p0_20261116",
+  "checkpoint": "/home/ysheng4/research/GSMF-RS-DIL/experiments/segformer_b5_p0_20261116/source_cityscapes_official.pth",
+  "checkpoint_url": "https://download.openmmlab.com/mmsegmentation/v0.5/segformer/segformer_mit-b5_8x1_1024x1024_160k_cityscapes/segformer_mit-b5_8x1_1024x1024_160k_cityscapes_20211206_072934-87a052ec.pth",
+  "checkpoint_sha256": "87a052ecf2a4913dae3a0561a95a4c6c8f603d84f2706228125f51990b4687e1",
+  "checkpoint_bytes": 328290585,
+  "strict_load": true,
+  "config": "/home/ysheng4/miniconda3/envs/GSMF_RS_DIL/lib/python3.8/site-packages/mmseg/.mim/configs/segformer/segformer_mit-b5_8xb1-160k_cityscapes-1024x1024.py",
+  "parameters": 81974739,
+  "git_head": "d9d3298aee037ee7bb9e78ee2f1b67d8793ef3d0",
+  "manifests": {
+    "A_val.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/content/formal-A-plan-20261111-140000/data-and-config-index/data/A_val.jsonl",
+    "B_val.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/content/formal-A-plan-20261111-140000/data-and-config-index/data/B_val.jsonl",
+    "C_val.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/content/formal-A-plan-20261111-140000/data-and-config-index/data/C_val.jsonl",
+    "D_val.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/content/formal-A-plan-20261111-140000/data-and-config-index/data/D_val.jsonl",
+    "E_val.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/content/formal-A-plan-20261111-140000/data-and-config-index/data/E_val.jsonl",
+    "A_train.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/A_train.jsonl",
+    "A_train_debug.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/A_train_debug.jsonl",
+    "A_val_debug.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/A_val_debug.jsonl",
+    "B_train.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_train.jsonl",
+    "B_train_debug.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_train_debug.jsonl",
+    "B_val_debug.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_clear_to_fog/data/B_val_debug.jsonl",
+    "C_train.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/content/formal-A-plan-20261111-140000/data-and-config-index/data/C_train.jsonl",
+    "D_train.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/content/formal-A-plan-20261111-140000/data-and-config-index/data/D_train.jsonl",
+    "E_train.jsonl": "/home/ysheng4/research/GSMF-RS-DIL/experiments/road_five_domain/formal-A-plan-20261111-140000/handoff/content/formal-A-plan-20261111-140000/data-and-config-index/data/E_train.jsonl"
+  }
+}
